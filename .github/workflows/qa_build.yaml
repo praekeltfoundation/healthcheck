@@ -40,6 +40,8 @@ jobs:
         run: |
           python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
       - name: Run tests
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost/postgres
         run: |
           flake8
           black --check .
