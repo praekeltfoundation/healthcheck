@@ -11,6 +11,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -21,6 +26,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .
           pip install -r requirements-dev.txt
+      - name: Database checks
+        env:
+          DJANGO_SETTINGS_MODULE: healthcheck.settings.test
+          DATABASE_URL: postgres://postgres:postgres@postgres/postgres
+        run: |
+          python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
       - name: Run tests
         run: |
           flake8
