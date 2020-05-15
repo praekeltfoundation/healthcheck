@@ -1,12 +1,13 @@
+import csv
+
+from django import forms
 from django.contrib import admin
 from django.core.paginator import Paginator
 from django.db import OperationalError, connection, transaction
-from django import forms
-from django.urls import path
-from django.template.response import TemplateResponse
 from django.shortcuts import redirect
+from django.template.response import TemplateResponse
+from django.urls import path
 from django.utils.functional import cached_property
-import csv
 
 from confirmed_contact.models import ConfirmedContact
 

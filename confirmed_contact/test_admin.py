@@ -1,9 +1,11 @@
 import io
 from datetime import datetime
+
 from django.contrib.auth.models import User
 from django.test import TestCase
-from confirmed_contact.models import ConfirmedContact
 from django.utils.timezone import utc
+
+from confirmed_contact.models import ConfirmedContact
 
 
 class CsvImportTests(TestCase):
