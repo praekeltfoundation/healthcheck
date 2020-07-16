@@ -18,18 +18,23 @@ class UserManager(BaseUserManager):
     def _create_user(self, email, password, **extra_fields):
         """
         Creates and saves a User with the given username, email and password.
+        Assigns auth token to created user
         """
+        print('calling for action from inside')
         if not email:
-            raise ValueError(_('The given email must be set'))
+            raise ValueError(_('Email must be set'))
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
+        token = Token.objects.create(user=user)
+        token.save()
         return user
 
     def create_user(self, email=None, password=None, **extra_fields):
         """
-        Creates non-superuser User. Inactive by default, requires email verification.
+        Creates non-superuser User.
+        Extend this method in order to change values of default fields.
         """
         extra_fields.setdefault('is_staff', False)
         extra_fields.setdefault('is_superuser', False)
