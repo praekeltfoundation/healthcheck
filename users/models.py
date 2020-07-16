@@ -15,28 +15,30 @@ ROLE_USER = 'user'
 class UserManager(BaseUserManager):
     use_in_migrations = True
 
-    def _create_user(self, email, password, **extra_fields):
+    def _create_user(self, username, password=None, **extra_fields):
         """
-        Creates and saves a User with the given username, email and password.
+        Creates and saves a User with the given username and password.
+        Assigns auth token to created user
         """
-        if not email:
-            raise ValueError(_('The given email must be set'))
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
-        user.set_password(password)
+        user = self.model(username=username, **extra_fields)
+        if password is not None:
+            user.set_password(password)
+        else:
+            user.set_unusable_password()
         user.save(using=self._db)
         return user
 
-    def create_user(self, email=None, password=None, **extra_fields):
+    def create_user(self, username=None, password=None, **extra_fields):
         """
-        Creates non-superuser User. Inactive by default, requires email verification.
+        Creates non-superuser User.
+        Extend this method in order to change values of default fields.
         """
         extra_fields.setdefault('is_staff', False)
         extra_fields.setdefault('is_superuser', False)
         extra_fields.setdefault('is_active', True)
-        return self._create_user(email, password, **extra_fields)
+        return self._create_user(username, password, **extra_fields)
 
-    def create_superuser(self, email, password, **extra_fields):
+    def create_superuser(self, username, password, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('role', ROLE_ADMIN)
@@ -46,7 +48,7 @@ class UserManager(BaseUserManager):
         if extra_fields.get('is_superuser') is not True:
             raise ValueError(_('Superuser must have is_superuser=True.'))
 
-        return self._create_user(email, password, **extra_fields)
+        return self._create_user(username, password, **extra_fields)
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -58,10 +60,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
     )
-    username = models.CharField(max_length=32, blank=False, null=True)
-    email = models.EmailField(max_length=254, unique=True)
-    first_name = models.CharField(max_length=64, blank=True, null=True)
-    last_name = models.CharField(max_length=64, blank=True, null=True)
+    username = models.CharField(max_length=32, unique=True, blank=False, null=True)
     date_joined = models.DateField(auto_now_add=True)
 
     ROLE_CHOICES = (
@@ -82,23 +81,20 @@ class User(AbstractBaseUser, PermissionsMixin):
                   'Unselect this instead of deleting accounts.'
     )
 
-    phone_number = models.CharField(max_length=255, blank=True, null=True)
-
     objects = UserManager()
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
 
     def __str__(self):
-        return self.email
+        return self.username
 
     def auth_token(self):
         return Token.objects.get_or_create(user=self).key
 
     def assign_token(self):
         Token.objects.filter(user=self).delete()
-        token = Token.objects.create(user=self)
-        token.save()
+        Token.objects.create(user=self)
 
     auth_token.short_description = 'Authentication token'
 
@@ -115,5 +111,4 @@ def handle_user_creation(sender, **kwargs):
     """
     if kwargs.get('created'):
         instance = kwargs.get('instance')
-        token = Token.objects.create(user=instance)
-        token.save()
+        instance.assign_token()

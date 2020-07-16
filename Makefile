@@ -3,4 +3,4 @@ migrate:
 	python manage.py migrate
 
 flake:
-	- clear && echo "Running flake8..." && flake8 .
+	- clear && echo "Running flake8..." && flake8 . && echo "Tests finished."
