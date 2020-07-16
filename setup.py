@@ -1,7 +1,6 @@
 from setuptools import find_packages, setup
 import pkg_resources
 import pathlib
-import os.path
 
 requirements = ["django==2.2.13", "django-environ==0.4.5", "psycopg2==2.8.5"]
 
