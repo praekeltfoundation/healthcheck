@@ -5,15 +5,13 @@ RUN apt-get update && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-# COPY ./nginx.conf /etc/nginx/conf.d
-
 ENV DJANGO_SETTINGS_MODULE "healthcheck.settings.production"
 CMD ["healthcheck.wsgi:application"]
+
 COPY setup.py /app
+COPY requirements.txt /app
 RUN pip install -e .
 
 COPY . /app
-
-RUN pip install -r ./requirements.txt
 
 RUN DJANGO_SETTINGS_MODULE='healthcheck.settings.test' python manage.py collectstatic --noinput
