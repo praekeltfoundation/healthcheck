@@ -23,10 +23,10 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Run tests
         run: |
-          flake8 --exclude lib/
+          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
+          flake8 .
           black --check .
           isort -c -rc .
-          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
           python manage.py test
   build:
     if: github.event_name == 'push'
