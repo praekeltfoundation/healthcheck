@@ -1,15 +1,15 @@
-from setuptools import find_packages, setup
-import pkg_resources
 import pathlib
+
+import pkg_resources
+from setuptools import find_packages, setup
 
 requirements = ["django==2.2.13", "django-environ==0.4.5", "psycopg2==2.8.5"]
 
 try:
-    with pathlib.Path('requirements.txt').open() as requirements_txt:
+    with pathlib.Path("requirements.txt").open() as requirements_txt:
         requirements += [
             str(requirement)
-            for requirement
-            in pkg_resources.parse_requirements(requirements_txt)
+            for requirement in pkg_resources.parse_requirements(requirements_txt)
         ]
 except FileNotFoundError:
     pass
