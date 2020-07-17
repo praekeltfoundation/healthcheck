@@ -24,7 +24,7 @@ jobs:
       - name: Run tests
         run: |
           DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
-          flake8 .
+          flake8 ./healthcheck
           black --check .
           isort -c -rc .
           python manage.py test
