@@ -1,4 +1,19 @@
+import pathlib
+
+import pkg_resources
 from setuptools import find_packages, setup
+
+requirements = ["django==2.2.13", "django-environ==0.4.5", "psycopg2==2.8.5"]
+
+try:
+    with pathlib.Path("requirements.txt").open() as requirements_txt:
+        requirements += [
+            str(requirement)
+            for requirement in pkg_resources.parse_requirements(requirements_txt)
+        ]
+except FileNotFoundError:
+    pass
+
 
 setup(
     name="healthcheck",
@@ -10,7 +25,7 @@ setup(
     author_email="dev@praekelt.org",
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["django==2.2.13", "django-environ==0.4.5", "psycopg2==2.8.5"],
+    install_requires=requirements,
     classifiers=[
         "Development Status :: 4 - Beta",
         "Framework :: Django",
