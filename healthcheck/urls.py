@@ -3,5 +3,5 @@ from django.urls import include, path  # noqa: F401
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # path('api/', include('api.urls', namespace='api')), # TODO
+    path("v1/", include("contacts.urls", namespace="api")),
 ]
