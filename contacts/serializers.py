@@ -1,19 +1,10 @@
-import uuid
+from rest_framework import serializers
 
-from django.utils.translation import ugettext as _
-from rest_framework import serializers, validators
-
-from .exceptions import CustomBadRequest
+from .exceptions import CustomBadRequest  # noqa: F401, E261
 from .models import Case, Contact
 
 
 class ContactSerializer(serializers.ModelSerializer):
-    external_id = serializers.UUIDField(write_only=True, required=True)
-
-    def validate(self, attrs):
-        # TODO: validate uniquity of provided uuid
-        return super(ContactSerializer, self).validate(attrs)
-
     def create(self, validated_data):
         contact = Contact.objects.create(**validated_data)
         return contact
@@ -21,7 +12,6 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = (
-            "external_id",
             "id",
             "msisdn",
         )
@@ -29,7 +19,7 @@ class ContactSerializer(serializers.ModelSerializer):
 
 
 class CaseSerializer(serializers.ModelSerializer):
-    timestamp = serializers.DateTimeField(source="date_start")
+    timestamp = serializers.DateTimeField(source="date_start", write_only=True)
     created_by = serializers.SerializerMethodField()
 
     def get_created_by(self, obj):
@@ -44,7 +34,7 @@ class CaseSerializer(serializers.ModelSerializer):
             "name",
             "created_by",
             "created_at",
-            "is_active",
+            "external_id",
         )
         read_only_fields = (
             "created_at",
