@@ -2,7 +2,7 @@ import logging
 from datetime import datetime, timedelta
 from uuid import uuid4
 
-from django.test import Client, TestCase
+from django.test import Client, TransactionTestCase
 from django.urls import reverse
 from rest_framework.test import APIClient
 
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 
-class AdminTest(TestCase):
+class AdminTest(TransactionTestCase):
     def setUp(self):
         self.client = Client()
 
@@ -128,3 +128,43 @@ class AdminTest(TestCase):
         self.assertTrue(case_later.is_active)
 
         logger.info("Finished testing two cases")
+
+    def test_bad_request_case(self):
+        url = reverse("contacts:rest_confirmed_contact")
+
+        valid_time = (datetime.now() - timedelta(hours=72)).isoformat()
+
+        # data_later -> is_active True
+        data_malformed = [
+            # invalid phone number
+            {
+                "msisdn": "qwerty",
+                "external_id": uuid4().hex,
+                "timestamp": valid_time,
+            },  # noqa: E231, E261, E501
+            # invalid uuid
+            {
+                "msisdn": "+27820001001",
+                "external_id": None,
+                "timestamp": valid_time,
+            },  # noqa: E231, E261, E501
+            # invalid timestamp (future)
+            {
+                "msisdn": "+27820001001",
+                "external_id": uuid4().hex,
+                "timestamp": (datetime.now() + timedelta(hours=72)).isoformat(),
+            },
+            # invalid timestamp (expired)
+            {
+                "msisdn": "+27820001001",
+                "external_id": uuid4().hex,
+                "timestamp": (datetime.now() - timedelta(days=15)).isoformat(),
+            },
+        ]
+
+        # first two cases will raise 200_OK, other two 400_BAD_REQUEST
+        expected_responses = [200, 200, 400, 400]
+
+        for index, data in enumerate(data_malformed):
+            r = self.client.post(url, data)
+            self.assertEquals(r.status_code, expected_responses[index])

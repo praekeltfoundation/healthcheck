@@ -9,3 +9,6 @@ clean:
 	isort **/*.py
 	black .
 	@echo "Done cleaning up code."
+
+test:
+	python manage.py test

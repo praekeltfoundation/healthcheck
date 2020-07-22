@@ -1,13 +1,19 @@
 from datetime import timedelta
 
 from django.utils import timezone
+from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
+from rest_framework.validators import UniqueValidator
 
 from .exceptions import CustomBadRequest
 from .models import Case, Contact
 
 
 class ContactSerializer(serializers.ModelSerializer):
+    msisdn = PhoneNumberField(
+        required=True, validators=[UniqueValidator(queryset=Contact.objects.all())]
+    )
+
     def create(self, validated_data):
         contact = Contact.objects.create(**validated_data)
         return contact
@@ -23,6 +29,7 @@ class ContactSerializer(serializers.ModelSerializer):
 
 class CaseSerializer(serializers.ModelSerializer):
     timestamp = serializers.DateTimeField(source="date_start", write_only=True)
+    external_id = serializers.CharField(required=True)
     created_by = serializers.SerializerMethodField()
 
     def validate(self, data):

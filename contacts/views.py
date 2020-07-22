@@ -40,26 +40,33 @@ class ConfirmedContactView(generics.GenericAPIView):
 
         msisdn = data.pop("msisdn", None)
 
-        # Try to create a
-        try:
-            contact_serializer = ContactSerializer(data={"msisdn": msisdn})
-            contact_serializer.is_valid(raise_exception=True)
-            contact = contact_serializer.save()
-        except (IntegrityError, AssertionError, ValidationError):
-            # there are 3 exceptions but only ValidationError
-            # should ever raise.
+        # Try to create a contact
 
-            # this msisdn has already been inserted before
-            contact = Contact.objects.filter(msisdn=msisdn).first()
+        contact_query = Contact.objects.filter(msisdn=msisdn)
+        if contact_query.exists():
+            contact = contact_query.first()
+        else:
+            try:
+                contact_serializer = ContactSerializer(data={"msisdn": msisdn})
+                contact_serializer.is_valid(raise_exception=True)
+                contact = contact_serializer.save()
+            except (IntegrityError, ValidationError):
+                return Response({"status": "BAD_CONTACT"}, status=status.HTTP_200_OK,)
 
-        try:
-            case_serializer = CaseSerializer(data=data)
-            case_serializer.is_valid(raise_exception=True)
-            case = case_serializer.save()
-        except (IntegrityError, AssertionError, ValidationError):
-            # case with this external_id
-            # has been inserted by a different request already
+        case_query = Case.objects.filter(external_id=data.get("external_id")).exists()
+        if case_query:
             return Response({"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,)
+        else:
+            try:
+                case_serializer = CaseSerializer(data=data)
+                case_serializer.is_valid(raise_exception=True)
+                case = case_serializer.save()
+            except (IntegrityError, ValidationError):
+                # case with this external_id
+                # has been inserted by a different request already
+                return Response(
+                    {"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,
+                )
 
         # deactivate existing cases with earlier timestamp
         Case.objects.filter(contact=contact, date_start__lte=case.date_start,).exclude(
