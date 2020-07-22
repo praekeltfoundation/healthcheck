@@ -1,3 +1,5 @@
+from datetime import timedelta
+
 from django.utils import timezone
 from rest_framework import serializers
 
@@ -26,6 +28,8 @@ class CaseSerializer(serializers.ModelSerializer):
     def validate(self, data):
         if data.get("date_start") > timezone.now():
             raise CustomBadRequest("Can not register future contact.")
+        if data.get("date_start") + timedelta(days=14) < timezone.now():
+            raise CustomBadRequest("Case expired.")
         return super(CaseSerializer, self).validate(data)
 
     def get_created_by(self, obj):
