@@ -18,7 +18,7 @@ class AdminTest(TestCase):
     def setUp(self):
         self.client = Client()
 
-        User.objects.create_superuser(
+        admin = User.objects.create_superuser(
             username="testadmin", password="testadminpassword",
         )
 
@@ -30,39 +30,21 @@ class AdminTest(TestCase):
 
         logger.info("Logged in with superuser")
 
-        token = self.generate_user_token()
-
         # a hack to get everything to work
         # NOTE:
         # TEST_REQUEST_DEFAULT_FORMAT must be set to `json`
         # otherwise FormData will be sent.
         self.client = APIClient()
-        self.client.credentials(HTTP_AUTHORIZATION=f"Token {token}")
+        self.client.credentials(HTTP_AUTHORIZATION=f"Token {admin.auth_token}")
 
-    def generate_data(self):
+    def generate_data(self, hours=72):
         external_id = uuid4().hex
-        timestamp = datetime.now() + timedelta(days=3)
+        timestamp = datetime.now() - timedelta(hours=hours)
         return {
             "msisdn": "+27820001001",
             "external_id": external_id,
             "timestamp": timestamp.isoformat(),
         }
-
-    def generate_user_token(self):
-        url = "/admin/users/user/add/"
-
-        data = {
-            "username": "testuser",
-            "password": "testuserpassword",
-        }
-
-        r = self.client.post(url, data=data)
-
-        # admin user creation request returns 302
-        self.assertEquals(r.status_code, 302)
-
-        test_user = User.objects.get(username=data.get("username"))
-        return test_user.auth_token
 
     def test_case_submittance(self):
         url = reverse("contacts:rest_confirmed_contact")
@@ -87,6 +69,8 @@ class AdminTest(TestCase):
 
         self.assertIsNotNone(test_contact)
 
+        self.assertEqual(test_case.external_id, data.get("external_id"))
+
         # check whether case is connected to proper contact
         self.assertEqual(test_case.contact, test_contact)
 
@@ -106,3 +90,41 @@ class AdminTest(TestCase):
             test_case.date_end.replace(tzinfo=None),
             datetime.fromisoformat(data.get("timestamp")) + timedelta(days=14),
         )
+
+    def test_case_active(self):
+        url = reverse("contacts:rest_confirmed_contact")
+
+        # data_later -> is_active True
+        data_later = self.generate_data(hours=10)
+        # data_earlier -> is_active False
+        data_earlier = self.generate_data(hours=12)
+
+        r = self.client.post(url, data_later)
+        self.assertEquals(r.status_code, 201)
+
+        r2 = self.client.post(url, data=data_earlier)
+        self.assertEquals(r2.status_code, 201)
+
+        logger.info("Submitted two cases")
+
+        case_earlier = Case.objects.filter(
+            external_id=data_earlier.get("external_id")
+        ).first()
+        case_later = Case.objects.filter(
+            external_id=data_later.get("external_id")
+        ).first()
+
+        self.assertIsNotNone(case_earlier)
+        self.assertIsNotNone(case_later)
+
+        test_contact = Contact.objects.filter(msisdn=data_earlier.get("msisdn")).first()
+
+        self.assertIsNotNone(test_contact)
+
+        self.assertEqual(case_earlier.contact, test_contact)
+        self.assertEqual(case_earlier.contact, case_later.contact)
+
+        self.assertFalse(case_earlier.is_active)
+        self.assertTrue(case_later.is_active)
+
+        logger.info("Finished testing two cases")

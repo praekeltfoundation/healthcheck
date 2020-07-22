@@ -16,7 +16,7 @@ class Contact(models.Model):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
     )
-    msisdn = PhoneNumberField()
+    msisdn = PhoneNumberField(unique=True)
 
 
 class CaseQuerySet(models.QuerySet):
@@ -44,9 +44,12 @@ class CaseManager(models.Manager):
 
 
 class Case(models.Model):
-    external_id = models.CharField(max_length=255, blank=False, default=get_uuid)
+    external_id = models.CharField(
+        max_length=255, blank=False, default=get_uuid, unique=True,
+    )
     date_start = models.DateTimeField(null=False, auto_now_add=False)
-    date_notification = models.DateTimeField(null=True, auto_now_add=False)
+    date_notification_start = models.DateTimeField(null=True, auto_now_add=False)
+    date_notification_end = models.DateTimeField(null=True, auto_now_add=False)
     case_id = models.CharField(blank=True, null=True, max_length=50)
     name = models.CharField(blank=True, null=True, max_length=30)
     created_by = models.ForeignKey(

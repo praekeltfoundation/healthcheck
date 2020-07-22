@@ -1,4 +1,6 @@
+from django.db.utils import IntegrityError
 from rest_framework import generics, permissions, status
+from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 
 from .models import Case, Contact
@@ -21,7 +23,7 @@ class ConfirmedContactView(generics.GenericAPIView):
     {
         "id": "84fe2a6c-a5f8-4994-9d96-d765514740b3",
         "msisdn": "+27820001001",
-        "date_start": "2020-07-23T19:35:11.400070Z",
+        "date_start": "2020-07-19T19:35:11.400070Z",
         "case_id": null,
         "name": null,
         "created_by": "admin",
@@ -36,43 +38,47 @@ class ConfirmedContactView(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         data = request.data
 
-        external_id = data.get("external_id", None)
-
-        # look up whether Case exists
-        if (
-            external_id is not None
-            and Case.objects.filter(  # noqa: W503, E261
-                external_id=external_id
-            ).exists()
-        ):
-            return Response({"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,)
-
         msisdn = data.pop("msisdn", None)
 
-        # look up whether Contact exists;
-        # create or retrieve;
-        # attach to Case.
-        if msisdn is not None and not Contact.objects.filter(msisdn=msisdn).exists():
-
+        # Try to create a
+        try:
             contact_serializer = ContactSerializer(data={"msisdn": msisdn})
-
             contact_serializer.is_valid(raise_exception=True)
             contact = contact_serializer.save()
-        else:
+        except (IntegrityError, AssertionError, ValidationError):
+            # there are 3 exceptions but only ValidationError
+            # should ever raise.
+
+            # this msisdn has already been inserted before
             contact = Contact.objects.filter(msisdn=msisdn).first()
 
-        # deactivate existing cases
-        Case.objects.filter(contact=contact).update(is_active=False)
+        try:
+            case_serializer = CaseSerializer(data=data)
+            case_serializer.is_valid(raise_exception=True)
+            case = case_serializer.save()
+        except (IntegrityError, AssertionError, ValidationError):
+            # case with this external_id
+            # has been inserted by a different request already
+            return Response({"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,)
 
-        case_serializer = CaseSerializer(data=data)
-        case_serializer.is_valid(raise_exception=True)
-        case = case_serializer.save()
+        # deactivate existing cases with earlier timestamp
+        Case.objects.filter(contact=contact, date_start__lte=case.date_start,).exclude(
+            id=case.id,
+        ).update(is_active=False)
+
+        # deactivate case if it is not the latest for current contact
+        if Case.objects.filter(
+            contact=contact, date_start__gt=case.date_start,
+        ).exists():
+            case.is_active = False
+            case.save(update_fields=("is_active",))
 
         case.created_by = self.request.user
         case.contact = contact
         case.save(update_fields=("created_by", "contact",))
 
         # TODO: dispatch first notification task
+        # but ONLY if case.is_active is True
 
         return Response(
             {
