@@ -8,6 +8,10 @@ from phonenumber_field.modelfields import PhoneNumberField
 from users.models import User
 
 
+def get_uuid():
+    return uuid.uuid4().hex
+
+
 class Contact(models.Model):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
@@ -40,9 +44,7 @@ class CaseManager(models.Manager):
 
 
 class Case(models.Model):
-    external_id = models.CharField(
-        max_length=255, blank=False, default=uuid.uuid4().hex
-    )
+    external_id = models.CharField(max_length=255, blank=False, default=get_uuid)
     date_start = models.DateTimeField(null=False, auto_now_add=False)
     date_notification = models.DateTimeField(null=True, auto_now_add=False)
     case_id = models.CharField(blank=True, null=True, max_length=50)
