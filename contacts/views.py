@@ -1,6 +1,5 @@
 from django.db.utils import IntegrityError
 from rest_framework import generics, permissions, status
-from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 
 from .models import Case, Contact
@@ -50,8 +49,9 @@ class ConfirmedContactView(generics.GenericAPIView):
                 contact_serializer = ContactSerializer(data={"msisdn": msisdn})
                 contact_serializer.is_valid(raise_exception=True)
                 contact = contact_serializer.save()
-            except (IntegrityError, ValidationError):
-                return Response({"status": "BAD_CONTACT"}, status=status.HTTP_200_OK,)
+            except IntegrityError:
+                contact = Contact.objects.get(msisdn=msisdn)
+                # race condition - pull existing contact
 
         case_query = Case.objects.filter(external_id=data.get("external_id")).exists()
         if case_query:
@@ -61,9 +61,8 @@ class ConfirmedContactView(generics.GenericAPIView):
                 case_serializer = CaseSerializer(data=data)
                 case_serializer.is_valid(raise_exception=True)
                 case = case_serializer.save()
-            except (IntegrityError, ValidationError):
-                # case with this external_id
-                # has been inserted by a different request already
+            except IntegrityError:
+                # race condition - raise error
                 return Response(
                     {"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,
                 )

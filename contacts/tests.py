@@ -162,9 +162,21 @@ class AdminTest(TransactionTestCase):
             },
         ]
 
-        # first two cases will raise 200_OK, other two 400_BAD_REQUEST
-        expected_responses = [200, 200, 400, 400]
-
-        for index, data in enumerate(data_malformed):
+        for data in data_malformed:
             r = self.client.post(url, data)
-            self.assertEquals(r.status_code, expected_responses[index])
+            self.assertEquals(r.status_code, 400)
+
+    def test_duplicate_insertion(self):
+        url = reverse("contacts:rest_confirmed_contact")
+
+        duplicate_data = {
+            "msisdn": "+27820001001",
+            "external_id": uuid4().hex,
+            "timestamp": (datetime.now() - timedelta(hours=72)).isoformat(),
+        }
+
+        duplicate_r = self.client.post(url, duplicate_data)
+        duplicate_r_2 = self.client.post(url, duplicate_data)
+
+        self.assertEqual(duplicate_r.status_code, 201)
+        self.assertEqual(duplicate_r_2.status_code, 200)
