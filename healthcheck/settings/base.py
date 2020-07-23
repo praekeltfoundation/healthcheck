@@ -45,8 +45,10 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "rest_auth",
+    "phonenumber_field",
     # local apps
     "users",
+    "contacts",
 ]
 
 MIDDLEWARE = [
@@ -130,4 +132,9 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.TokenAuthentication",
     ),
+    "TEST_REQUEST_DEFAULT_FORMAT": "json",
 }
+
+# this might be unneccessary if intented usage is international phone numbers
+PHONENUMBER_DB_FORMAT = "NATIONAL"
+PHONENUMBER_DEFAULT_REGION = "ZA"
