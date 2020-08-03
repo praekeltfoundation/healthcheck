@@ -133,7 +133,7 @@ PHONENUMBER_DEFAULT_REGION = "ZA"
 # CELERY SETTINGS
 CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://redis:6379/0")
 CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", "redis://redis:6379/0")
-CELERY_ACCEPT_CONTENT = env.list("CELERY_ACCEPT_CONTENT", '') or ["application/json"]
+CELERY_ACCEPT_CONTENT = env.list("CELERY_ACCEPT_CONTENT", "") or ["application/json"]
 CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")
 CELERY_RESULT_SERIALIZER = env.str("CELERY_RESULT_SERIALIZER", "json")
 
@@ -145,4 +145,4 @@ CELERY_BEAT_SCHEDULE = {
     }
 }
 
-TURN_API_KEY = env.str("TURN_API_KEY", 'default')
+TURN_API_KEY = env.str("TURN_API_KEY", "default")
