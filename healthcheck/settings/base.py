@@ -145,4 +145,4 @@ CELERY_BEAT_SCHEDULE = {
     }
 }
 
-TURN_API_KEY = env.str("TURN_API_KEY")
+TURN_API_KEY = env.str("TURN_API_KEY", 'default')
