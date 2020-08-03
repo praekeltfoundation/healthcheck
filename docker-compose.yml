@@ -27,6 +27,9 @@ services:
         depends_on:
             - db
             - redis
+        links:
+            - db
+            - redis
     celery:
         container_name: "celery"
         image: celery:4.4
@@ -41,6 +44,7 @@ services:
             - redis
         links:
             - redis
+            - db
             - django
     celery-beat:
         container_name: "celery-beat"
@@ -56,5 +60,6 @@ services:
             - redis
         links:
             - redis
+            - db
             - django
 
