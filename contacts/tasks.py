@@ -17,7 +17,9 @@ logger = get_task_logger(__name__)
     autoretry_for=(RequestException, SoftTimeLimitExceeded),
     max_retires=5,
     retry_backoff=True,
-    soft_time_limit=15,
+    soft_time_limit=300,
+    time_limit=300,
+    acks_late=True,
 )
 def send_contact_update(phone_number, confirmed_contact, case_id):
     # request should not take longer than 15 seconds total
