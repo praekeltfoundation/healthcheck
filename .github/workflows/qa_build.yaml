@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Check migrations
         run: |
-          CELERY_ACCEPT_CONTENT='application/json' TURN_API_KEY=foo DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
+          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
       - name: Run tests
         run: |
           flake8 ./healthcheck
