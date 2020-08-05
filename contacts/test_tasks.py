@@ -3,13 +3,11 @@ from datetime import datetime, timedelta
 
 import pytz
 import responses
-from celery.contrib.testing.worker import start_worker
 from django.test import Client, TransactionTestCase, override_settings
 from rest_framework.test import APIClient
 
 from contacts.models import Case, Contact
 from contacts.tasks import send_contact_update
-from healthcheck.celery import app
 from users.models import User
 
 logger = logging.getLogger(__name__)
@@ -19,18 +17,18 @@ logging.basicConfig(level=logging.DEBUG)
 class CaseTasksTests(TransactionTestCase):
     allow_database_queries = True
 
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        # Start up celery worker
-        cls.celery_worker = start_worker(app)
-        cls.celery_worker.__enter__()
-
-    @classmethod
-    def tearDownClass(cls):
-        super().tearDownClass()
-        # Close worker
-        cls.celery_worker.__exit__(None, None, None)
+    #    @classmethod
+    #    def setUpClass(cls):
+    #        super().setUpClass()
+    #        # Start up celery worker
+    #        cls.celery_worker = start_worker(app)
+    #        cls.celery_worker.__enter__()
+    #
+    #    @classmethod
+    #    def tearDownClass(cls):
+    #        super().tearDownClass()
+    #        # Close worker
+    #        cls.celery_worker.__exit__(None, None, None)
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
     def setUp(self):
@@ -66,7 +64,8 @@ class CaseTasksTests(TransactionTestCase):
         self.case.save(update_fields=["contact"])
         logger.info("Created contact and case.")
 
-    def test_date_start(self):
+    def test_dates(self):
+        logger.info("Started testing date_start")
         self.assertIsNone(self.case.date_notification_start)
 
         date_start_response = {
@@ -98,21 +97,21 @@ class CaseTasksTests(TransactionTestCase):
             args=[self.msisdn, True, self.case.id]
         ).wait(interval=0.5)
 
-        logger.info(self.case.__dict__)
-
-        logger.info(Case.objects.get(id=self.case.id).__dict__)
-
         # there is an issue - instances in celery and local one
-        # are different, thus this check is skipped
+        # are different (why??), thus this check is skipped
         # self.assertIsNotNone(self.case.date_notification_start)
 
-        # if tasks does return correct test - it has executed
+        # if tasks does return correct text - it has executed
         # without any issues
+
         self.assertEqual(
             result, f"Finished sending contact {True} update for {self.msisdn}."
         )
 
-    def test_date_end(self):
+        # both dates are tested in same task since testing doesnt ensure correct order
+
+        logger.info("Started testing date_end")
+
         self.assertIsNone(self.case.date_notification_end)
 
         date_start_response = {
@@ -144,15 +143,7 @@ class CaseTasksTests(TransactionTestCase):
             args=[self.msisdn, False, self.case.id]
         ).wait(interval=0.5)
 
-        logger.info(self.case.__dict__)
-
-        logger.info(Case.objects.get(id=self.case.id).__dict__)
-
-        # there is an issue - instances in celery and local one
-        # are different, thus this check is skipped
-        # self.assertIsNotNone(self.case.date_notification_start)
-
-        # if tasks does return correct test - it has executed
+        # if tasks does return correct text - it has executed
         # without any issues
         self.assertEqual(
             result, f"Finished sending contact {False} update for {self.msisdn}."
