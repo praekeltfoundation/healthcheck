@@ -28,7 +28,7 @@ jobs:
         run: |
           flake8 ./healthcheck
           black --check .
-          python manage.py test
+          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py test
   build:
     if: github.event_name == 'push'
     needs: test
