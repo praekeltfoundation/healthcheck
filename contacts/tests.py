@@ -2,6 +2,7 @@ import logging
 from datetime import datetime, timedelta
 from uuid import uuid4
 
+import responses
 from django.test import Client, TransactionTestCase
 from django.urls import reverse
 from rest_framework.test import APIClient
@@ -46,10 +47,38 @@ class AdminTest(TransactionTestCase):
             "timestamp": timestamp.isoformat(),
         }
 
+    def get_response_data(self):
+        return {
+            "fields": {
+                "birthday": None,
+                "confirmed_contact": False,
+                "healthcheck_completed": True,
+                "language": None,
+                "location": None,
+                "name": None,
+                "opted_in": False,
+                "opted_in_at": None,
+                "surname": None,
+                "whatsapp_id": None,
+                "whatsapp_profile_name": None,
+            },
+            "generation": 54,
+            "schema": "1b09a076-fdfd-4a12-86fd-1408778d755d",
+            "updated_at": "2020-08-02T18:40:13.562082Z",
+        }
+
+    @responses.activate
     def test_case_submittance(self):
         url = reverse("contacts:rest_confirmed_contact")
 
         data = self.generate_data()
+
+        responses.add(
+            responses.PATCH,
+            f"https://whatsapp.turn.io/v1/contacts/{data.get('msisdn')}/profile",
+            json=self.get_response_data(),
+            status=201,
+        )
 
         # first request returns 201
         r = self.client.post(url, data)
@@ -91,19 +120,35 @@ class AdminTest(TransactionTestCase):
             datetime.fromisoformat(data.get("timestamp")) + timedelta(days=14),
         )
 
+    @responses.activate
     def test_case_active(self):
         url = reverse("contacts:rest_confirmed_contact")
 
         # data_later -> is_active True
         data_later = self.generate_data(hours=10)
+
         # data_earlier -> is_active False
         data_earlier = self.generate_data(hours=12)
 
         r = self.client.post(url, data_later)
         self.assertEquals(r.status_code, 201)
 
+        responses.add(
+            responses.PATCH,
+            f"https://whatsapp.turn.io/v1/contacts/{data_later.get('msisdn')}/profile",
+            json=self.get_response_data(),
+            status=201,
+        )
+
         r2 = self.client.post(url, data=data_earlier)
         self.assertEquals(r2.status_code, 201)
+
+        responses.add(
+            responses.PATCH,
+            f"https://whatsapp.turn.io/v1/contacts/{data_later.get('msisdn')}/profile",
+            json=self.get_response_data(),
+            status=201,
+        )
 
         logger.info("Submitted two cases")
 
@@ -129,6 +174,7 @@ class AdminTest(TransactionTestCase):
 
         logger.info("Finished testing two cases")
 
+    @responses.activate
     def test_bad_request_case(self):
         url = reverse("contacts:rest_confirmed_contact")
 
@@ -163,20 +209,34 @@ class AdminTest(TransactionTestCase):
         ]
 
         for data in data_malformed:
+            responses.add(
+                responses.PATCH,
+                f"https://whatsapp.turn.io/v1/contacts/{data.get('msisdn')}/profile",
+                json=self.get_response_data(),
+                status=201,
+            )
             r = self.client.post(url, data)
             self.assertEquals(r.status_code, 400)
 
+    @responses.activate
     def test_duplicate_insertion(self):
         url = reverse("contacts:rest_confirmed_contact")
 
-        duplicate_data = {
+        duplicate = {
             "msisdn": "+27820001001",
             "external_id": uuid4().hex,
             "timestamp": (datetime.now() - timedelta(hours=72)).isoformat(),
         }
 
-        duplicate_r = self.client.post(url, duplicate_data)
-        duplicate_r_2 = self.client.post(url, duplicate_data)
+        responses.add(
+            responses.PATCH,
+            f"https://whatsapp.turn.io/v1/contacts/{duplicate.get('msisdn')}/profile",
+            json=self.get_response_data(),
+            status=201,
+        )
+
+        duplicate_r = self.client.post(url, duplicate)
+        duplicate_r_2 = self.client.post(url, duplicate)
 
         self.assertEqual(duplicate_r.status_code, 201)
         self.assertEqual(duplicate_r_2.status_code, 200)
