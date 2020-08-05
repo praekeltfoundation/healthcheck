@@ -80,9 +80,11 @@ class CaseTasksTests(TransactionTestCase):
             status=201,
         )
 
-        result = send_contact_update.apply_async(
-            args=[self.msisdn, True, self.case.id]
-        ).wait(interval=0.5)
+        result = send_contact_update(
+            self.msisdn, True, self.case.id
+        )#.wait(interval=0.5)
+
+        logging.info(Case.objects.get(id=self.case.id).__dict__)
 
         # there is an issue - instances in celery and local one
         # are different (why??), thus this check is skipped
@@ -126,9 +128,10 @@ class CaseTasksTests(TransactionTestCase):
             json=date_start_response,
             status=201,
         )
-        result = send_contact_update.apply_async(
-            args=[self.msisdn, False, self.case.id]
-        ).wait(interval=0.5)
+
+        result = send_contact_update(
+            self.msisdn, False, self.case.id
+        )#.wait(interval=0.5)
 
         # if tasks does return correct text - it has executed
         # without any issues
