@@ -18,7 +18,6 @@ class CaseTasksTests(TransactionTestCase):
     allow_database_queries = True
 
     def setUp(self):
-        # run tasks in sync mode
         self.client = Client()
 
         admin = User.objects.create_superuser(
@@ -50,6 +49,7 @@ class CaseTasksTests(TransactionTestCase):
         self.case.save(update_fields=["contact"])
         logger.info("Created contact and case.")
 
+    @responses.activate
     def test_dates(self):
         logger.info("Started testing date_start")
         self.assertIsNone(self.case.date_notification_start)
@@ -80,25 +80,22 @@ class CaseTasksTests(TransactionTestCase):
             status=201,
         )
 
-        result = send_contact_update(
-            self.msisdn, True, self.case.id
-        )#.wait(interval=0.5)
+        result = send_contact_update(self.msisdn, True, self.case.id)
 
-        logging.info(Case.objects.get(id=self.case.id).__dict__)
+        self.case.refresh_from_db()
 
-        # there is an issue - instances in celery and local one
-        # are different (why??), thus this check is skipped
-        # self.assertIsNotNone(self.case.date_notification_start)
+        self.assertIsNotNone(self.case.date_notification_start)
+        self.assertTrue(
+            self.case.date_notification_start <= datetime.now().replace(tzinfo=pytz.UTC)
+        )
 
         # if tasks does return correct text - it has executed
         # without any issues
-
         self.assertEqual(
             result, f"Finished sending contact {True} update for {self.msisdn}."
         )
 
         # both dates are tested in same task since testing doesnt ensure correct order
-
         logger.info("Started testing date_end")
 
         self.assertIsNone(self.case.date_notification_end)
@@ -129,12 +126,21 @@ class CaseTasksTests(TransactionTestCase):
             status=201,
         )
 
-        result = send_contact_update(
-            self.msisdn, False, self.case.id
-        )#.wait(interval=0.5)
+        result = send_contact_update(self.msisdn, False, self.case.id)
+
+        # local instance doesnt see celery performing updates
+        self.case.refresh_from_db()
 
         # if tasks does return correct text - it has executed
         # without any issues
         self.assertEqual(
             result, f"Finished sending contact {False} update for {self.msisdn}."
+        )
+
+        self.assertIsNotNone(self.case.date_notification_end)
+        self.assertTrue(
+            self.case.date_notification_end <= datetime.now().replace(tzinfo=pytz.UTC)
+        )
+        self.assertTrue(
+            self.case.date_notification_start <= self.case.date_notification_end
         )
