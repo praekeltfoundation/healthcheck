@@ -35,10 +35,10 @@ services:
         image: celery:4.4
         build: .
         env_file: ./.env
-        volumes:
-            - .:/app
-        # command: celery -A healthcheck worker -l info
-        command: watchmedo auto-restart --directory=./ --pattern=*tasks.py --recursive -- celery -A healthcheck worker -l info
+        #volumes:
+            #            - .:/app
+        command: celery -A healthcheck worker -l info
+        #command: watchmedo auto-restart --directory=./ --pattern=*tasks.py --recursive -- celery -A healthcheck worker -l info
         depends_on:
             - db
             - redis
@@ -51,10 +51,10 @@ services:
         image: celery:4.4
         build: .
         env_file: ./.env
-        volumes:
-            - .:/app
-        # command: celery -A healthcheck beat -l info
-        command: watchmedo auto-restart --directory=./ --pattern=*tasks.py --recursive -- celery -A healthcheck beat -l info
+        #volumes:
+        #    - .:/app
+        command: celery -A healthcheck beat -l info
+        #command: watchmedo auto-restart --directory=./ --pattern=*tasks.py --recursive -- celery -A healthcheck beat -l info
         depends_on:
             - db
             - redis
