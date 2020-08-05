@@ -146,10 +146,3 @@ CELERY_BEAT_SCHEDULE = {
 }
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
-
-
-# local.py settings
-try:
-    from .local import *
-except ImportError:
-    pass
