@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 import pytz
 import responses
-from django.test import Client, TransactionTestCase, override_settings
+from django.test import Client, TransactionTestCase
 from rest_framework.test import APIClient
 
 from contacts.models import Case, Contact
@@ -17,20 +17,6 @@ logging.basicConfig(level=logging.DEBUG)
 class CaseTasksTests(TransactionTestCase):
     allow_database_queries = True
 
-    #    @classmethod
-    #    def setUpClass(cls):
-    #        super().setUpClass()
-    #        # Start up celery worker
-    #        cls.celery_worker = start_worker(app)
-    #        cls.celery_worker.__enter__()
-    #
-    #    @classmethod
-    #    def tearDownClass(cls):
-    #        super().tearDownClass()
-    #        # Close worker
-    #        cls.celery_worker.__exit__(None, None, None)
-
-    @override_settings(CELERY_ALWAYS_EAGER=True)
     def setUp(self):
         # run tasks in sync mode
         self.client = Client()
@@ -93,6 +79,7 @@ class CaseTasksTests(TransactionTestCase):
             json=date_start_response,
             status=201,
         )
+
         result = send_contact_update.apply_async(
             args=[self.msisdn, True, self.case.id]
         ).wait(interval=0.5)
