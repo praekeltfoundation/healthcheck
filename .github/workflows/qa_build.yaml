@@ -21,14 +21,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .
           pip install -r requirements-dev.txt
-      - name: Check migrations
-        run: |
-          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
       - name: Run tests
         run: |
+          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py makemigrations --dry-run | grep 'No changes detected' || (echo 'There are changes which require migrations.' && exit 1)
           flake8 ./healthcheck
           black --check .
-          DJANGO_SETTINGS_MODULE=healthcheck.settings.test python manage.py test
+          python manage.py test
   build:
     if: github.event_name == 'push'
     needs: test
