@@ -14,4 +14,4 @@ RUN pip install -e .
 
 COPY . /app
 
-#RUN DJANGO_SETTINGS_MODULE='healthcheck.settings.test' python manage.py collectstatic --noinput
+# RUN DJANGO_SETTINGS_MODULE=healthcheck.settings.test ./manage.py collectstatic --noinput
