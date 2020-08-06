@@ -56,8 +56,7 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
     return f"Finished sending contact {confirmed_contact} update for {phone_number}."
 
 
-@task
-# @periodic_task(run_every=crontab(minute=50, hour=23))
+@periodic_task(run_every=crontab(minute=50, hour=1))
 def perform_nofitications_check():
     """
     Notify active cases about contact phase end

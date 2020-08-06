@@ -2,8 +2,6 @@ import os
 
 import environ
 
-from celery.schedules import crontab
-
 env = environ.Env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -85,7 +83,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Africa/Johannesburg"
 
 USE_I18N = True
 
@@ -127,15 +125,7 @@ PHONENUMBER_DEFAULT_REGION = "ZA"
 CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
 CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
 CELERY_ACCEPT_CONTENT = ["application/json"]
-CELERY_TASK_SERIALIZER = "json"
-CELERY_RESULT_SERIALIZER = "json"
-
-# TEMPORARY SETUP - REPLACE WITH @PERIODIC IN PRODUCTION
-CELERY_BEAT_SCHEDULE = {
-    "notifications": {
-        "task": "contacts.tasks.perform_nofitications_check",
-        "schedule": crontab(minute="*/1"),  # execute every minute
-    }
-}
+CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")
+CELERY_RESULT_SERIALIZER = env.str("CELERY_RESULT_SERIALIZER", "json")
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
