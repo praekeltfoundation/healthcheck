@@ -129,7 +129,4 @@ CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")
 CELERY_RESULT_SERIALIZER = env.str("CELERY_RESULT_SERIALIZER", "json")
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
-SENTRY_DSN = env.str(
-    "SENTRY_DSN",
-    "https://87a1f86335624ca89132a386ff513e84@o431175.ingest.sentry.io/5381447",
-)
+SENTRY_DSN = env.str("SENTRY_DSN", "")
