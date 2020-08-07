@@ -4,6 +4,7 @@ from rest_framework.response import Response
 
 from .models import Case, Contact
 from .serializers import CaseSerializer, ContactSerializer
+from .tasks import send_contact_update
 
 
 class ConfirmedContactView(generics.GenericAPIView):
@@ -83,8 +84,15 @@ class ConfirmedContactView(generics.GenericAPIView):
         case.contact = contact
         case.save(update_fields=("created_by", "contact",))
 
-        # TODO: dispatch first notification task
-        # but ONLY if case.is_active is True
+        if case.is_active:
+            # dispatch first notification task
+            # but ONLY if case.is_active is True
+
+            send_contact_update.delay(
+                phone_number=str(case.contact.msisdn),
+                confirmed_contact=True,
+                case_id=case.id,
+            )
 
         return Response(
             {

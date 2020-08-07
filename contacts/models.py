@@ -2,6 +2,7 @@ import uuid
 from datetime import timedelta
 
 from django.db import models
+from django.db.models import ExpressionWrapper, F, fields
 from django.utils import timezone
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -22,9 +23,11 @@ class Contact(models.Model):
 class CaseQuerySet(models.QuerySet):
     def up_for_notification(self):
         return self.select_related("contact").filter(
+            # exclude ones where notification has been already set
+            date_notification_end=None,
             # GTE because cases will be checked periodically
             # and some of them might be missed in one of the checks
-            date_start__gte=timezone.now() + timedelta(days=14),
+            contact_date_end__gte=timezone.now(),
             # only select active cases
             is_active=True,
         )
@@ -38,6 +41,13 @@ class CaseManager(models.Manager):
 
     def get_queryset(self):
         return CaseQuerySet(self.model, using=self._db)
+
+    def with_end_date(self):
+        date_end_expression = ExpressionWrapper(
+            expression=F("date_start") + timedelta(days=14),
+            output_field=fields.DateTimeField(),
+        )
+        return self.annotate(contact_date_end=date_end_expression)
 
     def up_for_notification(self):
         return self.get_queryset().up_for_notification()

@@ -6,10 +6,12 @@ from .models import Case, Contact
 @admin.register(Case)
 class CaseAdmin(admin.ModelAdmin):
     list_display = (
+        "id",
         "external_id",
         "date_start",
         "date_end",
         "created_at",
+        "is_active",
     )
 
     list_filter = (

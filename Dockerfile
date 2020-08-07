@@ -1,7 +1,7 @@
 FROM praekeltfoundation/django-bootstrap:py3.7-stretch
 
 RUN apt-get update && \
-	apt-get install -yq --no-install-recommends wget make git && \
+	apt-get install -yq --no-install-recommends wget make git libyaml-dev && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
@@ -14,4 +14,4 @@ RUN pip install -e .
 
 COPY . /app
 
-RUN DJANGO_SETTINGS_MODULE='healthcheck.settings.test' python manage.py collectstatic --noinput
+RUN DJANGO_SETTINGS_MODULE=healthcheck.settings.test ./manage.py collectstatic --noinput
