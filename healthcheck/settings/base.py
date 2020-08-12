@@ -129,4 +129,5 @@ CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")
 CELERY_RESULT_SERIALIZER = env.str("CELERY_RESULT_SERIALIZER", "json")
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
+API_DOMAIN = env.str("API_DOMAIN", "https://whatsapp.turn.io/")
 SENTRY_DSN = env.str("SENTRY_DSN", "")

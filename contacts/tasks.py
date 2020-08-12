@@ -1,3 +1,5 @@
+from urllib.parse import urljoin
+
 import requests
 from celery import Celery, shared_task, task  # noqa: F401, E261
 from celery.decorators import periodic_task  # noqa: F401, E261
@@ -26,7 +28,7 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
     connect_timeout, read_timeout = 5.0, 10.0
 
     response = requests.patch(
-        url=f"https://whatsapp.turn.io/v1/contacts/{phone_number}/profile",
+        url=urljoin(settings.API_DOMAIN, f"/v1/contacts/{phone_number}/profile"),
         json={"confirmed_contact": confirmed_contact},
         timeout=(connect_timeout, read_timeout),
         headers={
