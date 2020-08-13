@@ -15,7 +15,6 @@ from userprofile.serializers import (
     HealthCheckUserProfileSerializer,
     MSISDNSerializer,
 )
-from userprofile.tasks import mark_turn_contact_healthcheck_complete
 
 
 class Covid19TriageFilter(filters.FilterSet):
@@ -54,8 +53,6 @@ class Covid19TriageViewSet(GenericViewSet, CreateModelMixin, ListModelMixin):
         Mark turn healthcheck complete, and update the user profile
         """
         instance = serializer.save()
-
-        mark_turn_contact_healthcheck_complete.delay(instance.msisdn)
 
         profile = HealthCheckUserProfile.objects.get_or_prefill(msisdn=instance.msisdn)
         profile.update_from_healthcheck(instance)
