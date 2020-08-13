@@ -2,7 +2,7 @@ from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, Permission
 
 from .models import User as DefaultUser
 
@@ -68,6 +68,7 @@ class UserForm(forms.ModelForm):
         fields = (
             "username",
             "password",
+            "user_permissions",
             "role",
         )
 
@@ -92,7 +93,8 @@ class UserAdmin(BaseUserAdmin):
 
     fieldsets = (
         (None, {"fields": ("username", "password")}),
-        ("Permissions", {"fields": ("role", "is_staff", "is_superuser")}),
+        ("Permissions", {"fields": ("user_permissions",)}),
+        ("Admin Type", {"fields": ("role", "is_staff", "is_superuser")}),
     )
 
     add_fieldsets = (
@@ -110,4 +112,5 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(DefaultUser, UserAdmin)
 
+admin.site.register(Permission)
 admin.site.unregister(Group)
