@@ -31,9 +31,11 @@ INSTALLED_APPS = [
     "rest_auth",
     "phonenumber_field",
     "celery",
+    "django_filters",
     # local apps
     "users",
     "contacts",
+    "userprofile",
 ]
 
 MIDDLEWARE = [

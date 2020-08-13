@@ -27,6 +27,8 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
     # request should not take longer than 15 seconds total
     connect_timeout, read_timeout = 5.0, 10.0
 
+    phone_number = phone_number.lstrip("+")
+
     response = requests.patch(
         url=urljoin(settings.API_DOMAIN, f"/v1/contacts/{phone_number}/profile"),
         json={"confirmed_contact": confirmed_contact},

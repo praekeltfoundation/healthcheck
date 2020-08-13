@@ -42,7 +42,7 @@ class CaseTasksTests(TransactionTestCase):
             ),
         }
 
-        self.msisdn = "+27820001001"
+        self.msisdn = "+27820001001".lstrip("+")
         self.contact = Contact.objects.create(msisdn=self.msisdn)
         self.case = Case.objects.create(**self.data)
         self.case.contact = self.contact
