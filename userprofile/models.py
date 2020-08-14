@@ -2,7 +2,6 @@ import uuid
 from typing import Text
 
 import pycountry
-from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.utils import timezone
 
@@ -97,7 +96,7 @@ class Covid19Triage(models.Model):
     completed_timestamp = models.DateTimeField(default=timezone.now)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
-    data = JSONField(default=dict, blank=True, null=True)
+    data = models.JSONField(default=dict, blank=True, null=True)
 
     class Meta:
         indexes = [models.Index(fields=["msisdn", "timestamp"])]
@@ -149,7 +148,7 @@ class HealthCheckUserProfile(models.Model):
     )
     rooms_in_household = models.IntegerField(blank=True, null=True, default=None)
     persons_in_household = models.IntegerField(blank=True, null=True, default=None)
-    data = JSONField(default=dict, blank=True, null=True)
+    data = models.JSONField(default=dict, blank=True, null=True)
 
     objects = HealthCheckUserProfileManager()
 
