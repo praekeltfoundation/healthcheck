@@ -1,0 +1,192 @@
+import uuid
+from typing import Text
+
+import pycountry
+from django.db import models
+from django.utils import timezone
+
+from userprofile.validators import geographic_coordinate, za_phone_number
+
+
+class Covid19Triage(models.Model):
+    AGE_U18 = "<18"
+    AGE_18T40 = "18-40"
+    AGE_40T65 = "40-65"
+    AGE_O65 = ">65"
+    AGE_CHOICES = (
+        (AGE_U18, AGE_U18),
+        (AGE_18T40, AGE_18T40),
+        (AGE_40T65, AGE_40T65),
+        (AGE_O65, AGE_O65),
+    )
+
+    PROVINCE_CHOICES = sorted(
+        (s.code, s.name) for s in pycountry.subdivisions.get(country_code="ZA")
+    )
+
+    EXPOSURE_YES = "yes"
+    EXPOSURE_NO = "no"
+    EXPOSURE_NOT_SURE = "not_sure"
+    EXPOSURE_CHOICES = (
+        (EXPOSURE_YES, "Yes"),
+        (EXPOSURE_NO, "No"),
+        (EXPOSURE_NOT_SURE, "Not sure"),
+    )
+
+    RISK_LOW = "low"
+    RISK_MODERATE = "moderate"
+    RISK_HIGH = "high"
+    RISK_CRITICAL = "critical"
+    RISK_CHOICES = (
+        (RISK_LOW, "Low"),
+        (RISK_MODERATE, "Moderate"),
+        (RISK_HIGH, "High"),
+        (RISK_CRITICAL, "Critical"),
+    )
+
+    GENDER_MALE = "male"
+    GENDER_FEMALE = "female"
+    GENDER_OTHER = "other"
+    GENDER_NOT_SAY = "not_say"
+    GENDER_CHOICES = (
+        (GENDER_MALE, "Male"),
+        (GENDER_FEMALE, "Female"),
+        (GENDER_OTHER, "Other"),
+        (GENDER_NOT_SAY, "Rather not say"),
+    )
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
+    msisdn = models.CharField(max_length=255, validators=[za_phone_number])
+    first_name = models.CharField(max_length=255, blank=True, null=True, default=None)
+    last_name = models.CharField(max_length=255, blank=True, null=True, default=None)
+    source = models.CharField(max_length=255)
+    province = models.CharField(max_length=6, choices=PROVINCE_CHOICES)
+    city = models.CharField(max_length=255)
+    age = models.CharField(max_length=5, choices=AGE_CHOICES)
+    date_of_birth = models.DateField(blank=True, null=True, default=None)
+    fever = models.BooleanField()
+    cough = models.BooleanField()
+    sore_throat = models.BooleanField()
+    difficulty_breathing = models.BooleanField(null=True, blank=True, default=None)
+    exposure = models.CharField(max_length=9, choices=EXPOSURE_CHOICES)
+    confirmed_contact = models.BooleanField(blank=True, null=True, default=None)
+    tracing = models.BooleanField(help_text="Whether the NDoH can contact the user")
+    risk = models.CharField(max_length=8, choices=RISK_CHOICES)
+    gender = models.CharField(
+        max_length=7, choices=GENDER_CHOICES, blank=True, default=""
+    )
+    location = models.CharField(
+        max_length=255, blank=True, default="", validators=[geographic_coordinate]
+    )
+    city_location = models.CharField(
+        max_length=255,
+        blank=True,
+        null=True,
+        default=None,
+        validators=[geographic_coordinate],
+    )
+    muscle_pain = models.BooleanField(null=True, blank=True, default=None)
+    smell = models.BooleanField(null=True, blank=True, default=None)
+    preexisting_condition = models.CharField(
+        max_length=9, choices=EXPOSURE_CHOICES, blank=True, default=""
+    )
+    rooms_in_household = models.IntegerField(blank=True, null=True, default=None)
+    persons_in_household = models.IntegerField(blank=True, null=True, default=None)
+    completed_timestamp = models.DateTimeField(default=timezone.now)
+    timestamp = models.DateTimeField(default=timezone.now, db_index=True)
+    created_by = models.CharField(max_length=255, blank=True, default="")
+    data = models.JSONField(default=dict, blank=True, null=True)
+
+    class Meta:
+        db_table = "eventstore_covid19triage"
+        indexes = [models.Index(fields=["msisdn", "timestamp"])]
+
+
+class HealthCheckUserProfileManager(models.Manager):
+    def get_or_prefill(self, msisdn: Text) -> "HealthCheckUserProfile":
+        """
+        Either gets the existing user profile, or creates one using data in the
+        historical healthchecks
+        """
+        try:
+            return self.get(msisdn=msisdn)
+        except self.model.DoesNotExist:
+            healthchecks = Covid19Triage.objects.filter(msisdn=msisdn).order_by(
+                "completed_timestamp"
+            )
+            profile = self.model()
+            for healthcheck in healthchecks.iterator():
+                profile.update_from_healthcheck(healthcheck)
+            return profile
+
+
+class HealthCheckUserProfile(models.Model):
+    msisdn = models.CharField(
+        primary_key=True, max_length=255, validators=[za_phone_number]
+    )
+    first_name = models.CharField(max_length=255, blank=True, null=True, default=None)
+    last_name = models.CharField(max_length=255, blank=True, null=True, default=None)
+    province = models.CharField(max_length=6, choices=Covid19Triage.PROVINCE_CHOICES)
+    city = models.CharField(max_length=255)
+    age = models.CharField(max_length=5, choices=Covid19Triage.AGE_CHOICES)
+    date_of_birth = models.DateField(blank=True, null=True, default=None)
+    gender = models.CharField(
+        max_length=7, choices=Covid19Triage.GENDER_CHOICES, blank=True, default=""
+    )
+    location = models.CharField(
+        max_length=255, blank=True, default="", validators=[geographic_coordinate]
+    )
+    city_location = models.CharField(
+        max_length=255,
+        blank=True,
+        null=True,
+        default=None,
+        validators=[geographic_coordinate],
+    )
+    preexisting_condition = models.CharField(
+        max_length=9, choices=Covid19Triage.EXPOSURE_CHOICES, blank=True, default=""
+    )
+    rooms_in_household = models.IntegerField(blank=True, null=True, default=None)
+    persons_in_household = models.IntegerField(blank=True, null=True, default=None)
+    data = models.JSONField(default=dict, blank=True, null=True)
+
+    objects = HealthCheckUserProfileManager()
+
+    def update_from_healthcheck(self, healthcheck: Covid19Triage) -> None:
+        """
+        Updates the profile with the data from the latest healthcheck
+        """
+
+        def has_value(v):
+            """
+            We want values like 0 and False to be considered values, but values like
+            None or blank strings to not be considered values
+            """
+            return v or v == 0 or v is False
+
+        for field in [
+            "msisdn",
+            "first_name",
+            "last_name",
+            "province",
+            "city",
+            "age",
+            "date_of_birth",
+            "gender",
+            "location",
+            "city_location",
+            "preexisting_conditions",
+            "rooms_in_household",
+            "persons_in_household",
+        ]:
+            value = getattr(healthcheck, field, None)
+            if has_value(value):
+                setattr(self, field, value)
+
+        for k, v in healthcheck.data.items():
+            if has_value(v):
+                self.data[k] = v
+
+    class Meta:
+        db_table = "eventstore_healthcheckuserprofile"
