@@ -16,12 +16,4 @@ class Migration(migrations.Migration):
             name="deduplication_id",
             field=models.CharField(default=uuid.uuid4, max_length=255),
         ),
-        migrations.RemoveIndex(
-            model_name="covid19triage",
-            name="userprofile_covid19triage_deduplication_id_d43bee39_like",
-        ),
-        migrations.RemoveIndex(
-            model_name="covid19triage",
-            name="userprofile_healthcheckuserprofile_msisdn_b48139f5_like",
-        ),
     ]
