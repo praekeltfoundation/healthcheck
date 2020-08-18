@@ -7,21 +7,21 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('userprofile', '0002_auto_20200814_1341'),
+        ("userprofile", "0002_auto_20200814_1341"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='covid19triage',
-            name='deduplication_id',
+            model_name="covid19triage",
+            name="deduplication_id",
             field=models.CharField(default=uuid.uuid4, max_length=255),
         ),
         migrations.RemoveIndex(
             model_name="covid19triage",
-            name='userprofile_covid19triage_deduplication_id_d43bee39_like',
+            name="userprofile_covid19triage_deduplication_id_d43bee39_like",
         ),
         migrations.RemoveIndex(
             model_name="covid19triage",
-            name='userprofile_healthcheckuserprofile_msisdn_b48139f5_like',
+            name="userprofile_healthcheckuserprofile_msisdn_b48139f5_like",
         ),
     ]

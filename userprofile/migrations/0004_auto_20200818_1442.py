@@ -7,13 +7,13 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('userprofile', '0003_auto_20200817_1658'),
+        ("userprofile", "0003_auto_20200817_1658"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='covid19triage',
-            name='deduplication_id',
+            model_name="covid19triage",
+            name="deduplication_id",
             field=models.CharField(default=uuid.uuid4, max_length=255, unique=True),
         ),
     ]
