@@ -3,13 +3,6 @@
 from django.db import migrations
 
 
-class RunNonAtomicSQL(migrations.RunSQL):
-    def _run_sql(self, schema_editor, sqls):
-        if schema_editor.connection.in_atomic_block:
-            schema_editor.atomic.__exit__(None, None, None)
-        super(RunNonAtomicSQL, self)._run_sql(schema_editor, sqls)
-
-
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -17,16 +10,16 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        RunNonAtomicSQL(
+        migrations.RunSQL(
             sql="""
-            DROP INDEX CONCURRENTLY IF EXISTS
+            DROP INDEX IF EXISTS
             "userprofile_covid19triage_deduplication_id_d43bee39_like";
             """,
             reverse_sql="",
         ),
-        RunNonAtomicSQL(
+        migrations.RunSQL(
             sql="""
-            DROP INDEX CONCURRENTLY IF EXISTS
+            DROP INDEX IF EXISTS
             "userprofile_healthcheckuserprofile_msisdn_b48139f5_like";
             """,
             reverse_sql="",
