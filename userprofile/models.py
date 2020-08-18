@@ -99,6 +99,7 @@ class Covid19Triage(models.Model):
     data = models.JSONField(default=dict, blank=True, null=True)
 
     class Meta:
+        db_table = "eventstore_covid19triage"
         indexes = [models.Index(fields=["msisdn", "timestamp"])]
 
 
@@ -186,3 +187,6 @@ class HealthCheckUserProfile(models.Model):
         for k, v in healthcheck.data.items():
             if has_value(v):
                 self.data[k] = v
+
+    class Meta:
+        db_table = "eventstore_healthcheckuserprofile"
