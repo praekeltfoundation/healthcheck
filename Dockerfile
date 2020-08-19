@@ -1,10 +1,5 @@
 FROM praekeltfoundation/django-bootstrap:py3.7-stretch
 
-RUN apt-get update && \
-	apt-get install -yq --no-install-recommends wget make git libyaml-dev && \
-	apt-get clean && \
-	rm -rf /var/lib/apt/lists/*
-
 ENV DJANGO_SETTINGS_MODULE "healthcheck.settings.production"
 CMD ["healthcheck.wsgi:application"]
 
