@@ -12,6 +12,7 @@ from userprofile.models import Covid19Triage, HealthCheckUserProfile
 from userprofile.serializers import (
     Covid19TriageSerializer,
     Covid19TriageV2Serializer,
+    Covid19TriageV3Serializer,
     HealthCheckUserProfileSerializer,
     MSISDNSerializer,
 )
@@ -113,6 +114,10 @@ class Covid19TriageV2ViewSet(Covid19TriageViewSet):
             if triage:
                 self._update_data(request.data, triage)
         return super().create(request, *args, **kwargs)
+
+
+class Covid19TriageV3ViewSet(Covid19TriageV2ViewSet):
+    serializer_class = Covid19TriageV3Serializer
 
 
 class HealthCheckUserProfileViewSet(GenericViewSet, RetrieveModelMixin):
