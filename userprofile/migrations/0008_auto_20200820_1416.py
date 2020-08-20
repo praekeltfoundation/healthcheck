@@ -6,13 +6,24 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('userprofile', '0007_covid19triage_place_of_work'),
+        ("userprofile", "0007_covid19triage_place_of_work"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='covid19triage',
-            name='place_of_work',
-            field=models.CharField(blank=True, choices=[('healthcare', 'Healthcare'), ('education', 'Education'), ('port_of_entry', 'Port of entry'), ('other', 'Other')], default=None, max_length=13, null=True),
+            model_name="covid19triage",
+            name="place_of_work",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("healthcare", "Healthcare"),
+                    ("education", "Education"),
+                    ("port_of_entry", "Port of entry"),
+                    ("other", "Other"),
+                ],
+                default=None,
+                max_length=13,
+                null=True,
+            ),
         ),
     ]
