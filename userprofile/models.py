@@ -77,7 +77,9 @@ class Covid19Triage(models.Model):
     city = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=AGE_CHOICES)
     date_of_birth = models.DateField(blank=True, null=True, default=None)
-    place_of_work = models.CharField(max_length=13, null=True, choices=WORK_CHOICES)
+    place_of_work = models.CharField(
+        max_length=13, blank=True, null=True, default=None, choices=WORK_CHOICES
+    )
     fever = models.BooleanField()
     cough = models.BooleanField()
     sore_throat = models.BooleanField()
