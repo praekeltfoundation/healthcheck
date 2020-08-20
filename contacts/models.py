@@ -25,9 +25,10 @@ class CaseQuerySet(models.QuerySet):
         return self.select_related("contact").filter(
             # exclude ones where notification has been already set
             date_notification_end=None,
-            # GTE because cases will be checked periodically
+            # LTE because cases will be checked periodically
             # and some of them might be missed in one of the checks
-            contact_date_end__gte=timezone.now(),
+            # GTE would select future cases which is not indended behaviour
+            contact_date_end__lte=timezone.now(),
             # only select active cases
             is_active=True,
         )
