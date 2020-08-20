@@ -119,6 +119,9 @@ class Covid19TriageV2ViewSet(Covid19TriageViewSet):
 class Covid19TriageV3ViewSet(Covid19TriageV2ViewSet):
     serializer_class = Covid19TriageV3Serializer
 
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
+
 
 class HealthCheckUserProfileViewSet(GenericViewSet, RetrieveModelMixin):
     queryset = HealthCheckUserProfile.objects.all()

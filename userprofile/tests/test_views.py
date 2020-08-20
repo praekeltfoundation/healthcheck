@@ -429,3 +429,85 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["msisdn"], "+27820001001")
         self.assertEqual(response.data["first_name"], "testname")
+
+
+class Covid19TriageV3ViewSetTests(Covid19TriageViewSetTests):
+    url = reverse("covid19triagev3-list")
+
+    def test_get_list(self):
+        """
+        Should return the data, filtered by the querystring
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="view_covid19triage"))
+        self.client.force_authenticate(user)
+
+        triage_old = Covid19Triage.objects.create(
+            msisdn="+27820001001",
+            source="USSD",
+            province="ZA-WC",
+            city="Cape Town",
+            age=Covid19Triage.AGE_18T40,
+            fever=False,
+            cough=False,
+            sore_throat=False,
+            exposure=Covid19Triage.EXPOSURE_NO,
+            tracing=True,
+            risk=Covid19Triage.RISK_LOW,
+        )
+
+        # create triage_new but dont let the flake panic
+        Covid19Triage.objects.create(
+            msisdn="+27820001001",
+            source="USSD",
+            province="ZA-WC",
+            city="Cape Town",
+            age=Covid19Triage.AGE_18T40,
+            fever=False,
+            cough=False,
+            sore_throat=False,
+            exposure=Covid19Triage.EXPOSURE_NO,
+            tracing=True,
+            risk=Covid19Triage.RISK_LOW,
+            place_of_work=Covid19Triage.WORK_HEALTHCARE,
+        )
+
+        response = self.client.get(
+            f"{self.url}?"
+            f"{urlencode({'timestamp_gt': triage_old.timestamp.isoformat()})}"
+        )
+
+        r = dict(response.data[0])
+
+        correct_data = {
+            "msisdn": "+27820001001",
+            "first_name": None,
+            "last_name": None,
+            "source": "USSD",
+            "province": "ZA-WC",
+            "city": "Cape Town",
+            "age": Covid19Triage.AGE_18T40,
+            "date_of_birth": None,
+            "fever": False,
+            "cough": False,
+            "sore_throat": False,
+            "difficulty_breathing": None,
+            "exposure": Covid19Triage.EXPOSURE_NO,
+            "confirmed_contact": None,
+            "tracing": True,
+            "risk": Covid19Triage.RISK_LOW,
+            "gender": "",
+            "location": "",
+            "city_location": None,
+            "muscle_pain": None,
+            "smell": None,
+            "preexisting_condition": "",
+            "rooms_in_household": None,
+            "persons_in_household": None,
+            "created_by": "",
+            "data": {},
+            "place_of_work": Covid19Triage.WORK_HEALTHCARE,
+        }
+        for k, v in r.items():
+            if k in correct_data.keys():
+                self.assertEqual(v, correct_data[k])
