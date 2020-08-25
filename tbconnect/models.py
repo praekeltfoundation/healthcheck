@@ -2,6 +2,7 @@ import uuid
 
 import pycountry
 from django.db import models
+from django.utils import timezone
 
 from userprofile.validators import geographic_coordinate, za_phone_number
 
@@ -32,12 +33,12 @@ class TBCheck(models.Model):
     )
 
     COUGH_NO = "no"
-    COUCH_YES_LT_2WEEKS = "yes_lt_2weeks"
-    COUCH_YES_GT_2WEEKS = "yes_gt_2weeks"
+    COUGH_YES_LT_2WEEKS = "yes_lt_2weeks"
+    COUGH_YES_GT_2WEEKS = "yes_gt_2weeks"
     COUGH_CHOICES = (
         (COUGH_NO, "No"),
-        (COUCH_YES_LT_2WEEKS, "Yes, less than 2 weeks"),
-        (COUCH_YES_GT_2WEEKS, "Yes, more than 2 weeks"),
+        (COUGH_YES_LT_2WEEKS, "Yes, less than 2 weeks"),
+        (COUGH_YES_GT_2WEEKS, "Yes, more than 2 weeks"),
     )
 
     RISK_LOW = "low"
@@ -62,18 +63,16 @@ class TBCheck(models.Model):
         (GENDER_NOT_SAY, "Rather not say"),
     )
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     msisdn = models.CharField(max_length=255, validators=[za_phone_number])
     source = models.CharField(max_length=255)
     province = models.CharField(max_length=6, choices=PROVINCE_CHOICES)
     city = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=AGE_CHOICES)
-    gender = models.CharField(
-        max_length=7, choices=GENDER_CHOICES, blank=True, default=""
-    )
+    gender = models.CharField(max_length=7, choices=GENDER_CHOICES, default="")
     location = models.CharField(
-        max_length=255, blank=True, default="", validators=[geographic_coordinate]
+        max_length=255, default="", validators=[geographic_coordinate]
     )
     cough = models.CharField(max_length=13, choices=COUGH_CHOICES)
     fever = models.BooleanField()
@@ -81,3 +80,6 @@ class TBCheck(models.Model):
     weight = models.BooleanField()
     exposure = models.CharField(max_length=9, choices=EXPOSURE_CHOICES)
     tracing = models.BooleanField(help_text="Whether the NDoH can contact the user")
+    completed_timestamp = models.DateTimeField(default=timezone.now)
+    timestamp = models.DateTimeField(default=timezone.now, db_index=True)
+    risk = models.CharField(max_length=22, choices=RISK_CHOICES)

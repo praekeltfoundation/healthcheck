@@ -36,14 +36,15 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "source": "USSD",
                 "province": "ZA-WC",
                 "city": "Cape Town",
-                "age": "18-40",
-                "gender": "female",
-                "cough": "yes_gt_2weeks",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": TBCheck.COUGH_YES_GT_2WEEKS,
                 "fever": True,
                 "sweat": False,
                 "weight": True,
                 "exposure": "yes",
                 "tracing": True,
+                "risk": TBCheck.RISK_LOW
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -52,11 +53,12 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(tbcheck.source, "USSD")
         self.assertEqual(tbcheck.province, "ZA-WC")
         self.assertEqual(tbcheck.city, "Cape Town")
-        self.assertEqual(tbcheck.age, "18-40")
-        self.assertEqual(tbcheck.gender, "female")
-        self.assertEqual(tbcheck.cough, "yes_gt_2weeks")
+        self.assertEqual(tbcheck.age, TBCheck.AGE_18T40)
+        self.assertEqual(tbcheck.gender, TBCheck.GENDER_FEMALE)
+        self.assertEqual(tbcheck.cough, TBCheck.COUGH_YES_GT_2WEEKS)
         self.assertTrue(tbcheck.fever)
         self.assertFalse(tbcheck.sweat)
         self.assertTrue(tbcheck.weight)
         self.assertEqual(tbcheck.exposure, "yes")
         self.assertTrue(tbcheck.tracing)
+        self.assertEqual(tbcheck.risk, TBCheck.RISK_LOW)
