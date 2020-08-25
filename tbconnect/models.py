@@ -70,10 +70,8 @@ class TBCheck(models.Model):
     province = models.CharField(max_length=6, choices=PROVINCE_CHOICES)
     city = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=AGE_CHOICES)
-    gender = models.CharField(max_length=7, choices=GENDER_CHOICES, default="")
-    location = models.CharField(
-        max_length=255, default="", validators=[geographic_coordinate]
-    )
+    gender = models.CharField(max_length=7, choices=GENDER_CHOICES)
+    location = models.CharField(max_length=255, validators=[geographic_coordinate])
     cough = models.CharField(max_length=13, choices=COUGH_CHOICES)
     fever = models.BooleanField()
     sweat = models.BooleanField()
