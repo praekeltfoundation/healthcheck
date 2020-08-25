@@ -1,6 +1,7 @@
 import uuid
 from datetime import timedelta
 
+from django.conf import settings
 from django.db import models
 from django.db.models import ExpressionWrapper, F, fields
 from django.utils import timezone
@@ -45,7 +46,7 @@ class CaseManager(models.Manager):
 
     def with_end_date(self):
         date_end_expression = ExpressionWrapper(
-            expression=F("date_start") + timedelta(days=14),
+            expression=F("date_start") + timedelta(days=settings.TIMEFRAME),
             output_field=fields.DateTimeField(),
         )
         return self.annotate(contact_date_end=date_end_expression)
@@ -76,4 +77,4 @@ class Case(models.Model):
 
     @property
     def date_end(self):
-        return self.date_start + timedelta(days=14)
+        return self.date_start + timedelta(days=settings.TIMEFRAME)

@@ -29,7 +29,6 @@ class ContactSerializer(serializers.ModelSerializer):
 
 class CaseSerializer(serializers.ModelSerializer):
     timestamp = serializers.DateTimeField(source="date_start", write_only=True)
-    external_id = serializers.CharField(required=True)
     created_by = serializers.SerializerMethodField()
 
     def validate(self, data):
