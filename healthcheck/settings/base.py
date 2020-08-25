@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "users",
     "contacts",
     "userprofile",
+    "tbconnect",
 ]
 
 MIDDLEWARE = [
