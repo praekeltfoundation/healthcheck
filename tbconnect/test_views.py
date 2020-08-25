@@ -44,7 +44,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "weight": True,
                 "exposure": "yes",
                 "tracing": True,
-                "risk": TBCheck.RISK_LOW
+                "risk": TBCheck.RISK_LOW,
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
