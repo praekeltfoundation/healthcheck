@@ -1,4 +1,8 @@
+from datetime import timedelta
+
+from django.conf import settings
 from django.db.utils import IntegrityError
+from django.utils import timezone
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 
@@ -77,6 +81,11 @@ class ConfirmedContactView(generics.GenericAPIView):
         if Case.objects.filter(
             contact=contact, date_start__gt=case.date_start,
         ).exists():
+            case.is_active = False
+            case.save(update_fields=("is_active",))
+
+        # deactivate case if it is older than two weeks but keep it
+        if case.date_start + timedelta(days=settings.TIMEFRAME) < timezone.now():
             case.is_active = False
             case.save(update_fields=("is_active",))
 
