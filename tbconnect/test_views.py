@@ -64,3 +64,34 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertTrue(tbcheck.tracing)
         self.assertEqual(tbcheck.risk, TBCheck.RISK_LOW)
         self.assertEqual(tbcheck.location, "+40.20361+40.20361")
+
+    def test_location_validation(self):
+        """
+        Should create a new TBCheck object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "USSD",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": TBCheck.COUGH_YES_GT_2WEEKS,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(
+            response.json(),
+            {"non_field_errors": ["location and city_location are both None"]},
+        )
