@@ -15,6 +15,7 @@ django-cors-headers==3.4.0
 django-environ==0.4.5
 django-filter==2.3.0
 django-phonenumber-field==4.0.0
+django-prometheus==2.1.0
 django-rest-auth==0.9.5
 djangorestframework==3.11.0
 flake8==3.8.1
@@ -30,6 +31,7 @@ mccabe==0.6.1
 pathspec==0.8.0
 pathtools==0.1.2
 phonenumbers==8.12.6
+prometheus-client==0.8.0
 psycopg2==2.8.5
 pycodestyle==2.6.0
 pycountry==20.7.3

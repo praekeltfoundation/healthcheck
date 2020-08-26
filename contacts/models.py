@@ -5,6 +5,7 @@ from django.conf import settings
 from django.db import models
 from django.db.models import ExpressionWrapper, F, fields
 from django.utils import timezone
+from django_prometheus.models import ExportModelOperationsMixin
 from phonenumber_field.modelfields import PhoneNumberField
 
 from users.models import User
@@ -14,7 +15,7 @@ def get_uuid():
     return uuid.uuid4().hex
 
 
-class Contact(models.Model):
+class Contact(ExportModelOperationsMixin("contact"), models.Model):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
     )
@@ -55,7 +56,7 @@ class CaseManager(models.Manager):
         return self.get_queryset().up_for_notification()
 
 
-class Case(models.Model):
+class Case(ExportModelOperationsMixin("case"), models.Model):
     external_id = models.CharField(
         max_length=255, blank=False, default=get_uuid, unique=True,
     )
