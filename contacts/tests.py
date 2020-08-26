@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import pytz
 import responses
 from django.test import Client, TransactionTestCase
+from django.urls import reverse
 from rest_framework.test import APIClient
 
 from contacts.models import Case, Contact
@@ -48,6 +49,21 @@ class CaseTasksTests(TransactionTestCase):
         self.case.contact = self.contact
         self.case.save(update_fields=["contact"])
         logger.info("Created contact and case.")
+
+    def test_expired_date(self):
+        url = reverse("contacts:rest_confirmed_contact")
+
+        self.client.post(
+            url,
+            data={
+                "msisdn": "+27820001009",
+                "external_id": "qwerty",
+                "timestamp": datetime.now() - timedelta(days=20),
+            },
+        )
+
+        expired_case = Case.objects.filter(external_id="qwerty").first()
+        self.assertFalse(expired_case.is_active)
 
     @responses.activate
     def test_dates(self):
