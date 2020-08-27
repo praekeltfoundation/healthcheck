@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 
 from userprofile.tests.test_views import BaseEventTestCase
+from userprofile.models import HealthCheckUserProfile
 
 from .models import TBCheck
 
@@ -95,3 +96,35 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
             response.json(),
             {"non_field_errors": ["location and city_location are both None"]},
         )
+
+    def test_creates_user_profile(self):
+        """
+        The user profile should be created when the TB Check is saved
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "+27856454612",
+                "source": "USSD",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": TBCheck.COUGH_YES_GT_2WEEKS,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "location": "+40.20361+40.20361",
+            },
+            format="json",
+        )
+        profile = HealthCheckUserProfile.objects.get(msisdn="+27856454612")
+        self.assertEqual(profile.province, "ZA-WC")
+        self.assertEqual(profile.city, "Cape Town")
+        self.assertEqual(profile.age, TBCheck.AGE_18T40)

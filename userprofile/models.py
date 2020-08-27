@@ -5,6 +5,8 @@ import pycountry
 from django.db import models
 from django.utils import timezone
 
+from tbconnect.models import TBCheck
+from userprofile.utils import has_value
 from userprofile.validators import geographic_coordinate, za_phone_number
 
 
@@ -173,13 +175,6 @@ class HealthCheckUserProfile(models.Model):
         Updates the profile with the data from the latest healthcheck
         """
 
-        def has_value(v):
-            """
-            We want values like 0 and False to be considered values, but values like
-            None or blank strings to not be considered values
-            """
-            return v or v == 0 or v is False
-
         for field in [
             "msisdn",
             "first_name",
@@ -202,6 +197,24 @@ class HealthCheckUserProfile(models.Model):
         for k, v in healthcheck.data.items():
             if has_value(v):
                 self.data[k] = v
+
+    def update_from_tbcheck(self, tbcheck: TBCheck) -> None:
+        """
+        Updates the profile with the data from the latest TB Check
+        """
+
+        for field in [
+            "msisdn",
+            "province",
+            "city",
+            "age",
+            "gender",
+            "location",
+            "city_location",
+        ]:
+            value = getattr(tbcheck, field, None)
+            if has_value(value):
+                setattr(self, field, value)
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
