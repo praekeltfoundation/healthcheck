@@ -1,6 +1,7 @@
 from django.test import TestCase
 
 from userprofile.models import Covid19Triage, HealthCheckUserProfile
+from tbconnect.models import TBCheck
 
 
 class HealthCheckUserProfileTests(TestCase):
@@ -36,6 +37,26 @@ class HealthCheckUserProfileTests(TestCase):
                 "existing": "value",
             },
         )
+
+    def test_update_from_tbcheck(self):
+        """
+        Updates the correct fields from the TB Check
+        """
+        tbCheck = TBCheck(
+            msisdn="+27820001001",
+            gender=TBCheck.GENDER_MALE,
+            age=TBCheck.AGE_18T40,
+            location=None
+        )
+        profile = HealthCheckUserProfile(
+            gender=TBCheck.GENDER_FEMALE,
+            age=TBCheck.AGE_U18,
+            location="+40.20361+40.20361"
+        )
+        profile.update_from_tbcheck(tbCheck)
+        self.assertEqual(profile.gender, TBCheck.GENDER_MALE)
+        self.assertEqual(profile.age, TBCheck.AGE_18T40)
+        self.assertEqual(profile.location, "+40.20361+40.20361")
 
     def test_get_or_prefill_existing(self):
         """
