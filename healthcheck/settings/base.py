@@ -32,7 +32,14 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "celery",
     "django_filters",
+    # monitoring apps
     "django_prometheus",
+    "health_check",
+    "health_check.db",
+    "health_check.cache",
+    "health_check.storage",
+    #    'health_check.contrib.celery',
+    "health_check.contrib.redis",
     # local apps
     "users",
     "contacts",
@@ -131,6 +138,7 @@ PHONENUMBER_DEFAULT_REGION = "ZA"
 
 # CELERY SETTINGS
 CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
+REDIS_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
 CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")

@@ -12,6 +12,7 @@ global_v2router.registry.extend(tbcheck_v2router.registry)
 
 urlpatterns = [
     path("prometheus/", include("django_prometheus.urls")),
+    path("ht/", include("health_check.urls")),
     path("admin/", admin.site.urls),
     path("v1/", include("contacts.urls", namespace="api")),
     path("v2/", include(global_v2router.urls)),
