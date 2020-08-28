@@ -30,6 +30,12 @@ db:
 You also need to include those in `DATABASE_URL`.
 You should re-build your local container after adding new dependencies.
 
+After building, create admin account
+```sh
+$ python manage.py createsuperuser
+```
+You can use provided credentials to log into [admin panel](http://127.0.0.1:8000/admin).
+
 ## Running
 ```sh
 $ docker-compose up
