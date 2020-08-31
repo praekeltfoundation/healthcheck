@@ -86,3 +86,4 @@ class TBCheck(models.Model):
     completed_timestamp = models.DateTimeField(default=timezone.now)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     risk = models.CharField(max_length=22, choices=RISK_CHOICES)
+    follow_up_optin = models.BooleanField(default=False)

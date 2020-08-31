@@ -216,5 +216,7 @@ class HealthCheckUserProfile(models.Model):
             if has_value(value):
                 setattr(self, field, value)
 
+        self.data["follow_up_optin"] = tbcheck.follow_up_optin
+
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"

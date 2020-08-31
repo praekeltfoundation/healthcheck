@@ -47,6 +47,7 @@ class HealthCheckUserProfileTests(TestCase):
             gender=TBCheck.GENDER_MALE,
             age=TBCheck.AGE_18T40,
             location=None,
+            follow_up_optin=True,
         )
         profile = HealthCheckUserProfile(
             gender=TBCheck.GENDER_FEMALE,
@@ -57,6 +58,9 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.gender, TBCheck.GENDER_MALE)
         self.assertEqual(profile.age, TBCheck.AGE_18T40)
         self.assertEqual(profile.location, "+40.20361+40.20361")
+        self.assertEqual(
+            profile.data, {"follow_up_optin": True,},
+        )
 
     def test_get_or_prefill_existing(self):
         """
