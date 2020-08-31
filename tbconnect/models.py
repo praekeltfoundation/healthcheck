@@ -63,6 +63,19 @@ class TBCheck(models.Model):
         (GENDER_NOT_SAY, "Rather not say"),
     )
 
+    LANGUAGE_ENGLISH = "eng"
+    LANGUAGE_ZULU = "zul"
+    LANGUAGE_AFRIKAANS = "afr"
+    LANGUAGE_XHOSA = "xho"
+    LANGUAGE_SESOTHO = "sot"
+    LANGUAGE_CHOICES = (
+        (LANGUAGE_ENGLISH, "English"),
+        (LANGUAGE_ZULU, "isiZulu"),
+        (LANGUAGE_AFRIKAANS, "Afrikaans"),
+        (LANGUAGE_XHOSA, "isiXhosa"),
+        (LANGUAGE_SESOTHO, "Sesotho"),
+    )
+
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     msisdn = models.CharField(max_length=255, validators=[za_phone_number])
@@ -87,4 +100,6 @@ class TBCheck(models.Model):
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     risk = models.CharField(max_length=22, choices=RISK_CHOICES)
     follow_up_optin = models.BooleanField(default=False)
-    language = models.CharField(max_length=3, null=True, blank=True)
+    language = models.CharField(
+        max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
+    )
