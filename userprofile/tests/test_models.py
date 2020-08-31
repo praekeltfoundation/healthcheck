@@ -48,7 +48,7 @@ class HealthCheckUserProfileTests(TestCase):
             age=TBCheck.AGE_18T40,
             location=None,
             follow_up_optin=True,
-            language="eng"
+            language="eng",
         )
         profile = HealthCheckUserProfile(
             gender=TBCheck.GENDER_FEMALE,

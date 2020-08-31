@@ -212,7 +212,7 @@ class HealthCheckUserProfile(models.Model):
             "gender",
             "location",
             "city_location",
-            "language"
+            "language",
         ]:
             value = getattr(tbcheck, field, None)
             if has_value(value):

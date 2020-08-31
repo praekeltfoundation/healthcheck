@@ -48,7 +48,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "risk": TBCheck.RISK_LOW,
                 "location": "+40.20361+40.20361",
                 "follow_up_optin": True,
-                "language": "eng"
+                "language": "eng",
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
