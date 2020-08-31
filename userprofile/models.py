@@ -166,6 +166,7 @@ class HealthCheckUserProfile(models.Model):
     )
     rooms_in_household = models.IntegerField(blank=True, null=True, default=None)
     persons_in_household = models.IntegerField(blank=True, null=True, default=None)
+    language = models.CharField(max_length=3, null=True, blank=True)
     data = models.JSONField(default=dict, blank=True, null=True)
 
     objects = HealthCheckUserProfileManager()
@@ -211,6 +212,7 @@ class HealthCheckUserProfile(models.Model):
             "gender",
             "location",
             "city_location",
+            "language"
         ]:
             value = getattr(tbcheck, field, None)
             if has_value(value):
