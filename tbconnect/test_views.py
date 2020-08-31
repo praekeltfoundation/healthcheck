@@ -48,6 +48,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "risk": TBCheck.RISK_LOW,
                 "location": "+40.20361+40.20361",
                 "follow_up_optin": True,
+                "language": "eng",
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -67,6 +68,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(tbcheck.risk, TBCheck.RISK_LOW)
         self.assertEqual(tbcheck.location, "+40.20361+40.20361")
         self.assertTrue(tbcheck.follow_up_optin)
+        self.assertEqual(tbcheck.language, "eng")
 
     def test_location_validation(self):
         """
