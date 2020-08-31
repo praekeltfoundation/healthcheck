@@ -32,6 +32,13 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "celery",
     "django_filters",
+    # monitoring apps
+    "django_prometheus",
+    "health_check",
+    "health_check.db",
+    "health_check.cache",
+    "health_check.contrib.redis",
+    "health_check.contrib.rabbitmq",
     # local apps
     "users",
     "contacts",
@@ -40,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "django_prometheus.middleware.PrometheusBeforeMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -47,6 +55,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_prometheus.middleware.PrometheusAfterMiddleware",
 ]
 
 ROOT_URLCONF = "healthcheck.urls"
@@ -128,6 +137,10 @@ PHONENUMBER_DEFAULT_REGION = "ZA"
 
 # CELERY SETTINGS
 CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
+# BROKER_URL and REDIS_URL are required to have rabbitmq and redis monitoring.
+# Redis is used in dev env, RabbitMQ on production.
+BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
+REDIS_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
 CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")

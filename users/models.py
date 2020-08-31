@@ -6,6 +6,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import gettext_lazy as _
+from django_prometheus.models import ExportModelOperationsMixin
 from rest_framework.authtoken.models import Token
 
 ROLE_ADMIN = "admin"
@@ -51,7 +52,7 @@ class UserManager(BaseUserManager):
         return self._create_user(username, password, **extra_fields)
 
 
-class User(AbstractBaseUser, PermissionsMixin):
+class User(ExportModelOperationsMixin("api-user"), AbstractBaseUser, PermissionsMixin):
     """
     Default user model. Created by admin.
     The only purpose for user is to be used in

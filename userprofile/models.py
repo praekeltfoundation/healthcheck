@@ -4,13 +4,14 @@ from typing import Text
 import pycountry
 from django.db import models
 from django.utils import timezone
+from django_prometheus.models import ExportModelOperationsMixin
 
 from tbconnect.models import TBCheck
 from userprofile.utils import has_value
 from userprofile.validators import geographic_coordinate, za_phone_number
 
 
-class Covid19Triage(models.Model):
+class Covid19Triage(ExportModelOperationsMixin("covid19triage"), models.Model):
     AGE_U18 = "<18"
     AGE_18T40 = "18-40"
     AGE_40T65 = "40-65"
@@ -138,7 +139,9 @@ class HealthCheckUserProfileManager(models.Manager):
             return profile
 
 
-class HealthCheckUserProfile(models.Model):
+class HealthCheckUserProfile(
+    ExportModelOperationsMixin("healthcheck-user-profile"), models.Model
+):
     msisdn = models.CharField(
         primary_key=True, max_length=255, validators=[za_phone_number]
     )

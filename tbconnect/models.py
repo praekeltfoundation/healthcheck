@@ -3,11 +3,12 @@ import uuid
 import pycountry
 from django.db import models
 from django.utils import timezone
+from django_prometheus.models import ExportModelOperationsMixin
 
 from userprofile.validators import geographic_coordinate, za_phone_number
 
 
-class TBCheck(models.Model):
+class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     AGE_U18 = "<18"
     AGE_18T40 = "18-40"
     AGE_40T65 = "40-65"
