@@ -168,6 +168,5 @@ class HealthCheckUserProfileSerializer(serializers.ModelSerializer):
         if "data" in validated_data:
             data = validated_data.pop("data")
             instance.data.update(data)
-            # validated_data["data"].update(instance.data)
         super().update(instance, validated_data)
         return instance
