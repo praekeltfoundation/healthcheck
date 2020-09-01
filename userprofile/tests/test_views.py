@@ -429,17 +429,44 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
 
     def test_update_profile(self):
         HealthCheckUserProfile.objects.create(
-            msisdn="+27820001001", first_name="testname"
+            msisdn="+27820001001", first_name="testname", data={"existing": "data"}
         )
         user = get_user_model().objects.create_user("test")
         user.user_permissions.add(
             Permission.objects.get(codename="change_healthcheckuserprofile")
         )
         self.client.force_authenticate(user)
-        response = self.client.patch(self.url, {"data": {"something": "updated"}})
+        response = self.client.patch(self.url, {"first_name": "updated"})
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        [profile] = HealthCheckUserProfile.objects.all()
+        self.assertEqual(profile.data, {"existing": "data"})
+        self.assertEqual(profile.first_name, "updated")
+
+    def test_update_profile_data(self):
+        HealthCheckUserProfile.objects.create(
+            msisdn="+27820001001",
+            first_name="testname",
+            last_name="test",
+            data={"existing": "data"},
+        )
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="change_healthcheckuserprofile")
+        )
+        self.client.force_authenticate(user)
+        response = self.client.patch(
+            self.url, {"data": {"something": "updated"}, "first_name": "updated"}
+        )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["data"]["something"], "updated")
+
+        [profile] = HealthCheckUserProfile.objects.all()
+        self.assertEqual(profile.data, {"existing": "data", "something": "updated"})
+        self.assertEqual(profile.first_name, "updated")
+        self.assertEqual(profile.last_name, "test")
 
 
 class Covid19TriageV3ViewSetTests(Covid19TriageViewSetTests):
