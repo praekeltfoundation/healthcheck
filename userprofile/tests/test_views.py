@@ -449,7 +449,7 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
             msisdn="+27820001001",
             first_name="testname",
             last_name="test",
-            data={"existing": "data"},
+            data={"existing": "data", "overwrite": "me"},
         )
         user = get_user_model().objects.create_user("test")
         user.user_permissions.add(
@@ -457,14 +457,17 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
         )
         self.client.force_authenticate(user)
         response = self.client.patch(
-            self.url, {"data": {"something": "updated"}, "first_name": "updated"}
+            self.url,
+            {"data": {"something": "new", "overwrite": "you"}, "first_name": "updated"},
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data["data"]["something"], "updated")
+        self.assertEqual(response.data["data"]["something"], "new")
 
         [profile] = HealthCheckUserProfile.objects.all()
-        self.assertEqual(profile.data, {"existing": "data", "something": "updated"})
+        self.assertEqual(
+            profile.data, {"existing": "data", "something": "new", "overwrite": "you"}
+        )
         self.assertEqual(profile.first_name, "updated")
         self.assertEqual(profile.last_name, "test")
 
