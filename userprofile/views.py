@@ -2,7 +2,12 @@ from django.db import IntegrityError
 from django.http import Http404
 from django_filters import rest_framework as filters
 from rest_framework import status
-from rest_framework.mixins import CreateModelMixin, ListModelMixin, RetrieveModelMixin
+from rest_framework.mixins import (
+    CreateModelMixin,
+    ListModelMixin,
+    RetrieveModelMixin,
+    UpdateModelMixin,
+)
 from rest_framework.pagination import CursorPagination
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.response import Response
@@ -123,7 +128,9 @@ class Covid19TriageV3ViewSet(Covid19TriageV2ViewSet):
         return super().create(request, *args, **kwargs)
 
 
-class HealthCheckUserProfileViewSet(GenericViewSet, RetrieveModelMixin):
+class HealthCheckUserProfileViewSet(
+    GenericViewSet, RetrieveModelMixin, UpdateModelMixin
+):
     queryset = HealthCheckUserProfile.objects.all()
     serializer_class = HealthCheckUserProfileSerializer
     permission_classes = (DjangoModelPermissions,)

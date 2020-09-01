@@ -163,3 +163,10 @@ class HealthCheckUserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = HealthCheckUserProfile
         fields = "__all__"
+
+    def update(self, instance, validated_data):
+        if "data" in validated_data:
+            data = validated_data.pop("data")
+            instance.data.update(data)
+        super().update(instance, validated_data)
+        return instance

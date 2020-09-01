@@ -6,10 +6,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from userprofile.models import (
-    Covid19Triage,
-    HealthCheckUserProfile,
-)
+from userprofile.models import Covid19Triage, HealthCheckUserProfile
 
 
 class BaseEventTestCase(object):
@@ -429,6 +426,50 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["msisdn"], "+27820001001")
         self.assertEqual(response.data["first_name"], "testname")
+
+    def test_update_profile(self):
+        HealthCheckUserProfile.objects.create(
+            msisdn="+27820001001", first_name="testname", data={"existing": "data"}
+        )
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="change_healthcheckuserprofile")
+        )
+        self.client.force_authenticate(user)
+        response = self.client.patch(self.url, {"first_name": "updated"})
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        [profile] = HealthCheckUserProfile.objects.all()
+        self.assertEqual(profile.data, {"existing": "data"})
+        self.assertEqual(profile.first_name, "updated")
+
+    def test_update_profile_data(self):
+        HealthCheckUserProfile.objects.create(
+            msisdn="+27820001001",
+            first_name="testname",
+            last_name="test",
+            data={"existing": "data", "overwrite": "me"},
+        )
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="change_healthcheckuserprofile")
+        )
+        self.client.force_authenticate(user)
+        response = self.client.patch(
+            self.url,
+            {"data": {"something": "new", "overwrite": "you"}, "first_name": "updated"},
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["data"]["something"], "new")
+
+        [profile] = HealthCheckUserProfile.objects.all()
+        self.assertEqual(
+            profile.data, {"existing": "data", "something": "new", "overwrite": "you"}
+        )
+        self.assertEqual(profile.first_name, "updated")
+        self.assertEqual(profile.last_name, "test")
 
 
 class Covid19TriageV3ViewSetTests(Covid19TriageViewSetTests):
