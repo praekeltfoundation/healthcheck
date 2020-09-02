@@ -7,12 +7,14 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('userprofile', '0009_healthcheckuserprofile_language'),
+        ("userprofile", "0009_healthcheckuserprofile_language"),
     ]
 
     operations = [
         migrations.AddIndex(
-            model_name='healthcheckuserprofile',
-            index=django.contrib.postgres.indexes.GinIndex(fields=['data'], name='userprofile__data__gin_idx'),
+            model_name="healthcheckuserprofile",
+            index=django.contrib.postgres.indexes.GinIndex(
+                fields=["data"], name="userprofile__data__gin_idx"
+            ),
         ),
     ]

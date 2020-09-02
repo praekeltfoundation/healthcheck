@@ -227,6 +227,4 @@ class HealthCheckUserProfile(
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
-        indexes = [
-            GinIndex(fields=["data"], name="userprofile__data__gin_idx")
-        ]
+        indexes = [GinIndex(fields=["data"], name="userprofile__data__gin_idx")]
