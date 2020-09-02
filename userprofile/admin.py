@@ -46,6 +46,7 @@ class Covid19TriageAdmin(BaseEventAdmin):
     readonly_fields = ("id", "created_by", "timestamp")
     list_display = ("msisdn", "risk", "source", "timestamp")
 
+
 @admin.register(HealthCheckUserProfile)
 class HealthCheckUserProfileAdmin(BaseEventAdmin):
     list_display = ("msisdn", "first_name", "gender")
