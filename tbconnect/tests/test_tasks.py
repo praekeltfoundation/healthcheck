@@ -62,7 +62,7 @@ class SyncToRapidproTests(TestCase):
     @responses.activate
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
-        RAPIDPRO_TB_TOKEN="123",
+        RAPIDPRO_TOKEN="123",
         RAPIDPRO_TBCONNECT_FLOW="321",
     )
     def test_sync_whatsapp(self):
@@ -102,7 +102,7 @@ class SyncToRapidproTests(TestCase):
     @responses.activate
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
-        RAPIDPRO_TB_TOKEN="123",
+        RAPIDPRO_TOKEN="123",
         RAPIDPRO_TBCONNECT_FLOW="321",
     )
     def test_sync_sms(self):
@@ -140,7 +140,7 @@ class SyncToRapidproTests(TestCase):
     @responses.activate
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
-        RAPIDPRO_TB_TOKEN="123",
+        RAPIDPRO_TOKEN="123",
         RAPIDPRO_TBCONNECT_FLOW="321",
     )
     def test_sync_low_risk(self):

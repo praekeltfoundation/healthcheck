@@ -11,10 +11,10 @@ from userprofile.models import HealthCheckUserProfile
 def perform_sync_to_rapidpro():
     if (
         settings.RAPIDPRO_URL
-        and settings.RAPIDPRO_TB_TOKEN
+        and settings.RAPIDPRO_TOKEN
         and settings.RAPIDPRO_TBCONNECT_FLOW
     ):
-        rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TB_TOKEN)
+        rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
 
         for contact in (
             HealthCheckUserProfile.objects.filter(data__follow_up_optin=True)
