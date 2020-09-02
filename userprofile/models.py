@@ -2,6 +2,7 @@ import uuid
 from typing import Text
 
 import pycountry
+from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.utils import timezone
 from django_prometheus.models import ExportModelOperationsMixin
@@ -226,3 +227,6 @@ class HealthCheckUserProfile(
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
+        indexes = [
+            GinIndex(fields=["data"], name="userprofile__data__gin_idx")
+        ]
