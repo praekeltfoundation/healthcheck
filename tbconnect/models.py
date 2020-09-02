@@ -79,7 +79,9 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
 
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
-    msisdn = models.CharField(max_length=255, validators=[za_phone_number])
+    msisdn = models.CharField(
+        max_length=255, validators=[za_phone_number], db_index=True
+    )
     source = models.CharField(max_length=255)
     province = models.CharField(max_length=6, choices=PROVINCE_CHOICES)
     city = models.CharField(max_length=255)
@@ -97,7 +99,7 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     weight = models.BooleanField()
     exposure = models.CharField(max_length=9, choices=EXPOSURE_CHOICES)
     tracing = models.BooleanField(help_text="Whether the NDoH can contact the user")
-    completed_timestamp = models.DateTimeField(default=timezone.now)
+    completed_timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     risk = models.CharField(max_length=22, choices=RISK_CHOICES)
     follow_up_optin = models.BooleanField(default=False)

@@ -16,9 +16,11 @@ def perform_sync_to_rapidpro():
     ):
         rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TB_TOKEN)
 
-        for contact in HealthCheckUserProfile.objects.filter(
-            data__follow_up_optin=True
-        ).exclude(data__synced_to_tb_rapidpro=True):
+        for contact in (
+            HealthCheckUserProfile.objects.filter(data__follow_up_optin=True)
+            .exclude(data__synced_to_tb_rapidpro=True)
+            .iterator()
+        ):
             check = (
                 TBCheck.objects.filter(msisdn=contact.msisdn)
                 .order_by("-completed_timestamp")
