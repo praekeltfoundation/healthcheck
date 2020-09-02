@@ -3,7 +3,7 @@ from django.core.paginator import Paginator
 from django.db import OperationalError, connection, transaction
 from django.utils.functional import cached_property
 
-from userprofile.models import Covid19Triage
+from userprofile.models import Covid19Triage, HealthCheckUserProfile
 
 
 class ApproximatePaginator(Paginator):
@@ -45,3 +45,7 @@ class BaseEventAdmin(admin.ModelAdmin):
 class Covid19TriageAdmin(BaseEventAdmin):
     readonly_fields = ("id", "created_by", "timestamp")
     list_display = ("msisdn", "risk", "source", "timestamp")
+
+@admin.register(HealthCheckUserProfile)
+class HealthCheckUserProfileAdmin(BaseEventAdmin):
+    list_display = ("msisdn", "first_name", "gender")
