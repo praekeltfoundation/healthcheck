@@ -222,9 +222,7 @@ class HealthCheckUserProfile(
                 setattr(self, field, value)
 
         self.data["follow_up_optin"] = tbcheck.follow_up_optin
-
-        if "synced_to_tb_rapidpro" not in self.data:
-            self.data["synced_to_tb_rapidpro"] = False
+        self.data["synced_to_tb_rapidpro"] = False
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
