@@ -2,9 +2,10 @@ from rest_framework.mixins import CreateModelMixin
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import GenericViewSet
 
+from userprofile.models import HealthCheckUserProfile
+
 from .models import TBCheck
 from .serializers import TBCheckSerializer
-from userprofile.models import HealthCheckUserProfile
 
 
 class TBCheckViewSet(GenericViewSet, CreateModelMixin):
