@@ -4,10 +4,9 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from userprofile.tests.test_views import BaseEventTestCase
+from tbconnect.models import TBCheck
 from userprofile.models import HealthCheckUserProfile
-
-from .models import TBCheck
+from userprofile.tests.test_views import BaseEventTestCase
 
 
 class TBCheckViewSetTests(APITestCase, BaseEventTestCase):

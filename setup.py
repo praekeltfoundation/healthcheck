@@ -8,6 +8,7 @@ requirements = [
     "django-environ==0.4.5",
     "psycopg2==2.8.5",
     "requests==2.24.0",
+    "rapidpro-python==2.6.1",
 ]
 
 try:

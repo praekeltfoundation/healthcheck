@@ -61,7 +61,7 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.location, "+40.20361+40.20361")
         self.assertEqual(profile.language, "eng")
         self.assertEqual(
-            profile.data, {"follow_up_optin": True,},
+            profile.data, {"follow_up_optin": True, "synced_to_tb_rapidpro": False},
         )
 
     def test_get_or_prefill_existing(self):
