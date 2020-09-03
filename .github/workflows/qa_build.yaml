@@ -15,7 +15,7 @@ jobs:
       postgres:
         image: postgres:9.6-alpine
         env:
-          POSTGRES_DB: postgres
+          POSTGRES_DB: healthcheck
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
         ports:
