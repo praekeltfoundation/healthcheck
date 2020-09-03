@@ -99,7 +99,7 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     weight = models.BooleanField()
     exposure = models.CharField(max_length=9, choices=EXPOSURE_CHOICES)
     tracing = models.BooleanField(help_text="Whether the NDoH can contact the user")
-    completed_timestamp = models.DateTimeField(default=timezone.now, db_index=True)
+    completed_timestamp = models.DateTimeField(default=timezone.now)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     risk = models.CharField(max_length=22, choices=RISK_CHOICES)
     follow_up_optin = models.BooleanField(default=False)

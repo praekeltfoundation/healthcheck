@@ -15,13 +15,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name="tbcheck",
-            name="completed_timestamp",
-            field=models.DateTimeField(
-                db_index=True, default=django.utils.timezone.now
-            ),
-        ),
-        migrations.AlterField(
-            model_name="tbcheck",
             name="msisdn",
             field=models.CharField(
                 db_index=True,
