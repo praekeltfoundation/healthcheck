@@ -16,9 +16,12 @@ def perform_sync_to_rapidpro():
     ):
         rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
 
+        # using data__contains to hit the GIN index - userprofile__data__gin_idx
         for contact in (
-            HealthCheckUserProfile.objects.filter(data__follow_up_optin=True)
-            .exclude(data__synced_to_tb_rapidpro=True)
+            HealthCheckUserProfile.objects.filter(
+                data__contains={"follow_up_optin": True}
+            )
+            .exclude(data__contains={"synced_to_tb_rapidpro": True})
             .iterator()
         ):
             check = (
