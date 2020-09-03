@@ -4,7 +4,7 @@ SECRET_KEY = "testsecretkey"
 DEBUG = True
 DATABASES = {
     "default": env.db(  # noqa: F405
-        default="postgres://postgres@postgres:5432/healthcheck"
+        default="postgres://postgres@localhost:5432/healthcheck"
     ),
 }
 
