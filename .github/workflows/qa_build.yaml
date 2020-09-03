@@ -11,6 +11,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:9.6-alpine
+        ports:
+          - 5432:5432
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
