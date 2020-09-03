@@ -30,7 +30,7 @@ def perform_sync_to_rapidpro():
                 .first()
             )
 
-            if check and check.risk != TBCheck.RISK_LOW:
+            if check and check.should_sync_to_rapidpro:
                 urn = f"tel:{contact.msisdn}"
                 if check.source == "WhatsApp":
                     urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
@@ -40,7 +40,10 @@ def perform_sync_to_rapidpro():
                     flow=settings.RAPIDPRO_TBCONNECT_FLOW,
                     extra={
                         "risk": check.risk,
-                        "completed_timestamp": check.completed_timestamp.timestamp(),
+                        "source": check.source,
+                        "completed_timestamp": check.completed_timestamp.strftime(
+                            "%d/%m/%Y"
+                        ),
                     },
                 )
 

@@ -224,7 +224,7 @@ class HealthCheckUserProfile(
 
         self.data["follow_up_optin"] = tbcheck.follow_up_optin
 
-        if tbcheck.risk != TBCheck.RISK_LOW:
+        if tbcheck.should_sync_to_rapidpro:
             self.data["synced_to_tb_rapidpro"] = False
 
     class Meta:

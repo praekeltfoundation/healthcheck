@@ -94,7 +94,10 @@ class SyncToRapidproTests(TestCase):
                 "urns": ["whatsapp:27830000001"],
                 "extra": {
                     "risk": "high",
-                    "completed_timestamp": self.completed_timestamp.timestamp(),
+                    "source": "WhatsApp",
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
                 },
             },
         )
@@ -132,7 +135,10 @@ class SyncToRapidproTests(TestCase):
                 "urns": ["tel:+27830000001"],
                 "extra": {
                     "risk": "high",
-                    "completed_timestamp": self.completed_timestamp.timestamp(),
+                    "source": "USSD",
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
                 },
             },
         )
