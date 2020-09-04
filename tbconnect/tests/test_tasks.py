@@ -39,7 +39,7 @@ class SyncToRapidproTests(TestCase):
         source="WhatsApp",
         risk=TBCheck.RISK_HIGH,
     ):
-        TBCheck.objects.create(
+        check = TBCheck.objects.create(
             **{
                 "msisdn": msisdn,
                 "fever": True,
@@ -49,6 +49,7 @@ class SyncToRapidproTests(TestCase):
                 "source": source,
                 "completed_timestamp": self.completed_timestamp,
                 "risk": risk,
+                "follow_up_optin": optin,
             }
         )
 
@@ -95,6 +96,7 @@ class SyncToRapidproTests(TestCase):
                 "extra": {
                     "risk": "high",
                     "source": "WhatsApp",
+                    "follow_up_optin": True,
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
@@ -136,6 +138,7 @@ class SyncToRapidproTests(TestCase):
                 "extra": {
                     "risk": "high",
                     "source": "USSD",
+                    "follow_up_optin": True,
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
