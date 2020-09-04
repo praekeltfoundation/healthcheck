@@ -39,7 +39,7 @@ class SyncToRapidproTests(TestCase):
         source="WhatsApp",
         risk=TBCheck.RISK_HIGH,
     ):
-        check = TBCheck.objects.create(
+        TBCheck.objects.create(
             **{
                 "msisdn": msisdn,
                 "fever": True,
