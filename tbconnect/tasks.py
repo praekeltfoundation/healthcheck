@@ -17,20 +17,16 @@ def perform_sync_to_rapidpro():
         rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
 
         # using data__contains to hit the GIN index - userprofile__data__gin_idx
-        for contact in (
-            HealthCheckUserProfile.objects.filter(
-                data__contains={"follow_up_optin": True}
-            )
-            .exclude(data__contains={"synced_to_tb_rapidpro": True})
-            .iterator()
-        ):
+        for contact in HealthCheckUserProfile.objects.filter(
+            data__contains={"synced_to_tb_rapidpro": False}
+        ).iterator():
             check = (
                 TBCheck.objects.filter(msisdn=contact.msisdn)
                 .order_by("-completed_timestamp")
                 .first()
             )
 
-            if check and check.risk != TBCheck.RISK_LOW:
+            if check and check.should_sync_to_rapidpro:
                 urn = f"tel:{contact.msisdn}"
                 if check.source == "WhatsApp":
                     urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
@@ -40,7 +36,11 @@ def perform_sync_to_rapidpro():
                     flow=settings.RAPIDPRO_TBCONNECT_FLOW,
                     extra={
                         "risk": check.risk,
-                        "completed_timestamp": check.completed_timestamp.timestamp(),
+                        "source": check.source,
+                        "follow_up_optin": check.follow_up_optin,
+                        "completed_timestamp": check.completed_timestamp.strftime(
+                            "%d/%m/%Y"
+                        ),
                     },
                 )
 

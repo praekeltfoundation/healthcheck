@@ -49,6 +49,7 @@ class SyncToRapidproTests(TestCase):
                 "source": source,
                 "completed_timestamp": self.completed_timestamp,
                 "risk": risk,
+                "follow_up_optin": optin,
             }
         )
 
@@ -94,7 +95,11 @@ class SyncToRapidproTests(TestCase):
                 "urns": ["whatsapp:27830000001"],
                 "extra": {
                     "risk": "high",
-                    "completed_timestamp": self.completed_timestamp.timestamp(),
+                    "source": "WhatsApp",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
                 },
             },
         )
@@ -132,7 +137,11 @@ class SyncToRapidproTests(TestCase):
                 "urns": ["tel:+27830000001"],
                 "extra": {
                     "risk": "high",
-                    "completed_timestamp": self.completed_timestamp.timestamp(),
+                    "source": "USSD",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
                 },
             },
         )

@@ -106,3 +106,9 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     language = models.CharField(
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
+
+    @property
+    def should_sync_to_rapidpro(self):
+        return self.source == "USSD" or (
+            self.risk != TBCheck.RISK_LOW and self.follow_up_optin
+        )
