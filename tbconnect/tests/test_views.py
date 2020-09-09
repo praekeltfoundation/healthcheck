@@ -38,7 +38,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "city": "Cape Town",
                 "age": TBCheck.AGE_18T40,
                 "gender": TBCheck.GENDER_FEMALE,
-                "cough": TBCheck.COUGH_YES_GT_2WEEKS,
+                "cough": True,
                 "fever": True,
                 "sweat": False,
                 "weight": True,
@@ -58,7 +58,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(tbcheck.city, "Cape Town")
         self.assertEqual(tbcheck.age, TBCheck.AGE_18T40)
         self.assertEqual(tbcheck.gender, TBCheck.GENDER_FEMALE)
-        self.assertEqual(tbcheck.cough, TBCheck.COUGH_YES_GT_2WEEKS)
+        self.assertTrue(tbcheck.cough)
         self.assertTrue(tbcheck.fever)
         self.assertFalse(tbcheck.sweat)
         self.assertTrue(tbcheck.weight)
@@ -85,7 +85,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "city": "Cape Town",
                 "age": TBCheck.AGE_18T40,
                 "gender": TBCheck.GENDER_FEMALE,
-                "cough": TBCheck.COUGH_YES_GT_2WEEKS,
+                "cough": True,
                 "fever": True,
                 "sweat": False,
                 "weight": True,
@@ -116,7 +116,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "city": "Cape Town",
                 "age": TBCheck.AGE_18T40,
                 "gender": TBCheck.GENDER_FEMALE,
-                "cough": TBCheck.COUGH_YES_GT_2WEEKS,
+                "cough": True,
                 "fever": True,
                 "sweat": False,
                 "weight": True,
