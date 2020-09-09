@@ -33,23 +33,12 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         (EXPOSURE_NOT_SURE, "Not sure"),
     )
 
-    COUGH_NO = "no"
-    COUGH_YES_LT_2WEEKS = "yes_lt_2weeks"
-    COUGH_YES_GT_2WEEKS = "yes_gt_2weeks"
-    COUGH_CHOICES = (
-        (COUGH_NO, "No"),
-        (COUGH_YES_LT_2WEEKS, "Yes, less than 2 weeks"),
-        (COUGH_YES_GT_2WEEKS, "Yes, more than 2 weeks"),
-    )
-
     RISK_LOW = "low"
-    RISK_MODERATE_WITHOUT_COUGH = "moderate_without_cough"
-    RISK_MODERATE_WITH_COUGH = "moderate_with_cough"
+    RISK_MODERATE = "moderate"
     RISK_HIGH = "high"
     RISK_CHOICES = (
         (RISK_LOW, "Low"),
-        (RISK_MODERATE_WITHOUT_COUGH, "Moderate without cough"),
-        (RISK_MODERATE_WITH_COUGH, "Moderate with cough"),
+        (RISK_MODERATE, "Moderate"),
         (RISK_HIGH, "High"),
     )
 
@@ -93,7 +82,7 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     city_location = models.CharField(
         max_length=255, validators=[geographic_coordinate], null=True
     )
-    cough = models.CharField(max_length=13, choices=COUGH_CHOICES)
+    cough = models.BooleanField()
     fever = models.BooleanField()
     sweat = models.BooleanField()
     weight = models.BooleanField()

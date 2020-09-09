@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from tbconnect.models import TBCheck
 
 
@@ -7,6 +8,7 @@ class TBCheckTest(TestCase):
         return TBCheck.objects.create(
             **{
                 "msisdn": "+123",
+                "cough": True,
                 "fever": True,
                 "sweat": True,
                 "weight": True,
@@ -22,10 +24,7 @@ class TBCheckTest(TestCase):
         check = self.create_check("USSD", TBCheck.RISK_LOW)
         self.assertTrue(check.should_sync_to_rapidpro)
 
-        check = self.create_check("USSD", TBCheck.RISK_MODERATE_WITH_COUGH)
-        self.assertTrue(check.should_sync_to_rapidpro)
-
-        check = self.create_check("USSD", TBCheck.RISK_MODERATE_WITHOUT_COUGH)
+        check = self.create_check("USSD", TBCheck.RISK_MODERATE)
         self.assertTrue(check.should_sync_to_rapidpro)
 
         check = self.create_check("USSD", TBCheck.RISK_HIGH)
@@ -38,13 +37,8 @@ class TBCheckTest(TestCase):
         check = self.create_check("WhatsApp", TBCheck.RISK_HIGH)
         self.assertTrue(check.should_sync_to_rapidpro)
 
-        check = self.create_check("WhatsApp", TBCheck.RISK_MODERATE_WITH_COUGH)
+        check = self.create_check("WhatsApp", TBCheck.RISK_MODERATE)
         self.assertTrue(check.should_sync_to_rapidpro)
 
-        check = self.create_check("WhatsApp", TBCheck.RISK_MODERATE_WITHOUT_COUGH)
-        self.assertTrue(check.should_sync_to_rapidpro)
-
-        check = self.create_check(
-            "WhatsApp", TBCheck.RISK_MODERATE_WITHOUT_COUGH, False
-        )
+        check = self.create_check("WhatsApp", TBCheck.RISK_MODERATE, False)
         self.assertFalse(check.should_sync_to_rapidpro)

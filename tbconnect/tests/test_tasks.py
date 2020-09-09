@@ -42,6 +42,7 @@ class SyncToRapidproTests(TestCase):
         TBCheck.objects.create(
             **{
                 "msisdn": msisdn,
+                "cough": True,
                 "fever": True,
                 "sweat": True,
                 "weight": True,
