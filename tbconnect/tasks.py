@@ -1,3 +1,5 @@
+from functools import wraps
+
 from celery.decorators import periodic_task
 from celery.task.schedules import crontab
 from django.conf import settings
@@ -7,8 +9,35 @@ from tbconnect.models import TBCheck
 from userprofile.models import HealthCheckUserProfile
 
 
-@periodic_task(run_every=crontab(hour=1))
-def perform_sync_to_rapidpro():
+def skip_if_running(f):
+    task_name = f"{f.__module__}.{f.__name__}"
+
+    @wraps(f)
+    def wrapped(self, *args, **kwargs):
+        workers = self.app.control.inspect().active()
+
+        for worker, tasks in workers.items():
+            for task in tasks:
+                if (
+                    task_name == task["name"]
+                    and tuple(args) == tuple(task["args"])
+                    and kwargs == task["kwargs"]
+                    and self.request.id != task["id"]
+                ):
+                    print(
+                        f"task {task_name} ({args}, {kwargs}) is running on {worker}, skipping"
+                    )
+
+                    return None
+
+        return f(self, *args, **kwargs)
+
+    return wrapped
+
+
+@periodic_task(bind=True, run_every=crontab(minute="*/5"))
+@skip_if_running
+def perform_sync_to_rapidpro(self):
     if (
         settings.RAPIDPRO_URL
         and settings.RAPIDPRO_TOKEN
