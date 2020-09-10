@@ -10,7 +10,7 @@ from tbconnect.models import TBCheck
 from userprofile.models import HealthCheckUserProfile
 
 
-@periodic_task(run_every=crontab(minute="*"))
+@periodic_task(run_every=crontab(minute="*/5"))
 def perform_sync_to_rapidpro():
     r = get_redis_connection()
     if r.get("perform_sync_to_rapidpro"):
