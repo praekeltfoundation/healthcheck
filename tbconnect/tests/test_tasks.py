@@ -69,8 +69,7 @@ class SyncToRapidproTests(TestCase):
     )
     def test_sync_whatsapp(self):
         """
-        Should sync a profile created from WhatsApp, only if opted in and not
-        synced before
+        Should sync a profile created from WhatsApp, if not synced before
         """
         profile = self.create_profile_and_check()
         self.create_profile_and_check("+27830000002", False)
@@ -87,8 +86,8 @@ class SyncToRapidproTests(TestCase):
         profile.refresh_from_db()
         self.assertTrue(profile.data["synced_to_tb_rapidpro"])
 
-        [call] = responses.calls
-        body = json.loads(call.request.body)
+        [call1, call2] = responses.calls
+        body = json.loads(call1.request.body)
         self.assertEqual(
             body,
             {
@@ -98,6 +97,22 @@ class SyncToRapidproTests(TestCase):
                     "risk": "high",
                     "source": "WhatsApp",
                     "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                },
+            },
+        )
+        body = json.loads(call2.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27830000002"],
+                "extra": {
+                    "risk": "high",
+                    "source": "WhatsApp",
+                    "follow_up_optin": False,
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
@@ -155,15 +170,39 @@ class SyncToRapidproTests(TestCase):
     )
     def test_sync_low_risk(self):
         """
-        Should not sync a low risk
+        Should sync low risk
         """
         profile = self.create_profile_and_check(risk=TBCheck.RISK_LOW)
+
+        responses.add(
+            responses.POST,
+            f"https://rp-test.com/api/v2/flow_starts.json",
+            json=self.flow_response,
+        )
 
         perform_sync_to_rapidpro()
 
         profile.refresh_from_db()
 
-        self.assertFalse(profile.data["synced_to_tb_rapidpro"])
+        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+
+        [call] = responses.calls
+        body = json.loads(call.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27830000001"],
+                "extra": {
+                    "risk": "low",
+                    "source": "WhatsApp",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                },
+            },
+        )
 
     def test_noop_without_settings(self):
         """

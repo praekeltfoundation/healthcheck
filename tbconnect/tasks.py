@@ -34,7 +34,7 @@ def perform_sync_to_rapidpro():
                     .first()
                 )
 
-                if check and check.should_sync_to_rapidpro:
+                if check:
                     urn = f"tel:{contact.msisdn}"
                     if check.source == "WhatsApp":
                         urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
@@ -45,7 +45,7 @@ def perform_sync_to_rapidpro():
                         extra={
                             "risk": check.risk,
                             "source": check.source,
-                            "follow_up_optin": check.follow_up_optin,
+                            "follow_up_optin": contact.data.get("follow_up_optin", check.follow_up_optin),
                             "completed_timestamp": check.completed_timestamp.strftime(
                                 "%d/%m/%Y"
                             ),
