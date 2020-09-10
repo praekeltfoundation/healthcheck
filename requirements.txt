@@ -17,6 +17,7 @@ django-filter==2.3.0
 django-health-check==3.12.1
 django-phonenumber-field==4.0.0
 django-prometheus==2.1.0
+django_redis==4.12.1
 django-rest-auth==0.9.5
 djangorestframework==3.11.0
 flake8==3.8.1

@@ -3,77 +3,56 @@ from functools import wraps
 from celery.decorators import periodic_task
 from celery.task.schedules import crontab
 from django.conf import settings
+from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
 
 from tbconnect.models import TBCheck
 from userprofile.models import HealthCheckUserProfile
 
 
-def skip_if_running(f):
-    task_name = f"{f.__module__}.{f.__name__}"
+@periodic_task(run_every=crontab(minute="*"))
+def perform_sync_to_rapidpro():
+    r = get_redis_connection()
+    if r.get("perform_sync_to_rapidpro"):
+        return
 
-    @wraps(f)
-    def wrapped(self, *args, **kwargs):
-        workers = self.app.control.inspect().active()
+    with r.lock("refresh_whatsapp_tokens", 1800):
+        if (
+            settings.RAPIDPRO_URL
+            and settings.RAPIDPRO_TOKEN
+            and settings.RAPIDPRO_TBCONNECT_FLOW
+        ):
+            rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
 
-        for worker, tasks in workers.items():
-            for task in tasks:
-                if (
-                    task_name == task["name"]
-                    and tuple(args) == tuple(task["args"])
-                    and kwargs == task["kwargs"]
-                    and self.request.id != task["id"]
-                ):
-                    print(
-                        f"task {task_name} ({args}, {kwargs}) is running on {worker}, skipping"
-                    )
-
-                    return None
-
-        return f(self, *args, **kwargs)
-
-    return wrapped
-
-
-@periodic_task(bind=True, run_every=crontab(minute="*/5"))
-@skip_if_running
-def perform_sync_to_rapidpro(self):
-    if (
-        settings.RAPIDPRO_URL
-        and settings.RAPIDPRO_TOKEN
-        and settings.RAPIDPRO_TBCONNECT_FLOW
-    ):
-        rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
-
-        # using data__contains to hit the GIN index - userprofile__data__gin_idx
-        for contact in HealthCheckUserProfile.objects.filter(
-            data__contains={"synced_to_tb_rapidpro": False}
-        ).iterator():
-            check = (
-                TBCheck.objects.filter(msisdn=contact.msisdn)
-                .order_by("-completed_timestamp")
-                .first()
-            )
-
-            if check and check.should_sync_to_rapidpro:
-                urn = f"tel:{contact.msisdn}"
-                if check.source == "WhatsApp":
-                    urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
-
-                rapidpro.create_flow_start(
-                    urns=[urn],
-                    flow=settings.RAPIDPRO_TBCONNECT_FLOW,
-                    extra={
-                        "risk": check.risk,
-                        "source": check.source,
-                        "follow_up_optin": check.follow_up_optin,
-                        "completed_timestamp": check.completed_timestamp.strftime(
-                            "%d/%m/%Y"
-                        ),
-                    },
+            # using data__contains to hit the GIN index - userprofile__data__gin_idx
+            for contact in HealthCheckUserProfile.objects.filter(
+                data__contains={"synced_to_tb_rapidpro": False}
+            ).iterator():
+                check = (
+                    TBCheck.objects.filter(msisdn=contact.msisdn)
+                    .order_by("-completed_timestamp")
+                    .first()
                 )
 
-                contact.data["synced_to_tb_rapidpro"] = True
-                contact.save()
+                if check and check.should_sync_to_rapidpro:
+                    urn = f"tel:{contact.msisdn}"
+                    if check.source == "WhatsApp":
+                        urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
+
+                    rapidpro.create_flow_start(
+                        urns=[urn],
+                        flow=settings.RAPIDPRO_TBCONNECT_FLOW,
+                        extra={
+                            "risk": check.risk,
+                            "source": check.source,
+                            "follow_up_optin": check.follow_up_optin,
+                            "completed_timestamp": check.completed_timestamp.strftime(
+                                "%d/%m/%Y"
+                            ),
+                        },
+                    )
+
+                    contact.data["synced_to_tb_rapidpro"] = True
+                    contact.save()
 
     return "Finished syncing contacts to Rapidpro"

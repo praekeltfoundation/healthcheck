@@ -153,3 +153,11 @@ SENTRY_DSN = env.str("SENTRY_DSN", "")
 RAPIDPRO_URL = env.str("RAPIDPRO_URL", "")
 RAPIDPRO_TOKEN = env.str("RAPIDPRO_TOKEN", "")
 RAPIDPRO_TBCONNECT_FLOW = env.str("RAPIDPRO_TBCONNECT_FLOW", "")
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": REDIS_URL,
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient",},
+    },
+}
