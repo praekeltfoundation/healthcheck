@@ -16,7 +16,7 @@ def perform_sync_to_rapidpro():
     if r.get("perform_sync_to_rapidpro"):
         return
 
-    with r.lock("refresh_whatsapp_tokens", 1800):
+    with r.lock("perform_sync_to_rapidpro", 1800):
         if (
             settings.RAPIDPRO_URL
             and settings.RAPIDPRO_TOKEN
