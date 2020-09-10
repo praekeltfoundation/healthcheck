@@ -45,7 +45,9 @@ def perform_sync_to_rapidpro():
                         extra={
                             "risk": check.risk,
                             "source": check.source,
-                            "follow_up_optin": contact.data.get("follow_up_optin", check.follow_up_optin),
+                            "follow_up_optin": contact.data.get(
+                                "follow_up_optin", check.follow_up_optin
+                            ),
                             "completed_timestamp": check.completed_timestamp.strftime(
                                 "%d/%m/%Y"
                             ),
