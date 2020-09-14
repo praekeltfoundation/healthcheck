@@ -109,9 +109,7 @@ class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
 
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
-    msisdn = models.CharField(
-        max_length=255, validators=[za_phone_number], db_index=True
-    )
+    msisdn = models.CharField(max_length=255, validators=[za_phone_number])
     source = models.CharField(max_length=255)
     result = models.CharField(max_length=10, choices=RESULT_CHOICES)
-    timestamp = models.DateTimeField(default=timezone.now, db_index=True)
+    timestamp = models.DateTimeField(default=timezone.now)
