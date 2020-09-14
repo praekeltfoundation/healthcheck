@@ -183,12 +183,7 @@ class TBTestViewSetTests(APITestCase, BaseEventTestCase):
         user.user_permissions.add(Permission.objects.get(codename="change_tbtest"))
         self.client.force_authenticate(user)
         update_url = reverse("tbtest-detail", args=(tbtest.id,))
-        response = self.client.patch(
-            update_url,
-            {
-                "result": TBTest.RESULT_POSITIVE,
-            },
-        )
+        response = self.client.patch(update_url, {"result": TBTest.RESULT_POSITIVE})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         tbtest.refresh_from_db()
