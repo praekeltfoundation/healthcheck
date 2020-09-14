@@ -1,11 +1,11 @@
-from rest_framework.mixins import CreateModelMixin
+from rest_framework.mixins import CreateModelMixin, UpdateModelMixin
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import GenericViewSet
 
 from userprofile.models import HealthCheckUserProfile
 
-from .models import TBCheck
-from .serializers import TBCheckSerializer
+from .models import TBCheck, TBTest
+from .serializers import TBCheckSerializer, TBTestSerializer
 
 
 class TBCheckViewSet(GenericViewSet, CreateModelMixin):
@@ -24,3 +24,9 @@ class TBCheckViewSet(GenericViewSet, CreateModelMixin):
         profile.save()
 
         return instance
+
+
+class TBTestViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
+    queryset = TBTest.objects.all()
+    serializer_class = TBTestSerializer
+    permission_classes = (DjangoModelPermissions,)

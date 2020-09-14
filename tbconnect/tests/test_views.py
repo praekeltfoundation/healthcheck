@@ -4,7 +4,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from tbconnect.models import TBCheck
+from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
 
@@ -131,3 +131,62 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(profile.province, "ZA-WC")
         self.assertEqual(profile.city, "Cape Town")
         self.assertEqual(profile.age, TBCheck.AGE_18T40)
+
+
+class TBTestViewSetTests(APITestCase, BaseEventTestCase):
+    url = reverse("tbtest-list")
+
+    def test_data_validation(self):
+        """
+        The supplied data must be validated, and any errors returned
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbtest"))
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_successful_create_request(self):
+        """
+        Should create a new TBTest object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbtest"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "WhatsApp",
+                "result": TBTest.RESULT_PENDING,
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        [tbtest] = TBTest.objects.all()
+        self.assertEqual(tbtest.msisdn, "27856454612")
+        self.assertEqual(tbtest.source, "WhatsApp")
+        self.assertEqual(tbtest.result, TBTest.RESULT_PENDING)
+
+    def test_successful_update_request(self):
+        """
+        Should create a new TBTest object in the database
+        """
+        tbtest = TBTest.objects.create(
+            **{
+                "msisdn": "27856454612",
+                "source": "WhatsApp",
+                "result": TBTest.RESULT_PENDING,
+            }
+        )
+
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="change_tbtest"))
+        self.client.force_authenticate(user)
+        update_url = reverse("tbtest-detail", args=(tbtest.id,))
+        response = self.client.patch(update_url, {"result": TBTest.RESULT_POSITIVE})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        tbtest.refresh_from_db()
+        self.assertEqual(tbtest.msisdn, "27856454612")
+        self.assertEqual(tbtest.source, "WhatsApp")
+        self.assertEqual(tbtest.result, TBTest.RESULT_POSITIVE)

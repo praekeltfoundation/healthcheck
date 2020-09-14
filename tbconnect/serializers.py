@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from userprofile.serializers import BaseEventSerializer
 
-from .models import TBCheck
+from .models import TBCheck, TBTest
 
 
 class TBCheckSerializer(BaseEventSerializer):
@@ -17,3 +17,10 @@ class TBCheckSerializer(BaseEventSerializer):
                 "location and city_location are both None"
             )
         return data
+
+
+class TBTestSerializer(BaseEventSerializer):
+    class Meta:
+        model = TBTest
+        fields = "__all__"
+        read_only_fields = ("id", "created_by")
