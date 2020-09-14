@@ -114,3 +114,4 @@ class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
     )
     source = models.CharField(max_length=255)
     result = models.CharField(max_length=10, choices=RESULT_CHOICES)
+    timestamp = models.DateTimeField(default=timezone.now, db_index=True)
