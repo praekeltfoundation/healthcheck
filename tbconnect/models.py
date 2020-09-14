@@ -95,3 +95,22 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     language = models.CharField(
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
+
+
+class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
+    RESULT_POSITIVE = "positive"
+    RESULT_NEGATIVE = "negative"
+    RESULT_PENDING = "pending"
+    RESULT_CHOICES = (
+        (RESULT_POSITIVE, "Positive"),
+        (RESULT_NEGATIVE, "Negative"),
+        (RESULT_PENDING, "Pending"),
+    )
+
+    deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
+    created_by = models.CharField(max_length=255, blank=True, default="")
+    msisdn = models.CharField(
+        max_length=255, validators=[za_phone_number], db_index=True
+    )
+    source = models.CharField(max_length=255)
+    result = models.CharField(max_length=10, choices=RESULT_CHOICES)
