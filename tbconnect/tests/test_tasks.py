@@ -48,6 +48,7 @@ class SyncToRapidproTests(TestCase):
                 "weight": True,
                 "tracing": True,
                 "source": source,
+                "exposure": TBCheck.EXPOSURE_YES,
                 "completed_timestamp": self.completed_timestamp,
                 "risk": risk,
                 "follow_up_optin": optin,
@@ -100,6 +101,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
+                    "exposure": TBCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -116,6 +118,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
+                    "exposure": TBCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -158,6 +161,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
+                    "exposure": TBCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -200,6 +204,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
+                    "exposure": TBCheck.EXPOSURE_YES,
                 },
             },
         )
