@@ -51,6 +51,7 @@ def perform_sync_to_rapidpro():
                             "completed_timestamp": check.completed_timestamp.strftime(
                                 "%d/%m/%Y"
                             ),
+                            "exposure": check.exposure,
                         },
                     )
 
