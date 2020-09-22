@@ -63,8 +63,10 @@ def hash_string(text):
 
 
 def extract_lat_long(location):
-    try:
+    if location:
         loc = Location(location)
-        return float(loc.lat.degrees), float(loc.lng.degrees)
-    except TypeError:
+        lat = round(float(loc.lat.degrees), 1)
+        lng = round(float(loc.lng.degrees), 1)
+        return lat, lng
+    else:
         return None, None
