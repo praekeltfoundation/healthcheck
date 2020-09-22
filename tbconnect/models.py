@@ -150,7 +150,7 @@ class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
 
     def get_processed_data(self):
         return {
-            "deduplication_id": self.deduplication_id,
+            "deduplication_id": str(self.deduplication_id),
             "msisdn": self.hashed_msisdn,
             "source": self.source,
             "result": self.result,

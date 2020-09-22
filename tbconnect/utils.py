@@ -2,16 +2,17 @@ import base64
 import hashlib
 import os
 
+from django.conf import settings
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from iso6709 import Location
 
-BQ_KEY_PATH = "bq_credentials.json"
 
 bigquery_client = None
-if os.path.isfile(BQ_KEY_PATH):
+if os.path.isfile(settings.TBCONNECT_BQ_KEY_PATH):
     credentials = service_account.Credentials.from_service_account_file(
-        BQ_KEY_PATH, scopes=["https://www.googleapis.com/auth/cloud-platform"],
+        settings.TBCONNECT_BQ_KEY_PATH,
+        scopes=["https://www.googleapis.com/auth/cloud-platform"],
     )
 
     bigquery_client = bigquery.Client(
@@ -48,7 +49,7 @@ def upload_to_bigquery(dataset, table, fields, data):
     job.result()
 
 
-def get_process_records(records):
+def get_processed_records(records):
     data = []
     for record in records:
         data.append(record.get_processed_data())

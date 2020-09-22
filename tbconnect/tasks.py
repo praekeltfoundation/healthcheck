@@ -8,8 +8,6 @@ from tbconnect import utils
 from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 
-BQ_DATASET = "wassup-165700.tbconnect"
-
 
 @periodic_task(run_every=crontab(minute="*/5"))
 def perform_sync_to_rapidpro():
@@ -111,7 +109,7 @@ def perform_etl():
             for model, details in models.items():
                 field = details["field"]
                 latest_timestamp = utils.get_latest_bigquery_timestamp(
-                    BQ_DATASET, model, field
+                    settings.TBCONNECT_BQ_DATASET, model, field
                 )
 
                 if latest_timestamp:
@@ -122,5 +120,7 @@ def perform_etl():
                     records = details["model"].objects.all()
 
                 if records:
-                    data = utils.get_process_records(records)
-                    utils.upload_to_bigquery(BQ_DATASET, model, details["fields"], data)
+                    data = utils.get_processed_records(records)
+                    utils.upload_to_bigquery(
+                        settings.TBCONNECT_BQ_DATASET, model, details["fields"], data
+                    )

@@ -161,3 +161,6 @@ CACHES = {
         "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
     },
 }
+
+TBCONNECT_BQ_KEY_PATH = env.str("TBCONNECT_BQ_KEY_PATH", "bq_credentials.json")
+TBCONNECT_BQ_DATASET = env.str("TBCONNECT_BQ_DATASET", "wassup-165700.tbconnect")
