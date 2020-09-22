@@ -62,7 +62,7 @@ def hash_string(text):
     )
 
 
-def extract_lat_long(location):
+def extract_reduced_accuracy_lat_long(location):
     if location:
         loc = Location(location)
         lat = round(float(loc.lat.degrees), 1)

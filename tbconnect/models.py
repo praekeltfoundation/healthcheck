@@ -5,7 +5,7 @@ from django.db import models
 from django.utils import timezone
 from django_prometheus.models import ExportModelOperationsMixin
 
-from tbconnect.utils import hash_string, extract_lat_long
+from tbconnect.utils import hash_string, extract_reduced_accuracy_lat_long
 from userprofile.validators import geographic_coordinate, za_phone_number
 
 
@@ -102,8 +102,8 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         return hash_string(self.msisdn)
 
     def get_processed_data(self):
-        location_lat, location_long = extract_lat_long(self.location)
-        city_lat, city_long = extract_lat_long(self.city_location)
+        location_lat, location_long = extract_reduced_accuracy_lat_long(self.location)
+        city_lat, city_long = extract_reduced_accuracy_lat_long(self.city_location)
 
         return {
             "msisdn": self.hashed_msisdn,
