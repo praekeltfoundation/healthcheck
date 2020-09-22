@@ -1,12 +1,11 @@
-from functools import wraps
-
 from celery.decorators import periodic_task
 from celery.task.schedules import crontab
 from django.conf import settings
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
 
-from tbconnect.models import TBCheck
+from tbconnect import utils
+from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 
 
@@ -59,3 +58,69 @@ def perform_sync_to_rapidpro():
                     contact.save()
 
     return "Finished syncing contacts to Rapidpro"
+
+
+@periodic_task(run_every=crontab(minute="*/5"))
+def perform_etl():
+    r = get_redis_connection()
+    if r.get("perform_etl_tb_connect"):
+        return
+
+    models = {
+        "checks": {
+            "model": TBCheck,
+            "field": "timestamp",
+            "fields": {
+                "msisdn": "STRING",
+                "timestamp": "TIMESTAMP",
+                "source": "STRING",
+                "age": "STRING",
+                "gender": "STRING",
+                "location_latitude": "FLOAT",
+                "location_longitude": "FLOAT",
+                "city_latitude": "FLOAT",
+                "city_longitude": "FLOAT",
+                "cough": "BOOLEAN",
+                "fever": "BOOLEAN",
+                "sweat": "BOOLEAN",
+                "weight": "BOOLEAN",
+                "exposure": "STRING",
+                "risk": "STRING",
+                "follow_up_optin": "BOOLEAN",
+                "language": "STRING",
+            },
+        },
+        "tests": {
+            "model": TBTest,
+            "field": "updated_at",
+            "fields": {
+                "deduplication_id": "STRING",
+                "msisdn": "STRING",
+                "source": "STRING",
+                "result": "STRING",
+                "timestamp": "TIMESTAMP",
+                "updated_at": "TIMESTAMP",
+            },
+        },
+    }
+
+    with r.lock("perform_etl_tb_connect", 1800):
+        if utils.bigquery_client:
+            for model, details in models.items():
+                field = details["field"]
+                latest_timestamp = utils.get_latest_bigquery_timestamp(
+                    settings.TBCONNECT_BQ_DATASET, model, field
+                )
+
+                if latest_timestamp:
+                    records = details["model"].objects.filter(
+                        **{f"{field}__gt": latest_timestamp}
+                    )
+                else:
+                    records = details["model"].objects.all()
+
+                if records:
+                    data = utils.get_processed_records(records)
+                    utils.upload_to_bigquery(
+                        settings.TBCONNECT_BQ_DATASET, model, details["fields"], data
+                    )

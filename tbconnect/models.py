@@ -5,6 +5,7 @@ from django.db import models
 from django.utils import timezone
 from django_prometheus.models import ExportModelOperationsMixin
 
+from tbconnect.utils import hash_string, extract_reduced_accuracy_lat_long
 from userprofile.validators import geographic_coordinate, za_phone_number
 
 
@@ -96,6 +97,34 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
 
+    @property
+    def hashed_msisdn(self):
+        return hash_string(self.msisdn)
+
+    def get_processed_data(self):
+        location_lat, location_long = extract_reduced_accuracy_lat_long(self.location)
+        city_lat, city_long = extract_reduced_accuracy_lat_long(self.city_location)
+
+        return {
+            "msisdn": self.hashed_msisdn,
+            "timestamp": self.timestamp.isoformat(),
+            "source": self.source,
+            "age": self.age,
+            "gender": self.gender,
+            "location_latitude": location_lat,
+            "location_longitude": location_long,
+            "city_latitude": city_lat,
+            "city_longitude": city_long,
+            "cough": self.cough,
+            "fever": self.fever,
+            "sweat": self.sweat,
+            "weight": self.weight,
+            "exposure": self.exposure,
+            "risk": self.risk,
+            "follow_up_optin": self.follow_up_optin,
+            "language": self.language,
+        }
+
 
 class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
     RESULT_POSITIVE = "positive"
@@ -113,3 +142,18 @@ class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
     source = models.CharField(max_length=255)
     result = models.CharField(max_length=10, choices=RESULT_CHOICES)
     timestamp = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True, db_index=True)
+
+    @property
+    def hashed_msisdn(self):
+        return hash_string(self.msisdn)
+
+    def get_processed_data(self):
+        return {
+            "deduplication_id": str(self.deduplication_id),
+            "msisdn": self.hashed_msisdn,
+            "source": self.source,
+            "result": self.result,
+            "timestamp": self.timestamp.isoformat(),
+            "updated_at": self.updated_at.isoformat(),
+        }
