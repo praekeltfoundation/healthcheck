@@ -60,7 +60,7 @@ class TBCheckTests(TestCase):
                 "exposure": TBCheck.EXPOSURE_NOT_SURE,
                 "risk": TBCheck.RISK_HIGH,
                 "language": "eng",
-                "province": "ZA-WC"
+                "province": "ZA-WC",
             }
         )
         self.assertEqual(
@@ -84,6 +84,6 @@ class TBCheckTests(TestCase):
                 "risk": TBCheck.RISK_HIGH,
                 "follow_up_optin": False,
                 "language": "eng",
-                "province": "ZA-WC"
+                "province": "ZA-WC",
             },
         )
