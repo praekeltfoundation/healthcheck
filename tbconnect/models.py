@@ -106,9 +106,11 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         city_lat, city_long = extract_reduced_accuracy_lat_long(self.city_location)
 
         return {
+            "deduplication_id": str(self.deduplication_id),
             "msisdn": self.hashed_msisdn,
             "timestamp": self.timestamp.isoformat(),
             "source": self.source,
+            "province": self.province,
             "age": self.age,
             "gender": self.gender,
             "location_latitude": location_lat,
