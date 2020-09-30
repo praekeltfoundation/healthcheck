@@ -60,11 +60,13 @@ class TBCheckTests(TestCase):
                 "exposure": TBCheck.EXPOSURE_NOT_SURE,
                 "risk": TBCheck.RISK_HIGH,
                 "language": "eng",
+                "province": "ZA-WC"
             }
         )
         self.assertEqual(
             check.get_processed_data(),
             {
+                "deduplication_id": str(check.deduplication_id),
                 "msisdn": "GyReRepLLYF5Ldr6IyA1mu8VM96Et16I0TFIyDvRmK4=",
                 "timestamp": check.timestamp.isoformat(),
                 "source": "Test",
@@ -82,5 +84,6 @@ class TBCheckTests(TestCase):
                 "risk": TBCheck.RISK_HIGH,
                 "follow_up_optin": False,
                 "language": "eng",
+                "province": "ZA-WC"
             },
         )
