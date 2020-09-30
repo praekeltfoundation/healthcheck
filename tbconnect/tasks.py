@@ -71,9 +71,11 @@ def perform_etl():
             "model": TBCheck,
             "field": "timestamp",
             "fields": {
+                "deduplication_id": "STRING",
                 "msisdn": "STRING",
                 "timestamp": "TIMESTAMP",
                 "source": "STRING",
+                "province": "STRING",
                 "age": "STRING",
                 "gender": "STRING",
                 "location_latitude": "FLOAT",
