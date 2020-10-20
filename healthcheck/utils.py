@@ -2,25 +2,23 @@ import base64
 import hashlib
 import os
 
-from django.conf import settings
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from iso6709 import Location
+from functools import lru_cache
 
 
-bigquery_client = None
-if os.path.isfile(settings.TBCONNECT_BQ_KEY_PATH):
-    credentials = service_account.Credentials.from_service_account_file(
-        settings.TBCONNECT_BQ_KEY_PATH,
-        scopes=["https://www.googleapis.com/auth/cloud-platform"],
-    )
+@lru_cache(maxsize=None)
+def get_bigquery_client(key_path):
+    if os.path.isfile(key_path):
+        credentials = service_account.Credentials.from_service_account_file(
+            key_path, scopes=["https://www.googleapis.com/auth/cloud-platform"],
+        )
 
-    bigquery_client = bigquery.Client(
-        credentials=credentials, project=credentials.project_id,
-    )
+        return bigquery.Client(credentials=credentials, project=credentials.project_id,)
 
 
-def get_latest_bigquery_timestamp(dataset, model, field):
+def get_latest_bigquery_timestamp(bigquery_client, dataset, model, field):
     query = f"SELECT MAX({field}) AS ts FROM {dataset}.{model}"
 
     job_config = bigquery.QueryJobConfig()
@@ -31,7 +29,7 @@ def get_latest_bigquery_timestamp(dataset, model, field):
     return test[0][0]
 
 
-def upload_to_bigquery(dataset, table, fields, data):
+def upload_to_bigquery(bigquery_client, dataset, table, fields, data):
     schema = []
     for field, data_type in fields.items():
         schema.append(bigquery.SchemaField(field, data_type))
@@ -47,6 +45,29 @@ def upload_to_bigquery(dataset, table, fields, data):
     )
 
     job.result()
+
+
+def sync_models_to_bigquery(key_path, dataset, models):
+    bigquery_client = get_bigquery_client(key_path)
+    if bigquery_client:
+        for model, details in models.items():
+            field = details["field"]
+            latest_timestamp = get_latest_bigquery_timestamp(
+                bigquery_client, dataset, model, field
+            )
+
+            if latest_timestamp:
+                records = details["model"].objects.filter(
+                    **{f"{field}__gt": latest_timestamp}
+                )
+            else:
+                records = details["model"].objects.all()
+
+            if records:
+                data = get_processed_records(records)
+                upload_to_bigquery(
+                    bigquery_client, dataset, model, details["fields"], data
+                )
 
 
 def get_processed_records(records):

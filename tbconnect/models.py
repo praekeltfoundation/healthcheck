@@ -5,7 +5,7 @@ from django.db import models
 from django.utils import timezone
 from django_prometheus.models import ExportModelOperationsMixin
 
-from tbconnect.utils import hash_string, extract_reduced_accuracy_lat_long
+from healthcheck.utils import hash_string, extract_reduced_accuracy_lat_long
 from userprofile.validators import geographic_coordinate, za_phone_number
 
 
