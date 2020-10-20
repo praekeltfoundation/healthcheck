@@ -4,7 +4,7 @@ from django.conf import settings
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
 
-from tbconnect import utils
+from healthcheck import utils
 from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 
@@ -107,22 +107,6 @@ def perform_etl():
     }
 
     with r.lock("perform_etl_tb_connect", 1800):
-        if utils.bigquery_client:
-            for model, details in models.items():
-                field = details["field"]
-                latest_timestamp = utils.get_latest_bigquery_timestamp(
-                    settings.TBCONNECT_BQ_DATASET, model, field
-                )
-
-                if latest_timestamp:
-                    records = details["model"].objects.filter(
-                        **{f"{field}__gt": latest_timestamp}
-                    )
-                else:
-                    records = details["model"].objects.all()
-
-                if records:
-                    data = utils.get_processed_records(records)
-                    utils.upload_to_bigquery(
-                        settings.TBCONNECT_BQ_DATASET, model, details["fields"], data
-                    )
+        utils.sync_models_to_bigquery(
+            settings.TBCONNECT_BQ_KEY_PATH, settings.TBCONNECT_BQ_DATASET, models
+        )
