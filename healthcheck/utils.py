@@ -2,7 +2,6 @@ import base64
 import hashlib
 import os
 
-from django.conf import settings
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from iso6709 import Location
