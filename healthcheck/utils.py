@@ -5,8 +5,10 @@ import os
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from iso6709 import Location
+from functools import lru_cache
 
 
+@lru_cache(maxsize=None)
 def get_bigquery_client(key_path):
     if os.path.isfile(key_path):
         credentials = service_account.Credentials.from_service_account_file(
