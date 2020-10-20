@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "contacts",
     "userprofile",
     "tbconnect",
+    "selfswab",
 ]
 
 MIDDLEWARE = [
@@ -153,6 +154,11 @@ SENTRY_DSN = env.str("SENTRY_DSN", "")
 RAPIDPRO_URL = env.str("RAPIDPRO_URL", "")
 RAPIDPRO_TOKEN = env.str("RAPIDPRO_TOKEN", "")
 RAPIDPRO_TBCONNECT_FLOW = env.str("RAPIDPRO_TBCONNECT_FLOW", "")
+
+MEDITECH_URL = env.str("RAPIDPRO_URL", "")
+
+SELFSWAB_RAPIDPRO_TOKEN = env.str("SELFSWAB_RAPIDPRO_TOKEN", "")
+SELFSWAB_RAPIDPRO_FLOW = env.str("SELFSWAB_RAPIDPRO_FLOW", "")
 
 CACHES = {
     "default": {

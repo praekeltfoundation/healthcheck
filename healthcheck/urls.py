@@ -2,13 +2,17 @@ from django.contrib import admin
 from django.urls import include, path  # noqa: F401
 from rest_framework import routers
 
+from selfswab.urls import v2router as selfswabscreen_v2router
 from tbconnect.urls import v2router as tbcheck_v2router
+# from selfswab.urls import v2router as selfswabtest_v2router
 from userprofile.urls import v2router as userprofile_v2router
 from userprofile.urls import v3router, v4router
 
 global_v2router = routers.DefaultRouter()
 global_v2router.registry.extend(userprofile_v2router.registry)
 global_v2router.registry.extend(tbcheck_v2router.registry)
+global_v2router.registry.extend(selfswabscreen_v2router.registry)
+# global_v2router.registry.extend(selfswabtest_v2router.registry)
 
 urlpatterns = [
     path("prometheus/", include("django_prometheus.urls")),
