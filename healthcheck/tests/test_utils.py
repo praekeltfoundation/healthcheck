@@ -53,7 +53,7 @@ class UtilsTests(TestCase):
             "tests": {
                 "model": TBTest,
                 "field": "updated_at",
-                "fields": {"deduplication_id": "STRING",},
+                "fields": {"deduplication_id": "STRING"},
             },
         }
 
