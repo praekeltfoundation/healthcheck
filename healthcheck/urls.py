@@ -4,6 +4,7 @@ from rest_framework import routers
 
 from selfswab.urls import v2router as selfswabscreen_v2router
 from tbconnect.urls import v2router as tbcheck_v2router
+
 # from selfswab.urls import v2router as selfswabtest_v2router
 from userprofile.urls import v2router as userprofile_v2router
 from userprofile.urls import v3router, v4router
