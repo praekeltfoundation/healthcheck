@@ -33,21 +33,11 @@ class SelfSwabScreen(models.Model):
         (GENDER_NOT_SAY, "Rather not say"),
     )
 
-    REGISTRATION_INCOMPLETE = "incomplete"
-    REGISTRATION_COMPLETE = "complete"
-    REGISTRATION_TYPES = (
-        (REGISTRATION_INCOMPLETE, "incomplete"),
-        (REGISTRATION_COMPLETE, "complete"),
-    )
-
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=False)
     msisdn = models.CharField(
         max_length=255, validators=[za_phone_number], db_index=True
-    )
-    registration = models.CharField(
-        max_length=20, choices=REGISTRATION_TYPES, blank=True
     )
     age = models.CharField(max_length=5, choices=AGE_CHOICES)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
@@ -90,9 +80,10 @@ class SelfSwabTest(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=False)
-    msisdn = models.CharField(
-        max_length=255, validators=[za_phone_number], db_index=True
+    msisdn = models.CharField(max_length=255, validators=[za_phone_number])
+    result = models.CharField(
+        max_length=100, choices=RESULT_TYPES, default=RESULT_PENDING
     )
-    result = models.CharField(max_length=100, choices=RESULT_TYPES)
     barcode = models.CharField(max_length=255, blank=False)
     timestamp = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True, db_index=True)

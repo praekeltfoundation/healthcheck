@@ -51,13 +51,9 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
                 "timestamp": "2020-01-11T08:30:24.922024+00:00",
             },
         )
-        print(self.url)
-        print(response.status_code)
-        print(response.content)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         [selfswabscreen] = SelfSwabScreen.objects.all()
-        # assert False
         self.assertEqual(
             selfswabscreen.registration, SelfSwabScreen.REGISTRATION_COMPLETE
         )
