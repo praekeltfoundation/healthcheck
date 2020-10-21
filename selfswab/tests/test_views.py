@@ -34,7 +34,6 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
                 "msisdn": "27856454612",
                 "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
                 "risk_type": SelfSwabScreen.HIGH_RISK,
-                "registration": SelfSwabScreen.REGISTRATION_COMPLETE,
                 "age": SelfSwabScreen.AGE_18T40,
                 "gender": SelfSwabScreen.GENDER_FEMALE,
                 "pre_existing_condition": "",
@@ -54,9 +53,6 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         [selfswabscreen] = SelfSwabScreen.objects.all()
-        self.assertEqual(
-            selfswabscreen.registration, SelfSwabScreen.REGISTRATION_COMPLETE
-        )
         self.assertEqual(selfswabscreen.msisdn, "27856454612")
         self.assertEqual(selfswabscreen.age, SelfSwabScreen.AGE_18T40)
         self.assertEqual(selfswabscreen.gender, SelfSwabScreen.GENDER_FEMALE)
@@ -105,6 +101,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
                 "result": SelfSwabTest.RESULT_NEGATIVE,
                 "barcode": "1234567",
                 "timestamp": "2020-01-11T08:30:24.922024+00:00",
+                "updated_at": "2020-01-12T08:30:24.922024+00:00",
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
