@@ -11,7 +11,7 @@ from userprofile.urls import v3router, v4router
 global_v2router = routers.DefaultRouter()
 global_v2router.registry.extend(userprofile_v2router.registry)
 global_v2router.registry.extend(tbcheck_v2router.registry)
-global_v2router.registry.extend(selfswabscreen_v2router.registry)
+global_v2router.registry.extend(selfswab_v2router.registry)
 
 urlpatterns = [
     path("prometheus/", include("django_prometheus.urls")),
