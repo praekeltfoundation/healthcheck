@@ -17,9 +17,9 @@ class PollMeditechForResults(TestCase):
             "name": "SelfSwabTest",
         },
         "groups": [
-            {"uuid": "04a4752b-0f49-480e-ae60-3a3f2bea485c", "name": "SelfSwabStudy",}
+            {"uuid": "04a4752b-0f49-480e-ae60-3a3f2bea485c", "name": "SelfSwabStudy"}
         ],
-        "contacts": [{"uuid": "5079cb96-a1d8-4f47-8c87-d8c7bb6ddab9", "name": "Joe"},],
+        "contacts": [{"uuid": "5079cb96-a1d8-4f47-8c87-d8c7bb6ddab9", "name": "Joe"}],
         "restart_participants": True,
         "status": "pending",
         "created_on": "2015-08-26T10:04:09.737686+00:00",
@@ -74,27 +74,28 @@ class PollMeditechForResults(TestCase):
 
         poll_meditech_api_for_results()
 
-
         [call1, call2, call3] = responses.calls
         body3 = json.loads(call3.request.body)
         body2 = json.loads(call2.request.body)
         self.assertEqual(
             body2,
-            {"flow": "321",
-             "urns": "whatsapp:27856454612",
-             "extra": {"result": "",
-                       "updated_at":  self.updated_at.strftime("%d/%m/%Y")
-                      },
-            }
-
+            {
+                "flow": "321",
+                "urns": "whatsapp:27856454612",
+                "extra": {
+                    "result": "",
+                    "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                },
+            },
         )
         self.assertEqual(
             body3,
-            {"flow": "321",
-             "urns": "whatsapp:27895671234",
-             "extra": {"result": "Negative",
-                       "updated_at":  self.updated_at.strftime("%d/%m/%Y")
-                      },
-            }
-
+            {
+                "flow": "321",
+                "urns": "whatsapp:27895671234",
+                "extra": {
+                    "result": "Negative",
+                    "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                },
+            },
         )
