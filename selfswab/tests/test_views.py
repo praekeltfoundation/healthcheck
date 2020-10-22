@@ -3,6 +3,7 @@ from django.contrib.auth.models import Permission
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
+from unittest.mock import patch
 
 from selfswab.models import SelfSwabScreen, SelfSwabTest
 from userprofile.tests.test_views import BaseEventTestCase
@@ -112,3 +113,16 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
             selfswabtest.contact_id, "9e12d04c-af25-40b6-aa4f-57c72e8e3f91"
         )
         self.assertEqual(selfswabtest.barcode, "1234567")
+
+class UniqueContactIDViewTests(APITestCase):
+    url = reverse("unique_contact_id")
+
+    @patch("selfswab.views.randint")
+    def test_get_unque_contact_id(self, mock_randint):
+        mock_randint.return_value = 123
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json(), {"id": "CV0123H"})
