@@ -38,14 +38,14 @@ def poll_meditech_api_for_results():
             response.raise_for_status()
             results = response.json()["barcodes"]
             for barcode, result in results.items():
-                if result != "pending":
+                if result != SelfSwabTest.RESULT_PENDING:
                     try:
                         registration = SelfSwabTest.objects.get(barcode=barcode)
                     except (ObjectDoesNotExist):
                         continue
 
                     if result == "":
-                        result = "Pending"
+                        result = SelfSwabTest.RESULT_PENDING
                     registration.result = result
                     rapidpro.create_flow_start(
                         urns=f"whatsapp:{registration.msisdn}",
