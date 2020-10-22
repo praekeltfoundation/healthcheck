@@ -114,6 +114,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
         )
         self.assertEqual(selfswabtest.barcode, "1234567")
 
+
 class UniqueContactIDViewTests(APITestCase):
     url = reverse("unique_contact_id")
 
