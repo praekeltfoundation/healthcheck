@@ -21,4 +21,5 @@ urlpatterns = [
     path("v2/", include(global_v2router.urls)),
     path("v3/", include(v3router.urls)),
     path("v4/", include(v4router.urls)),
+    path("selfswab/", include("selfswab.urls"), name="selfswab"),
 ]
