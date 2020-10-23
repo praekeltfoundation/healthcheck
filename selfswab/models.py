@@ -12,7 +12,7 @@ class SelfSwabScreen(models.Model):
     RISK_TYPES = ((LOW_RISK, "Low"), (HIGH_RISK, "High"))
 
     AGE_U18 = "<18"
-    AGE_18T40 = "18-40"
+    AGE_18T40 = "18-39"
     AGE_40T65 = "40-65"
     AGE_O65 = ">65"
     AGE_CHOICES = (
@@ -22,15 +22,15 @@ class SelfSwabScreen(models.Model):
         (AGE_O65, AGE_O65),
     )
 
-    GENDER_MALE = "male"
-    GENDER_FEMALE = "female"
-    GENDER_OTHER = "other"
+    GENDER_MALE = "Male"
+    GENDER_FEMALE = "Female"
+    GENDER_OTHER = "Other"
     GENDER_NOT_SAY = "not_say"
     GENDER_CHOICES = (
         (GENDER_MALE, "Male"),
         (GENDER_FEMALE, "Female"),
         (GENDER_OTHER, "Other"),
-        (GENDER_NOT_SAY, "Rather not say"),
+        (GENDER_NOT_SAY, "not_say"),
     )
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
