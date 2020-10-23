@@ -118,9 +118,30 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
 class UniqueContactIDViewTests(APITestCase):
     url = reverse("unique_contact_id")
 
-    @patch("selfswab.views.randint")
-    def test_get_unque_contact_id(self, mock_randint):
-        mock_randint.return_value = 123
+    @patch("selfswab.views.random.choice")
+    def test_get_unque_contact_id(self, mock_choice):
+        mock_choice.return_value = "CV0123H"
+
+        SelfSwabScreen.objects.create(
+            **{
+                "msisdn": "27856454612",
+                "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
+                "risk_type": SelfSwabScreen.HIGH_RISK,
+                "age": SelfSwabScreen.AGE_18T40,
+                "gender": SelfSwabScreen.GENDER_FEMALE,
+                "pre_existing_condition": "",
+                "employee_number": "",
+                "cough": True,
+                "fever": True,
+                "shortness_of_breath": False,
+                "body_aches": True,
+                "loss_of_taste_smell": False,
+                "sore_throat": True,
+                "additional_symptoms": False,
+                "facility": "JHB Gen",
+                "occupation": "nurse",
+            }
+        )
 
         user = get_user_model().objects.create_user("test")
         self.client.force_authenticate(user)

@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from random import randint
+import random
 from rest_framework.mixins import CreateModelMixin
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import GenericViewSet
@@ -21,10 +21,16 @@ class SelfSwabTestViewSet(GenericViewSet, CreateModelMixin):
 
 
 def unique_contact_id(request):
-    while True:
-        contact_id = "CV%04dH" % randint(0, 9999)
+    all_options = set(["CV%04dH" % i for i in range(0, 10000)])
+    existing_contact_ids = set(
+        SelfSwabScreen.objects.values("contact_id")
+        .distinct()
+        .values_list("contact_id", flat=True)
+    )
 
-        if not SelfSwabScreen.objects.filter(contact_id=contact_id).exists():
-            break
+    try:
+        contact_id = random.choice(list(all_options - existing_contact_ids))
+    except IndexError:
+        contact_id = "-1"
 
     return JsonResponse({"id": contact_id})
