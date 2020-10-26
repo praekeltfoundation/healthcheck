@@ -60,6 +60,10 @@ class SelfSwabScreen(models.Model):
     def hashed_msisdn(self):
         return hash_string(self.msisdn)
 
+    @property
+    def hashed_employee_number(self):
+        return hash_string(self.employee_number)
+
     def get_processed_data(self):
         return {
             "id": str(self.id),
@@ -71,7 +75,7 @@ class SelfSwabScreen(models.Model):
             "risk_type": self.risk_type,
             "timestamp": self.timestamp.isoformat(),
             "occupation": self.occupation,
-            "employee_number": self.employee_number,
+            "employee_number": self.hashed_employee_number,
             "pre_existing_condition": self.pre_existing_condition,
             "cough": self.cough,
             "fever": self.fever,

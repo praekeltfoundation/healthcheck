@@ -87,7 +87,7 @@ class SelfSwabScreenTests(TestCase):
                 "sore_throat": True,
                 "additional_symptoms": True,
                 "occupation": "Doctor",
-                "employee_number": "emp-123",
+                "employee_number": "MDJ3NWxchSKulLh+Hrn2RldM8hM1S5hBTWgeO/mAaZI=",
                 "pre_existing_condition": "diabetes",
             },
         )
