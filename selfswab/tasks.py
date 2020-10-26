@@ -6,7 +6,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
 import requests
-from selfswab.models import SelfSwabTest
+from selfswab.models import SelfSwabScreen, SelfSwabTest
+from healthcheck import utils
 
 
 @periodic_task(run_every=crontab(minute="*/5"))
@@ -58,3 +59,55 @@ def poll_meditech_api_for_results():
                     registration.save()
 
     return "Finished syncing test results to Rapidpro"
+
+
+@periodic_task(run_every=crontab(minute="*/5"))
+def perform_etl():
+    r = get_redis_connection()
+    if r.get("perform_etl_selfswab"):
+        return
+
+    models = {
+        "screens": {
+            "model": SelfSwabScreen,
+            "field": "timestamp",
+            "fields": {
+                "id": "STRING",
+                "contact_id": "STRING",
+                "msisdn": "STRING",
+                "age": "STRING",
+                "gender": "STRING",
+                "facility": "STRING",
+                "risk_type": "STRING",
+                "timestamp": "TIMESTAMP",
+                "occupation": "STRING",
+                "employee_number": "STRING",
+                "pre_existing_condition": "STRING",
+                "cough": "BOOLEAN",
+                "fever": "BOOLEAN",
+                "shortness_of_breath": "BOOLEAN",
+                "body_aches": "BOOLEAN",
+                "loss_of_taste_smell": "BOOLEAN",
+                "sore_throat": "BOOLEAN",
+                "additional_symptoms": "BOOLEAN",
+            },
+        },
+        "tests": {
+            "model": SelfSwabTest,
+            "field": "updated_at",
+            "fields": {
+                "id": "STRING",
+                "contact_id": "STRING",
+                "msisdn": "STRING",
+                "result": "STRING",
+                "barcode": "STRING",
+                "timestamp": "TIMESTAMP",
+                "updated_at": "TIMESTAMP",
+            },
+        },
+    }
+
+    with r.lock("perform_etl_selfswab", 1800):
+        utils.sync_models_to_bigquery(
+            settings.SELFSWAB_BQ_KEY_PATH, settings.SELFSWAB_BQ_DATASET, models
+        )
