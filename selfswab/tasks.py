@@ -52,7 +52,7 @@ def poll_meditech_api_for_results():
                         result = SelfSwabTest.RESULT_PENDING
                     registration.result = result
                     rapidpro.create_flow_start(
-                        urns=f"whatsapp:{registration.msisdn}",
+                        urns=[f"whatsapp:{registration.msisdn}"],
                         flow=settings.SELFSWAB_RAPIDPRO_FLOW,
                         extra={
                             "result": registration.result,

@@ -97,7 +97,7 @@ class PollMeditechForResults(TestCase):
             body2,
             {
                 "flow": "321",
-                "urns": "whatsapp:27856454612",
+                "urns": ["whatsapp:27856454612"],
                 "extra": {
                     "result": "Pending",
                     "updated_at": self.updated_at.strftime("%d/%m/%Y"),
@@ -108,7 +108,7 @@ class PollMeditechForResults(TestCase):
             body3,
             {
                 "flow": "321",
-                "urns": "whatsapp:27895671234",
+                "urns": ["whatsapp:27895671234"],
                 "extra": {
                     "result": "Negative",
                     "updated_at": self.updated_at.strftime("%d/%m/%Y"),
