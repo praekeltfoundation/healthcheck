@@ -31,7 +31,8 @@ class PollMeditechForResults(TestCase):
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
         MEDITECH_URL="https://medi-test.com",
-        MEDITECH_AUTH="secret",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
         SELFSWAB_RAPIDPRO_TOKEN="123",
         SELFSWAB_RAPIDPRO_FLOW="321",
     )
@@ -119,7 +120,8 @@ class PollMeditechForResults(TestCase):
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
         MEDITECH_URL="https://medi-test.com",
-        MEDITECH_AUTH="secrets",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
         SELFSWAB_RAPIDPRO_TOKEN="123",
         SELFSWAB_RAPIDPRO_FLOW="321",
     )
