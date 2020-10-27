@@ -18,6 +18,8 @@ def poll_meditech_api_for_results():
     with r.lock("poll_meditech_api_for_results", 1800):
         if (
             settings.MEDITECH_URL
+            and settings.MEDITECH_USER
+            and settings.MEDITECH_PASSWORD
             and settings.RAPIDPRO_URL
             and settings.SELFSWAB_RAPIDPRO_TOKEN
             and settings.SELFSWAB_RAPIDPRO_FLOW
@@ -35,6 +37,7 @@ def poll_meditech_api_for_results():
                 url=settings.MEDITECH_URL,
                 headers={"Content-Type": "application/json"},
                 json={"barcodes": barcodes},
+                auth=(settings.MEDITECH_USER, settings.MEDITECH_PASSWORD),
             )
             response.raise_for_status()
             results = response.json()["barcodes"]
