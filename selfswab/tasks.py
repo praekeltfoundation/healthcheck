@@ -38,7 +38,6 @@ def poll_meditech_api_for_results():
                 headers={"Content-Type": "application/json"},
                 json={"barcodes": barcodes},
                 auth=(settings.MEDITECH_USER, settings.MEDITECH_PASSWORD),
-                verify=False,
             )
             response.raise_for_status()
             results = response.json()["barcodes"]
