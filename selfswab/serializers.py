@@ -1,6 +1,18 @@
 from userprofile.serializers import BaseEventSerializer
 
-from .models import SelfSwabScreen, SelfSwabTest
+from .models import SelfSwabRegistration, SelfSwabScreen, SelfSwabTest
+from .utils import get_next_unique_contact_id
+
+
+class SelfSwabRegistrationSerializer(BaseEventSerializer):
+    class Meta:
+        model = SelfSwabRegistration
+        fields = "__all__"
+        read_only_fields = ("id", "created_by")
+
+    def create(self, validated_data):
+        validated_data["contact_id"] = get_next_unique_contact_id()
+        return super().create(validated_data)
 
 
 class SelfSwabScreenSerializer(BaseEventSerializer):
