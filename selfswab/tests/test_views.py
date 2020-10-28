@@ -3,9 +3,8 @@ from django.contrib.auth.models import Permission
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
-from unittest.mock import patch
 
-from selfswab.models import SelfSwabScreen, SelfSwabTest
+from selfswab.models import SelfSwabRegistration, SelfSwabScreen, SelfSwabTest
 from userprofile.tests.test_views import BaseEventTestCase
 
 
@@ -115,36 +114,60 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(selfswabtest.barcode, "1234567")
 
 
-class UniqueContactIDViewTests(APITestCase):
-    url = reverse("unique_contact_id")
+class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
+    url = reverse("selfswabregistration-list")
 
-    @patch("selfswab.views.random.choice")
-    def test_get_unque_contact_id(self, mock_choice):
-        mock_choice.return_value = "CV0123H"
-
-        SelfSwabScreen.objects.create(
-            **{
-                "msisdn": "27856454612",
-                "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
-                "risk_type": SelfSwabScreen.HIGH_RISK,
-                "age": SelfSwabScreen.AGE_18T40,
-                "gender": SelfSwabScreen.GENDER_FEMALE,
-                "pre_existing_condition": "",
-                "employee_number": "",
-                "cough": True,
-                "fever": True,
-                "shortness_of_breath": False,
-                "body_aches": True,
-                "loss_of_taste_smell": False,
-                "sore_throat": True,
-                "additional_symptoms": False,
-                "facility": "JHB Gen",
-                "occupation": "nurse",
-            }
+    def create_registration(self, contact_id):
+        SelfSwabRegistration.objects.create(
+            **{"contact_id": contact_id, "employee_number": "test"}
         )
 
+    def test_data_validation(self):
+        """
+        The supplied data must be validated, and any errors returned
+        """
         user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="add_selfswabregistration")
+        )
         self.client.force_authenticate(user)
-        response = self.client.get(self.url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.json(), {"id": "CV0123H"})
+        response = self.client.post(self.url)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_successful_request(self):
+        """
+        Should create a new object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="add_selfswabregistration")
+        )
+        self.client.force_authenticate(user)
+
+        self.create_registration("CV0001H")
+        self.create_registration("CV0003H")
+
+        response = self.client.post(
+            self.url,
+            {
+                "employee_number": "emp-123",
+                "first_name": "first",
+                "last_name": "last",
+                "facility": "JHB Gen",
+                "occupation": "doctor",
+            },
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+        self.assertEqual(response.json()["contact_id"], "CV0002H")
+
+        [registration] = SelfSwabRegistration.objects.all().exclude(
+            employee_number="test"
+        )
+        self.assertEqual(registration.employee_number, "emp-123")
+        self.assertEqual(registration.contact_id, "CV0002H")
+        self.assertEqual(registration.first_name, "first")
+        self.assertEqual(registration.last_name, "last")
+        self.assertEqual(registration.facility, "JHB Gen")
+        self.assertEqual(registration.occupation, "doctor")
