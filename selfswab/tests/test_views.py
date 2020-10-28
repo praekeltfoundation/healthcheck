@@ -171,3 +171,31 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(registration.last_name, "last")
         self.assertEqual(registration.facility, "JHB Gen")
         self.assertEqual(registration.occupation, "doctor")
+
+    def test_request_with_contact_id(self):
+        """
+        Should create a new object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="add_selfswabregistration")
+        )
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "employee_number": "emp-123",
+                "first_name": "first",
+                "last_name": "last",
+                "facility": "JHB Gen",
+                "occupation": "doctor",
+                "contact_id": "CV1111H",
+            },
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+        self.assertEqual(response.json()["contact_id"], "CV1111H")
+
+        [registration] = SelfSwabRegistration.objects.all()
+        self.assertEqual(registration.contact_id, "CV1111H")
