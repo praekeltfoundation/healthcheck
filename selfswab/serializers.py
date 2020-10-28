@@ -11,7 +11,8 @@ class SelfSwabRegistrationSerializer(BaseEventSerializer):
         read_only_fields = ("id", "created_by")
 
     def create(self, validated_data):
-        validated_data["contact_id"] = get_next_unique_contact_id()
+        if "contact_id" not in validated_data:
+            validated_data["contact_id"] = get_next_unique_contact_id()
         return super().create(validated_data)
 
 
