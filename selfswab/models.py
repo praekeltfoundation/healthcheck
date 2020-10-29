@@ -112,7 +112,6 @@ class SelfSwabTest(models.Model):
         (RESULT_INVALID, "Invalid"),
     )
 
-
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=False)
