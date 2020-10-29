@@ -103,18 +103,12 @@ class SelfSwabTest(models.Model):
     RESULT_POSITIVE = "Positive"
     RESULT_NEGATIVE = "Negative"
     RESULT_REJECTED = "Rejected"
-    RESULT_EQV = "Equivocal"
-    RESULT_INCONCLUSIVE = "Inconclusive"
-    RESULT_INDETERMINATE = "Indeterminate"
     RESULT_INVALID = "Invalid"
     RESULT_TYPES = (
         (RESULT_PENDING, "Pending"),
         (RESULT_POSITIVE, "Positive"),
         (RESULT_NEGATIVE, "Negative"),
         (RESULT_REJECTED, "Rejected"),
-        (RESULT_EQV, "Equivocal"),
-        (RESULT_INCONCLUSIVE, "Inconclusive"),
-        (RESULT_INDETERMINATE, "Indeterminate"),
         (RESULT_INVALID, "Invalid"),
     )
 

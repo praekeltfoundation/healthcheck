@@ -48,8 +48,27 @@ def poll_meditech_api_for_results():
                     except (ObjectDoesNotExist):
                         continue
 
+                    positive_results = ["POS", "POSITIVE", "Positive"]
+                    negative_results = ["NEG", "NEGATIVE", "NOT DET"]
+                    invalid_results = [
+                        "EQV",
+                        "INC",
+                        "INCON",
+                        "IND",
+                        "INV",
+                        "INVALID",
+                        "Invalid",
+                    ]
                     if result == "":
                         result = SelfSwabTest.RESULT_PENDING
+                    if result in positive_results:
+                        result = SelfSwabTest.RESULT_POSITIVE
+                    if result in negative_results:
+                        result = SelfSwabTest.RESULT_NEGATIVE
+                    if result == "REJ":
+                        result = SelfSwabTest.RESULT_REJECTED
+                    if result in invalid_results:
+                        result = SelfSwabTest.RESULT_INVALID
                     registration.result = result
                     rapidpro.create_flow_start(
                         urns=[f"whatsapp:{registration.msisdn}"],
