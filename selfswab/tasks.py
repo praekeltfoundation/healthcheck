@@ -42,10 +42,16 @@ def poll_meditech_api_for_results():
             response.raise_for_status()
             results = response.json()["barcodes"]
             for barcode, result in results.items():
-                if result != SelfSwabTest.RESULT_PENDING:
-                    try:
-                        registration = SelfSwabTest.objects.get(barcode=barcode)
-                    except (ObjectDoesNotExist):
+                if result != SelfSwabTest.RESULT_PENDING and result != "":
+                    registration = (
+                        SelfSwabTest.objects.filter(
+                            barcode=barcode, result=SelfSwabTest.RESULT_PENDING
+                        )
+                        .order_by("-timestamp")
+                        .first()
+                    )
+
+                    if not registration:
                         continue
 
                     positive_results = ["POS", "POSITIVE", "Positive"]
@@ -59,8 +65,6 @@ def poll_meditech_api_for_results():
                         "INVALID",
                         "Invalid",
                     ]
-                    if result == "":
-                        result = SelfSwabTest.RESULT_PENDING
                     if result in positive_results:
                         result = SelfSwabTest.RESULT_POSITIVE
                     if result in negative_results:

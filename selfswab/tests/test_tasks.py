@@ -86,26 +86,14 @@ class PollMeditechForResults(TestCase):
 
         poll_meditech_api_for_results()
 
-        [call1, call2, call3] = responses.calls
+        [call1, call2] = responses.calls
 
-        body3 = json.loads(call3.request.body)
         body2 = json.loads(call2.request.body)
         body1 = json.loads(call1.request.body)
 
         self.assertEqual(body1, {"barcodes": ["12345678", "87654321"]})
         self.assertEqual(
             body2,
-            {
-                "flow": "321",
-                "urns": ["whatsapp:27856454612"],
-                "extra": {
-                    "result": "Pending",
-                    "updated_at": self.updated_at.strftime("%d/%m/%Y"),
-                },
-            },
-        )
-        self.assertEqual(
-            body3,
             {
                 "flow": "321",
                 "urns": ["whatsapp:27895671234"],
@@ -293,6 +281,50 @@ class PollMeditechForResults(TestCase):
             responses.POST,
             "https://rp-test.com/api/v2/flow_starts.json",
             json=self.flow_response,
+        )
+
+        poll_meditech_api_for_results()
+
+        self.assertEqual(len(responses.calls), 1)
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        MEDITECH_URL="https://medi-test.com",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
+        SELFSWAB_RAPIDPRO_FLOW="321",
+    )
+    def test_poll_to_meditech_duplicate_barcode(self):
+        """
+        Should not fail if there is a duplicate barcode
+        """
+        SelfSwabTest.objects.create(
+            **{
+                "id": "3d9dc41c-8c18-4e3f-8afc-8970b1cae7c1",
+                "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
+                "msisdn": "27856454612",
+                "result": SelfSwabTest.RESULT_PENDING,
+                "barcode": "12345678",
+                "timestamp": self.updated_at,
+            }
+        )
+        SelfSwabTest.objects.create(
+            **{
+                "id": "9a4c5a43-9a48-44b0-ad32-8561217461c1",
+                "contact_id": "9e12d7hj-af25-40b6-bb4f-57c72c3c3f91",
+                "msisdn": "27895671234",
+                "result": SelfSwabTest.RESULT_PENDING,
+                "barcode": "12345678",
+                "timestamp": self.updated_at,
+            }
+        )
+
+        responses.add(
+            responses.POST,
+            "https://medi-test.com",
+            json={"barcodes": {"12345678": ""}},
         )
 
         poll_meditech_api_for_results()
