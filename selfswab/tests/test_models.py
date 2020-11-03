@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.utils import timezone
 
 from selfswab.models import SelfSwabScreen, SelfSwabTest
 
@@ -11,8 +12,9 @@ class SelfSwabTestTests(TestCase):
         )
 
     def test_get_processed_data(self):
+        collection_timestamp = timezone.now()
         test = SelfSwabTest.objects.create(
-            **{"msisdn": "+123", "result": SelfSwabTest.RESULT_PENDING}
+            **{"msisdn": "+123", "collection_timestamp": collection_timestamp}
         )
 
         self.assertEqual(
@@ -25,8 +27,23 @@ class SelfSwabTestTests(TestCase):
                 "barcode": test.barcode,
                 "timestamp": test.timestamp.isoformat(),
                 "updated_at": test.updated_at.isoformat(),
+                "collection_timestamp": collection_timestamp.isoformat(),
+                "received_timestamp": None,
+                "authorized_timestamp": None,
             },
         )
+
+    def test_set_result(self):
+        test = SelfSwabTest.objects.create(**{"msisdn": "+123"})
+
+        test.set_result("POS")
+        self.assertEqual(test.result, SelfSwabTest.RESULT_POSITIVE)
+        test.set_result("NOT DET")
+        self.assertEqual(test.result, SelfSwabTest.RESULT_NEGATIVE)
+        test.set_result("REJ")
+        self.assertEqual(test.result, SelfSwabTest.RESULT_REJECTED)
+        test.set_result("INCON")
+        self.assertEqual(test.result, SelfSwabTest.RESULT_INVALID)
 
 
 class SelfSwabScreenTests(TestCase):

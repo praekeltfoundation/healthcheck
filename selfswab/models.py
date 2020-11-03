@@ -122,12 +122,26 @@ class SelfSwabTest(models.Model):
     barcode = models.CharField(max_length=255, blank=False)
     timestamp = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True, db_index=True)
+    collection_timestamp = models.DateTimeField(null=True)
+    received_timestamp = models.DateTimeField(null=True)
+    authorized_timestamp = models.DateTimeField(null=True)
 
     @property
     def hashed_msisdn(self):
         return hash_string(self.msisdn)
 
     def get_processed_data(self):
+        collection_timestamp = None
+        received_timestamp = None
+        authorized_timestamp = None
+
+        if self.collection_timestamp:
+            collection_timestamp = self.collection_timestamp.isoformat()
+        if self.received_timestamp:
+            received_timestamp = self.received_timestamp.isoformat()
+        if self.authorized_timestamp:
+            authorized_timestamp = self.authorized_timestamp.isoformat()
+
         return {
             "id": str(self.id),
             "contact_id": self.contact_id,
@@ -136,4 +150,28 @@ class SelfSwabTest(models.Model):
             "barcode": self.barcode,
             "timestamp": self.timestamp.isoformat(),
             "updated_at": self.updated_at.isoformat(),
+            "collection_timestamp": collection_timestamp,
+            "received_timestamp": received_timestamp,
+            "authorized_timestamp": authorized_timestamp,
         }
+
+    def set_result(self, result):
+        positive_results = ["POS", "POSITIVE", "Positive"]
+        negative_results = ["NEG", "NEGATIVE", "NOT DET"]
+        invalid_results = [
+            "EQV",
+            "INC",
+            "INCON",
+            "IND",
+            "INV",
+            "INVALID",
+            "Invalid",
+        ]
+        if result in positive_results:
+            self.result = SelfSwabTest.RESULT_POSITIVE
+        elif result in negative_results:
+            self.result = SelfSwabTest.RESULT_NEGATIVE
+        elif result == "REJ":
+            self.result = SelfSwabTest.RESULT_REJECTED
+        elif result in invalid_results:
+            self.result = SelfSwabTest.RESULT_INVALID
