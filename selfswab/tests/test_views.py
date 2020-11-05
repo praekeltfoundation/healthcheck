@@ -144,8 +144,8 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         )
         self.client.force_authenticate(user)
 
-        self.create_registration("CV0001H")
-        self.create_registration("CV0003H")
+        self.create_registration("CV0100H")
+        self.create_registration("CV0102H")
 
         response = self.client.post(
             self.url,
@@ -160,13 +160,13 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-        self.assertEqual(response.json()["contact_id"], "CV0002H")
+        self.assertEqual(response.json()["contact_id"], "CV0101H")
 
         [registration] = SelfSwabRegistration.objects.all().exclude(
             employee_number="test"
         )
         self.assertEqual(registration.employee_number, "emp-123")
-        self.assertEqual(registration.contact_id, "CV0002H")
+        self.assertEqual(registration.contact_id, "CV0101H")
         self.assertEqual(registration.first_name, "first")
         self.assertEqual(registration.last_name, "last")
         self.assertEqual(registration.facility, "JHB Gen")
