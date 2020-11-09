@@ -76,7 +76,7 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
 class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
     url = reverse("selfswabtest-list")
 
-    def test_test_data_validation(self):
+    def test_data_validation(self):
         """
         The supplied data must be validated, and any errors returned
         """
@@ -86,7 +86,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
         response = self.client.post(self.url)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
-    def test_test_successful_request(self):
+    def test_successful_request(self):
         """
         Should create a new object in the database
         """
@@ -112,6 +112,40 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
             selfswabtest.contact_id, "9e12d04c-af25-40b6-aa4f-57c72e8e3f91"
         )
         self.assertEqual(selfswabtest.barcode, "1234567")
+
+    def test_duplicate_barcode_request(self):
+        """
+        Should return an error when the barcode already exists in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_selfswabtest"))
+        self.client.force_authenticate(user)
+
+        SelfSwabTest.objects.create(
+            **{
+                "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
+                "barcode": "1234567",
+            }
+        )
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
+                "result": SelfSwabTest.RESULT_NEGATIVE,
+                "barcode": "1234567",
+                "timestamp": "2020-01-11T08:30:24.922024+00:00",
+                "updated_at": "2020-01-12T08:30:24.922024+00:00",
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(
+            response.json(),
+            {"barcode": ["self swab test with this barcode already exists."]},
+        )
+        assert False
+        self.assertEqual(SelfSwabTest.objects.all().count(), 1)
 
 
 class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
