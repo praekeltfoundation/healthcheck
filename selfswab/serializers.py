@@ -1,7 +1,8 @@
 from userprofile.serializers import BaseEventSerializer
 
 from .models import SelfSwabRegistration, SelfSwabScreen, SelfSwabTest
-from .utils import get_next_unique_contact_id
+from .utils import get_next_unique_contact_id, is_barcode_format_valid
+from contacts.exceptions import CustomBadRequest
 
 
 class SelfSwabRegistrationSerializer(BaseEventSerializer):
@@ -24,6 +25,12 @@ class SelfSwabScreenSerializer(BaseEventSerializer):
 
 
 class SelfSwabTestSerializer(BaseEventSerializer):
+    def validate(self, data):
+        barcode = data.get("barcode")
+        if not is_barcode_format_valid(barcode):
+            raise CustomBadRequest("barcode invalid format.")
+        return super(SelfSwabTestSerializer, self).validate(data)
+
     class Meta:
         model = SelfSwabTest
         fields = "__all__"
