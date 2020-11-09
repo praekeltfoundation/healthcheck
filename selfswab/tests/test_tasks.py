@@ -286,4 +286,3 @@ class PollMeditechForResults(TestCase):
         poll_meditech_api_for_results()
 
         self.assertEqual(len(responses.calls), 1)
-
