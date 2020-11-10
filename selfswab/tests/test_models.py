@@ -44,6 +44,8 @@ class SelfSwabTestTests(TestCase):
         self.assertEqual(test.result, SelfSwabTest.RESULT_REJECTED)
         test.set_result("INCON")
         self.assertEqual(test.result, SelfSwabTest.RESULT_INVALID)
+        test.set_result("Error")
+        self.assertEqual(test.result, SelfSwabTest.RESULT_ERROR)
 
 
 class SelfSwabScreenTests(TestCase):

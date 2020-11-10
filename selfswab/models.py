@@ -104,12 +104,14 @@ class SelfSwabTest(models.Model):
     RESULT_NEGATIVE = "Negative"
     RESULT_REJECTED = "Rejected"
     RESULT_INVALID = "Invalid"
+    RESULT_ERROR = "Error"
     RESULT_TYPES = (
         (RESULT_PENDING, "Pending"),
         (RESULT_POSITIVE, "Positive"),
         (RESULT_NEGATIVE, "Negative"),
         (RESULT_REJECTED, "Rejected"),
         (RESULT_INVALID, "Invalid"),
+        (RESULT_ERROR, "Error"),
     )
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -175,3 +177,5 @@ class SelfSwabTest(models.Model):
             self.result = SelfSwabTest.RESULT_REJECTED
         elif result in invalid_results:
             self.result = SelfSwabTest.RESULT_INVALID
+        else:
+            self.result = SelfSwabTest.RESULT_ERROR

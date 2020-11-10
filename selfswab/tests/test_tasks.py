@@ -99,6 +99,8 @@ class PollMeditechForResults(TestCase):
                 "urns": ["whatsapp:27895671234"],
                 "extra": {
                     "result": "Negative",
+                    "error": None,
+                    "barcode": "87654321",
                     "updated_at": self.updated_at.strftime("%d/%m/%Y"),
                 },
             },
@@ -157,6 +159,33 @@ class PollMeditechForResults(TestCase):
             },
         )
 
+        poll_meditech_api_for_results()
+
+        self.assertEqual(len(responses.calls), 1)
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        MEDITECH_URL="https://medi-test.com",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
+        SELFSWAB_RAPIDPRO_FLOW="321",
+    )
+    def test_poll_to_meditech_barcode_error(self):
+        """
+        Should handle an error response from the meditech api
+        """
+        self.create_selfswab_test("27856454612", "12345678")
+
+        responses.add(
+            responses.POST,
+            "https://medi-test.com",
+            json={
+                "results": [{"barcode": "12345678", "error": "Requisition mismatch"}]
+            },
+        )
+
         responses.add(
             responses.POST,
             "https://rp-test.com/api/v2/flow_starts.json",
@@ -165,7 +194,24 @@ class PollMeditechForResults(TestCase):
 
         poll_meditech_api_for_results()
 
-        self.assertEqual(len(responses.calls), 1)
+        self.assertEqual(len(responses.calls), 2)
+        [_, call] = responses.calls
+
+        body = json.loads(call.request.body)
+
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27856454612"],
+                "extra": {
+                    "result": "Error",
+                    "error": "Requisition mismatch",
+                    "barcode": "12345678",
+                    "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                },
+            },
+        )
 
     @responses.activate
     @override_settings(

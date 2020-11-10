@@ -41,7 +41,8 @@ def poll_meditech_api_for_results():
             response.raise_for_status()
             results = response.json()["results"]
             for result in results:
-                if result["result"] not in (SelfSwabTest.RESULT_PENDING, ""):
+                test_result = result.get("result", SelfSwabTest.RESULT_ERROR)
+                if test_result not in (SelfSwabTest.RESULT_PENDING, ""):
                     registration = (
                         SelfSwabTest.objects.filter(
                             barcode=result["barcode"],
@@ -54,26 +55,22 @@ def poll_meditech_api_for_results():
                     if not registration:
                         continue
 
-                    registration.set_result(result["result"])
+                    registration.set_result(test_result)
 
                     if result.get("collDateTime"):
-                        registration.collection_timestamp = result.get(
-                            "collDateTime"
-                        )
+                        registration.collection_timestamp = result.get("collDateTime")
                     if result.get("recvDateTime"):
-                        registration.received_timestamp = result.get(
-                            "recvDateTime"
-                        )
+                        registration.received_timestamp = result.get("recvDateTime")
                     if result.get("verifyDateTime"):
-                        registration.authorized_timestamp = result.get(
-                            "verifyDateTime"
-                        )
+                        registration.authorized_timestamp = result.get("verifyDateTime")
 
                     rapidpro.create_flow_start(
                         urns=[f"whatsapp:{registration.msisdn}"],
                         flow=settings.SELFSWAB_RAPIDPRO_FLOW,
                         extra={
                             "result": registration.result,
+                            "error": result.get("error"),
+                            "barcode": result["barcode"],
                             "updated_at": registration.updated_at.strftime("%d/%m/%Y"),
                         },
                     )
