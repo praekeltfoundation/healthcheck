@@ -1,7 +1,6 @@
 from celery.decorators import periodic_task
 from celery.task.schedules import crontab
 from django.conf import settings
-from django.core.exceptions import ObjectDoesNotExist
 
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
@@ -40,12 +39,14 @@ def poll_meditech_api_for_results():
                 auth=(settings.MEDITECH_USER, settings.MEDITECH_PASSWORD),
             )
             response.raise_for_status()
-            results = response.json()["barcodes"]
-            for barcode, result in results.items():
-                if result != SelfSwabTest.RESULT_PENDING and result != "":
+            results = response.json()["results"]
+            for result in results:
+                test_result = result.get("result", SelfSwabTest.RESULT_ERROR)
+                if test_result not in (SelfSwabTest.RESULT_PENDING, ""):
                     registration = (
                         SelfSwabTest.objects.filter(
-                            barcode=barcode, result=SelfSwabTest.RESULT_PENDING
+                            barcode=result["barcode"],
+                            result=SelfSwabTest.RESULT_PENDING,
                         )
                         .order_by("-timestamp")
                         .first()
@@ -54,31 +55,22 @@ def poll_meditech_api_for_results():
                     if not registration:
                         continue
 
-                    positive_results = ["POS", "POSITIVE", "Positive"]
-                    negative_results = ["NEG", "NEGATIVE", "NOT DET"]
-                    invalid_results = [
-                        "EQV",
-                        "INC",
-                        "INCON",
-                        "IND",
-                        "INV",
-                        "INVALID",
-                        "Invalid",
-                    ]
-                    if result in positive_results:
-                        result = SelfSwabTest.RESULT_POSITIVE
-                    if result in negative_results:
-                        result = SelfSwabTest.RESULT_NEGATIVE
-                    if result == "REJ":
-                        result = SelfSwabTest.RESULT_REJECTED
-                    if result in invalid_results:
-                        result = SelfSwabTest.RESULT_INVALID
-                    registration.result = result
+                    registration.set_result(test_result)
+
+                    if result.get("collDateTime"):
+                        registration.collection_timestamp = result.get("collDateTime")
+                    if result.get("recvDateTime"):
+                        registration.received_timestamp = result.get("recvDateTime")
+                    if result.get("verifyDateTime"):
+                        registration.authorized_timestamp = result.get("verifyDateTime")
+
                     rapidpro.create_flow_start(
                         urns=[f"whatsapp:{registration.msisdn}"],
                         flow=settings.SELFSWAB_RAPIDPRO_FLOW,
                         extra={
                             "result": registration.result,
+                            "error": result.get("error"),
+                            "barcode": result["barcode"],
                             "updated_at": registration.updated_at.strftime("%d/%m/%Y"),
                         },
                     )
@@ -129,6 +121,9 @@ def perform_etl():
                 "barcode": "STRING",
                 "timestamp": "TIMESTAMP",
                 "updated_at": "TIMESTAMP",
+                "collection_timestamp": "TIMESTAMP",
+                "received_timestamp": "TIMESTAMP",
+                "authorized_timestamp": "TIMESTAMP",
             },
         },
     }
