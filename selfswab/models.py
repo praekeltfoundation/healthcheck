@@ -121,7 +121,7 @@ class SelfSwabTest(models.Model):
     result = models.CharField(
         max_length=100, choices=RESULT_TYPES, default=RESULT_PENDING
     )
-    barcode = models.CharField(max_length=255, blank=False)
+    barcode = models.CharField(max_length=255, blank=False, unique=True)
     timestamp = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True, db_index=True)
     collection_timestamp = models.DateTimeField(null=True)

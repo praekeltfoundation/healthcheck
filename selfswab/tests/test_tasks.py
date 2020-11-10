@@ -212,29 +212,3 @@ class PollMeditechForResults(TestCase):
                 },
             },
         )
-
-    @responses.activate
-    @override_settings(
-        RAPIDPRO_URL="https://rp-test.com",
-        MEDITECH_URL="https://medi-test.com",
-        MEDITECH_USER="praekelt",
-        MEDITECH_PASSWORD="secret",
-        SELFSWAB_RAPIDPRO_TOKEN="123",
-        SELFSWAB_RAPIDPRO_FLOW="321",
-    )
-    def test_poll_to_meditech_duplicate_barcode(self):
-        """
-        Should not fail if there is a duplicate barcode
-        """
-        self.create_selfswab_test("27856454612", "12345678")
-        self.create_selfswab_test("27895671234", "12345678")
-
-        responses.add(
-            responses.POST,
-            "https://medi-test.com",
-            json={"results": [{"barcode": "12345678", "result": ""}]},
-        )
-
-        poll_meditech_api_for_results()
-
-        self.assertEqual(len(responses.calls), 1)
