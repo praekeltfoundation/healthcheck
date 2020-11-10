@@ -56,17 +56,17 @@ def poll_meditech_api_for_results():
 
                     registration.set_result(result["result"])
 
-                    if result.get("collection_timestamp"):
+                    if result.get("collDateTime"):
                         registration.collection_timestamp = result.get(
-                            "collection_timestamp"
+                            "collDateTime"
                         )
-                    if result.get("received_timestamp"):
+                    if result.get("recvDateTime"):
                         registration.received_timestamp = result.get(
-                            "received_timestamp"
+                            "recvDateTime"
                         )
-                    if result.get("authorized_timestamp"):
+                    if result.get("verifyDateTime"):
                         registration.authorized_timestamp = result.get(
-                            "authorized_timestamp"
+                            "verifyDateTime"
                         )
 
                     rapidpro.create_flow_start(

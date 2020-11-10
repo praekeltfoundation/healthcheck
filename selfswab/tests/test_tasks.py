@@ -70,9 +70,9 @@ class PollMeditechForResults(TestCase):
                     {
                         "barcode": "87654321",
                         "result": "NEGATIVE",
-                        "collection_timestamp": self.test_timestamp,
-                        "received_timestamp": self.test_timestamp,
-                        "authorized_timestamp": self.test_timestamp,
+                        "collDateTime": self.test_timestamp,
+                        "recvDateTime": self.test_timestamp,
+                        "verifyDateTime": self.test_timestamp,
                     },
                 ]
             },
@@ -149,9 +149,9 @@ class PollMeditechForResults(TestCase):
                     {
                         "barcode": "88888888",
                         "result": "NEGATIVE",
-                        "collection_timestamp": self.test_timestamp,
-                        "received_timestamp": self.test_timestamp,
-                        "authorized_timestamp": self.test_timestamp,
+                        "collDateTime": self.test_timestamp,
+                        "recvDateTime": self.test_timestamp,
+                        "verifyDateTime": self.test_timestamp,
                     },
                 ]
             },
