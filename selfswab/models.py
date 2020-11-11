@@ -104,6 +104,9 @@ class SelfSwabTest(models.Model):
     RESULT_NEGATIVE = "Negative"
     RESULT_REJECTED = "Rejected"
     RESULT_INVALID = "Invalid"
+    RESULT_EQUIVOCAL = "Equivocal"
+    RESULT_INCONCLUSIVE = "Inconclusive"
+    RESULT_INDETERMINATE = "Indeterminate"
     RESULT_ERROR = "Error"
     RESULT_TYPES = (
         (RESULT_PENDING, "Pending"),
@@ -111,6 +114,9 @@ class SelfSwabTest(models.Model):
         (RESULT_NEGATIVE, "Negative"),
         (RESULT_REJECTED, "Rejected"),
         (RESULT_INVALID, "Invalid"),
+        (RESULT_EQUIVOCAL, "Equivocal"),
+        (RESULT_INCONCLUSIVE, "Inconclusive"),
+        (RESULT_INDETERMINATE, "Indeterminate"),
         (RESULT_ERROR, "Error"),
     )
 
@@ -158,24 +164,19 @@ class SelfSwabTest(models.Model):
         }
 
     def set_result(self, result):
-        positive_results = ["POS", "POSITIVE", "Positive"]
-        negative_results = ["NEG", "NEGATIVE", "NOT DET"]
-        invalid_results = [
-            "EQV",
-            "INC",
-            "INCON",
-            "IND",
-            "INV",
-            "INVALID",
-            "Invalid",
-        ]
-        if result in positive_results:
+        if result.upper() in ["POS", "POSITIVE"]:
             self.result = SelfSwabTest.RESULT_POSITIVE
-        elif result in negative_results:
+        elif result.upper() in ["NEG", "NEGATIVE", "NOT DET"]:
             self.result = SelfSwabTest.RESULT_NEGATIVE
-        elif result == "REJ":
-            self.result = SelfSwabTest.RESULT_REJECTED
-        elif result in invalid_results:
+        elif result.upper() in ["INV", "INVALID"]:
             self.result = SelfSwabTest.RESULT_INVALID
+        elif result.upper() in ["REJECTED", "REJ"]:
+            self.result = SelfSwabTest.RESULT_REJECTED
+        elif result.upper() in ["EQV", "EQUIVOCAL"]:
+            self.result = SelfSwabTest.RESULT_EQUIVOCAL
+        elif result.upper() in ["INC", "INCON", "INCONCLUSIVE"]:
+            self.result = SelfSwabTest.RESULT_INCONCLUSIVE
+        elif result.upper() in ["INDETERMINATE", "IND"]:
+            self.result = SelfSwabTest.RESULT_INDETERMINATE
         else:
             self.result = SelfSwabTest.RESULT_ERROR
