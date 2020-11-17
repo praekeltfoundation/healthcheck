@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "userprofile",
     "tbconnect",
     "selfswab",
+    "lifenet"
 ]
 
 MIDDLEWARE = [
