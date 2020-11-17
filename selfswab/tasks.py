@@ -32,6 +32,10 @@ def poll_meditech_api_for_results():
                     result=SelfSwabTest.RESULT_PENDING
                 ).values_list("barcode", flat=True)
             )
+
+            if len(barcodes) == 0:
+                return "No test results to poll"
+
             response = requests.post(
                 url=settings.MEDITECH_URL,
                 headers={"Content-Type": "application/json"},
