@@ -7,6 +7,6 @@ from .models import LNCheck
 
 class LNCheckSerializer(BaseEventSerializer):
     class Meta:
-        model = TBCheck
+        model = LNCheck
         fields = "__all__"
         read_only_fields = ("id", "created_by")

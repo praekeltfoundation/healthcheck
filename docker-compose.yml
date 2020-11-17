@@ -4,7 +4,7 @@ services:
     db:
         image: "postgres"
         container_name: "db"
-        environment: 
+        environment:
             - POSTGRES_PASSWORD=django
             - POSTGRES_USER=django
             - POSTGRES_DB=healthcheck
@@ -56,4 +56,3 @@ services:
             - redis
             - db
             - django
-
