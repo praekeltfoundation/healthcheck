@@ -164,9 +164,9 @@ class SelfSwabTest(models.Model):
         }
 
     def set_result(self, result):
-        if result.upper() in ["POS", "POSITIVE"]:
+        if result.upper() in ["POS", "POSITIVE", "DETECTED"]:
             self.result = SelfSwabTest.RESULT_POSITIVE
-        elif result.upper() in ["NEG", "NEGATIVE", "NOT DET"]:
+        elif result.upper() in ["NEG", "NEGATIVE", "NOT DET", "NOT DETECTED"]:
             self.result = SelfSwabTest.RESULT_NEGATIVE
         elif result.upper() in ["INV", "INVALID"]:
             self.result = SelfSwabTest.RESULT_INVALID
