@@ -1,5 +1,4 @@
 version: '3'
-
 services:
     db:
         image: "postgres"
@@ -8,8 +7,11 @@ services:
             - POSTGRES_PASSWORD=django
             - POSTGRES_USER=django
             - POSTGRES_DB=healthcheck
+            - "POSTGRES_HOST_AUTH_METHOD=trust"
         volumes:
-            - ./dbdata:/var/lib/postgresql/data
+            - ./dbdata:/var/lib/postgresql/data:Z
+        networks:
+            - djangonetwork
     redis:
         container_name: "redis"
         image: redis:alpine
@@ -30,6 +32,8 @@ services:
         links:
             - db
             - redis
+        networks:
+            - djangonetwork
     celery:
         container_name: "celery"
         image: celery:4.4
@@ -43,6 +47,8 @@ services:
             - redis
             - db
             - django
+        networks:
+            - djangonetwork
     celery-beat:
         container_name: "celery-beat"
         image: celery:4.4
@@ -56,3 +62,8 @@ services:
             - redis
             - db
             - django
+        networks:
+            - djangonetwork
+networks:
+      djangonetwork:
+          driver: bridge
