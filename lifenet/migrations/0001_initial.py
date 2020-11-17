@@ -36,6 +36,6 @@ class Migration(migrations.Migration):
                 ('risk', models.CharField(choices=[('low', 'Low'), ('moderate', 'Moderate'), ('high', 'High')], max_length=22)),
                 ('follow_up_optin', models.BooleanField(default=False)),
             ],
-            bases=(django_prometheus.models.ExportModelOperationsMixin.<locals>.Mixin, models.Model),
+            bases=(models.Model, django_prometheus.models.ExportModelOperationsMixin('model_name')),
         ),
     ]
