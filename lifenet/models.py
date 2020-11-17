@@ -9,7 +9,7 @@ from healthcheck.utils import hash_string
 
 class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
     AGE_U18 = "<18"
-    AGE_18T40 = "18-39"
+    AGE_18T39 = "18-39"
     AGE_40T65 = "40-65"
     AGE_O65 = ">65"
     AGE_CHOICES = (
