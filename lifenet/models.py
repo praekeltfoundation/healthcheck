@@ -39,9 +39,7 @@ class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
 
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
-    msisdn = models.CharField(
-        max_length=255, db_index=True
-    )
+    msisdn = models.CharField(max_length=255, db_index=True)
     source = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=AGE_CHOICES)
     cough = models.BooleanField()

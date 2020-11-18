@@ -20,7 +20,7 @@ class LNCheckTests(TestCase):
         )
 
     def test_get_processed_data(self):
-        check = TBCheck.objects.create(
+        check = LNCheck.objects.create(
             **{
                 "msisdn": "+123",
                 "cough": False,
@@ -31,7 +31,7 @@ class LNCheckTests(TestCase):
                 "muscle_pain": True,
                 "smell": True,
                 "source": "Test",
-                "age": =LNCheck.AGE_18T39,
+                "age": LNCheck.AGE_18T39,
                 "": LNCheck.GENDER_NOT_SAY,
                 "exposure": LNCheck.EXPOSURE_NOT_SURE,
                 "risk": LNCheck.RISK_HIGH,

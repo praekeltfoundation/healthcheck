@@ -86,7 +86,7 @@ def perform_etl():
                 "risk": "STRING",
                 "tracing": "BOOLEAN",
                 "language": "STRING",
-            }
+            },
         }
     }
 
