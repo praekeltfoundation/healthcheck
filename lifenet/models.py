@@ -37,6 +37,14 @@ class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
         (RISK_HIGH, "High"),
     )
 
+    LANGUAGE_ENGLISH = "eng"
+    LANGUAGE_FRENCH = "fr"
+
+    LANGUAGE_CHOICES = (
+        (LANGUAGE_ENGLISH, "English"),
+        (LANGUAGE_FRENCH, "Français"),
+    )
+
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     msisdn = models.CharField(max_length=255, db_index=True)
@@ -54,6 +62,9 @@ class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     risk = models.CharField(max_length=22, choices=RISK_CHOICES)
     follow_up_optin = models.BooleanField(default=False)
+    language = models.CharField(
+        max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
+    )
 
     @property
     def hashed_msisdn(self):
