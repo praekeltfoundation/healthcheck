@@ -33,7 +33,7 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
             self.url,
             {
                 "msisdn": "27856454612",
-                "source": "USSD",
+                "source": "WhatsApp",
                 "age": LNCheck.AGE_18T39,
                 "cough": True,
                 "fever": True,
@@ -43,7 +43,6 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "muscle_pain": True,
                 "smell": True,
                 "exposure": "yes",
-                "tracing": True,
                 "risk": LNCheck.RISK_LOW,
                 "language": "eng",
             },
@@ -73,7 +72,7 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
             self.url,
             {
                 "msisdn": "27856454612",
-                "source": "USSD",
+                "source": "WhatsApp",
                 "age": LNCheck.AGE_18T39,
                 "cough": False,
                 "fever": False,
@@ -83,7 +82,6 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "muscle_pain": True,
                 "smell": True,
                 "exposure": "yes",
-                "tracing": True,
                 "risk": LNCheck.RISK_LOW,
                 "language": "eng",
             },
