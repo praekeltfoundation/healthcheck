@@ -51,7 +51,6 @@ class LNCheckTests(TestCase):
                 "fever": False,
                 "sore_throat": False,
                 "difficulty_breathing": False,
-                "tracing": True,
                 "muscle_pain": True,
                 "smell": True,
                 "exposure": LNCheck.EXPOSURE_NOT_SURE,

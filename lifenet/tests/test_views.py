@@ -50,7 +50,7 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         [lncheck] = LNCheck.objects.all()
         self.assertEqual(lncheck.msisdn, "27856454612")
-        self.assertEqual(lncheck.source, "USSD")
+        self.assertEqual(lncheck.source, "WhatsApp")
         self.assertEqual(lncheck.age, LNCheck.AGE_18T39)
         self.assertTrue(lncheck.cough)
         self.assertTrue(lncheck.fever)
