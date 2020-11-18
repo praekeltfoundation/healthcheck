@@ -35,10 +35,10 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "msisdn": "27856454612",
                 "source": "USSD",
                 "age": LNCheck.AGE_18T39,
-                "cough": False,
-                "fever": False,
+                "cough": True,
+                "fever": True,
                 "sore_throat": False,
-                "difficulty_breathing": False,
+                "difficulty_breathing": True,
                 "tracing": True,
                 "muscle_pain": True,
                 "smell": True,
@@ -55,8 +55,8 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(lncheck.age, LNCheck.AGE_18T39)
         self.assertTrue(lncheck.cough)
         self.assertTrue(lncheck.fever)
-        self.assertFalse(lncheck.sweat)
-        self.assertTrue(lncheck.weight)
+        self.assertFalse(lncheck.sore_throat)
+        self.assertTrue(lncheck.difficulty_breathing)
         self.assertEqual(lncheck.exposure, "yes")
         self.assertTrue(lncheck.tracing)
         self.assertEqual(lncheck.risk, LNCheck.RISK_LOW)
