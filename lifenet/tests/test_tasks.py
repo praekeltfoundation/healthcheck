@@ -41,6 +41,10 @@ class SyncToRapidproTests(TestCase):
     ):
         LNCheck.objects.create(
             **{
+                "age": LNCheck.AGE_18T39,
+                "sore_throat": False,
+                "muscle_pain": True,
+                "language": "eng",
                 "msisdn": msisdn,
                 "cough": True,
                 "fever": True,
