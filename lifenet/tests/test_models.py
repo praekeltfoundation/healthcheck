@@ -6,7 +6,16 @@ from lifenet.models import LNCheck
 class LNCheckTests(TestCase):
     def test_hashed_msisdn(self):
         check = LNCheck.objects.create(
-            **{"msisdn": "+123", "cough": False, "fever": False, "tracing": True,}
+            **{
+                "msisdn": "+123",
+                "cough": False,
+                "fever": False,
+                "sore_throat": False,
+                "difficulty_breathing": False,
+                "muscle_pain": True,
+                "smell": True,
+                "tracing": True,
+            }
         )
         self.assertEqual(
             check.hashed_msisdn, "GyReRepLLYF5Ldr6IyA1mu8VM96Et16I0TFIyDvRmK4="
