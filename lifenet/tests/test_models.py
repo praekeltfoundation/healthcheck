@@ -10,8 +10,6 @@ class LNCheckTests(TestCase):
                 "msisdn": "+123",
                 "cough": False,
                 "fever": False,
-                "sweat": False,
-                "weight": False,
                 "tracing": True,
             }
         )
@@ -32,7 +30,6 @@ class LNCheckTests(TestCase):
                 "smell": True,
                 "source": "Test",
                 "age": LNCheck.AGE_18T39,
-                "": LNCheck.GENDER_NOT_SAY,
                 "exposure": LNCheck.EXPOSURE_NOT_SURE,
                 "risk": LNCheck.RISK_HIGH,
                 "language": "eng",
