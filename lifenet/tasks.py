@@ -5,7 +5,7 @@ from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
 
 from healthcheck import utils
-from lnconnect.models import LNCheck
+from lifenet.models import LNCheck
 from userprofile.models import HealthCheckUserProfile
 
 
