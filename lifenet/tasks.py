@@ -25,7 +25,7 @@ def perform_sync_to_rapidpro():
 
             # using data__contains to hit the GIN index - userprofile__data__gin_idx
             for contact in HealthCheckUserProfile.objects.filter(
-                data__contains={"synced_to_tb_rapidpro": False}
+                data__contains={"synced_to_ln_rapidpro": False}
             ).iterator():
                 check = (
                     LNCheck.objects.filter(msisdn=contact.msisdn)
@@ -54,7 +54,7 @@ def perform_sync_to_rapidpro():
                         },
                     )
 
-                    contact.data["synced_to_lifenet_rapidpro"] = True
+                    contact.data["synced_to_ln_rapidpro"] = True
                     contact.save()
 
     return "Finished syncing contacts to Rapidpro"
@@ -63,7 +63,7 @@ def perform_sync_to_rapidpro():
 @periodic_task(run_every=crontab(minute="*/5"))
 def perform_etl():
     r = get_redis_connection()
-    if r.get("perform_etl_tb_connect"):
+    if r.get("perform_etl_ln_connect"):
         return
 
     models = {

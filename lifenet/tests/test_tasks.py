@@ -4,8 +4,8 @@ import responses
 from django.test import TestCase, override_settings
 from django.utils import timezone
 
-from tbconnect.models import TBCheck
-from tbconnect.tasks import perform_sync_to_rapidpro
+from lifenet.models import LNCheck
+from lifenet.tasks import perform_sync_to_rapidpro
 from userprofile.models import HealthCheckUserProfile
 
 
@@ -37,18 +37,18 @@ class SyncToRapidproTests(TestCase):
         optin=True,
         synced=False,
         source="WhatsApp",
-        risk=TBCheck.RISK_HIGH,
+        risk=LNCheck.RISK_HIGH,
     ):
-        TBCheck.objects.create(
+        LNCheck.objects.create(
             **{
                 "msisdn": msisdn,
                 "cough": True,
                 "fever": True,
-                "sweat": True,
-                "weight": True,
+                "smell": True,
+                "difficulty_breathing": True,
                 "tracing": True,
                 "source": source,
-                "exposure": TBCheck.EXPOSURE_YES,
+                "exposure": LNCheck.EXPOSURE_YES,
                 "completed_timestamp": self.completed_timestamp,
                 "risk": risk,
                 "follow_up_optin": optin,
@@ -58,7 +58,7 @@ class SyncToRapidproTests(TestCase):
         return HealthCheckUserProfile.objects.create(
             **{
                 "msisdn": msisdn,
-                "data": {"follow_up_optin": optin, "synced_to_tb_rapidpro": synced},
+                "data": {"follow_up_optin": optin, "synced_to_ln_rapidpro": synced},
             }
         )
 
@@ -66,7 +66,7 @@ class SyncToRapidproTests(TestCase):
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
         RAPIDPRO_TOKEN="123",
-        RAPIDPRO_TBCONNECT_FLOW="321",
+        RAPIDPRO_LIFENET_FLOW="321",
     )
     def test_sync_whatsapp(self):
         """
@@ -85,7 +85,7 @@ class SyncToRapidproTests(TestCase):
         perform_sync_to_rapidpro()
 
         profile.refresh_from_db()
-        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+        self.assertTrue(profile.data["synced_to_ln_rapidpro"])
 
         [call1, call2] = responses.calls
         body = json.loads(call1.request.body)
@@ -101,7 +101,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
-                    "exposure": TBCheck.EXPOSURE_YES,
+                    "exposure": LNCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -118,7 +118,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
-                    "exposure": TBCheck.EXPOSURE_YES,
+                    "exposure": LNCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -127,7 +127,7 @@ class SyncToRapidproTests(TestCase):
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
         RAPIDPRO_TOKEN="123",
-        RAPIDPRO_TBCONNECT_FLOW="321",
+        RAPIDPRO_LIFENET_FLOW="321",
     )
     def test_sync_sms(self):
         """
@@ -145,7 +145,7 @@ class SyncToRapidproTests(TestCase):
 
         profile.refresh_from_db()
 
-        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+        self.assertTrue(profile.data["synced_to_ln_rapidpro"])
 
         [call] = responses.calls
         body = json.loads(call.request.body)
@@ -161,7 +161,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
-                    "exposure": TBCheck.EXPOSURE_YES,
+                    "exposure": LNCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -170,13 +170,13 @@ class SyncToRapidproTests(TestCase):
     @override_settings(
         RAPIDPRO_URL="https://rp-test.com",
         RAPIDPRO_TOKEN="123",
-        RAPIDPRO_TBCONNECT_FLOW="321",
+        RAPIDPRO_LIFENET_FLOW="321",
     )
     def test_sync_low_risk(self):
         """
         Should sync low risk
         """
-        profile = self.create_profile_and_check(risk=TBCheck.RISK_LOW)
+        profile = self.create_profile_and_check(risk=LNCheck.RISK_LOW)
 
         responses.add(
             responses.POST,
@@ -188,7 +188,7 @@ class SyncToRapidproTests(TestCase):
 
         profile.refresh_from_db()
 
-        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+        self.assertTrue(profile.data["synced_to_ln_rapidpro"])
 
         [call] = responses.calls
         body = json.loads(call.request.body)
@@ -204,7 +204,7 @@ class SyncToRapidproTests(TestCase):
                     "completed_timestamp": self.completed_timestamp.strftime(
                         "%d/%m/%Y"
                     ),
-                    "exposure": TBCheck.EXPOSURE_YES,
+                    "exposure": LNCheck.EXPOSURE_YES,
                 },
             },
         )
@@ -218,4 +218,4 @@ class SyncToRapidproTests(TestCase):
 
         profile.refresh_from_db()
 
-        self.assertFalse(profile.data["synced_to_tb_rapidpro"])
+        self.assertFalse(profile.data["synced_to_ln_rapidpro"])
