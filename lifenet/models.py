@@ -26,8 +26,8 @@ class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
         RISK_HIGH = "high", _("High")
 
     class Language(models.TextChoices):
-    LANGUAGE_ENGLISH = "eng", _("English")
-    LANGUAGE_FRENCH = "fr", _("Français")
+        LANGUAGE_ENGLISH = "eng", _("English")
+        LANGUAGE_FRENCH = "fr", _("Français")
 
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
@@ -40,11 +40,11 @@ class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
     difficulty_breathing = models.BooleanField()
     muscle_pain = models.BooleanField()
     smell = models.BooleanField()
-    exposure = models.CharField(max_length=9, Exposure.choices)
+    exposure = models.CharField(max_length=9, choices=Exposure.choices)
     tracing = models.BooleanField(help_text="Whether the Lifenet can contact the user")
     completed_timestamp = models.DateTimeField(default=timezone.now)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
-    risk = models.CharField(max_length=22, Risk.choices)
+    risk = models.CharField(max_length=22, choices=Risk.choices)
     follow_up_optin = models.BooleanField(default=False)
     language = models.CharField(
         max_length=3, choices=Language.choices, null=True, blank=True
