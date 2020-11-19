@@ -6,13 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('lifenet', '0002_lncheck_language'),
+        ("lifenet", "0002_lncheck_language"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='lncheck',
-            name='exposure',
-            field=models.CharField(choices=[('yes', 'Yes'), ('no', 'No'), ('not_sure', 'Not Sure')], max_length=9),
+            model_name="lncheck",
+            name="exposure",
+            field=models.CharField(
+                choices=[("yes", "Yes"), ("no", "No"), ("not_sure", "Not Sure")],
+                max_length=9,
+            ),
         ),
     ]
