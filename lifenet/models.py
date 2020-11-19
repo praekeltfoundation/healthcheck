@@ -2,68 +2,52 @@ import uuid
 
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 from django_prometheus.models import ExportModelOperationsMixin
 
 from healthcheck.utils import hash_string
 
 
 class LNCheck(ExportModelOperationsMixin("ln-check"), models.Model):
-    AGE_U18 = "<18"
-    AGE_18T39 = "18-39"
-    AGE_40T65 = "40-65"
-    AGE_O65 = ">65"
-    AGE_CHOICES = (
-        (AGE_U18, AGE_U18),
-        (AGE_18T39, AGE_18T39),
-        (AGE_40T65, AGE_40T65),
-        (AGE_O65, AGE_O65),
-    )
+    class Age(models.TextChoices):
+        AGE_U18 = "<18", _("<18")
+        AGE_18T39 = "18-39", _("18-39")
+        AGE_40T65 = "40-65", _("40-65")
+        AGE_O65 = ">65", _(">65")
 
-    EXPOSURE_YES = "yes"
-    EXPOSURE_NO = "no"
-    EXPOSURE_NOT_SURE = "not_sure"
-    EXPOSURE_CHOICES = (
-        (EXPOSURE_YES, "Yes"),
-        (EXPOSURE_NO, "No"),
-        (EXPOSURE_NOT_SURE, "Not sure"),
-    )
+    class Exposure(models.TextChoices):
+        EXPOSURE_YES = "yes", _("Yes")
+        EXPOSURE_NO = "no", _("No")
+        EXPOSURE_NOT_SURE = "not_sure", _("Not Sure")
 
-    RISK_LOW = "low"
-    RISK_MODERATE = "moderate"
-    RISK_HIGH = "high"
-    RISK_CHOICES = (
-        (RISK_LOW, "Low"),
-        (RISK_MODERATE, "Moderate"),
-        (RISK_HIGH, "High"),
-    )
+    class Risk(models.TextChoices):
+        RISK_LOW = "low", _("Low")
+        RISK_MODERATE = "moderate", _("Moderate")
+        RISK_HIGH = "high", _("High")
 
-    LANGUAGE_ENGLISH = "eng"
-    LANGUAGE_FRENCH = "fr"
-
-    LANGUAGE_CHOICES = (
-        (LANGUAGE_ENGLISH, "English"),
-        (LANGUAGE_FRENCH, "Français"),
-    )
+    class Language(models.TextChoices):
+    LANGUAGE_ENGLISH = "eng", _("English")
+    LANGUAGE_FRENCH = "fr", _("Français")
 
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     msisdn = models.CharField(max_length=255, db_index=True)
     source = models.CharField(max_length=255)
-    age = models.CharField(max_length=5, choices=AGE_CHOICES)
+    age = models.CharField(max_length=5, choices=Age.choices)
     cough = models.BooleanField()
     fever = models.BooleanField()
     sore_throat = models.BooleanField()
     difficulty_breathing = models.BooleanField()
     muscle_pain = models.BooleanField()
     smell = models.BooleanField()
-    exposure = models.CharField(max_length=9, choices=EXPOSURE_CHOICES)
+    exposure = models.CharField(max_length=9, Exposure.choices)
     tracing = models.BooleanField(help_text="Whether the Lifenet can contact the user")
     completed_timestamp = models.DateTimeField(default=timezone.now)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
-    risk = models.CharField(max_length=22, choices=RISK_CHOICES)
+    risk = models.CharField(max_length=22, Risk.choices)
     follow_up_optin = models.BooleanField(default=False)
     language = models.CharField(
-        max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
+        max_length=3, choices=Language.choices, null=True, blank=True
     )
 
     @property
