@@ -51,14 +51,14 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
         [lncheck] = LNCheck.objects.all()
         self.assertEqual(lncheck.msisdn, "27856454612")
         self.assertEqual(lncheck.source, "WhatsApp")
-        self.assertEqual(lncheck.age, LNCheck.AGE_18T39)
+        self.assertEqual(lncheck.age, LNCheck.Age.AGE_18T39)
         self.assertTrue(lncheck.cough)
         self.assertTrue(lncheck.fever)
         self.assertFalse(lncheck.sore_throat)
         self.assertTrue(lncheck.difficulty_breathing)
         self.assertEqual(lncheck.exposure, "yes")
         self.assertTrue(lncheck.tracing)
-        self.assertEqual(lncheck.risk, LNCheck.RISK_LOW)
+        self.assertEqual(lncheck.risk, LNCheck.Risk.RISK_LOW)
         self.assertEqual(lncheck.language, "eng")
 
     def test_creates_user_profile(self):
