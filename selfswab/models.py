@@ -10,7 +10,7 @@ from userprofile.validators import za_phone_number
 class SelfSwabRegistration(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255)
-    employee_number = models.CharField(max_length=10, blank=True, default="")
+    employee_number = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=True, default="")
     first_name = models.CharField(max_length=255, blank=False)
     last_name = models.CharField(max_length=255, blank=False)
