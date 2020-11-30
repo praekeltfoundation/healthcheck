@@ -37,7 +37,7 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
                 "age": SelfSwabScreen.AGE_18T40,
                 "gender": SelfSwabScreen.GENDER_FEMALE,
                 "pre_existing_condition": "",
-                "employee_number": "",
+                "employee_number": "20200117/04",
                 "cough": True,
                 "fever": True,
                 "shortness_of_breath": False,

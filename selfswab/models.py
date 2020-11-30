@@ -56,7 +56,7 @@ class SelfSwabScreen(models.Model):
     facility = models.CharField(max_length=255, blank=False)
     risk_type = models.CharField(max_length=10, choices=RISK_TYPES)
     occupation = models.CharField(max_length=255, blank=True, default="")
-    employee_number = models.CharField(max_length=10, blank=True, default="")
+    employee_number = models.CharField(max_length=255, blank=True, default="")
     pre_existing_condition = models.CharField(max_length=255, blank=True, default="")
     cough = models.BooleanField()
     fever = models.BooleanField()
