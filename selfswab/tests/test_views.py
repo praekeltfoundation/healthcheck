@@ -37,7 +37,7 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
                 "age": SelfSwabScreen.AGE_18T40,
                 "gender": SelfSwabScreen.GENDER_FEMALE,
                 "pre_existing_condition": "",
-                "employee_number": "",
+                "employee_number": "20123123117/04",
                 "cough": True,
                 "fever": True,
                 "shortness_of_breath": False,
@@ -70,7 +70,7 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
         self.assertTrue(selfswabscreen.sore_throat)
         self.assertFalse(selfswabscreen.additional_symptoms)
         self.assertEqual(selfswabscreen.occupation, "nurse")
-        self.assertEqual(selfswabscreen.employee_number, "")
+        self.assertEqual(selfswabscreen.employee_number, "20123123117/04")
 
 
 class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
