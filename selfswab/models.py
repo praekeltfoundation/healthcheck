@@ -65,6 +65,7 @@ class SelfSwabScreen(models.Model):
     loss_of_taste_smell = models.BooleanField()
     sore_throat = models.BooleanField()
     additional_symptoms = models.BooleanField()
+    should_sync = models.BooleanField(default=True)
     timestamp = models.DateTimeField(default=timezone.now)
 
     @property
@@ -133,6 +134,7 @@ class SelfSwabTest(models.Model):
     collection_timestamp = models.DateTimeField(null=True)
     received_timestamp = models.DateTimeField(null=True)
     authorized_timestamp = models.DateTimeField(null=True)
+    should_sync = models.BooleanField(default=True)
 
     @property
     def hashed_msisdn(self):

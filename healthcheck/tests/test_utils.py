@@ -3,6 +3,7 @@ from unittest.mock import patch, Mock
 
 from healthcheck import utils
 from tbconnect.models import TBTest
+from selfswab.models import SelfSwabTest
 
 
 class UtilsTests(TestCase):
@@ -68,4 +69,59 @@ class UtilsTests(TestCase):
             "tests",
             models["tests"]["fields"],
             [test.get_processed_data()],
+        )
+
+    @patch("healthcheck.utils.upload_to_bigquery")
+    @patch("healthcheck.utils.get_latest_bigquery_timestamp")
+    @patch("healthcheck.utils.get_bigquery_client")
+    def test_sync_models_to_bigquery_with_filter(
+        self,
+        mock_get_bigquery_client,
+        mock_get_latest_bigquery_timestamp,
+        mock_upload_to_bigquery,
+    ):
+        SelfSwabTest.objects.create(
+            **{
+                "barcode": "111",
+                "msisdn": "+123",
+                "contact_id": "test1",
+                "result": SelfSwabTest.RESULT_PENDING,
+                "should_sync": False,
+            }
+        )
+        test2 = SelfSwabTest.objects.create(
+            **{
+                "barcode": "222",
+                "msisdn": "+124",
+                "contact_id": "test2",
+                "result": SelfSwabTest.RESULT_PENDING,
+            }
+        )
+
+        dataset = "project123.selfswab"
+
+        fake_bigquery_client = Mock()
+        mock_get_bigquery_client.return_value = fake_bigquery_client
+        mock_get_latest_bigquery_timestamp.return_value = None
+
+        models = {
+            "tests": {
+                "model": SelfSwabTest,
+                "field": "updated_at",
+                "fields": {"id": "STRING"},
+                "filter": {"key": "should_sync", "value": True},
+            },
+        }
+
+        utils.sync_models_to_bigquery("test_credentials.json", dataset, models)
+
+        mock_get_latest_bigquery_timestamp.assert_called_with(
+            fake_bigquery_client, dataset, "tests", "updated_at"
+        )
+        mock_upload_to_bigquery.assert_called_with(
+            fake_bigquery_client,
+            dataset,
+            "tests",
+            models["tests"]["fields"],
+            [test2.get_processed_data()],
         )
