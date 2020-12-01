@@ -63,6 +63,11 @@ def sync_models_to_bigquery(key_path, dataset, models):
             else:
                 records = details["model"].objects.all()
 
+            if "filter" in details:
+                records = records.filter(
+                    **{details["filter"]["key"]: details["filter"]["value"]}
+                )
+
             if records:
                 data = get_processed_records(records)
                 upload_to_bigquery(

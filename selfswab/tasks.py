@@ -93,6 +93,7 @@ def perform_etl():
         "screens": {
             "model": SelfSwabScreen,
             "field": "timestamp",
+            "filter": {"key": "should_sync", "value": True},
             "fields": {
                 "id": "STRING",
                 "contact_id": "STRING",
@@ -117,6 +118,7 @@ def perform_etl():
         "tests": {
             "model": SelfSwabTest,
             "field": "updated_at",
+            "filter": {"key": "should_sync", "value": True},
             "fields": {
                 "id": "STRING",
                 "contact_id": "STRING",

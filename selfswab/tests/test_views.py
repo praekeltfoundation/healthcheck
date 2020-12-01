@@ -71,6 +71,7 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
         self.assertFalse(selfswabscreen.additional_symptoms)
         self.assertEqual(selfswabscreen.occupation, "nurse")
         self.assertEqual(selfswabscreen.employee_number, "20123123117/04")
+        self.assertTrue(selfswabscreen.should_sync)
 
 
 class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
