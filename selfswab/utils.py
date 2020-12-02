@@ -20,6 +20,6 @@ def get_next_unique_contact_id():
 
 
 def is_barcode_format_valid(barcode):
-    matches = re.findall(r"^(CP159600)|(00[1-9]|0[1-9][1-9]|100)$", barcode)
-    qa_matches = re.findall(r"^(CP999T99)|(00[1-9]|0[1-9][1-9]|100)$", barcode)
+    matches = re.findall(r"^(CP159600)|(00[0-9]|0[0-9][0-9]|100)$", barcode)
+    qa_matches = re.findall(r"^(CP999T99)|(00[0-9]|0[0-9][0-9]|100)$", barcode)
     return len(matches) == 2 or len(qa_matches) == 2
