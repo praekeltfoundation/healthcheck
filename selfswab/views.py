@@ -1,4 +1,4 @@
-from rest_framework.mixins import CreateModelMixin
+from rest_framework.mixins import CreateModelMixin, UpdateModelMixin
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import GenericViewSet
 
@@ -22,7 +22,7 @@ class SelfSwabTestViewSet(GenericViewSet, CreateModelMixin):
     permission_classes = (DjangoModelPermissions,)
 
 
-class SelfSwabRegistrationViewSet(GenericViewSet, CreateModelMixin):
+class SelfSwabRegistrationViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
     queryset = SelfSwabRegistration.objects.all()
     serializer_class = SelfSwabRegistrationSerializer
     permission_classes = (DjangoModelPermissions,)

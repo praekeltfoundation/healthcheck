@@ -174,7 +174,7 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
     url = reverse("selfswabregistration-list")
 
     def create_registration(self, contact_id):
-        SelfSwabRegistration.objects.create(
+        return SelfSwabRegistration.objects.create(
             **{"contact_id": contact_id, "employee_number": "test"}
         )
 
@@ -227,6 +227,36 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(registration.last_name, "last")
         self.assertEqual(registration.facility, "JHB Gen")
         self.assertEqual(registration.occupation, "doctor")
+
+    def test_successful_patch_request(self):
+        """
+        Should create a new object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(
+            Permission.objects.get(codename="change_selfswabregistration")
+        )
+        self.client.force_authenticate(user)
+
+        registration = self.create_registration("CV0100H")
+
+        url = reverse("selfswabregistration-detail", args=(registration.id,))
+
+        response = self.client.patch(
+            url,
+            {
+                "age": SelfSwabRegistration.AGE_18T40,
+                "gender": SelfSwabRegistration.GENDER_OTHER,
+            },
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(response.json()["contact_id"], "CV0100H")
+
+        [registration] = SelfSwabRegistration.objects.all()
+        self.assertEqual(registration.age, SelfSwabRegistration.AGE_18T40)
+        self.assertEqual(registration.gender, SelfSwabRegistration.GENDER_OTHER)
 
     def test_request_with_contact_id(self):
         """

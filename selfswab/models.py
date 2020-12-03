@@ -7,22 +7,7 @@ from healthcheck.utils import hash_string
 from userprofile.validators import za_phone_number
 
 
-class SelfSwabRegistration(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    created_by = models.CharField(max_length=255)
-    employee_number = models.CharField(max_length=255, blank=True, default="")
-    contact_id = models.CharField(max_length=255, blank=True, default="")
-    first_name = models.CharField(max_length=255, blank=False)
-    last_name = models.CharField(max_length=255, blank=False)
-    facility = models.CharField(max_length=255, blank=False)
-    occupation = models.CharField(max_length=255, blank=True, default="")
-
-
-class SelfSwabScreen(models.Model):
-    LOW_RISK = "Low"
-    HIGH_RISK = "High"
-    RISK_TYPES = ((LOW_RISK, "Low"), (HIGH_RISK, "High"))
-
+class BaseModel:
     AGE_U18 = "<18"
     AGE_18T40 = "18-39"
     AGE_40T65 = "40-65"
@@ -45,14 +30,54 @@ class SelfSwabScreen(models.Model):
         (GENDER_NOT_SAY, "not_say"),
     )
 
+
+class SelfSwabRegistration(models.Model, BaseModel):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    created_by = models.CharField(max_length=255)
+    employee_number = models.CharField(max_length=255, blank=True, default="")
+    contact_id = models.CharField(max_length=255, blank=True, default="")
+    first_name = models.CharField(max_length=255, blank=False)
+    last_name = models.CharField(max_length=255, blank=False)
+    facility = models.CharField(max_length=255, blank=False)
+    occupation = models.CharField(max_length=255, blank=True, default="")
+    age = models.CharField(max_length=5, choices=BaseModel.AGE_CHOICES, null=True)
+    gender = models.CharField(
+        max_length=10, choices=BaseModel.GENDER_CHOICES, null=True
+    )
+    timestamp = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True, db_index=True)
+    should_sync = models.BooleanField(default=True)
+
+    @property
+    def hashed_employee_number(self):
+        return hash_string(self.employee_number)
+
+    def get_processed_data(self):
+        return {
+            "id": str(self.id),
+            "contact_id": self.contact_id,
+            "employee_number": self.hashed_employee_number,
+            "facility": self.facility,
+            "occupation": self.occupation,
+            "age": self.age,
+            "gender": self.gender,
+            "timestamp": self.timestamp.isoformat(),
+        }
+
+
+class SelfSwabScreen(models.Model, BaseModel):
+    LOW_RISK = "Low"
+    HIGH_RISK = "High"
+    RISK_TYPES = ((LOW_RISK, "Low"), (HIGH_RISK, "High"))
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=False)
     msisdn = models.CharField(
         max_length=255, validators=[za_phone_number], db_index=True
     )
-    age = models.CharField(max_length=5, choices=AGE_CHOICES)
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
+    age = models.CharField(max_length=5, choices=BaseModel.AGE_CHOICES)
+    gender = models.CharField(max_length=10, choices=BaseModel.GENDER_CHOICES)
     facility = models.CharField(max_length=255, blank=False)
     risk_type = models.CharField(max_length=10, choices=RISK_TYPES)
     occupation = models.CharField(max_length=255, blank=True, default="")
