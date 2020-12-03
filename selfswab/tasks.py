@@ -5,7 +5,7 @@ from django.conf import settings
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
 import requests
-from selfswab.models import SelfSwabScreen, SelfSwabTest
+from selfswab.models import SelfSwabRegistration, SelfSwabScreen, SelfSwabTest
 from healthcheck import utils
 
 
@@ -90,6 +90,21 @@ def perform_etl():
         return
 
     models = {
+        "registrations": {
+            "model": SelfSwabRegistration,
+            "field": "updated_at",
+            "filter": {"key": "should_sync", "value": True},
+            "fields": {
+                "id": "STRING",
+                "contact_id": "STRING",
+                "employee_number": "STRING",
+                "facility": "STRING",
+                "occupation": "STRING",
+                "age": "STRING",
+                "gender": "STRING",
+                "timestamp": "TIMESTAMP",
+            },
+        },
         "screens": {
             "model": SelfSwabScreen,
             "field": "timestamp",
