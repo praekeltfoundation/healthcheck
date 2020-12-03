@@ -31,6 +31,9 @@ class Migration(migrations.Migration):
     def update_rapidpro_contacts_registration_id(apps, schema_editor):
         SelfSwabRegistration = apps.get_model("selfswab", "SelfSwabRegistration")
 
+        if not settings.RAPIDPRO_URL or not settings.SELFSWAB_RAPIDPRO_TOKEN:
+            return
+
         rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.SELFSWAB_RAPIDPRO_TOKEN)
 
         for contact_batch in rapidpro.get_contacts().iterfetches(
