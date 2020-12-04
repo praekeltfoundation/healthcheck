@@ -34,8 +34,8 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
                 "msisdn": "27856454612",
                 "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
                 "risk_type": SelfSwabScreen.HIGH_RISK,
-                "age": SelfSwabScreen.AGE_18T40,
-                "gender": SelfSwabScreen.GENDER_FEMALE,
+                "age": SelfSwabScreen.Age.FROM_18_TO_40,
+                "gender": SelfSwabScreen.Gender.FEMALE,
                 "pre_existing_condition": "",
                 "employee_number": "20123123117/04",
                 "cough": True,
@@ -54,8 +54,8 @@ class SelfSwabScreenViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         [selfswabscreen] = SelfSwabScreen.objects.all()
         self.assertEqual(selfswabscreen.msisdn, "27856454612")
-        self.assertEqual(selfswabscreen.age, SelfSwabScreen.AGE_18T40)
-        self.assertEqual(selfswabscreen.gender, SelfSwabScreen.GENDER_FEMALE)
+        self.assertEqual(selfswabscreen.age, SelfSwabScreen.Age.FROM_18_TO_40)
+        self.assertEqual(selfswabscreen.gender, SelfSwabScreen.Gender.FEMALE)
         self.assertEqual(selfswabscreen.facility, "JHB Gen")
         self.assertEqual(
             selfswabscreen.contact_id, "9e12d04c-af25-40b6-aa4f-57c72e8e3f91"
@@ -245,8 +245,8 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         response = self.client.patch(
             url,
             {
-                "age": SelfSwabRegistration.AGE_18T40,
-                "gender": SelfSwabRegistration.GENDER_OTHER,
+                "age": SelfSwabRegistration.Age.FROM_18_TO_40,
+                "gender": SelfSwabRegistration.Gender.FEMALE,
                 "opted_out": True,
                 "optout_reason": SelfSwabRegistration.OptOutReason.TESTED_POSITIVE,
                 "optout_timestamp": "2020-01-11T08:30:24.922024+00:00",
@@ -258,8 +258,8 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.json()["contact_id"], "CV0100H")
 
         [registration] = SelfSwabRegistration.objects.all()
-        self.assertEqual(registration.age, SelfSwabRegistration.AGE_18T40)
-        self.assertEqual(registration.gender, SelfSwabRegistration.GENDER_OTHER)
+        self.assertEqual(registration.age, SelfSwabRegistration.Age.FROM_18_TO_40)
+        self.assertEqual(registration.gender, SelfSwabRegistration.Gender.FEMALE)
         self.assertTrue(registration.opted_out)
         self.assertEqual(
             registration.optout_reason,
