@@ -8,30 +8,31 @@ from userprofile.validators import za_phone_number
 
 
 class BaseModel:
-    AGE_U18 = "<18"
-    AGE_18T40 = "18-39"
-    AGE_40T65 = "40-65"
-    AGE_O65 = ">65"
-    AGE_CHOICES = (
-        (AGE_U18, AGE_U18),
-        (AGE_18T40, AGE_18T40),
-        (AGE_40T65, AGE_40T65),
-        (AGE_O65, AGE_O65),
-    )
+    class Age(models.TextChoices):
+        UNDER_18 = "<18", "<18"
+        FROM_18_TO_40 = "18-39", "18-39"
+        FROM_40_TO_65 = "40-65", "40-65"
+        OVER_65 = ">65", ">65"
 
-    GENDER_MALE = "Male"
-    GENDER_FEMALE = "Female"
-    GENDER_OTHER = "Other"
-    GENDER_NOT_SAY = "not_say"
-    GENDER_CHOICES = (
-        (GENDER_MALE, "Male"),
-        (GENDER_FEMALE, "Female"),
-        (GENDER_OTHER, "Other"),
-        (GENDER_NOT_SAY, "not_say"),
-    )
+    class Gender(models.TextChoices):
+        MALE = "Male", "Male"
+        FEMALE = "Female", "Female"
+        OTHER = "Other", "Other"
+        NOT_SAY = "not_say", "not_say"
 
 
 class SelfSwabRegistration(models.Model, BaseModel):
+    class OptOutReason(models.TextChoices):
+        REMINDERS = (
+            "reminders",
+            "I no longer want to receive weekly screening reminders",
+        )
+        TESTED_POSITIVE = (
+            "tested_positive",
+            "I have tested positive for COVID-19, and so can no longer be part of the study",
+        )
+        OTHER = "other", "Other"
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255)
     employee_number = models.CharField(max_length=255, blank=True, default="")
@@ -40,10 +41,15 @@ class SelfSwabRegistration(models.Model, BaseModel):
     last_name = models.CharField(max_length=255, blank=False)
     facility = models.CharField(max_length=255, blank=False)
     occupation = models.CharField(max_length=255, blank=True, default="")
-    age = models.CharField(max_length=5, choices=BaseModel.AGE_CHOICES, null=True)
+    age = models.CharField(max_length=5, choices=BaseModel.Age.choices, null=True)
     gender = models.CharField(
-        max_length=10, choices=BaseModel.GENDER_CHOICES, null=True
+        max_length=10, choices=BaseModel.Gender.choices, null=True
     )
+    opted_out = models.BooleanField(default=False)
+    optout_reason = models.CharField(
+        max_length=15, choices=OptOutReason.choices, null=True
+    )
+    optout_timestamp = models.DateTimeField(null=True)
     timestamp = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True, db_index=True)
     should_sync = models.BooleanField(default=True)
@@ -61,6 +67,9 @@ class SelfSwabRegistration(models.Model, BaseModel):
             "occupation": self.occupation,
             "age": self.age,
             "gender": self.gender,
+            "opted_out": self.opted_out,
+            "optout_reason": self.opted_out_reason,
+            "optout_timestamp": self.optout_timestamp.isoformat(),
             "timestamp": self.timestamp.isoformat(),
         }
 
@@ -76,8 +85,8 @@ class SelfSwabScreen(models.Model, BaseModel):
     msisdn = models.CharField(
         max_length=255, validators=[za_phone_number], db_index=True
     )
-    age = models.CharField(max_length=5, choices=BaseModel.AGE_CHOICES)
-    gender = models.CharField(max_length=10, choices=BaseModel.GENDER_CHOICES)
+    age = models.CharField(max_length=5, choices=BaseModel.Age.choices)
+    gender = models.CharField(max_length=10, choices=BaseModel.Gender.choices)
     facility = models.CharField(max_length=255, blank=False)
     risk_type = models.CharField(max_length=10, choices=RISK_TYPES)
     occupation = models.CharField(max_length=255, blank=True, default="")
