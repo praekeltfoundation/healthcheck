@@ -32,6 +32,17 @@ class BaseModel:
 
 
 class SelfSwabRegistration(models.Model, BaseModel):
+    class OptOutReason(models.TextChoices):
+        REMINDERS = (
+            "reminders",
+            "I no longer want to receive weekly screening reminders",
+        )
+        TESTED_POSITIVE = (
+            "tested_positive",
+            "I have tested positive for COVID-19, and so can no longer be part of the study",
+        )
+        OTHER = "other", "Other"
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255)
     employee_number = models.CharField(max_length=255, blank=True, default="")
@@ -44,6 +55,11 @@ class SelfSwabRegistration(models.Model, BaseModel):
     gender = models.CharField(
         max_length=10, choices=BaseModel.GENDER_CHOICES, null=True
     )
+    opted_out = models.BooleanField(default=False)
+    optout_reason = models.CharField(
+        max_length=15, choices=OptOutReason.choices, null=True
+    )
+    optout_timestamp = models.DateTimeField(null=True)
     timestamp = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True, db_index=True)
     should_sync = models.BooleanField(default=True)

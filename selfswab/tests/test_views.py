@@ -247,6 +247,9 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
             {
                 "age": SelfSwabRegistration.AGE_18T40,
                 "gender": SelfSwabRegistration.GENDER_OTHER,
+                "opted_out": True,
+                "optout_reason": SelfSwabRegistration.OptOutReason.TESTED_POSITIVE,
+                "optout_timestamp": "2020-01-11T08:30:24.922024+00:00",
             },
         )
 
@@ -257,6 +260,15 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         [registration] = SelfSwabRegistration.objects.all()
         self.assertEqual(registration.age, SelfSwabRegistration.AGE_18T40)
         self.assertEqual(registration.gender, SelfSwabRegistration.GENDER_OTHER)
+        self.assertTrue(registration.opted_out)
+        self.assertEqual(
+            registration.optout_reason,
+            SelfSwabRegistration.OptOutReason.TESTED_POSITIVE,
+        )
+        self.assertEqual(
+            registration.optout_timestamp.isoformat(),
+            "2020-01-11T08:30:24.922024+00:00",
+        )
 
     def test_request_with_contact_id(self):
         """
