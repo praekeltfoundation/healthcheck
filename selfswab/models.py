@@ -68,10 +68,10 @@ class SelfSwabRegistration(models.Model, BaseModel):
             "age": self.age,
             "gender": self.gender,
             "opted_out": self.opted_out,
-            "optout_reason": self.opted_out_reason,
+            "optout_reason": self.optout_reason,
             "optout_timestamp": self.optout_timestamp.isoformat(),
             "timestamp": self.timestamp.isoformat(),
-            "updated_at": self.timestamp.isoformat(),
+            "updated_at": self.updated_at.isoformat(),
         }
 
 
