@@ -106,6 +106,7 @@ def perform_etl():
                 "optout_reason": "STRING",
                 "optout_timestamp": "TIMESTAMP",
                 "timestamp": "TIMESTAMP",
+                "updated_at": "TIMESTAMP",
             },
         },
         "screens": {
