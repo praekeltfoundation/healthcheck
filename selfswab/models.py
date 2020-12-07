@@ -59,6 +59,10 @@ class SelfSwabRegistration(models.Model, BaseModel):
         return hash_string(self.employee_number)
 
     def get_processed_data(self):
+        optout_timestamp = None
+        if self.optout_timestamp:
+            optout_timestamp = self.optout_timestamp.isoformat()
+
         return {
             "id": str(self.id),
             "contact_id": self.contact_id,
@@ -69,7 +73,7 @@ class SelfSwabRegistration(models.Model, BaseModel):
             "gender": self.gender,
             "opted_out": self.opted_out,
             "optout_reason": self.optout_reason,
-            "optout_timestamp": self.optout_timestamp.isoformat(),
+            "optout_timestamp": optout_timestamp,
             "timestamp": self.timestamp.isoformat(),
             "updated_at": self.updated_at.isoformat(),
         }
