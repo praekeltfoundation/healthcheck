@@ -139,33 +139,23 @@ class SelfSwabScreen(models.Model, BaseModel):
 
 
 class SelfSwabTest(models.Model):
-    RESULT_PENDING = "Pending"
-    RESULT_POSITIVE = "Positive"
-    RESULT_NEGATIVE = "Negative"
-    RESULT_REJECTED = "Rejected"
-    RESULT_INVALID = "Invalid"
-    RESULT_EQUIVOCAL = "Equivocal"
-    RESULT_INCONCLUSIVE = "Inconclusive"
-    RESULT_INDETERMINATE = "Indeterminate"
-    RESULT_ERROR = "Error"
-    RESULT_TYPES = (
-        (RESULT_PENDING, "Pending"),
-        (RESULT_POSITIVE, "Positive"),
-        (RESULT_NEGATIVE, "Negative"),
-        (RESULT_REJECTED, "Rejected"),
-        (RESULT_INVALID, "Invalid"),
-        (RESULT_EQUIVOCAL, "Equivocal"),
-        (RESULT_INCONCLUSIVE, "Inconclusive"),
-        (RESULT_INDETERMINATE, "Indeterminate"),
-        (RESULT_ERROR, "Error"),
-    )
+    class Result(models.TextChoices):
+        PENDING = "Pending", "Pending"
+        POSITIVE = "Positive", "Positive"
+        NEGATIVE = "Negative", "Negative"
+        REJECTED = "Rejected", "Rejected"
+        INVALID = "Invalid", "Invalid"
+        EQUIVOCAL = "Equivocal", "Equivocal"
+        INCONCLUSIVE = "Inconclusive", "Inconclusive"
+        INDETERMINATE = "Indeterminate", "Indeterminate"
+        ERROR = "Error", "Error"
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     created_by = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=False)
     msisdn = models.CharField(max_length=255, validators=[za_phone_number])
     result = models.CharField(
-        max_length=100, choices=RESULT_TYPES, default=RESULT_PENDING
+        max_length=100, choices=Result.choices, default=Result.PENDING
     )
     barcode = models.CharField(max_length=255, blank=False, unique=True)
     timestamp = models.DateTimeField(default=timezone.now)
@@ -206,18 +196,18 @@ class SelfSwabTest(models.Model):
 
     def set_result(self, result):
         if result.upper() in ["POS", "POSITIVE", "DETECTED"]:
-            self.result = SelfSwabTest.RESULT_POSITIVE
+            self.result = SelfSwabTest.Result.POSITIVE
         elif result.upper() in ["NEG", "NEGATIVE", "NOT DET", "NOT DETECTED"]:
-            self.result = SelfSwabTest.RESULT_NEGATIVE
+            self.result = SelfSwabTest.Result.NEGATIVE
         elif result.upper() in ["INV", "INVALID"]:
-            self.result = SelfSwabTest.RESULT_INVALID
+            self.result = SelfSwabTest.Result.INVALID
         elif result.upper() in ["REJECTED", "REJ"]:
-            self.result = SelfSwabTest.RESULT_REJECTED
+            self.result = SelfSwabTest.Result.REJECTED
         elif result.upper() in ["EQV", "EQUIVOCAL"]:
-            self.result = SelfSwabTest.RESULT_EQUIVOCAL
+            self.result = SelfSwabTest.Result.EQUIVOCAL
         elif result.upper() in ["INC", "INCON", "INCONCLUSIVE"]:
-            self.result = SelfSwabTest.RESULT_INCONCLUSIVE
+            self.result = SelfSwabTest.Result.INCONCLUSIVE
         elif result.upper() in ["INDETERMINATE", "IND"]:
-            self.result = SelfSwabTest.RESULT_INDETERMINATE
+            self.result = SelfSwabTest.Result.INDETERMINATE
         else:
-            self.result = SelfSwabTest.RESULT_ERROR
+            self.result = SelfSwabTest.Result.ERROR

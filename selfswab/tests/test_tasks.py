@@ -1,7 +1,9 @@
 import json
 import uuid
 
+from datetime import timedelta
 import responses
+from django.conf import settings
 from django.test import TestCase, override_settings
 from django.utils import timezone
 from selfswab.models import SelfSwabTest
@@ -29,7 +31,11 @@ class PollMeditechForResults(TestCase):
         "extra": {"result": "Negative", "updated_at": updated_at.strftime("%d/%m/%Y")},
     }
 
-    def create_selfswab_test(self, msisdn, barcode, result=SelfSwabTest.RESULT_PENDING):
+    def create_selfswab_test(
+        self, msisdn, barcode, result=SelfSwabTest.Result.PENDING, timestamp=None
+    ):
+        if not timestamp:
+            timestamp = self.updated_at
         return SelfSwabTest.objects.create(
             **{
                 "id": uuid.uuid4().hex,
@@ -37,7 +43,7 @@ class PollMeditechForResults(TestCase):
                 "msisdn": msisdn,
                 "result": result,
                 "barcode": barcode,
-                "timestamp": self.updated_at,
+                "timestamp": timestamp,
             }
         )
 
@@ -58,7 +64,7 @@ class PollMeditechForResults(TestCase):
         test1 = self.create_selfswab_test("27856454612", "12345678")
         test2 = self.create_selfswab_test("27895671234", "87654321")
         test3 = self.create_selfswab_test(
-            "27890001234", "12341234", SelfSwabTest.RESULT_POSITIVE
+            "27890001234", "12341234", SelfSwabTest.Result.POSITIVE
         )
 
         responses.add(
@@ -110,17 +116,17 @@ class PollMeditechForResults(TestCase):
         test2.refresh_from_db()
         test3.refresh_from_db()
 
-        self.assertEqual(test1.result, SelfSwabTest.RESULT_PENDING)
+        self.assertEqual(test1.result, SelfSwabTest.Result.PENDING)
         self.assertIsNone(test1.collection_timestamp)
         self.assertIsNone(test1.received_timestamp)
         self.assertIsNone(test1.authorized_timestamp)
 
-        self.assertEqual(test2.result, SelfSwabTest.RESULT_NEGATIVE)
+        self.assertEqual(test2.result, SelfSwabTest.Result.NEGATIVE)
         self.assertEqual(test2.collection_timestamp.isoformat(), self.test_timestamp)
         self.assertEqual(test2.received_timestamp.isoformat(), self.test_timestamp)
         self.assertEqual(test2.authorized_timestamp.isoformat(), self.test_timestamp)
 
-        self.assertEqual(test3.result, SelfSwabTest.RESULT_POSITIVE)
+        self.assertEqual(test3.result, SelfSwabTest.Result.POSITIVE)
         self.assertIsNone(test3.collection_timestamp)
         self.assertIsNone(test3.received_timestamp)
         self.assertIsNone(test3.authorized_timestamp)
@@ -176,7 +182,12 @@ class PollMeditechForResults(TestCase):
         """
         Should handle an error response from the meditech api
         """
-        self.create_selfswab_test("27856454612", "12345678")
+        self.create_selfswab_test(
+            "27856454612",
+            "12345678",
+            timestamp=self.updated_at
+            + timedelta(hours=settings.SELFSWAB_RETRY_HOURS + 1),
+        )
 
         responses.add(
             responses.POST,
@@ -222,12 +233,87 @@ class PollMeditechForResults(TestCase):
         SELFSWAB_RAPIDPRO_TOKEN="123",
         SELFSWAB_RAPIDPRO_FLOW="321",
     )
+    def test_poll_to_meditech_barcode_error_retry_delay(self):
+        """
+        Should ignore an error response from the meditech api if without the retry window
+        """
+        self.create_selfswab_test("27856454612", "12345678")
+
+        responses.add(
+            responses.POST,
+            "https://medi-test.com",
+            json={
+                "results": [{"barcode": "12345678", "error": "Requisition mismatch"}]
+            },
+        )
+
+        poll_meditech_api_for_results()
+
+        self.assertEqual(len(responses.calls), 1)
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        MEDITECH_URL="https://medi-test.com",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
+        SELFSWAB_RAPIDPRO_FLOW="321",
+    )
+    def test_poll_to_meditech_barcode_wrong_error_retry_delay(self):
+        """
+        Should not retry if its not a Requisition mismatch, even in retry window
+        """
+        self.create_selfswab_test("27856454612", "12345678")
+
+        responses.add(
+            responses.POST,
+            "https://medi-test.com",
+            json={"results": [{"barcode": "12345678", "error": "Something Else"}]},
+        )
+
+        responses.add(
+            responses.POST,
+            "https://rp-test.com/api/v2/flow_starts.json",
+            json=self.flow_response,
+        )
+
+        poll_meditech_api_for_results()
+
+        self.assertEqual(len(responses.calls), 2)
+        [_, call] = responses.calls
+
+        body = json.loads(call.request.body)
+
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27856454612"],
+                "extra": {
+                    "result": "Error",
+                    "error": "Something Else",
+                    "barcode": "12345678",
+                    "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                },
+            },
+        )
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        MEDITECH_URL="https://medi-test.com",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
+        SELFSWAB_RAPIDPRO_FLOW="321",
+    )
     def test_poll_to_meditech_no_pending_tests(self):
         """
         Should handle an error response from the meditech api
         """
         self.create_selfswab_test(
-            "27856454612", "12345678", SelfSwabTest.RESULT_POSITIVE
+            "27856454612", "12345678", SelfSwabTest.Result.POSITIVE
         )
 
         poll_meditech_api_for_results()

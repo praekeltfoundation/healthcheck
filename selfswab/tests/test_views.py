@@ -99,7 +99,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
             {
                 "msisdn": "27856454612",
                 "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
-                "result": SelfSwabTest.RESULT_NEGATIVE,
+                "result": SelfSwabTest.Result.NEGATIVE,
                 "barcode": "CP159600001",
                 "timestamp": "2020-01-11T08:30:24.922024+00:00",
                 "updated_at": "2020-01-12T08:30:24.922024+00:00",
@@ -108,7 +108,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         [selfswabtest] = SelfSwabTest.objects.all()
         self.assertEqual(selfswabtest.msisdn, "27856454612")
-        self.assertEqual(selfswabtest.result, SelfSwabTest.RESULT_NEGATIVE)
+        self.assertEqual(selfswabtest.result, SelfSwabTest.Result.NEGATIVE)
         self.assertEqual(
             selfswabtest.contact_id, "9e12d04c-af25-40b6-aa4f-57c72e8e3f91"
         )
@@ -134,7 +134,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
             {
                 "msisdn": "27856454612",
                 "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
-                "result": SelfSwabTest.RESULT_NEGATIVE,
+                "result": SelfSwabTest.Result.NEGATIVE,
                 "barcode": "CP159600001",
                 "timestamp": "2020-01-11T08:30:24.922024+00:00",
                 "updated_at": "2020-01-12T08:30:24.922024+00:00",
@@ -159,7 +159,7 @@ class SelfSwabTestViewSetTests(APITestCase, BaseEventTestCase):
             {
                 "msisdn": "27856454612",
                 "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
-                "result": SelfSwabTest.RESULT_NEGATIVE,
+                "result": SelfSwabTest.Result.NEGATIVE,
                 "barcode": "invalid",
                 "timestamp": "2020-01-11T08:30:24.922024+00:00",
                 "updated_at": "2020-01-12T08:30:24.922024+00:00",

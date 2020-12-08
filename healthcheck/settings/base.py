@@ -176,3 +176,5 @@ TBCONNECT_BQ_DATASET = env.str("TBCONNECT_BQ_DATASET", "wassup-165700.tbconnect"
 
 SELFSWAB_BQ_KEY_PATH = env.str("SELFSWAB_BQ_KEY_PATH", "bq_credentials.json")
 SELFSWAB_BQ_DATASET = env.str("SELFSWAB_BQ_DATASET", "wassup-165700.selfswab")
+
+SELFSWAB_RETRY_HOURS = env.int("SELFSWAB_RETRY_HOURS", 8)
