@@ -85,7 +85,7 @@ class UtilsTests(TestCase):
                 "barcode": "111",
                 "msisdn": "+123",
                 "contact_id": "test1",
-                "result": SelfSwabTest.RESULT_PENDING,
+                "result": SelfSwabTest.Result.PENDING,
                 "should_sync": False,
             }
         )
@@ -94,7 +94,7 @@ class UtilsTests(TestCase):
                 "barcode": "222",
                 "msisdn": "+124",
                 "contact_id": "test2",
-                "result": SelfSwabTest.RESULT_PENDING,
+                "result": SelfSwabTest.Result.PENDING,
             }
         )
 

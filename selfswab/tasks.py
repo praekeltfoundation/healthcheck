@@ -29,7 +29,7 @@ def poll_meditech_api_for_results():
 
             barcodes = list(
                 SelfSwabTest.objects.filter(
-                    result=SelfSwabTest.RESULT_PENDING
+                    result=SelfSwabTest.Result.PENDING
                 ).values_list("barcode", flat=True)
             )
 
@@ -45,12 +45,12 @@ def poll_meditech_api_for_results():
             response.raise_for_status()
             results = response.json()["results"]
             for result in results:
-                test_result = result.get("result", SelfSwabTest.RESULT_ERROR)
-                if test_result not in (SelfSwabTest.RESULT_PENDING, ""):
+                test_result = result.get("result", SelfSwabTest.Result.ERROR)
+                if test_result not in (SelfSwabTest.Result.PENDING, ""):
                     registration = (
                         SelfSwabTest.objects.filter(
                             barcode=result["barcode"],
-                            result=SelfSwabTest.RESULT_PENDING,
+                            result=SelfSwabTest.Result.PENDING,
                         )
                         .order_by("-timestamp")
                         .first()

@@ -23,7 +23,7 @@ class SelfSwabTestTests(TestCase):
                 "id": str(test.id),
                 "contact_id": test.contact_id,
                 "msisdn": "GyReRepLLYF5Ldr6IyA1mu8VM96Et16I0TFIyDvRmK4=",
-                "result": SelfSwabTest.RESULT_PENDING,
+                "result": SelfSwabTest.Result.PENDING,
                 "barcode": test.barcode,
                 "timestamp": test.timestamp.isoformat(),
                 "updated_at": test.updated_at.isoformat(),
@@ -37,27 +37,27 @@ class SelfSwabTestTests(TestCase):
         test = SelfSwabTest.objects.create(**{"msisdn": "+123"})
 
         test.set_result("POS")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_POSITIVE)
+        self.assertEqual(test.result, SelfSwabTest.Result.POSITIVE)
         test.set_result("Positive")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_POSITIVE)
+        self.assertEqual(test.result, SelfSwabTest.Result.POSITIVE)
         test.set_result("DETECTED")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_POSITIVE)
+        self.assertEqual(test.result, SelfSwabTest.Result.POSITIVE)
         test.set_result("NOT DET")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_NEGATIVE)
+        self.assertEqual(test.result, SelfSwabTest.Result.NEGATIVE)
         test.set_result("NOT DETECTED")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_NEGATIVE)
+        self.assertEqual(test.result, SelfSwabTest.Result.NEGATIVE)
         test.set_result("INV")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_INVALID)
+        self.assertEqual(test.result, SelfSwabTest.Result.INVALID)
         test.set_result("REJ")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_REJECTED)
+        self.assertEqual(test.result, SelfSwabTest.Result.REJECTED)
         test.set_result("EQV")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_EQUIVOCAL)
+        self.assertEqual(test.result, SelfSwabTest.Result.EQUIVOCAL)
         test.set_result("INCON")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_INCONCLUSIVE)
+        self.assertEqual(test.result, SelfSwabTest.Result.INCONCLUSIVE)
         test.set_result("INDETERMINATE")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_INDETERMINATE)
+        self.assertEqual(test.result, SelfSwabTest.Result.INDETERMINATE)
         test.set_result("Error")
-        self.assertEqual(test.result, SelfSwabTest.RESULT_ERROR)
+        self.assertEqual(test.result, SelfSwabTest.Result.ERROR)
 
 
 class SelfSwabScreenTests(TestCase):

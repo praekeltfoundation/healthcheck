@@ -29,7 +29,7 @@ class PollMeditechForResults(TestCase):
         "extra": {"result": "Negative", "updated_at": updated_at.strftime("%d/%m/%Y")},
     }
 
-    def create_selfswab_test(self, msisdn, barcode, result=SelfSwabTest.RESULT_PENDING):
+    def create_selfswab_test(self, msisdn, barcode, result=SelfSwabTest.Result.PENDING):
         return SelfSwabTest.objects.create(
             **{
                 "id": uuid.uuid4().hex,
@@ -58,7 +58,7 @@ class PollMeditechForResults(TestCase):
         test1 = self.create_selfswab_test("27856454612", "12345678")
         test2 = self.create_selfswab_test("27895671234", "87654321")
         test3 = self.create_selfswab_test(
-            "27890001234", "12341234", SelfSwabTest.RESULT_POSITIVE
+            "27890001234", "12341234", SelfSwabTest.Result.POSITIVE
         )
 
         responses.add(
@@ -110,17 +110,17 @@ class PollMeditechForResults(TestCase):
         test2.refresh_from_db()
         test3.refresh_from_db()
 
-        self.assertEqual(test1.result, SelfSwabTest.RESULT_PENDING)
+        self.assertEqual(test1.result, SelfSwabTest.Result.PENDING)
         self.assertIsNone(test1.collection_timestamp)
         self.assertIsNone(test1.received_timestamp)
         self.assertIsNone(test1.authorized_timestamp)
 
-        self.assertEqual(test2.result, SelfSwabTest.RESULT_NEGATIVE)
+        self.assertEqual(test2.result, SelfSwabTest.Result.NEGATIVE)
         self.assertEqual(test2.collection_timestamp.isoformat(), self.test_timestamp)
         self.assertEqual(test2.received_timestamp.isoformat(), self.test_timestamp)
         self.assertEqual(test2.authorized_timestamp.isoformat(), self.test_timestamp)
 
-        self.assertEqual(test3.result, SelfSwabTest.RESULT_POSITIVE)
+        self.assertEqual(test3.result, SelfSwabTest.Result.POSITIVE)
         self.assertIsNone(test3.collection_timestamp)
         self.assertIsNone(test3.received_timestamp)
         self.assertIsNone(test3.authorized_timestamp)
@@ -227,7 +227,7 @@ class PollMeditechForResults(TestCase):
         Should handle an error response from the meditech api
         """
         self.create_selfswab_test(
-            "27856454612", "12345678", SelfSwabTest.RESULT_POSITIVE
+            "27856454612", "12345678", SelfSwabTest.Result.POSITIVE
         )
 
         poll_meditech_api_for_results()
