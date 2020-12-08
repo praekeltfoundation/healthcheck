@@ -1,6 +1,8 @@
 from celery.decorators import periodic_task
 from celery.task.schedules import crontab
 from django.conf import settings
+from django.utils import timezone
+from datetime import timedelta
 
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
@@ -57,6 +59,18 @@ def poll_meditech_api_for_results():
                     )
 
                     if not registration:
+                        continue
+
+                    # This is a bit of a hack, the api to push the test to meditech
+                    # is not done yet (and won't be anytime soon) and it takes a
+                    # while for it to be manually loaded
+                    if (
+                        test_result == SelfSwabTest.Result.ERROR
+                        and result.get("error") == "Requisition mismatch"
+                        and registration.timestamp
+                        <= timezone.now()
+                        + timedelta(hours=settings.SELFSWAB_RETRY_HOURS)
+                    ):
                         continue
 
                     registration.set_result(test_result)
