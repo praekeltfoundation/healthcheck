@@ -37,6 +37,7 @@ class SelfSwabRegistration(models.Model, BaseModel):
     created_by = models.CharField(max_length=255)
     employee_number = models.CharField(max_length=255, blank=True, default="")
     contact_id = models.CharField(max_length=255, blank=True, default="")
+    msisdn = models.CharField(max_length=255, validators=[za_phone_number], blank=True)
     first_name = models.CharField(max_length=255, blank=False)
     last_name = models.CharField(max_length=255, blank=False)
     facility = models.CharField(max_length=255, blank=False)
@@ -55,6 +56,10 @@ class SelfSwabRegistration(models.Model, BaseModel):
     should_sync = models.BooleanField(default=True)
 
     @property
+    def hashed_msisdn(self):
+        return hash_string(self.msisdn)
+
+    @property
     def hashed_employee_number(self):
         return hash_string(self.employee_number)
 
@@ -67,6 +72,7 @@ class SelfSwabRegistration(models.Model, BaseModel):
             "id": str(self.id),
             "contact_id": self.contact_id,
             "employee_number": self.hashed_employee_number,
+            "msisdn": self.hashed_msisdn,
             "facility": self.facility,
             "occupation": self.occupation,
             "age": self.age,

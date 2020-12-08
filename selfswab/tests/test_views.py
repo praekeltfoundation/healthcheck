@@ -211,6 +211,7 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
                 "last_name": "last",
                 "facility": "JHB Gen",
                 "occupation": "doctor",
+                "msisdn": "27836549876",
             },
         )
 
@@ -227,6 +228,7 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(registration.last_name, "last")
         self.assertEqual(registration.facility, "JHB Gen")
         self.assertEqual(registration.occupation, "doctor")
+        self.assertEqual(registration.msisdn, "27836549876")
 
     def test_successful_patch_request(self):
         """
