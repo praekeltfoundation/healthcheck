@@ -112,6 +112,7 @@ def perform_etl():
                 "id": "STRING",
                 "contact_id": "STRING",
                 "employee_number": "STRING",
+                "msisdn": "STRING",
                 "facility": "STRING",
                 "occupation": "STRING",
                 "age": "STRING",
