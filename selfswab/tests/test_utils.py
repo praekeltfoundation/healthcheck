@@ -8,7 +8,7 @@ class IsBarcodeFormatValidTests(TestCase):
         self.assertFalse(is_barcode_format_valid("123"))
         self.assertFalse(is_barcode_format_valid("CP123"))
         self.assertTrue(is_barcode_format_valid("CP159600000"))
-        self.assertFalse(is_barcode_format_valid("CP159600101"))
+        self.assertFalse(is_barcode_format_valid("CP159601101"))
         self.assertFalse(is_barcode_format_valid("CP158600001"))
 
         self.assertTrue(is_barcode_format_valid("CP159600001"))
