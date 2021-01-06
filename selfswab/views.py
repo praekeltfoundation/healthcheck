@@ -33,7 +33,7 @@ class SelfSwabRegistrationViewSet(GenericViewSet, CreateModelMixin, UpdateModelM
 
 
 class WhitelistContactView(generics.GenericAPIView):
-     """
+    """
     POST endpoint to whitelist a contact.
     ---
     POST fields:
