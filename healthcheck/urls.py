@@ -20,6 +20,7 @@ urlpatterns = [
     path("ht/", include("health_check.urls")),
     path("admin/", admin.site.urls),
     path("v1/", include("contacts.urls", namespace="api")),
+    path("v1/", include("selfswab.urls", namespace="api2")),
     path("v2/", include(global_v2router.urls)),
     path("v3/", include(v3router.urls)),
     path("v4/", include(v4router.urls)),

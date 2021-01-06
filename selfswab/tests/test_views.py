@@ -1,5 +1,9 @@
+import json
+import responses
+
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
+from django.test import override_settings
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -299,3 +303,224 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
 
         [registration] = SelfSwabRegistration.objects.all()
         self.assertEqual(registration.contact_id, "CV1111H")
+
+
+class SelfSwabRegistrationViewSetTests(APITestCase):
+    url = reverse("selfswab:rest_whitelist_contact")
+
+    def test_unautorized(self):
+        user = get_user_model().objects.create_user("test")
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27123123",
+                "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+            },
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_rapidpro_not_configured(self):
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27123123",
+                "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+            },
+        )
+
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(response.json(), {"error": "rapidpro not configured"})
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com", SELFSWAB_RAPIDPRO_TOKEN="123",
+    )
+    def test_contact_not_found(self):
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+
+        responses.add(
+            responses.GET,
+            f"https://rp-test.com/api/v2/contacts.json?urn=whatsapp:27123123",
+            json={"next": None, "previous": None, "results": []},
+        )
+
+        responses.add(
+            responses.POST,
+            "https://rp-test.com/api/v2/contacts.json",
+            json={
+                "uuid": "09d23a05-47fe-11e4-bfe9-b8f6b119e9ab",
+                "name": None,
+                "language": "eng",
+                "urns": ["whatsapp:27123123"],
+                "groups": [
+                    {
+                        "name": "SelfSwab Whitelist",
+                        "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                    }
+                ],
+                "fields": {"msisdn": "27123123"},
+                "blocked": False,
+                "stopped": False,
+                "created_on": "2015-11-11T13:05:57.457742Z",
+                "modified_on": "2015-11-11T13:05:57.576056Z",
+                "last_seen_on": None,
+            },
+        )
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27123123",
+                "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+            },
+        )
+
+        self.assertEqual(response.status_code, 201)
+
+        [_, call] = responses.calls
+        body = json.loads(call.request.body)
+        self.assertEqual(
+            body,
+            {
+                "language": "eng",
+                "urns": ["whatsapp:27123123"],
+                "fields": {"msisdn": "27123123"},
+                "groups": ["da85c55c-c213-4cfc-9d6d-c88d97993bf3"],
+            },
+        )
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com", SELFSWAB_RAPIDPRO_TOKEN="123",
+    )
+    def test_contact_exists_not_in_group(self):
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+
+        responses.add(
+            responses.GET,
+            f"https://rp-test.com/api/v2/contacts.json?urn=whatsapp:27123123",
+            json={
+                "next": None,
+                "previous": None,
+                "results": [
+                    {
+                        "uuid": "09d23a05-47fe-11e4-bfe9-b8f6b119e9ab",
+                        "name": None,
+                        "language": None,
+                        "urns": ["whatsapp:27123123"],
+                        "groups": [
+                            {
+                                "name": "Customers",
+                                "uuid": "5a4eb79e-1b1f-4ae3-8700-09384cca385f",
+                            }
+                        ],
+                        "fields": {},
+                        "blocked": False,
+                        "stopped": False,
+                        "created_on": "2015-11-11T13:05:57.457742Z",
+                        "modified_on": "2020-08-11T13:05:57.576056Z",
+                        "last_seen_on": "2020-07-11T13:05:57.576056Z",
+                    }
+                ],
+            },
+        )
+
+        responses.add(
+            responses.POST,
+            "https://rp-test.com/api/v2/contacts.json",
+            json={
+                "uuid": "09d23a05-47fe-11e4-bfe9-b8f6b119e9ab",
+                "name": None,
+                "language": "eng",
+                "urns": ["whatsapp:27123123"],
+                "groups": [
+                    {
+                        "name": "SelfSwab Whitelist",
+                        "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                    }
+                ],
+                "fields": {"msisdn": "27123123"},
+                "blocked": False,
+                "stopped": False,
+                "created_on": "2015-11-11T13:05:57.457742Z",
+                "modified_on": "2015-11-11T13:05:57.576056Z",
+                "last_seen_on": None,
+            },
+        )
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27123123",
+                "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+            },
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        [_, call] = responses.calls
+        body = json.loads(call.request.body)
+        self.assertEqual(
+            body,
+            {
+                "groups": [
+                    "5a4eb79e-1b1f-4ae3-8700-09384cca385f",
+                    "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                ]
+            },
+        )
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com", SELFSWAB_RAPIDPRO_TOKEN="123",
+    )
+    def test_contact_exists_in_group(self):
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+
+        responses.add(
+            responses.GET,
+            f"https://rp-test.com/api/v2/contacts.json?urn=whatsapp:27123123",
+            json={
+                "next": None,
+                "previous": None,
+                "results": [
+                    {
+                        "uuid": "09d23a05-47fe-11e4-bfe9-b8f6b119e9ab",
+                        "name": None,
+                        "language": None,
+                        "urns": ["whatsapp:27123123"],
+                        "groups": [
+                            {
+                                "name": "SelfSwab Whitelist",
+                                "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                            }
+                        ],
+                        "fields": {},
+                        "blocked": False,
+                        "stopped": False,
+                        "created_on": "2015-11-11T13:05:57.457742Z",
+                        "modified_on": "2020-08-11T13:05:57.576056Z",
+                        "last_seen_on": "2020-07-11T13:05:57.576056Z",
+                    }
+                ],
+            },
+        )
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27123123",
+                "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+            },
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json(), {"error": "already whitelisted"})
