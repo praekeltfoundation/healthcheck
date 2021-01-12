@@ -6,6 +6,7 @@ import responses
 from django.conf import settings
 from django.test import TestCase, override_settings
 from django.utils import timezone
+from unittest.mock import patch
 from selfswab.models import SelfSwabTest
 from selfswab.tasks import poll_meditech_api_for_results
 
@@ -56,11 +57,14 @@ class PollMeditechForResults(TestCase):
         SELFSWAB_RAPIDPRO_TOKEN="123",
         SELFSWAB_RAPIDPRO_FLOW="321",
     )
-    def test_poll_to_meditech_for_results(self):
+    @patch("selfswab.tasks.upload_turn_media")
+    def test_poll_to_meditech_for_results(self, mock_upload_turn_media):
         """
         Should sync a barcode and get results from api,
         and save result
         """
+        mock_upload_turn_media.return_value = "media-uuid"
+
         test1 = self.create_selfswab_test("27856454612", "12345678")
         test2 = self.create_selfswab_test("27895671234", "87654321")
         test3 = self.create_selfswab_test(
@@ -79,6 +83,7 @@ class PollMeditechForResults(TestCase):
                         "collDateTime": self.test_timestamp,
                         "recvDateTime": self.test_timestamp,
                         "verifyDateTime": self.test_timestamp,
+                        "pdf_path": "http://path_to.pdf",
                     },
                 ]
             },
@@ -90,9 +95,13 @@ class PollMeditechForResults(TestCase):
             json=self.flow_response,
         )
 
+        responses.add(responses.GET, "http://path_to.pdf", body="not really a pdf")
+
         poll_meditech_api_for_results()
 
-        [call1, call2] = responses.calls
+        mock_upload_turn_media.assert_called_with(b"not really a pdf")
+
+        [call1, get_pdf, call2] = responses.calls
 
         body2 = json.loads(call2.request.body)
         body1 = json.loads(call1.request.body)
@@ -125,6 +134,7 @@ class PollMeditechForResults(TestCase):
         self.assertEqual(test2.collection_timestamp.isoformat(), self.test_timestamp)
         self.assertEqual(test2.received_timestamp.isoformat(), self.test_timestamp)
         self.assertEqual(test2.authorized_timestamp.isoformat(), self.test_timestamp)
+        self.assertEqual(test2.pdf_media_id, "media-uuid")
 
         self.assertEqual(test3.result, SelfSwabTest.Result.POSITIVE)
         self.assertIsNone(test3.collection_timestamp)
