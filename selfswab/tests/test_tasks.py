@@ -117,6 +117,8 @@ class PollMeditechForResults(TestCase):
                     "error": None,
                     "barcode": "87654321",
                     "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                    "pdf": "media-uuid",
+                    "result_but_no_pdf": False,
                 },
             },
         )
@@ -230,6 +232,8 @@ class PollMeditechForResults(TestCase):
                     "error": "Requisition mismatch",
                     "barcode": "12345678",
                     "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                    "pdf": None,
+                    "result_but_no_pdf": True,
                 },
             },
         )
@@ -305,6 +309,8 @@ class PollMeditechForResults(TestCase):
                     "error": "Something Else",
                     "barcode": "12345678",
                     "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                    "pdf": None,
+                    "result_but_no_pdf": True,
                 },
             },
         )
