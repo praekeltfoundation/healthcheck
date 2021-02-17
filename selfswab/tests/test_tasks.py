@@ -152,6 +152,72 @@ class PollMeditechForResults(TestCase):
         SELFSWAB_RAPIDPRO_TOKEN="123",
         SELFSWAB_RAPIDPRO_FLOW="321",
     )
+    def test_poll_to_meditech_pdf_does_not_exist(self):
+        """
+        Should try get results from api with barcodes that
+        dont exist, assert that no api calls are made
+        """
+        test1 = self.create_selfswab_test("27856454612", "12345678")
+        test2 = self.create_selfswab_test("27895671234", "87654321")
+        test3 = self.create_selfswab_test(
+            "27890001234", "12341234", SelfSwabTest.Result.POSITIVE
+        )
+
+        responses.add(
+            responses.POST,
+            "https://medi-test.com",
+            json={
+                "results": [
+                    {"barcode": "12345678", "result": ""},
+                    {
+                        "barcode": "87654321",
+                        "result": "NEGATIVE",
+                        "collDateTime": self.test_timestamp,
+                        "recvDateTime": self.test_timestamp,
+                        "verifyDateTime": self.test_timestamp,
+                    },
+                ]
+            },
+        )
+
+        responses.add(
+            responses.POST,
+            "https://rp-test.com/api/v2/flow_starts.json",
+            json=self.flow_response,
+        )
+        poll_meditech_api_for_results()
+
+        [call1, call2] = responses.calls
+
+        body2 = json.loads(call2.request.body)
+        body1 = json.loads(call1.request.body)
+
+        self.assertEqual(body1, {"barcodes": ["12345678", "87654321"]})
+        self.assertEqual(
+            body2,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27895671234"],
+                "extra": {
+                    "result": "Negative",
+                    "error": None,
+                    "barcode": "87654321",
+                    "updated_at": self.updated_at.strftime("%d/%m/%Y"),
+                    "pdf": None,
+                    "result_but_no_pdf": True,
+                },
+            },
+        )
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        MEDITECH_URL="https://medi-test.com",
+        MEDITECH_USER="praekelt",
+        MEDITECH_PASSWORD="secret",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
+        SELFSWAB_RAPIDPRO_FLOW="321",
+    )
     def test_poll_to_meditech_barcode_does_not_exist(self):
         """
         Should try get results from api with barcodes that
