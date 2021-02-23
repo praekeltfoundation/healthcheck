@@ -20,20 +20,20 @@ CREATE TABLE IF NOT EXISTS msisdn_salt
 
 msisdns = c.execute(
     """
-SELECT DISTINCT msisdn FROM (
+SELECT DISTINCT tb.msisdn FROM (
     SELECT msisdn FROM tbcheck
     UNION
     SELECT msisdn FROM tbtest
-)
+) as tb
+LEFT JOIN msisdn_salt ON tb.msisdn = msisdn_salt.msisdn
+WHERE msisdn_salt.salt IS NULL
 """
 )
 
 for (msisdn,) in msisdns:
-    c2.execute("SELECT 1 FROM msisdn_salt where msisdn=?", (msisdn,))
-    if c2.fetchone() is None:
-        c2.execute(
-            "INSERT INTO msisdn_salt (msisdn, salt) VALUES (?,?)", (msisdn, uuid4().hex)
-        )
+    c2.execute(
+        "INSERT INTO msisdn_salt (msisdn, salt) VALUES (?,?)", (msisdn, uuid4().hex)
+    )
 
 for table in ("tbcheck", "tbtest"):
     rows = c.execute(
