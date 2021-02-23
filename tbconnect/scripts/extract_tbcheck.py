@@ -1,5 +1,5 @@
-import sqlite3
 import csv
+import sqlite3
 import sys
 
 conn = sqlite3.connect("tb.db")
@@ -8,10 +8,13 @@ c = conn.cursor()
 TBCHECK_FIELDS = ("risk", "province", "exposure")
 
 writer = csv.writer(sys.stdout)
-writer.writerow(
-    list(TBCHECK_FIELDS)
-    + ["symptom_count", "hashed_msisdn", "source", "timestamp_randomised"]
-)
+header = list(TBCHECK_FIELDS) + [
+    "symptom_count",
+    "hashed_msisdn",
+    "source",
+    "timestamp_randomised",
+]
+writer.writerow(header)
 
 rows = c.execute(
     f"""

@@ -1,11 +1,11 @@
 """
 Anonymises the MSISDN and timestamp fields
 """
-import sqlite3
-from uuid import uuid4
-from hashlib import sha256
-from datetime import datetime, timedelta
 import random
+import sqlite3
+from datetime import datetime, timedelta
+from hashlib import sha256
+from uuid import uuid4
 
 conn = sqlite3.connect("tb.db")
 c = conn.cursor()
