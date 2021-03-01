@@ -306,7 +306,7 @@ class SelfSwabRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(registration.contact_id, "CV1111H")
 
 
-class SelfSwabRegistrationViewSetTests(APITestCase):
+class SelfSwabWhitelistViewSetTests(APITestCase):
     url = reverse("selfswab:rest_whitelist_contact")
 
     def test_unautorized(self):
