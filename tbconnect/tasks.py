@@ -51,6 +51,7 @@ def perform_sync_to_rapidpro():
                                 "%d/%m/%Y"
                             ),
                             "exposure": check.exposure,
+                            "language": contact.language,
                         },
                     )
 
