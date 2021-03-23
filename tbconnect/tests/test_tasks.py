@@ -58,6 +58,7 @@ class SyncToRapidproTests(TestCase):
         return HealthCheckUserProfile.objects.create(
             **{
                 "msisdn": msisdn,
+                "language": "eng",
                 "data": {"follow_up_optin": optin, "synced_to_tb_rapidpro": synced},
             }
         )
@@ -102,6 +103,7 @@ class SyncToRapidproTests(TestCase):
                         "%d/%m/%Y"
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
                 },
             },
         )
@@ -119,6 +121,7 @@ class SyncToRapidproTests(TestCase):
                         "%d/%m/%Y"
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
                 },
             },
         )
@@ -162,6 +165,7 @@ class SyncToRapidproTests(TestCase):
                         "%d/%m/%Y"
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
                 },
             },
         )
@@ -205,6 +209,7 @@ class SyncToRapidproTests(TestCase):
                         "%d/%m/%Y"
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
                 },
             },
         )
