@@ -12,7 +12,6 @@ from .serializers import (
     SelfSwabScreenSerializer,
     SelfSwabTestSerializer,
 )
-from .utils import send_whatsapp_media_message
 
 
 class SelfSwabScreenViewSet(GenericViewSet, CreateModelMixin):
@@ -85,28 +84,3 @@ class WhitelistContactView(generics.GenericAPIView):
             {"error": "rapidpro not configured"},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
-
-
-class SendTestResultPDFView(generics.GenericAPIView):
-    """
-    POST endpoint send test result PDF to contact.
-    ---
-    POST fields:
-    * barcode
-    """
-
-    permission_classes = (permissions.IsAuthenticated,)
-
-    def post(self, request, *args, **kwargs):
-        data = request.data
-
-        barcode = data.pop("barcode", None)
-
-        try:
-            test = SelfSwabTest.objects.get(barcode=barcode)
-        except SelfSwabTest.DoesNotExist:
-            return Response({}, status=status.HTTP_404_NOT_FOUND)
-
-        send_whatsapp_media_message(test.msisdn, "document", test.pdf_media_id)
-
-        return Response({}, status=status.HTTP_200_OK)
