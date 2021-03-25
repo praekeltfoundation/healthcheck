@@ -6,7 +6,6 @@ from selfswab.views import (
     SelfSwabScreenViewSet,
     SelfSwabTestViewSet,
     WhitelistContactView,
-    SendTestResultPDFView,
 )
 
 app_name = "selfswab"
@@ -21,10 +20,5 @@ urlpatterns = [
         "whitelist_contact/",
         WhitelistContactView.as_view(),
         name="rest_whitelist_contact",
-    ),
-    path(
-        "send_test_result_pdf/",
-        SendTestResultPDFView.as_view(),
-        name="rest_send_test_result_pdf",
     ),
 ]

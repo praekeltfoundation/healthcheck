@@ -164,7 +164,6 @@ class SelfSwabTest(models.Model):
         max_length=100, choices=Result.choices, default=Result.PENDING
     )
     barcode = models.CharField(max_length=255, blank=False, unique=True)
-    pdf_media_id = models.CharField(max_length=255, null=True)
     timestamp = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True, db_index=True)
     collection_timestamp = models.DateTimeField(null=True)

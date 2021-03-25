@@ -7,7 +7,6 @@ from django.test import override_settings
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
-from unittest.mock import patch
 
 from selfswab.models import SelfSwabRegistration, SelfSwabScreen, SelfSwabTest
 from userprofile.tests.test_views import BaseEventTestCase
@@ -525,44 +524,3 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
 
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.json(), {"error": "already whitelisted"})
-
-
-class SendTestResultPDFViewViewSetTests(APITestCase):
-    url = reverse("selfswab:rest_send_test_result_pdf")
-
-    def test_unautorized(self):
-        user = get_user_model().objects.create_user("test")
-
-        response = self.client.post(self.url, {"barcode": "CP123",},)
-
-        self.assertEqual(response.status_code, 401)
-
-    def test_barcode_not_found(self):
-        user = get_user_model().objects.create_user("test")
-        self.client.force_authenticate(user)
-
-        response = self.client.post(self.url, {"barcode": "CP123",},)
-
-        self.assertEqual(response.status_code, 404)
-
-    @patch("selfswab.views.send_whatsapp_media_message")
-    def test_send_result_pdf(self, mock_send_whatsapp_media_message):
-        user = get_user_model().objects.create_user("test")
-        self.client.force_authenticate(user)
-
-        SelfSwabTest.objects.create(
-            **{
-                "contact_id": "9e12d04c-af25-40b6-aa4f-57c72e8e3f91",
-                "barcode": "CP159600001",
-                "pdf_media_id": "media-uuid",
-                "msisdn": "27123",
-            }
-        )
-
-        response = self.client.post(self.url, {"barcode": "CP159600001",},)
-
-        self.assertEqual(response.status_code, 200)
-
-        mock_send_whatsapp_media_message.assert_called_with(
-            "27123", "document", "media-uuid"
-        )

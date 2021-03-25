@@ -1,7 +1,4 @@
 import re
-import requests
-from django.conf import settings
-from urllib.parse import urljoin
 
 from .models import SelfSwabRegistration
 
@@ -26,36 +23,3 @@ def is_barcode_format_valid(barcode):
     matches = re.findall(r"^(CP159600)|(00[0-9]|0[0-9][0-9]|[0-9][0-9][0-9])$", barcode)
     qa_matches = re.findall(r"^(CP999T99)|(00[0-9]|0[0-9][0-9]|100)$", barcode)
     return len(matches) == 2 or len(qa_matches) == 2
-
-
-def upload_turn_media(media, content_type="application/pdf"):
-    headers = {
-        "Authorization": "Bearer {}".format(settings.SELFSWAB_TURN_TOKEN),
-        "Content-Type": content_type,
-    }
-
-    response = requests.post(
-        urljoin(settings.SELFSWAB_TURN_URL, f"v1/media"), headers=headers, data=media,
-    )
-    response.raise_for_status()
-    return response.json()["media"][0]["id"]
-
-
-def send_whatsapp_media_message(wa_id, media_type, media_id):
-    headers = {
-        "Authorization": "Bearer {}".format(settings.SELFSWAB_TURN_TOKEN),
-        "Content-Type": "application/json",
-    }
-
-    data = {
-        "recipient_type": "individual",
-        "to": wa_id,
-        "type": media_type,
-        media_type: {"id": media_id},
-    }
-
-    response = requests.post(
-        urljoin(settings.SELFSWAB_TURN_URL, "v1/messages"), headers=headers, json=data
-    )
-    response.raise_for_status()
-    return response
