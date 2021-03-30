@@ -9,6 +9,7 @@ from temba_client.v2 import TembaClient
 import requests
 from selfswab.models import SelfSwabRegistration, SelfSwabScreen, SelfSwabTest
 from healthcheck import utils
+from selfswab.utils import upload_turn_media
 
 
 @periodic_task(run_every=crontab(minute="*/5"))
@@ -74,6 +75,7 @@ def poll_meditech_api_for_results():
                         continue
 
                     registration.set_result(test_result)
+                    result_but_no_pdf = False
 
                     if result.get("collDateTime"):
                         registration.collection_timestamp = result.get("collDateTime")
@@ -81,6 +83,12 @@ def poll_meditech_api_for_results():
                         registration.received_timestamp = result.get("recvDateTime")
                     if result.get("verifyDateTime"):
                         registration.authorized_timestamp = result.get("verifyDateTime")
+
+                    if not registration.pdf_media_id and result.get("pdf_path"):
+                        content = requests.get(result["pdf_path"]).content
+                        registration.pdf_media_id = upload_turn_media(content)
+                    else:
+                        result_but_no_pdf = True
 
                     rapidpro.create_flow_start(
                         urns=[f"whatsapp:{registration.msisdn}"],
@@ -90,6 +98,8 @@ def poll_meditech_api_for_results():
                             "error": result.get("error"),
                             "barcode": result["barcode"],
                             "updated_at": registration.updated_at.strftime("%d/%m/%Y"),
+                            "pdf": registration.pdf_media_id,
+                            "result_but_no_pdf": result_but_no_pdf,
                         },
                     )
                     registration.save()
