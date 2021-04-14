@@ -184,3 +184,4 @@ SELFSWAB_TURN_URL = env.str("SELFSWAB_TURN_URL", "https://whatsapp.turn.io/")
 SELFSWAB_TURN_TOKEN = env.str("SELFSWAB_TURN_TOKEN", "default")
 
 LIFENET_BQ_KEY_PATH = env.str("LIFENET_BQ_KEY_PATH", "bq_credentials.json")
+LIFENET_BQ_DATASET = env.str("LIFENET_BQ_DATASET", "wassup-165700.lifenet")
