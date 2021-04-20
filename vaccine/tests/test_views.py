@@ -45,11 +45,12 @@ class VaccineRegistrationViewSetTests(APITestCase, BaseEventTestCase):
                 "first_name": "Test",
                 "last_name": "Testing",
                 "date_of_birth": now.strftime("%Y-%m-%d"),
-                "preferred_time": now.time().isoformat(),
-                "preferred_date": now.strftime("%Y-%m-%d"),
+                "preferred_time": "morning",
+                "preferred_date": "weekday",
                 "preferred_location_id": "123456",
                 "preferred_location_name": "Cape Town",
                 "id_number": "8808151569856",
+                "asylum_seeker_number": None,
                 "refugee_number": None,
                 "passport_number": None,
                 "passport_country": None,
@@ -64,12 +65,13 @@ class VaccineRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(reg.first_name, "Test")
         self.assertEqual(reg.last_name, "Testing")
         self.assertEqual(reg.date_of_birth, now.date())
-        self.assertEqual(reg.preferred_time, now.time())
-        self.assertEqual(reg.preferred_date, now.date())
+        self.assertEqual(reg.preferred_time, "morning")
+        self.assertEqual(reg.preferred_date, "weekday")
         self.assertEqual(reg.preferred_location_id, "123456")
         self.assertEqual(reg.preferred_location_name, "Cape Town")
         self.assertEqual(reg.id_number, "8808151569856")
         self.assertEqual(reg.refugee_number, None)
+        self.assertEqual(reg.asylum_seeker_number, None)
         self.assertEqual(reg.passport_number, None)
         self.assertEqual(reg.passport_country, None)
 
@@ -91,11 +93,12 @@ class VaccineRegistrationViewSetTests(APITestCase, BaseEventTestCase):
             "first_name": "Test",
             "last_name": "Testing",
             "date_of_birth": now.strftime("%Y-%m-%d"),
-            "preferred_time": now.time().isoformat(),
-            "preferred_date": now.strftime("%Y-%m-%d"),
+            "preferred_time": "morning",
+            "preferred_date": "weekday",
             "preferred_location_id": "123456",
             "preferred_location_name": "Cape Town",
             "id_number": "8808151569856",
+            "asylum_seeker_number": None,
             "refugee_number": None,
             "passport_number": None,
             "passport_country": None,

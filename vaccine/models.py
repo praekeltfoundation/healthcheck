@@ -8,9 +8,9 @@ from userprofile.validators import za_phone_number
 class VaccineRegistration(
     ExportModelOperationsMixin("vaccineregistration"), models.Model
 ):
-    GENDER_MALE = "male"
-    GENDER_FEMALE = "female"
-    GENDER_OTHER = "other"
+    GENDER_MALE = "Male"
+    GENDER_FEMALE = "Female"
+    GENDER_OTHER = "Other"
     GENDER_CHOICES = (
         (GENDER_MALE, "Male"),
         (GENDER_FEMALE, "Female"),
@@ -27,12 +27,19 @@ class VaccineRegistration(
     first_name = models.CharField(max_length=255, blank=True, null=True, default=None)
     last_name = models.CharField(max_length=255, blank=True, null=True, default=None)
     date_of_birth = models.DateField(blank=True, null=True, default=None)
-    preferred_time = models.TimeField(blank=True, null=True, default=None)
-    preferred_date = models.DateField(blank=True, null=True, default=None)
+    preferred_time = models.CharField(
+        max_length=255, blank=True, null=True, default=None
+    )
+    preferred_date = models.CharField(
+        max_length=255, blank=True, null=True, default=None
+    )
     preferred_location_id = models.CharField(max_length=255)
     preferred_location_name = models.CharField(max_length=255)
     id_number = models.CharField(max_length=255, blank=True, default="")
     refugee_number = models.CharField(
+        max_length=255, blank=True, null=True, default=None
+    )
+    asylum_seeker_number = models.CharField(
         max_length=255, blank=True, null=True, default=None
     )
     passport_number = models.CharField(
@@ -43,3 +50,4 @@ class VaccineRegistration(
     )
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
+    data = models.JSONField(default=dict, blank=True, null=True)
