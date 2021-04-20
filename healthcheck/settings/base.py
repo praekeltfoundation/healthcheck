@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "tbconnect",
     "selfswab",
     "lifenet",
+    "vaccine",
 ]
 
 MIDDLEWARE = [
