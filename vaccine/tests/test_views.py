@@ -54,6 +54,7 @@ class VaccineRegistrationViewSetTests(APITestCase, BaseEventTestCase):
                 "refugee_number": None,
                 "passport_number": None,
                 "passport_country": None,
+                "data": {"result": "success"},
             },
             format="json",
         )
@@ -74,6 +75,7 @@ class VaccineRegistrationViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(reg.asylum_seeker_number, None)
         self.assertEqual(reg.passport_number, None)
         self.assertEqual(reg.passport_country, None)
+        self.assertEqual(reg.data, {"result": "success"})
 
     def test_duplicate_request(self):
         """

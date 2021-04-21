@@ -32,5 +32,6 @@ class VaccineRegistrationSerializer(BaseEventSerializer):
             "passport_country",
             "timestamp",
             "created_by",
+            "data",
         )
         read_only_fields = ("id", "created_by")
