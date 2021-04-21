@@ -54,7 +54,7 @@ class VaccineRegistrationViewSetTests(APITestCase, BaseEventTestCase):
                 "refugee_number": None,
                 "passport_number": None,
                 "passport_country": None,
-                "data": {"result": "success"}
+                "data": {"result": "success"},
             },
             format="json",
         )
