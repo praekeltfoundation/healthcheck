@@ -29,6 +29,7 @@ class VaccineRegistrationSerializer(BaseEventSerializer):
             "id_number",
             "refugee_number",
             "passport_number",
+            "asylum_seeker_number",
             "passport_country",
             "timestamp",
             "created_by",
