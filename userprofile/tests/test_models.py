@@ -1,7 +1,7 @@
 from django.test import TestCase
 
-from userprofile.models import Covid19Triage, HealthCheckUserProfile
 from tbconnect.models import TBCheck
+from userprofile.models import Covid19Triage, HealthCheckUserProfile
 
 
 class HealthCheckUserProfileTests(TestCase):
@@ -37,6 +37,8 @@ class HealthCheckUserProfileTests(TestCase):
                 "existing": "value",
             },
         )
+        self.assertIsNotNone(profile.hcs_study_a_arm)
+        self.assertIsNotNone(profile.hcs_study_c_arm)
 
     def test_update_from_tbcheck(self):
         """

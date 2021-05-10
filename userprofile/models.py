@@ -1,3 +1,4 @@
+import random
 import uuid
 from typing import Text
 
@@ -143,6 +144,13 @@ class HealthCheckUserProfileManager(models.Manager):
 class HealthCheckUserProfile(
     ExportModelOperationsMixin("healthcheck-user-profile"), models.Model
 ):
+    class StudyArm(models.TextChoices):
+        CONTROL = "C", "Control"
+        TREATMENT_1 = "T1", "Treatment 1"
+        TREATMENT_2 = "T2", "Treatment 2"
+        TREATMENT_3 = "T3", "Treatment 3"
+        TREATMENT_4 = "T4", "Treatment 4"
+
     msisdn = models.CharField(
         primary_key=True, max_length=255, validators=[za_phone_number]
     )
@@ -171,6 +179,15 @@ class HealthCheckUserProfile(
     rooms_in_household = models.IntegerField(blank=True, null=True, default=None)
     persons_in_household = models.IntegerField(blank=True, null=True, default=None)
     language = models.CharField(max_length=3, null=True, blank=True)
+    hcs_study_a_arm = models.CharField(
+        max_length=3, choices=StudyArm.choices, null=True
+    )
+    hcs_study_b_arm = models.CharField(
+        max_length=3, choices=StudyArm.choices, null=True
+    )
+    hcs_study_c_arm = models.CharField(
+        max_length=3, choices=StudyArm.choices, null=True
+    )
     data = models.JSONField(default=dict, blank=True, null=True)
 
     objects = HealthCheckUserProfileManager()
@@ -203,6 +220,11 @@ class HealthCheckUserProfile(
             if has_value(v):
                 self.data[k] = v
 
+        if not self.hcs_study_a_arm:
+            self.hcs_study_a_arm = self.get_random_study_arm()
+        if not self.hcs_study_c_arm:
+            self.hcs_study_c_arm = self.get_random_study_arm()
+
     def update_from_tbcheck(self, tbcheck: TBCheck) -> None:
         """
         Updates the profile with the data from the latest TB Check
@@ -224,6 +246,17 @@ class HealthCheckUserProfile(
 
         self.data["follow_up_optin"] = tbcheck.follow_up_optin
         self.data["synced_to_tb_rapidpro"] = False
+
+    def get_random_study_arm(self):
+        return random.choice(
+            [
+                self.StudyArm.CONTROL,
+                self.StudyArm.TREATMENT_1,
+                self.StudyArm.TREATMENT_2,
+                self.StudyArm.TREATMENT_3,
+                self.StudyArm.TREATMENT_4,
+            ]
+        )
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
