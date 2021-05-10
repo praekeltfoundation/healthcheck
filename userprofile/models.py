@@ -3,6 +3,7 @@ import uuid
 from typing import Text
 
 import pycountry
+from django.conf import settings
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.utils import timezone
@@ -222,13 +223,13 @@ class HealthCheckUserProfile(
                 self.data[k] = v
 
     def update_post_screening_study_arms(self):
-        if not self.hcs_study_a_arm:
+        if not self.hcs_study_a_arm and settings.HCS_STUDY_A_ACTIVE:
             self.hcs_study_a_arm = self.get_random_study_arm()
             update_turn_contact.delay(
                 self.msisdn, "hcs_study_a_arm", self.hcs_study_a_arm
             )
 
-        if not self.hcs_study_c_arm:
+        if not self.hcs_study_c_arm and settings.HCS_STUDY_C_ACTIVE:
             self.hcs_study_c_arm = self.get_random_study_arm()
             update_turn_contact.delay(
                 self.msisdn, "hcs_study_c_arm", self.hcs_study_c_arm
