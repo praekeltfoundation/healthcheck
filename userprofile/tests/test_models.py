@@ -155,10 +155,11 @@ class HealthCheckUserProfileTests(TestCase):
 
         mock_update_turn_contact.delay.assert_not_called()
 
-
     @patch("userprofile.models.update_turn_contact")
     @override_settings(HCS_STUDY_A_ACTIVE=False, HCS_STUDY_C_ACTIVE=False)
-    def test_update_post_screening_study_arms_deactivated(self, mock_update_turn_contact):
+    def test_update_post_screening_study_arms_deactivated(
+        self, mock_update_turn_contact
+    ):
         profile = HealthCheckUserProfile(
             msisdn="+27820001001",
             first_name="oldfirst",
