@@ -9,6 +9,7 @@ from django.utils import timezone
 from django_prometheus.models import ExportModelOperationsMixin
 
 from tbconnect.models import TBCheck
+from userprofile.tasks import update_turn_contact
 from userprofile.utils import has_value
 from userprofile.validators import geographic_coordinate, za_phone_number
 
@@ -220,10 +221,18 @@ class HealthCheckUserProfile(
             if has_value(v):
                 self.data[k] = v
 
+    def update_post_screening_study_arms(self):
         if not self.hcs_study_a_arm:
             self.hcs_study_a_arm = self.get_random_study_arm()
+            update_turn_contact.delay(
+                self.msisdn, "hcs_study_a_arm", self.hcs_study_a_arm
+            )
+
         if not self.hcs_study_c_arm:
             self.hcs_study_c_arm = self.get_random_study_arm()
+            update_turn_contact.delay(
+                self.msisdn, "hcs_study_c_arm", self.hcs_study_c_arm
+            )
 
     def update_from_tbcheck(self, tbcheck: TBCheck) -> None:
         """
