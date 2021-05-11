@@ -1,5 +1,4 @@
 from urllib.parse import urlencode
-from unittest.mock import patch, call, ANY
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
@@ -41,8 +40,7 @@ class Covid19TriageViewSetTests(APITestCase, BaseEventTestCase):
         response = self.client.post(self.url)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
-    @patch("userprofile.models.update_turn_contact")
-    def test_successful_request(self, mock_update_turn_contact):
+    def test_successful_request(self):
         """
         Should create a new Covid19Triage object in the database
         """
@@ -89,16 +87,7 @@ class Covid19TriageViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(covid19triage.risk, Covid19Triage.RISK_LOW)
         self.assertEqual(covid19triage.created_by, user.username)
 
-        profile = HealthCheckUserProfile.objects.get(msisdn="+27820001001")
-        mock_update_turn_contact.delay.assert_has_calls(
-            [
-                call("+27820001001", "hcs_study_a_arm", profile.hcs_study_a_arm),
-                call("+27820001001", "hcs_study_c_arm", profile.hcs_study_c_arm),
-            ]
-        )
-
-    @patch("userprofile.models.update_turn_contact")
-    def test_duplicate_request(self, mock_update_turn_contact):
+    def test_duplicate_request(self):
         """
         Should create on the first request, and just return 200 on subsequent requests
         """
@@ -224,8 +213,7 @@ class Covid19TriageViewSetTests(APITestCase, BaseEventTestCase):
             if k in correct_data.keys():
                 self.assertEqual(v, correct_data[k])
 
-    @patch("userprofile.models.update_turn_contact")
-    def test_creates_user_profile(self, mock_update_turn_contact):
+    def test_creates_user_profile(self):
         """
         The user profile should be created when the triage is saved
         """
@@ -253,14 +241,6 @@ class Covid19TriageViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(profile.province, "ZA-WC")
         self.assertEqual(profile.city, "cape town")
         self.assertEqual(profile.age, Covid19Triage.AGE_18T40)
-
-        profile = HealthCheckUserProfile.objects.get(msisdn="+27820001001")
-        mock_update_turn_contact.delay.assert_has_calls(
-            [
-                call("+27820001001", "hcs_study_a_arm", profile.hcs_study_a_arm),
-                call("+27820001001", "hcs_study_c_arm", profile.hcs_study_c_arm),
-            ]
-        )
 
 
 class Covid19TriageV2ViewSetTests(Covid19TriageViewSetTests):
@@ -342,8 +322,7 @@ class Covid19TriageV2ViewSetTests(Covid19TriageViewSetTests):
             if k in correct_data.keys():
                 self.assertEqual(v, correct_data[k])
 
-    @patch("userprofile.models.update_turn_contact")
-    def test_returning_user(self, mock_update_turn_contact):
+    def test_returning_user(self):
         """
         Should create a new Covid19Triage object in the database using information
         from the first entry in the database
@@ -391,14 +370,6 @@ class Covid19TriageV2ViewSetTests(Covid19TriageViewSetTests):
         self.assertEqual(covid19triage.province, "ZA-WC")
         self.assertEqual(covid19triage.city, "cape town")
 
-        profile = HealthCheckUserProfile.objects.get(msisdn="+27820001001")
-        mock_update_turn_contact.delay.assert_has_calls(
-            [
-                call("+27820001001", "hcs_study_a_arm", profile.hcs_study_a_arm),
-                call("+27820001001", "hcs_study_c_arm", profile.hcs_study_c_arm),
-            ]
-        )
-
 
 class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
     url = reverse("healthcheckuserprofile-detail", args=("+27820001001",))
@@ -415,8 +386,7 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    @patch("userprofile.models.update_turn_contact")
-    def test_existing_healthchecks(self, mock_update_turn_contact):
+    def test_existing_healthchecks(self):
         """
         If there's no profile, but existing healthchecks, then it should construct the
         profile from those healthchecks
@@ -438,8 +408,6 @@ class HealthCheckUserProfileViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["msisdn"], "+27820001001")
         self.assertEqual(response.data["first_name"], "testname")
-
-        mock_update_turn_contact.delay.assert_not_called()
 
     def test_existing_profile(self):
         """
