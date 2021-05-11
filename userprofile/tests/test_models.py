@@ -1,8 +1,7 @@
-from django.test import TestCase, override_settings
-from unittest.mock import patch, call, ANY
+from django.test import TestCase
 
-from tbconnect.models import TBCheck
 from userprofile.models import Covid19Triage, HealthCheckUserProfile
+from tbconnect.models import TBCheck
 
 
 class HealthCheckUserProfileTests(TestCase):
@@ -108,73 +107,3 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.first_name, "oldfirst")
         self.assertEqual(profile.last_name, "newlast")
         self.assertEqual(profile.preexisting_condition, "no")
-
-    @patch("userprofile.models.update_turn_contact")
-    def test_update_post_screening_study_arms(self, mock_update_turn_contact):
-        profile = HealthCheckUserProfile(
-            msisdn="+27820001001",
-            first_name="oldfirst",
-            last_name="old_last",
-            data={
-                "donotreplace": "value",
-                "replaceint": 1,
-                "replacebool": True,
-                "existing": "value",
-            },
-        )
-
-        profile.update_post_screening_study_arms()
-
-        self.assertIsNotNone(profile.hcs_study_a_arm)
-        self.assertIsNotNone(profile.hcs_study_c_arm)
-
-        mock_update_turn_contact.delay.assert_has_calls(
-            [
-                call("+27820001001", "hcs_study_a_arm", profile.hcs_study_a_arm.value),
-                call("+27820001001", "hcs_study_c_arm", profile.hcs_study_c_arm.value),
-            ]
-        )
-
-    @patch("userprofile.models.update_turn_contact")
-    def test_update_post_screening_study_arms_populated(self, mock_update_turn_contact):
-        profile = HealthCheckUserProfile(
-            msisdn="+27820001001",
-            first_name="oldfirst",
-            last_name="old_last",
-            hcs_study_a_arm=HealthCheckUserProfile.StudyArm.CONTROL,
-            hcs_study_c_arm=HealthCheckUserProfile.StudyArm.CONTROL,
-            data={
-                "donotreplace": "value",
-                "replaceint": 1,
-                "replacebool": True,
-                "existing": "value",
-            },
-        )
-
-        profile.update_post_screening_study_arms()
-
-        mock_update_turn_contact.delay.assert_not_called()
-
-    @patch("userprofile.models.update_turn_contact")
-    @override_settings(HCS_STUDY_A_ACTIVE=False, HCS_STUDY_C_ACTIVE=False)
-    def test_update_post_screening_study_arms_deactivated(
-        self, mock_update_turn_contact
-    ):
-        profile = HealthCheckUserProfile(
-            msisdn="+27820001001",
-            first_name="oldfirst",
-            last_name="old_last",
-            data={
-                "donotreplace": "value",
-                "replaceint": 1,
-                "replacebool": True,
-                "existing": "value",
-            },
-        )
-
-        profile.update_post_screening_study_arms()
-
-        self.assertIsNone(profile.hcs_study_a_arm)
-        self.assertIsNone(profile.hcs_study_c_arm)
-
-        mock_update_turn_contact.delay.assert_not_called()
