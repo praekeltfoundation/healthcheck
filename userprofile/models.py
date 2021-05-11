@@ -182,13 +182,13 @@ class HealthCheckUserProfile(
     persons_in_household = models.IntegerField(blank=True, null=True, default=None)
     language = models.CharField(max_length=3, null=True, blank=True)
     hcs_study_a_arm = models.CharField(
-        max_length=3, choices=StudyArm.choices, null=True
+        max_length=3, choices=StudyArm.choices, null=True, default=None
     )
     hcs_study_b_arm = models.CharField(
-        max_length=3, choices=StudyArm.choices, null=True
+        max_length=3, choices=StudyArm.choices, null=True, default=None
     )
     hcs_study_c_arm = models.CharField(
-        max_length=3, choices=StudyArm.choices, null=True
+        max_length=3, choices=StudyArm.choices, null=True, default=None
     )
     data = models.JSONField(default=dict, blank=True, null=True)
 
