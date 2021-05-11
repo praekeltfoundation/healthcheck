@@ -130,8 +130,8 @@ class HealthCheckUserProfileTests(TestCase):
 
         mock_update_turn_contact.delay.assert_has_calls(
             [
-                call("+27820001001", "hcs_study_a_arm", profile.hcs_study_a_arm),
-                call("+27820001001", "hcs_study_c_arm", profile.hcs_study_c_arm),
+                call("+27820001001", "hcs_study_a_arm", profile.hcs_study_a_arm.value),
+                call("+27820001001", "hcs_study_c_arm", profile.hcs_study_c_arm.value),
             ]
         )
 

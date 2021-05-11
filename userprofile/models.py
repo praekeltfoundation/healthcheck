@@ -226,13 +226,13 @@ class HealthCheckUserProfile(
         if not self.hcs_study_a_arm and settings.HCS_STUDY_A_ACTIVE:
             self.hcs_study_a_arm = self.get_random_study_arm()
             update_turn_contact.delay(
-                self.msisdn, "hcs_study_a_arm", self.hcs_study_a_arm
+                self.msisdn, "hcs_study_a_arm", self.hcs_study_a_arm.value
             )
 
         if not self.hcs_study_c_arm and settings.HCS_STUDY_C_ACTIVE:
             self.hcs_study_c_arm = self.get_random_study_arm()
             update_turn_contact.delay(
-                self.msisdn, "hcs_study_c_arm", self.hcs_study_c_arm
+                self.msisdn, "hcs_study_c_arm", self.hcs_study_c_arm.value
             )
 
     def update_from_tbcheck(self, tbcheck: TBCheck) -> None:
