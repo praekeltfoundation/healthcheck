@@ -186,3 +186,7 @@ SELFSWAB_TURN_TOKEN = env.str("SELFSWAB_TURN_TOKEN", "default")
 
 LIFENET_BQ_KEY_PATH = env.str("LIFENET_BQ_KEY_PATH", "bq_credentials.json")
 LIFENET_BQ_DATASET = env.str("LIFENET_BQ_DATASET", "wassup-165700.lifenet")
+
+HCS_STUDY_A_ACTIVE = env.bool("HCS_STUDY_A_ACTIVE", False)
+HCS_STUDY_B_ACTIVE = env.bool("HCS_STUDY_B_ACTIVE", False)
+HCS_STUDY_C_ACTIVE = env.bool("HCS_STUDY_C_ACTIVE", False)
