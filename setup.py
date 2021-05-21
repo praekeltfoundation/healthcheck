@@ -4,7 +4,6 @@ import pkg_resources
 from setuptools import find_packages, setup
 
 requirements = [
-    "django==3.1",
     "django-environ==0.4.5",
     "psycopg2==2.8.5",
     "requests==2.24.0",
