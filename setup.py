@@ -8,6 +8,7 @@ requirements = [
     "psycopg2==2.8.5",
     "requests==2.24.0",
     "rapidpro-python==2.6.1",
+    "django-import-export==2.5.0",
 ]
 
 try:

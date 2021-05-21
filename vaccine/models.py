@@ -51,3 +51,11 @@ class VaccineRegistration(
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     data = models.JSONField(default=dict, blank=True, null=True)
+
+
+class VaccineSuburb(models.Model):
+    province = models.CharField(max_length=255)
+    municipality = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    suburb = models.CharField(max_length=255)
+    suburb_id = models.CharField(max_length=255)
