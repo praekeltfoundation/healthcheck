@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "celery",
     "django_filters",
+    "import_export",
     # monitoring apps
     "django_prometheus",
     "health_check",
