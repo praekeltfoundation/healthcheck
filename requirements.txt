@@ -44,7 +44,7 @@ PyYAML==5.4
 rapidpro-python==2.6.1
 redis==3.5.3
 regex==2020.7.14
-requests==2.24.0
+requests==2.25.1
 responses==0.10.15
 sentry-sdk==0.16.3
 six==1.15.0
