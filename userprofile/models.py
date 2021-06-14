@@ -225,6 +225,10 @@ class HealthCheckUserProfile(
         self.data["follow_up_optin"] = tbcheck.follow_up_optin
         self.data["synced_to_tb_rapidpro"] = False
 
+        for k, v in tbcheck.data.items():
+            if has_value(v):
+                self.data[k] = v
+
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
         indexes = [GinIndex(fields=["data"], name="userprofile__data__gin_idx")]

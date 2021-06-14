@@ -49,11 +49,18 @@ class HealthCheckUserProfileTests(TestCase):
             location=None,
             follow_up_optin=True,
             language="eng",
+            data={"donotreplace": "", "replaceint": 0, "replacebool": False},
         )
         profile = HealthCheckUserProfile(
             gender=TBCheck.GENDER_FEMALE,
             age=TBCheck.AGE_U18,
             location="+40.20361+40.20361",
+            data={
+                "donotreplace": "value",
+                "replaceint": 1,
+                "replacebool": True,
+                "existing": "value",
+            },
         )
         profile.update_from_tbcheck(tbCheck)
         self.assertEqual(profile.gender, TBCheck.GENDER_MALE)
@@ -61,7 +68,15 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.location, "+40.20361+40.20361")
         self.assertEqual(profile.language, "eng")
         self.assertEqual(
-            profile.data, {"follow_up_optin": True, "synced_to_tb_rapidpro": False},
+            profile.data,
+            {
+                "donotreplace": "value",
+                "replaceint": 0,
+                "replacebool": False,
+                "existing": "value",
+                "synced_to_tb_rapidpro": False,
+                "follow_up_optin": True,
+            },
         )
 
     def test_get_or_prefill_existing(self):

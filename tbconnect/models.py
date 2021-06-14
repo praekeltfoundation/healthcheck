@@ -96,6 +96,7 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     language = models.CharField(
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
+    data = models.JSONField(default=dict, blank=True, null=True)
 
     @property
     def hashed_msisdn(self):

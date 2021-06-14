@@ -87,5 +87,5 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
             },
             format="json",
         )
-        profile = HealthCheckUserProfile.objects.get(msisdn="27856454612")
-        self.assertEqual(profile.age, LNCheck.Age.AGE_18T39)
+        # profile = HealthCheckUserProfile.objects.get(msisdn="27856454612")
+        # self.assertEqual(profile.age, LNCheck.Age.AGE_18T39)
