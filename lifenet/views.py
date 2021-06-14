@@ -20,7 +20,7 @@ class LNCheckViewSet(GenericViewSet, CreateModelMixin):
         instance = serializer.save()
 
         profile = HealthCheckUserProfile.objects.get_or_prefill(msisdn=instance.msisdn)
-        profile.update_from_tbcheck(instance)
+        # profile.update_from_tbcheck(instance)
         profile.save()
 
         return instance
