@@ -73,6 +73,7 @@ def get_barcode_from_last_inbound_image(wa_id):
             and message["_vnd"]["v1"]["direction"] == "inbound"
         ):
             media = get_whatsapp_media(message["image"]["id"])
+            break
 
     if media:
         with tempfile.NamedTemporaryFile(mode="wb") as temp_image:
