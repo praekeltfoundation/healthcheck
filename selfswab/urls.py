@@ -31,6 +31,6 @@ urlpatterns = [
     path(
         "get_barcode_from_last_image/",
         GetBarcodeFromLastInboundImage.as_view(),
-        name="rest_get_barcode_from_last_image"
+        name="rest_get_barcode_from_last_image",
     ),
 ]
