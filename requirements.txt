@@ -55,3 +55,5 @@ urllib3==1.26.5
 vine==1.3.0
 watchdog==0.10.3
 zipp==3.1.0
+opencv-python-headless==4.5.2.54
+zbar-py==1.0.4

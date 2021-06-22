@@ -12,7 +12,7 @@ from .serializers import (
     SelfSwabScreenSerializer,
     SelfSwabTestSerializer,
 )
-from .utils import send_whatsapp_media_message
+from .utils import send_whatsapp_media_message, get_barcode_from_last_inbound_image
 
 
 class SelfSwabScreenViewSet(GenericViewSet, CreateModelMixin):
@@ -110,3 +110,16 @@ class SendTestResultPDFView(generics.GenericAPIView):
         send_whatsapp_media_message(test.msisdn, "document", test.pdf_media_id)
 
         return Response({}, status=status.HTTP_200_OK)
+
+
+class GetBarcodeFromLastInboundImage(generics.GenericAPIView):
+
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, *args, **kwargs):
+        data = request.data
+        wa_id = data.pop("wa_id", None)
+
+        barcode = get_barcode_from_last_inbound_image(wa_id)
+
+        return Response({"barcode": barcode}, status=status.HTTP_200_OK)
