@@ -7,6 +7,7 @@ from selfswab.views import (
     SelfSwabTestViewSet,
     WhitelistContactView,
     SendTestResultPDFView,
+    GetBarcodeFromLastInboundImage,
 )
 
 app_name = "selfswab"
@@ -26,5 +27,10 @@ urlpatterns = [
         "send_test_result_pdf/",
         SendTestResultPDFView.as_view(),
         name="rest_send_test_result_pdf",
+    ),
+    path(
+        "get_barcode_from_last_image/",
+        GetBarcodeFromLastInboundImage.as_view(),
+        name="rest_get_barcode_from_last_image"
     ),
 ]

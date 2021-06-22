@@ -1,5 +1,8 @@
+import cv2
+import zbar
 import re
 import requests
+import tempfile
 from django.conf import settings
 from urllib.parse import urljoin
 
@@ -43,7 +46,7 @@ def upload_turn_media(media, content_type="application/pdf"):
 
 def send_whatsapp_media_message(wa_id, media_type, media_id):
     headers = {
-        "Authorization": "Bearer {}".format(settings.SELFSWAB_TURN_TOKEN),
+        "Authorization": f"Bearer {settings.SELFSWAB_TURN_TOKEN}",
         "Content-Type": "application/json",
     }
 
@@ -59,3 +62,48 @@ def send_whatsapp_media_message(wa_id, media_type, media_id):
     )
     response.raise_for_status()
     return response
+
+
+def get_barcode_from_last_inbound_image(wa_id):
+    response = get_whatsapp_messages(wa_id)
+    media = None
+    for message in response["messages"]:
+        if (
+            message["type"] == "image"
+            and message["_vnd"]["v1"]["direction"] == "inbound"
+        ):
+            media = get_whatsapp_media(message["image"]["id"])
+
+    if media:
+        with tempfile.NamedTemporaryFile(mode="wb") as temp_image:
+            temp_image.write(media)
+            image = cv2.imread(temp_image.name, cv2.IMREAD_GRAYSCALE)
+
+            scanner = zbar.Scanner()
+            results = scanner.scan(image)
+
+            if results:
+                return results[0].data.decode("utf-8")
+
+
+def get_whatsapp_messages(wa_id):
+    headers = {
+        "Authorization": f"Bearer {settings.SELFSWAB_TURN_TOKEN}",
+        "content-type": "application/json",
+        "Accept": "application/vnd.v1+json",
+    }
+    response = requests.get(
+        urljoin(settings.SELFSWAB_TURN_URL, f"/v1/contacts/{wa_id}/messages"),
+        headers=headers,
+    )
+    response.raise_for_status()
+    return response.json()
+
+
+def get_whatsapp_media(media_id):
+    headers = {"Authorization": f"Bearer {settings.SELFSWAB_TURN_TOKEN}"}
+    response = requests.get(
+        urljoin(settings.SELFSWAB_TURN_URL, f"v1/media/{media_id}"), headers=headers
+    )
+    response.raise_for_status()
+    return response.content
