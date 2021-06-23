@@ -120,6 +120,6 @@ class GetBarcodeFromLastInboundImage(generics.GenericAPIView):
         data = request.data
         wa_id = data.pop("wa_id", None)
 
-        barcode = get_barcode_from_last_inbound_image(wa_id)
+        barcode, error = get_barcode_from_last_inbound_image(wa_id)
 
-        return Response({"barcode": barcode}, status=status.HTTP_200_OK)
+        return Response({"barcode": barcode, "error": error}, status=status.HTTP_200_OK)
