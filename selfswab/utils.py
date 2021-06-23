@@ -79,12 +79,17 @@ def get_barcode_from_last_inbound_image(wa_id):
         with tempfile.NamedTemporaryFile(mode="wb") as temp_image:
             temp_image.write(media)
             image = cv2.imread(temp_image.name, cv2.IMREAD_GRAYSCALE)
+            _, bw_image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
 
             scanner = zbar.Scanner()
-            results = scanner.scan(image)
+            results = scanner.scan(bw_image)
 
-            if results:
-                return results[0].data.decode("utf-8")
+            if len(results) == 1:
+                return results[0].data.decode("utf-8"), None
+            elif len(results) > 1:
+                return None, "Multiple barcodes in image"
+
+    return None, "No barcodes found"
 
 
 def get_whatsapp_messages(wa_id):
