@@ -15,7 +15,7 @@ class IsBarcodeFormatValidTests(TestCase):
         self.assertFalse(is_barcode_format_valid("123"))
         self.assertFalse(is_barcode_format_valid("CP123"))
         self.assertTrue(is_barcode_format_valid("CP159600000"))
-        self.assertFalse(is_barcode_format_valid("CP159601101"))
+        self.assertTrue(is_barcode_format_valid("CP159601101"))
         self.assertFalse(is_barcode_format_valid("CP158600001"))
 
         self.assertTrue(is_barcode_format_valid("CP159600001"))
@@ -29,6 +29,8 @@ class IsBarcodeFormatValidTests(TestCase):
         self.assertTrue(is_barcode_format_valid("CP999T99001"))
         self.assertTrue(is_barcode_format_valid("CP999T99055"))
         self.assertTrue(is_barcode_format_valid("CP999T99100"))
+
+        self.assertTrue(is_barcode_format_valid("CP1596100504"))
 
 
 class UploadTurnMediaTests(TestCase):
