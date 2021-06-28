@@ -26,9 +26,9 @@ def get_next_unique_contact_id():
 
 
 def is_barcode_format_valid(barcode):
-    matches = re.findall(r"^(CP159600)|(00[0-9]|0[0-9][0-9]|[0-9][0-9][0-9])$", barcode)
+    match = re.fullmatch(r"^CP1596\d{5,6}$", barcode)
     qa_matches = re.findall(r"^(CP999T99)|(00[0-9]|0[0-9][0-9]|100)$", barcode)
-    return len(matches) == 2 or len(qa_matches) == 2
+    return match or len(qa_matches) == 2
 
 
 def upload_turn_media(media, content_type="application/pdf"):
