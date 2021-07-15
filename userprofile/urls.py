@@ -3,6 +3,7 @@ from rest_framework import routers
 from userprofile.views import (
     Covid19TriageV2ViewSet,
     Covid19TriageV3ViewSet,
+    Covid19TriageV4ViewSet,
     Covid19TriageViewSet,
     HealthCheckUserProfileViewSet,
 )
@@ -16,3 +17,6 @@ v3router.register("covid19triage", Covid19TriageV2ViewSet, basename="covid19tria
 
 v4router = routers.DefaultRouter()
 v4router.register("covid19triage", Covid19TriageV3ViewSet, basename="covid19triagev3")
+
+v5router = routers.DefaultRouter()
+v5router.register("covid19triage", Covid19TriageV4ViewSet, basename="covid19triagev4")

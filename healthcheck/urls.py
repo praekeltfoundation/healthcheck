@@ -8,7 +8,7 @@ from lifenet.urls import v2router as lncheck_v2router
 from vaccine.urls import v2router as vaccine_v2router
 
 from userprofile.urls import v2router as userprofile_v2router
-from userprofile.urls import v3router, v4router
+from userprofile.urls import v3router, v4router, v5router
 
 global_v2router = routers.DefaultRouter()
 global_v2router.registry.extend(userprofile_v2router.registry)
@@ -26,4 +26,5 @@ urlpatterns = [
     path("v2/", include(global_v2router.urls)),
     path("v3/", include(v3router.urls)),
     path("v4/", include(v4router.urls)),
+    path("v5/", include(v5router.urls)),
 ]
