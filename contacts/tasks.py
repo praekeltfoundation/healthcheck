@@ -65,7 +65,7 @@ def perform_nofitications_check():
     """
     Notify active cases about contact phase end
     """
-    if not settings.CONTACT_NOTIFICATION_CHECK_ENABLED:
+    if not settings.CONTACT_NOTIFICATION_ENABLED:
         return "Periodic notification check disabled."
 
     notification_pool = Case.objects.with_end_date().up_for_notification()
