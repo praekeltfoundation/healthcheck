@@ -60,11 +60,14 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
     return f"Finished sending contact {confirmed_contact} update for {phone_number}."
 
 
-@periodic_task(run_every=crontab(minute=50, hour=1))
+@periodic_task(run_every=crontab(minute=50, hour=1),)
 def perform_nofitications_check():
     """
     Notify active cases about contact phase end
     """
+    if not settings.CONTACT_NOTIFICATION_CHECK_ENABLED:
+        return "Periodic notification check disabled."
+
     notification_pool = Case.objects.with_end_date().up_for_notification()
 
     logger.info(f"Pool of notifications: {notification_pool}")
