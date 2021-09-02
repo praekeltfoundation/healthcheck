@@ -434,6 +434,35 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
         )
 
         responses.add(
+            responses.GET,
+            f"https://rp-test.com/api/v2/groups.json",
+            json={
+                "next": None,
+                "previous": None,
+                "results": [
+                    {
+                        "uuid": "8a8276de-6b58-4f82-83b7-c4ee21664c7c",
+                        "name": "Some Dynamic Group",
+                        "query": "Some Query",
+                        "count": 111,
+                    },
+                    {
+                        "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                        "name": "SelfSwab Whitelist",
+                        "query": None,
+                        "count": 222,
+                    },
+                    {
+                        "uuid": "5a4eb79e-1b1f-4ae3-8700-09384cca385f",
+                        "name": "Customers",
+                        "query": None,
+                        "count": 333,
+                    },
+                ],
+            },
+        )
+
+        responses.add(
             responses.POST,
             "https://rp-test.com/api/v2/contacts.json",
             json={
@@ -466,7 +495,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
 
         self.assertEqual(response.status_code, 200)
 
-        [_, call] = responses.calls
+        [_, _, call] = responses.calls
         body = json.loads(call.request.body)
         self.assertEqual(
             body,

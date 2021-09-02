@@ -12,7 +12,11 @@ from .serializers import (
     SelfSwabScreenSerializer,
     SelfSwabTestSerializer,
 )
-from .utils import send_whatsapp_media_message, get_barcode_from_last_inbound_image
+from .utils import (
+    send_whatsapp_media_message,
+    get_barcode_from_last_inbound_image,
+    exclude_dynamic_groups,
+)
 
 
 class SelfSwabScreenViewSet(GenericViewSet, CreateModelMixin):
@@ -58,7 +62,9 @@ class WhitelistContactView(generics.GenericAPIView):
             contact = rapidpro.get_contacts(urn=f"whatsapp:{msisdn}").first()
 
             if contact:
-                group_ids = [g.uuid for g in contact.groups]
+                group_ids = exclude_dynamic_groups(
+                    rapidpro, [g.uuid for g in contact.groups]
+                )
 
                 if whitelist_group_uuid in group_ids:
                     return Response(
@@ -66,9 +72,8 @@ class WhitelistContactView(generics.GenericAPIView):
                         status=status.HTTP_400_BAD_REQUEST,
                     )
                 else:
-                    groups = contact.groups
-                    groups.append(whitelist_group_uuid)
-                    rapidpro.update_contact(contact, groups=groups)
+                    group_ids.append(whitelist_group_uuid)
+                    rapidpro.update_contact(contact, groups=group_ids)
 
                     return Response({}, status=status.HTTP_200_OK)
             else:
