@@ -113,3 +113,12 @@ def get_whatsapp_media(media_id):
     )
     response.raise_for_status()
     return response.content
+
+
+def exclude_dynamic_groups(rapidpro, group_ids):
+    normal_groups = []
+    all_groups = rapidpro.get_groups().all()
+    for group in all_groups:
+        if group.query is None and group.uuid in group_ids:
+            normal_groups.append(group.uuid)
+    return normal_groups
