@@ -1,3 +1,4 @@
+from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
 from django.urls import reverse
@@ -7,6 +8,7 @@ from rest_framework.test import APITestCase
 from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
+from tbconnect.serializers import TBCheckSerializer
 
 
 class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
@@ -131,6 +133,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(profile.province, "ZA-WC")
         self.assertEqual(profile.city, "Cape Town")
         self.assertEqual(profile.age, TBCheck.AGE_18T40)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
@@ -190,3 +193,45 @@ class TBTestViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(tbtest.msisdn, "27856454612")
         self.assertEqual(tbtest.source, "WhatsApp")
         self.assertEqual(tbtest.result, TBTest.RESULT_POSITIVE)
+
+
+class TBCheckSerializerTests(TestCase):
+    def test_valid_tbcheck(self):
+        """
+        If age is <18 skip location and location_
+        """
+        data = {
+            "msisdn": "+2349039756628",
+            "source": "WhatsApp",
+            "province": "ZA-GT",
+            "city": "<not collected>",
+            "age": "<18",
+            "gender": "male",
+            "cough": "True",
+            "fever": "False",
+            "sweat": "False",
+            "weight": "False",
+            "exposure": "no",
+            "tracing": "False",
+            "risk": "low",
+        }
+        serializer = TBCheckSerializer(data=data)
+        self.assertTrue(serializer.is_valid())
+        self.assertEqual(
+            dict(serializer.validated_data),
+            {
+                "age": "<18",
+                "city": "<not collected>",
+                "cough": True,
+                "exposure": "no",
+                "fever": False,
+                "gender": "male",
+                "msisdn": "+2349039756628",
+                "province": "ZA-GT",
+                "risk": "low",
+                "source": "WhatsApp",
+                "sweat": False,
+                "tracing": False,
+                "weight": False,
+            },
+        )
