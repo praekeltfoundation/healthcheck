@@ -13,8 +13,6 @@ class TBCheckSerializer(BaseEventSerializer):
 
     def validate(self, data):
         if data.get("age") == "<18":
-            print("Heloooooo")
-            print(data.get("age"))
             return data
         if not data.get("location") and not data.get("city_location"):
             raise serializers.ValidationError(
