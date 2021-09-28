@@ -1,6 +1,6 @@
-from django.contrib.auth.models import User
 from django.test import TestCase
 from tbconnect.serializers import TBCheckSerializer
+
 
 class TBCheckSerializerTests(TestCase):
     def test_valid_tbcheck(self):
@@ -13,7 +13,7 @@ class TBCheckSerializerTests(TestCase):
             "province": "ZA-GT",
             "city": "<not collected>",
             "age": "<18",
-            "gender":"male",
+            "gender": "male",
             "cough": "True",
             "fever": "False",
             "sweat": "False",
