@@ -53,6 +53,7 @@ class WhitelistContactView(generics.GenericAPIView):
 
         msisdn = data.pop("msisdn", None)
         whitelist_group_uuid = data.pop("whitelist_group_uuid", None)
+        active_study_number = data.pop("study_number", None)
 
         if settings.RAPIDPRO_URL and settings.SELFSWAB_RAPIDPRO_TOKEN:
             rapidpro = TembaClient(
@@ -73,13 +74,20 @@ class WhitelistContactView(generics.GenericAPIView):
                     )
                 else:
                     group_ids.append(whitelist_group_uuid)
-                    rapidpro.update_contact(contact, groups=group_ids)
+                    rapidpro.update_contact(
+                        contact,
+                        groups=group_ids,
+                        fields={"self_swab_study_number": active_study_number},
+                    )
 
                     return Response({}, status=status.HTTP_200_OK)
             else:
                 rapidpro.create_contact(
                     language="eng",
-                    fields={"msisdn": msisdn},
+                    fields={
+                        "msisdn": msisdn,
+                        "self_swab_study_number": active_study_number,
+                    },
                     groups=[whitelist_group_uuid],
                     urns=[f"whatsapp:{msisdn}"],
                 )

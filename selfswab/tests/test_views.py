@@ -317,6 +317,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                "study_number": 2,
             },
         )
 
@@ -331,6 +332,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                "study_number": 2,
             },
         )
 
@@ -365,7 +367,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
                         "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
                     }
                 ],
-                "fields": {"msisdn": "27123123"},
+                "fields": {"msisdn": "27123123", "self_swab_study_number": 2},
                 "blocked": False,
                 "stopped": False,
                 "created_on": "2015-11-11T13:05:57.457742Z",
@@ -379,6 +381,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                "study_number": 2,
             },
         )
 
@@ -391,7 +394,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "language": "eng",
                 "urns": ["whatsapp:27123123"],
-                "fields": {"msisdn": "27123123"},
+                "fields": {"msisdn": "27123123", "self_swab_study_number": 2},
                 "groups": ["da85c55c-c213-4cfc-9d6d-c88d97993bf3"],
             },
         )
@@ -476,7 +479,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
                         "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
                     }
                 ],
-                "fields": {"msisdn": "27123123"},
+                "fields": {"msisdn": "27123123", "self_swab_study_number": 2},
                 "blocked": False,
                 "stopped": False,
                 "created_on": "2015-11-11T13:05:57.457742Z",
@@ -490,6 +493,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                "study_number": 2,
             },
         )
 
@@ -500,10 +504,11 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
         self.assertEqual(
             body,
             {
+                "fields": {"self_swab_study_number": 2},
                 "groups": [
                     "5a4eb79e-1b1f-4ae3-8700-09384cca385f",
                     "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
-                ]
+                ],
             },
         )
 
@@ -533,7 +538,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
                                 "uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
                             }
                         ],
-                        "fields": {},
+                        "fields": {"self_swab_study_number": 2},
                         "blocked": False,
                         "stopped": False,
                         "created_on": "2015-11-11T13:05:57.457742Z",
@@ -578,6 +583,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
+                "study_number": 2,
             },
         )
 
