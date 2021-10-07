@@ -317,7 +317,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
-                "study_number": 2
+                "study_number": 2,
             },
         )
 
@@ -332,7 +332,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
-                "study_number": 2
+                "study_number": 2,
             },
         )
 
@@ -381,7 +381,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
-                "study_number": 2
+                "study_number": 2,
             },
         )
 
@@ -493,7 +493,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
-                "study_number": 2
+                "study_number": 2,
             },
         )
 
@@ -583,7 +583,7 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
             {
                 "msisdn": "27123123",
                 "whitelist_group_uuid": "da85c55c-c213-4cfc-9d6d-c88d97993bf3",
-                "study_number": 2
+                "study_number": 2,
             },
         )
 
