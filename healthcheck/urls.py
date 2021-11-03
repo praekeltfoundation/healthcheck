@@ -30,4 +30,5 @@ urlpatterns = [
     path("v3/", include(v3router.urls)),
     path("v4/", include(v4router.urls)),
     path("api/v5/", include(v5router.urls)),
+    path("v1/vaxchamps/", include("vaxchamps.urls")),
 ]
