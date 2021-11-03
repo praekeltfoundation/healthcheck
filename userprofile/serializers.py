@@ -2,6 +2,7 @@ import uuid
 
 import phonenumbers
 from rest_framework import serializers
+from drf_spectacular.utils import extend_schema_field
 
 from userprofile.models import Covid19Triage, HealthCheckUserProfile
 
@@ -159,6 +160,19 @@ class Covid19TriageV3Serializer(BaseEventSerializer):
         read_only_fields = ("id", "created_by")
 
 
+class HealthCheckUserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HealthCheckUserProfile
+        fields = "__all__"
+
+    def update(self, instance, validated_data):
+        if "data" in validated_data:
+            data = validated_data.pop("data")
+            instance.data.update(data)
+        super().update(instance, validated_data)
+        return instance
+
+
 class Covid19TriageV4Serializer(BaseEventSerializer):
     msisdn = MSISDNField(country="ZA")
     deduplication_id = serializers.CharField(default=uuid.uuid4, max_length=255)
@@ -203,19 +217,7 @@ class Covid19TriageV4Serializer(BaseEventSerializer):
         )
         read_only_fields = ("id", "created_by", "profile")
 
+    @extend_schema_field(HealthCheckUserProfileSerializer)
     def get_profile(self, obj):
         profile = HealthCheckUserProfile.objects.get_or_prefill(msisdn=obj.msisdn)
         return HealthCheckUserProfileSerializer(profile, many=False).data
-
-
-class HealthCheckUserProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = HealthCheckUserProfile
-        fields = "__all__"
-
-    def update(self, instance, validated_data):
-        if "data" in validated_data:
-            data = validated_data.pop("data")
-            instance.data.update(data)
-        super().update(instance, validated_data)
-        return instance

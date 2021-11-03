@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "celery",
     "django_filters",
     "import_export",
+    "drf_spectacular",
     # monitoring apps
     "django_prometheus",
     "health_check",
@@ -136,7 +137,10 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
     ),
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
+
+SPECTACULAR_SETTINGS = {"TITLE": "HealthCheck"}
 
 # this might be unneccessary if intented usage is international phone numbers
 PHONENUMBER_DB_FORMAT = "NATIONAL"
@@ -173,7 +177,7 @@ CACHES = {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": REDIS_URL,
         "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
-    },
+    }
 }
 
 TBCONNECT_BQ_KEY_PATH = env.str("TBCONNECT_BQ_KEY_PATH", "bq_credentials.json")

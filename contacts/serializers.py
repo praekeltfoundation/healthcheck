@@ -18,10 +18,7 @@ class ContactSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contact
-        fields = (
-            "id",
-            "msisdn",
-        )
+        fields = ("id", "msisdn")
         read_only_fields = ("id",)
 
 
@@ -48,9 +45,12 @@ class CaseSerializer(serializers.ModelSerializer):
             "created_at",
             "external_id",
         )
-        read_only_fields = (
-            "created_at",
-            "created_by",
-            "date_start",
-            "is_active",
-        )
+        read_only_fields = ("created_at", "created_by", "date_start", "is_active")
+
+
+class ConfirmedContactSerializer(serializers.Serializer):
+    msisdn = PhoneNumberField()
+    timestamp = serializers.DateTimeField()
+    external_id = serializers.CharField()
+    name = serializers.CharField(default="")
+    case_id = serializers.CharField(default="")
