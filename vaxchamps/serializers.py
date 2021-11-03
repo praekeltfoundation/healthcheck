@@ -1,6 +1,9 @@
-from rest_framework import serializers
-from phonenumber_field.serializerfields import PhoneNumberField
+from urllib.parse import urljoin
 
+import requests
+from django.conf import settings
+from phonenumber_field.serializerfields import PhoneNumberField
+from rest_framework import serializers
 
 LANGUAGES = {
     "eng": 1,
@@ -193,3 +196,22 @@ class RegistrationSerializer(serializers.Serializer):
         if data["district"] not in districts:
             raise serializers.ValidationError(f"district must be one of {districts}")
         return data
+
+    def validate_cell_no(self, value):
+        """
+        Check that the number is a WhatsApp contact
+        """
+        response = requests.post(
+            url=urljoin(settings.API_DOMAIN, "v1/contacts"),
+            headers={
+                "User-Agent": "healthcheck-django",
+                "Authorization": f"Bearer {settings.TURN_API_KEY}",
+                "Accept": "application/json",
+            },
+            json={"blocking": "wait", "contacts": [value.as_e164]},
+        )
+        response.raise_for_status()
+        for contact in response.json()["contacts"]:
+            if contact["status"] != "valid":
+                raise serializers.ValidationError("not a WhatsApp contact")
+        return value
