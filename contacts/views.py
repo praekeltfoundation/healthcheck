@@ -7,7 +7,7 @@ from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 
 from .models import Case, Contact
-from .serializers import CaseSerializer, ContactSerializer
+from .serializers import CaseSerializer, ContactSerializer, ConfirmedContactSerializer
 from .tasks import send_contact_update
 
 
@@ -37,6 +37,7 @@ class ConfirmedContactView(generics.GenericAPIView):
     ```
     """
 
+    serializer_class = ConfirmedContactSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
@@ -60,7 +61,7 @@ class ConfirmedContactView(generics.GenericAPIView):
 
         case_query = Case.objects.filter(external_id=data.get("external_id")).exists()
         if case_query:
-            return Response({"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,)
+            return Response({"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK)
         else:
             try:
                 case_serializer = CaseSerializer(data=data)
@@ -68,18 +69,16 @@ class ConfirmedContactView(generics.GenericAPIView):
                 case = case_serializer.save()
             except IntegrityError:
                 # race condition - raise error
-                return Response(
-                    {"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK,
-                )
+                return Response({"status": "ALREADY_EXISTS"}, status=status.HTTP_200_OK)
 
         # deactivate existing cases with earlier timestamp
-        Case.objects.filter(contact=contact, date_start__lte=case.date_start,).exclude(
-            id=case.id,
+        Case.objects.filter(contact=contact, date_start__lte=case.date_start).exclude(
+            id=case.id
         ).update(is_active=False)
 
         # deactivate case if it is not the latest for current contact
         if Case.objects.filter(
-            contact=contact, date_start__gt=case.date_start,
+            contact=contact, date_start__gt=case.date_start
         ).exists():
             case.is_active = False
             case.save(update_fields=("is_active",))
@@ -91,7 +90,7 @@ class ConfirmedContactView(generics.GenericAPIView):
 
         case.created_by = self.request.user
         case.contact = contact
-        case.save(update_fields=("created_by", "contact",))
+        case.save(update_fields=("created_by", "contact"))
 
         if case.is_active:
             # dispatch first notification task

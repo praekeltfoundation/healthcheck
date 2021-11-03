@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path  # noqa: F401
 from rest_framework import routers
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from selfswab.urls import v2router as selfswab_v2router
 from tbconnect.urls import v2router as tbcheck_v2router
@@ -18,6 +19,8 @@ global_v2router.registry.extend(selfswab_v2router.registry)
 global_v2router.registry.extend(vaccine_v2router.registry)
 
 urlpatterns = [
+    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
     path("prometheus/", include("django_prometheus.urls")),
     path("ht/", include("health_check.urls")),
     path("admin/", admin.site.urls),
@@ -27,4 +30,5 @@ urlpatterns = [
     path("v3/", include(v3router.urls)),
     path("v4/", include(v4router.urls)),
     path("api/v5/", include(v5router.urls)),
+    path("v1/vaxchamps/", include("vaxchamps.urls")),
 ]

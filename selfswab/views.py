@@ -11,6 +11,9 @@ from .serializers import (
     SelfSwabRegistrationSerializer,
     SelfSwabScreenSerializer,
     SelfSwabTestSerializer,
+    GetBarcodeFromLastInboundImageSerializer,
+    WhitelistContactSerializer,
+    SendTestResultPDFSerializer,
 )
 from .utils import (
     send_whatsapp_media_message,
@@ -46,6 +49,7 @@ class WhitelistContactView(generics.GenericAPIView):
     * whitelist_group_uuid
     """
 
+    serializer_class = WhitelistContactSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
@@ -108,6 +112,7 @@ class SendTestResultPDFView(generics.GenericAPIView):
     * barcode
     """
 
+    serializer_class = SendTestResultPDFSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
@@ -126,7 +131,7 @@ class SendTestResultPDFView(generics.GenericAPIView):
 
 
 class GetBarcodeFromLastInboundImage(generics.GenericAPIView):
-
+    serializer_class = GetBarcodeFromLastInboundImageSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
