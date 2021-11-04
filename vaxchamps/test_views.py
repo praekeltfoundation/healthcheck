@@ -7,8 +7,6 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from healthcheck.settings.base import VAXCHAMPS_RAPIDPRO_FLOW
-
 
 class RegistrationViewSetTests(APITestCase):
     def setUp(self):

@@ -14,6 +14,8 @@ from vaxchamps.serializers import (
     RegistrationSerializer,
 )
 
+rapidpro_client = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
+
 
 class CreateRegistrationPermissions(DjangoModelPermissions):
     perms_map = {"POST": ["vaxchamps.create_registration"]}
@@ -37,8 +39,7 @@ class RegistrationViewSet(viewsets.ViewSet):
             data["gender"] = GENDERS[data["gender"]]
         if data.get("age"):
             data["age"] = AGES[data["age"]]
-        rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
-        rapidpro.create_flow_start(
+        rapidpro_client.create_flow_start(
             settings.VAXCHAMPS_RAPIDPRO_FLOW, urns=[urn], extra=data
         )
 
