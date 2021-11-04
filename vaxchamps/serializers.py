@@ -1,141 +1,144 @@
-from rest_framework import serializers
-from phonenumber_field.serializerfields import PhoneNumberField
+from urllib.parse import urljoin
 
+import requests
+from django.conf import settings
+from phonenumber_field.serializerfields import PhoneNumberField
+from rest_framework import serializers
 
 LANGUAGES = {
-    "eng": 1,
-    "zul": 2,
-    "afr": 3,
-    "xho": 4,
-    "nso": 5,
-    "sot": 6,
-    "ven": 7,
-    "tsn": 8,
-    "nbl": 9,
-    "ssw": 10,
-    "tso": 11,
+    1: "eng",
+    2: "zul",
+    3: "afr",
+    4: "xho",
+    5: "nso",
+    6: "sot",
+    7: "ven",
+    8: "tsn",
+    9: "nbl",
+    10: "ssw",
+    11: "tso",
 }
 
 PROVINCES = {
-    "Eastern Cape": {
-        "id": 1,
+    1: {
+        "name": "Eastern Cape",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "Buffalo City Metropolitan": 3,
-            "Nelson Mandela Bay": 4,
-            "Alfred Nzo": 5,
-            "Amathole": 6,
-            "Chris Hani": 7,
-            "Joe Gqaba": 8,
-            "OR Tambo": 9,
-            "Sarah Baartman": 10,
+            1: "Don't know",
+            2: "Prefer not to say",
+            3: "Buffalo City Metropolitan",
+            4: "Nelson Mandela Bay",
+            5: "Alfred Nzo",
+            6: "Amathole",
+            7: "Chris Hani",
+            8: "Joe Gqaba",
+            9: "OR Tambo",
+            10: "Sarah Baartman",
         },
     },
-    "Free State": {
-        "id": 2,
+    2: {
+        "name": "Free State",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "Mangaung": 11,
-            "Fezile Dabi": 12,
-            "Lejweleputswa": 13,
-            "Thabo Mofutsanyana": 14,
-            "Xhariep": 15,
+            1: "Don't know",
+            2: "Prefer not to say",
+            11: "Mangaung",
+            12: "Fezile Dabi",
+            13: "Lejweleputswa",
+            14: "Thabo Mofutsanyana",
+            15: "Xhariep",
         },
     },
-    "Gauteng": {
-        "id": 3,
+    3: {
+        "name": "Gauteng",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "City of Ekurhuleni": 16,
-            "City of Johannesburg": 17,
-            "City of Tshwane": 18,
-            "Sedibeng": 19,
-            "West Rand": 20,
+            1: "Don't know",
+            2: "Prefer not to say",
+            16: "City of Ekurhuleni",
+            17: "City of Johannesburg",
+            18: "City of Tshwane",
+            19: "Sedibeng",
+            20: "West Rand",
         },
     },
-    "Kwazulu-natal": {
-        "id": 4,
+    4: {
+        "name": "Kwazulu-natal",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "eThekwini": 21,
-            "Amajuba": 22,
-            "Harry Gwala": 23,
-            "iLembe": 24,
-            "King Cetshwayo": 25,
-            "Ugu": 26,
-            "uMgungundlovu": 27,
-            "uMkhanyakude": 28,
-            "uMzinyathi": 29,
-            "uThukela": 30,
-            "Zululand": 31,
+            1: "Don't know",
+            2: "Prefer not to say",
+            21: "eThekwini",
+            22: "Amajuba",
+            23: "Harry Gwala",
+            24: "iLembe",
+            25: "King Cetshwayo",
+            26: "Ugu",
+            27: "uMgungundlovu",
+            28: "uMkhanyakude",
+            29: "uMzinyathi",
+            30: "uThukela",
+            31: "Zululand",
         },
     },
-    "Limpopo": {
-        "id": 5,
+    5: {
+        "name": "Limpopo",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "Capricorn": 32,
-            "Mopani": 33,
-            "Sekhukhune": 34,
-            "Vhembe": 35,
-            "Waterberg": 36,
+            1: "Don't know",
+            2: "Prefer not to say",
+            32: "Capricorn",
+            33: "Mopani",
+            34: "Sekhukhune",
+            35: "Vhembe",
+            36: "Waterberg",
         },
     },
-    "Mpumalanga": {
-        "id": 6,
+    6: {
+        "name": "Mpumalanga",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "Ehlanzeni": 37,
-            "Gert Sibande": 38,
-            "Nkangala": 39,
+            1: "Don't know",
+            2: "Prefer not to say",
+            37: "Ehlanzeni",
+            38: "Gert Sibande",
+            39: "Nkangala",
         },
     },
-    "Northern Cape": {
-        "id": 7,
+    7: {
+        "name": "Northern Cape",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "Frances Baard": 40,
-            "John Taolo Gaetsewe": 41,
-            "Namakwa": 42,
-            "Pixley Ka Seme": 43,
-            "ZF Mgcawu": 44,
+            1: "Don't know",
+            2: "Prefer not to say",
+            40: "Frances Baard",
+            41: "John Taolo Gaetsewe",
+            42: "Namakwa",
+            43: "Pixley Ka Seme",
+            44: "ZF Mgcawu",
         },
     },
-    "North West": {
-        "id": 8,
+    8: {
+        "name": "North West",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "Bojanala Platinum": 45,
-            "Dr Kenneth Kaunda": 46,
-            "Dr Ruth Segomotsi": 47,
-            "Ngaka Modiri Molema": 48,
+            1: "Don't know",
+            2: "Prefer not to say",
+            45: "Bojanala Platinum",
+            46: "Dr Kenneth Kaunda",
+            47: "Dr Ruth Segomotsi",
+            48: "Ngaka Modiri Molema",
         },
     },
-    "Western Cape": {
-        "id": 9,
+    9: {
+        "name": "Western Cape",
         "districts": {
-            "Don't know": 1,
-            "Prefer not to say": 2,
-            "City of Cape Town": 49,
-            "Cape Winelands": 50,
-            "Central Karoo": 51,
-            "Garden Route": 52,
-            "Overberg": 53,
-            "West Coast": 54,
+            1: "Don't know",
+            2: "Prefer not to say",
+            49: "City of Cape Town",
+            50: "Cape Winelands",
+            51: "Central Karoo",
+            52: "Garden Route",
+            53: "Overberg",
+            54: "West Coast",
         },
     },
-    "Outside SA": {"id": 10, "districts": {"Don't know": 1, "Prefer not to say": 2}},
-    "Prefer not to say": {
-        "id": 11,
-        "districts": {"Don't know": 1, "Prefer not to say": 2},
+    10: {"name": "Outside SA", "districts": {1: "Don't know", 2: "Prefer not to say"}},
+    11: {
+        "name": "Prefer not to say",
+        "districts": {1: "Don't know", 2: "Prefer not to say"},
     },
 }
 
@@ -144,38 +147,38 @@ for province in PROVINCES.values():
     for k, v in province["districts"].items():
         DISTRICTS[k] = v
 
-GENDERS = {"Female": 1, "Male": 2, "Other": 3, "Prefer not to say": 4}
+GENDERS = {1: "Female", 2: "Male", 3: "Other", 4: "Prefer not to say"}
 
 AGES = {
-    "12-17 years": 2,
-    "18-34 years": 3,
-    "35-49 years": 4,
-    "50-59 years": 5,
-    "60 years and older": 6,
-    "Prefer not to say": 7,
+    2: "12-17 years",
+    3: "18-34 years",
+    4: "35-49 years",
+    5: "50-59 years",
+    6: "60 years and older",
+    7: "Prefer not to say",
 }
 
 
 class RegistrationSerializer(serializers.Serializer):
     name = serializers.CharField()
     cell_no = PhoneNumberField()
-    lang = serializers.ChoiceField(choices=[(v, k) for k, v in LANGUAGES.items()])
+    lang = serializers.ChoiceField(choices=list(LANGUAGES.items()))
     comms_choice = serializers.ChoiceField(choices=[(1, "WhatsApp")])
     email = serializers.EmailField(allow_blank=True, default="")
     popia_consent = serializers.ChoiceField(choices=[(0, "Yes")])
     province = serializers.ChoiceField(
-        choices=[(v["id"], k) for k, v in PROVINCES.items()],
+        choices=[(k, v["name"]) for k, v in PROVINCES.items()],
         allow_null=True,
         default=None,
     )
     district = serializers.ChoiceField(
-        choices=[(v, k) for k, v in DISTRICTS.items()], allow_null=True, default=None
+        choices=list(DISTRICTS.items()), allow_null=True, default=None
     )
     gender = serializers.ChoiceField(
-        choices=[(v, k) for k, v in GENDERS.items()], allow_null=True, default=None
+        choices=list(GENDERS.items()), allow_null=True, default=None
     )
     age = serializers.ChoiceField(
-        choices=[(v, k) for k, v in AGES.items()], allow_null=True, default=None
+        choices=list(AGES.items()), allow_null=True, default=None
     )
 
     def validate(self, data):
@@ -188,8 +191,27 @@ class RegistrationSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 "province is required if district is provided"
             )
-        province = {v["id"]: v for v in PROVINCES.values()}[data["province"]]
-        districts = [v for v in province["districts"].values()]
+        province = PROVINCES[data["province"]]
+        districts = list(province["districts"].keys())
         if data["district"] not in districts:
             raise serializers.ValidationError(f"district must be one of {districts}")
         return data
+
+    def validate_cell_no(self, value):
+        """
+        Check that the number is a WhatsApp contact
+        """
+        response = requests.post(
+            url=urljoin(settings.API_DOMAIN, "v1/contacts"),
+            headers={
+                "User-Agent": "healthcheck-django",
+                "Authorization": f"Bearer {settings.TURN_API_KEY}",
+                "Accept": "application/json",
+            },
+            json={"blocking": "wait", "contacts": [value.as_e164]},
+        )
+        response.raise_for_status()
+        for contact in response.json()["contacts"]:
+            if contact["status"] != "valid":
+                raise serializers.ValidationError("not a WhatsApp contact")
+        return value
