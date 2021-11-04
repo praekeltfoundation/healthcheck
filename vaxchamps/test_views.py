@@ -7,6 +7,8 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+from vaxchamps.views import rapidpro_client
+
 
 class RegistrationViewSetTests(APITestCase):
     def setUp(self):
@@ -15,6 +17,7 @@ class RegistrationViewSetTests(APITestCase):
             "https://whatsapp.turn.io/v1/contacts",
             json={"contacts": [{"status": "valid"}]},
         )
+        rapidpro_client.root_url = "https://textit.in/api/v2"
         responses.add(
             responses.POST,
             "https://textit.in/api/v2/flow_starts.json",
@@ -55,8 +58,7 @@ class RegistrationViewSetTests(APITestCase):
             "age": 3,
         }
         with self.settings(
-            RAPIDPRO_URL="https://textit.in",
-            VAXCHAMPS_RAPIDPRO_FLOW="fde8a8e4-b973-42e4-aa96-dbc5ef70164d",
+            VAXCHAMPS_RAPIDPRO_FLOW="fde8a8e4-b973-42e4-aa96-dbc5ef70164d"
         ):
             response = self.client.post(url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
