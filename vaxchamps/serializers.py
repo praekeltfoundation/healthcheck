@@ -6,17 +6,17 @@ from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 
 LANGUAGES = {
-    1: "eng",
-    2: "zul",
-    3: "afr",
-    4: "xho",
-    5: "nso",
-    6: "sot",
-    7: "ven",
-    8: "tsn",
-    9: "nbl",
-    10: "ssw",
-    11: "tso",
+    1: "English",
+    2: "isiZulu",
+    3: "Afrikaans",
+    4: "isiXhosa",
+    5: "Sesotho sa Leboa",
+    6: "Sesotho",
+    7: "Tshivenda",
+    8: "Setswana",
+    9: "isiNdebele",
+    10: "siSwati",
+    11: "Xitsonga",
 }
 
 PROVINCES = {

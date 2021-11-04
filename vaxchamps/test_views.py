@@ -72,7 +72,7 @@ class RegistrationViewSetTests(APITestCase):
                 "district": "City of Cape Town",
                 "email": "test@example.org",
                 "gender": "Male",
-                "lang": "eng",
+                "lang": "English",
                 "name": "test name",
                 "popia_consent": 0,
                 "province": "Western Cape",
