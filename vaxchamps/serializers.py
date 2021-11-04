@@ -149,14 +149,7 @@ for province in PROVINCES.values():
 
 GENDERS = {1: "Female", 2: "Male", 3: "Other", 4: "Prefer not to say"}
 
-AGES = {
-    2: "12-17 years",
-    3: "18-34 years",
-    4: "35-49 years",
-    5: "50-59 years",
-    6: "60 years and older",
-    7: "Prefer not to say",
-}
+AGES = {2: "<18", 3: "18-34", 4: "35-49", 5: "50-59", 6: "60+", 7: "Prefer not to say"}
 
 
 class RegistrationSerializer(serializers.Serializer):

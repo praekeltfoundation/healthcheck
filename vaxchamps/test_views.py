@@ -66,7 +66,7 @@ class RegistrationViewSetTests(APITestCase):
         self.assertEqual(
             json.loads(request.request.body)["extra"],
             {
-                "age": "18-34 years",
+                "age": "18-34",
                 "cell_no": "+27820001001",
                 "comms_choice": 1,
                 "district": "City of Cape Town",
