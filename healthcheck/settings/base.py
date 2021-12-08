@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # local apps
     "users",
     "contacts",
+    "covid_cases",
     "userprofile",
     "tbconnect",
     "selfswab",
