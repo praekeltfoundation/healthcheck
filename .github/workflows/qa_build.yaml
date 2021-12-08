@@ -54,7 +54,7 @@ jobs:
         with:
           images: |
             ghcr.io/${{ github.repository }}
-            ${{ github.repository }}
+            praekeltfoundation/healthcheck-django
           tags: |
             type=sha
       - name: login to ghcr
