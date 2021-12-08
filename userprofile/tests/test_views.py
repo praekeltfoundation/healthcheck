@@ -190,7 +190,7 @@ class Covid19TriageViewSetTests(APITestCase, BaseEventTestCase):
             f"{urlencode({'timestamp_gt': triage_old.timestamp.isoformat()})}"
         )
 
-        r = dict(response.data[0])
+        r = dict(response.data["results"][0])
 
         correct_data = {
             "msisdn": "+27820001001",
@@ -293,7 +293,7 @@ class Covid19TriageV2ViewSetTests(Covid19TriageViewSetTests):
             f"{urlencode({'timestamp_gt': triage_old.timestamp.isoformat()})}"
         )
 
-        r = dict(response.data[0])
+        r = dict(response.data["results"][0])
 
         correct_data = {
             "msisdn": "+27820001001",
@@ -418,7 +418,7 @@ class Covid19TriageV4ViewSetTests(Covid19TriageViewSetTests):
             f"{self.url}?"
             f"{urlencode({'timestamp_gt': triage_old.timestamp.isoformat()})}"
         )
-        r = dict(response.data[0])
+        r = dict(response.data["results"][0])
         r.pop("id")
         r.pop("deduplication_id")
         r.pop("timestamp")
@@ -655,7 +655,7 @@ class Covid19TriageV3ViewSetTests(Covid19TriageViewSetTests):
             f"{urlencode({'timestamp_gt': triage_old.timestamp.isoformat()})}"
         )
 
-        r = dict(response.data[0])
+        r = dict(response.data["results"][0])
 
         correct_data = {
             "msisdn": "+27820001001",
