@@ -7,6 +7,7 @@ from selfswab.urls import v2router as selfswab_v2router
 from tbconnect.urls import v2router as tbcheck_v2router
 from lifenet.urls import v2router as lncheck_v2router
 from vaccine.urls import v2router as vaccine_v2router
+from covid_cases.urls import v2router as covidcases_v2router
 
 from userprofile.urls import v2router as userprofile_v2router
 from userprofile.urls import v3router, v4router, v5router
@@ -17,6 +18,7 @@ global_v2router.registry.extend(tbcheck_v2router.registry)
 global_v2router.registry.extend(lncheck_v2router.registry)
 global_v2router.registry.extend(selfswab_v2router.registry)
 global_v2router.registry.extend(vaccine_v2router.registry)
+global_v2router.registry.extend(covidcases_v2router.registry)
 
 urlpatterns = [
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
