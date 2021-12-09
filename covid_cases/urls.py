@@ -1,11 +1,11 @@
 from rest_framework import routers
 
 from covid_cases.views import (
-    ProvinceViewSet,
     DistrictViewSet,
+    ProvinceViewSet,
     SubDistrictViewSet,
-    WardViewSet,
     WardCaseViewSet,
+    WardViewSet,
 )
 
 v2router = routers.DefaultRouter()

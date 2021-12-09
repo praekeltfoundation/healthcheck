@@ -1,14 +1,15 @@
-from rest_framework import permissions, pagination, viewsets
+from rest_framework import pagination, permissions, viewsets
 from rest_framework.decorators import action
+
+from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
 from covid_cases.serializers import (
-    ProvinceSerializer,
     DistrictSerializer,
+    ProvinceSerializer,
     SubDistrictSerializer,
-    WardSerializer,
-    WardCaseSerializer,
     WardCaseFlatSerializer,
+    WardCaseSerializer,
+    WardSerializer,
 )
-from covid_cases.models import Province, District, SubDistrict, Ward, WardCase
 
 
 class IdCursorPagination(pagination.CursorPagination):

@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from covid_cases.models import Province, District, SubDistrict, Ward, WardCase
+
+from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
 
 
 class ProvinceSerializer(serializers.ModelSerializer):
@@ -78,6 +79,7 @@ class WardCaseFlatSerializer(serializers.ModelSerializer):
         model = WardCase
         fields = [
             "id",
+            "object_id",
             "ward_id",
             "ward_number",
             "subdistrict",
@@ -99,6 +101,7 @@ class WardCaseFlatSerializer(serializers.ModelSerializer):
             "unknown_age",
             "latest",
             "total_number_of_cases",
+            "date",
             "created_at",
             "updated_at",
         ]

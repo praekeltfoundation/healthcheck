@@ -1,12 +1,6 @@
 from django.contrib import admin
 
-from covid_cases.models import (
-    Province,
-    District,
-    SubDistrict,
-    Ward,
-    WardCase,
-)
+from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
 
 
 @admin.register(Province)

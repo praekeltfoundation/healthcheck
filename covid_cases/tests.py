@@ -1,40 +1,63 @@
+import gzip
+import json
+from datetime import date
+
+import responses
+from django.test import override_settings
 from django.urls import reverse
-from rest_framework.test import APITestCase
 from rest_framework import status
-from covid_cases.models import Province, District, SubDistrict, Ward, WardCase
-from covid_cases.views import WardCaseViewSet
+from rest_framework.test import APITestCase
+
+from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
+from covid_cases.tasks import (
+    get_api_total_cases,
+    get_database_total_cases,
+    get_district,
+    get_province,
+    get_sub_district,
+    get_ward,
+    normalise_text,
+    scrape_nicd_gis,
+)
+
+
+def generate_mock_db_data(self):
+    get_province.cache_clear()
+    get_district.cache_clear()
+    get_sub_district.cache_clear()
+
+    self.province = Province.objects.create(name="Western Cape")
+    self.district = District.objects.create(name="West Coast", province=self.province)
+    self.sub_district = SubDistrict.objects.create(
+        name="Matzikama", subdistrict_id=260, district=self.district
+    )
+    self.ward = Ward.objects.create(
+        ward_id="10101001", ward_number="1", sub_district=self.sub_district
+    )
+    self.ward_case = WardCase.objects.create(
+        object_id=1,
+        ward=self.ward,
+        male=401,
+        female=364,
+        age_1_10=12,
+        age_11_20=88,
+        age_21_30=153,
+        age_31_40=148,
+        age_41_50=186,
+        age_51_60=110,
+        age_61_70=46,
+        age_71_80=13,
+        age_81=9,
+        unknown_age=0,
+        unknown_gender=0,
+        latest=0,
+        total_number_of_cases=765,
+        date=date(2021, 12, 9),
+    )
 
 
 class CovidCasesViewsTests(APITestCase):
-    def setUp(self):
-        self.province = Province.objects.create(name="Western Cape")
-        self.district = District.objects.create(
-            name="West Coast", province=self.province
-        )
-        self.sub_district = SubDistrict.objects.create(
-            name="Matzikama", subdistrict_id=260, district=self.district
-        )
-        self.ward = Ward.objects.create(
-            ward_id="10101001", ward_number="1", sub_district=self.sub_district
-        )
-        self.ward_case = WardCase.objects.create(
-            ward=self.ward,
-            male=401,
-            female=364,
-            age_1_10=12,
-            age_11_20=88,
-            age_21_30=153,
-            age_31_40=148,
-            age_41_50=186,
-            age_51_60=110,
-            age_61_70=46,
-            age_71_80=13,
-            age_81=9,
-            unknown_age=0,
-            unknown_gender=0,
-            latest=0,
-            total_number_of_cases=765,
-        )
+    setUp = generate_mock_db_data
 
     def test_get_ward_cases_flat(self):
         url = reverse("wardcase-flat")
@@ -63,3 +86,66 @@ class CovidCasesViewsTests(APITestCase):
         self.assertEqual(ward_case["unknown_age"], 0)
         self.assertEqual(ward_case["latest"], 0)
         self.assertEqual(ward_case["total_number_of_cases"], 765)
+
+
+class CovidCasesTasksTests(APITestCase):
+    setUp = generate_mock_db_data
+
+    def test_normalise_text(self):
+        self.assertEqual(normalise_text("  test TEXT "), "Test Text")
+
+    def test_get_api_total_cases(self):
+        with gzip.open("covid_cases/mock_data/gis_nicd.txt.gz") as f:
+            self.assertEqual(get_api_total_cases(json.loads(f.read())), 3051206)
+
+    def test_get_database_total_cases(self):
+        WardCase.objects.create(
+            object_id=2,
+            ward=self.ward,
+            male=63,
+            female=61,
+            age_1_10=1,
+            age_11_20=13,
+            age_21_30=27,
+            age_31_40=24,
+            age_41_50=22,
+            age_51_60=23,
+            age_61_70=7,
+            age_71_80=7,
+            age_81=1,
+            unknown_age=0,
+            unknown_gender=1,
+            latest=0,
+            total_number_of_cases=125,
+            date=date(2021, 12, 8),
+        )
+        self.assertEqual(get_database_total_cases(), 765)
+
+    def test_get_ward(self):
+        self.assertEqual(
+            self.ward,
+            get_ward(
+                province="Western Cape",
+                district="West Coast",
+                sub_district="Matzikama",
+                sub_district_id=260,
+                ward_id="10101001",
+                ward_number="1",
+            ),
+        )
+
+    @responses.activate
+    @override_settings(ENABLE_NICD_GIS_SCRAPING=True)
+    def test_scrape_nicd_gis(self):
+        WardCase.objects.all().delete()
+        with gzip.open("covid_cases/mock_data/gis_nicd.txt.gz") as f:
+            data = json.loads(f.read())
+            # Only do the first 100 so that the test remains quick
+            data["features"] = data["features"][:100]
+            responses.add(
+                method="GET",
+                url="https://gis.nicd.ac.za/hosting/rest/services/WARDS_MN/MapServer/0/query",
+                body=json.dumps(data),
+            )
+        r = scrape_nicd_gis()
+        self.assertEqual(WardCase.objects.count(), 100)
