@@ -1,14 +1,12 @@
-import re
 from datetime import date
 
-import requests
 from celery.exceptions import SoftTimeLimitExceeded
 from django.conf import settings
 from django.db import transaction
 from requests.exceptions import RequestException
 
-from covid_cases.clients import NICDGISClient
-from covid_cases.models import Ward, WardCase
+from covid_cases.clients import NICDGISClient, SACoronavirusClient
+from covid_cases.models import SACoronavirusCounter, Ward, WardCase
 from covid_cases.utils import normalise_text
 from healthcheck.celery import app
 
@@ -72,3 +70,48 @@ def scrape_nicd_gis():
             else:
                 updated += 1
     return f"Created {created} case entries, updated {updated} case entries"
+
+
+@app.task(
+    autoretry_for=(RequestException, SoftTimeLimitExceeded),
+    max_retries=5,
+    retry_backoff=True,
+    soft_time_limit=60,
+    time_limit=90,
+    acks_late=True,
+)
+def scrape_sacoronavirus_homepage():
+    if not settings.ENABLE_SACORONAVIRUS_SCRAPING:
+        return "Skipping task, disabled in config"
+    client = SACoronavirusClient()
+    # Only update if any of the numbers have increased
+    try:
+        api_values = client.get_homepage_counters()
+        db_values = SACoronavirusCounter.objects.latest("date")
+        if all(
+            (
+                db_values.tests >= api_values.tests,
+                db_values.positive >= api_values.positive,
+                db_values.recoveries >= api_values.recoveries,
+                db_values.deaths >= api_values.deaths,
+                db_values.vaccines >= api_values.vaccines,
+            )
+        ):
+            return f"Skipping, no increases in values {api_values}"
+    except SACoronavirusCounter.DoesNotExist:
+        pass
+
+    _, c = SACoronavirusCounter.objects.update_or_create(
+        date=date.today(),
+        defaults={
+            "tests": api_values.tests,
+            "positive": api_values.positive,
+            "recoveries": api_values.recoveries,
+            "deaths": api_values.deaths,
+            "vaccines": api_values.vaccines,
+        },
+    )
+    if c:
+        return f"Created {date.today().isoformat()} {api_values}"
+    else:
+        return f"Updated {date.today().isoformat()} {api_values}"
