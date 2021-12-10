@@ -3,6 +3,7 @@ from rest_framework import serializers
 from covid_cases.models import (
     District,
     Province,
+    SACoronavirusCaseImage,
     SACoronavirusCounter,
     SubDistrict,
     Ward,
@@ -124,6 +125,26 @@ class SACoronavirusCounterSerializer(serializers.ModelSerializer):
             "recoveries",
             "deaths",
             "vaccines",
+            "date",
+            "created_at",
+            "updated_at",
+        ]
+
+
+class SACoronavirusCaseImageSerializer(serializers.ModelSerializer):
+    image_size = serializers.IntegerField(source="image.size")
+    image_width = serializers.IntegerField(source="image.width")
+    image_height = serializers.IntegerField(source="image.height")
+
+    class Meta:
+        model = SACoronavirusCaseImage
+        fields = [
+            "id",
+            "url",
+            "image",
+            "image_size",
+            "image_width",
+            "image_height",
             "date",
             "created_at",
             "updated_at",

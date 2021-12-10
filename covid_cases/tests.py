@@ -12,13 +12,19 @@ from covid_cases.clients import NICDGISClient
 from covid_cases.models import (
     District,
     Province,
+    SACoronavirusCaseImage,
     SACoronavirusCounter,
     SubDistrict,
     Ward,
     WardCase,
 )
-from covid_cases.tasks import scrape_nicd_gis, scrape_sacoronavirus_homepage
+from covid_cases.tasks import (
+    scrape_nicd_gis,
+    scrape_sacoronavirus_case_images,
+    scrape_sacoronavirus_homepage,
+)
 from covid_cases.utils import normalise_text
+from healthcheck.settings.base import API_DOMAIN, ENABLE_SACORONAVIRUS_SCRAPING
 
 
 def generate_mock_db_data(self):
@@ -182,3 +188,24 @@ class ScrapeSACoronavirusHomepageTests(APITestCase):
 
         result = scrape_sacoronavirus_homepage()
         self.assertIn("Skipping, no increase", result)
+
+
+class ScrapeSACoronavirusImageTests(APITestCase):
+    @responses.activate
+    @override_settings(ENABLE_SACORONAVIRUS_SCRAPING=True)
+    def test_scape_sacoronavirus_image(self):
+        with gzip.open("covid_cases/mock_data/sacoronavirus_image.html.gz") as f:
+            responses.add(
+                method="GET",
+                url="https://sacoronavirus.co.za/category/daily-cases",
+                body=f.read(),
+            )
+        with open("covid_cases/mock_data/20211209-dec-map.jpg", "rb") as f:
+            responses.add(
+                method="GET",
+                url="https://sacoronavirus.b-cdn.net/wp-content/uploads/2021/12/09-dec-map.jpg",
+                body=f.read(),
+            )
+        result = scrape_sacoronavirus_case_images()
+        self.assertEqual(result, "Downloaded 1 images")
+        self.assertEqual(SACoronavirusCaseImage.objects.all().count(), 1)

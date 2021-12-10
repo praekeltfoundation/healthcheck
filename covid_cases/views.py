@@ -1,10 +1,12 @@
 from django.db.models import query
 from rest_framework import pagination, permissions, viewsets
 from rest_framework.decorators import action
+from rest_framework.serializers import Serializer
 
 from covid_cases.models import (
     District,
     Province,
+    SACoronavirusCaseImage,
     SACoronavirusCounter,
     SubDistrict,
     Ward,
@@ -13,6 +15,7 @@ from covid_cases.models import (
 from covid_cases.serializers import (
     DistrictSerializer,
     ProvinceSerializer,
+    SACoronavirusCaseImageSerializer,
     SACoronavirusCounterSerializer,
     SubDistrictSerializer,
     WardCaseFlatSerializer,
@@ -76,5 +79,12 @@ class WardCaseViewSet(viewsets.ModelViewSet):
 class SACoronavirusCounterViewSet(viewsets.ModelViewSet):
     queryset = SACoronavirusCounter.objects.all()
     serializer_class = SACoronavirusCounterSerializer
+    permissions_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
+    pagination_class = IdCursorPagination
+
+
+class SACoronavirusCaseImageViewSet(viewsets.ModelViewSet):
+    queryset = SACoronavirusCaseImage.objects.all()
+    serializer_class = SACoronavirusCaseImageSerializer
     permissions_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
     pagination_class = IdCursorPagination

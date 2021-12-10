@@ -1,4 +1,6 @@
+import os
 import re
+from urllib.parse import urlparse
 
 
 def normalise_text(text: str) -> str:
@@ -7,3 +9,8 @@ def normalise_text(text: str) -> str:
     or trailing whitespace.
     """
     return re.sub(r"\s+", " ", text).strip().title()
+
+
+def get_filename_from_url(url: str) -> str:
+    url = urlparse(url)
+    return os.path.basename(url.path)

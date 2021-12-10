@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path  # noqa: F401
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework import routers
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
@@ -34,3 +36,8 @@ urlpatterns = [
     path("api/v5/", include(v5router.urls)),
     path("v1/vaxchamps/", include("vaxchamps.urls")),
 ]
+
+# Need to add this for media files to work for development
+# Django defaults to sending static files in dev mode, but not media files
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

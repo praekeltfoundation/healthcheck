@@ -1,13 +1,20 @@
 from datetime import date
 
+import requests
 from celery.exceptions import SoftTimeLimitExceeded
 from django.conf import settings
+from django.core.files.base import ContentFile
 from django.db import transaction
 from requests.exceptions import RequestException
 
 from covid_cases.clients import NICDGISClient, SACoronavirusClient
-from covid_cases.models import SACoronavirusCounter, Ward, WardCase
-from covid_cases.utils import normalise_text
+from covid_cases.models import (
+    SACoronavirusCaseImage,
+    SACoronavirusCounter,
+    Ward,
+    WardCase,
+)
+from covid_cases.utils import get_filename_from_url, normalise_text
 from healthcheck.celery import app
 
 
@@ -115,3 +122,37 @@ def scrape_sacoronavirus_homepage():
         return f"Created {date.today().isoformat()} {api_values}"
     else:
         return f"Updated {date.today().isoformat()} {api_values}"
+
+
+@app.task(
+    autoretry_for=(RequestException, SoftTimeLimitExceeded),
+    max_retries=5,
+    retry_backoff=True,
+    soft_time_limit=300,
+    time_limit=400,
+    acks_late=True,
+)
+def scrape_sacoronavirus_case_images():
+    if not settings.ENABLE_SACORONAVIRUS_SCRAPING:
+        return "Skipping task, disabled in config"
+    client = SACoronavirusClient()
+    # Only update if we don't have this file yet
+    total = 0
+    for image in client.get_daily_cases_image_urls():
+        try:
+            SACoronavirusCaseImage.objects.get(url=image.url)
+            continue
+        except SACoronavirusCaseImage.DoesNotExist:
+            pass
+        image_data = requests.get(
+            image.url, headers={"User-Agent": "contactndoh-whatsapp"}, timeout=30
+        )
+        image_data.raise_for_status()
+        file = ContentFile(
+            image_data.content, name=get_filename_from_url(image_data.url)
+        )
+        SACoronavirusCaseImage.objects.create(
+            url=image.url, image=file, date=image.date
+        )
+        total += 1
+    return f"Downloaded {total} images"
