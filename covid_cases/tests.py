@@ -9,12 +9,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 
 from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
-from covid_cases.tasks import (
-    get_api_total_cases,
-    get_database_total_cases,
-    normalise_text,
-    scrape_nicd_gis,
-)
+from covid_cases.tasks import get_api_total_cases, normalise_text, scrape_nicd_gis
 
 
 def generate_mock_db_data(self):
@@ -115,7 +110,7 @@ class CovidCasesTasksTests(APITestCase):
             total_number_of_cases=125,
             date=date(2021, 12, 8),
         )
-        self.assertEqual(get_database_total_cases(), 765)
+        self.assertEqual(WardCase.get_database_total_cases(), 765)
 
     def test_get_ward(self):
         self.assertEqual(

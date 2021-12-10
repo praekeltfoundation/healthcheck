@@ -4,7 +4,7 @@ from datetime import date
 from functools import lru_cache
 
 from django.db import models
-from django.db.models import constraints
+from django.db.models import Max, Sum, constraints
 
 
 class Province(models.Model):
@@ -215,3 +215,13 @@ class WardCase(models.Model):
 
     def __str__(self):
         return self.created_at.isoformat()
+
+    @staticmethod
+    def get_database_total_cases() -> int:
+        latest_date = WardCase.objects.aggregate(latest_date=Max("date"))["latest_date"]
+        return (
+            WardCase.objects.filter(date=latest_date).aggregate(
+                total=Sum("total_number_of_cases")
+            )["total"]
+            or 0
+        )

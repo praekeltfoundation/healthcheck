@@ -1,12 +1,10 @@
 import re
 from datetime import date
-from functools import lru_cache
 
 import requests
 from celery.exceptions import SoftTimeLimitExceeded
 from django.conf import settings
 from django.db import transaction
-from django.db.models import Max, Sum
 from requests.exceptions import RequestException
 
 from covid_cases.models import Ward, WardCase
@@ -22,16 +20,6 @@ def get_api_total_cases(api_data: dict) -> int:
     for record in api_data["features"]:
         total_cases += record["attributes"]["Tot_No_of_Cases"]
     return total_cases
-
-
-def get_database_total_cases() -> int:
-    latest_date = WardCase.objects.aggregate(latest_date=Max("date"))["latest_date"]
-    return (
-        WardCase.objects.filter(date=latest_date).aggregate(
-            total=Sum("total_number_of_cases")
-        )["total"]
-        or 0
-    )
 
 
 @app.task(
@@ -59,7 +47,7 @@ def scrape_nicd_gis():
     response.raise_for_status()
 
     # Only update if the total number of cases has increased
-    db_total = get_database_total_cases()
+    db_total = WardCase.get_database_total_cases()
     api_total = get_api_total_cases(response.json())
     if db_total >= api_total:
         return f"Skipping, database cases {db_total} >= API cases {api_total}"
