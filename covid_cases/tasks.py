@@ -7,19 +7,13 @@ from django.conf import settings
 from django.db import transaction
 from requests.exceptions import RequestException
 
+from covid_cases.clients import NICDGISClient
 from covid_cases.models import Ward, WardCase
 from healthcheck.celery import app
 
 
 def normalise_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip().title()
-
-
-def get_api_total_cases(api_data: dict) -> int:
-    total_cases = 0
-    for record in api_data["features"]:
-        total_cases += record["attributes"]["Tot_No_of_Cases"]
-    return total_cases
 
 
 @app.task(
@@ -33,28 +27,17 @@ def get_api_total_cases(api_data: dict) -> int:
 def scrape_nicd_gis():
     if not settings.ENABLE_NICD_GIS_SCRAPING:
         return "Skipping task, disabled in config"
-    response = requests.get(
-        url="https://gis.nicd.ac.za/hosting/rest/services/WARDS_MN/MapServer/0/query",
-        params={
-            "where": "1=1",
-            "outFields": "*",
-            "returnGeometry": "false",
-            "f": "json",
-        },
-        headers={"User-Agent": "contactndoh-whatsapp"},
-        timeout=50,
-    )
-    response.raise_for_status()
+    client = NICDGISClient()
 
     # Only update if the total number of cases has increased
     db_total = WardCase.get_database_total_cases()
-    api_total = get_api_total_cases(response.json())
+    api_total = client.get_total_cases()
     if db_total >= api_total:
         return f"Skipping, database cases {db_total} >= API cases {api_total}"
 
     created, updated = 0, 0
     with transaction.atomic():
-        for record in response.json()["features"]:
+        for record in client.get_ward_cases_data()["features"]:
             record = record["attributes"]
             ward = Ward.get_ward(
                 province=normalise_text(record["Province"] or ""),

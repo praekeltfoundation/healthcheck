@@ -8,8 +8,9 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+from covid_cases.clients import NICDGISClient
 from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
-from covid_cases.tasks import get_api_total_cases, normalise_text, scrape_nicd_gis
+from covid_cases.tasks import normalise_text, scrape_nicd_gis
 
 
 def generate_mock_db_data(self):
@@ -85,9 +86,17 @@ class CovidCasesTasksTests(APITestCase):
     def test_normalise_text(self):
         self.assertEqual(normalise_text("  test TEXT "), "Test Text")
 
+    @responses.activate
     def test_get_api_total_cases(self):
         with gzip.open("covid_cases/mock_data/gis_nicd.txt.gz") as f:
-            self.assertEqual(get_api_total_cases(json.loads(f.read())), 3051206)
+            responses.add(
+                method="GET",
+                url="https://gis.nicd.ac.za/hosting/rest/services/WARDS_MN/MapServer/0/query",
+                body=f.read(),
+            )
+        client = NICDGISClient()
+        with gzip.open("covid_cases/mock_data/gis_nicd.txt.gz") as f:
+            self.assertEqual(client.get_total_cases(), 3051206)
 
     def test_get_database_total_cases(self):
         WardCase.objects.create(
