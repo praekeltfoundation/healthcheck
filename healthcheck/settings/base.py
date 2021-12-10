@@ -1,3 +1,4 @@
+from celery.schedules import crontab
 import os
 
 import environ
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     # local apps
     "users",
     "contacts",
+    "covid_cases",
     "userprofile",
     "tbconnect",
     "selfswab",
@@ -139,6 +141,8 @@ REST_FRAMEWORK = {
     ),
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "PAGE_SIZE": 1000,
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.CursorPagination",
 }
 
 SPECTACULAR_SETTINGS = {"TITLE": "HealthCheck"}
@@ -157,6 +161,12 @@ CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", "redis://localhost:6379
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")
 CELERY_RESULT_SERIALIZER = env.str("CELERY_RESULT_SERIALIZER", "json")
+CELERY_BEAT_SCHEDULE = {
+    "scrape-nicd-gis": {
+        "task": "covid_cases.tasks.scrape_nicd_gis",
+        "schedule": crontab(minute="0"),
+    }
+}
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
 API_DOMAIN = env.str("API_DOMAIN", "https://whatsapp.turn.io/")
@@ -198,3 +208,5 @@ LIFENET_BQ_KEY_PATH = env.str("LIFENET_BQ_KEY_PATH", "bq_credentials.json")
 LIFENET_BQ_DATASET = env.str("LIFENET_BQ_DATASET", "wassup-165700.lifenet")
 
 CONTACT_NOTIFICATION_ENABLED = env.bool("CONTACT_NOTIFICATION_ENABLED", False)
+
+ENABLE_NICD_GIS_SCRAPING = env.bool("ENABLE_NICD_GIS_SCRAPING", False)
