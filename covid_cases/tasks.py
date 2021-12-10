@@ -9,7 +9,7 @@ from django.db import transaction
 from django.db.models import Max, Sum
 from requests.exceptions import RequestException
 
-from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
+from covid_cases.models import Ward, WardCase
 from healthcheck.celery import app
 
 
@@ -32,45 +32,6 @@ def get_database_total_cases() -> int:
         )["total"]
         or 0
     )
-
-
-@lru_cache(maxsize=None)
-def get_province(province: str):
-    province, _ = Province.objects.get_or_create(name=province)
-    return province
-
-
-@lru_cache(maxsize=None)
-def get_district(province: str, district: str):
-    province = get_province(province)
-    district, _ = District.objects.get_or_create(province=province, name=district)
-    return district
-
-
-@lru_cache(maxsize=None)
-def get_sub_district(
-    province: str, district: str, sub_district: str, sub_district_id: int
-):
-    district = get_district(province, district)
-    sub_district, _ = SubDistrict.objects.get_or_create(
-        district=district, name=sub_district, subdistrict_id=sub_district_id
-    )
-    return sub_district
-
-
-def get_ward(
-    province: str,
-    district: str,
-    sub_district: str,
-    sub_district_id: int,
-    ward_id: str,
-    ward_number: str,
-) -> Ward:
-    sub_district = get_sub_district(province, district, sub_district, sub_district_id)
-    ward, _ = Ward.objects.get_or_create(
-        sub_district=sub_district, ward_id=ward_id, ward_number=ward_number
-    )
-    return ward
 
 
 @app.task(
@@ -107,7 +68,7 @@ def scrape_nicd_gis():
     with transaction.atomic():
         for record in response.json()["features"]:
             record = record["attributes"]
-            ward = get_ward(
+            ward = Ward.get_ward(
                 province=normalise_text(record["Province"] or ""),
                 district=normalise_text(record["District"] or ""),
                 sub_district=normalise_text(record["Sub_Distri"] or ""),

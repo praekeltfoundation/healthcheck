@@ -12,19 +12,15 @@ from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
 from covid_cases.tasks import (
     get_api_total_cases,
     get_database_total_cases,
-    get_district,
-    get_province,
-    get_sub_district,
-    get_ward,
     normalise_text,
     scrape_nicd_gis,
 )
 
 
 def generate_mock_db_data(self):
-    get_province.cache_clear()
-    get_district.cache_clear()
-    get_sub_district.cache_clear()
+    Province.get_province.cache_clear()
+    District.get_district.cache_clear()
+    SubDistrict.get_sub_district.cache_clear()
 
     self.province = Province.objects.create(name="Western Cape")
     self.district = District.objects.create(name="West Coast", province=self.province)
@@ -124,7 +120,7 @@ class CovidCasesTasksTests(APITestCase):
     def test_get_ward(self):
         self.assertEqual(
             self.ward,
-            get_ward(
+            Ward.get_ward(
                 province="Western Cape",
                 district="West Coast",
                 sub_district="Matzikama",
@@ -133,6 +129,15 @@ class CovidCasesTasksTests(APITestCase):
                 ward_number="1",
             ),
         )
+        with self.assertNumQueries(1):
+            Ward.get_ward(
+                province="Western Cape",
+                district="West Coast",
+                sub_district="Matzikama",
+                sub_district_id=260,
+                ward_id="10101001",
+                ward_number="1",
+            ),
 
     @responses.activate
     @override_settings(ENABLE_NICD_GIS_SCRAPING=True)

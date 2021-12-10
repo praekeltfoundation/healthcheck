@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 from datetime import date
+from functools import lru_cache
 
 from django.db import models
 from django.db.models import constraints
@@ -22,6 +25,12 @@ class Province(models.Model):
         constraints = [
             constraints.UniqueConstraint(fields=["name"], name="unique_province")
         ]
+
+    @staticmethod
+    @lru_cache(maxsize=None)
+    def get_province(province: str) -> Province:
+        province, _ = Province.objects.get_or_create(name=province)
+        return province
 
 
 class District(models.Model):
@@ -51,6 +60,13 @@ class District(models.Model):
                 fields=["province", "name"], name="unique_district"
             )
         ]
+
+    @staticmethod
+    @lru_cache(maxsize=None)
+    def get_district(province: str, district: str) -> District:
+        province = Province.get_province(province)
+        district, _ = District.objects.get_or_create(province=province, name=district)
+        return district
 
 
 class SubDistrict(models.Model):
@@ -83,6 +99,17 @@ class SubDistrict(models.Model):
             )
         ]
 
+    @staticmethod
+    @lru_cache(maxsize=None)
+    def get_sub_district(
+        province: str, district: str, sub_district: str, sub_district_id: int
+    ) -> SubDistrict:
+        district = District.get_district(province, district)
+        sub_district, _ = SubDistrict.objects.get_or_create(
+            district=district, name=sub_district, subdistrict_id=sub_district_id
+        )
+        return sub_district
+
 
 class Ward(models.Model):
     ward_id = models.CharField(max_length=80, blank=True)
@@ -108,6 +135,23 @@ class Ward(models.Model):
                 fields=["sub_district", "ward_id", "ward_number"], name="unique_ward"
             )
         ]
+
+    @staticmethod
+    def get_ward(
+        province: str,
+        district: str,
+        sub_district: str,
+        sub_district_id: int,
+        ward_id: str,
+        ward_number: str,
+    ) -> Ward:
+        sub_district = SubDistrict.get_sub_district(
+            province, district, sub_district, sub_district_id
+        )
+        ward, _ = Ward.objects.get_or_create(
+            sub_district=sub_district, ward_id=ward_id, ward_number=ward_number
+        )
+        return ward
 
 
 class WardCase(models.Model):
