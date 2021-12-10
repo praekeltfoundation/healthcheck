@@ -6,3 +6,4 @@ DATABASES = {
     "default": env.db(),  # noqa: F405
 }
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")  # noqa: F405
+DEFAULT_FILE_STORAGE = env.str("DEFAULT_FILE_STORAGE")  # noqa: F405
