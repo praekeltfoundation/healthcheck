@@ -165,7 +165,11 @@ CELERY_BEAT_SCHEDULE = {
     "scrape-nicd-gis": {
         "task": "covid_cases.tasks.scrape_nicd_gis",
         "schedule": crontab(minute="0"),
-    }
+    },
+    "scrape-sacoronavirus": {
+        "task": "covid_cases.tasks.scrape_sacoronavirus_homepage",
+        "schedule": crontab(minute="0"),
+    },
 }
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
