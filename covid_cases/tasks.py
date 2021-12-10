@@ -9,11 +9,8 @@ from requests.exceptions import RequestException
 
 from covid_cases.clients import NICDGISClient
 from covid_cases.models import Ward, WardCase
+from covid_cases.utils import normalise_text
 from healthcheck.celery import app
-
-
-def normalise_text(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip().title()
 
 
 @app.task(

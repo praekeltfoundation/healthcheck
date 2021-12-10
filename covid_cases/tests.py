@@ -10,7 +10,8 @@ from rest_framework.test import APITestCase
 
 from covid_cases.clients import NICDGISClient
 from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
-from covid_cases.tasks import normalise_text, scrape_nicd_gis
+from covid_cases.tasks import scrape_nicd_gis
+from covid_cases.utils import normalise_text
 
 
 def generate_mock_db_data(self):
