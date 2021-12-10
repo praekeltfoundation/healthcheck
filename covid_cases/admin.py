@@ -1,6 +1,13 @@
 from django.contrib import admin
 
-from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
+from covid_cases.models import (
+    District,
+    Province,
+    SACoronavirusCounter,
+    SubDistrict,
+    Ward,
+    WardCase,
+)
 
 
 @admin.register(Province)
@@ -25,4 +32,9 @@ class WardAdmin(admin.ModelAdmin):
 
 @admin.register(WardCase)
 class WardCaseAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(SACoronavirusCounter)
+class SACoronavirusCounterAdmin(admin.ModelAdmin):
     pass

@@ -9,8 +9,15 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 
 from covid_cases.clients import NICDGISClient
-from covid_cases.models import District, Province, SubDistrict, Ward, WardCase
-from covid_cases.tasks import scrape_nicd_gis
+from covid_cases.models import (
+    District,
+    Province,
+    SACoronavirusCounter,
+    SubDistrict,
+    Ward,
+    WardCase,
+)
+from covid_cases.tasks import scrape_nicd_gis, scrape_sacoronavirus_homepage
 from covid_cases.utils import normalise_text
 
 
@@ -157,5 +164,21 @@ class CovidCasesTasksTests(APITestCase):
                 url="https://gis.nicd.ac.za/hosting/rest/services/WARDS_MN/MapServer/0/query",
                 body=json.dumps(data),
             )
-        r = scrape_nicd_gis()
+        scrape_nicd_gis()
         self.assertEqual(WardCase.objects.count(), 100)
+
+
+class ScrapeSACoronavirusHomepageTests(APITestCase):
+    @responses.activate
+    @override_settings(ENABLE_SACORONAVIRUS_SCRAPING=True)
+    def test_scrape_sacoronavirus_hompage(self):
+        with gzip.open("covid_cases/mock_data/sacoronavirus.txt.gz") as f:
+            responses.add(
+                method="GET", url="https://sacoronavirus.co.za", body=f.read(),
+            )
+        result = scrape_sacoronavirus_homepage()
+        self.assertIn("tests=19988045", result)
+        self.assertEqual(SACoronavirusCounter.objects.all().count(), 1)
+
+        result = scrape_sacoronavirus_homepage()
+        self.assertIn("Skipping, no increase", result)

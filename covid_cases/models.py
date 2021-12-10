@@ -225,3 +225,26 @@ class WardCase(models.Model):
             )["total"]
             or 0
         )
+
+
+class SACoronavirusCounter(models.Model):
+    tests = models.PositiveIntegerField(help_text="Total tests completed")
+    positive = models.PositiveIntegerField(help_text="Total positive cases identified")
+    recoveries = models.PositiveIntegerField(help_text="Total recoveries")
+    deaths = models.PositiveIntegerField(help_text="Total deaths")
+    vaccines = models.PositiveIntegerField(help_text="Total vaccines administered")
+    date = models.DateField(default=date.today, help_text="The day the data is for")
+    created_at = models.DateTimeField(
+        auto_now_add=True, help_text="When this was added to the database"
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True, help_text="When this was last updated"
+    )
+
+    class Meta:
+        constraints = [
+            constraints.UniqueConstraint(fields=["date"], name="unique_counters")
+        ]
+
+    def __str__(self):
+        return self.date.isoformat()
