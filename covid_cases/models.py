@@ -248,3 +248,23 @@ class SACoronavirusCounter(models.Model):
 
     def __str__(self):
         return self.date.isoformat()
+
+
+class SACoronavirusCaseImage(models.Model):
+    url = models.URLField(help_text="The original URL of the image")
+    image = models.ImageField(help_text="The cases image")
+    date = models.DateField(default=date.today, help_text="The day the data is for")
+    created_at = models.DateTimeField(
+        auto_now_add=True, help_text="When this was added to the database"
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True, help_text="When this was last updated"
+    )
+
+    class Meta:
+        constraints = [
+            constraints.UniqueConstraint(fields=["url"], name="unique_image")
+        ]
+
+    def __str__(self):
+        return self.date.isoformat()

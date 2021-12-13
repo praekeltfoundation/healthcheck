@@ -170,6 +170,10 @@ CELERY_BEAT_SCHEDULE = {
         "task": "covid_cases.tasks.scrape_sacoronavirus_homepage",
         "schedule": crontab(minute="0"),
     },
+    "scrape-sacoronavirus-images": {
+        "task": "covid_cases.tasks.scrape_sacoronavirus_case_images",
+        "schedule": crontab(minute="0"),
+    },
 }
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")

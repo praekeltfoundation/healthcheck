@@ -3,6 +3,7 @@ from django.contrib import admin
 from covid_cases.models import (
     District,
     Province,
+    SACoronavirusCaseImage,
     SACoronavirusCounter,
     SubDistrict,
     Ward,
@@ -37,4 +38,9 @@ class WardCaseAdmin(admin.ModelAdmin):
 
 @admin.register(SACoronavirusCounter)
 class SACoronavirusCounterAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(SACoronavirusCaseImage)
+class SACoronavirusCaseImageAdmin(admin.ModelAdmin):
     pass
