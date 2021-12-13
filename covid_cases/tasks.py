@@ -13,7 +13,6 @@ from covid_cases.models import (
     SACoronavirusCounter,
     Ward,
     WardCase,
-    WardCaseQuerySet,
 )
 from covid_cases.utils import get_filename_from_url, normalise_text
 from healthcheck.celery import app
