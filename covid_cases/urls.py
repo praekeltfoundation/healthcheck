@@ -1,6 +1,7 @@
 from rest_framework import routers
 
 from covid_cases.views import (
+    ContactNDoHCasesViewSet,
     DistrictViewSet,
     ProvinceViewSet,
     SACoronavirusCaseImageViewSet,
@@ -18,3 +19,6 @@ v2router.register("covidcases/ward", WardViewSet)
 v2router.register("covidcases/wardcase", WardCaseViewSet)
 v2router.register("covidcases/sacoronavirus_counters", SACoronavirusCounterViewSet)
 v2router.register("covidcases/sacoronavirus_images", SACoronavirusCaseImageViewSet)
+v2router.register(
+    "covidcases/contactndoh", ContactNDoHCasesViewSet, basename="contactndoh"
+),

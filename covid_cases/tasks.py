@@ -32,7 +32,7 @@ def scrape_nicd_gis():
     client = NICDGISClient()
 
     # Only update if the total number of cases has increased
-    db_total = WardCase.get_database_total_cases()
+    db_total = WardCase.objects.get_total_cases()
     api_total = client.get_total_cases()
     if db_total >= api_total:
         return f"Skipping, database cases {db_total} >= API cases {api_total}"

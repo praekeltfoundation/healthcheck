@@ -3,6 +3,7 @@ import json
 from datetime import date
 
 import responses
+from django.core.files import File
 from django.test import override_settings
 from django.urls import reverse
 from rest_framework import status
@@ -56,8 +57,22 @@ def generate_mock_db_data(self):
         age_81=9,
         unknown_age=0,
         unknown_gender=0,
-        latest=0,
+        latest=20,
         total_number_of_cases=765,
+        date=date(2021, 12, 9),
+    )
+
+    with open("covid_cases/mock_data/20211209-dec-map.jpg", "rb") as f:
+        self.image = SACoronavirusCaseImage.objects.create(
+            image=File(f), date=date(2021, 12, 9)
+        )
+
+    self.counter = SACoronavirusCounter.objects.create(
+        tests=20238805,
+        positive=3167497,
+        recoveries=2913232,
+        deaths=90137,
+        vaccines=27090975,
         date=date(2021, 12, 9),
     )
 
@@ -90,7 +105,7 @@ class CovidCasesViewsTests(APITestCase):
         self.assertEqual(ward_case["age_71_80"], 13)
         self.assertEqual(ward_case["age_81"], 9)
         self.assertEqual(ward_case["unknown_age"], 0)
-        self.assertEqual(ward_case["latest"], 0)
+        self.assertEqual(ward_case["latest"], 20)
         self.assertEqual(ward_case["total_number_of_cases"], 765)
 
 
@@ -133,7 +148,7 @@ class CovidCasesTasksTests(APITestCase):
             total_number_of_cases=125,
             date=date(2021, 12, 8),
         )
-        self.assertEqual(WardCase.get_database_total_cases(), 765)
+        self.assertEqual(WardCase.objects.get_total_cases(), 765)
 
     def test_get_ward(self):
         self.assertEqual(
@@ -209,3 +224,51 @@ class ScrapeSACoronavirusImageTests(APITestCase):
         result = scrape_sacoronavirus_case_images()
         self.assertEqual(result, "Downloaded 1 images")
         self.assertEqual(SACoronavirusCaseImage.objects.all().count(), 1)
+
+
+class ContactNDoHCasesTests(APITestCase):
+    setUp = generate_mock_db_data
+
+    def test_missing_previous_day(self):
+        url = reverse("contactndoh-list")
+        response = self.client.get(url)
+        self.assertEqual(response.data["image"]["id"], self.image.id)
+        self.assertEqual(response.data["counter"]["id"], self.counter.id)
+        self.assertEqual(response.data["latest"], 20)
+        self.assertEqual(response.data["latest_provinces"], {"Western Cape": 20})
+
+    def test_previous_day_present(self):
+        SACoronavirusCounter.objects.create(
+            tests=20238805,
+            positive=3167467,
+            recoveries=2913232,
+            deaths=90137,
+            vaccines=27090975,
+            date=date(2021, 12, 8),
+        )
+        WardCase.objects.create(
+            object_id=1,
+            ward=self.ward,
+            male=401,
+            female=364,
+            age_1_10=12,
+            age_11_20=88,
+            age_21_30=153,
+            age_31_40=148,
+            age_41_50=186,
+            age_51_60=110,
+            age_61_70=46,
+            age_71_80=13,
+            age_81=9,
+            unknown_age=0,
+            unknown_gender=0,
+            latest=20,
+            total_number_of_cases=795,
+            date=date(2021, 12, 8),
+        )
+        url = reverse("contactndoh-list")
+        response = self.client.get(url)
+        self.assertEqual(response.data["image"]["id"], self.image.id)
+        self.assertEqual(response.data["counter"]["id"], self.counter.id)
+        self.assertEqual(response.data["latest"], 30)
+        self.assertEqual(response.data["latest_provinces"], {"Western Cape": 30})

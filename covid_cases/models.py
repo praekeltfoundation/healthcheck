@@ -154,6 +154,35 @@ class Ward(models.Model):
         return ward
 
 
+class WardCaseQuerySet(models.QuerySet):
+    MOST_RECENT = object()
+
+    def get_case_diff(self, start_date, end_date):
+        """
+        Get the difference in cases between two days. If we don't have the last day's
+        data, then use the latest field.
+        """
+        total = self.filter(date=start_date).aggregate(
+            total=Sum("total_number_of_cases")
+        )["total"]
+        prev_total = self.filter(date=end_date).aggregate(
+            total=Sum("total_number_of_cases")
+        )["total"]
+        if total and prev_total:
+            return total - prev_total
+        return self.filter(date=end_date).aggregate(total=Sum("latest"))["total"]
+
+    def get_total_cases(self, date=MOST_RECENT):
+        if date == self.MOST_RECENT:
+            try:
+                date = self.latest("date").date
+            except WardCase.DoesNotExist:
+                return 0
+        return self.filter(date=date).aggregate(total=Sum("total_number_of_cases"))[
+            "total"
+        ]
+
+
 class WardCase(models.Model):
     object_id = models.PositiveIntegerField(help_text="Unique ID for this entry")
     ward = models.ForeignKey(
@@ -206,6 +235,8 @@ class WardCase(models.Model):
         auto_now=True, help_text="When this was last updated"
     )
 
+    objects = WardCaseQuerySet.as_manager()
+
     class Meta:
         constraints = [
             constraints.UniqueConstraint(
@@ -215,16 +246,6 @@ class WardCase(models.Model):
 
     def __str__(self):
         return self.created_at.isoformat()
-
-    @staticmethod
-    def get_database_total_cases() -> int:
-        latest_date = WardCase.objects.aggregate(latest_date=Max("date"))["latest_date"]
-        return (
-            WardCase.objects.filter(date=latest_date).aggregate(
-                total=Sum("total_number_of_cases")
-            )["total"]
-            or 0
-        )
 
 
 class SACoronavirusCounter(models.Model):
