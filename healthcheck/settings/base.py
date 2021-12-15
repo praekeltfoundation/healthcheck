@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "django_filters",
     "import_export",
     "drf_spectacular",
+    "django_celery_results",
     # monitoring apps
     "django_prometheus",
     "health_check",
@@ -157,7 +158,7 @@ CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
 # Redis is used in dev env, RabbitMQ on production.
 BROKER_URL = env.str("CELERY_BROKER_URL", "redis://localhost:6379/0")
 REDIS_URL = env.str("REDIS_URL", "redis://localhost:6379/0")
-CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
+CELERY_RESULT_BACKEND = "django-db"
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = env.str("CELERY_TASK_SERIALIZER", "json")
 CELERY_RESULT_SERIALIZER = env.str("CELERY_RESULT_SERIALIZER", "json")
@@ -198,6 +199,7 @@ CACHES = {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": REDIS_URL,
         "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
+        "KEY_PREFIX": env.str("REDIS_PREFIX", ""),
     }
 }
 

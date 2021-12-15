@@ -3,6 +3,7 @@ import json
 from datetime import date
 
 import responses
+from django.core.cache import cache
 from django.core.files import File
 from django.test import override_settings
 from django.urls import reverse
@@ -25,13 +26,13 @@ from covid_cases.tasks import (
     scrape_sacoronavirus_homepage,
 )
 from covid_cases.utils import normalise_text
-from healthcheck.settings.base import API_DOMAIN, ENABLE_SACORONAVIRUS_SCRAPING
 
 
 def generate_mock_db_data(self):
     Province.get_province.cache_clear()
     District.get_district.cache_clear()
     SubDistrict.get_sub_district.cache_clear()
+    cache.delete("latest_image")
 
     self.province = Province.objects.create(name="Western Cape")
     self.district = District.objects.create(name="West Coast", province=self.province)
