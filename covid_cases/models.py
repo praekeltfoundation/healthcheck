@@ -4,7 +4,7 @@ from datetime import date
 from functools import lru_cache
 
 from django.db import models
-from django.db.models import Max, Sum, constraints
+from django.db.models import Sum, constraints
 
 
 class Province(models.Model):

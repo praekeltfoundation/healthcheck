@@ -3,6 +3,7 @@ from datetime import date
 import requests
 from celery.exceptions import SoftTimeLimitExceeded
 from django.conf import settings
+from django.core.cache import cache
 from django.core.files.base import ContentFile
 from django.db import transaction
 from requests.exceptions import RequestException
@@ -155,4 +156,6 @@ def scrape_sacoronavirus_case_images():
             url=image.url, image=file, date=image.date
         )
         total += 1
+    if total > 0:
+        cache.delete("latest_image")
     return f"Downloaded {total} images"

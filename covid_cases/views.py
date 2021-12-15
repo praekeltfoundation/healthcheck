@@ -23,6 +23,7 @@ from covid_cases.serializers import (
     WardCaseSerializer,
     WardSerializer,
 )
+from covid_cases.utils import cache_method
 
 
 class IdCursorPagination(pagination.CursorPagination):
@@ -94,15 +95,19 @@ class SACoronavirusCaseImageViewSet(viewsets.ModelViewSet):
 class ContactNDoHCasesViewSet(viewsets.ViewSet):
     permissions_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+    @cache_method("latest_image", 60 * 60)
+    def get_latest_image(self):
+        # We cache the image so that the signed URL doesn't change too often, so that
+        # the image can be cached
+        image = SACoronavirusCaseImage.objects.latest("date")
+        return SACoronavirusCaseImageSerializer(image).data
+
     def list(self, request):
         """
         Provides a combined and aggregated view of the latest case data that will be
         used for the CASES keyword on ContactNDoH
         """
-        response = {}
-
-        image = SACoronavirusCaseImage.objects.latest("date")
-        response["image"] = SACoronavirusCaseImageSerializer(image).data
+        response = {"image": self.get_latest_image()}
 
         counter = SACoronavirusCounter.objects.latest("date")
         response["counter"] = SACoronavirusCounterSerializer(counter).data
