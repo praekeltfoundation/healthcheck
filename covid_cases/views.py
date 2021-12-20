@@ -112,27 +112,19 @@ class ContactNDoHCasesViewSet(viewsets.ViewSet):
         counter = SACoronavirusCounter.objects.latest("date")
         response["counter"] = SACoronavirusCounterSerializer(counter).data
 
-        latest_wardcase = WardCase.objects.latest("date")
-        response["timestamp"] = latest_wardcase.updated_at
-        latest_date = latest_wardcase.date
-
         try:
+            # If we have a day before's data, then we can include daily numbers
             last_counter = SACoronavirusCounter.objects.get(
                 date=counter.date - timedelta(days=1)
             )
-            response["latest"] = counter.positive - last_counter.positive
+            response["daily"] = {
+                "tests": counter.tests - last_counter.tests,
+                "positive": counter.positive - last_counter.positive,
+                "recoveries": counter.recoveries - last_counter.recoveries,
+                "deaths": counter.deaths - last_counter.deaths,
+                "vaccines": counter.vaccines - last_counter.vaccines,
+            }
         except SACoronavirusCounter.DoesNotExist:
-            # If we don't have a counter for the last day, try wardcases
-            response["latest"] = WardCase.objects.get_case_diff(
-                latest_date - timedelta(days=1), latest_date
-            )
-
-        response["latest_provinces"] = {}
-        for province in Province.objects.all():
-            if province.name in ("", "Pending"):
-                continue
-            response["latest_provinces"][province.name] = WardCase.objects.filter(
-                ward__sub_district__district__province=province
-            ).get_case_diff(latest_date - timedelta(days=1), latest_date)
+            pass
 
         return Response(response)

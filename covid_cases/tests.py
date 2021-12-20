@@ -235,41 +235,28 @@ class ContactNDoHCasesTests(APITestCase):
         response = self.client.get(url)
         self.assertEqual(response.data["image"]["id"], self.image.id)
         self.assertEqual(response.data["counter"]["id"], self.counter.id)
-        self.assertEqual(response.data["latest"], 20)
-        self.assertEqual(response.data["latest_provinces"], {"Western Cape": 20})
+        self.assertNotIn("daily", response.data)
 
     def test_previous_day_present(self):
         SACoronavirusCounter.objects.create(
-            tests=20238805,
+            tests=20238795,
             positive=3167467,
-            recoveries=2913232,
-            deaths=90137,
-            vaccines=27090975,
-            date=date(2021, 12, 8),
-        )
-        WardCase.objects.create(
-            object_id=1,
-            ward=self.ward,
-            male=401,
-            female=364,
-            age_1_10=12,
-            age_11_20=88,
-            age_21_30=153,
-            age_31_40=148,
-            age_41_50=186,
-            age_51_60=110,
-            age_61_70=46,
-            age_71_80=13,
-            age_81=9,
-            unknown_age=0,
-            unknown_gender=0,
-            latest=20,
-            total_number_of_cases=795,
+            recoveries=2913182,
+            deaths=90067,
+            vaccines=27090885,
             date=date(2021, 12, 8),
         )
         url = reverse("contactndoh-list")
         response = self.client.get(url)
         self.assertEqual(response.data["image"]["id"], self.image.id)
         self.assertEqual(response.data["counter"]["id"], self.counter.id)
-        self.assertEqual(response.data["latest"], 30)
-        self.assertEqual(response.data["latest_provinces"], {"Western Cape": 30})
+        self.assertEqual(
+            response.data["daily"],
+            {
+                "tests": 10,
+                "positive": 30,
+                "recoveries": 50,
+                "deaths": 70,
+                "vaccines": 90,
+            },
+        )
