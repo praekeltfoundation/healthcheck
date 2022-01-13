@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from real411.models import Complaint
 
 
@@ -28,7 +29,8 @@ class ComplaintUpdateSerializer(serializers.Serializer):
     background_ruiling = serializers.CharField(
         max_length=65535,
         allow_null=True,
-        help_text="Background and final ruling. Null if not relevant or not yet resolved",
+        help_text="Background and final ruling. Null if not relevant or not yet "
+        "resolved",
     )
     real411_backlink = serializers.URLField(
         max_length=255, help_text="Link to the complaint on the Real411 website"

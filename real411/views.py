@@ -1,9 +1,11 @@
 from django.shortcuts import get_object_or_404
+from rest_framework import permissions, viewsets
+from rest_framework.response import Response
+
 from real411.models import Complaint
 from real411.serializers import ComplaintSerializer, ComplaintUpdateSerializer
-from rest_framework import viewsets, permissions
+from real411.tasks import process_complaint_update
 from userprofile.views import CursorPaginationFactory
-from rest_framework.response import Response
 
 
 class DjangoModelViewPermissions(permissions.DjangoModelPermissions):
@@ -31,13 +33,15 @@ class ComplaintViewSet(viewsets.ModelViewSet):
 
 
 class ComplaintUpdateViewSet(viewsets.ViewSet):
+    queryset = Complaint.objects.none()
     serializer_class = ComplaintUpdateSerializer
+    permission_classes = [DjangoModelViewPermissions]
 
     def create(self, request):
-        serializer = ComplaintUpdateSerializer(data=request.data)
+        serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
-        complaint = get_object_or_404(
+        get_object_or_404(
             Complaint, complaint_ref=serializer.validated_data["complaint_ref"]
         )
-        # TODO: run background task to notify update
+        process_complaint_update.delay(serializer.data)
         return Response()

@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import constraints
+
 from userprofile.validators import za_phone_number
 
 
