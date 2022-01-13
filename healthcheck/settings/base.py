@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "tbconnect",
     "selfswab",
     "lifenet",
+    "real411",
     "vaccine",
     "vaxchamps",
 ]
@@ -139,6 +140,7 @@ AUTH_USER_MODEL = "users.User"
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
     ),
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
@@ -184,6 +186,7 @@ SENTRY_DSN = env.str("SENTRY_DSN", "")
 RAPIDPRO_URL = env.str("RAPIDPRO_URL", "")
 RAPIDPRO_TOKEN = env.str("RAPIDPRO_TOKEN", "")
 RAPIDPRO_TBCONNECT_FLOW = env.str("RAPIDPRO_TBCONNECT_FLOW", "")
+RAPIDPRO_REAL411_FLOW = env.str("RAPIDPRO_REAL411_FLOW", "")
 
 MEDITECH_URL = env.str("MEDITECH_URL", "")
 MEDITECH_USER = env.str("MEDITECH_USER", "")
