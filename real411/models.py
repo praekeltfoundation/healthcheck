@@ -18,5 +18,5 @@ class Complaint(models.Model):
         auto_now_add=True, help_text="When this complaint was created"
     )
     updated_at = models.DateTimeField(
-        auto_now=True, help_text="When this complaint was last updated", db_index=True
+        auto_now=True, help_text="When this complaint was last updated"
     )
