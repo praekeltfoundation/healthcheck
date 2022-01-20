@@ -195,6 +195,10 @@ CELERY_BEAT_SCHEDULE = {
         "task": "tbconnect.tasks.perform_etl",
         "schedule": crontab(minute="*/5"),
     },
+    "perform-lifenet-etl": {
+        "task": "lifenet.tasks.perform_etl",
+        "schedule": crontab(minute="*/5"),
+    },
 }
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
