@@ -1,5 +1,4 @@
-from celery.decorators import periodic_task
-from celery.task.schedules import crontab
+from celery import shared_task
 from django.conf import settings
 from django_redis import get_redis_connection
 from temba_client.v2 import TembaClient
@@ -9,7 +8,7 @@ from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 
 
-@periodic_task(run_every=crontab(minute="*/5"))
+@shared_task
 def perform_sync_to_rapidpro():
     r = get_redis_connection()
     if r.get("perform_sync_to_rapidpro"):
@@ -61,7 +60,7 @@ def perform_sync_to_rapidpro():
     return "Finished syncing contacts to Rapidpro"
 
 
-@periodic_task(run_every=crontab(minute="*/5"))
+@shared_task
 def perform_etl():
     r = get_redis_connection()
     if r.get("perform_etl_tb_connect"):

@@ -1,5 +1,4 @@
-from celery.decorators import periodic_task
-from celery.task.schedules import crontab
+from celery import shared_task
 from django.conf import settings
 from django.utils import timezone
 from datetime import timedelta
@@ -12,7 +11,7 @@ from healthcheck import utils
 from selfswab.utils import upload_turn_media
 
 
-@periodic_task(run_every=crontab(minute="*/5"))
+@shared_task
 def poll_meditech_api_for_results():
     r = get_redis_connection()
     if r.get("poll_meditech_api_for_results"):
@@ -107,7 +106,7 @@ def poll_meditech_api_for_results():
     return "Finished syncing test results to Rapidpro"
 
 
-@periodic_task(run_every=crontab(minute="*/5"))
+@shared_task
 def perform_etl():
     r = get_redis_connection()
     if r.get("perform_etl_selfswab"):
