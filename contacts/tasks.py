@@ -1,10 +1,8 @@
 from urllib.parse import urljoin
 
 import requests
-from celery import Celery, shared_task, task  # noqa: F401, E261
-from celery.decorators import periodic_task  # noqa: F401, E261
+from celery import shared_task
 from celery.exceptions import SoftTimeLimitExceeded
-from celery.task.schedules import crontab  # noqa: F401, E261
 from celery.utils.log import get_task_logger
 from django.conf import settings
 from django.utils import timezone
@@ -60,7 +58,7 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
     return f"Finished sending contact {confirmed_contact} update for {phone_number}."
 
 
-@periodic_task(run_every=crontab(minute=50, hour=1),)
+@shared_task
 def perform_nofitications_check():
     """
     Notify active cases about contact phase end

@@ -175,6 +175,26 @@ CELERY_BEAT_SCHEDULE = {
         "task": "covid_cases.tasks.scrape_sacoronavirus_case_images",
         "schedule": crontab(minute="0"),
     },
+    "perform-notifications-check": {
+        "task": "contacts.tasks.perform_notifications_check",
+        "schedule": crontab(minute=50, hour=1),
+    },
+    "poll-meditech-api-for-results": {
+        "task": "selfswab.tasks.poll_meditech_api_for_results",
+        "schedule": crontab(minute="*/5"),
+    },
+    "perform-selfswab-etl": {
+        "task": "selfswab.tasks.perform_etl",
+        "schedule": crontab(minute="*/5"),
+    },
+    "perform-sync-to-rapidpro": {
+        "task": "tbconnect.tasks.perform_sync_to_rapidpro",
+        "schedule": crontab(minute="*/5"),
+    },
+    "perform-tbconnect-etl": {
+        "task": "tbconnect.tasks.perform_etl",
+        "schedule": crontab(minute="*/5"),
+    },
 }
 
 TURN_API_KEY = env.str("TURN_API_KEY", "default")
