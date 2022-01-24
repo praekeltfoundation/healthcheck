@@ -73,7 +73,11 @@ class SACoronavirusClient:
         soup = BeautifulSoup(self.get_daily_cases_page(), "html.parser")
         for article in soup.main.find_all("article"):
             url = article.img["src"]
-            d = article.select("h2.entry-title")[0].string
-            d = re.search(".*\((.*)\).*", d).group(1)
-            d = datetime.strptime(d, "%A %d %B %Y").date()
-            yield CaseImage(url=url, date=d)
+            title = article.select("h2.entry-title")[0].string
+            try:
+                # Date is enclosed in ()
+                date_text = re.search(".*\((.*)\).*", title).group(1)
+            except AttributeError:
+                continue
+            date = datetime.strptime(date_text, "%A %d %B %Y").date()
+            yield CaseImage(url=url, date=date)
