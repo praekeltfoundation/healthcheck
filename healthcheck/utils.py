@@ -119,5 +119,3 @@ def check_negative_lat_lng(location):
         return "lat"
     elif lat > 0 and lng < 0:
         return "lng"
-    else:
-        return None
