@@ -25,7 +25,7 @@ class UtilsTests(TestCase):
 
         lat, long = utils.extract_reduced_accuracy_lat_long("-40.20361+40.20361")
         self.assertEqual(lat, -40.2)
-        self.assertEqual(long, +40.2)
+        self.assertEqual(long, 40.2)
 
         lat, long = utils.extract_reduced_accuracy_lat_long("+40.20361-40.20361")
         self.assertEqual(lat, 40.2)
