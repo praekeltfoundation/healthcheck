@@ -1,9 +1,10 @@
+from unittest.mock import Mock, patch
+
 from django.test import TestCase
-from unittest.mock import patch, Mock
 
 from healthcheck import utils
-from tbconnect.models import TBTest
 from selfswab.models import SelfSwabTest
+from tbconnect.models import TBTest
 
 
 class UtilsTests(TestCase):
@@ -17,6 +18,18 @@ class UtilsTests(TestCase):
         lat, long = utils.extract_reduced_accuracy_lat_long("+40.20361+40.20361")
         self.assertEqual(lat, 40.2)
         self.assertEqual(long, 40.2)
+
+        lat, long = utils.extract_reduced_accuracy_lat_long("-40.20361-40.20361")
+        self.assertEqual(lat, -40.2)
+        self.assertEqual(long, -40.2)
+
+        lat, long = utils.extract_reduced_accuracy_lat_long("-40.20361+40.20361")
+        self.assertEqual(lat, -40.2)
+        self.assertEqual(long, +40.2)
+
+        lat, long = utils.extract_reduced_accuracy_lat_long("+40.20361-40.20361")
+        self.assertEqual(lat, 40.2)
+        self.assertEqual(long, -40.2)
 
         lat, long = utils.extract_reduced_accuracy_lat_long(None)
         self.assertIsNone(lat)
