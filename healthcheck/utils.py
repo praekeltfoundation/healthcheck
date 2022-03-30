@@ -1,11 +1,11 @@
 import base64
 import hashlib
 import os
+from functools import lru_cache
 
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from iso6709 import Location
-from functools import lru_cache
 
 
 @lru_cache(maxsize=None)
@@ -91,8 +91,8 @@ def hash_string(text):
 def extract_reduced_accuracy_lat_long(location):
     if location:
         loc = Location(location)
-        lat = round(float(loc.lat.degrees), 1)
-        lng = round(float(loc.lng.degrees), 1)
-        return lat, lng
+        lat = round(float(loc.lat.decimal), 1)
+        lng = round(float(loc.lng.decimal), 1)
+        return (lat, lng)
     else:
-        return None, None
+        return (None, None)
