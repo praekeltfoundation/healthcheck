@@ -15,27 +15,27 @@ class UtilsTests(TestCase):
         )
 
     def test_extract_reduced_accuracy_lat_long(self):
-        lat, long = utils.extract_reduced_accuracy_lat_long("+40.20361+35.16361", 2)
-        self.assertEqual(lat, 40.20)
+        lat, long = utils.extract_reduced_accuracy_lat_long("+40.21361+35.16361", 2)
+        self.assertEqual(lat, 40.21)
         self.assertEqual(long, 35.16)
 
-        lat, long = utils.extract_reduced_accuracy_lat_long("-40.20361-35.16361", 2)
-        self.assertEqual(lat, -40.20)
+        lat, long = utils.extract_reduced_accuracy_lat_long("-40.21361-35.16361", 2)
+        self.assertEqual(lat, -40.21)
         self.assertEqual(long, -35.16)
 
-        lat, long = utils.extract_reduced_accuracy_lat_long("-40.20361+35.16361", 1)
-        self.assertEqual(lat, -40.20)
+        lat, long = utils.extract_reduced_accuracy_lat_long("-40.21361+35.16361", 1)
+        self.assertEqual(lat, -40.2)
         self.assertEqual(long, 35.2)
 
-        lat, long = utils.extract_reduced_accuracy_lat_long("+40.20361-35.16361", 1)
+        lat, long = utils.extract_reduced_accuracy_lat_long("+40.21361-35.16361", 1)
         self.assertEqual(lat, 40.2)
         self.assertEqual(long, -35.2)
 
-        lat, long = utils.extract_reduced_accuracy_lat_long("-40.20361+35.16361")
-        self.assertEqual(lat, -40.20)
+        lat, long = utils.extract_reduced_accuracy_lat_long("-40.21361+35.16361")
+        self.assertEqual(lat, -40.2)
         self.assertEqual(long, 35.2)
 
-        lat, long = utils.extract_reduced_accuracy_lat_long("+40.20361-35.16361")
+        lat, long = utils.extract_reduced_accuracy_lat_long("+40.21361-35.16361")
         self.assertEqual(lat, 40.2)
         self.assertEqual(long, -35.2)
 
