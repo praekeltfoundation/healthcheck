@@ -103,8 +103,10 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         return hash_string(self.msisdn)
 
     def get_processed_data(self):
-        location_lat, location_long = extract_reduced_accuracy_lat_long(self.location)
-        city_lat, city_long = extract_reduced_accuracy_lat_long(self.city_location)
+        location_lat, location_long = extract_reduced_accuracy_lat_long(
+            self.location, 2
+        )
+        city_lat, city_long = extract_reduced_accuracy_lat_long(self.city_location, 2)
 
         return {
             "deduplication_id": str(self.deduplication_id),
