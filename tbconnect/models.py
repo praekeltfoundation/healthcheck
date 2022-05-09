@@ -118,8 +118,12 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
     data = models.JSONField(default=dict, blank=True, null=True)
-    group_arm = models.CharField(max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True)
-    commit_get_tested = models.CharField(max_length=3, choices=COMMIT_CHOICES, null=True, blank=True)
+    group_arm = models.CharField(
+        max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True
+    )
+    commit_get_tested = models.CharField(
+        max_length=3, choices=COMMIT_CHOICES, null=True, blank=True
+    )
 
     @property
     def hashed_msisdn(self):
