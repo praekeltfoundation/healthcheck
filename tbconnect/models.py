@@ -1,5 +1,4 @@
 import uuid
-import random
 
 import pycountry
 from django.db import models
@@ -68,24 +67,11 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         (LANGUAGE_SESOTHO, "Sesotho"),
     )
 
-    ARM_CONTROL = "control"
-    ARM_HEALTH_CONSEQUENCE = "health_consequence"
-    ARM_PLANNING_PROMPT = "planning_prompt"
-    ARM_SOFT_COMMITMENT = "soft_commitment"
-    ARM_SOFT_COMMITMENT_PLUS = "soft_commitment_plus"
-    GROUP_ARM_CHOICES = (
-        (ARM_CONTROL, "Control"),
-        (ARM_HEALTH_CONSEQUENCE, "Health Consequence"),
-        (ARM_PLANNING_PROMPT, "Planning Prompt"),
-        (ARM_SOFT_COMMITMENT, "Soft Commitment"),
-        (ARM_SOFT_COMMITMENT_PLUS, "Soft Commitment Plus"),
-    )
-
     COMMIT_YES = "yes"
     COMMIT_NO = "no"
     COMMIT_CHOICES = (
-        (EXPOSURE_YES, "Yes"),
-        (EXPOSURE_NO, "No"),
+        (COMMIT_YES, "Yes"),
+        (COMMIT_NO, "No"),
     )
 
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
@@ -118,9 +104,6 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
     data = models.JSONField(default=dict, blank=True, null=True)
-    group_arm = models.CharField(
-        max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True
-    )
     commit_get_tested = models.CharField(
         max_length=3, choices=COMMIT_CHOICES, null=True, blank=True
     )
@@ -156,10 +139,6 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
             "follow_up_optin": self.follow_up_optin,
             "language": self.language,
         }
-
-    def update_group_arm(self):
-        if not self.group_arm:
-            self.group_arm = random.choice(self.GROUP_ARM_CHOICES)[0]
 
 
 class TBTest(ExportModelOperationsMixin("tb-test"), models.Model):
