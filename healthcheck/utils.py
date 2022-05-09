@@ -88,11 +88,11 @@ def hash_string(text):
     )
 
 
-def extract_reduced_accuracy_lat_long(location):
+def extract_reduced_accuracy_lat_long(location, resolution=1):
     if location:
         loc = Location(location)
-        lat = round(float(loc.lat.decimal), 1)
-        lng = round(float(loc.lng.decimal), 1)
+        lat = round(float(loc.lat.decimal), resolution)
+        lng = round(float(loc.lng.decimal), resolution)
         return (lat, lng)
     else:
         return (None, None)
