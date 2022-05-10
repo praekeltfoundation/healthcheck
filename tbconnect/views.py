@@ -5,10 +5,10 @@ from rest_framework.viewsets import GenericViewSet
 from userprofile.models import HealthCheckUserProfile
 
 from .models import TBCheck, TBTest
-from .serializers import TBCheckSerializer, TBTestSerializer, TBTestCommitSerializer
+from .serializers import TBCheckSerializer, TBTestSerializer
 
 
-class TBCheckViewSet(GenericViewSet, CreateModelMixin):
+class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
     queryset = TBCheck.objects.all()
     serializer_class = TBCheckSerializer
     permission_classes = (DjangoModelPermissions,)
@@ -26,28 +26,22 @@ class TBCheckViewSet(GenericViewSet, CreateModelMixin):
 
         return instance
 
-
-class TBTestViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
-    queryset = TBTest.objects.all()
-    serializer_class = TBTestSerializer
-    permission_classes = (DjangoModelPermissions,)
-
-
-class TBTestCommitViewSet(GenericViewSet, UpdateModelMixin):
-    queryset = TBCheck.objects.all()
-    serializer_class = TBTestCommitSerializer
-    permission_classes = (DjangoModelPermissions,)
-
     def perform_update(self, serializer):
         """
         To update commit_get_tested to an existing TBCheck
         """
         instance = serializer.save()
-        print('sila')
+
         if instance.commit_get_tested:
             tbcheck = TBCheck.objects.filter(msisdn=instance.msisdn).last()
             tbcheck.commit_get_tested = instance.commit_get_tested
             tbcheck.save()
 
         return instance
+
+
+class TBTestViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
+    queryset = TBTest.objects.all()
+    serializer_class = TBTestSerializer
+    permission_classes = (DjangoModelPermissions,)
 

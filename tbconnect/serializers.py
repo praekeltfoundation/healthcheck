@@ -26,10 +26,3 @@ class TBTestSerializer(BaseEventSerializer):
         model = TBTest
         fields = "__all__"
         read_only_fields = ("id", "created_by")
-
-
-class TBTestCommitSerializer(BaseEventSerializer):
-    class Meta:
-        model = TBCheck
-        fields = "__all__"
-        read_only_fields = ("id", "created_by")
