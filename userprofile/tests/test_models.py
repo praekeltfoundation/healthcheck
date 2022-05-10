@@ -140,22 +140,24 @@ class HealthCheckUserProfileTests(TestCase):
 
     @responses.activate
     @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
-    def test_update_tbconnect_group_arm(self):
+    def test_update_tbconnect_group_arm_existing(self):
         """
-        Not updat tbconnect_group_arm if already exist
+        Not to update tbconnect_group_arm if already exist
         """
 
         profile = HealthCheckUserProfile(
-            msisdn="+27820001001", province="ZA-WC", city="JHB",
-            tbconnect_group_arm="connect"
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            tbconnect_group_arm="connect",
         )
-        updated_profile = profile.update_tbconnect_group_arm()
+        profile.update_tbconnect_group_arm()
 
-        self.assertEqual(profile.tbconnect_group_arm, updated_profile.tbconnect_group_arm)
+        self.assertEqual(profile.tbconnect_group_arm, "connect")
 
     @responses.activate
     @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=False)
-    def test_update_tbconnect_group_arm(self):
+    def test_update_tbconnect_group_arm_disabled(self):
         """
         return none if TBCONNECT_GROUP_ARM_ACTIVE is disabled
         """
@@ -166,5 +168,3 @@ class HealthCheckUserProfileTests(TestCase):
         profile.update_tbconnect_group_arm()
 
         self.assertIsNone(profile.tbconnect_group_arm)
-
-
