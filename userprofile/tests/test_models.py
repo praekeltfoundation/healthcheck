@@ -128,7 +128,10 @@ class HealthCheckUserProfileTests(TestCase):
         Update tbconnect_group_arm with the first index arm
         """
 
-        profile = HealthCheckUserProfile(msisdn="+27820001001", province="ZA-WC", city="JHB")
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB")
         profile.update_tbconnect_group_arm()
 
         self.assertIsNotNone(profile.tbconnect_group_arm)

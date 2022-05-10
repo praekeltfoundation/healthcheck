@@ -44,4 +44,3 @@ class TBTestViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
     queryset = TBTest.objects.all()
     serializer_class = TBTestSerializer
     permission_classes = (DjangoModelPermissions,)
-
