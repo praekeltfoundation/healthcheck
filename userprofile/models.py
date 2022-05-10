@@ -249,7 +249,7 @@ class HealthCheckUserProfile(
 
     def update_tbconnect_group_arm(self):
         if settings.TBCONNECT_GROUP_ARM_ACTIVE and not self.tbconnect_group_arm:
-            self.tbcONNECT_group_arm = random.choice(self.GROUP_ARM_CHOICES)[0]
+            self.tbconnect_group_arm = random.choice(self.GROUP_ARM_CHOICES)[0]
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"

@@ -237,25 +237,25 @@ class TBCheckSerializerTests(TestCase):
         )
 
 
-class TBTestCommitViewSetTests(APITestCase, BaseEventTestCase):
-    url = reverse("tbtestcommit")
-
-    def test_commit_to_get_tested(self):
-        data = {
-            "msisdn": "+2349039756628",
-            "source": "WhatsApp",
-            "province": "ZA-GT",
-            "city": "<not collected>",
-            "age": "<18",
-            "gender": "male",
-            "cough": "True",
-            "fever": "False",
-            "sweat": "False",
-            "weight": "False",
-            "exposure": "no",
-            "tracing": "False",
-            "risk": "low",
-            "commit_get_tested": "yes"
-        }
-        serializer = TBTestCommitSerializer(data=data)
-        print(serializer)
+# class TBTestCommitViewSetTests(APITestCase, BaseEventTestCase):
+#     url = reverse("tbtestcommit")
+#
+#     def test_commit_to_get_tested(self):
+#         data = {
+#             "msisdn": "+2349039756628",
+#             "source": "WhatsApp",
+#             "province": "ZA-GT",
+#             "city": "<not collected>",
+#             "age": "<18",
+#             "gender": "male",
+#             "cough": "True",
+#             "fever": "False",
+#             "sweat": "False",
+#             "weight": "False",
+#             "exposure": "no",
+#             "tracing": "False",
+#             "risk": "low",
+#             "commit_get_tested": "yes"
+#         }
+#         serializer = TBTestCommitSerializer(data=data)
+#         print(serializer)

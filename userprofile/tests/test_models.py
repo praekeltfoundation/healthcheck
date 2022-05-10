@@ -122,3 +122,13 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.first_name, "oldfirst")
         self.assertEqual(profile.last_name, "newlast")
         self.assertEqual(profile.preexisting_condition, "no")
+
+    def test_update_tbconnect_group_arm(self):
+        """
+        Update tbconnect_group_arm with the first index arm
+        """
+
+        profile = HealthCheckUserProfile(msisdn="+27820001001", province="ZA-WC", city="JHB")
+        profile.update_tbconnect_group_arm()
+
+        self.assertIsNotNone(profile.tbconnect_group_arm)
