@@ -1,7 +1,8 @@
-from django.test import TestCase
+import responses
+from django.test import TestCase, override_settings
 
-from userprofile.models import Covid19Triage, HealthCheckUserProfile
 from tbconnect.models import TBCheck
+from userprofile.models import Covid19Triage, HealthCheckUserProfile
 
 
 class HealthCheckUserProfileTests(TestCase):
@@ -123,6 +124,8 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.last_name, "newlast")
         self.assertEqual(profile.preexisting_condition, "no")
 
+    @responses.activate
+    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
     def test_update_tbconnect_group_arm(self):
         """
         Update tbconnect_group_arm with the first index arm

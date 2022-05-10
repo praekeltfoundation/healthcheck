@@ -1,11 +1,11 @@
-import uuid
 import random
+import uuid
 from typing import Text
 
 import pycountry
+from django.conf import settings
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
-from django.conf import settings
 from django.utils import timezone
 from django_prometheus.models import ExportModelOperationsMixin
 
