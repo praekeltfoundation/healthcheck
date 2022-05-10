@@ -26,19 +26,6 @@ class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
 
         return instance
 
-    def perform_update(self, serializer):
-        """
-        To update commit_get_tested to an existing TBCheck
-        """
-        instance = serializer.save()
-
-        if instance.commit_get_tested:
-            tbcheck = TBCheck.objects.filter(msisdn=instance.msisdn).last()
-            tbcheck.commit_get_tested = instance.commit_get_tested
-            tbcheck.save()
-
-        return instance
-
 
 class TBTestViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
     queryset = TBTest.objects.all()
