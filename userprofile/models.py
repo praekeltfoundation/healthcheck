@@ -190,7 +190,7 @@ class HealthCheckUserProfile(
     tbconnect_group_arm = models.CharField(
         max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True
     )
-    research_consent = models.BooleanField(default=False)
+    research_consent = models.BooleanField()
 
     objects = HealthCheckUserProfileManager()
 
@@ -250,7 +250,11 @@ class HealthCheckUserProfile(
                 self.data[k] = v
 
     def update_tbconnect_group_arm(self):
-        if settings.TBCONNECT_GROUP_ARM_ACTIVE and not self.tbconnect_group_arm and self.research_consent:
+        if (
+            settings.TBCONNECT_GROUP_ARM_ACTIVE
+            and not self.tbconnect_group_arm
+            and self.research_consent
+        ):
             self.tbconnect_group_arm = random.choice(self.GROUP_ARM_CHOICES)[0]
 
     class Meta:
