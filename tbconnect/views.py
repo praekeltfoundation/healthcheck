@@ -8,7 +8,7 @@ from .models import TBCheck, TBTest
 from .serializers import TBCheckSerializer, TBTestSerializer
 
 
-class TBCheckViewSet(GenericViewSet, CreateModelMixin):
+class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
     queryset = TBCheck.objects.all()
     serializer_class = TBCheckSerializer
     permission_classes = (DjangoModelPermissions,)
@@ -21,6 +21,7 @@ class TBCheckViewSet(GenericViewSet, CreateModelMixin):
 
         profile = HealthCheckUserProfile.objects.get_or_prefill(msisdn=instance.msisdn)
         profile.update_from_tbcheck(instance)
+        profile.update_tbconnect_group_arm()
         profile.save()
 
         return instance

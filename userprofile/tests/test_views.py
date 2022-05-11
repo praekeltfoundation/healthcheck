@@ -3,15 +3,10 @@ from urllib.parse import urlencode
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
 from django.urls import reverse
-from unittest import mock
 from rest_framework import status
 from rest_framework.test import APITestCase
 
 from userprofile.models import Covid19Triage, HealthCheckUserProfile
-from userprofile.serializers import (
-    Covid19TriageV3Serializer,
-    Covid19TriageV4Serializer,
-)
 
 
 class BaseEventTestCase(object):

@@ -1,7 +1,9 @@
+import random
 import uuid
 from typing import Text
 
 import pycountry
+from django.conf import settings
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.utils import timezone
@@ -143,6 +145,19 @@ class HealthCheckUserProfileManager(models.Manager):
 class HealthCheckUserProfile(
     ExportModelOperationsMixin("healthcheck-user-profile"), models.Model
 ):
+    ARM_CONTROL = "control"
+    ARM_HEALTH_CONSEQUENCE = "health_consequence"
+    ARM_PLANNING_PROMPT = "planning_prompt"
+    ARM_SOFT_COMMITMENT = "soft_commitment"
+    ARM_SOFT_COMMITMENT_PLUS = "soft_commitment_plus"
+    GROUP_ARM_CHOICES = (
+        (ARM_CONTROL, "Control"),
+        (ARM_HEALTH_CONSEQUENCE, "Health Consequence"),
+        (ARM_PLANNING_PROMPT, "Planning Prompt"),
+        (ARM_SOFT_COMMITMENT, "Soft Commitment"),
+        (ARM_SOFT_COMMITMENT_PLUS, "Soft Commitment Plus"),
+    )
+
     msisdn = models.CharField(
         primary_key=True, max_length=255, validators=[za_phone_number]
     )
@@ -172,6 +187,9 @@ class HealthCheckUserProfile(
     persons_in_household = models.IntegerField(blank=True, null=True, default=None)
     language = models.CharField(max_length=3, null=True, blank=True)
     data = models.JSONField(default=dict, blank=True, null=True)
+    tbconnect_group_arm = models.CharField(
+        max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True
+    )
 
     objects = HealthCheckUserProfileManager()
 
@@ -228,6 +246,10 @@ class HealthCheckUserProfile(
         for k, v in tbcheck.data.items():
             if has_value(v):
                 self.data[k] = v
+
+    def update_tbconnect_group_arm(self):
+        if settings.TBCONNECT_GROUP_ARM_ACTIVE and not self.tbconnect_group_arm:
+            self.tbconnect_group_arm = random.choice(self.GROUP_ARM_CHOICES)[0]
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"

@@ -1,8 +1,8 @@
 from .test_models import HealthCheckUserProfileTests
 from .test_views import (
+    Covid19TriageV2ViewSetTests,
     Covid19TriageViewSetTests,
     HealthCheckUserProfileViewSetTests,
-    Covid19TriageV2ViewSetTests,
 )
 
 __all__ = [

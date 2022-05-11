@@ -1,7 +1,8 @@
-from django.test import TestCase
+import responses
+from django.test import TestCase, override_settings
 
-from userprofile.models import Covid19Triage, HealthCheckUserProfile
 from tbconnect.models import TBCheck
+from userprofile.models import Covid19Triage, HealthCheckUserProfile
 
 
 class HealthCheckUserProfileTests(TestCase):
@@ -122,3 +123,48 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.first_name, "oldfirst")
         self.assertEqual(profile.last_name, "newlast")
         self.assertEqual(profile.preexisting_condition, "no")
+
+    @responses.activate
+    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
+    def test_update_tbconnect_group_arm(self):
+        """
+        Update tbconnect_group_arm with the first index arm
+        """
+
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001", province="ZA-WC", city="JHB"
+        )
+        profile.update_tbconnect_group_arm()
+
+        self.assertIsNotNone(profile.tbconnect_group_arm)
+
+    @responses.activate
+    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
+    def test_update_tbconnect_group_arm_existing(self):
+        """
+        Not to update tbconnect_group_arm if already exist
+        """
+
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            tbconnect_group_arm="connect",
+        )
+        profile.update_tbconnect_group_arm()
+
+        self.assertEqual(profile.tbconnect_group_arm, "connect")
+
+    @responses.activate
+    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=False)
+    def test_update_tbconnect_group_arm_disabled(self):
+        """
+        return none if TBCONNECT_GROUP_ARM_ACTIVE is disabled
+        """
+
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001", province="ZA-WC", city="JHB"
+        )
+        profile.update_tbconnect_group_arm()
+
+        self.assertIsNone(profile.tbconnect_group_arm)

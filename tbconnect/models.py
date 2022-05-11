@@ -67,6 +67,13 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         (LANGUAGE_SESOTHO, "Sesotho"),
     )
 
+    COMMIT_YES = "yes"
+    COMMIT_NO = "no"
+    COMMIT_CHOICES = (
+        (COMMIT_YES, "Yes"),
+        (COMMIT_NO, "No"),
+    )
+
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     msisdn = models.CharField(
@@ -97,6 +104,9 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         max_length=3, choices=LANGUAGE_CHOICES, null=True, blank=True
     )
     data = models.JSONField(default=dict, blank=True, null=True)
+    commit_get_tested = models.CharField(
+        max_length=3, choices=COMMIT_CHOICES, null=True, blank=True
+    )
 
     @property
     def hashed_msisdn(self):

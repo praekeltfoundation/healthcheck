@@ -135,6 +135,51 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         self.assertEqual(profile.age, TBCheck.AGE_18T40)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
+    def test_commit_get_tested_update(self):
+        """
+        Update user profile commit field
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="change_tbcheck"))
+        self.client.force_authenticate(user)
+
+        msisdn = "27831231234"
+        tbcheck = TBCheck.objects.create(
+            **{
+                "msisdn": msisdn,
+                "province": "ZA-GP",
+                "city": "JHB",
+                "cough": False,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "language": TBCheck.LANGUAGE_ZULU,
+                "location": "+40.20361+40.20361",
+            }
+        )
+
+        update_url = reverse("tbcheck-detail", args=(tbcheck.id,))
+        response = self.client.patch(
+            update_url,
+            {
+                "location": "+40.20361+40.20361",
+                "city_location": "+40.20361+40.20361",
+                "commit_get_tested": TBCheck.COMMIT_YES,
+            },
+        )
+
+        self.assertEqual(tbcheck.msisdn, "27831231234")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        tbcheck.refresh_from_db()
+
+        self.assertEqual(tbcheck.commit_get_tested, TBCheck.COMMIT_YES)
+
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
     url = reverse("tbtest-list")
