@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("tbconnect", "0012_tbcheck_research_consent"),
+        ('tbconnect', '0012_tbcheck_research_consent'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name="tbcheck",
-            name="research_consent",
+            model_name='tbcheck',
+            name='research_consent',
             field=models.BooleanField(default=False),
         ),
     ]
