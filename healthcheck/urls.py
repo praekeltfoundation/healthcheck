@@ -1,18 +1,19 @@
-from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path  # noqa: F401
-from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework import routers
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
-from covid_cases.urls import v2router as covidcases_v2router
-from lifenet.urls import v2router as lncheck_v2router
-from real411.urls import v2router as real411_v2router
 from selfswab.urls import v2router as selfswab_v2router
 from tbconnect.urls import v2router as tbcheck_v2router
+from lifenet.urls import v2router as lncheck_v2router
+from vaccine.urls import v2router as vaccine_v2router
+from covid_cases.urls import v2router as covidcases_v2router
+from real411.urls import v2router as real411_v2router
+
 from userprofile.urls import v2router as userprofile_v2router
 from userprofile.urls import v3router, v4router, v5router
-from vaccine.urls import v2router as vaccine_v2router
 
 global_v2router = routers.DefaultRouter()
 global_v2router.registry.extend(userprofile_v2router.registry)
