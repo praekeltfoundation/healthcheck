@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('userprofile', '0011_healthcheckuserprofile_tbconnect_group_arm'),
+        ("userprofile", "0011_healthcheckuserprofile_tbconnect_group_arm"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='healthcheckuserprofile',
-            name='research_consent',
+            model_name="healthcheckuserprofile",
+            name="research_consent",
             field=models.BooleanField(null=True),
         ),
     ]
