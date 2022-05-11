@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from tbconnect.models import TBTest, TBCheck
+from tbconnect.models import TBCheck, TBTest
 
 
 class TBTestTests(TestCase):

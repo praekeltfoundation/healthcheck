@@ -1,14 +1,14 @@
-from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
+from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
 from tbconnect.models import TBCheck, TBTest
+from tbconnect.serializers import TBCheckSerializer
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
-from tbconnect.serializers import TBCheckSerializer
 
 
 class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
