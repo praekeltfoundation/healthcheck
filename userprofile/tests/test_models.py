@@ -132,7 +132,7 @@ class HealthCheckUserProfileTests(TestCase):
         """
 
         profile = HealthCheckUserProfile(
-            msisdn="+27820001001", province="ZA-WC", city="JHB"
+            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=True
         )
         profile.update_tbconnect_group_arm()
 
@@ -164,6 +164,20 @@ class HealthCheckUserProfileTests(TestCase):
 
         profile = HealthCheckUserProfile(
             msisdn="+27820001001", province="ZA-WC", city="JHB"
+        )
+        profile.update_tbconnect_group_arm()
+
+        self.assertIsNone(profile.tbconnect_group_arm)
+
+    @responses.activate
+    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
+    def test_update_tbconnect_group_arm_no_consent(self):
+        """
+        No to update group_arm if user did give research_consent
+        """
+
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=False
         )
         profile.update_tbconnect_group_arm()
 
