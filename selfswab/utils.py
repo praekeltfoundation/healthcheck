@@ -1,5 +1,5 @@
 import cv2
-import zbar
+# import zbar
 import re
 import requests
 import tempfile
@@ -81,8 +81,9 @@ def get_barcode_from_last_inbound_image(wa_id):
             image = cv2.imread(temp_image.name, cv2.IMREAD_GRAYSCALE)
             _, bw_image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
 
-            scanner = zbar.Scanner()
-            results = scanner.scan(bw_image)
+            # scanner = zbar.Scanner()
+            # results = scanner.scan(bw_image)
+            results = []
 
             if len(results) == 1:
                 return results[0].data.decode("utf-8"), None

@@ -56,7 +56,6 @@ vine==5.0.0
 watchdog==0.10.3
 zipp==3.1.0
 opencv-python-headless==4.5.2.54
-zbar-py==1.0.4
 drf-spectacular==0.20.2
 beautifulsoup4==4.10.0
 Pillow==9.0.1
