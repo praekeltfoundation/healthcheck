@@ -171,7 +171,7 @@ class HealthCheckUserProfileTests(TestCase):
 
     @responses.activate
     @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
-    def test_update_tbconnect_group_arm(self):
+    def test_update_tbconnect_group_arm_no_consent(self):
         """
         No to update group_arm if user did give research_consent
         """
