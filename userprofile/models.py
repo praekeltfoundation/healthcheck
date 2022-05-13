@@ -236,6 +236,7 @@ class HealthCheckUserProfile(
             "location",
             "city_location",
             "language",
+            "research_consent",
         ]:
             value = getattr(tbcheck, field, None)
             if has_value(value):
