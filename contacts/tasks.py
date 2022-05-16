@@ -59,7 +59,7 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
 
 
 @shared_task
-def perform_nofitications_check():
+def perform_notifications_check():
     """
     Notify active cases about contact phase end
     """
