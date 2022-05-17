@@ -2,7 +2,10 @@ from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 
 from userprofile.models import HealthCheckUserProfile
-from userprofile.serializers import BaseEventSerializer, HealthCheckUserProfileSerializer
+from userprofile.serializers import (
+    BaseEventSerializer,
+    HealthCheckUserProfileSerializer,
+)
 
 from .models import TBCheck, TBTest
 
