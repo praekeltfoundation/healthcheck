@@ -180,6 +180,64 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
 
         self.assertEqual(tbcheck.commit_get_tested, TBCheck.COMMIT_YES)
 
+    def test_tbcheck_include_user_profile(self):
+        """
+        return profile when submitting tbcheck
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "USSD",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "location": "+40.20361+40.20361",
+                "follow_up_optin": True,
+                "language": "eng",
+            },
+        )
+
+        profile = response.json().get("profile", {})
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(profile.get("msisdn"), "27856454612")
+        self.assertEqual(response.json().get("profile"),
+                          {'msisdn': '27856454612',
+                           'first_name': None,
+                           'last_name': None,
+                           'province': 'ZA-WC',
+                           'city': 'Cape Town',
+                           'age': '18-40',
+                           'date_of_birth': None,
+                           'gender': 'female',
+                           'location': '+40.20361+40.20361',
+                           'city_location': None,
+                           'preexisting_condition': '',
+                           'rooms_in_household': None,
+                           'persons_in_household': None,
+                           'language': 'eng',
+                           'data':
+                               {'follow_up_optin': True,
+                                'synced_to_tb_rapidpro': False
+                                },
+                           'tbconnect_group_arm': None,
+                           'research_consent': None
+                           }
+                         )
+
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
     url = reverse("tbtest-list")
