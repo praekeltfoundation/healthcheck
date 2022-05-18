@@ -214,29 +214,28 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(profile.get("msisdn"), "27856454612")
-        self.assertEqual(response.json().get("profile"),
-                          {'msisdn': '27856454612',
-                           'first_name': None,
-                           'last_name': None,
-                           'province': 'ZA-WC',
-                           'city': 'Cape Town',
-                           'age': '18-40',
-                           'date_of_birth': None,
-                           'gender': 'female',
-                           'location': '+40.20361+40.20361',
-                           'city_location': None,
-                           'preexisting_condition': '',
-                           'rooms_in_household': None,
-                           'persons_in_household': None,
-                           'language': 'eng',
-                           'data':
-                               {'follow_up_optin': True,
-                                'synced_to_tb_rapidpro': False
-                                },
-                           'tbconnect_group_arm': None,
-                           'research_consent': None
-                           }
-                         )
+        self.assertEqual(
+            response.json().get("profile"),
+            {
+                "msisdn": "27856454612",
+                "first_name": None,
+                "last_name": None,
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": "18-40",
+                "date_of_birth": None,
+                "gender": "female",
+                "location": "+40.20361+40.20361",
+                "city_location": None,
+                "preexisting_condition": "",
+                "rooms_in_household": None,
+                "persons_in_household": None,
+                "language": "eng",
+                "data": {"follow_up_optin": True, "synced_to_tb_rapidpro": False},
+                "tbconnect_group_arm": None,
+                "research_consent": None,
+            },
+        )
 
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
