@@ -242,7 +242,7 @@ class HealthCheckUserProfile(
             "language",
             "research_consent",
             "originating_msisdn",
-            "activation"
+            "activation",
         ]:
             value = getattr(tbcheck, field, None)
             if has_value(value):

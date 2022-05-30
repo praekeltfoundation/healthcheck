@@ -8,18 +8,26 @@ import userprofile.validators
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tbconnect', '0012_tbcheck_research_consent'),
+        ("tbconnect", "0012_tbcheck_research_consent"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='tbcheck',
-            name='activation',
+            model_name="tbcheck",
+            name="activation",
             field=models.CharField(max_length=255, null=True),
         ),
         migrations.AddField(
-            model_name='tbcheck',
-            name='originating_msisdn',
-            field=models.CharField(max_length=255, null=True, validators=[functools.partial(userprofile.validators._phone_number, *(), **{'country': 'ZA'})]),
+            model_name="tbcheck",
+            name="originating_msisdn",
+            field=models.CharField(
+                max_length=255,
+                null=True,
+                validators=[
+                    functools.partial(
+                        userprofile.validators._phone_number, *(), **{"country": "ZA"}
+                    )
+                ],
+            ),
         ),
     ]
