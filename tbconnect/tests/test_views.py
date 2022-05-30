@@ -234,6 +234,8 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "data": {"follow_up_optin": True, "synced_to_tb_rapidpro": False},
                 "tbconnect_group_arm": None,
                 "research_consent": None,
+                "originating_msisdn": None,
+                "activation": None,
             },
         )
 
