@@ -191,6 +191,10 @@ class HealthCheckUserProfile(
         max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True
     )
     research_consent = models.BooleanField(null=True)
+    originating_msisdn = models.CharField(
+        max_length=255, validators=[za_phone_number], null=True
+    )
+    activation = models.CharField(max_length=255, null=True)
 
     objects = HealthCheckUserProfileManager()
 
@@ -237,6 +241,8 @@ class HealthCheckUserProfile(
             "city_location",
             "language",
             "research_consent",
+            "originating_msisdn",
+            "activation",
         ]:
             value = getattr(tbcheck, field, None)
             if has_value(value):

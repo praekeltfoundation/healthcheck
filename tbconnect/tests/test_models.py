@@ -84,5 +84,7 @@ class TBCheckTests(TestCase):
                 "follow_up_optin": False,
                 "language": "eng",
                 "province": "ZA-WC",
+                "activation": None,
+                "originating_msisdn": None,
             },
         )
