@@ -108,6 +108,10 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         max_length=3, choices=COMMIT_CHOICES, null=True, blank=True
     )
     research_consent = models.BooleanField(null=True)
+    originating_msisdn = models.CharField(
+        max_length=255, validators=[za_phone_number], null=True
+    )
+    activation = models.CharField(max_length=255, null=True)
 
     @property
     def hashed_msisdn(self):
@@ -139,6 +143,8 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
             "risk": self.risk,
             "follow_up_optin": self.follow_up_optin,
             "language": self.language,
+            "activation": self.activation,
+            "originating_msisdn": self.originating_msisdn,
         }
 
 
