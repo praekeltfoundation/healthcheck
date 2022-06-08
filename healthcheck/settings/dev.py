@@ -4,7 +4,7 @@ SECRET_KEY = env.str("SECRET_KEY", "testsecretkey")  # noqa: F405
 DEBUG = env.bool("DEBUG", True)  # noqa: F405
 DATABASES = {
     "default": env.db(  # noqa: F405
-        default="postgres://postgres:postgres@localhost:5432/healthcheck"
-    ),
+        default="postgis://postgres:postgres@localhost:5432/healthcheck"
+    )
 }
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default="*")  # noqa: F405

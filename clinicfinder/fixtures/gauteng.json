@@ -1,0 +1,4682 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "17 Esselen Street, Hillbrow",
+    "code": 687842,
+    "latitude": -26.191,
+    "location": "POINT (28.045 -26.19104)",
+    "longitude": 28.045,
+    "name": "gp 17 Esselen Street Clinic",
+    "province": "Gauteng",
+    "short_name": "17 Esselen Str Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr 4th Avenue and Hofmeyer Streets, Alexandra",
+    "code": 407642,
+    "latitude": -26.1052,
+    "location": "POINT (28.0908 -26.10525)",
+    "longitude": 28.0908,
+    "name": "gp 4th Avenue Clinic",
+    "province": "Gauteng",
+    "short_name": "4th Avenue Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 30, Fanie Van Rensburg Street, Pyramid",
+    "code": 527006,
+    "latitude": -25.5819,
+    "location": "POINT (28.23326 -25.58195)",
+    "longitude": 28.23326,
+    "name": "gp Adelaide Tambo Clinic",
+    "province": "Gauteng",
+    "short_name": "A Tambo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "14863 Zone 11 Sebokeng",
+    "code": 539033,
+    "latitude": -26.5769,
+    "location": "POINT (27.84864 -26.57697)",
+    "longitude": 27.84864,
+    "name": "gp Albertina Sisulu Clinic",
+    "province": "Gauteng",
+    "short_name": "A Sisulu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr 2nd Avenue and Hendrick Potgieter, Alberton North",
+    "code": 967842,
+    "latitude": -26.2596,
+    "location": "POINT (28.12863 -26.2596)",
+    "longitude": 28.12863,
+    "name": "gp Alberton North Clinic",
+    "province": "Gauteng",
+    "short_name": "Alberton North Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr 8th Avenue and Rooseveld Streets, Alexandra",
+    "code": 436251,
+    "latitude": -26.1095,
+    "location": "POINT (28.09588 -26.10953)",
+    "longitude": 28.09588,
+    "name": "gp Alexandra 8th Avenue Clinic",
+    "province": "Gauteng",
+    "short_name": "Alexandra 8th Ave Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "33 Arkwright Road, Wynburg",
+    "code": 784351,
+    "latitude": -26.1164,
+    "location": "POINT (28.08844 -26.11648)",
+    "longitude": 28.08844,
+    "name": "gp Alexandra CHC",
+    "province": "Gauteng",
+    "short_name": "Alexandra CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Springbok Crescent and Impala Road, Alexandra",
+    "code": 381815,
+    "latitude": -26.1067,
+    "location": "POINT (28.10999 -26.1067)",
+    "longitude": 28.10999,
+    "name": "gp Alexandra East Bank Clinic",
+    "province": "Gauteng",
+    "short_name": "Alexandra E Bank Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Sastri and Molopo Streets, Ext 3, Alra Park",
+    "code": 633706,
+    "latitude": -26.446,
+    "location": "POINT (28.512746 -26.446011)",
+    "longitude": 28.512746,
+    "name": "gp Alra Park Ext 3 Clinic",
+    "province": "Gauteng",
+    "short_name": "Alra Park Ext 3 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1718 Phooko Drive, Langaville Ext 3, Tsakane",
+    "code": 374942,
+    "latitude": -26.3343,
+    "location": "POINT (28.38866 -26.33434)",
+    "longitude": 28.38866,
+    "name": "gp Andries Raditsela Clinic",
+    "province": "Gauteng",
+    "short_name": "A Raditsela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ramohoeba Square, Cnr Mareka and Mokobane Streets, Atteridgeville",
+    "code": 926651,
+    "latitude": -25.7686,
+    "location": "POINT (28.07841 -25.76861)",
+    "longitude": 28.07841,
+    "name": "gp Atteridgeville Clinic",
+    "province": "Gauteng",
+    "short_name": "Atteridgeville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Azaad and Taj Mahal Streets, Azaadville",
+    "code": 964124,
+    "latitude": -26.1709,
+    "location": "POINT (27.75829 -26.17092)",
+    "longitude": 27.75829,
+    "name": "gp Azaadville Clinic",
+    "province": "Gauteng",
+    "short_name": "Azaadville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 261, Brandvlei, Randfontein",
+    "code": 786642,
+    "latitude": -26.1302,
+    "location": "POINT (27.59278 -26.13027)",
+    "longitude": 27.59278,
+    "name": "gp Badirile Clinic",
+    "province": "Gauteng",
+    "short_name": "Badirile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "22286 Barcelona Etwatwa, Benoni",
+    "code": 934233,
+    "latitude": -26.1091,
+    "location": "POINT (28.45219 -26.1091)",
+    "longitude": 28.45219,
+    "name": "gp Barcelona Clinic",
+    "province": "Gauteng",
+    "short_name": "Barcelona Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4424 Vulindlela Street, Extension 1 Orange Farm",
+    "code": 454533,
+    "latitude": -26.4924,
+    "location": "POINT (27.87908 -26.49247)",
+    "longitude": 27.87908,
+    "name": "gp Barney Molokoane Clinic",
+    "province": "Gauteng",
+    "short_name": "B Molokoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Skeen Boulevard, Bedfordview, 1609",
+    "code": 171333,
+    "latitude": -26.1793,
+    "location": "POINT (28.13449 -26.17934)",
+    "longitude": 28.13449,
+    "name": "gp Bedfordview Clinic",
+    "province": "Gauteng",
+    "short_name": "Bedfordview Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1298 Khomo Ea Hlaba Avenue, Bekkersdal, Westonaria, 1779",
+    "code": 146451,
+    "latitude": -26.2834,
+    "location": "POINT (27.70399 -26.28345)",
+    "longitude": 27.70399,
+    "name": "gp Bekkersdal East Clinic",
+    "province": "Gauteng",
+    "short_name": "Bekkersdal East Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3545 Khomo Ea Hlaba Avenue, Bekkersdal, Westonaria, 1779",
+    "code": 173124,
+    "latitude": -26.2861,
+    "location": "POINT (27.6974 -26.28619)",
+    "longitude": 27.697400000000002,
+    "name": "gp Bekkersdal West CHC",
+    "province": "Gauteng",
+    "short_name": "Bekkersdal W CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Alex Du Toit Street and Zietman Streets, Bellavista",
+    "code": 775533,
+    "latitude": -26.2557,
+    "location": "POINT (28.0293 -26.25578)",
+    "longitude": 28.0293,
+    "name": "gp Bellavista Clinic",
+    "province": "Gauteng",
+    "short_name": "Bellavista Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Hoover and Dolores Street, Berario, Crosby",
+    "code": 271924,
+    "latitude": -26.1356,
+    "location": "POINT (27.95284 -26.1356)",
+    "longitude": 27.95284,
+    "name": "gp Berario Clinic",
+    "province": "Gauteng",
+    "short_name": "Berario Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Angus and Joubert Streets, Germiston",
+    "code": 892624,
+    "latitude": -26.2213,
+    "location": "POINT (28.162803 -26.221308)",
+    "longitude": 28.162803,
+    "name": "gp Bertha Gxowa Clinic",
+    "province": "Gauteng",
+    "short_name": "Bertha Gxowa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1971 Hollywood Street, Evaton West",
+    "code": 981351,
+    "latitude": -26.5424,
+    "location": "POINT (27.82381 -26.54248)",
+    "longitude": 27.82381,
+    "name": "gp Beverly Hills Clinic",
+    "province": "Gauteng",
+    "short_name": "Beverly Hills Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr 6th Street and 4th Avenue, Bezvalley",
+    "code": 652460,
+    "latitude": -26.1866,
+    "location": "POINT (28.08827 -26.1866)",
+    "longitude": 28.08827,
+    "name": "gp Bezvalley Clinic",
+    "province": "Gauteng",
+    "short_name": "Bezvalley Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Wynand Marais Community Centre, Cnr Houtkapper Street and Olienhout Avenue, Birchleigh, Kempton Park, 1618",
+    "code": 211160,
+    "latitude": -26.0674,
+    "location": "POINT (28.22855 -26.06747)",
+    "longitude": 28.22855,
+    "name": "gp Birchleigh Clinic",
+    "province": "Gauteng",
+    "short_name": "Birchleigh Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Coen Scholtz Centre, Mooifontein Road, Birchleigh North",
+    "code": 122442,
+    "latitude": -26.0523,
+    "location": "POINT (28.23019 -26.0523)",
+    "longitude": 28.23019,
+    "name": "gp Birchleigh North Clinic",
+    "province": "Gauteng",
+    "short_name": "Birchleigh North Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2603-2672 Pelican Avenue, Blybank, Carletonville, 2499",
+    "code": 504324,
+    "latitude": -26.338,
+    "location": "POINT (27.474763 -26.338032)",
+    "longitude": 27.474763,
+    "name": "gp Blybank Clinic",
+    "province": "Gauteng",
+    "short_name": "Blybank Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "15 19th Avenue, Blyvoor, Carletonville",
+    "code": 527215,
+    "latitude": -26.4003,
+    "location": "POINT (27.374396 -26.400374)",
+    "longitude": 27.374396,
+    "name": "gp Blyvooruitsig Clinic",
+    "province": "Gauteng",
+    "short_name": "Blyvooruitsig Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "705 Block A, Mabopane",
+    "code": 791242,
+    "latitude": -25.5058,
+    "location": "POINT (28.06483 -25.505833)",
+    "longitude": 28.06483,
+    "name": "gp Boekenhout Clinic",
+    "province": "Gauteng",
+    "short_name": "Boekenhout Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1266 Block T, Soshanguve Block T",
+    "code": 699751,
+    "latitude": -25.4483,
+    "location": "POINT (28.1125 -25.44835)",
+    "longitude": 28.1125,
+    "name": "gp Boikhutsong Clinic",
+    "province": "Gauteng",
+    "short_name": "Boikhutsong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1990 Lekoa Street, Boipatong",
+    "code": 627415,
+    "latitude": -26.6721,
+    "location": "POINT (27.84787 -26.67216)",
+    "longitude": 27.84787,
+    "name": "gp Boipatong CHC",
+    "province": "Gauteng",
+    "short_name": "Boipatong CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2001 Mandela Drive, Boitumelo",
+    "code": 315424,
+    "latitude": -26.5623,
+    "location": "POINT (27.82432 -26.56237)",
+    "longitude": 27.82432,
+    "name": "gp Boitumelo Clinic",
+    "province": "Gauteng",
+    "short_name": "Boitumelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Trichardt and Commissioner Road, Boksburg",
+    "code": 707560,
+    "latitude": -26.2218,
+    "location": "POINT (28.2521 -26.22189)",
+    "longitude": 28.2521,
+    "name": "gp Boksburg Civic Centre Clinic",
+    "province": "Gauteng",
+    "short_name": "Boksburg Civic Centre Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cason Road, Boksburg North",
+    "code": 676551,
+    "latitude": -26.2092,
+    "location": "POINT (28.25315 -26.20929)",
+    "longitude": 28.25315,
+    "name": "gp Boksburg North Clinic",
+    "province": "Gauteng",
+    "short_name": "Boksburg North Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Alder Grove and Louis Botha Avenue, Kempton Park",
+    "code": 661160,
+    "latitude": -26.1212,
+    "location": "POINT (28.25633 -26.12121)",
+    "longitude": 28.25633,
+    "name": "gp Bonaero Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Bonaero Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "632 Matheo Street, Bophelong",
+    "code": 603442,
+    "latitude": -26.6939,
+    "location": "POINT (27.79729 -26.6939)",
+    "longitude": 27.79729,
+    "name": "gp Bophelong CDC (Emfuleni)",
+    "province": "Gauteng",
+    "short_name": "Bophelong CDC (Emf)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 3699, Ivory Park Ext 2",
+    "code": 625451,
+    "latitude": -26.0046,
+    "location": "POINT (28.19053 -26.00463)",
+    "longitude": 28.19053,
+    "name": "gp Bophelong Clinic (Johannesburg A)",
+    "province": "Gauteng",
+    "short_name": "Bophelong Clinic (Jhb A)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "34755 Block 11, Doornkop",
+    "code": 314142,
+    "latitude": -26.2441,
+    "location": "POINT (27.80778 -26.24417)",
+    "longitude": 27.80778,
+    "name": "gp Bophelong Clinic (Johannesburg C)",
+    "province": "Gauteng",
+    "short_name": "Bophelong Clinic (Jhb C)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "66 Masopha Street, Saulsville, 0125",
+    "code": 552642,
+    "latitude": -25.7719,
+    "location": "POINT (28.0534 -25.77192)",
+    "longitude": 28.0534,
+    "name": "gp Bophelong Clinic (Tshwane 3)",
+    "province": "Gauteng",
+    "short_name": "Bophelong Clinic (Tshw 3)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "611 Cnr Maraisburg and Griffith Road, Bosmont",
+    "code": 463115,
+    "latitude": -26.1895,
+    "location": "POINT (27.95869 -26.18954)",
+    "longitude": 27.95869,
+    "name": "gp Bosmont Clinic",
+    "province": "Gauteng",
+    "short_name": "Bosmont Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 661842,
+    "latitude": -26.2018,
+    "location": "POINT (27.868286 -26.201885)",
+    "longitude": 27.868286,
+    "name": "gp Braamfischerville Clinic",
+    "province": "Gauteng",
+    "short_name": "Braamfischerville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "73a Roy Campbell Street, Brackenhurst",
+    "code": 866033,
+    "latitude": -26.3139,
+    "location": "POINT (28.097 -26.3139)",
+    "longitude": 28.097,
+    "name": "gp Brackenhurst Clinic",
+    "province": "Gauteng",
+    "short_name": "Brackenhurst Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Civic Centre, Cnr Elliot and Escombe Street, Brakpan",
+    "code": 565615,
+    "latitude": -26.2353,
+    "location": "POINT (28.37034 -26.23536)",
+    "longitude": 28.37034,
+    "name": "gp Brakpan Clinic",
+    "province": "Gauteng",
+    "short_name": "Brakpan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Market and Botha Street, Bronkhorstspruit",
+    "code": 282460,
+    "latitude": -25.8096,
+    "location": "POINT (28.74356 -25.80963)",
+    "longitude": 28.74356,
+    "name": "gp Bronkhorstspruit Clinic",
+    "province": "Gauteng",
+    "short_name": "Bronkhorstspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 31128, Cnr Huhlwana and Gugulesizwe Streets, Tsakane Ext 15",
+    "code": 851233,
+    "latitude": -26.3767,
+    "location": "POINT (28.378153 -26.376758)",
+    "longitude": 28.378153,
+    "name": "gp Calcot Dhlephu Clinic",
+    "province": "Gauteng",
+    "short_name": "Calcot Dhlephu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1277 Halite Street, Carletonville",
+    "code": 726242,
+    "latitude": -26.3578,
+    "location": "POINT (27.397922 -26.357861)",
+    "longitude": 27.397922,
+    "name": "gp Carletonville Central Clinic",
+    "province": "Gauteng",
+    "short_name": "Carletonville Central Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1743 Rihlamphu Street, Chiawelo",
+    "code": 121724,
+    "latitude": -26.279,
+    "location": "POINT (27.86479 -26.279)",
+    "longitude": 27.86479,
+    "name": "gp Chiawelo CHC",
+    "province": "Gauteng",
+    "short_name": "Chiawelo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2202/3 Harry Gwela Street, Chief Albert Luhuli Park, Benoni",
+    "code": 368360,
+    "latitude": -26.1543,
+    "location": "POINT (28.38186 -26.15437)",
+    "longitude": 28.38186,
+    "name": "gp Chief Albert Luthuli Clinic",
+    "province": "Gauteng",
+    "short_name": "Chief A Luthuli Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lesotho Crescent, Cosmo City",
+    "code": 831724,
+    "latitude": -26.0205,
+    "location": "POINT (27.929695 -26.020582)",
+    "longitude": 27.929695,
+    "name": "gp Cosmo City Clinic",
+    "province": "Gauteng",
+    "short_name": "Cosmo City Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "77 Ingleby Street, Crosby",
+    "code": 142242,
+    "latitude": -26.1924,
+    "location": "POINT (27.9899 -26.1924)",
+    "longitude": 27.9899,
+    "name": "gp Crosby Clinic",
+    "province": "Gauteng",
+    "short_name": "Crosby Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Ulster and Mourne Streets, Crown Gardens",
+    "code": 879642,
+    "latitude": -26.249,
+    "location": "POINT (28.00462 -26.24902)",
+    "longitude": 28.00462,
+    "name": "gp Crown Gardens Clinic",
+    "province": "Gauteng",
+    "short_name": "Crown Gardens Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "565 Strand Street, Crystal Park, Benoni",
+    "code": 192624,
+    "latitude": -26.1361,
+    "location": "POINT (28.37031 -26.13616)",
+    "longitude": 28.37031,
+    "name": "gp Crystal Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Crystal Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 520, JQ, Kroomdraai",
+    "code": 339306,
+    "latitude": -25.9882,
+    "location": "POINT (27.78312 -25.988214)",
+    "longitude": 27.78312,
+    "name": "gp DMA Kromdraai Clinic",
+    "province": "Gauteng",
+    "short_name": "DMA Kromdraai Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "701 Duduzile Street, Kingsway",
+    "code": 276615,
+    "latitude": -26.1874,
+    "location": "POINT (28.39451 -26.18748)",
+    "longitude": 28.39451,
+    "name": "gp Dan Kubheka Clinic",
+    "province": "Gauteng",
+    "short_name": "Dan Kubheka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lucas van der Berg Building, 10 Transoranje Road, Danville",
+    "code": 471560,
+    "latitude": -25.747700000000002,
+    "location": "POINT (28.13359 -25.74772)",
+    "longitude": 28.13359,
+    "name": "gp Danville Clinic",
+    "province": "Gauteng",
+    "short_name": "Danville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "452 Section A, Dark City",
+    "code": 363642,
+    "latitude": -25.675,
+    "location": "POINT (28.72655 -25.67501)",
+    "longitude": 28.72655,
+    "name": "gp Dark City CHC",
+    "province": "Gauteng",
+    "short_name": "Dark City CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "869 Reggie Street, Chris Hani, Daveyton East",
+    "code": 654633,
+    "latitude": -26.1343,
+    "location": "POINT (28.44056 -26.13438)",
+    "longitude": 28.44056,
+    "name": "gp Daveyton East Clinic",
+    "province": "Gauteng",
+    "short_name": "Daveyton East Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "14108 Tom Boya Street, Daveyton",
+    "code": 928142,
+    "latitude": -26.1287,
+    "location": "POINT (28.4489 -26.12879)",
+    "longitude": 28.4489,
+    "name": "gp Daveyton Ext Clinic",
+    "province": "Gauteng",
+    "short_name": "Daveyton Ext Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9307 Empilweni Street, Daveyton",
+    "code": 561433,
+    "latitude": -26.1526,
+    "location": "POINT (28.41445 -26.15261)",
+    "longitude": 28.41445,
+    "name": "gp Daveyton Main CDC",
+    "province": "Gauteng",
+    "short_name": "Daveyton Main CDC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Minaar and Campbell Streets, Davidsonville, Roodepoort",
+    "code": 265351,
+    "latitude": -26.1546,
+    "location": "POINT (27.84892 -26.15463)",
+    "longitude": 27.84892,
+    "name": "gp Davidsonville Clinic",
+    "province": "Gauteng",
+    "short_name": "Davidsonville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Rondebult and Cossing Streets, Dawn Park",
+    "code": 867651,
+    "latitude": -26.307,
+    "location": "POINT (28.2571 -26.30701)",
+    "longitude": 28.2571,
+    "name": "gp Dawn Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Dawn Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "244 Moloto Road, De Wagens Drift",
+    "code": 816833,
+    "latitude": -25.5142,
+    "location": "POINT (28.52835 -25.51422)",
+    "longitude": 28.52835,
+    "name": "gp De Wagensdrift Clinic",
+    "province": "Gauteng",
+    "short_name": "De Wagensdrift Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3790 Martinus Smuts Drive, Zone 3, Diepkloof",
+    "code": 286124,
+    "latitude": -26.2373,
+    "location": "POINT (27.94625 -26.23738)",
+    "longitude": 27.94625,
+    "name": "gp Diepkloof LA Clinic",
+    "province": "Gauteng",
+    "short_name": "Dkloof LA Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7648 Redshaw Road, Diepkloof",
+    "code": 620451,
+    "latitude": -26.2407,
+    "location": "POINT (27.94729 -26.24071)",
+    "longitude": 27.94729,
+    "name": "gp Diepkloof Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "Diepkloof Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 5355, Diepsloot Ext 5",
+    "code": 781560,
+    "latitude": -25.9216,
+    "location": "POINT (28.01499 -25.92169)",
+    "longitude": 28.01499,
+    "name": "gp Diepsloot South Clinic",
+    "province": "Gauteng",
+    "short_name": "Diepsloot South Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 192, Dilopye, Hammanskraal",
+    "code": 847306,
+    "latitude": -25.3829,
+    "location": "POINT (28.19353 -25.38296)",
+    "longitude": 28.19353,
+    "name": "gp Dilopye Clinic",
+    "province": "Gauteng",
+    "short_name": "Dilopye Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "35 Clarendon Drive, Discovery, Roodepoort",
+    "code": 345360,
+    "latitude": -26.1658,
+    "location": "POINT (27.89417 -26.16581)",
+    "longitude": 27.89417,
+    "name": "gp Discoverers CHC",
+    "province": "Gauteng",
+    "short_name": "Discoverers CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Dr van der Merwe and Amandelboom Streets, Doornpoort",
+    "code": 483133,
+    "latitude": -25.6559,
+    "location": "POINT (28.25141 -25.6559)",
+    "longitude": 28.25141,
+    "name": "gp Doornpoort Clinic",
+    "province": "Gauteng",
+    "short_name": "Doornpoort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2063 Chestnut Street, Palm Springs, Vereeniging",
+    "code": 138542,
+    "latitude": -26.4972,
+    "location": "POINT (27.83708 -26.49727)",
+    "longitude": 27.83708,
+    "name": "gp Dr Helga Kuhn Clinic",
+    "province": "Gauteng",
+    "short_name": "H Kuhn Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1901 Gopane Street, Krugersdorp",
+    "code": 682360,
+    "latitude": -26.0731,
+    "location": "POINT (27.75231 -26.07318)",
+    "longitude": 27.75231,
+    "name": "gp Dr Ramirez Martinez Clinic",
+    "province": "Gauteng",
+    "short_name": "Dr R Martinez Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3521 Mokoene Street, Thokoza",
+    "code": 501242,
+    "latitude": -26.3548,
+    "location": "POINT (28.13615 -26.35482)",
+    "longitude": 28.13615,
+    "name": "gp Dresser Clinic",
+    "province": "Gauteng",
+    "short_name": "Dresser Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stuttaford Street Se 2, Vanderbijlpark",
+    "code": 434533,
+    "latitude": -26.726,
+    "location": "POINT (27.8462 -26.72609)",
+    "longitude": 27.8462,
+    "name": "gp Driehoek Clinic",
+    "province": "Gauteng",
+    "short_name": "Diehoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Nala Street, Duduza",
+    "code": 488733,
+    "latitude": -26.375,
+    "location": "POINT (28.414236 -26.375019)",
+    "longitude": 28.414236,
+    "name": "gp Duduza Clinic",
+    "province": "Gauteng",
+    "short_name": "Duduza Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1166 - 9th Street, Dukathole, Germiston",
+    "code": 980333,
+    "latitude": -26.2257,
+    "location": "POINT (28.19057 -26.22579)",
+    "longitude": 28.19057,
+    "name": "gp Dukathole Clinic",
+    "province": "Gauteng",
+    "short_name": "Dukathole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pieter Krynauw Centre, Cnr Meeu and Stegmann Streets, East Lynne, Ekklesia",
+    "code": 609624,
+    "latitude": -25.7051,
+    "location": "POINT (28.2846 -25.70512)",
+    "longitude": 28.2846,
+    "name": "gp East Lynne Clinic",
+    "province": "Gauteng",
+    "short_name": "East Lynne Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Abraham and Ferrari Streets, Eden Park",
+    "code": 238342,
+    "latitude": -26.3766,
+    "location": "POINT (28.126307 -26.376603)",
+    "longitude": 28.126307,
+    "name": "gp Eden Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Eden Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "0A Nguni Drive, Cnr 9th and Van Riebeeck Avenue, Edenvale",
+    "code": 837406,
+    "latitude": -26.1368,
+    "location": "POINT (28.14914 -26.13683)",
+    "longitude": 28.14914,
+    "name": "gp Edenvale Clinic",
+    "province": "Gauteng",
+    "short_name": "Edenvale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr PS Fourie Drive and Hans Coverdale Road, Eersterust",
+    "code": 165315,
+    "latitude": -25.7069,
+    "location": "POINT (28.30944 -25.70694)",
+    "longitude": 28.30944,
+    "name": "gp Eersterust CHC",
+    "province": "Gauteng",
+    "short_name": "Eersterust CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 51 Klipriver Road, Eikenhof",
+    "code": 158551,
+    "latitude": -26.3333,
+    "location": "POINT (27.98693 -26.33339)",
+    "longitude": 27.98693,
+    "name": "gp Eikenhof Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "Eikenhof Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1227, Ekangala Section D",
+    "code": 707542,
+    "latitude": -25.697400000000002,
+    "location": "POINT (28.752208 -25.697442)",
+    "longitude": 28.752208,
+    "name": "gp Ekangala Clinic",
+    "province": "Gauteng",
+    "short_name": "Ekangala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Arlberg and Wittenberg Streets, Eldorado Park Ext 2",
+    "code": 803042,
+    "latitude": -26.2892,
+    "location": "POINT (27.9211 -26.28921)",
+    "longitude": 27.9211,
+    "name": "gp Eldorado Park Ext 2 Clinic",
+    "province": "Gauteng",
+    "short_name": "Eldorado X2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "59 Boundary Road, Eldorado Park",
+    "code": 672524,
+    "latitude": -26.2998,
+    "location": "POINT (27.88961 -26.2998)",
+    "longitude": 27.88961,
+    "name": "gp Eldorado Park Ext 9 Clinic",
+    "province": "Gauteng",
+    "short_name": "Eldorado X9 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Allan and Saxby Roads",
+    "code": 246442,
+    "latitude": -25.8359,
+    "location": "POINT (28.14881 -25.83591)",
+    "longitude": 28.14881,
+    "name": "gp Eldoraigne Clinic",
+    "province": "Gauteng",
+    "short_name": "Eldoraigne Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "13149 Carr Street, Meadowlands",
+    "code": 275524,
+    "latitude": -26.2184,
+    "location": "POINT (27.91531 -26.21841)",
+    "longitude": 27.91531,
+    "name": "gp Elias Motsoaledi Clinic",
+    "province": "Gauteng",
+    "short_name": "Elias Motsoaledi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "772 Ext, Cnr Els and Voortrekker Streets, Elsburg, Germiston",
+    "code": 376233,
+    "latitude": -26.2449,
+    "location": "POINT (28.20003 -26.24492)",
+    "longitude": 28.20003,
+    "name": "gp Elsburg Clinic",
+    "province": "Gauteng",
+    "short_name": "Elsburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "13625 Ext 10, Emaphupheni Ext 10",
+    "code": 647206,
+    "latitude": -26.1074,
+    "location": "POINT (28.48032 -26.10744)",
+    "longitude": 28.48032,
+    "name": "gp Emaphupheni Clinic",
+    "province": "Gauteng",
+    "short_name": "Emaphupheni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7724 Ezindimevini and Johan van der Merwe Streets, Sebokeng Unit 7",
+    "code": 929215,
+    "latitude": -26.5476,
+    "location": "POINT (27.8735 -26.54761)",
+    "longitude": 27.8735,
+    "name": "gp Empilisweni CDC",
+    "province": "Gauteng",
+    "short_name": "Empilisweni CDC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5/6 Cnr 1st and James Moleya Street, Endayeni, Johannesburg, 1632",
+    "code": 131524,
+    "latitude": -26.0195,
+    "location": "POINT (28.19123 -26.0195)",
+    "longitude": 28.19123,
+    "name": "gp Endayeni Clinic",
+    "province": "Gauteng",
+    "short_name": "Endayeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Cryolite and Zeolite Street, Ennerdale Ext 8",
+    "code": 752524,
+    "latitude": -26.4131,
+    "location": "POINT (27.81714 -26.41318)",
+    "longitude": 27.81714,
+    "name": "gp Ennerdale Ext 8 Clinic",
+    "province": "Gauteng",
+    "short_name": "Ennerdale X8 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Katz Road and Smith Walk Street, Ennerdale Ext 9",
+    "code": 912724,
+    "latitude": -26.4031,
+    "location": "POINT (27.83061 -26.40312)",
+    "longitude": 27.83061,
+    "name": "gp Ennerdale Ext 9 Clinic",
+    "province": "Gauteng",
+    "short_name": "Ennerdale X9 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "898 Flamingo Street, Krugersdorp",
+    "code": 674151,
+    "latitude": -26.195,
+    "location": "POINT (27.7684 -26.195)",
+    "longitude": 27.7684,
+    "name": "gp Eric Ndeleni Clinic",
+    "province": "Gauteng",
+    "short_name": "Eric Ndeleni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "676 Nasa Street, Tembisa",
+    "code": 670542,
+    "latitude": -25.9943,
+    "location": "POINT (28.22346 -25.99439)",
+    "longitude": 28.22346,
+    "name": "gp Erin Clinic",
+    "province": "Gauteng",
+    "short_name": "Erin Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "219 Mpilo Street, Esangweni Section, Tembisa",
+    "code": 213142,
+    "latitude": -26.0222,
+    "location": "POINT (28.2009 -26.02221)",
+    "longitude": 28.2009,
+    "name": "gp Esangweni CHC",
+    "province": "Gauteng",
+    "short_name": "Esangweni CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "43 Bennin Steet, Ethafeni Section, Ethafeni Park, Tembisa",
+    "code": 787660,
+    "latitude": -26.0239,
+    "location": "POINT (28.21461 -26.02392)",
+    "longitude": 28.21461,
+    "name": "gp Ethafeni Clinic",
+    "province": "Gauteng",
+    "short_name": "Ethafeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1459 Togo Road, Evaton",
+    "code": 324242,
+    "latitude": -26.5315,
+    "location": "POINT (27.8658 -26.53153)",
+    "longitude": 27.8658,
+    "name": "gp Evaton Main Clinic",
+    "province": "Gauteng",
+    "short_name": "Evaton Main Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malibongwe Drive, Lionspark, Lanseria",
+    "code": 472642,
+    "latitude": -25.9914,
+    "location": "POINT (27.927375 -25.991411)",
+    "longitude": 27.927375,
+    "name": "gp Eyethu Yarona Clinic",
+    "province": "Gauteng",
+    "short_name": "Eyethu Yarona Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sammy Marks Building, Cnr Prinsloo and Vermeulen Streets, Pretoria",
+    "code": 739124,
+    "latitude": -25.745,
+    "location": "POINT (28.19489 -25.74501)",
+    "longitude": 28.19489,
+    "name": "gp FF Ribeiro Clinic",
+    "province": "Gauteng",
+    "short_name": "FF Ribeiro Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8757 Endeni Street, Cnr Mmusong and Kagiso Avenue",
+    "code": 877660,
+    "latitude": -26.1522,
+    "location": "POINT (27.78694 -26.15223)",
+    "longitude": 27.78694,
+    "name": "gp Fanyana Nhlapo Clinic",
+    "province": "Gauteng",
+    "short_name": "Fanyana Nhlapo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "42 8th Street, Fochville",
+    "code": 357142,
+    "latitude": -26.4866,
+    "location": "POINT (27.49056 -26.48667)",
+    "longitude": 27.49056,
+    "name": "gp Fochville Clinic",
+    "province": "Gauteng",
+    "short_name": "Fochville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "175 DF Malan Drive, Pretoria West",
+    "code": 438442,
+    "latitude": -25.7497,
+    "location": "POINT (28.174 -25.74971)",
+    "longitude": 28.174,
+    "name": "gp Folang Clinic",
+    "province": "Gauteng",
+    "short_name": "Folang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Erf 1149, Telescope Street, Ext 30, Devland",
+    "code": 488624,
+    "latitude": -26.2939,
+    "location": "POINT (27.932366 -26.293992)",
+    "longitude": 27.932366000000002,
+    "name": "gp Freedom Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Freedom Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Mthalane and Makhaza Streets",
+    "code": 713351,
+    "latitude": -25.7808,
+    "location": "POINT (28.05619 -25.7808)",
+    "longitude": 28.05619,
+    "name": "gp Gazankulu Clinic",
+    "province": "Gauteng",
+    "short_name": "Gazankulu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Ultog Avenue",
+    "code": 133715,
+    "latitude": -26.3418,
+    "location": "POINT (28.36153 -26.34182)",
+    "longitude": 28.36153,
+    "name": "gp Geluksdal Clinic",
+    "province": "Gauteng",
+    "short_name": "Geluksdal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Queen and Cross Streets",
+    "code": 252133,
+    "latitude": -26.2172,
+    "location": "POINT (28.16421 -26.21729)",
+    "longitude": 28.16421,
+    "name": "gp Germiston City Clinic",
+    "province": "Gauteng",
+    "short_name": "Germiston Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Surmon and Vorster Road",
+    "code": 216251,
+    "latitude": -26.2714,
+    "location": "POINT (28.03856 -26.2714)",
+    "longitude": 28.03856,
+    "name": "gp Glenanda Clinic",
+    "province": "Gauteng",
+    "short_name": "Glenanda Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "97 Bainskloof Street",
+    "code": 617824,
+    "latitude": -26.3899,
+    "location": "POINT (27.61567 -26.38992)",
+    "longitude": 27.61567,
+    "name": "gp Glenhavie Clinic",
+    "province": "Gauteng",
+    "short_name": "Glenhavie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "310 Mavuso Street, Goba Section, Katlehong",
+    "code": 589315,
+    "latitude": -26.3426,
+    "location": "POINT (28.15161 -26.34262)",
+    "longitude": 28.15161,
+    "name": "gp Goba Clinic",
+    "province": "Gauteng",
+    "short_name": "Goba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2711 Nice Street",
+    "code": 356533,
+    "latitude": -26.2377,
+    "location": "POINT (27.8054 -26.2377)",
+    "longitude": 27.8054,
+    "name": "gp Green Village Clinic",
+    "province": "Gauteng",
+    "short_name": "Green Village Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 2396, Cnr Weeping Wattle and Wild Plum Streets",
+    "code": 238642,
+    "latitude": -26.3949,
+    "location": "POINT (28.128174 -26.394923)",
+    "longitude": 28.128174,
+    "name": "gp Greenfields Clinic",
+    "province": "Gauteng",
+    "short_name": "Greenfields Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "18-19 Kingsway and Market Streets",
+    "code": 790733,
+    "latitude": -25.9988,
+    "location": "POINT (28.128619 -25.99888)",
+    "longitude": 28.128619,
+    "name": "gp Halfway House Clinic",
+    "province": "Gauteng",
+    "short_name": "Halfway House Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 534, Elandsfontein",
+    "code": 264151,
+    "latitude": -25.974,
+    "location": "POINT (27.91211 -25.97402)",
+    "longitude": 27.91211,
+    "name": "gp Hands of Compassion Clinic",
+    "province": "Gauteng",
+    "short_name": "Hands Compassion Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "50 Ueckermann Street",
+    "code": 353315,
+    "latitude": -26.5014,
+    "location": "POINT (28.35737 -26.50149)",
+    "longitude": 28.35737,
+    "name": "gp Heidelberg Clinic",
+    "province": "Gauteng",
+    "short_name": "Heidelberg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pheasant Street, Helderkruin",
+    "code": 512851,
+    "latitude": -26.1374,
+    "location": "POINT (27.869236 -26.137497)",
+    "longitude": 27.869236,
+    "name": "gp Helderkruin Clinic",
+    "province": "Gauteng",
+    "short_name": "Helderkruin Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Taljaard and Ribbon Streets, Hercules",
+    "code": 961351,
+    "latitude": -25.712,
+    "location": "POINT (28.1477 -25.712)",
+    "longitude": 28.1477,
+    "name": "gp Hercules Clinic",
+    "province": "Gauteng",
+    "short_name": "Hercules Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8786 Koko Street",
+    "code": 754560,
+    "latitude": -25.9927,
+    "location": "POINT (28.2041 -25.99271)",
+    "longitude": 28.2041,
+    "name": "gp Hikhensile Clinic",
+    "province": "Gauteng",
+    "short_name": "Hikhensile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Smit and Klein Streets",
+    "code": 652342,
+    "latitude": -26.1932,
+    "location": "POINT (28.04478 -26.19324)",
+    "longitude": 28.04478,
+    "name": "gp Hillbrow CHC",
+    "province": "Gauteng",
+    "short_name": "Hillbrow CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19600 Tlou Street, Mamelodi East",
+    "code": 124124,
+    "latitude": -25.7043,
+    "location": "POINT (28.37559 -25.70436)",
+    "longitude": 28.37559,
+    "name": "gp Holani Clinic",
+    "province": "Gauteng",
+    "short_name": "Holani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Golden Highway 16065, Orange Farm Ext 9",
+    "code": 464951,
+    "latitude": -26.4504,
+    "location": "POINT (27.85639 -26.45041)",
+    "longitude": 27.85639,
+    "name": "gp Imbalenhle Clinic",
+    "province": "Gauteng",
+    "short_name": "Imbalenhle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5/6 Elias Motsoaledi Road, Dobsonville",
+    "code": 649342,
+    "latitude": -26.2174,
+    "location": "POINT (27.87079 -26.21749)",
+    "longitude": 27.87079,
+    "name": "gp Itireleng CHC",
+    "province": "Gauteng",
+    "short_name": "Itireleng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Maduna and Edward Drive, Phomolong",
+    "code": 443724,
+    "latitude": -26.0449,
+    "location": "POINT (28.17845 -26.0449)",
+    "longitude": 28.17845,
+    "name": "gp Itireleng Clinic (Ekurhuleni North 2)",
+    "province": "Gauteng",
+    "short_name": "Itireleng Clinic (Eku N2)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Portion Tq 304, Hekpoort Main Road",
+    "code": 756151,
+    "latitude": -25.8963,
+    "location": "POINT (27.60122 -25.89636)",
+    "longitude": 27.60122,
+    "name": "gp Itumeleng Clinic",
+    "province": "Gauteng",
+    "short_name": "Itumeleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3123 Tumahumale Street",
+    "code": 361933,
+    "latitude": -26.253,
+    "location": "POINT (27.87153 -26.25304)",
+    "longitude": 27.87153,
+    "name": "gp Jabavu (Vusabantu) Clinic",
+    "province": "Gauteng",
+    "short_name": "Jabavu (Vusabantu) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "257 Nguza Street, Ext 2",
+    "code": 823633,
+    "latitude": -26.3673,
+    "location": "POINT (28.21789 -26.36731)",
+    "longitude": 28.21789,
+    "name": "gp Jabulane Dumane CHC",
+    "province": "Gauteng",
+    "short_name": "J Dumane CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "376 Jack Hindon Street, Pretoria North",
+    "code": 135633,
+    "latitude": -25.6665,
+    "location": "POINT (28.16902 -25.66656)",
+    "longitude": 28.16902,
+    "name": "gp Jack Hindon Clinic",
+    "province": "Gauteng",
+    "short_name": "Jack Hindon Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Flemming and Gould Streets",
+    "code": 176133,
+    "latitude": -26.0948,
+    "location": "POINT (27.74743 -26.09488)",
+    "longitude": 27.74743,
+    "name": "gp Jan Maree Clinic",
+    "province": "Gauteng",
+    "short_name": "Jan Maree Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "34 Ford Street, Jeppe",
+    "code": 644233,
+    "latitude": -26.2048,
+    "location": "POINT (28.06769 -26.20482)",
+    "longitude": 28.06769,
+    "name": "gp Jeppe Clinic",
+    "province": "Gauteng",
+    "short_name": "Jeppe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1098 Polokong, Johan Deo",
+    "code": 254424,
+    "latitude": -26.6014,
+    "location": "POINT (27.80894 -26.60141)",
+    "longitude": 27.80894,
+    "name": "gp Johan Deo Clinic",
+    "province": "Gauteng",
+    "short_name": "Johan Deo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Frikkie Meyer and Pasteur Boulevard, Vanderbijlpark, 1900",
+    "code": 927424,
+    "latitude": -26.703,
+    "location": "POINT (27.83411 -26.70309)",
+    "longitude": 27.83411,
+    "name": "gp Johan Heyns CHC",
+    "province": "Gauteng",
+    "short_name": "Johan Heyns CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4748 Masemotha, Etwatwa West",
+    "code": 414806,
+    "latitude": -26.1272,
+    "location": "POINT (28.46417 -26.12722)",
+    "longitude": 28.46417,
+    "name": "gp Joy Clinic",
+    "province": "Gauteng",
+    "short_name": "Joy Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 92, Jubilee Road",
+    "code": 955733,
+    "latitude": -25.4026,
+    "location": "POINT (28.26553 -25.40262)",
+    "longitude": 28.26553,
+    "name": "gp Jubilee Gateway Clinic",
+    "province": "Gauteng",
+    "short_name": "Jubilee Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20941 Mahlangu Street",
+    "code": 172842,
+    "latitude": -25.5839,
+    "location": "POINT (28.08917 -25.58392)",
+    "longitude": 28.08917,
+    "name": "gp KT Motubatse Clinic",
+    "province": "Gauteng",
+    "short_name": "KT Motubatse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 174, Moloto Road, Kameeldrift",
+    "code": 839724,
+    "latitude": -25.6808,
+    "location": "POINT (28.285722 -25.680809)",
+    "longitude": 28.285722,
+    "name": "gp Kameeldrift Clinic",
+    "province": "Gauteng",
+    "short_name": "Kameeldrift Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 36, Kameelzynkraal",
+    "code": 472342,
+    "latitude": -25.7758,
+    "location": "POINT (28.60833 -25.77585)",
+    "longitude": 28.60833,
+    "name": "gp Kanana Clinic",
+    "province": "Gauteng",
+    "short_name": "Kanana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Heinrich and 1st Avenue, Karenpark",
+    "code": 635906,
+    "latitude": -25.6725,
+    "location": "POINT (28.108 -25.67252)",
+    "longitude": 28.108,
+    "name": "gp Karenpark Clinic",
+    "province": "Gauteng",
+    "short_name": "Karenpark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2098 Khotso Street, Katlehong",
+    "code": 315542,
+    "latitude": -26.3136,
+    "location": "POINT (28.1554 -26.31364)",
+    "longitude": 28.1554,
+    "name": "gp Katlehong North Clinic",
+    "province": "Gauteng",
+    "short_name": "Katlehong N Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1078 Pfananani, 1161 Alexandra Section, Kekana Gardens",
+    "code": 827942,
+    "latitude": -25.3785,
+    "location": "POINT (28.3084 -25.37859)",
+    "longitude": 28.3084,
+    "name": "gp Kekana Gardens Clinic",
+    "province": "Gauteng",
+    "short_name": "Kekana Gardens Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4373 Kekanastad Clinic. Mojaneng",
+    "code": 478724,
+    "latitude": -25.3586,
+    "location": "POINT (28.245556 -25.358611)",
+    "longitude": 28.245556,
+    "name": "gp Kekanastad Clinic",
+    "province": "Gauteng",
+    "short_name": "Kekanastad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Civic Centre, Cnr CR Swart and Pretoria Road, Kempton Park",
+    "code": 674242,
+    "latitude": -26.1017,
+    "location": "POINT (28.22727 -26.10171)",
+    "longitude": 28.22727,
+    "name": "gp Kempton Park Civic Centre Clinic",
+    "province": "Gauteng",
+    "short_name": "Kemp Park Civic Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "98 Kemston Avenue, Benoni",
+    "code": 561751,
+    "latitude": -26.1874,
+    "location": "POINT (28.31351 -26.18747)",
+    "longitude": 28.31351,
+    "name": "gp Kemston Clinic",
+    "province": "Gauteng",
+    "short_name": "Kemston Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1526 Sefatsa Stand",
+    "code": 130251,
+    "latitude": -25.4703,
+    "location": "POINT (28.05896 -25.47034)",
+    "longitude": 28.05896,
+    "name": "gp Kgabo CHC",
+    "province": "Gauteng",
+    "short_name": "Kgabo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "181 Setonga Street, Siluma Section",
+    "code": 842615,
+    "latitude": -26.3831,
+    "location": "POINT (28.16033 -26.38317)",
+    "longitude": 28.16033,
+    "name": "gp Khumalo Clinic",
+    "province": "Gauteng",
+    "short_name": "Khumalo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5961 Morake Street, Khutsong",
+    "code": 518760,
+    "latitude": -26.3288,
+    "location": "POINT (27.3286 -26.32888)",
+    "longitude": 27.3286,
+    "name": "gp Khutsong CHC",
+    "province": "Gauteng",
+    "short_name": "Khutsong CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2829 Tswana Section, Khutsong",
+    "code": 412042,
+    "latitude": -26.3291,
+    "location": "POINT (27.318782 -26.329114)",
+    "longitude": 27.318782,
+    "name": "gp Khutsong East Clinic",
+    "province": "Gauteng",
+    "short_name": "Khutsong East Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6188 Ext 3, Khutsong",
+    "code": 834633,
+    "latitude": -26.3415,
+    "location": "POINT (27.30292 -26.34159)",
+    "longitude": 27.30292,
+    "name": "gp Khutsong Ext 3 Clinic",
+    "province": "Gauteng",
+    "short_name": "Khutsong Ext 3 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "01 Sompane Road",
+    "code": 320142,
+    "latitude": -26.3545,
+    "location": "POINT (27.327342 -26.354547)",
+    "longitude": 27.327342,
+    "name": "gp Khutsong South Clinic",
+    "province": "Gauteng",
+    "short_name": "Khutsong South Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7176 Xhosa Section, Khutsong",
+    "code": 736924,
+    "latitude": -26.3278,
+    "location": "POINT (27.316072 -26.327893)",
+    "longitude": 27.316072,
+    "name": "gp Khutsong West Clinic",
+    "province": "Gauteng",
+    "short_name": "Khutsong West Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Kenneth Gardens and Summer Streets",
+    "code": 331633,
+    "latitude": -26.3189,
+    "location": "POINT (28.00912 -26.31897)",
+    "longitude": 28.00912,
+    "name": "gp Kibler Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Kibler Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Calendula and Daisy Streets",
+    "code": 823242,
+    "latitude": -26.2895,
+    "location": "POINT (27.88117 -26.28952)",
+    "longitude": 27.88117,
+    "name": "gp Klipspruit West Clinic",
+    "province": "Gauteng",
+    "short_name": "Klipspruit West Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "21 Ascot Road",
+    "code": 587942,
+    "latitude": -26.2902,
+    "location": "POINT (27.89538 -26.2902)",
+    "longitude": 27.89538,
+    "name": "gp Kliptown Clinic",
+    "province": "Gauteng",
+    "short_name": "Kliptown Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "36 Kruin Street, Driesklopper Hall, Klopper Park",
+    "code": 485515,
+    "latitude": -26.147100000000002,
+    "location": "POINT (28.19725 -26.14717)",
+    "longitude": 28.19725,
+    "name": "gp Klopper Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Klopper Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Human and Market Street",
+    "code": 574424,
+    "latitude": -26.2219,
+    "location": "POINT (27.646 -26.2219)",
+    "longitude": 27.646,
+    "name": "gp Kocksoord Clinic",
+    "province": "Gauteng",
+    "short_name": "Kocksoord Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "183 Ben Shiburi Street, Kokosi",
+    "code": 565342,
+    "latitude": -26.4946,
+    "location": "POINT (27.46838 -26.49465)",
+    "longitude": 27.46838,
+    "name": "gp Kokosi Clinic",
+    "province": "Gauteng",
+    "short_name": "Kokosi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Marthinus Oosthuizen Street and Verwoerd Avenue, Kookrus, Meyerton",
+    "code": 325824,
+    "latitude": -26.5889,
+    "location": "POINT (28.00349 -26.58894)",
+    "longitude": 28.00349,
+    "name": "gp Kookrus Clinic",
+    "province": "Gauteng",
+    "short_name": "Kookrus Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Church and Fountain Streets",
+    "code": 315806,
+    "latitude": -26.0993,
+    "location": "POINT (27.76868 -26.09939)",
+    "longitude": 27.76868,
+    "name": "gp Krugersdorp Central Clinic",
+    "province": "Gauteng",
+    "short_name": "Krugersdorp Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7001 Moshoeshoe Street, Kwa-Thema",
+    "code": 816633,
+    "latitude": -26.2956,
+    "location": "POINT (28.39114 -26.2956)",
+    "longitude": 28.39114,
+    "name": "gp Kwa-Thema CHC",
+    "province": "Gauteng",
+    "short_name": "Kwa-Thema CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 41 Swartkrans Maropeng",
+    "code": 767606,
+    "latitude": -25.999,
+    "location": "POINT (27.700131 -25.999044)",
+    "longitude": 27.700131,
+    "name": "gp Land is Wealth Clinic",
+    "province": "Gauteng",
+    "short_name": "Land is Wealth Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Bengal and 25th Avenue",
+    "code": 941051,
+    "latitude": -25.784,
+    "location": "POINT (28.08798 -25.78401)",
+    "longitude": 28.08798,
+    "name": "gp Laudium CHC",
+    "province": "Gauteng",
+    "short_name": "Laudium CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "186 6th Avenue, Laudium",
+    "code": 903233,
+    "latitude": -25.7876,
+    "location": "POINT (28.10701 -25.78768)",
+    "longitude": 28.10701,
+    "name": "gp Laudium Clinic",
+    "province": "Gauteng",
+    "short_name": "Laudium Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kunenet Makwarella Street, Lawley 2",
+    "code": 754633,
+    "latitude": -26.3769,
+    "location": "POINT (27.80498 -26.37694)",
+    "longitude": 27.80498,
+    "name": "gp Lawley 2 Clinic",
+    "province": "Gauteng",
+    "short_name": "Lawley 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1501 Baracuda Road, Cnr Baracuda Road and Mackerel Street, Lawley",
+    "code": 463151,
+    "latitude": -26.3914,
+    "location": "POINT (27.81214 -26.39142)",
+    "longitude": 27.81214,
+    "name": "gp Lawley Clinic",
+    "province": "Gauteng",
+    "short_name": "Lawley Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 119, Nirvana Drive, Lenasia Ext 13",
+    "code": 816224,
+    "latitude": -26.3142,
+    "location": "POINT (27.85136 -26.31422)",
+    "longitude": 27.85136,
+    "name": "gp Lenasia Clinic",
+    "province": "Gauteng",
+    "short_name": "Lenasia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Rose and Eland Drive, Lenasia Ext 2",
+    "code": 976360,
+    "latitude": -26.3205,
+    "location": "POINT (27.82563 -26.32056)",
+    "longitude": 27.82563,
+    "name": "gp Lenasia Ext 2 Clinic",
+    "province": "Gauteng",
+    "short_name": "Lenasia X2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Wellington and Wimbledon Streets, Lenasia Ext 4",
+    "code": 264733,
+    "latitude": -26.3887,
+    "location": "POINT (27.86361 -26.38871)",
+    "longitude": 27.86361,
+    "name": "gp Lenasia South Civic Centre Clinic",
+    "province": "Gauteng",
+    "short_name": "Lenasia S Civic Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Community Hall, 19 Nerine Road, Leondale",
+    "code": 763133,
+    "latitude": -26.3022,
+    "location": "POINT (28.18181 -26.30227)",
+    "longitude": 28.18181,
+    "name": "gp Leondale Clinic",
+    "province": "Gauteng",
+    "short_name": "Leondale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1030 Dlamini Nkosi, Wattville, Benoni",
+    "code": 276406,
+    "latitude": -26.2226,
+    "location": "POINT (28.29691 -26.22263)",
+    "longitude": 28.29691,
+    "name": "gp Lethabong Clinic",
+    "province": "Gauteng",
+    "short_name": "Lethabong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "814 Hamilton Road",
+    "code": 713515,
+    "latitude": -26.5303,
+    "location": "POINT (27.8441 -26.53031)",
+    "longitude": 27.8441,
+    "name": "gp Levai Mbatha CHC",
+    "province": "Gauteng",
+    "short_name": "Levai Mbatha CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chris Hani Road, Diepkloof, Soweto",
+    "code": 647724,
+    "latitude": -26.2601,
+    "location": "POINT (27.933 -26.26011)",
+    "longitude": 27.933,
+    "name": "gp Lillian Ngoyi CHC",
+    "province": "Gauteng",
+    "short_name": "Lillian Ngoyi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Anthesis and Burgamont Streets, Lotus Gardens",
+    "code": 667833,
+    "latitude": -25.7452,
+    "location": "POINT (28.0825 -25.74521)",
+    "longitude": 28.0825,
+    "name": "gp Lotus Gardens Clinic",
+    "province": "Gauteng",
+    "short_name": "Lotus Gardens Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4079 Antherium, Zamani, Duduza",
+    "code": 617106,
+    "latitude": -26.3852,
+    "location": "POINT (28.41489 -26.38529)",
+    "longitude": 28.41489,
+    "name": "gp Lucky Mkhwanazi Clinic",
+    "province": "Gauteng",
+    "short_name": "Lucky Mkhwanazi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Victoria and Lewis Streets, Luipaardsvlei",
+    "code": 142724,
+    "latitude": -26.1224,
+    "location": "POINT (27.81346 -26.12242)",
+    "longitude": 27.81346,
+    "name": "gp Luipaardsvlei Clinic",
+    "province": "Gauteng",
+    "short_name": "Luipaardsvlei Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Cantsment and Clifton Avenue, Centurion",
+    "code": 583260,
+    "latitude": -25.8352,
+    "location": "POINT (28.19466 -25.83524)",
+    "longitude": 28.19466,
+    "name": "gp Lyttelton Clinic",
+    "province": "Gauteng",
+    "short_name": "Lyttelton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Park and Sutherland, Randfontein",
+    "code": 264806,
+    "latitude": -26.1822,
+    "location": "POINT (27.70204 -26.18229)",
+    "longitude": 27.70204,
+    "name": "gp ML Pessen Clinic",
+    "province": "Gauteng",
+    "short_name": "ML Pessen Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "114 Silbuka Street, Magagula Heights, Katlehong, Zonkizizwe",
+    "code": 748051,
+    "latitude": -26.4282,
+    "location": "POINT (28.19216 -26.42822)",
+    "longitude": 28.19216,
+    "name": "gp Magagula Clinic",
+    "province": "Gauteng",
+    "short_name": "Magagula Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "16218 Geba Street, Kagiso Ext 12",
+    "code": 821851,
+    "latitude": -26.179,
+    "location": "POINT (27.78618 -26.17901)",
+    "longitude": 27.78618,
+    "name": "gp Maki Legwete Clinic",
+    "province": "Gauteng",
+    "short_name": "Maki Legwete Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plaza 501, Cnr Jules and 26th Street, Malvern",
+    "code": 568824,
+    "latitude": -26.2013,
+    "location": "POINT (28.10971 -26.20138)",
+    "longitude": 28.10971,
+    "name": "gp Malvern Clinic",
+    "province": "Gauteng",
+    "short_name": "Malvern Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Shabangu and Ntchabeleng Streets, Mamelodi West",
+    "code": 548133,
+    "latitude": -25.714199999999998,
+    "location": "POINT (28.3488 -25.7142)",
+    "longitude": 28.3488,
+    "name": "gp Mamelodi West Clinic",
+    "province": "Gauteng",
+    "short_name": "Mamelodi West Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8299 Pela Main Road, Orlando West",
+    "code": 634824,
+    "latitude": -26.2351,
+    "location": "POINT (27.905931 -26.235162)",
+    "longitude": 27.905931,
+    "name": "gp Mandela Sisulu Clinic",
+    "province": "Gauteng",
+    "short_name": "Mandela Sisulu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 60 Mandela Village, Hammanskraal",
+    "code": 214360,
+    "latitude": -25.4037,
+    "location": "POINT (28.28567 -25.40372)",
+    "longitude": 28.28567,
+    "name": "gp Mandisa Shiceka Clinic",
+    "province": "Gauteng",
+    "short_name": "M Shiceka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3180 Block L, Soshanguve",
+    "code": 297533,
+    "latitude": -25.5389,
+    "location": "POINT (28.10365 -25.53899)",
+    "longitude": 28.10365,
+    "name": "gp Maria Rantho Clinic",
+    "province": "Gauteng",
+    "short_name": "M Rantho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "22 Market Avenue, Vereeniging",
+    "code": 473424,
+    "latitude": -26.6737,
+    "location": "POINT (27.92679 -26.6737)",
+    "longitude": 27.92679,
+    "name": "gp Market Avenue Clinic",
+    "province": "Gauteng",
+    "short_name": "Market Avenue Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "732 Khan Crescent, Actonville, Benoni, 1501",
+    "code": 181751,
+    "latitude": -26.2141,
+    "location": "POINT (28.30066 -26.21417)",
+    "longitude": 28.30066,
+    "name": "gp Mary Moodley Memorial CDC",
+    "province": "Gauteng",
+    "short_name": "M Moodley Mem CDC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Somerset Street and 10th Avenue, Mayfair, Johannesburg, 2033",
+    "code": 562624,
+    "latitude": -26.2073,
+    "location": "POINT (28.01557 -26.2073)",
+    "longitude": 28.01557,
+    "name": "gp Mayfair Clinic",
+    "province": "Gauteng",
+    "short_name": "Mayfair Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 2328, Modderfontein, Mayibuye",
+    "code": 375533,
+    "latitude": -26.0327,
+    "location": "POINT (28.16528 -26.03274)",
+    "longitude": 28.16528,
+    "name": "gp Mayibuye Clinic",
+    "province": "Gauteng",
+    "short_name": "Mayibuye Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 293 - 8, Heckroodt Circle, Meadowlands Ext 2, Soweto, 1852",
+    "code": 368842,
+    "latitude": -26.2196,
+    "location": "POINT (27.89888 -26.21961)",
+    "longitude": 27.89888,
+    "name": "gp Meadowlands Zone 2 Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "Mlands Z2 Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7479 Noayi Street, Zone 1, Pimville",
+    "code": 339706,
+    "latitude": -26.2628,
+    "location": "POINT (27.90895 -26.26287)",
+    "longitude": 27.90895,
+    "name": "gp Michael Maponya Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "M Maponya Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Orsmond Street and 2nd Avenue, Mid Ennerdale",
+    "code": 668751,
+    "latitude": -26.4139,
+    "location": "POINT (27.84707 -26.41395)",
+    "longitude": 27.84707,
+    "name": "gp Mid Ennerdale Clinic",
+    "province": "Gauteng",
+    "short_name": "Mid Ennerdale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "56 7th Road, Halfway Gardens, Midrand",
+    "code": 225724,
+    "latitude": -25.9845,
+    "location": "POINT (28.112873 -25.984522)",
+    "longitude": 28.112873,
+    "name": "gp Midrand West Clinic",
+    "province": "Gauteng",
+    "short_name": "Mid West Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "28 Mitchell Road, Meyerton",
+    "code": 233942,
+    "latitude": -26.5573,
+    "location": "POINT (28.01704 -26.55739)",
+    "longitude": 28.01704,
+    "name": "gp Midvaal CDC",
+    "province": "Gauteng",
+    "short_name": "Midvaal CDC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1415 Roodepoort Road, Mofolo Central",
+    "code": 250106,
+    "latitude": -26.2476,
+    "location": "POINT (27.88399 -26.24768)",
+    "longitude": 27.88399,
+    "name": "gp Mofolo CHC",
+    "province": "Gauteng",
+    "short_name": "Mofolo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "739 Roodepoort Road, Mofolo South",
+    "code": 906433,
+    "latitude": -26.2579,
+    "location": "POINT (27.8862 -26.2579)",
+    "longitude": 27.8862,
+    "name": "gp Mofolo South Clinic",
+    "province": "Gauteng",
+    "short_name": "Mofolo South Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Koster Road, Magaliesburg",
+    "code": 567333,
+    "latitude": -25.9972,
+    "location": "POINT (27.5358 -25.99729)",
+    "longitude": 27.535800000000002,
+    "name": "gp Mogale Clinic",
+    "province": "Gauteng",
+    "short_name": "Mogale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "904 Mzolo Street, Mohlakeng",
+    "code": 200833,
+    "latitude": -26.2213,
+    "location": "POINT (27.69409 -26.2213)",
+    "longitude": 27.69409,
+    "name": "gp Mohlakeng CHC",
+    "province": "Gauteng",
+    "short_name": "Mohlakeng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7703 Khotso Street, Moleleki, Katlehong Ext 2",
+    "code": 972606,
+    "latitude": -26.3843,
+    "location": "POINT (28.17764 -26.38433)",
+    "longitude": 28.17764,
+    "name": "gp Moleleki Clinic",
+    "province": "Gauteng",
+    "short_name": "Moleleki Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3197 Malatsi Street, Rockville, Moroka",
+    "code": 774233,
+    "latitude": -26.2616,
+    "location": "POINT (27.866 -26.2616)",
+    "longitude": 27.866,
+    "name": "gp Moroka Clinic",
+    "province": "Gauteng",
+    "short_name": "Moroka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Maphike and Moseu Street, Sontong Road, Motsamai, Katlehong, 1431",
+    "code": 128433,
+    "latitude": -26.325,
+    "location": "POINT (28.16288 -26.32502)",
+    "longitude": 28.16288,
+    "name": "gp Motsamai Clinic",
+    "province": "Gauteng",
+    "short_name": "Motsamai Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 248/49/50 and 259/60/61, Mountain View / Finetown",
+    "code": 352333,
+    "latitude": -26.4119,
+    "location": "POINT (27.863771 -26.411917)",
+    "longitude": 27.863771,
+    "name": "gp Mountain View Clinic",
+    "province": "Gauteng",
+    "short_name": "Mountain View Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1836 Rabotapi Street, Evaton North",
+    "code": 148342,
+    "latitude": -26.5117,
+    "location": "POINT (27.85491 -26.51176)",
+    "longitude": 27.85491,
+    "name": "gp Mpumelelo (Evaton North) Clinic",
+    "province": "Gauteng",
+    "short_name": "Mpumelelo Evaton N Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 13985 Kahlego Street, Ivory Park",
+    "code": 313215,
+    "latitude": -25.9856,
+    "location": "POINT (28.209 -25.9856)",
+    "longitude": 28.209,
+    "name": "gp Mpumelelo Clinic",
+    "province": "Gauteng",
+    "short_name": "Mpumelelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 78, Clinic Road, Cnr Beyers Naude and Clinic Road, Driefontein",
+    "code": 621615,
+    "latitude": -26.0157,
+    "location": "POINT (27.85714 -26.0157)",
+    "longitude": 27.85714,
+    "name": "gp Muldersdrift Clinic",
+    "province": "Gauteng",
+    "short_name": "Muldersdrift Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "741 Letsatsi/Radebe Street, Naledi Ext 2",
+    "code": 683760,
+    "latitude": -26.2601,
+    "location": "POINT (27.820814 -26.260123)",
+    "longitude": 27.820814,
+    "name": "gp Naledi Clinic",
+    "province": "Gauteng",
+    "short_name": "Naledi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "494 Loeriesfontein Crescent, Nellmapius Ext 1",
+    "code": 624251,
+    "latitude": -25.7388,
+    "location": "POINT (28.348094 -25.738824)",
+    "longitude": 28.348094,
+    "name": "gp Nellmapius Clinic",
+    "province": "Gauteng",
+    "short_name": "Nellmapius Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3285 Block B, New Eersterus, Hammanskraal",
+    "code": 652551,
+    "latitude": -25.4066,
+    "location": "POINT (28.144669 -25.406673)",
+    "longitude": 28.144669,
+    "name": "gp New Eersterus Clinic",
+    "province": "Gauteng",
+    "short_name": "New Eersterus Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "25 Court Street, Nigel",
+    "code": 849660,
+    "latitude": -26.4197,
+    "location": "POINT (28.46896 -26.41973)",
+    "longitude": 28.46896,
+    "name": "gp Nigel Clinic",
+    "province": "Gauteng",
+    "short_name": "Nigel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 405624,
+    "latitude": -26.0143,
+    "location": "POINT (28.128657 -26.01431)",
+    "longitude": 28.128657,
+    "name": "gp Nizamiye Clinic",
+    "province": "Gauteng",
+    "short_name": "Nizamiye Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8405 Sejoe Street, Dobsonville Ext 2",
+    "code": 771442,
+    "latitude": -26.2306,
+    "location": "POINT (27.85077 -26.23062)",
+    "longitude": 27.85077,
+    "name": "gp Nokuphila Clinic",
+    "province": "Gauteng",
+    "short_name": "Nokuphila Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vlakfontein Road, Dunnottar",
+    "code": 619451,
+    "latitude": -26.3512,
+    "location": "POINT (28.41939 -26.35124)",
+    "longitude": 28.41939,
+    "name": "gp Nokuthela Ngwenya CHC",
+    "province": "Gauteng",
+    "short_name": "N Ngwenya CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Main Road and Colin Drive, Noordgesig",
+    "code": 265842,
+    "latitude": -26.2253,
+    "location": "POINT (27.93622 -26.22532)",
+    "longitude": 27.93622,
+    "name": "gp Noordgesig Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "Noordgesig Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1568 Cnr Hoffnaar and Ludhersch, Noordheuwel",
+    "code": 335315,
+    "latitude": -26.0887,
+    "location": "POINT (27.80764 -26.0887)",
+    "longitude": 27.80764,
+    "name": "gp Noordheuwel Clinic",
+    "province": "Gauteng",
+    "short_name": "Noordheuwel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Hospital and Aster Street, Northmead",
+    "code": 414615,
+    "latitude": -26.1595,
+    "location": "POINT (28.312513 -26.15958)",
+    "longitude": 28.312513,
+    "name": "gp Northmead Clinic",
+    "province": "Gauteng",
+    "short_name": "Northmead Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 383, Main Road, Diepsloot Ext 2",
+    "code": 612324,
+    "latitude": -25.9222,
+    "location": "POINT (28.01842 -25.92222)",
+    "longitude": 28.01842,
+    "name": "gp OR Tambo CHC",
+    "province": "Gauteng",
+    "short_name": "OR Tambo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2998 Cnr Sebenzisa and Kagiso Avenue, Krugersdorp",
+    "code": 455033,
+    "latitude": -26.1589,
+    "location": "POINT (27.7832 -26.15897)",
+    "longitude": 27.7832,
+    "name": "gp Odirileng Maponya Clinic",
+    "province": "Gauteng",
+    "short_name": "Odirileng Maponya Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Legong and Rethabile Streets, Olievenhoutbosch",
+    "code": 612124,
+    "latitude": -25.9114,
+    "location": "POINT (28.09309 -25.91141)",
+    "longitude": 28.09309,
+    "name": "gp Olievenhoutbosch Ext 13 Clinic",
+    "province": "Gauteng",
+    "short_name": "Olievenhout Ext 13 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Reginald and Pearce Streets, Olifantsfontein",
+    "code": 877951,
+    "latitude": -25.9566,
+    "location": "POINT (28.22878 -25.95667)",
+    "longitude": 28.22878,
+    "name": "gp Olifantsfontein Clinic",
+    "province": "Gauteng",
+    "short_name": "Olifantsfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Empilisweni Street, Onverwacht",
+    "code": 706033,
+    "latitude": -25.6034,
+    "location": "POINT (28.59916 -25.6034)",
+    "longitude": 28.59916,
+    "name": "gp Onverwacht Clinic",
+    "province": "Gauteng",
+    "short_name": "Onverwacht Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "12481 Ext 7a, Orange Farm",
+    "code": 918542,
+    "latitude": -26.4818,
+    "location": "POINT (27.84839 -26.4818)",
+    "longitude": 27.84839,
+    "name": "gp Orange Farm Ext 7 Clinic",
+    "province": "Gauteng",
+    "short_name": "Orange Farm Ext 7 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6516 Rathebe Street, Orlando East",
+    "code": 642451,
+    "latitude": -26.2371,
+    "location": "POINT (27.91937 -26.23719)",
+    "longitude": 27.91937,
+    "name": "gp Orlando Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "Orlando Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "320 West Road, Evaton",
+    "code": 815851,
+    "latitude": -26.5225,
+    "location": "POINT (27.83468 -26.5225)",
+    "longitude": 27.83468,
+    "name": "gp Osizweni Clinic",
+    "province": "Gauteng",
+    "short_name": "Osizweni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Orangeriver and Plum, Clinic Street, Toekomsrus",
+    "code": 758806,
+    "latitude": -26.2047,
+    "location": "POINT (27.70621 -26.20471)",
+    "longitude": 27.70621,
+    "name": "gp PJ Maree Clinic",
+    "province": "Gauteng",
+    "short_name": "PJ Maree Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "41 Palmridge Road, Palmridge Community Centre, Palm Ridge",
+    "code": 793415,
+    "latitude": -26.3888,
+    "location": "POINT (28.14286 -26.38881)",
+    "longitude": 28.14286,
+    "name": "gp Palmridge Clinic",
+    "province": "Gauteng",
+    "short_name": "Palmridge Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr 14th Street and 5th Avenue, Parkhurst",
+    "code": 362115,
+    "latitude": -26.1376,
+    "location": "POINT (28.01538 -26.13764)",
+    "longitude": 28.01538,
+    "name": "gp Parkhurst Clinic",
+    "province": "Gauteng",
+    "short_name": "Parkhurst Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1868 Chikane Street, Payneville",
+    "code": 406933,
+    "latitude": -26.2327,
+    "location": "POINT (28.45724 -26.23271)",
+    "longitude": 28.45724,
+    "name": "gp Payneville Clinic",
+    "province": "Gauteng",
+    "short_name": "Payneville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Witkoppen and Cambridge Road, Petervale",
+    "code": 582515,
+    "latitude": -26.0375,
+    "location": "POINT (28.047 -26.03751)",
+    "longitude": 28.047,
+    "name": "gp Petervale Clinic",
+    "province": "Gauteng",
+    "short_name": "Petervale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19619 Hinterland Avenue, Mamelodi East Ext 17",
+    "code": 434451,
+    "latitude": -25.7221,
+    "location": "POINT (28.3926 -25.7221)",
+    "longitude": 28.3926,
+    "name": "gp Phahameng Clinic",
+    "province": "Gauteng",
+    "short_name": "Phahameng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9034 Zone 1, Ga-Rankuwa",
+    "code": 576606,
+    "latitude": -25.6157,
+    "location": "POINT (27.987944 -25.615709)",
+    "longitude": 27.987944,
+    "name": "gp Phedisong 1 Clinic",
+    "province": "Gauteng",
+    "short_name": "Phedisong 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5808 Lenyai Street, Zone 14, Ga-Rankuwa, 0280",
+    "code": 216524,
+    "latitude": -25.5997,
+    "location": "POINT (27.981389 -25.599722)",
+    "longitude": 27.981389,
+    "name": "gp Phedisong 4 CHC",
+    "province": "Gauteng",
+    "short_name": "Phedisong 4 CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7389 Tawana Street, Zone 6, Ga-Rankuwa",
+    "code": 736324,
+    "latitude": -25.6048,
+    "location": "POINT (28.00799 -25.60489)",
+    "longitude": 28.00799,
+    "name": "gp Phedisong 6 Clinic",
+    "province": "Gauteng",
+    "short_name": "Phedisong 6 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "279 Madondo Street, Phenduka Section, Thokoza",
+    "code": 178251,
+    "latitude": -26.3396,
+    "location": "POINT (28.1419 -26.33963)",
+    "longitude": 28.1419,
+    "name": "gp Phenduka Clinic",
+    "province": "Gauteng",
+    "short_name": "Phenduka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6944 Ersteen Street, Mandela Section, Daveyton Ext 9, Benoni",
+    "code": 784806,
+    "latitude": -26.1195,
+    "location": "POINT (28.48437 -26.11956)",
+    "longitude": 28.48437,
+    "name": "gp Phillip Moyo CHC",
+    "province": "Gauteng",
+    "short_name": "Phillip Moyo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10054 Mzimkulu and Letutula, Phola Park Ext 5",
+    "code": 227251,
+    "latitude": -26.3713,
+    "location": "POINT (28.13217 -26.37134)",
+    "longitude": 28.13217,
+    "name": "gp Phola Park CHC",
+    "province": "Gauteng",
+    "short_name": "Phola Park CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "275 Eighteenth Street, Mshenguville West, Saulsville Ext 7",
+    "code": 850851,
+    "latitude": -25.7804,
+    "location": "POINT (28.0427 -25.7804)",
+    "longitude": 28.0427,
+    "name": "gp Phomolong Clinic",
+    "province": "Gauteng",
+    "short_name": "Phomolong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7522 Kgaga Street, Tsakane",
+    "code": 572624,
+    "latitude": -26.3578,
+    "location": "POINT (28.37833 -26.35789)",
+    "longitude": 28.37833,
+    "name": "gp Phuthanang Clinic",
+    "province": "Gauteng",
+    "short_name": "Phuthanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 62, 3rd Avenue, Cnr 3rd and East Road, Balmoral Estates, De Deur",
+    "code": 661724,
+    "latitude": -26.4933,
+    "location": "POINT (27.93308 -26.49333)",
+    "longitude": 27.93308,
+    "name": "gp Pontshong (Walkerville) Clinic",
+    "province": "Gauteng",
+    "short_name": "Pontshong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "927 Cnr Bugle and Loristo Streets, Pretorius Park",
+    "code": 975860,
+    "latitude": -25.8125,
+    "location": "POINT (28.30457 -25.81256)",
+    "longitude": 28.30457,
+    "name": "gp Pretorius Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Pretorius Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8 Harry Road, Princess",
+    "code": 584533,
+    "latitude": -26.1373,
+    "location": "POINT (27.8437 -26.13731)",
+    "longitude": 27.8437,
+    "name": "gp Princess Clinic",
+    "province": "Gauteng",
+    "short_name": "Princess Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Wild Chestnut Street, Protea Glen Ext 11",
+    "code": 746215,
+    "latitude": -26.2741,
+    "location": "POINT (27.80361 -26.27417)",
+    "longitude": 27.80361,
+    "name": "gp Protea Glen Clinic",
+    "province": "Gauteng",
+    "short_name": "Protea Glen Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3115 Clark Street, Protea South",
+    "code": 426324,
+    "latitude": -26.2872,
+    "location": "POINT (27.84083 -26.28725)",
+    "longitude": 27.84083,
+    "name": "gp Protea South Clinic",
+    "province": "Gauteng",
+    "short_name": "Protea South Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Korhaan Singel, Rabie Ridge",
+    "code": 812842,
+    "latitude": -26.0197,
+    "location": "POINT (28.17169 -26.01971)",
+    "longitude": 28.17169,
+    "name": "gp Rabie Ridge Clinic",
+    "province": "Gauteng",
+    "short_name": "Rabie Ridge Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Erf 1295 Ingwamza Street, Reiger Park Ext 5, Boksburg",
+    "code": 866406,
+    "latitude": -26.2213,
+    "location": "POINT (28.207331 -26.221343)",
+    "longitude": 28.207331,
+    "name": "gp Ramaphosa Clinic",
+    "province": "Gauteng",
+    "short_name": "Ramaphosa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "819 Sontonga Street, Ramokonopi West",
+    "code": 861506,
+    "latitude": -26.3605,
+    "location": "POINT (28.1618 -26.36051)",
+    "longitude": 28.1618,
+    "name": "gp Ramokonopi CHC",
+    "province": "Gauteng",
+    "short_name": "Ramokonopi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Methodist Church, Hammanskraal, 0407",
+    "code": 634942,
+    "latitude": -25.3576,
+    "location": "POINT (28.29507 -25.3576)",
+    "longitude": 28.29507,
+    "name": "gp Ramotse Clinic",
+    "province": "Gauteng",
+    "short_name": "Ramotse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Braam Fisher and Selkirk Avenue, Randburg",
+    "code": 545042,
+    "latitude": -26.0966,
+    "location": "POINT (28.00465 -26.09662)",
+    "longitude": 28.00465,
+    "name": "gp Randburg Clinic",
+    "province": "Gauteng",
+    "short_name": "Randburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "100 Van de Venter Street, Randfontein",
+    "code": 469606,
+    "latitude": -26.1691,
+    "location": "POINT (27.68361 -26.16919)",
+    "longitude": 27.68361,
+    "name": "gp Randgate Clinic",
+    "province": "Gauteng",
+    "short_name": "Randgate Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "84 Rooibok Street, Highbury, Randvaal",
+    "code": 761724,
+    "latitude": -26.5151,
+    "location": "POINT (28.04482 -26.51518)",
+    "longitude": 28.04482,
+    "name": "gp Randvaal Clinic",
+    "province": "Gauteng",
+    "short_name": "Randvaal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2844 Boschoek Street, Ratanda, Heidelberg",
+    "code": 435815,
+    "latitude": -26.5547,
+    "location": "POINT (28.32676 -26.5547)",
+    "longitude": 28.32676,
+    "name": "gp Ratanda CDC",
+    "province": "Gauteng",
+    "short_name": "Ratanda CDC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6461 Gudlhuza Street, Ratanda, Heidelberg",
+    "code": 289115,
+    "latitude": -26.5393,
+    "location": "POINT (28.360756 -26.539311)",
+    "longitude": 28.360756,
+    "name": "gp Ratanda Ext 23 Clinic",
+    "province": "Gauteng",
+    "short_name": "Ratanda Ext 23 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Heidelberg Road, Ratanda, Heidelberg",
+    "code": 726733,
+    "latitude": -26.5678,
+    "location": "POINT (28.327039 -26.567853)",
+    "longitude": 28.327039,
+    "name": "gp Ratanda Ext 7 Clinic",
+    "province": "Gauteng",
+    "short_name": "Ratanda Ext 7 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Oakley and Montrose, Rayton",
+    "code": 362742,
+    "latitude": -25.739,
+    "location": "POINT (28.53189 -25.73902)",
+    "longitude": 28.53189,
+    "name": "gp Rayton Clinic",
+    "province": "Gauteng",
+    "short_name": "Rayton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "604-605 Otland Road, Reedville, Springs",
+    "code": 167642,
+    "latitude": -26.2648,
+    "location": "POINT (28.390478 -26.264854)",
+    "longitude": 28.390478,
+    "name": "gp Reedville Clinic",
+    "province": "Gauteng",
+    "short_name": "Reedville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3194 Tambo 11, Stinkwater, Hammanskraal, 0109",
+    "code": 455342,
+    "latitude": -25.3966,
+    "location": "POINT (28.156111 -25.396667)",
+    "longitude": 28.156111,
+    "name": "gp Refentse Clinic (Odi)",
+    "province": "Gauteng",
+    "short_name": "Refentse (Odi) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1165 Masina Drive, Cullinan",
+    "code": 731642,
+    "latitude": -25.6376,
+    "location": "POINT (28.53038 -25.63769)",
+    "longitude": 28.53038,
+    "name": "gp Refilwe Clinic",
+    "province": "Gauteng",
+    "short_name": "Refilwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 477 Leon Fereirra Drive, Reiger Park Civic",
+    "code": 862824,
+    "latitude": -26.2303,
+    "location": "POINT (28.22607 -26.2303)",
+    "longitude": 28.22607,
+    "name": "gp Reiger Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Reiger Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Roets and Cilliers Streets, Rensburg",
+    "code": 417315,
+    "latitude": -26.524,
+    "location": "POINT (28.37193 -26.52404)",
+    "longitude": 28.37193,
+    "name": "gp Rensburg Clinic",
+    "province": "Gauteng",
+    "short_name": "Rensburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "310 Matukane Strret, Rethabiseng Ext 1",
+    "code": 895460,
+    "latitude": -25.7185,
+    "location": "POINT (28.71239 -25.7185)",
+    "longitude": 28.71239,
+    "name": "gp Rethabiseng Clinic",
+    "province": "Gauteng",
+    "short_name": "Rethabiseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8881 Mareka Street, Sharpeville",
+    "code": 723424,
+    "latitude": -26.6731,
+    "location": "POINT (27.88029 -26.67318)",
+    "longitude": 27.88029,
+    "name": "gp Retswelapele Clinic",
+    "province": "Gauteng",
+    "short_name": "Retswelapele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "15 Rex Street, Roodepoort",
+    "code": 633842,
+    "latitude": -26.1594,
+    "location": "POINT (27.864947 -26.159475)",
+    "longitude": 27.864947,
+    "name": "gp Rex Street Clinic",
+    "province": "Gauteng",
+    "short_name": "Rex Street Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 85, Olga Kirsh Street, Mullerstuin Hall, Rietspruit",
+    "code": 543415,
+    "latitude": -26.7032,
+    "location": "POINT (27.757623 -26.703226)",
+    "longitude": 27.757623,
+    "name": "gp Rietspruit Clinic",
+    "province": "Gauteng",
+    "short_name": "Rietspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3791, Rietvallei, Krugersdorp",
+    "code": 455715,
+    "latitude": -26.1854,
+    "location": "POINT (27.750934 -26.185422)",
+    "longitude": 27.750934,
+    "name": "gp Rietvallei 2 and 3 Clinic",
+    "province": "Gauteng",
+    "short_name": "Rietvallei 2 and 3 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 7443, Sheridan Road, Far East Bank, Lombardy East Ext 9",
+    "code": 832524,
+    "latitude": -26.1064,
+    "location": "POINT (28.123712 -26.106407)",
+    "longitude": 28.123712,
+    "name": "gp River Park Clinic",
+    "province": "Gauteng",
+    "short_name": "River Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Colorado Drive, Riverlea",
+    "code": 337706,
+    "latitude": -26.2118,
+    "location": "POINT (27.9748 -26.21182)",
+    "longitude": 27.9748,
+    "name": "gp Riverlea Major Clinic",
+    "province": "Gauteng",
+    "short_name": "Riverlea Major Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "32 Garlic Street (Erf 2424), Rondebult Ext 2",
+    "code": 665442,
+    "latitude": -26.3117,
+    "location": "POINT (28.210204 -26.311776)",
+    "longitude": 28.210204,
+    "name": "gp Rondebult Clinic",
+    "province": "Gauteng",
+    "short_name": "Rondebult Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tiptolhoekie, Library Building, Rooihuiskraal",
+    "code": 134351,
+    "latitude": -25.8937,
+    "location": "POINT (28.15372 -25.8937)",
+    "longitude": 28.15372,
+    "name": "gp Rooihuiskraal Clinic",
+    "province": "Gauteng",
+    "short_name": "Rooihuiskraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Rose Street, Rosettenville",
+    "code": 731251,
+    "latitude": -26.2446,
+    "location": "POINT (28.053578 -26.244672)",
+    "longitude": 28.053578,
+    "name": "gp Rosettenville Clinic",
+    "province": "Gauteng",
+    "short_name": "Rosettenville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Piet Rautenbach Street, Rosslyn",
+    "code": 857515,
+    "latitude": -25.6264,
+    "location": "POINT (28.09489 -25.62641)",
+    "longitude": 28.09489,
+    "name": "gp Rosslyn Clinic",
+    "province": "Gauteng",
+    "short_name": "Rosslyn Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Kiepersol Street, Rus-ter-vaal",
+    "code": 426742,
+    "latitude": -26.5746,
+    "location": "POINT (27.94908 -26.57466)",
+    "longitude": 27.94908,
+    "name": "gp Rus ter vaal Clinic",
+    "province": "Gauteng",
+    "short_name": "Rus ter vaal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "139 West Street, Sandown, Sandton",
+    "code": 488351,
+    "latitude": -26.1063,
+    "location": "POINT (28.0558 -26.10631)",
+    "longitude": 28.0558,
+    "name": "gp Sandown Clinic",
+    "province": "Gauteng",
+    "short_name": "Sandown Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "31a Sekhu Street, Saulsville",
+    "code": 884951,
+    "latitude": -25.7786,
+    "location": "POINT (28.06719 -25.77869)",
+    "longitude": 28.06719,
+    "name": "gp Saulsville Clinic",
+    "province": "Gauteng",
+    "short_name": "Saulsville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1738 Sontonga Street, Mashaba View, Duduza",
+    "code": 307615,
+    "latitude": -26.3931,
+    "location": "POINT (28.39597 -26.39318)",
+    "longitude": 28.39597,
+    "name": "gp Sead Clinic",
+    "province": "Gauteng",
+    "short_name": "Sead Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7419 Ezibindini Street, Sebokeng Zone 12",
+    "code": 888124,
+    "latitude": -26.5641,
+    "location": "POINT (27.84229 -26.56419)",
+    "longitude": 27.84229,
+    "name": "gp Sebei Motsoeneng Clinic",
+    "province": "Gauteng",
+    "short_name": "Sebei Motsoeneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "891 Block U, Mabopane",
+    "code": 667324,
+    "latitude": -25.4997,
+    "location": "POINT (28.0355 -25.49973)",
+    "longitude": 28.0355,
+    "name": "gp Sedilega Clinic",
+    "province": "Gauteng",
+    "short_name": "Sedilega Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "24659 Masabeni Street, Kwa-Thema Ext 3, Springs",
+    "code": 927333,
+    "latitude": -26.3078,
+    "location": "POINT (28.41897 -26.30783)",
+    "longitude": 28.41897,
+    "name": "gp Selope Thema Clinic",
+    "province": "Gauteng",
+    "short_name": "Selope Thema Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1926 Komati Road, Senaoane",
+    "code": 187724,
+    "latitude": -26.2731,
+    "location": "POINT (27.86475 -26.2731)",
+    "longitude": 27.86475,
+    "name": "gp Senaoane Clinic",
+    "province": "Gauteng",
+    "short_name": "Senaoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1000 Armitage Road, Orlando West",
+    "code": 724515,
+    "latitude": -26.2285,
+    "location": "POINT (27.91731 -26.22859)",
+    "longitude": 27.91731,
+    "name": "gp Shanty Clinic",
+    "province": "Gauteng",
+    "short_name": "Shanty Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9173 Zwane Street, Sharpeville",
+    "code": 522424,
+    "latitude": -26.6869,
+    "location": "POINT (27.87063 -26.68694)",
+    "longitude": 27.87063,
+    "name": "gp Sharpeville CHC",
+    "province": "Gauteng",
+    "short_name": "Sharpeville CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pretoria Road, Silverton",
+    "code": 831342,
+    "latitude": -25.7335,
+    "location": "POINT (28.2971 -25.73351)",
+    "longitude": 28.2971,
+    "name": "gp Silverton Clinic",
+    "province": "Gauteng",
+    "short_name": "Silverton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20069 Nhlangwini Street, Tsakane Ext 8, Brakpan",
+    "code": 434433,
+    "latitude": -26.3683,
+    "location": "POINT (28.35653 -26.36834)",
+    "longitude": 28.35653,
+    "name": "gp Simunye Clinic (Brakpan)",
+    "province": "Gauteng",
+    "short_name": "Simunye (Brak) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3409 Kgotlelela Drive, Simunye, Westonaria, 1779",
+    "code": 512233,
+    "latitude": -26.3219,
+    "location": "POINT (27.68225 -26.32197)",
+    "longitude": 27.68225,
+    "name": "gp Simunye Clinic (Westonaria)",
+    "province": "Gauteng",
+    "short_name": "Simunye (West) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 810, Cnr Foreman and Mthimkhulu Street, Poortjie",
+    "code": 553424,
+    "latitude": -26.4565,
+    "location": "POINT (27.7666 -26.4565)",
+    "longitude": 27.7666,
+    "name": "gp Sinethemba Clinic",
+    "province": "Gauteng",
+    "short_name": "Sinethemba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "27578 Zone 10, Luthuli, Meadowlands",
+    "code": 222933,
+    "latitude": -26.219,
+    "location": "POINT (27.88512 -26.21902)",
+    "longitude": 27.88512,
+    "name": "gp Sinqobile Clinic",
+    "province": "Gauteng",
+    "short_name": "Sinqobile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Site 3206 CBD, Doornkop",
+    "code": 721624,
+    "latitude": -26.243,
+    "location": "POINT (27.80639 -26.24306)",
+    "longitude": 27.80639,
+    "name": "gp Siphumlile Clinic",
+    "province": "Gauteng",
+    "short_name": "Siphumlile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Dr Savage and Voortrekker Roads, Pretoria Central",
+    "code": 450751,
+    "latitude": -25.7327,
+    "location": "POINT (28.1998 -25.73271)",
+    "longitude": 28.1998,
+    "name": "gp Skinner Street Clinic",
+    "province": "Gauteng",
+    "short_name": "Skinner Street Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1932 Durban Drive, Springs",
+    "code": 755451,
+    "latitude": -26.2139,
+    "location": "POINT (28.489204 -26.213927)",
+    "longitude": 28.489204,
+    "name": "gp Slovo Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Slovo Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1082 Slovoville Recreation Centre",
+    "code": 509042,
+    "latitude": -26.2152,
+    "location": "POINT (27.780217 -26.215232)",
+    "longitude": 27.780217,
+    "name": "gp Slovoville Clinic",
+    "province": "Gauteng",
+    "short_name": "Slovoville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 220, Sokhulumi",
+    "code": 827451,
+    "latitude": -25.6028,
+    "location": "POINT (28.8973 -25.60281)",
+    "longitude": 28.8973,
+    "name": "gp Sokhulumi Clinic",
+    "province": "Gauteng",
+    "short_name": "Sokhulumi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1407 Durban Deep, Roodepoort",
+    "code": 955533,
+    "latitude": -26.1789,
+    "location": "POINT (27.86061 -26.17897)",
+    "longitude": 27.86061,
+    "name": "gp Sol Plaatjes Clinic",
+    "province": "Gauteng",
+    "short_name": "Sol Plaatjes Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1832 Mkotane Street, Bluegum",
+    "code": 311715,
+    "latitude": -26.3836,
+    "location": "POINT (28.39528 -26.38366)",
+    "longitude": 28.39528,
+    "name": "gp Sonto Thobela Clinic",
+    "province": "Gauteng",
+    "short_name": "Sonto Thobela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Edward and Gibson Streets, Sophiatown",
+    "code": 534215,
+    "latitude": -26.1731,
+    "location": "POINT (27.98033 -26.17311)",
+    "longitude": 27.98033,
+    "name": "gp Sophiatown Clinic",
+    "province": "Gauteng",
+    "short_name": "Sophiatown Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1850, Soshanguve Block G",
+    "code": 844215,
+    "latitude": -25.513,
+    "location": "POINT (28.1142 -25.51308)",
+    "longitude": 28.1142,
+    "name": "gp Soshanguve 2 Clinic",
+    "province": "Gauteng",
+    "short_name": "Soshanguve 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "972 Rivoningo Street, Soshanguve Block JJ",
+    "code": 766560,
+    "latitude": -25.4576,
+    "location": "POINT (28.08334 -25.45762)",
+    "longitude": 28.08334,
+    "name": "gp Soshanguve Block JJ Clinic",
+    "province": "Gauteng",
+    "short_name": "Soshang Block JJ Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "625, Soshanguve Block TT",
+    "code": 750106,
+    "latitude": -25.5561,
+    "location": "POINT (28.064744 -25.556183)",
+    "longitude": 28.064744,
+    "name": "gp Soshanguve Block TT Clinic",
+    "province": "Gauteng",
+    "short_name": "Soshang Block TT Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "920 Block X, Soshanguve",
+    "code": 674451,
+    "latitude": -25.4669,
+    "location": "POINT (28.131775 -25.466928)",
+    "longitude": 28.131775,
+    "name": "gp Soshanguve Block X Clinic",
+    "province": "Gauteng",
+    "short_name": "Sosh Block X Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1834, Soshanguve Block BB",
+    "code": 562333,
+    "latitude": -25.4912,
+    "location": "POINT (28.09431 -25.49123)",
+    "longitude": 28.09431,
+    "name": "gp Soshanguve CHC",
+    "province": "Gauteng",
+    "short_name": "Soshanguve CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Estantia Avenue and Geneva Road, South Hills",
+    "code": 574533,
+    "latitude": -26.2513,
+    "location": "POINT (28.08789 -26.25131)",
+    "longitude": 28.08789,
+    "name": "gp South Hills Clinic",
+    "province": "Gauteng",
+    "short_name": "South Hills Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "H Lewis Street, Spartan",
+    "code": 136724,
+    "latitude": -26.1086,
+    "location": "POINT (28.22572 -26.10862)",
+    "longitude": 28.22572,
+    "name": "gp Spartan Clinic",
+    "province": "Gauteng",
+    "short_name": "Spartan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20 1st Avenue Clinic, Springs",
+    "code": 754124,
+    "latitude": -26.2506,
+    "location": "POINT (28.44563 -26.25063)",
+    "longitude": 28.44563,
+    "name": "gp Springs Clinic",
+    "province": "Gauteng",
+    "short_name": "Springs Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Shilovhane Street, Mamelodi East",
+    "code": 933442,
+    "latitude": -25.7059,
+    "location": "POINT (28.3941 -25.7059)",
+    "longitude": 28.3941,
+    "name": "gp Stanza Bopape CHC",
+    "province": "Gauteng",
+    "short_name": "Stanza Bopape CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "25905 Hector Peterson Street, Mamelodi East Ext 8",
+    "code": 282515,
+    "latitude": -25.7144,
+    "location": "POINT (28.4155 -25.7144)",
+    "longitude": 28.4155,
+    "name": "gp Stanza Bopape II Clinic",
+    "province": "Gauteng",
+    "short_name": "Stanza Bopape II Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "15573 Link Road, Orange Farm Ext 2",
+    "code": 527442,
+    "latitude": -26.47,
+    "location": "POINT (27.86868 -26.47001)",
+    "longitude": 27.86868,
+    "name": "gp Stretford CHC",
+    "province": "Gauteng",
+    "short_name": "Stretford CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7871 Sunrise View",
+    "code": 899024,
+    "latitude": -26.3915,
+    "location": "POINT (28.19707 -26.39157)",
+    "longitude": 28.19707,
+    "name": "gp Sunriseview Clinic",
+    "province": "Gauteng",
+    "short_name": "Sunriseview Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 871, Suurman, Hammanskraal",
+    "code": 213533,
+    "latitude": -25.3779,
+    "location": "POINT (28.21005 -25.37798)",
+    "longitude": 28.21005,
+    "name": "gp Suurman Clinic",
+    "province": "Gauteng",
+    "short_name": "Suurman Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "94 Mandela Section Zone 9, Katlehong",
+    "code": 889442,
+    "latitude": -26.3081,
+    "location": "POINT (28.14504 -26.30813)",
+    "longitude": 28.14504,
+    "name": "gp Tamaho Clinic",
+    "province": "Gauteng",
+    "short_name": "Tamaho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 09 Cecilia Street, Krugersdorp",
+    "code": 114424,
+    "latitude": -26.0914,
+    "location": "POINT (27.66503 -26.09143)",
+    "longitude": 27.66503,
+    "name": "gp Tarlton Clinic",
+    "province": "Gauteng",
+    "short_name": "Tarlton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19 Emkhathini Section, Cnr Andrew Mapheto and George Nyanga Streets, Temba, 2474",
+    "code": 250633,
+    "latitude": -25.3774,
+    "location": "POINT (28.26362 -25.37743)",
+    "longitude": 28.26362,
+    "name": "gp Temba CHC",
+    "province": "Gauteng",
+    "short_name": "Temba CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19 George Nyanga, Tembisa",
+    "code": 264851,
+    "latitude": -26.0092,
+    "location": "POINT (28.21691 -26.00923)",
+    "longitude": 28.21691,
+    "name": "gp Tembisa Health Clinic",
+    "province": "Gauteng",
+    "short_name": "Tembisa Health Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "11 Isithebe Section, Thami Mnyele Street, Tembisa",
+    "code": 868224,
+    "latitude": -26.0091,
+    "location": "POINT (28.24065 -26.00915)",
+    "longitude": 28.24065,
+    "name": "gp Tembisa Main Clinic",
+    "province": "Gauteng",
+    "short_name": "Tembisa Main Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 9274, Volta Street, Lenasia South Ext 10",
+    "code": 818815,
+    "latitude": -26.3406,
+    "location": "POINT (27.86636 -26.34063)",
+    "longitude": 27.86636,
+    "name": "gp Thembelihle Clinic",
+    "province": "Gauteng",
+    "short_name": "Thembelihle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "11377 Mothlaping Street, Kwa-Thema",
+    "code": 533733,
+    "latitude": -26.3083,
+    "location": "POINT (28.40667 -26.30839)",
+    "longitude": 28.40667,
+    "name": "gp Thembelisha Clinic",
+    "province": "Gauteng",
+    "short_name": "Thembelisha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4616 Thandi Modise Street, Small Farms, Evaton",
+    "code": 591124,
+    "latitude": -26.5479,
+    "location": "POINT (27.84962 -26.5479)",
+    "longitude": 27.84962,
+    "name": "gp Thlokomelong Clinic",
+    "province": "Gauteng",
+    "short_name": "Thlokomelong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr 6th Avenue and 3rd Street, Marlboro",
+    "code": 696060,
+    "latitude": -26.096,
+    "location": "POINT (28.09853 -26.09606)",
+    "longitude": 28.09853,
+    "name": "gp Thoko Mngoma Clinic",
+    "province": "Gauteng",
+    "short_name": "Thoko Mngoma Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pasteur Road, Wheelers Farm",
+    "code": 318524,
+    "latitude": -26.429,
+    "location": "POINT (27.896349 -26.429052)",
+    "longitude": 27.896349,
+    "name": "gp Thula Mntwana Clinic",
+    "province": "Gauteng",
+    "short_name": "Thula Mntwana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Randfontein Road, Westonaria",
+    "code": 349333,
+    "latitude": -26.4147,
+    "location": "POINT (27.701811 -26.414756)",
+    "longitude": 27.701811,
+    "name": "gp Thusanang (Westonaria) Clinic",
+    "province": "Gauteng",
+    "short_name": "Thusanang (West) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "786 Cnr Mogale and Moeketsi Streets, Kokosi Ext 1",
+    "code": 331324,
+    "latitude": -26.5059,
+    "location": "POINT (27.460609 -26.505921)",
+    "longitude": 27.460609,
+    "name": "gp Thusanang Clinic",
+    "province": "Gauteng",
+    "short_name": "Thusanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "12527 Ainsley Street, Kagiso 1",
+    "code": 852751,
+    "latitude": -26.14,
+    "location": "POINT (27.7998 -26.14002)",
+    "longitude": 27.7998,
+    "name": "gp Thusong Community Clinic",
+    "province": "Gauteng",
+    "short_name": "Thusong Comm Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 5323, Ivory Park",
+    "code": 537524,
+    "latitude": -25.9991,
+    "location": "POINT (28.18979 -25.99919)",
+    "longitude": 28.18979,
+    "name": "gp Thuthukani Clinic",
+    "province": "Gauteng",
+    "short_name": "Thuthukani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "144 Babinaphuthi Street, Tladi",
+    "code": 382642,
+    "latitude": -26.2508,
+    "location": "POINT (27.8402 -26.2508)",
+    "longitude": 27.8402,
+    "name": "gp Tladi LA Clinic",
+    "province": "Gauteng",
+    "short_name": "Tladi LA Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1592 Legwale Street, Tladi",
+    "code": 621824,
+    "latitude": -26.2541,
+    "location": "POINT (27.84182 -26.25413)",
+    "longitude": 27.84182,
+    "name": "gp Tladi Prov Clinic",
+    "province": "Gauteng",
+    "short_name": "Tladi Prov Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2734 Block B, Mabopane",
+    "code": 379642,
+    "latitude": -25.5141,
+    "location": "POINT (28.07147 -25.51416)",
+    "longitude": 28.07147,
+    "name": "gp Tlamelong Clinic",
+    "province": "Gauteng",
+    "short_name": "Tlamelong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10890 Zulu Street, Tskane",
+    "code": 586260,
+    "latitude": -26.3474,
+    "location": "POINT (28.37321 -26.34742)",
+    "longitude": 28.37321,
+    "name": "gp Tsakane Clinic",
+    "province": "Gauteng",
+    "short_name": "Tsakane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 45522 and 45523, Cnr Ntuli and Simelane Street, Tsakane",
+    "code": 223433,
+    "latitude": -26.346,
+    "location": "POINT (28.393865 -26.346037)",
+    "longitude": 28.393865,
+    "name": "gp Tsakane Ext 10 Clinic",
+    "province": "Gauteng",
+    "short_name": "Tsakane Ext 10 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1986 Phase 2 Tshepiso, Vanderbijlpark",
+    "code": 561115,
+    "latitude": -26.6741,
+    "location": "POINT (27.86821 -26.6741)",
+    "longitude": 27.86821,
+    "name": "gp Tshepiso Clinic",
+    "province": "Gauteng",
+    "short_name": "Tshepiso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3242 Galela Street, Phase 4, Tshepisong",
+    "code": 563833,
+    "latitude": -26.1907,
+    "location": "POINT (27.81243 -26.19072)",
+    "longitude": 27.81243,
+    "name": "gp Tshepisong Clinic",
+    "province": "Gauteng",
+    "short_name": "Tshepisong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 817333,
+    "latitude": -26.4218,
+    "location": "POINT (28.161064 -26.421817)",
+    "longitude": 28.161064,
+    "name": "gp Tsietsi Clinic",
+    "province": "Gauteng",
+    "short_name": "Tsietsi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "22 Lesika Street, Eastfield",
+    "code": 848360,
+    "latitude": -26.3282,
+    "location": "POINT (28.19216 -26.32825)",
+    "longitude": 28.19216,
+    "name": "gp Tswelopele Clinic",
+    "province": "Gauteng",
+    "short_name": "Tswelopele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 257 Mooiplaats, Doorenhoek",
+    "code": 562206,
+    "latitude": -25.791,
+    "location": "POINT (28.43132 -25.79105)",
+    "longitude": 28.43132,
+    "name": "gp Ubuntu Clinic",
+    "province": "Gauteng",
+    "short_name": "Ubuntu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Lilian and Botha Streets, Devon",
+    "code": 213460,
+    "latitude": -26.3517,
+    "location": "POINT (28.77772 -26.35174)",
+    "longitude": 28.77772,
+    "name": "gp Usizolwethu Clinic",
+    "province": "Gauteng",
+    "short_name": "Usizolwethu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "12 Kremetart Street, Van Dyk Park",
+    "code": 699615,
+    "latitude": -26.257,
+    "location": "POINT (28.29298 -26.25701)",
+    "longitude": 28.29298,
+    "name": "gp Van Dyk Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Van Dyk Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "115 Carlton Street, Westonaria",
+    "code": 563415,
+    "latitude": -26.2725,
+    "location": "POINT (27.627815 -26.27253)",
+    "longitude": 27.627815,
+    "name": "gp Venterspos Clinic",
+    "province": "Gauteng",
+    "short_name": "Venterspos Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 325815,
+    "latitude": -26.3241,
+    "location": "POINT (28.255587 -26.324106)",
+    "longitude": 28.255587,
+    "name": "gp Villa Liza Clinic",
+    "province": "Gauteng",
+    "short_name": "Villa Liza Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "116 Melman Street, Viskuil",
+    "code": 300124,
+    "latitude": -26.2993,
+    "location": "POINT (28.58501 -26.2993)",
+    "longitude": 28.58501,
+    "name": "gp Vischuil Clinic",
+    "province": "Gauteng",
+    "short_name": "Vischuil Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "252 Motola Street, Vlakfontein / Cyferfontein",
+    "code": 314333,
+    "latitude": -26.3735,
+    "location": "POINT (27.87892 -26.37353)",
+    "longitude": 27.87892,
+    "name": "gp Vlakfontein Clinic",
+    "province": "Gauteng",
+    "short_name": "Vlakfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20925 Nyamopondo Street, Vosloorus",
+    "code": 241760,
+    "latitude": -26.3775,
+    "location": "POINT (28.20326 -26.3775)",
+    "longitude": 28.20326,
+    "name": "gp Vosloorus Ext 28 Clinic",
+    "province": "Gauteng",
+    "short_name": "Vosloorus Ext 28 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Marimba Gardens, 147 Sam Sekoati Street, Marimiba Ext 9, Vosloorus",
+    "code": 758633,
+    "latitude": -26.348,
+    "location": "POINT (28.21834 -26.34806)",
+    "longitude": 28.21834,
+    "name": "gp Vosloorus Ext 9 Clinic",
+    "province": "Gauteng",
+    "short_name": "Vosloorus Ext 9 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "ERF 30, Vosloorus Ext 1",
+    "code": 831133,
+    "latitude": -26.3496,
+    "location": "POINT (28.19781 -26.34963)",
+    "longitude": 28.19781,
+    "name": "gp Vosloorus Poly Clinic",
+    "province": "Gauteng",
+    "short_name": "Vosloorus Poly Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Pretoria and Mimosa Road, Primrose, Wannenburg",
+    "code": 948015,
+    "latitude": -26.1769,
+    "location": "POINT (28.17807 -26.17697)",
+    "longitude": 28.17807,
+    "name": "gp Wannenburg Clinic",
+    "province": "Gauteng",
+    "short_name": "Wannenburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "504 1st Avenue, Wedela",
+    "code": 445642,
+    "latitude": -26.4608,
+    "location": "POINT (27.384778 -26.460861)",
+    "longitude": 27.384778,
+    "name": "gp Wedela Clinic",
+    "province": "Gauteng",
+    "short_name": "Wedela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "681 Forrest Road, Weiler's Farm",
+    "code": 896924,
+    "latitude": -26.4126,
+    "location": "POINT (27.90333 -26.41269)",
+    "longitude": 27.90333,
+    "name": "gp Weilers Farm Clinic",
+    "province": "Gauteng",
+    "short_name": "Weilers Farm Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr JG Strijdom and Jim Fouche Streets, Weltevreden",
+    "code": 332942,
+    "latitude": -26.1192,
+    "location": "POINT (27.932279 -26.119266)",
+    "longitude": 27.932279,
+    "name": "gp Weltevreden Park Clinic",
+    "province": "Gauteng",
+    "short_name": "Weltevreden Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1277 Halite Street, Carletonville",
+    "code": 261642,
+    "latitude": -26.3783,
+    "location": "POINT (27.282749 -26.37833)",
+    "longitude": 27.282749,
+    "name": "gp Welverdiend Clinic",
+    "province": "Gauteng",
+    "short_name": "Welverdiend Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Wendy and Bowling Streets, Wendywood",
+    "code": 185651,
+    "latitude": -26.0835,
+    "location": "POINT (28.084136 -26.083542)",
+    "longitude": 28.084136,
+    "name": "gp Wendywood Clinic",
+    "province": "Gauteng",
+    "short_name": "Wendywood Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "97 du Plessis Street, Westbury",
+    "code": 748333,
+    "latitude": -26.1844,
+    "location": "POINT (27.973258 -26.184459)",
+    "longitude": 27.973258,
+    "name": "gp Westbury Clinic",
+    "province": "Gauteng",
+    "short_name": "Westbury Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Jan Blignaut and Saturnus Street, Westonaria",
+    "code": 585442,
+    "latitude": -26.3302,
+    "location": "POINT (27.65245 -26.3302)",
+    "longitude": 27.65245,
+    "name": "gp Westonaria Clinic",
+    "province": "Gauteng",
+    "short_name": "Westonaria Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thema Road, Kwa-Thema",
+    "code": 297206,
+    "latitude": -26.3047,
+    "location": "POINT (28.3859 -26.30474)",
+    "longitude": 28.3859,
+    "name": "gp White City Clinic",
+    "province": "Gauteng",
+    "short_name": "White City Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 536 Welgevonden Street, Lakeside, Orange Farm",
+    "code": 870615,
+    "latitude": -26.5173,
+    "location": "POINT (27.8849 -26.51731)",
+    "longitude": 27.884900000000002,
+    "name": "gp Wildebeesfontein Clinic",
+    "province": "Gauteng",
+    "short_name": "Wildebees Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Republic Road and Earls Street, Windsor East",
+    "code": 714424,
+    "latitude": -26.1225,
+    "location": "POINT (27.97478 -26.12259)",
+    "longitude": 27.97478,
+    "name": "gp Windsor Clinic",
+    "province": "Gauteng",
+    "short_name": "Windsor Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9044 Madiba Drive, Loinnie Mandela Park, Tembisa",
+    "code": 638933,
+    "latitude": -25.9888,
+    "location": "POINT (28.22651 -25.98887)",
+    "longitude": 28.22651,
+    "name": "gp Winnie Mandela Clinic",
+    "province": "Gauteng",
+    "short_name": "Winnie Mandela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "626 Dube Stand, Winterveldt",
+    "code": 543733,
+    "latitude": -25.4037,
+    "location": "POINT (28.02454 -25.40371)",
+    "longitude": 28.02454,
+    "name": "gp Winterveldt Clinic",
+    "province": "Gauteng",
+    "short_name": "Winterveldt Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "105 William Nicole Road, Witkoppen Ext 6",
+    "code": 568724,
+    "latitude": -26.0109,
+    "location": "POINT (28.01084 -26.01096)",
+    "longitude": 28.01084,
+    "name": "gp Witkoppen Clinic",
+    "province": "Gauteng",
+    "short_name": "Witkoppen Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6644 Ralerata Street, Mohlakeng",
+    "code": 411733,
+    "latitude": -26.2351,
+    "location": "POINT (27.6985 -26.2351)",
+    "longitude": 27.6985,
+    "name": "gp Ya Rona Clinic",
+    "province": "Gauteng",
+    "short_name": "Ya Rona Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1219 Kenmere Hopkins, Yeoville",
+    "code": 376924,
+    "latitude": -26.1817,
+    "location": "POINT (28.06328 -26.18177)",
+    "longitude": 28.06328,
+    "name": "gp Yeoville Clinic",
+    "province": "Gauteng",
+    "short_name": "Yeoville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 1080, Winterveldt",
+    "code": 845633,
+    "latitude": -25.4519,
+    "location": "POINT (28.059167 -25.451944)",
+    "longitude": 28.059167,
+    "name": "gp Zamile Clinic",
+    "province": "Gauteng",
+    "short_name": "Zamile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "74 Marine Drive, Zandspruit",
+    "code": 727651,
+    "latitude": -26.058,
+    "location": "POINT (27.90366 -26.05809)",
+    "longitude": 27.90366,
+    "name": "gp Zandspruit Clinic",
+    "province": "Gauteng",
+    "short_name": "Zandspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "642 Malabe Street, Zithobeni",
+    "code": 342342,
+    "latitude": -25.7838,
+    "location": "POINT (28.71935 -25.78383)",
+    "longitude": 28.71935,
+    "name": "gp Zithobeni Clinic",
+    "province": "Gauteng",
+    "short_name": "Zithobeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "780/783 Bendile Street, Zola",
+    "code": 503760,
+    "latitude": -26.2442,
+    "location": "POINT (27.83109 -26.24425)",
+    "longitude": 27.83109,
+    "name": "gp Zola CHC",
+    "province": "Gauteng",
+    "short_name": "Zola CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1290 Bolani Road, Jabulani",
+    "code": 385742,
+    "latitude": -26.2483,
+    "location": "POINT (27.8522 -26.24835)",
+    "longitude": 27.8522,
+    "name": "gp Zola Gateway Clinic",
+    "province": "Gauteng",
+    "short_name": "Zola Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "669 Shomayeli Street, Zondi 1",
+    "code": 571633,
+    "latitude": -26.2328,
+    "location": "POINT (27.86615 -26.2328)",
+    "longitude": 27.86615,
+    "name": "gp Zondi Clinic",
+    "province": "Gauteng",
+    "short_name": "Zondi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "76 Lerothodi Street, Sebokeng Zone 13",
+    "code": 575360,
+    "latitude": -26.5778,
+    "location": "POINT (27.83586 -26.57785)",
+    "longitude": 27.83586,
+    "name": "gp Zone 13 Clinic",
+    "province": "Gauteng",
+    "short_name": "Zone 13 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 65, Sebokeng Zone 14",
+    "code": 737115,
+    "latitude": -26.5872,
+    "location": "POINT (27.836783 -26.587294)",
+    "longitude": 27.836783,
+    "name": "gp Zone 14 Clinic",
+    "province": "Gauteng",
+    "short_name": "Zone 14 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 62064, Sebokeng Zone 17",
+    "code": 516815,
+    "latitude": -26.5957,
+    "location": "POINT (27.83207 -26.59576)",
+    "longitude": 27.83207,
+    "name": "gp Zone 17 Clinic",
+    "province": "Gauteng",
+    "short_name": "Zone 17 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 570014, Sebokeng Zone 3",
+    "code": 455660,
+    "latitude": -26.5287,
+    "location": "POINT (27.87136 -26.52878)",
+    "longitude": 27.87136,
+    "name": "gp Zone 3 Clinic",
+    "province": "Gauteng",
+    "short_name": "Zone 3 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1599, Zonkizizwe Zone 4",
+    "code": 533351,
+    "latitude": -26.4071,
+    "location": "POINT (28.18704 -26.40716)",
+    "longitude": 28.18704,
+    "name": "gp Zonkizizwe 1 Clinic",
+    "province": "Gauteng",
+    "short_name": "Zonkizizwe 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5306, Zonkizizwe Zone 5",
+    "code": 321233,
+    "latitude": -26.4144,
+    "location": "POINT (28.18053 -26.41441)",
+    "longitude": 28.18053,
+    "name": "gp Zonkizizwe 2 Clinic",
+    "province": "Gauteng",
+    "short_name": "Zonkizizwe 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": "Plot 179, 2nd Street, Zuurbekom",
+      "code": 516933,
+      "latitude": -26.3169,
+      "location": "POINT (27.70312 -26.31693)",
+      "longitude": 27.70312,
+      "name": "gp Zuurbekom Clinic",
+      "province": "Gauteng",
+      "short_name": "Zuurbekom Clinic"
+    }
+  }
+]

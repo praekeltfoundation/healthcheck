@@ -1,0 +1,5527 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mongwaneng",
+    "code": 778451,
+    "latitude": -23.8795,
+    "location": "POINT (29.82042 -23.87953)",
+    "longitude": 29.82042,
+    "name": "lp A Mamabolo Clinic",
+    "province": "Limpopo",
+    "short_name": "A Mamabolo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Abbotspoort Village",
+    "code": 722260,
+    "latitude": -23.4549,
+    "location": "POINT (28.08689 -23.45498)",
+    "longitude": 28.08689,
+    "name": "lp Abbotspoort Clinic",
+    "province": "Limpopo",
+    "short_name": "Abbotspoort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 202133,
+    "latitude": -22.683,
+    "location": "POINT (29.10583 -22.68309)",
+    "longitude": 29.10583,
+    "name": "lp Alldays Clinic",
+    "province": "Limpopo",
+    "short_name": "Alldays Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Alma",
+    "code": 541751,
+    "latitude": -24.4888,
+    "location": "POINT (28.07 -24.48883)",
+    "longitude": 28.07,
+    "name": "lp Alma Clinic",
+    "province": "Limpopo",
+    "short_name": "Alma Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 375951,
+    "latitude": -23.5167,
+    "location": "POINT (28.93679 -23.51674)",
+    "longitude": 28.93679,
+    "name": "lp Ambergate Clinic",
+    "province": "Limpopo",
+    "short_name": "Ambergate Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 451924,
+    "latitude": -23.955,
+    "location": "POINT (28.98525 -23.95502)",
+    "longitude": 28.98525,
+    "name": "lp Armoed Clinic",
+    "province": "Limpopo",
+    "short_name": "Armoed Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mosate, Bakenberg",
+    "code": 462833,
+    "latitude": -23.8647,
+    "location": "POINT (28.75603 -23.86478)",
+    "longitude": 28.75603,
+    "name": "lp Bakenberg Clinic",
+    "province": "Limpopo",
+    "short_name": "Bakenberg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 566833,
+    "latitude": -23.3692,
+    "location": "POINT (30.51917 -23.36928)",
+    "longitude": 30.51917,
+    "name": "lp Basani Clinic",
+    "province": "Limpopo",
+    "short_name": "Basani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mauluma Next To Tshime Secondary School",
+    "code": 186324,
+    "latitude": -22.9214,
+    "location": "POINT (30.11881 -22.92147)",
+    "longitude": 30.11881,
+    "name": "lp Beaconsfield Clinic",
+    "province": "Limpopo",
+    "short_name": "Beaconsfield Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "OR Tambo Drive, Leseding",
+    "code": 503415,
+    "latitude": -24.8765,
+    "location": "POINT (28.32427 -24.87656)",
+    "longitude": 28.32427,
+    "name": "lp Bela-Bela Clinic",
+    "province": "Limpopo",
+    "short_name": "Bela-Bela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 524360,
+    "latitude": -23.4121,
+    "location": "POINT (30.42064 -23.41211)",
+    "longitude": 30.42064,
+    "name": "lp Bellevue Clinic",
+    "province": "Limpopo",
+    "short_name": "Bellevue Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 841851,
+    "latitude": -23.9161,
+    "location": "POINT (31.03731 -23.91614)",
+    "longitude": 31.03731,
+    "name": "lp Benfarm Clinic",
+    "province": "Limpopo",
+    "short_name": "Benfarm Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 730160,
+    "latitude": -24.2047,
+    "location": "POINT (30.50194 -24.20472)",
+    "longitude": 30.50194,
+    "name": "lp Bismarck Clinic",
+    "province": "Limpopo",
+    "short_name": "Bismarck Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 777824,
+    "latitude": -23.1424,
+    "location": "POINT (29.00828 -23.14248)",
+    "longitude": 29.00828,
+    "name": "lp Blouberg CHC",
+    "province": "Limpopo",
+    "short_name": "Blouberg CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Maroteng",
+    "code": 776824,
+    "latitude": -24.149,
+    "location": "POINT (28.95136 -24.14908)",
+    "longitude": 28.95136,
+    "name": "lp Bokwalakwala Clinic",
+    "province": "Limpopo",
+    "short_name": "Bokwalakwala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 363815,
+    "latitude": -23.6234,
+    "location": "POINT (30.34625 -23.62342)",
+    "longitude": 30.34625,
+    "name": "lp Bolobedu Clinic",
+    "province": "Limpopo",
+    "short_name": "Bolobedu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ga Mampuru Next To Moshate",
+    "code": 253615,
+    "latitude": -24.8041,
+    "location": "POINT (30.09358 -24.80411)",
+    "longitude": 30.09358,
+    "name": "lp Boschkloof Clinic",
+    "province": "Limpopo",
+    "short_name": "Boschkloof Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 717051,
+    "latitude": -24.4483,
+    "location": "POINT (29.55397 -24.44836)",
+    "longitude": 29.55397,
+    "name": "lp Boschplaats Clinic",
+    "province": "Limpopo",
+    "short_name": "Boschplaats Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 963242,
+    "latitude": -23.4926,
+    "location": "POINT (29.74272 -23.49267)",
+    "longitude": 29.74272,
+    "name": "lp Botlokwa Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Botlok Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Buffelshoek Kliniek, My Darling Road, Malebogo",
+    "code": 592242,
+    "latitude": -23.1492,
+    "location": "POINT (28.92419 -23.14925)",
+    "longitude": 28.92419,
+    "name": "lp Buffelshoek Clinic (Blouberg)",
+    "province": "Limpopo",
+    "short_name": "Buffelshoek Clinic (Blou)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Buite Street",
+    "code": 633551,
+    "latitude": -23.902,
+    "location": "POINT (29.44205 -23.90209)",
+    "longitude": 29.44205,
+    "name": "lp Buitestraat Clinic",
+    "province": "Limpopo",
+    "short_name": "Buitestraat Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Buneni Mabondlongo",
+    "code": 252242,
+    "latitude": -23.2029,
+    "location": "POINT (30.19752 -23.20298)",
+    "longitude": 30.19752,
+    "name": "lp Bungeni CHC",
+    "province": "Limpopo",
+    "short_name": "Bungeni CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 817451,
+    "latitude": -22.9873,
+    "location": "POINT (28.95339 -22.98733)",
+    "longitude": 28.95339,
+    "name": "lp Burgerecht Clinic",
+    "province": "Limpopo",
+    "short_name": "Burgerecht Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 362215,
+    "latitude": -24.665399999999998,
+    "location": "POINT (30.3226 -24.66549)",
+    "longitude": 30.3226,
+    "name": "lp Burgersfort Clinic",
+    "province": "Limpopo",
+    "short_name": "Burgersfort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 905051,
+    "latitude": -24.5458,
+    "location": "POINT (29.50369 -24.54583)",
+    "longitude": 29.50369,
+    "name": "lp Byldrift Clinic",
+    "province": "Limpopo",
+    "short_name": "Byldrift Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 311524,
+    "latitude": -23.998,
+    "location": "POINT (30.31733 -23.998)",
+    "longitude": 30.31733,
+    "name": "lp Carlotta Clinic",
+    "province": "Limpopo",
+    "short_name": "Carlotta Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Matebeleng",
+    "code": 477460,
+    "latitude": -23.7651,
+    "location": "POINT (28.7475 -23.76517)",
+    "longitude": 28.7475,
+    "name": "lp Chalema Clinic",
+    "province": "Limpopo",
+    "short_name": "Chalema Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 624415,
+    "latitude": -23.4772,
+    "location": "POINT (30.55219 -23.4772)",
+    "longitude": 30.55219,
+    "name": "lp Charlie Rangaan Clinic",
+    "province": "Limpopo",
+    "short_name": "Charlie Rangaan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Sikwane Street, Chromite",
+    "code": 927351,
+    "latitude": -24.7852,
+    "location": "POINT (27.28994 -24.78526)",
+    "longitude": 27.28994,
+    "name": "lp Chromite Clinic",
+    "province": "Limpopo",
+    "short_name": "Chromite Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 348242,
+    "latitude": -24.1914,
+    "location": "POINT (29.48597 -24.19141)",
+    "longitude": 29.485970000000002,
+    "name": "lp Chuene Clinic",
+    "province": "Limpopo",
+    "short_name": "Chuene Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 761733,
+    "latitude": -22.8347,
+    "location": "POINT (30.51331 -22.83472)",
+    "longitude": 30.51331,
+    "name": "lp Damani Clinic",
+    "province": "Limpopo",
+    "short_name": "Damani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 803606,
+    "latitude": -23.9043,
+    "location": "POINT (30.27156 -23.90436)",
+    "longitude": 30.27156,
+    "name": "lp Dan Village Clinic",
+    "province": "Limpopo",
+    "short_name": "Dan Village Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Davhana Main Road",
+    "code": 994515,
+    "latitude": -23.2097,
+    "location": "POINT (30.45625 -23.20973)",
+    "longitude": 30.45625,
+    "name": "lp Davhana Clinic",
+    "province": "Limpopo",
+    "short_name": "Davhana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "De Hoop Main Street",
+    "code": 265160,
+    "latitude": -23.1875,
+    "location": "POINT (30.27644 -23.18753)",
+    "longitude": 30.27644,
+    "name": "lp De Hoop Clinic",
+    "province": "Limpopo",
+    "short_name": "De Hoop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "R521, Schirmanioog Road",
+    "code": 733642,
+    "latitude": -22.9173,
+    "location": "POINT (29.02086 -22.91736)",
+    "longitude": 29.02086,
+    "name": "lp De Vrede Clinic",
+    "province": "Limpopo",
+    "short_name": "De Vrede Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "181 President Street",
+    "code": 358360,
+    "latitude": -23.3672,
+    "location": "POINT (29.3275 -23.36725)",
+    "longitude": 29.3275,
+    "name": "lp Dendron Clinic",
+    "province": "Limpopo",
+    "short_name": "Dendron Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 781242,
+    "latitude": -23.8697,
+    "location": "POINT (29.06661 -23.86978)",
+    "longitude": 29.06661,
+    "name": "lp Diana Clinic",
+    "province": "Limpopo",
+    "short_name": "Diana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 862633,
+    "latitude": -24.7527,
+    "location": "POINT (29.88787 -24.7527)",
+    "longitude": 29.88787,
+    "name": "lp Dichoeung Clinic",
+    "province": "Limpopo",
+    "short_name": "Dichoeung Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 272542,
+    "latitude": -24.9853,
+    "location": "POINT (29.45714 -24.98539)",
+    "longitude": 29.45714,
+    "name": "lp Dikgalaopeng Clinic",
+    "province": "Limpopo",
+    "short_name": "Dikgalaopeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 231542,
+    "latitude": -23.7206,
+    "location": "POINT (29.78536 -23.72064)",
+    "longitude": 29.78536,
+    "name": "lp Dikgale Clinic",
+    "province": "Limpopo",
+    "short_name": "Dikgale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 746051,
+    "latitude": -24.6143,
+    "location": "POINT (30.17074 -24.61438)",
+    "longitude": 30.17074,
+    "name": "lp Dilokong Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Dilokong Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 457351,
+    "latitude": -24.3704,
+    "location": "POINT (29.57765 -24.37045)",
+    "longitude": 29.57765,
+    "name": "lp Dithabaneng Clinic",
+    "province": "Limpopo",
+    "short_name": "Dithabaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 340315,
+    "latitude": -23.6685,
+    "location": "POINT (30.42594 -23.6685)",
+    "longitude": 30.42594,
+    "name": "lp Dr Hugo Nkabinde Clinic",
+    "province": "Limpopo",
+    "short_name": "Hugo Nkabinde Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hospital Street",
+    "code": 232851,
+    "latitude": -23.697400000000002,
+    "location": "POINT (30.1412 -23.69746)",
+    "longitude": 30.1412,
+    "name": "lp Duiwelskloof CHC",
+    "province": "Limpopo",
+    "short_name": "Duiwelskloof CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 984115,
+    "latitude": -22.7566,
+    "location": "POINT (30.78767 -22.75667)",
+    "longitude": 30.78767,
+    "name": "lp Duvhuledza Clinic",
+    "province": "Limpopo",
+    "short_name": "Duvhuledza Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dwaalboom Clinic",
+    "code": 550524,
+    "latitude": -24.7231,
+    "location": "POINT (26.81012 -24.72313)",
+    "longitude": 26.81012,
+    "name": "lp Dwaalboom Clinic",
+    "province": "Limpopo",
+    "short_name": "Dwaalboom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dzingale Village",
+    "code": 167333,
+    "latitude": -22.909,
+    "location": "POINT (30.52232 -22.90901)",
+    "longitude": 30.52232,
+    "name": "lp Dzingahe Clinic",
+    "province": "Limpopo",
+    "short_name": "Dzingahe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1122 Dzumeri Village",
+    "code": 744724,
+    "latitude": -23.5763,
+    "location": "POINT (30.7086 -23.57638)",
+    "longitude": 30.7086,
+    "name": "lp Dzumeri CHC",
+    "province": "Limpopo",
+    "short_name": "Dzumeri CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 637424,
+    "latitude": -24.9533,
+    "location": "POINT (29.886 -24.95333)",
+    "longitude": 29.886,
+    "name": "lp Eensaam Clinic",
+    "province": "Limpopo",
+    "short_name": "Eensaam Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 617451,
+    "latitude": -24.7318,
+    "location": "POINT (30.13331 -24.73189)",
+    "longitude": 30.13331,
+    "name": "lp Eerstegeluk Clinic",
+    "province": "Limpopo",
+    "short_name": "Eerstegeluk Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ga-Mmasa 526, Eisleben, 0818",
+    "code": 857651,
+    "latitude": -23.5186,
+    "location": "POINT (29.8415 -23.51861)",
+    "longitude": 29.8415,
+    "name": "lp Eisleben Clinic",
+    "province": "Limpopo",
+    "short_name": "Eisleben Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 665224,
+    "latitude": -25.2849,
+    "location": "POINT (29.21345 -25.28496)",
+    "longitude": 29.21345,
+    "name": "lp Elandsdoorn Clinic",
+    "province": "Limpopo",
+    "short_name": "Elandsdoorn Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "667 Elandskraal",
+    "code": 802815,
+    "latitude": -24.714199999999998,
+    "location": "POINT (29.41202 -24.7142)",
+    "longitude": 29.41202,
+    "name": "lp Elandskraal Clinic",
+    "province": "Limpopo",
+    "short_name": "Elandskraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Fox Odendaal and Muller Street",
+    "code": 959060,
+    "latitude": -23.6815,
+    "location": "POINT (27.72298 -23.68152)",
+    "longitude": 27.72298,
+    "name": "lp Ellisras Clinic",
+    "province": "Limpopo",
+    "short_name": "Ellisras Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 962624,
+    "latitude": -23.9472,
+    "location": "POINT (29.79861 -23.94722)",
+    "longitude": 29.79861,
+    "name": "lp Evelyn Lekganyane Clinic",
+    "province": "Limpopo",
+    "short_name": "Evelyn Lekganyane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 532660,
+    "latitude": -22.5881,
+    "location": "POINT (30.42727 -22.58815)",
+    "longitude": 30.42727,
+    "name": "lp Folovhodwe Clinic",
+    "province": "Limpopo",
+    "short_name": "Folovhodwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Block 5",
+    "code": 304333,
+    "latitude": -24.1286,
+    "location": "POINT (28.98323 -24.12868)",
+    "longitude": 28.98323,
+    "name": "lp Ga Madiba Clinic",
+    "province": "Limpopo",
+    "short_name": "Ga Madiba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 852515,
+    "latitude": -23.8756,
+    "location": "POINT (28.71639 -23.87562)",
+    "longitude": 28.71639,
+    "name": "lp George Masebe Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "G Masebe Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "House 1100, Madodonga",
+    "code": 874560,
+    "latitude": -22.9008,
+    "location": "POINT (28.67778 -22.90083)",
+    "longitude": 28.67778,
+    "name": "lp Gideon Clinic",
+    "province": "Limpopo",
+    "short_name": "Gideon Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Giyani Police Barracks",
+    "code": 885824,
+    "latitude": -23.3126,
+    "location": "POINT (30.72328 -23.31261)",
+    "longitude": 30.72328,
+    "name": "lp Giyani CHC",
+    "province": "Limpopo",
+    "short_name": "Giyani CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Matekereng",
+    "code": 650251,
+    "latitude": -23.4007,
+    "location": "POINT (28.91244 -23.40075)",
+    "longitude": 28.91244,
+    "name": "lp Goedentrou Clinic",
+    "province": "Limpopo",
+    "short_name": "Goedentrou Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 873815,
+    "latitude": -25.0606,
+    "location": "POINT (29.71783 -25.06067)",
+    "longitude": 29.71783,
+    "name": "lp Goedgedach Clinic",
+    "province": "Limpopo",
+    "short_name": "Goedgedach Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "PO Box 443",
+    "code": 281660,
+    "latitude": -23.6474,
+    "location": "POINT (28.93106 -23.64744)",
+    "longitude": 28.93106,
+    "name": "lp Goedgevonden Clinic",
+    "province": "Limpopo",
+    "short_name": "Goedgevonden Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 346006,
+    "latitude": -22.9133,
+    "location": "POINT (30.43733 -22.91333)",
+    "longitude": 30.43733,
+    "name": "lp Gondeni Clinic",
+    "province": "Limpopo",
+    "short_name": "Gondeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 834506,
+    "latitude": -23.7165,
+    "location": "POINT (30.4365 -23.71658)",
+    "longitude": 30.4365,
+    "name": "lp Grace Mugodeni CHC",
+    "province": "Limpopo",
+    "short_name": "Grace Mugodeni CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6a Tautes Street",
+    "code": 505715,
+    "latitude": -25.1688,
+    "location": "POINT (29.40087 -25.16884)",
+    "longitude": 29.40087,
+    "name": "lp Groblersdal Clinic",
+    "province": "Limpopo",
+    "short_name": "Groblersdal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 728451,
+    "latitude": -24.5959,
+    "location": "POINT (30.0814 -24.59593)",
+    "longitude": 30.0814,
+    "name": "lp HC Boshoff CHC",
+    "province": "Limpopo",
+    "short_name": "HC Boshoff CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ha Mutsha Marundu",
+    "code": 828824,
+    "latitude": -23.0641,
+    "location": "POINT (30.34944 -23.06417)",
+    "longitude": 30.34944,
+    "name": "lp Ha-mutsha Clinic",
+    "province": "Limpopo",
+    "short_name": "Ha-mutsha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ribungwani Main Gravel Road",
+    "code": 729515,
+    "latitude": -23.2819,
+    "location": "POINT (30.29619 -23.28194)",
+    "longitude": 30.29619,
+    "name": "lp Helderwater Clinic",
+    "province": "Limpopo",
+    "short_name": "Helderwater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 549915,
+    "latitude": -23.2818,
+    "location": "POINT (29.10823 -23.28185)",
+    "longitude": 29.10823,
+    "name": "lp Helene Franz Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Helene Franz Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 647351,
+    "latitude": -23.2814,
+    "location": "POINT (30.50933 -23.28144)",
+    "longitude": 30.50933,
+    "name": "lp Hlaneki Clinic",
+    "province": "Limpopo",
+    "short_name": "Hlaneki Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "669 Monsterlus",
+    "code": 704342,
+    "latitude": -25.0296,
+    "location": "POINT (29.73356 -25.02967)",
+    "longitude": 29.73356,
+    "name": "lp Hlogotlou Clinic",
+    "province": "Limpopo",
+    "short_name": "Hlogotlou Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 731833,
+    "latitude": -23.875,
+    "location": "POINT (31.06017 -23.87506)",
+    "longitude": 31.06017,
+    "name": "lp Humulani Clinic",
+    "province": "Limpopo",
+    "short_name": "Humulani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 828506,
+    "latitude": -24.3536,
+    "location": "POINT (29.461588 -24.353635)",
+    "longitude": 29.461588,
+    "name": "lp Hwelereng Clinic",
+    "province": "Limpopo",
+    "short_name": "Hwelereng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Radinawana",
+    "code": 576260,
+    "latitude": -24.5708,
+    "location": "POINT (29.87383 -24.57083)",
+    "longitude": 29.87383,
+    "name": "lp Ikageng Clinic",
+    "province": "Limpopo",
+    "short_name": "Ikageng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sehirmanoeg Road, R522",
+    "code": 295424,
+    "latitude": -23.0785,
+    "location": "POINT (29.11073 -23.07858)",
+    "longitude": 29.11073,
+    "name": "lp Indermark Clinic",
+    "province": "Limpopo",
+    "short_name": "Indermark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 364851,
+    "latitude": -23.8058,
+    "location": "POINT (29.79961 -23.80583)",
+    "longitude": 29.79961,
+    "name": "lp J Mamabolo Clinic",
+    "province": "Limpopo",
+    "short_name": "J Mamabolo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 20002, Jakkalskuil Village",
+    "code": 649351,
+    "latitude": -23.8331,
+    "location": "POINT (28.60781 -23.83317)",
+    "longitude": 28.60781,
+    "name": "lp Jakkalskuil Clinic",
+    "province": "Limpopo",
+    "short_name": "Jakkalskuil Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mafarana Village",
+    "code": 381615,
+    "latitude": -23.9602,
+    "location": "POINT (30.36969 -23.96025)",
+    "longitude": 30.36969,
+    "name": "lp Jamela Clinic",
+    "province": "Limpopo",
+    "short_name": "Jamela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 147833,
+    "latitude": -24.7606,
+    "location": "POINT (29.86838 -24.76068)",
+    "longitude": 29.86838,
+    "name": "lp Jane Furse Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Jane Furse Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 772315,
+    "latitude": -24.0695,
+    "location": "POINT (30.32853 -24.06953)",
+    "longitude": 30.32853,
+    "name": "lp Julesburg CHC",
+    "province": "Limpopo",
+    "short_name": "Julesburg CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Taxi Rank Street",
+    "code": 383433,
+    "latitude": -23.6407,
+    "location": "POINT (30.21775 -23.64075)",
+    "longitude": 30.21775,
+    "name": "lp Kgapane Clinic",
+    "province": "Limpopo",
+    "short_name": "Kgapane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 969124,
+    "latitude": -23.275,
+    "location": "POINT (30.84423 -23.27503)",
+    "longitude": 30.84423,
+    "name": "lp Khakhala-Hlomela Clinic",
+    "province": "Limpopo",
+    "short_name": "Khakhala-Hlomela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 710560,
+    "latitude": -22.8362,
+    "location": "POINT (30.24732 -22.83622)",
+    "longitude": 30.24732,
+    "name": "lp Khakhu Clinic",
+    "province": "Limpopo",
+    "short_name": "Khakhu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 257224,
+    "latitude": -23.5796,
+    "location": "POINT (30.87362 -23.57969)",
+    "longitude": 30.87362,
+    "name": "lp Kheyi Clinic",
+    "province": "Limpopo",
+    "short_name": "Kheyi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 785360,
+    "latitude": -23.9301,
+    "location": "POINT (30.2395 -23.93017)",
+    "longitude": 30.2395,
+    "name": "lp Khujwana Clinic",
+    "province": "Limpopo",
+    "short_name": "Khujwana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ramotsho Village",
+    "code": 361851,
+    "latitude": -22.8364,
+    "location": "POINT (28.84697 -22.83644)",
+    "longitude": 28.84697,
+    "name": "lp Kibi Clinic",
+    "province": "Limpopo",
+    "short_name": "Kibi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mosehleng Village",
+    "code": 341960,
+    "latitude": -23.4862,
+    "location": "POINT (28.91639 -23.48622)",
+    "longitude": 28.91639,
+    "name": "lp Krantzplaas Clinic",
+    "province": "Limpopo",
+    "short_name": "Krantzplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 278115,
+    "latitude": -23.3223,
+    "location": "POINT (30.68181 -23.32235)",
+    "longitude": 30.68181,
+    "name": "lp Kremetart Clinic",
+    "province": "Limpopo",
+    "short_name": "Kremetart Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Schirmanoog R521",
+    "code": 352833,
+    "latitude": -22.9326,
+    "location": "POINT (29.02653 -22.93269)",
+    "longitude": 29.02653,
+    "name": "lp Kromhoek Clinic",
+    "province": "Limpopo",
+    "short_name": "Kromhoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Elim Hospital, Mahangeskraal Street, Waterval, Louis Trichardt, 0960",
+    "code": 462724,
+    "latitude": -23.0911,
+    "location": "POINT (30.03227 -23.09114)",
+    "longitude": 30.03227,
+    "name": "lp Kulani Clinic",
+    "province": "Limpopo",
+    "short_name": "Kulani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Kuruleni",
+    "code": 723860,
+    "latitude": -23.1456,
+    "location": "POINT (30.35966 -23.14564)",
+    "longitude": 30.35966,
+    "name": "lp Kuruleni Clinic",
+    "province": "Limpopo",
+    "short_name": "Kuruleni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kutama Madombidzha Tar Road Next Tshiungulela Secondary",
+    "code": 268851,
+    "latitude": -23.0631,
+    "location": "POINT (29.63544 -23.06319)",
+    "longitude": 29.63544,
+    "name": "lp Kutama Clinic",
+    "province": "Limpopo",
+    "short_name": "Kutama Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 426542,
+    "latitude": -25.3195,
+    "location": "POINT (29.2619 -25.31952)",
+    "longitude": 29.2619,
+    "name": "lp Kwarrielaagte Clinic",
+    "province": "Limpopo",
+    "short_name": "Kwarrielaagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 315306,
+    "latitude": -23.9846,
+    "location": "POINT (29.64542 -23.98467)",
+    "longitude": 29.64542,
+    "name": "lp Laastehoop Clinic",
+    "province": "Limpopo",
+    "short_name": "Laastehoop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 473860,
+    "latitude": -23.4633,
+    "location": "POINT (30.36733 -23.46333)",
+    "longitude": 30.36733,
+    "name": "lp Lebaka Clinic",
+    "province": "Limpopo",
+    "short_name": "Lebaka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 233506,
+    "latitude": -24.3136,
+    "location": "POINT (29.5605 -24.31367)",
+    "longitude": 29.5605,
+    "name": "lp Lebowakgomo Clinic",
+    "province": "Limpopo",
+    "short_name": "Lebowakgomo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Zone A",
+    "code": 555851,
+    "latitude": -24.2956,
+    "location": "POINT (29.5285 -24.29567)",
+    "longitude": 29.5285,
+    "name": "lp Lebowakgomo Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Lebowakgomo Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 933733,
+    "latitude": -24.2724,
+    "location": "POINT (29.42183 -24.27244)",
+    "longitude": 29.42183,
+    "name": "lp Ledwaba Clinic",
+    "province": "Limpopo",
+    "short_name": "Ledwaba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10122 Kalafong Street",
+    "code": 265433,
+    "latitude": -23.5732,
+    "location": "POINT (28.92033 -23.57325)",
+    "longitude": 28.92033,
+    "name": "lp Lekhureng Clinic",
+    "province": "Limpopo",
+    "short_name": "Lekhureng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lenyenye Clinic Street",
+    "code": 596415,
+    "latitude": -23.9741,
+    "location": "POINT (30.26783 -23.97419)",
+    "longitude": 30.26783,
+    "name": "lp Lenyenye Clinic",
+    "province": "Limpopo",
+    "short_name": "Lenyenye Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "59 Ellis Street",
+    "code": 444542,
+    "latitude": -23.6678,
+    "location": "POINT (27.74581 -23.66789)",
+    "longitude": 27.74581,
+    "name": "lp Lephalale Clinic",
+    "province": "Limpopo",
+    "short_name": "Lephalale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 863133,
+    "latitude": -23.9868,
+    "location": "POINT (30.1945 -23.98683)",
+    "longitude": 30.1945,
+    "name": "lp Lephepane Clinic",
+    "province": "Limpopo",
+    "short_name": "Lephepane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sekhune Village",
+    "code": 243142,
+    "latitude": -23.1493,
+    "location": "POINT (28.78547 -23.14932)",
+    "longitude": 28.78547,
+    "name": "lp Lesfontein Clinic",
+    "province": "Limpopo",
+    "short_name": "Lesfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 517442,
+    "latitude": -23.874,
+    "location": "POINT (30.269 -23.874)",
+    "longitude": 30.269,
+    "name": "lp Letaba Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Letaba Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vorster Street",
+    "code": 249933,
+    "latitude": -23.8898,
+    "location": "POINT (30.38725 -23.88983)",
+    "longitude": 30.38725,
+    "name": "lp Letsitele Clinic",
+    "province": "Limpopo",
+    "short_name": "Letsitele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Levubu",
+    "code": 623251,
+    "latitude": -23.0958,
+    "location": "POINT (30.286 -23.09581)",
+    "longitude": 30.286,
+    "name": "lp Levubu Clinic",
+    "province": "Limpopo",
+    "short_name": "Levubu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 244633,
+    "latitude": -23.5501,
+    "location": "POINT (30.79482 -23.550115)",
+    "longitude": 30.79482,
+    "name": "lp Loloka Clinic",
+    "province": "Limpopo",
+    "short_name": "Loloka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lonsdale Village",
+    "code": 271942,
+    "latitude": -23.6128,
+    "location": "POINT (29.15572 -23.61286)",
+    "longitude": 29.15572,
+    "name": "lp Lonsdale Clinic",
+    "province": "Limpopo",
+    "short_name": "Lonsdale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 442251,
+    "latitude": -24.1916,
+    "location": "POINT (30.42308 -24.19167)",
+    "longitude": 30.42308,
+    "name": "lp Lorraine Clinic",
+    "province": "Limpopo",
+    "short_name": "Lorraine Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 538842,
+    "latitude": -23.0373,
+    "location": "POINT (29.90747 -23.0373)",
+    "longitude": 29.90747,
+    "name": "lp Louis Trichardt Clinic",
+    "province": "Limpopo",
+    "short_name": "L Trichardt Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1453b Clinic Street, Lulekani, Lulekani-B, Phalaborwa, 1392",
+    "code": 307215,
+    "latitude": -23.8646,
+    "location": "POINT (31.07726 -23.86462)",
+    "longitude": 31.07726,
+    "name": "lp Lulekani CHC",
+    "province": "Limpopo",
+    "short_name": "Lulekani CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 489606,
+    "latitude": -23.0138,
+    "location": "POINT (30.3625 -23.01383)",
+    "longitude": 30.3625,
+    "name": "lp Lwamondo Clinic",
+    "province": "Limpopo",
+    "short_name": "Lwamondo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 929815,
+    "latitude": -24.0346,
+    "location": "POINT (30.23681 -24.03469)",
+    "longitude": 30.23681,
+    "name": "lp Maake Clinic",
+    "province": "Limpopo",
+    "short_name": "Maake Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 620751,
+    "latitude": -24.3759,
+    "location": "POINT (30.54206 -24.37592)",
+    "longitude": 30.54206,
+    "name": "lp Mabins Clinic",
+    "province": "Limpopo",
+    "short_name": "Mabins Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 759542,
+    "latitude": -23.9501,
+    "location": "POINT (28.804343 -23.95012)",
+    "longitude": 28.804343,
+    "name": "lp Mabuela Clinic",
+    "province": "Limpopo",
+    "short_name": "Mabuela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 331133,
+    "latitude": -22.8317,
+    "location": "POINT (30.27275 -22.83178)",
+    "longitude": 30.27275,
+    "name": "lp Madala Clinic",
+    "province": "Limpopo",
+    "short_name": "Madala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 861351,
+    "latitude": -24.7346,
+    "location": "POINT (29.88244 -24.7346)",
+    "longitude": 29.88244,
+    "name": "lp Madibong Clinic",
+    "province": "Limpopo",
+    "short_name": "Madibong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 988615,
+    "latitude": -22.4517,
+    "location": "POINT (30.56282 -22.45178)",
+    "longitude": 30.56282,
+    "name": "lp Madimbo Clinic",
+    "province": "Limpopo",
+    "short_name": "Madimbo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Tshkwavhukiku and Braambos Road",
+    "code": 538406,
+    "latitude": -23.1148,
+    "location": "POINT (29.8194 -23.11483)",
+    "longitude": 29.8194,
+    "name": "lp Madombidzha Clinic",
+    "province": "Limpopo",
+    "short_name": "Madombidzha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 612951,
+    "latitude": -23.6293,
+    "location": "POINT (30.39964 -23.62936)",
+    "longitude": 30.39964,
+    "name": "lp Madumane Clinic",
+    "province": "Limpopo",
+    "short_name": "Madumane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 613124,
+    "latitude": -24.1952,
+    "location": "POINT (30.09989 -24.19525)",
+    "longitude": 30.09989,
+    "name": "lp Mafefe Clinic",
+    "province": "Limpopo",
+    "short_name": "Mafefe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "220a Moaroge Street",
+    "code": 453515,
+    "latitude": -24.5625,
+    "location": "POINT (29.64407 -24.56255)",
+    "longitude": 29.64407,
+    "name": "lp Magalies Clinic",
+    "province": "Limpopo",
+    "short_name": "Magalies Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 844333,
+    "latitude": -24.9974,
+    "location": "POINT (29.81226 -24.99747)",
+    "longitude": 29.81226,
+    "name": "lp Magukubjane Clinic",
+    "province": "Limpopo",
+    "short_name": "Magukubjane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 211533,
+    "latitude": -22.9581,
+    "location": "POINT (30.56017 -22.95817)",
+    "longitude": 30.56017,
+    "name": "lp Magwedzha Clinic",
+    "province": "Limpopo",
+    "short_name": "Magwedzha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 113324,
+    "latitude": -23.6946,
+    "location": "POINT (30.96836 -23.69461)",
+    "longitude": 30.96836,
+    "name": "lp Mahale Clinic",
+    "province": "Limpopo",
+    "short_name": "Mahale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 248715,
+    "latitude": -24.6085,
+    "location": "POINT (30.297 -24.60853)",
+    "longitude": 30.297,
+    "name": "lp Mahubahube Clinic",
+    "province": "Limpopo",
+    "short_name": "Mahubahube Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 514742,
+    "latitude": -24.14,
+    "location": "POINT (28.98375 -24.14003)",
+    "longitude": 28.98375,
+    "name": "lp Mahwelereng Clinic",
+    "province": "Limpopo",
+    "short_name": "Mahwelereng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Zone B 120",
+    "code": 374351,
+    "latitude": -24.1398,
+    "location": "POINT (28.99181 -24.13981)",
+    "longitude": 28.99181,
+    "name": "lp Mahwelereng Zone 2 Clinic",
+    "province": "Limpopo",
+    "short_name": "Mahwelereng Zone 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 826415,
+    "latitude": -24.1829,
+    "location": "POINT (29.53705 -24.18297)",
+    "longitude": 29.53705,
+    "name": "lp Maja Clinic",
+    "province": "Limpopo",
+    "short_name": "Maja Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Makahlule Village",
+    "code": 378724,
+    "latitude": -22.8924,
+    "location": "POINT (30.91166 -22.89242)",
+    "longitude": 30.91166,
+    "name": "lp Makahlule Clinic",
+    "province": "Limpopo",
+    "short_name": "Makahlule Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 525451,
+    "latitude": -23.8981,
+    "location": "POINT (29.72392 -23.89819)",
+    "longitude": 29.72392,
+    "name": "lp Makanye Clinic",
+    "province": "Limpopo",
+    "short_name": "Makanye Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rathoke",
+    "code": 964724,
+    "latitude": -24.9303,
+    "location": "POINT (29.04581 -24.93037)",
+    "longitude": 29.04581,
+    "name": "lp Makeepsvlei Clinic",
+    "province": "Limpopo",
+    "short_name": "Makeepsvlei Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 847542,
+    "latitude": -23.5055,
+    "location": "POINT (29.66342 -23.50556)",
+    "longitude": 29.66342,
+    "name": "lp Makgato Clinic",
+    "province": "Limpopo",
+    "short_name": "Makgato Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 845533,
+    "latitude": -23.862,
+    "location": "POINT (28.767029 -23.862074)",
+    "longitude": 28.767029,
+    "name": "lp Makgobe Clinic",
+    "province": "Limpopo",
+    "short_name": "Makgobe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mokgope",
+    "code": 733206,
+    "latitude": -23.6177,
+    "location": "POINT (30.4689 -23.61777)",
+    "longitude": 30.4689,
+    "name": "lp Makgope Clinic",
+    "province": "Limpopo",
+    "short_name": "Makgope Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 263906,
+    "latitude": -22.9008,
+    "location": "POINT (30.03442 -22.90081)",
+    "longitude": 30.03442,
+    "name": "lp Makhado CHC",
+    "province": "Limpopo",
+    "short_name": "Makhado CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 461515,
+    "latitude": -23.9657,
+    "location": "POINT (31.04428 -23.96572)",
+    "longitude": 31.04428,
+    "name": "lp Makhushane Clinic",
+    "province": "Limpopo",
+    "short_name": "Makhushane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 415851,
+    "latitude": -23.5821,
+    "location": "POINT (30.96467 -23.58217)",
+    "longitude": 30.96467,
+    "name": "lp Makhuva Clinic",
+    "province": "Limpopo",
+    "short_name": "Makhuva Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Makonde Tshiungani",
+    "code": 411642,
+    "latitude": -22.807,
+    "location": "POINT (30.56806 -22.80706)",
+    "longitude": 30.56806,
+    "name": "lp Makonde Clinic",
+    "province": "Limpopo",
+    "short_name": "Makonde Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 617406,
+    "latitude": -23.8181,
+    "location": "POINT (29.64375 -23.81811)",
+    "longitude": 29.64375,
+    "name": "lp Makotopong Clinic",
+    "province": "Limpopo",
+    "short_name": "Makotopong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chiefs Kraal Road",
+    "code": 921242,
+    "latitude": -22.8652,
+    "location": "POINT (30.91454 -22.86522)",
+    "longitude": 30.91454,
+    "name": "lp Makuleke Clinic",
+    "province": "Limpopo",
+    "short_name": "Makuleke Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Xitlhelani Village",
+    "code": 474315,
+    "latitude": -23.0133,
+    "location": "POINT (30.70144 -23.0133)",
+    "longitude": 30.70144,
+    "name": "lp Malamulele Clinic",
+    "province": "Limpopo",
+    "short_name": "Malamulele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 711615,
+    "latitude": -24.3852,
+    "location": "POINT (29.63833 -24.38525)",
+    "longitude": 29.63833,
+    "name": "lp Malemati Clinic",
+    "province": "Limpopo",
+    "short_name": "Malemati Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 548724,
+    "latitude": -23.3511,
+    "location": "POINT (30.24269 -23.35114)",
+    "longitude": 30.24269,
+    "name": "lp Mamaila Clinic",
+    "province": "Limpopo",
+    "short_name": "Mamaila Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 991515,
+    "latitude": -24.0062,
+    "location": "POINT (28.87253 -24.0062)",
+    "longitude": 28.87253,
+    "name": "lp Mamaselela Clinic",
+    "province": "Limpopo",
+    "short_name": "Mamaselela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 580533,
+    "latitude": -23.7319,
+    "location": "POINT (30.40944 -23.73194)",
+    "longitude": 30.40944,
+    "name": "lp Mamitwa Clinic",
+    "province": "Limpopo",
+    "short_name": "Mamitwa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 883042,
+    "latitude": -24.711,
+    "location": "POINT (29.803 -24.711)",
+    "longitude": 29.803,
+    "name": "lp Mamone Clinic",
+    "province": "Limpopo",
+    "short_name": "Mamone Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Moropo Section, Gamalahlela",
+    "code": 675960,
+    "latitude": -23.8517,
+    "location": "POINT (29.80589 -23.85175)",
+    "longitude": 29.80589,
+    "name": "lp Mamotshwa Clinic",
+    "province": "Limpopo",
+    "short_name": "Mamotshwa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 347751,
+    "latitude": -24.0595,
+    "location": "POINT (29.69539 -24.05951)",
+    "longitude": 29.69539,
+    "name": "lp Mamushi Clinic",
+    "province": "Limpopo",
+    "short_name": "Mamushi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 518824,
+    "latitude": -23.7028,
+    "location": "POINT (29.22935 -23.70284)",
+    "longitude": 29.22935,
+    "name": "lp Manamela Clinic",
+    "province": "Limpopo",
+    "short_name": "Manamela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Manavhela",
+    "code": 575051,
+    "latitude": -23.1003,
+    "location": "POINT (30.45217 -23.10033)",
+    "longitude": 30.45217,
+    "name": "lp Manavhela Clinic",
+    "province": "Limpopo",
+    "short_name": "Manavhela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 777424,
+    "latitude": -22.4693,
+    "location": "POINT (30.68103 -22.46932)",
+    "longitude": 30.68103,
+    "name": "lp Manenzhe Clinic",
+    "province": "Limpopo",
+    "short_name": "Manenzhe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 534524,
+    "latitude": -24.6699,
+    "location": "POINT (29.96914 -24.66998)",
+    "longitude": 29.96914,
+    "name": "lp Manganeng Clinic",
+    "province": "Limpopo",
+    "short_name": "Manganeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Apel",
+    "code": 287324,
+    "latitude": -24.4149,
+    "location": "POINT (29.74728 -24.41492)",
+    "longitude": 29.74728,
+    "name": "lp Mankotsane Clinic",
+    "province": "Limpopo",
+    "short_name": "Mankotsane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 561351,
+    "latitude": -23.4678,
+    "location": "POINT (28.55959 -23.4678)",
+    "longitude": 28.55959,
+    "name": "lp Mankuwe Clinic",
+    "province": "Limpopo",
+    "short_name": "Mankuwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kalafong Street",
+    "code": 452824,
+    "latitude": -23.8919,
+    "location": "POINT (29.72422 -23.89196)",
+    "longitude": 29.72422,
+    "name": "lp Mankweng Clinic",
+    "province": "Limpopo",
+    "short_name": "Mankweng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 812615,
+    "latitude": -23.877,
+    "location": "POINT (29.72603 -23.877)",
+    "longitude": 29.72603,
+    "name": "lp Mankweng Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Mankweng Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mayima Main Road",
+    "code": 266206,
+    "latitude": -23.2763,
+    "location": "POINT (30.01833 -23.27639)",
+    "longitude": 30.01833,
+    "name": "lp Manyima Clinic",
+    "province": "Limpopo",
+    "short_name": "Manyima Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mapayeni Village",
+    "code": 586360,
+    "latitude": -23.3491,
+    "location": "POINT (30.81833 -23.34911)",
+    "longitude": 30.81833,
+    "name": "lp Mapayeni Clinic",
+    "province": "Limpopo",
+    "short_name": "Mapayeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mapela Clinic",
+    "code": 200733,
+    "latitude": -23.9557,
+    "location": "POINT (28.84756 -23.95575)",
+    "longitude": 28.84756,
+    "name": "lp Mapela Clinic",
+    "province": "Limpopo",
+    "short_name": "Mapela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 541715,
+    "latitude": -23.4684,
+    "location": "POINT (30.31203 -23.46842)",
+    "longitude": 30.31203,
+    "name": "lp Maphalle Clinic",
+    "province": "Limpopo",
+    "short_name": "Maphalle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Rakopi Primary School",
+    "code": 543233,
+    "latitude": -23.8883,
+    "location": "POINT (29.87444 -23.88833)",
+    "longitude": 29.87444,
+    "name": "lp Mapodu Clinic",
+    "province": "Limpopo",
+    "short_name": "Mapodu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 463542,
+    "latitude": -23.7864,
+    "location": "POINT (29.17183 -23.78644)",
+    "longitude": 29.17183,
+    "name": "lp Maraba Clinic",
+    "province": "Limpopo",
+    "short_name": "Maraba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 610342,
+    "latitude": -23.6565,
+    "location": "POINT (27.622131 -23.656508)",
+    "longitude": 27.622131,
+    "name": "lp Marapong CHC",
+    "province": "Limpopo",
+    "short_name": "Marapong CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "856 Tlou Street, Marapong Ext 1",
+    "code": 811833,
+    "latitude": -23.6585,
+    "location": "POINT (27.62908 -23.65853)",
+    "longitude": 27.62908,
+    "name": "lp Marapong Clinic",
+    "province": "Limpopo",
+    "short_name": "Marapong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Japonica Street, 823/824",
+    "code": 744924,
+    "latitude": -24.9666,
+    "location": "POINT (29.29493 -24.96662)",
+    "longitude": 29.29493,
+    "name": "lp Marble Hall Clinic",
+    "province": "Limpopo",
+    "short_name": "Marble Hall Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 783333,
+    "latitude": -24.7274,
+    "location": "POINT (29.74683 -24.72744)",
+    "longitude": 29.74683,
+    "name": "lp Marishane Clinic",
+    "province": "Limpopo",
+    "short_name": "Marishane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 863215,
+    "latitude": -23.8875,
+    "location": "POINT (30.34878 -23.88753)",
+    "longitude": 30.34878,
+    "name": "lp Mariveni Clinic",
+    "province": "Limpopo",
+    "short_name": "Mariveni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Majosi Along Elim Tar Road",
+    "code": 228451,
+    "latitude": -23.222,
+    "location": "POINT (30.33668 -23.22203)",
+    "longitude": 30.33668,
+    "name": "lp Marseilles Clinic",
+    "province": "Limpopo",
+    "short_name": "Marseilles Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 212142,
+    "latitude": -24.6735,
+    "location": "POINT (29.89997 -24.67355)",
+    "longitude": 29.89997,
+    "name": "lp Marulaneng Clinic (Makhuduthamaga)",
+    "province": "Limpopo",
+    "short_name": "Marulaneng Clinic (Makhu)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 116051,
+    "latitude": -24.832,
+    "location": "POINT (29.50342 -24.83206)",
+    "longitude": 29.50342,
+    "name": "lp Marulaneng Clinic (Marble Hall)",
+    "province": "Limpopo",
+    "short_name": "Marulaneng Clinic (Marbl)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Masakona Village",
+    "code": 375624,
+    "latitude": -23.2735,
+    "location": "POINT (30.24417 -23.27358)",
+    "longitude": 30.24417,
+    "name": "lp Masakona Clinic",
+    "province": "Limpopo",
+    "short_name": "Masakona Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 887033,
+    "latitude": -24.9225,
+    "location": "POINT (29.9655 -24.9225)",
+    "longitude": 29.9655,
+    "name": "lp Maseven Clinic",
+    "province": "Limpopo",
+    "short_name": "Maseven Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 459351,
+    "latitude": -24.4386,
+    "location": "POINT (30.00483 -24.43869)",
+    "longitude": 30.00483,
+    "name": "lp Mashabela Clinic",
+    "province": "Limpopo",
+    "short_name": "Mashabela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Along Mashamba Mufeba Road",
+    "code": 642124,
+    "latitude": -23.2356,
+    "location": "POINT (30.15333 -23.23567)",
+    "longitude": 30.15333,
+    "name": "lp Mashamba Clinic",
+    "province": "Limpopo",
+    "short_name": "Mashamba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 562733,
+    "latitude": -23.93,
+    "location": "POINT (29.13306 -23.93)",
+    "longitude": 29.13306,
+    "name": "lp Mashashane Clinic",
+    "province": "Limpopo",
+    "short_name": "Mashashane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 374433,
+    "latitude": -23.86,
+    "location": "POINT (31.03 -23.86)",
+    "longitude": 31.03,
+    "name": "lp Mashishimale Clinic",
+    "province": "Limpopo",
+    "short_name": "Mashishimale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 531242,
+    "latitude": -24.3116,
+    "location": "POINT (29.69467 -24.31167)",
+    "longitude": 29.69467,
+    "name": "lp Mashite Clinic",
+    "province": "Limpopo",
+    "short_name": "Mashite Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 600233,
+    "latitude": -22.422,
+    "location": "POINT (30.86179 -22.42203)",
+    "longitude": 30.86179,
+    "name": "lp Masisi Clinic",
+    "province": "Limpopo",
+    "short_name": "Masisi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 707533,
+    "latitude": -24.2056,
+    "location": "POINT (29.87133 -24.20567)",
+    "longitude": 29.87133,
+    "name": "lp Mathabatha Clinic",
+    "province": "Limpopo",
+    "short_name": "Mathabatha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 753851,
+    "latitude": -22.746,
+    "location": "POINT (30.97781 -22.74606)",
+    "longitude": 30.97781,
+    "name": "lp Matiyani Clinic",
+    "province": "Limpopo",
+    "short_name": "Matiyani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 438106,
+    "latitude": -23.7463,
+    "location": "POINT (29.05611 -23.74639)",
+    "longitude": 29.05611,
+    "name": "lp Matlala Clinic (Aganang)",
+    "province": "Limpopo",
+    "short_name": "Matlala Clinic (Aga)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19775 Ga-Ragwadi, Marble Hall",
+    "code": 475251,
+    "latitude": -24.8848,
+    "location": "POINT (29.55417 -24.88483)",
+    "longitude": 29.55417,
+    "name": "lp Matlala Clinic (Marble Hall)",
+    "province": "Limpopo",
+    "short_name": "Matlala Clinic (MH)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 690460,
+    "latitude": -24.8848,
+    "location": "POINT (29.55417 -24.88483)",
+    "longitude": 29.55417,
+    "name": "lp Matlala Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Matlala Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 602824,
+    "latitude": -23.4778,
+    "location": "POINT (29.71385 -23.47785)",
+    "longitude": 29.71385,
+    "name": "lp Matoks Clinic",
+    "province": "Limpopo",
+    "short_name": "Matoks Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mattsa Village Next To Liphaka Primary School",
+    "code": 576624,
+    "latitude": -22.8741,
+    "location": "POINT (29.99683 -22.87417)",
+    "longitude": 29.99683,
+    "name": "lp Matsa Clinic",
+    "province": "Limpopo",
+    "short_name": "Matsa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 681233,
+    "latitude": -25.0233,
+    "location": "POINT (29.49703 -25.02339)",
+    "longitude": 29.49703,
+    "name": "lp Matsepe Clinic",
+    "province": "Limpopo",
+    "short_name": "Matsepe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 251424,
+    "latitude": -23.6043,
+    "location": "POINT (30.836462 -23.604366)",
+    "longitude": 30.836462,
+    "name": "lp Matsotsosela Clinic",
+    "province": "Limpopo",
+    "short_name": "Matsotsosela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 321715,
+    "latitude": -23.5858,
+    "location": "POINT (30.35767 -23.58583)",
+    "longitude": 30.35767,
+    "name": "lp Matswi Clinic",
+    "province": "Limpopo",
+    "short_name": "Matswi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 642406,
+    "latitude": -23.0036,
+    "location": "POINT (30.64894 -23.00367)",
+    "longitude": 30.64894,
+    "name": "lp Mavambe Clinic",
+    "province": "Limpopo",
+    "short_name": "Mavambe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 300560,
+    "latitude": -23.6254,
+    "location": "POINT (30.5337 -23.62547)",
+    "longitude": 30.5337,
+    "name": "lp Mawa Clinic",
+    "province": "Limpopo",
+    "short_name": "Mawa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mbilwi",
+    "code": 913833,
+    "latitude": -22.9292,
+    "location": "POINT (30.46897 -22.92922)",
+    "longitude": 30.46897,
+    "name": "lp Mbilwi Clinic",
+    "province": "Limpopo",
+    "short_name": "Mbilwi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1180, Mbokota Village",
+    "code": 629624,
+    "latitude": -23.2001,
+    "location": "POINT (30.09879 -23.20013)",
+    "longitude": 30.09879,
+    "name": "lp Mbokota Clinic",
+    "province": "Limpopo",
+    "short_name": "Mbokota Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 547315,
+    "latitude": -24.3861,
+    "location": "POINT (30.07487 -24.38612)",
+    "longitude": 30.07487,
+    "name": "lp Mecklenburg Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Mecklenburg Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 687324,
+    "latitude": -23.6413,
+    "location": "POINT (30.2415 -23.64136)",
+    "longitude": 30.2415,
+    "name": "lp Meedingen Clinic",
+    "province": "Limpopo",
+    "short_name": "Meedingen Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 507651,
+    "latitude": -22.7938,
+    "location": "POINT (30.90321 -22.79386)",
+    "longitude": 30.90321,
+    "name": "lp Mhinga Clinic",
+    "province": "Limpopo",
+    "short_name": "Mhinga Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 166215,
+    "latitude": -23.2109,
+    "location": "POINT (30.85978 -23.21097)",
+    "longitude": 30.85978,
+    "name": "lp Mhlava Willem Clinic",
+    "province": "Limpopo",
+    "short_name": "Mhlava Willem Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sekhupubje Next To Makele School",
+    "code": 521133,
+    "latitude": -23.4153,
+    "location": "POINT (30.20564 -23.41531)",
+    "longitude": 30.20564,
+    "name": "lp Middelwater Clinic",
+    "province": "Limpopo",
+    "short_name": "Middelwater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 362824,
+    "latitude": -24.9223,
+    "location": "POINT (29.62081 -24.92231)",
+    "longitude": 29.62081,
+    "name": "lp Mmotoaneng Clinic",
+    "province": "Limpopo",
+    "short_name": "Mmotoaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sekhuting",
+    "code": 671742,
+    "latitude": -23.6226,
+    "location": "POINT (30.32614 -23.62267)",
+    "longitude": 30.32614,
+    "name": "lp Modjadji 5 Clinic",
+    "province": "Limpopo",
+    "short_name": "Modjadji 5 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "823, Leeufontein",
+    "code": 635533,
+    "latitude": -24.9963,
+    "location": "POINT (29.40283 -24.99633)",
+    "longitude": 29.40283,
+    "name": "lp Moganyaka Clinic",
+    "province": "Limpopo",
+    "short_name": "Moganyaka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 883860,
+    "latitude": -24.0711,
+    "location": "POINT (30.28658 -24.07119)",
+    "longitude": 30.28658,
+    "name": "lp Mogapeng Clinic",
+    "province": "Limpopo",
+    "short_name": "Mogapeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thabina Trust",
+    "code": 268442,
+    "latitude": -24.0144,
+    "location": "POINT (30.19728 -24.01444)",
+    "longitude": 30.19728,
+    "name": "lp Mogoboya Clinic",
+    "province": "Limpopo",
+    "short_name": "Mogoboya Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 662124,
+    "latitude": -24.3483,
+    "location": "POINT (29.26489 -24.34836)",
+    "longitude": 29.26489,
+    "name": "lp Mogoto Clinic",
+    "province": "Limpopo",
+    "short_name": "Mogoto Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malaeneny Next Cross Road",
+    "code": 116133,
+    "latitude": -24.4716,
+    "location": "POINT (29.8844 -24.47162)",
+    "longitude": 29.8844,
+    "name": "lp Mohlaletse Clinic",
+    "province": "Limpopo",
+    "short_name": "Mohlaletse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 817742,
+    "latitude": -23.3275,
+    "location": "POINT (29.23472 -23.32758)",
+    "longitude": 29.23472,
+    "name": "lp Mohodi Clinic",
+    "province": "Limpopo",
+    "short_name": "Mohodi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street",
+    "code": 484906,
+    "latitude": -23.9756,
+    "location": "POINT (30.24553 -23.97567)",
+    "longitude": 30.24553,
+    "name": "lp Moime Clinic",
+    "province": "Limpopo",
+    "short_name": "Moime Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 629242,
+    "latitude": -23.9627,
+    "location": "POINT (28.61325 -23.96275)",
+    "longitude": 28.61325,
+    "name": "lp Mokamole Clinic",
+    "province": "Limpopo",
+    "short_name": "Mokamole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 220915,
+    "latitude": -23.584600000000002,
+    "location": "POINT (30.58287 -23.58461)",
+    "longitude": 30.58287,
+    "name": "lp Mokgwathi Clinic",
+    "province": "Limpopo",
+    "short_name": "Mokgwathi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 322624,
+    "latitude": -24.1553,
+    "location": "POINT (28.989183 -24.155343)",
+    "longitude": 28.989183,
+    "name": "lp Mokopane Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Mokopane Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 622233,
+    "latitude": -24.0357,
+    "location": "POINT (29.74108 -24.03576)",
+    "longitude": 29.74108,
+    "name": "lp Molepo Clinic",
+    "province": "Limpopo",
+    "short_name": "Molepo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Moletji Moshate",
+    "code": 994015,
+    "latitude": -23.7376,
+    "location": "POINT (29.30262 -23.73769)",
+    "longitude": 29.30262,
+    "name": "lp Moletjie Clinic",
+    "province": "Limpopo",
+    "short_name": "Moletjie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 273133,
+    "latitude": -24.363,
+    "location": "POINT (29.33569 -24.36306)",
+    "longitude": 29.33569,
+    "name": "lp Moletlane Clinic",
+    "province": "Limpopo",
+    "short_name": "Moletlane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Montz Village",
+    "code": 488824,
+    "latitude": -23.3261,
+    "location": "POINT (28.69103 -23.32614)",
+    "longitude": 28.69103,
+    "name": "lp Montz Clinic",
+    "province": "Limpopo",
+    "short_name": "Montz Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thabo Mbeki Street",
+    "code": 904806,
+    "latitude": -24.5247,
+    "location": "POINT (28.70833 -24.52475)",
+    "longitude": 28.70833,
+    "name": "lp Mookgophong CHC",
+    "province": "Limpopo",
+    "short_name": "Mookgophong CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "446 Kutumela Street",
+    "code": 407151,
+    "latitude": -24.5192,
+    "location": "POINT (28.72191 -24.51925)",
+    "longitude": 28.72191,
+    "name": "lp Mookgophong Clinic",
+    "province": "Limpopo",
+    "short_name": "Mookgophong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 0800, Morapalala Village",
+    "code": 660624,
+    "latitude": -23.6031,
+    "location": "POINT (30.41778 -23.60319)",
+    "longitude": 30.41778,
+    "name": "lp Morapalala Clinic",
+    "province": "Limpopo",
+    "short_name": "Morapalala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 254860,
+    "latitude": -24.3937,
+    "location": "POINT (29.53594 -24.39378)",
+    "longitude": 29.53594,
+    "name": "lp Morotse-Thamagane Clinic",
+    "province": "Limpopo",
+    "short_name": "Morotse-Thamagane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mavela Road",
+    "code": 588415,
+    "latitude": -23.6702,
+    "location": "POINT (30.36711 -23.67025)",
+    "longitude": 30.36711,
+    "name": "lp Morutji Clinic",
+    "province": "Limpopo",
+    "short_name": "Morutji Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Madiba Street",
+    "code": 847251,
+    "latitude": -24.0826,
+    "location": "POINT (28.92952 -24.08268)",
+    "longitude": 28.92952,
+    "name": "lp Mosesetjane Clinic",
+    "province": "Limpopo",
+    "short_name": "Mosesetjana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To Police Station",
+    "code": 177451,
+    "latitude": -25.0975,
+    "location": "POINT (29.46081 -25.09756)",
+    "longitude": 29.46081,
+    "name": "lp Motetema Clinic",
+    "province": "Limpopo",
+    "short_name": "Motetema Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 727815,
+    "latitude": -24.5093,
+    "location": "POINT (30.17469 -24.50936)",
+    "longitude": 30.17469,
+    "name": "lp Motlolo Clinic",
+    "province": "Limpopo",
+    "short_name": "Motlolo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 278342,
+    "latitude": -24.2836,
+    "location": "POINT (29.85747 -24.28361)",
+    "longitude": 29.85747,
+    "name": "lp Motsepe Clinic",
+    "province": "Limpopo",
+    "short_name": "Motsepe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 180333,
+    "latitude": -24.48,
+    "location": "POINT (30.30858 -24.48005)",
+    "longitude": 30.30858,
+    "name": "lp Motshana Clinic",
+    "province": "Limpopo",
+    "short_name": "Motshana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 536533,
+    "latitude": -23.6822,
+    "location": "POINT (30.29767 -23.68228)",
+    "longitude": 30.29767,
+    "name": "lp Motupa Clinic",
+    "province": "Limpopo",
+    "short_name": "Motupa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 246224,
+    "latitude": -25.1512,
+    "location": "POINT (29.10517 -25.15122)",
+    "longitude": 29.10517,
+    "name": "lp Moutse East Clinic",
+    "province": "Limpopo",
+    "short_name": "Moutse East Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 410142,
+    "latitude": -24.9648,
+    "location": "POINT (29.00309 -24.96483)",
+    "longitude": 29.00309,
+    "name": "lp Moutse West Clinic",
+    "province": "Limpopo",
+    "short_name": "Moutse West Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 923033,
+    "latitude": -24.3078,
+    "location": "POINT (29.63867 -24.30781)",
+    "longitude": 29.63867,
+    "name": "lp Mphahlele Clinic",
+    "province": "Limpopo",
+    "short_name": "Mphahlele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 735806,
+    "latitude": -23.084,
+    "location": "POINT (30.67062 -23.08405)",
+    "longitude": 30.67062,
+    "name": "lp Mphambo CHC",
+    "province": "Limpopo",
+    "short_name": "Mphambo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 255242,
+    "latitude": -23.1373,
+    "location": "POINT (30.07164 -23.13732)",
+    "longitude": 30.07164,
+    "name": "lp Mpheni Clinic",
+    "province": "Limpopo",
+    "short_name": "Mpheni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vhutuwangadzebu",
+    "code": 707333,
+    "latitude": -22.8748,
+    "location": "POINT (30.13825 -22.87481)",
+    "longitude": 30.13825,
+    "name": "lp Mphephu Clinic",
+    "province": "Limpopo",
+    "short_name": "Mphephu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mtititi Plange",
+    "code": 771524,
+    "latitude": -23.1016,
+    "location": "POINT (30.898 -23.10169)",
+    "longitude": 30.898,
+    "name": "lp Mtititi Clinic",
+    "province": "Limpopo",
+    "short_name": "Mtititi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mudimeli",
+    "code": 334106,
+    "latitude": -22.7983,
+    "location": "POINT (29.95647 -22.79836)",
+    "longitude": 29.95647,
+    "name": "lp Mudimeli Clinic",
+    "province": "Limpopo",
+    "short_name": "Mudimeli Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 817124,
+    "latitude": -23.931,
+    "location": "POINT (30.28911 -23.93103)",
+    "longitude": 30.28911,
+    "name": "lp Muhlaba Clinic",
+    "province": "Limpopo",
+    "short_name": "Muhlaba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Muila Village",
+    "code": 643751,
+    "latitude": -23.3666,
+    "location": "POINT (29.97922 -23.36661)",
+    "longitude": 29.97922,
+    "name": "lp Muila Clinic",
+    "province": "Limpopo",
+    "short_name": "Muila Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mukhoni",
+    "code": 678842,
+    "latitude": -23.0721,
+    "location": "POINT (30.56108 -23.07214)",
+    "longitude": 30.56108,
+    "name": "lp Mukhomi Clinic",
+    "province": "Limpopo",
+    "short_name": "Mukhomi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 530415,
+    "latitude": -22.8583,
+    "location": "POINT (30.58778 -22.85833)",
+    "longitude": 30.58778,
+    "name": "lp Mukula Clinic",
+    "province": "Limpopo",
+    "short_name": "Mukula Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 848542,
+    "latitude": -22.476,
+    "location": "POINT (30.87717 -22.476)",
+    "longitude": 30.87717,
+    "name": "lp Mulala Clinic",
+    "province": "Limpopo",
+    "short_name": "Mulala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Block J",
+    "code": 924060,
+    "latitude": -22.9923,
+    "location": "POINT (30.45733 -22.99233)",
+    "longitude": 30.45733,
+    "name": "lp Muledane Clinic",
+    "province": "Limpopo",
+    "short_name": "Muledane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 796615,
+    "latitude": -22.9965,
+    "location": "POINT (30.52383 -22.9965)",
+    "longitude": 30.52383,
+    "name": "lp Mulenzhe Clinic",
+    "province": "Limpopo",
+    "short_name": "Mulenzhe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 766542,
+    "latitude": -22.9168,
+    "location": "POINT (30.37158 -22.91689)",
+    "longitude": 30.37158,
+    "name": "lp Murangoni Clinic",
+    "province": "Limpopo",
+    "short_name": "Murangoni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 765515,
+    "latitude": -23.3958,
+    "location": "POINT (29.2046 -23.39586)",
+    "longitude": 29.2046,
+    "name": "lp Mushubaba Clinic",
+    "province": "Limpopo",
+    "short_name": "Mushubaba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 572342,
+    "latitude": -22.3435,
+    "location": "POINT (30.04502 -22.34356)",
+    "longitude": 30.04502,
+    "name": "lp Musina Clinic",
+    "province": "Limpopo",
+    "short_name": "Musina Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 236533,
+    "latitude": -22.7366,
+    "location": "POINT (30.52111 -22.73664)",
+    "longitude": 30.52111,
+    "name": "lp Mutale CHC",
+    "province": "Limpopo",
+    "short_name": "Mutale CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Muwaweni Village",
+    "code": 815751,
+    "latitude": -23.3171,
+    "location": "POINT (30.11567 -23.31717)",
+    "longitude": 30.11567,
+    "name": "lp Muwaweni Clinic",
+    "province": "Limpopo",
+    "short_name": "Muwaweni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Muyexe Village",
+    "code": 217151,
+    "latitude": -23.1942,
+    "location": "POINT (30.91691 -23.19424)",
+    "longitude": 30.91691,
+    "name": "lp Muyexe Clinic",
+    "province": "Limpopo",
+    "short_name": "Muyexe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "My Darling Village",
+    "code": 370515,
+    "latitude": -23.0831,
+    "location": "POINT (28.79856 -23.08314)",
+    "longitude": 28.79856,
+    "name": "lp My Darling Clinic",
+    "province": "Limpopo",
+    "short_name": "My Darling Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 6, Mapankowa Village",
+    "code": 843806,
+    "latitude": -24.557,
+    "location": "POINT (30.34906 -24.557)",
+    "longitude": 30.34906,
+    "name": "lp Naboomkoppies Clinic",
+    "province": "Limpopo",
+    "short_name": "Naboomkoppies Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "772 Rivonia Road",
+    "code": 986960,
+    "latitude": -23.9406,
+    "location": "POINT (31.04083 -23.94067)",
+    "longitude": 31.04083,
+    "name": "lp Namakgale A Clinic",
+    "province": "Limpopo",
+    "short_name": "Namakgale A Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1342 Zone C",
+    "code": 485660,
+    "latitude": -23.9283,
+    "location": "POINT (31.0165 -23.92833)",
+    "longitude": 31.0165,
+    "name": "lp Namakgale B Clinic",
+    "province": "Limpopo",
+    "short_name": "Namakgale B Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ralph Small Street",
+    "code": 382406,
+    "latitude": -22.3314,
+    "location": "POINT (30.03383 -22.33148)",
+    "longitude": 30.03383,
+    "name": "lp Nancefield Clinic",
+    "province": "Limpopo",
+    "short_name": "Nancefield Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 678451,
+    "latitude": -24.44,
+    "location": "POINT (29.80071 -24.44005)",
+    "longitude": 29.80071,
+    "name": "lp Nchabeleng CHC",
+    "province": "Limpopo",
+    "short_name": "Nchabeleng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 263842,
+    "latitude": -23.3161,
+    "location": "POINT (30.40608 -23.31611)",
+    "longitude": 30.40608,
+    "name": "lp Ndengeza Clinic",
+    "province": "Limpopo",
+    "short_name": "Ndengeza Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Nkovani Main Road",
+    "code": 656215,
+    "latitude": -22.9109,
+    "location": "POINT (30.80759 -22.91097)",
+    "longitude": 30.80759,
+    "name": "lp Nghezimani Clinic",
+    "province": "Limpopo",
+    "short_name": "Nghezimani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Garantho Village, Ngoabe",
+    "code": 336342,
+    "latitude": -24.8764,
+    "location": "POINT (29.97694 -24.87647)",
+    "longitude": 29.97694,
+    "name": "lp Ngoabe Clinic",
+    "province": "Limpopo",
+    "short_name": "Ngoabe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ngove Village",
+    "code": 357751,
+    "latitude": -23.3615,
+    "location": "POINT (30.7215 -23.3615)",
+    "longitude": 30.7215,
+    "name": "lp Ngobe Clinic",
+    "province": "Limpopo",
+    "short_name": "Ngobe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 861851,
+    "latitude": -23.3125,
+    "location": "POINT (30.69215 -23.3125)",
+    "longitude": 30.69215,
+    "name": "lp Nkhensani Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Nkhensani Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 516724,
+    "latitude": -24.4078,
+    "location": "POINT (29.78525 -24.40783)",
+    "longitude": 29.78525,
+    "name": "lp Nkoana Clinic",
+    "province": "Limpopo",
+    "short_name": "Nkoana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 899251,
+    "latitude": -23.4174,
+    "location": "POINT (30.77789 -23.41747)",
+    "longitude": 30.77789,
+    "name": "lp Nkomo B Clinic",
+    "province": "Limpopo",
+    "short_name": "Nkomo B Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bankuna",
+    "code": 352515,
+    "latitude": -23.8867,
+    "location": "POINT (30.29304 -23.8867)",
+    "longitude": 30.29304,
+    "name": "lp Nkowankowa CHC",
+    "province": "Limpopo",
+    "short_name": "Nkowankowa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 421342,
+    "latitude": -23.2133,
+    "location": "POINT (30.55439 -23.21333)",
+    "longitude": 30.55439,
+    "name": "lp Nkuri Clinic",
+    "province": "Limpopo",
+    "short_name": "Nkuri Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 632560,
+    "latitude": -23.89,
+    "location": "POINT (29.66753 -23.89003)",
+    "longitude": 29.66753,
+    "name": "lp Nobody Clinic",
+    "province": "Limpopo",
+    "short_name": "Nobody Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "268 Botha Street, Northam",
+    "code": 522651,
+    "latitude": -24.9526,
+    "location": "POINT (27.26433 -24.95264)",
+    "longitude": 27.26433,
+    "name": "lp Northam Clinic",
+    "province": "Limpopo",
+    "short_name": "Northam Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 801315,
+    "latitude": -23.4845,
+    "location": "POINT (29.9128 -23.48459)",
+    "longitude": 29.9128,
+    "name": "lp Nthabalala Clinic",
+    "province": "Limpopo",
+    "short_name": "Nthabalala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 443115,
+    "latitude": -23.4814,
+    "location": "POINT (29.914801 -23.481484)",
+    "longitude": 29.914801,
+    "name": "lp Nthabiseng Clinic",
+    "province": "Limpopo",
+    "short_name": "Nthabiseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Private Bag X9245",
+    "code": 694542,
+    "latitude": -22.8692,
+    "location": "POINT (30.88506 -22.86925)",
+    "longitude": 30.88506,
+    "name": "lp Ntlhaveni D Clinic",
+    "province": "Limpopo",
+    "short_name": "Ntlhaveni D Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street Road",
+    "code": 147160,
+    "latitude": -23.0201,
+    "location": "POINT (30.88375 -23.02011)",
+    "longitude": 30.88375,
+    "name": "lp Ntlhaveni E Clinic",
+    "province": "Limpopo",
+    "short_name": "Ntlhaveni E Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 159951,
+    "latitude": -23.4127,
+    "location": "POINT (30.33591 -23.41279)",
+    "longitude": 30.33591,
+    "name": "lp Ntluri Clinic",
+    "province": "Limpopo",
+    "short_name": "Ntluri Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 889824,
+    "latitude": -23.6558,
+    "location": "POINT (30.47828 -23.65586)",
+    "longitude": 30.47828,
+    "name": "lp Nyavana Clinic",
+    "province": "Limpopo",
+    "short_name": "Nyavana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "57 Kerk Street, Modimolle",
+    "code": 771151,
+    "latitude": -24.7036,
+    "location": "POINT (28.40659 -24.70366)",
+    "longitude": 28.40659,
+    "name": "lp Nylstroom LA Clinic",
+    "province": "Limpopo",
+    "short_name": "Nylstroom LA Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chief Khamanyani Olifantshoek Village",
+    "code": 866533,
+    "latitude": -23.334600000000002,
+    "location": "POINT (30.27503 -23.33464)",
+    "longitude": 30.27503,
+    "name": "lp Olifantshoek Clinic",
+    "province": "Limpopo",
+    "short_name": "Olifantshoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 277551,
+    "latitude": -24.305,
+    "location": "POINT (29.47997 -24.30508)",
+    "longitude": 29.47997,
+    "name": "lp Parliament Clinic",
+    "province": "Limpopo",
+    "short_name": "Parliament Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Paulos Village",
+    "code": 787642,
+    "latitude": -23.7533,
+    "location": "POINT (28.65953 -23.75333)",
+    "longitude": 28.65953,
+    "name": "lp Paulos Clinic",
+    "province": "Limpopo",
+    "short_name": "Paulos Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 421233,
+    "latitude": -24.4521,
+    "location": "POINT (29.73633 -24.45217)",
+    "longitude": 29.73633,
+    "name": "lp Paulus Masha Clinic",
+    "province": "Limpopo",
+    "short_name": "Paulus Masha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 587315,
+    "latitude": -23.4808,
+    "location": "POINT (29.18611 -23.48083)",
+    "longitude": 29.18611,
+    "name": "lp Persie Clinic",
+    "province": "Limpopo",
+    "short_name": "Persie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 389833,
+    "latitude": -23.8011,
+    "location": "POINT (29.35833 -23.80111)",
+    "longitude": 29.35833,
+    "name": "lp Perskebult Clinic",
+    "province": "Limpopo",
+    "short_name": "Perskebult Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ngovhela-Phiphidi",
+    "code": 786251,
+    "latitude": -22.9527,
+    "location": "POINT (30.42953 -22.95272)",
+    "longitude": 30.42953,
+    "name": "lp Pfanani Clinic",
+    "province": "Limpopo",
+    "short_name": "Pfanani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 766933,
+    "latitude": -24.58,
+    "location": "POINT (29.85 -24.58)",
+    "longitude": 29.85,
+    "name": "lp Phaahlamanoge Clinic",
+    "province": "Limpopo",
+    "short_name": "Phaahlamanoge Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Witvlao Road",
+    "code": 288224,
+    "latitude": -22.9471,
+    "location": "POINT (30.18947 -22.94711)",
+    "longitude": 30.18947,
+    "name": "lp Phadzima Clinic",
+    "province": "Limpopo",
+    "short_name": "Phadzima Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3862 Molekwa Street",
+    "code": 127506,
+    "latitude": -24.6937,
+    "location": "POINT (28.44295 -24.69372)",
+    "longitude": 28.44295,
+    "name": "lp Phagameng Clinic",
+    "province": "Limpopo",
+    "short_name": "Phagameng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Tambotie Street",
+    "code": 673142,
+    "latitude": -23.9488,
+    "location": "POINT (31.13626 -23.94883)",
+    "longitude": 31.13626,
+    "name": "lp Phalaborwa Busstop Clinic",
+    "province": "Limpopo",
+    "short_name": "Phalaborwa Busstop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 566560,
+    "latitude": -24.3282,
+    "location": "POINT (30.00456 -24.32822)",
+    "longitude": 30.00456,
+    "name": "lp Phasha Clinic",
+    "province": "Limpopo",
+    "short_name": "Phasha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 845060,
+    "latitude": -24.9325,
+    "location": "POINT (29.89886 -24.93258)",
+    "longitude": 29.89886,
+    "name": "lp Phatantsoane Clinic",
+    "province": "Limpopo",
+    "short_name": "Phatantsoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 222342,
+    "latitude": -23.4505,
+    "location": "POINT (30.0464 -23.45056)",
+    "longitude": 30.0464,
+    "name": "lp Pheeha Clinic",
+    "province": "Limpopo",
+    "short_name": "Pheeha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Philadelphia Road",
+    "code": 844633,
+    "latitude": -25.2592,
+    "location": "POINT (29.14855 -25.25923)",
+    "longitude": 29.14855,
+    "name": "lp Philadelphia Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Philadelphia Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Atarot Street",
+    "code": 464815,
+    "latitude": -22.9512,
+    "location": "POINT (30.38817 -22.95121)",
+    "longitude": 30.38817,
+    "name": "lp Phiphidi Clinic",
+    "province": "Limpopo",
+    "short_name": "Phiphidi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Phuti Village",
+    "code": 687851,
+    "latitude": -23.9558,
+    "location": "POINT (29.70694 -23.95586)",
+    "longitude": 29.70694,
+    "name": "lp Phuti Clinic",
+    "province": "Limpopo",
+    "short_name": "Phuti Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 311615,
+    "latitude": -25.2164,
+    "location": "POINT (28.30146 -25.21642)",
+    "longitude": 28.30146,
+    "name": "lp Pienaarsrivier Clinic",
+    "province": "Limpopo",
+    "short_name": "Pienaarsriver Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 818251,
+    "latitude": -24.5776,
+    "location": "POINT (30.31433 -24.57767)",
+    "longitude": 30.314329999999998,
+    "name": "lp Praktiseer Clinic",
+    "province": "Limpopo",
+    "short_name": "Praktiseer Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 827306,
+    "latitude": -24.6207,
+    "location": "POINT (29.72819 -24.62072)",
+    "longitude": 29.72819,
+    "name": "lp Probeerin Clinic",
+    "province": "Limpopo",
+    "short_name": "Probeerin Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rabali Clinic",
+    "code": 398151,
+    "latitude": -22.8802,
+    "location": "POINT (30.09326 -22.88021)",
+    "longitude": 30.09326,
+    "name": "lp Rabali Clinic",
+    "province": "Limpopo",
+    "short_name": "Rabali Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 331660,
+    "latitude": -24.3495,
+    "location": "POINT (29.3685 -24.3495)",
+    "longitude": 29.3685,
+    "name": "lp Rakgoatha Clinic",
+    "province": "Limpopo",
+    "short_name": "Rakgoatha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 732224,
+    "latitude": -22.7846,
+    "location": "POINT (30.43414 -22.78464)",
+    "longitude": 30.43414,
+    "name": "lp Rambuda Clinic",
+    "province": "Limpopo",
+    "short_name": "Rambuda Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Zid 25",
+    "code": 553733,
+    "latitude": -25.051,
+    "location": "POINT (29.50733 -25.051)",
+    "longitude": 29.50733,
+    "name": "lp Rammupudu Clinic",
+    "province": "Limpopo",
+    "short_name": "Rammupudu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "516 Phelendaba Street",
+    "code": 246151,
+    "latitude": -23.4665,
+    "location": "POINT (29.81592 -23.46653)",
+    "longitude": 29.81592,
+    "name": "lp Ramokgopa Clinic",
+    "province": "Limpopo",
+    "short_name": "Ramokgopa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 574451,
+    "latitude": -23.6388,
+    "location": "POINT (30.59472 -23.63889)",
+    "longitude": 30.59472,
+    "name": "lp Ramotshinyadi Clinic",
+    "province": "Limpopo",
+    "short_name": "Ramotshinyadi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 156633,
+    "latitude": -23.364,
+    "location": "POINT (30.16302 -23.36406)",
+    "longitude": 30.16302,
+    "name": "lp Raphahlelo Clinic",
+    "province": "Limpopo",
+    "short_name": "Raphahlelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mpepule Village",
+    "code": 394260,
+    "latitude": -23.4363,
+    "location": "POINT (30.63536 -23.43634)",
+    "longitude": 30.63536,
+    "name": "lp Ratanang Clinic",
+    "province": "Limpopo",
+    "short_name": "Ratanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 818724,
+    "latitude": -22.8992,
+    "location": "POINT (28.82128 -22.89926)",
+    "longitude": 28.82128,
+    "name": "lp Ratshaatshaa CHC",
+    "province": "Limpopo",
+    "short_name": "Ratshaatshaa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "846 Shirindi Street, Rebone",
+    "code": 253851,
+    "latitude": -23.4321,
+    "location": "POINT (28.61001 -23.4321)",
+    "longitude": 28.61001,
+    "name": "lp Rebone Clinic",
+    "province": "Limpopo",
+    "short_name": "Rebone Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 323433,
+    "latitude": -24.5809,
+    "location": "POINT (27.38276 -24.58092)",
+    "longitude": 27.38276,
+    "name": "lp Regorogile 1 Clinic",
+    "province": "Limpopo",
+    "short_name": "Regorogile 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Station Road, Regorogile 2",
+    "code": 716724,
+    "latitude": -24.5987,
+    "location": "POINT (27.39531 -24.59878)",
+    "longitude": 27.39531,
+    "name": "lp Regorogile 2 Clinic",
+    "province": "Limpopo",
+    "short_name": "Regorogile 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 155542,
+    "latitude": -23.6785,
+    "location": "POINT (30.327673 -23.678545)",
+    "longitude": 30.327673,
+    "name": "lp Relela Clinic",
+    "province": "Limpopo",
+    "short_name": "Relela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "140 Megazyne Street",
+    "code": 221706,
+    "latitude": -23.8911,
+    "location": "POINT (29.46246 -23.89116)",
+    "longitude": 29.46246,
+    "name": "lp Rethabile CHC",
+    "province": "Limpopo",
+    "short_name": "Rethabile CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 443233,
+    "latitude": -24.5651,
+    "location": "POINT (30.2225 -24.56517)",
+    "longitude": 30.2225,
+    "name": "lp Riba Clinic",
+    "province": "Limpopo",
+    "short_name": "Riba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 610624,
+    "latitude": -24.9489,
+    "location": "POINT (29.81147 -24.94894)",
+    "longitude": 29.81147,
+    "name": "lp Rietfontein Clinic at Ngwaritsi",
+    "province": "Limpopo",
+    "short_name": "Rietfontein Clinic Ngwari"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 656524,
+    "latitude": -24.5923,
+    "location": "POINT (30.52967 -24.59233)",
+    "longitude": 30.52967,
+    "name": "lp Rietfontein Clinic of HC Boshoff",
+    "province": "Limpopo",
+    "short_name": "Rietfontein Clinic HC Bos"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Riverplaas Primary School",
+    "code": 528206,
+    "latitude": -23.232,
+    "location": "POINT (30.05428 -23.23203)",
+    "longitude": 30.05428,
+    "name": "lp Riverplaats Clinic",
+    "province": "Limpopo",
+    "short_name": "Riverplaats Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Road Avenue No 95, Roedtan, 0580",
+    "code": 674651,
+    "latitude": -24.5962,
+    "location": "POINT (29.07898 -24.59626)",
+    "longitude": 29.07898,
+    "name": "lp Roedtan Clinic",
+    "province": "Limpopo",
+    "short_name": "Roedtan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rooiberg",
+    "code": 967342,
+    "latitude": -24.785,
+    "location": "POINT (27.73632 -24.78507)",
+    "longitude": 27.73632,
+    "name": "lp Rooiberg Clinic",
+    "province": "Limpopo",
+    "short_name": "Rooiberg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Church and Middel Street",
+    "code": 343160,
+    "latitude": -25.1961,
+    "location": "POINT (29.92367 -25.1961)",
+    "longitude": 29.92367,
+    "name": "lp Roossenekal Clinic",
+    "province": "Limpopo",
+    "short_name": "Roossenekal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 871151,
+    "latitude": -23.4948,
+    "location": "POINT (28.9844 -23.49481)",
+    "longitude": 28.9844,
+    "name": "lp Rosenkrantz Clinic",
+    "province": "Limpopo",
+    "short_name": "Rosenkrantz Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rotterdam",
+    "code": 466460,
+    "latitude": -23.4007,
+    "location": "POINT (30.27447 -23.40072)",
+    "longitude": 30.27447,
+    "name": "lp Rotterdam Clinic",
+    "province": "Limpopo",
+    "short_name": "Rotterdam Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sadu Village",
+    "code": 879751,
+    "latitude": -23.306,
+    "location": "POINT (28.76161 -23.30603)",
+    "longitude": 28.76161,
+    "name": "lp Sadu Clinic",
+    "province": "Limpopo",
+    "short_name": "Sadu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 771251,
+    "latitude": -22.7376,
+    "location": "POINT (30.65792 -22.73764)",
+    "longitude": 30.65792,
+    "name": "lp Sambandou Clinic",
+    "province": "Limpopo",
+    "short_name": "Sambandou Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Schoongezicht Village",
+    "code": 478542,
+    "latitude": -23.3366,
+    "location": "POINT (29.04323 -23.33663)",
+    "longitude": 29.04323,
+    "name": "lp Schoongezicht Clinic",
+    "province": "Limpopo",
+    "short_name": "Schoongezicht Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Madinkoana Street",
+    "code": 213033,
+    "latitude": -24.7548,
+    "location": "POINT (30.01017 -24.75483)",
+    "longitude": 30.01017,
+    "name": "lp Schoonoord Clinic",
+    "province": "Limpopo",
+    "short_name": "Schoonoord Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Seakamela, Avon Village",
+    "code": 437515,
+    "latitude": -23.1413,
+    "location": "POINT (29.1015 -23.14132)",
+    "longitude": 29.1015,
+    "name": "lp Seakamela Clinic",
+    "province": "Limpopo",
+    "short_name": "Seakamela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 143, Ga Seaphole",
+    "code": 652351,
+    "latitude": -23.4963,
+    "location": "POINT (30.46014 -23.49636)",
+    "longitude": 30.46014,
+    "name": "lp Seapole Clinic",
+    "province": "Limpopo",
+    "short_name": "Seapole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sebayeng Village",
+    "code": 110124,
+    "latitude": -23.7768,
+    "location": "POINT (29.69433 -23.77683)",
+    "longitude": 29.69433,
+    "name": "lp Sebayeng Clinic",
+    "province": "Limpopo",
+    "short_name": "Sebayeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 703351,
+    "latitude": -23.6024,
+    "location": "POINT (28.64022 -23.60242)",
+    "longitude": 28.64022,
+    "name": "lp Segole Clinic",
+    "province": "Limpopo",
+    "short_name": "Segole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 825433,
+    "latitude": -23.9983,
+    "location": "POINT (29.80628 -23.99836)",
+    "longitude": 29.80628,
+    "name": "lp Sehlale Clinic",
+    "province": "Limpopo",
+    "short_name": "Sehlale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 305633,
+    "latitude": -24.1733,
+    "location": "POINT (28.96594 -24.17334)",
+    "longitude": 28.96594,
+    "name": "lp Sekgakgapeng Clinic",
+    "province": "Limpopo",
+    "short_name": "Sekgakgapeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 243206,
+    "latitude": -23.6177,
+    "location": "POINT (29.98153 -23.61772)",
+    "longitude": 29.98153,
+    "name": "lp Sekgopo Clinic",
+    "province": "Limpopo",
+    "short_name": "Sekgopo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 502024,
+    "latitude": -24.2146,
+    "location": "POINT (30.40617 -24.21462)",
+    "longitude": 30.40617,
+    "name": "lp Sekororo Clinic",
+    "province": "Limpopo",
+    "short_name": "Sekororo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 238506,
+    "latitude": -24.2515,
+    "location": "POINT (30.44767 -24.2515)",
+    "longitude": 30.44767,
+    "name": "lp Sekororo Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Sekororo Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Unnamed Road, Sekuruwe Village, 0610",
+    "code": 806524,
+    "latitude": -23.942,
+    "location": "POINT (28.940893 -23.942053)",
+    "longitude": 28.940893,
+    "name": "lp Sekuruwe Clinic",
+    "province": "Limpopo",
+    "short_name": "Sekuruwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ga-Selewa",
+    "code": 751024,
+    "latitude": -24.5063,
+    "location": "POINT (30.13759 -24.50636)",
+    "longitude": 30.13759,
+    "name": "lp Selala Clinic",
+    "province": "Limpopo",
+    "short_name": "Selala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 472815,
+    "latitude": -23.2148,
+    "location": "POINT (27.9082 -23.21484)",
+    "longitude": 27.9082,
+    "name": "lp Seleka Clinic",
+    "province": "Limpopo",
+    "short_name": "Seleka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ga-Selepe",
+    "code": 423624,
+    "latitude": -24.3544,
+    "location": "POINT (29.93258 -24.35444)",
+    "longitude": 29.93258,
+    "name": "lp Selepe Clinic",
+    "province": "Limpopo",
+    "short_name": "Selepe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 145124,
+    "latitude": -23.6253,
+    "location": "POINT (29.24603 -23.62539)",
+    "longitude": 29.24603,
+    "name": "lp Sello-Moloto Clinic",
+    "province": "Limpopo",
+    "short_name": "Sello-Moloto Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 656651,
+    "latitude": -23.6958,
+    "location": "POINT (30.92683 -23.69583)",
+    "longitude": 30.92683,
+    "name": "lp Seloane Clinic",
+    "province": "Limpopo",
+    "short_name": "Seloane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 487515,
+    "latitude": -23.6968,
+    "location": "POINT (29.40672 -23.69681)",
+    "longitude": 29.40672,
+    "name": "lp Semenya Clinic",
+    "province": "Limpopo",
+    "short_name": "Semenya Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 251251,
+    "latitude": -23.331,
+    "location": "POINT (30.23854 -23.33106)",
+    "longitude": 30.23854,
+    "name": "lp Senobela Clinic",
+    "province": "Limpopo",
+    "short_name": "Senobela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 663315,
+    "latitude": -23.8005,
+    "location": "POINT (29.75047 -23.80056)",
+    "longitude": 29.75047,
+    "name": "lp Seobi-Dikgale Clinic",
+    "province": "Limpopo",
+    "short_name": "Seobi-Dikgale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 824760,
+    "latitude": -25.0208,
+    "location": "POINT (29.66878 -25.02083)",
+    "longitude": 29.66878,
+    "name": "lp Sephaku Clinic",
+    "province": "Limpopo",
+    "short_name": "Sephaku Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bookelo Street",
+    "code": 129306,
+    "latitude": -23.8599,
+    "location": "POINT (29.38942 -23.85997)",
+    "longitude": 29.38942,
+    "name": "lp Seshego I Clinic",
+    "province": "Limpopo",
+    "short_name": "Seshego I Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 454124,
+    "latitude": -23.8461,
+    "location": "POINT (29.39128 -23.84617)",
+    "longitude": 29.39128,
+    "name": "lp Seshego II Clinic",
+    "province": "Limpopo",
+    "short_name": "Seshego II Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 457142,
+    "latitude": -23.839199999999998,
+    "location": "POINT (29.3834 -23.8392)",
+    "longitude": 29.3834,
+    "name": "lp Seshego III Clinic",
+    "province": "Limpopo",
+    "short_name": "Seshego III Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "523 Zone 4",
+    "code": 668242,
+    "latitude": -23.8479,
+    "location": "POINT (29.3723 -23.84793)",
+    "longitude": 29.3723,
+    "name": "lp Seshego IV Clinic",
+    "province": "Limpopo",
+    "short_name": "Seshego IV Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 602651,
+    "latitude": -24.6738,
+    "location": "POINT (29.46992 -24.67389)",
+    "longitude": 29.46992,
+    "name": "lp Setlabosoane Clinic",
+    "province": "Limpopo",
+    "short_name": "Setlabosoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 216124,
+    "latitude": -22.6159,
+    "location": "POINT (30.55628 -22.61592)",
+    "longitude": 30.55628,
+    "name": "lp Shakadza Clinic",
+    "province": "Limpopo",
+    "short_name": "Shakadza Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Zene 4",
+    "code": 342315,
+    "latitude": -23.0051,
+    "location": "POINT (30.42669 -23.00511)",
+    "longitude": 30.42669,
+    "name": "lp Shayandima Clinic",
+    "province": "Limpopo",
+    "short_name": "Shayandima Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 766751,
+    "latitude": -22.9244,
+    "location": "POINT (30.72275 -22.92442)",
+    "longitude": 30.72275,
+    "name": "lp Shigalo Clinic",
+    "province": "Limpopo",
+    "short_name": "Shigalo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Shikhumba Village",
+    "code": 777224,
+    "latitude": -23.5001,
+    "location": "POINT (30.8809 -23.50013)",
+    "longitude": 30.8809,
+    "name": "lp Shikhumba Clinic",
+    "province": "Limpopo",
+    "short_name": "Shikhumba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 612351,
+    "latitude": -22.8291,
+    "location": "POINT (30.83439 -22.82914)",
+    "longitude": 30.83439,
+    "name": "lp Shikundu Clinic",
+    "province": "Limpopo",
+    "short_name": "Shikundu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 533751,
+    "latitude": -24.043,
+    "location": "POINT (30.27355 -24.04308)",
+    "longitude": 30.27355,
+    "name": "lp Shiluvana CHC",
+    "province": "Limpopo",
+    "short_name": "Shiluvana CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 825860,
+    "latitude": -23.0013,
+    "location": "POINT (30.73722 -23.00139)",
+    "longitude": 30.73722,
+    "name": "lp Shingwedzi Clinic",
+    "province": "Limpopo",
+    "short_name": "Shingwedzi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 531324,
+    "latitude": -23.6607,
+    "location": "POINT (30.88136 -23.6607)",
+    "longitude": 30.88136,
+    "name": "lp Shitlakati Clinic",
+    "province": "Limpopo",
+    "short_name": "Shitlakati Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 978215,
+    "latitude": -23.1415,
+    "location": "POINT (30.70211 -23.1415)",
+    "longitude": 30.70211,
+    "name": "lp Shivulani Clinic",
+    "province": "Limpopo",
+    "short_name": "Shivulani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Shongoane Village, Sandrivier Section",
+    "code": 308342,
+    "latitude": -23.5676,
+    "location": "POINT (28.10367 -23.56767)",
+    "longitude": 28.10367,
+    "name": "lp Shongoane Clinic",
+    "province": "Limpopo",
+    "short_name": "Shongoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Shotong Village",
+    "code": 453833,
+    "latitude": -23.6305,
+    "location": "POINT (30.29853 -23.63054)",
+    "longitude": 30.29853,
+    "name": "lp Shotong Clinic",
+    "province": "Limpopo",
+    "short_name": "Shotong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mphephe Street",
+    "code": 277333,
+    "latitude": -22.9464,
+    "location": "POINT (30.49146 -22.94645)",
+    "longitude": 30.49146,
+    "name": "lp Sibasa Clinic",
+    "province": "Limpopo",
+    "short_name": "Sibasa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 420315,
+    "latitude": -23.4303,
+    "location": "POINT (30.56104 -23.43034)",
+    "longitude": 30.56104,
+    "name": "lp Skimming Clinic",
+    "province": "Limpopo",
+    "short_name": "Skimming Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 757560,
+    "latitude": -24.4518,
+    "location": "POINT (29.40267 -24.45183)",
+    "longitude": 29.40267,
+    "name": "lp Slypsteen Clinic",
+    "province": "Limpopo",
+    "short_name": "Slypsteen Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 833124,
+    "latitude": -24.5377,
+    "location": "POINT (29.43117 -24.53778)",
+    "longitude": 29.43117,
+    "name": "lp Smugglers Union Clinic",
+    "province": "Limpopo",
+    "short_name": "Smugglers Union Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 921715,
+    "latitude": -24.0869,
+    "location": "POINT (29.59781 -24.08694)",
+    "longitude": 29.59781,
+    "name": "lp Soetfontein Clinic",
+    "province": "Limpopo",
+    "short_name": "Soetfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 858151,
+    "latitude": -24.2335,
+    "location": "POINT (30.40533 -24.2335)",
+    "longitude": 30.40533,
+    "name": "lp Sophia/Sekwai Clinic",
+    "province": "Limpopo",
+    "short_name": "Sophia/Sekwai Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1001 Main Street",
+    "code": 201860,
+    "latitude": -24.9689,
+    "location": "POINT (28.92894 -24.9689)",
+    "longitude": 28.92894,
+    "name": "lp Spitspunte Clinic",
+    "province": "Limpopo",
+    "short_name": "Spitspunte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 219724,
+    "latitude": -24.8446,
+    "location": "POINT (29.80902 -24.84468)",
+    "longitude": 29.80902,
+    "name": "lp St Rita's Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "St Rita's Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Steenbokpan",
+    "code": 921760,
+    "latitude": -23.6655,
+    "location": "POINT (27.74457 -23.66553)",
+    "longitude": 27.74457,
+    "name": "lp Steenbokpan Clinic",
+    "province": "Limpopo",
+    "short_name": "Steenbokpan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malavuwe Village",
+    "code": 773542,
+    "latitude": -22.8713,
+    "location": "POINT (30.6475 -22.87139)",
+    "longitude": 30.6475,
+    "name": "lp Sterkstroom Clinic",
+    "province": "Limpopo",
+    "short_name": "Sterkstroom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sterkwater",
+    "code": 688351,
+    "latitude": -24.0584,
+    "location": "POINT (28.81651 -24.05844)",
+    "longitude": 28.81651,
+    "name": "lp Sterkwater Clinic",
+    "province": "Limpopo",
+    "short_name": "Sterkwater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Straighthard Village",
+    "code": 475233,
+    "latitude": -22.7564,
+    "location": "POINT (30.14398 -22.75641)",
+    "longitude": 30.14398,
+    "name": "lp Straighthardt Clinic",
+    "province": "Limpopo",
+    "short_name": "Straighthardt Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 114260,
+    "latitude": -24.5097,
+    "location": "POINT (30.64733 -24.50976)",
+    "longitude": 30.64733,
+    "name": "lp Swaranang Clinic",
+    "province": "Limpopo",
+    "short_name": "Swaranang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "16 Hospital, Swartklip",
+    "code": 214260,
+    "latitude": -24.9377,
+    "location": "POINT (27.15589 -24.93775)",
+    "longitude": 27.15589,
+    "name": "lp Swartklip Clinic",
+    "province": "Limpopo",
+    "short_name": "Swartklip Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 626433,
+    "latitude": -22.846,
+    "location": "POINT (28.91726 -22.84608)",
+    "longitude": 28.91726,
+    "name": "lp Taaibos Clinic",
+    "province": "Limpopo",
+    "short_name": "Taaibos Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 417615,
+    "latitude": -24.4551,
+    "location": "POINT (30.39633 -24.45517)",
+    "longitude": 30.39633,
+    "name": "lp Taung Clinic",
+    "province": "Limpopo",
+    "short_name": "Taung Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 479124,
+    "latitude": -23.6758,
+    "location": "POINT (27.703955 -23.675891)",
+    "longitude": 27.703955,
+    "name": "lp Thabaleshoba CHC",
+    "province": "Limpopo",
+    "short_name": "Thabaleshoba CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Hubiscus Street, Thabazimbi",
+    "code": 583151,
+    "latitude": -24.6064,
+    "location": "POINT (27.39007 -24.6064)",
+    "longitude": 27.39007,
+    "name": "lp Thabazimbi Clinic",
+    "province": "Limpopo",
+    "short_name": "Thabazimbi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 870733,
+    "latitude": -24.3626,
+    "location": "POINT (30.66805 -24.36267)",
+    "longitude": 30.66805,
+    "name": "lp The Oaks Clinic",
+    "province": "Limpopo",
+    "short_name": "The Oaks Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Block 4",
+    "code": 629224,
+    "latitude": -22.966,
+    "location": "POINT (30.47799 -22.96602)",
+    "longitude": 30.47799,
+    "name": "lp Thohoyandou CHC",
+    "province": "Limpopo",
+    "short_name": "Thohoyandou CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thomo Village",
+    "code": 544542,
+    "latitude": -23.2479,
+    "location": "POINT (30.78614 -23.24797)",
+    "longitude": 30.78614,
+    "name": "lp Thomo Clinic",
+    "province": "Limpopo",
+    "short_name": "Thomo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mmamangena Street",
+    "code": 487424,
+    "latitude": -23.6294,
+    "location": "POINT (28.76992 -23.62942)",
+    "longitude": 28.76992,
+    "name": "lp Tiberius Clinic",
+    "province": "Limpopo",
+    "short_name": "Tiberius Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tiyani Ha Magono, next tTo Post Office",
+    "code": 223460,
+    "latitude": -23.3063,
+    "location": "POINT (30.29458 -23.30633)",
+    "longitude": 30.29458,
+    "name": "lp Tiyani CHC",
+    "province": "Limpopo",
+    "short_name": "Tiyani CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 786215,
+    "latitude": -23.1255,
+    "location": "POINT (30.53444 -23.12556)",
+    "longitude": 30.53444,
+    "name": "lp Tlangelani Clinic",
+    "province": "Limpopo",
+    "short_name": "Tlangelani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "22d Gamatlala-a-Ramoshebo Village",
+    "code": 568633,
+    "latitude": -25.0536,
+    "location": "POINT (29.11309 -25.05369)",
+    "longitude": 29.11309,
+    "name": "lp Toitskraal Clinic",
+    "province": "Limpopo",
+    "short_name": "Toitskraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 968642,
+    "latitude": -22.903,
+    "location": "POINT (28.77442 -22.90308)",
+    "longitude": 28.77442,
+    "name": "lp Towerfontein Clinic",
+    "province": "Limpopo",
+    "short_name": "Towerfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 346515,
+    "latitude": -24.0757,
+    "location": "POINT (28.98011 -24.07572)",
+    "longitude": 28.98011,
+    "name": "lp Tsamahansi Clinic",
+    "province": "Limpopo",
+    "short_name": "Tsamahansi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand Tshakhuma Muhovhoya Tshakhuma",
+    "code": 229633,
+    "latitude": -23.0483,
+    "location": "POINT (30.30219 -23.04836)",
+    "longitude": 30.30219,
+    "name": "lp Tshakhuma Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshakhuma Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 631224,
+    "latitude": -24.789,
+    "location": "POINT (29.97361 -24.78904)",
+    "longitude": 29.97361,
+    "name": "lp Tshehlwaneng Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshehlwaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Brits/Thabazimbi Road",
+    "code": 360324,
+    "latitude": -24.8702,
+    "location": "POINT (27.51365 -24.87021)",
+    "longitude": 27.51365,
+    "name": "lp Tshepong Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshepong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshifif Village",
+    "code": 461442,
+    "latitude": -22.8147,
+    "location": "POINT (30.69861 -22.81475)",
+    "longitude": 30.69861,
+    "name": "lp Tshififi Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshififi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 262424,
+    "latitude": -22.8136,
+    "location": "POINT (30.69883 -22.81367)",
+    "longitude": 30.69883,
+    "name": "lp Tshifudi Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshifudi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshikuwi Village",
+    "code": 251033,
+    "latitude": -22.9021,
+    "location": "POINT (29.95008 -22.90214)",
+    "longitude": 29.95008,
+    "name": "lp Tshikuwi Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshikuwi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 367406,
+    "latitude": -22.9927,
+    "location": "POINT (30.41508 -22.99272)",
+    "longitude": 30.41508,
+    "name": "lp Tshilidzi Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshilidzi Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 694133,
+    "latitude": -23.0967,
+    "location": "POINT (29.73847 -23.09672)",
+    "longitude": 29.73847,
+    "name": "lp Tshilwavhusiku CHC",
+    "province": "Limpopo",
+    "short_name": "Tshilwavhusiku CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshimbupfe Main Road, opposite Malaria Compound",
+    "code": 952151,
+    "latitude": -23.1568,
+    "location": "POINT (30.469 -23.15683)",
+    "longitude": 30.469,
+    "name": "lp Tshimbupfe Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshimbupfe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Thsino Tar Road",
+    "code": 687333,
+    "latitude": -23.1149,
+    "location": "POINT (30.39833 -23.11492)",
+    "longitude": 30.39833,
+    "name": "lp Tshino Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshino Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 846624,
+    "latitude": -22.8057,
+    "location": "POINT (30.50111 -22.80575)",
+    "longitude": 30.50111,
+    "name": "lp Tshiombo Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshiombo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshipise Tsha Sagole",
+    "code": 874006,
+    "latitude": -22.5306,
+    "location": "POINT (30.67659 -22.53066)",
+    "longitude": 30.67659,
+    "name": "lp Tshipise Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshipise Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Riverside",
+    "code": 697124,
+    "latitude": -22.9973,
+    "location": "POINT (30.39805 -22.99739)",
+    "longitude": 30.39805,
+    "name": "lp Tshisaulu Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshisaulu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 345215,
+    "latitude": -22.4986,
+    "location": "POINT (30.58042 -22.49861)",
+    "longitude": 30.58042,
+    "name": "lp Tshiungani Clinic",
+    "province": "Limpopo",
+    "short_name": "Tshiungani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 169715,
+    "latitude": -24.4754,
+    "location": "POINT (29.67553 -24.47547)",
+    "longitude": 29.67553,
+    "name": "lp Tswaing Clinic",
+    "province": "Limpopo",
+    "short_name": "Tswaing Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 311406,
+    "latitude": -23.0166,
+    "location": "POINT (30.48517 -23.01667)",
+    "longitude": 30.48517,
+    "name": "lp Tswinga Clinic",
+    "province": "Limpopo",
+    "short_name": "Tswinga Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Zone 1 Turkey",
+    "code": 847706,
+    "latitude": -24.3089,
+    "location": "POINT (30.50992 -24.30895)",
+    "longitude": 30.50992,
+    "name": "lp Turkey Clinic",
+    "province": "Limpopo",
+    "short_name": "Turkey Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Agatha Streeet",
+    "code": 431151,
+    "latitude": -23.8351,
+    "location": "POINT (30.16309 -23.83519)",
+    "longitude": 30.16309,
+    "name": "lp Tzaneen LA Clinic",
+    "province": "Limpopo",
+    "short_name": "Tzaneen LA Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 496515,
+    "latitude": -23.3957,
+    "location": "POINT (28.975169 -23.395761)",
+    "longitude": 28.975169,
+    "name": "lp Uitkyk Clinic",
+    "province": "Limpopo",
+    "short_name": "Uitkyk Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kopano Street",
+    "code": 255815,
+    "latitude": -24.3021,
+    "location": "POINT (29.5305 -24.30217)",
+    "longitude": 29.5305,
+    "name": "lp Unit R Clinic",
+    "province": "Limpopo",
+    "short_name": "Unit R Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1838, Leseding Ext 2",
+    "code": 955915,
+    "latitude": -24.2944,
+    "location": "POINT (28.11132 -24.29443)",
+    "longitude": 28.11132,
+    "name": "lp Vaalwater Clinic",
+    "province": "Limpopo",
+    "short_name": "Vaalwater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Post Office",
+    "code": 910515,
+    "latitude": -23.1001,
+    "location": "POINT (30.17971 -23.10011)",
+    "longitude": 30.17971,
+    "name": "lp Valdezia Clinic",
+    "province": "Limpopo",
+    "short_name": "Valdezia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 477415,
+    "latitude": -24.6644,
+    "location": "POINT (29.44483 -24.66442)",
+    "longitude": 29.44483,
+    "name": "lp Van der Merwes Kraal Clinic",
+    "province": "Limpopo",
+    "short_name": "Vd Merwes Kraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Maelula",
+    "code": 990215,
+    "latitude": -22.9792,
+    "location": "POINT (30.14747 -22.97927)",
+    "longitude": 30.14747,
+    "name": "lp Vhambelani Maelula Clinic",
+    "province": "Limpopo",
+    "short_name": "Vhambelani Maelula Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vhufuli",
+    "code": 507115,
+    "latitude": -22.8829,
+    "location": "POINT (30.45879 -22.88298)",
+    "longitude": 30.45879,
+    "name": "lp Vhufuli Tshitereke Clinic",
+    "province": "Limpopo",
+    "short_name": "Vhufuli Tshitereke Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vhari-vhari",
+    "code": 463233,
+    "latitude": -22.7025,
+    "location": "POINT (30.76511 -22.70253)",
+    "longitude": 30.76511,
+    "name": "lp Vhurivhuri Clinic",
+    "province": "Limpopo",
+    "short_name": "Vhurivhuri Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malebitsa Village",
+    "code": 276433,
+    "latitude": -24.9035,
+    "location": "POINT (28.935742 -24.903566)",
+    "longitude": 28.935742,
+    "name": "lp Vlaakplaas Clinic",
+    "province": "Limpopo",
+    "short_name": "Vlaakplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "225 Euphrate Street",
+    "code": 849315,
+    "latitude": -23.2165,
+    "location": "POINT (29.99481 -23.21654)",
+    "longitude": 29.99481,
+    "name": "lp Vleifontein Clinic",
+    "province": "Limpopo",
+    "short_name": "Vleifontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 319215,
+    "latitude": -24.1962,
+    "location": "POINT (29.01405 -24.19624)",
+    "longitude": 29.01405,
+    "name": "lp Voortrekker Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Voortrekker Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 779115,
+    "latitude": -22.994,
+    "location": "POINT (30.20095 -22.99404)",
+    "longitude": 30.20095,
+    "name": "lp Vuvha Clinic",
+    "province": "Limpopo",
+    "short_name": "Vuvha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vyeboom Main Street",
+    "code": 461606,
+    "latitude": -23.1536,
+    "location": "POINT (30.38806 -23.15369)",
+    "longitude": 30.38806,
+    "name": "lp Vyeboom Clinic",
+    "province": "Limpopo",
+    "short_name": "Vyeboom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 315651,
+    "latitude": -23.633,
+    "location": "POINT (29.1209 -23.633)",
+    "longitude": 29.1209,
+    "name": "lp WF Knobel Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "WF Knobel Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5 Minnaar and Lunar Street",
+    "code": 392324,
+    "latitude": -24.8828,
+    "location": "POINT (28.29545 -24.88281)",
+    "longitude": 28.29545,
+    "name": "lp Warmbaths Clinic",
+    "province": "Limpopo",
+    "short_name": "Warmbaths Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Opposite Stadium",
+    "code": 366851,
+    "latitude": -23.1601,
+    "location": "POINT (30.06933 -23.16019)",
+    "longitude": 30.06933,
+    "name": "lp Waterval Clinic",
+    "province": "Limpopo",
+    "short_name": "Waterval Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Wayeni Main Road",
+    "code": 112424,
+    "latitude": -23.2411,
+    "location": "POINT (30.21867 -23.24119)",
+    "longitude": 30.21867,
+    "name": "lp Wayeni Clinic",
+    "province": "Limpopo",
+    "short_name": "Wayeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Nkidikitlana",
+    "code": 426351,
+    "latitude": -23.5607,
+    "location": "POINT (28.59906 -23.56078)",
+    "longitude": 28.59906,
+    "name": "lp Weltevreden Clinic",
+    "province": "Limpopo",
+    "short_name": "Weltevreden Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 828633,
+    "latitude": -22.8716,
+    "location": "POINT (30.54447 -22.87164)",
+    "longitude": 30.54447,
+    "name": "lp William Eddie CHC",
+    "province": "Limpopo",
+    "short_name": "William Eddie CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 663160,
+    "latitude": -24.3596,
+    "location": "POINT (30.62144 -24.35963)",
+    "longitude": 30.62144,
+    "name": "lp Willows Clinic",
+    "province": "Limpopo",
+    "short_name": "Willows Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Witfontein",
+    "code": 464424,
+    "latitude": -25.0242,
+    "location": "POINT (29.03596 -25.02425)",
+    "longitude": 29.03596,
+    "name": "lp Witfontein Clinic",
+    "province": "Limpopo",
+    "short_name": "Witfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "59 Madelq Stards",
+    "code": 786124,
+    "latitude": -25.171,
+    "location": "POINT (29.74566 -25.17105)",
+    "longitude": 29.74566,
+    "name": "lp Zaaiplaas Clinic",
+    "province": "Limpopo",
+    "short_name": "Zaaiplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Zangona",
+    "code": 938524,
+    "latitude": -23.9128,
+    "location": "POINT (30.3407 -23.9128)",
+    "longitude": 30.3407,
+    "name": "lp Zangoma Clinic",
+    "province": "Limpopo",
+    "short_name": "Zangoma Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 454115,
+    "latitude": -23.641,
+    "location": "POINT (30.73772 -23.64103)",
+    "longitude": 30.73772,
+    "name": "lp Zava Clinic",
+    "province": "Limpopo",
+    "short_name": "Zava Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 747742,
+    "latitude": -24.3254,
+    "location": "POINT (29.29847 -24.32544)",
+    "longitude": 29.298470000000002,
+    "name": "lp Zebediela Clinic",
+    "province": "Limpopo",
+    "short_name": "Zebediela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 323224,
+    "latitude": -24.4704,
+    "location": "POINT (29.414279 -24.470485)",
+    "longitude": 29.414279,
+    "name": "lp Zebediela Gateway Clinic",
+    "province": "Limpopo",
+    "short_name": "Zebediela Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": "Letswatla Village",
+      "code": 419733,
+      "latitude": -23.0216,
+      "location": "POINT (28.70611 -23.02167)",
+      "longitude": 28.70611,
+      "name": "lp Zeist Clinic",
+      "province": "Limpopo",
+      "short_name": "Zeist Clinic"
+    }
+  }
+]
