@@ -38,7 +38,6 @@ urlpatterns = [
     path("v4/", include(v4router.urls)),
     path("api/v5/", include(v5router.urls)),
     path("v1/vaxchamps/", include("vaxchamps.urls")),
-
 ]
 
 # Need to add this for media files to work for development
