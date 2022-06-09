@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgis:
-        image: postgis:9.6-alpine
+        image: postgres:9.6-alpine
         env:
           POSTGRES_DB: healthcheck
           POSTGRES_USER: postgres
