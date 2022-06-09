@@ -12,7 +12,6 @@ class Migration(migrations.Migration):
     dependencies = []
 
     operations = [
-        CreateExtension("postgis"),
         migrations.CreateModel(
             name="Location",
             fields=[
