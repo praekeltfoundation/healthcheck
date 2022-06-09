@@ -12,8 +12,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     services:
-      postgis:
-        image: postgres:9.6-alpine
+      postgres:
+        image: postgis/postgis:11-2.5-alpine
         env:
           POSTGRES_DB: healthcheck
           POSTGRES_USER: postgres
@@ -32,6 +32,7 @@ jobs:
           python-version: 3.7.7
       - name: Install dependencies
         run: |
+          psql postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost/${POSTGRES_DB} -c "CREATE EXTENSION postgis" 
           python -m pip install --upgrade pip
           pip install -e .
           pip install -r requirements-dev.txt

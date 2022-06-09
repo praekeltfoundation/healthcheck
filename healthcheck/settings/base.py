@@ -265,6 +265,3 @@ AWS_S3_REGION_NAME = env.str("AWS_S3_REGION_NAME", None)
 AWS_S3_ENDPOINT_URL = env.str("AWS_S3_ENDPOINT_URL", None)
 
 LOCATION_SEARCH_RADIUS = env.int("LOCATION_SEARCH_RADIUS", 20)
-
-GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
