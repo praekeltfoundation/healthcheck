@@ -64,3 +64,9 @@ $ flake8 .
 ```
 `flake8` will point out any errors but it is not used during PR testing. It is best to keep the least amount of these errors.
 It is strongly advised to wrap any of requests your test make with [responses](https://github.com/getsentry/responses) library.
+
+## Load fixtures
+$ python loaddata <fixturename>
+where `<fixturename>` is the name of the fixture file you’ve created. 
+Each time you run loaddata, the data will be read from the fixture and re-loaded into the database. 
+Note this means that if you change one of the rows created by a fixture and then run loaddata again, you’ll wipe out any changes you’ve made.
