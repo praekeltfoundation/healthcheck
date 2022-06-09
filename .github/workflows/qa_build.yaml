@@ -32,7 +32,7 @@ jobs:
           python-version: 3.7.7
       - name: Install dependencies
         run: |
-          psql postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost/${POSTGRES_DB} -c "CREATE EXTENSION postgis" 
+          psql -d postgresql://postgres:postgres@localhost/healthcheck -c "CREATE EXTENSION postgis" 
           python -m pip install --upgrade pip
           pip install -e .
           pip install -r requirements-dev.txt
