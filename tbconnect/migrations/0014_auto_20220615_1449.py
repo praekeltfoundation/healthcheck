@@ -6,18 +6,29 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tbconnect', '0013_auto_20220517_1323'),
+        ("tbconnect", "0013_auto_20220517_1323"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='tbcheck',
-            name='clinic_to_visit',
+            model_name="tbcheck",
+            name="clinic_to_visit",
             field=models.CharField(blank=True, max_length=50, null=True),
         ),
         migrations.AddField(
-            model_name='tbcheck',
-            name='clinic_visit_day',
-            field=models.CharField(blank=True, choices=[('mon', 'Monday'), ('tue', 'Tuesday'), ('wed', 'Wednesday'), ('thu', 'Thursday'), ('fri', 'Friday')], max_length=3, null=True),
+            model_name="tbcheck",
+            name="clinic_visit_day",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("mon", "Monday"),
+                    ("tue", "Tuesday"),
+                    ("wed", "Wednesday"),
+                    ("thu", "Thursday"),
+                    ("fri", "Friday"),
+                ],
+                max_length=3,
+                null=True,
+            ),
         ),
     ]
