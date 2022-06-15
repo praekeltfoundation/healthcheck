@@ -38,6 +38,7 @@ class SyncToRapidproTests(TestCase):
         synced=False,
         source="WhatsApp",
         risk=TBCheck.RISK_HIGH,
+        activation=None,
     ):
         TBCheck.objects.create(
             **{
@@ -52,6 +53,7 @@ class SyncToRapidproTests(TestCase):
                 "completed_timestamp": self.completed_timestamp,
                 "risk": risk,
                 "follow_up_optin": optin,
+                "activation": activation,
             }
         )
 
@@ -104,6 +106,7 @@ class SyncToRapidproTests(TestCase):
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
+                    "activation": None,
                 },
             },
         )
@@ -122,6 +125,7 @@ class SyncToRapidproTests(TestCase):
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
+                    "activation": None,
                 },
             },
         )
@@ -166,6 +170,7 @@ class SyncToRapidproTests(TestCase):
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
+                    "activation": None,
                 },
             },
         )
@@ -210,6 +215,51 @@ class SyncToRapidproTests(TestCase):
                     ),
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
+                    "activation": None,
+                },
+            },
+        )
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        RAPIDPRO_TOKEN="123",
+        RAPIDPRO_TBCONNECT_FLOW="321",
+    )
+    def test_sync_whatsapp_agent(self):
+        """
+        Should sync a profile created from WhatsApp via shared agent device, if not synced before
+        """
+        profile = self.create_profile_and_check(activation="tb_soccer_1_agent")
+
+        responses.add(
+            responses.POST,
+            f"https://rp-test.com/api/v2/flow_starts.json",
+            json=self.flow_response,
+        )
+
+        perform_sync_to_rapidpro()
+
+        profile.refresh_from_db()
+        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+
+        [call] = responses.calls
+        body = json.loads(call.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["tel:+27830000001"],
+                "extra": {
+                    "risk": "high",
+                    "source": "WhatsApp",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                    "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
+                    "activation": "tb_soccer_1_agent",
                 },
             },
         )
