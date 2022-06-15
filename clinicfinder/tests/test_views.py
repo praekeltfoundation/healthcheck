@@ -18,7 +18,7 @@ class ClinicFinderViewTests(APITestCase):
         user.user_permissions.add(Permission.objects.get(codename="add_covid19triage"))
         self.client.force_authenticate(user)
         response = self.client.get(
-            self.url, {"longitude": 25.69077, "latitude": -33.5422}
+            self.url, {"longitude": "25.69077", "latitude": "-33.5422"}
         )
 
         self.assertEqual(len(response.json().get("locations")), 5)
