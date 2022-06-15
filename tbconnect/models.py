@@ -120,7 +120,7 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     commit_get_tested = models.CharField(
         max_length=3, choices=COMMIT_CHOICES, null=True, blank=True
     )
-    research_consent = models.BooleanField(null=True)
+    research_consent = models.BooleanField(null=True, blank=True)
     originating_msisdn = models.CharField(
         max_length=255, validators=[za_phone_number], null=True
     )
