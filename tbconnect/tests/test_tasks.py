@@ -38,7 +38,7 @@ class SyncToRapidproTests(TestCase):
         synced=False,
         source="WhatsApp",
         risk=TBCheck.RISK_HIGH,
-        activation=None
+        activation=None,
     ):
         TBCheck.objects.create(
             **{
