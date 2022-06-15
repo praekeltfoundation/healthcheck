@@ -57,7 +57,7 @@ def perform_sync_to_rapidpro():
                             ),
                             "exposure": check.exposure,
                             "language": contact.language,
-                            "activation": check.activation
+                            "activation": check.activation,
                         },
                     )
 
