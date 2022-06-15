@@ -97,6 +97,8 @@ def perform_etl():
                 "risk": "STRING",
                 "follow_up_optin": "BOOLEAN",
                 "language": "STRING",
+                "activation": "STRING",
+                "originating_msisdn": "STRING",
             },
         },
         "tests": {
