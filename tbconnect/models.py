@@ -74,6 +74,19 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         (COMMIT_NO, "No"),
     )
 
+    DAY_MONDAY = "mon"
+    DAY_TUESDAY = "tue"
+    DAY_WEDNESDAY = "wed"
+    DAY_THURSDAY = "thu"
+    DAY_FRIDAY = "fri"
+    DAY_CHOICES = (
+        (DAY_MONDAY, "Monday"),
+        (DAY_TUESDAY, "Tuesday"),
+        (DAY_WEDNESDAY, "Wednesday"),
+        (DAY_THURSDAY, "Thursday"),
+        (DAY_FRIDAY, "Friday"),
+    )
+
     deduplication_id = models.CharField(max_length=255, default=uuid.uuid4, unique=True)
     created_by = models.CharField(max_length=255, blank=True, default="")
     msisdn = models.CharField(
@@ -107,11 +120,15 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     commit_get_tested = models.CharField(
         max_length=3, choices=COMMIT_CHOICES, null=True, blank=True
     )
-    research_consent = models.BooleanField(null=True, blank=True)
+    research_consent = models.BooleanField(null=True)
     originating_msisdn = models.CharField(
         max_length=255, validators=[za_phone_number], null=True
     )
     activation = models.CharField(max_length=255, null=True)
+    clinic_to_visit = models.CharField(max_length=50, null=True, blank=True)
+    clinic_visit_day = models.CharField(
+        max_length=3, choices=DAY_CHOICES, null=True, blank=True
+    )
 
     @property
     def hashed_msisdn(self):
