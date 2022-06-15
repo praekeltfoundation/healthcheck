@@ -32,9 +32,15 @@ def perform_sync_to_rapidpro():
                     .first()
                 )
 
+                force_ussd_followup = False
+
                 if check:
+                    # Force prefered channel for shared device activations.
+                    if check.activation and check.activation.endswith("_agent"):
+                        force_ussd_followup = True
+
                     urn = f"tel:{contact.msisdn}"
-                    if check.source == "WhatsApp":
+                    if check.source == "WhatsApp" and not force_ussd_followup:
                         urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
 
                     rapidpro.create_flow_start(
@@ -51,6 +57,7 @@ def perform_sync_to_rapidpro():
                             ),
                             "exposure": check.exposure,
                             "language": contact.language,
+                            "activation": check.activation
                         },
                     )
 
