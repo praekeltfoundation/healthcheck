@@ -1,0 +1,2758 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "203 Mark Street",
+    "code": 853642,
+    "latitude": -27.873,
+    "location": "POINT (26.68533 -27.87308)",
+    "longitude": 26.68533,
+    "name": "fs AM Kruger Clinic",
+    "province": "Free State",
+    "short_name": "AM Kruger Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "565 Vorster Street, Wesselsbron, 9680",
+    "code": 897151,
+    "latitude": -27.8362,
+    "location": "POINT (26.3668 -27.8362)",
+    "longitude": 26.3668,
+    "name": "fs Albert Luthuli Memorial Clinic",
+    "province": "Free State",
+    "short_name": "Albert Luthuli Mem Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4 Olifant Street",
+    "code": 734833,
+    "latitude": -27.7533,
+    "location": "POINT (26.64478 -27.75332)",
+    "longitude": 26.64478,
+    "name": "fs Allanridge Clinic",
+    "province": "Free State",
+    "short_name": "Allanridge Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 488342,
+    "latitude": -25.6813,
+    "location": "POINT (27.53827 -25.681314)",
+    "longitude": 27.53827,
+    "name": "fs Ango Maseola (Marikana) Clinic",
+    "province": "Free State",
+    "short_name": "Ango Maseola (Mari) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Abraham Skrall",
+    "code": 625251,
+    "latitude": -29.0645,
+    "location": "POINT (26.12987 -29.0645)",
+    "longitude": 26.12987,
+    "name": "fs Bainsvlei Clinic",
+    "province": "Free State",
+    "short_name": "Bainsvlei Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "230 Medican Street",
+    "code": 652142,
+    "latitude": -28.2185,
+    "location": "POINT (28.33417 -28.21857)",
+    "longitude": 28.33417,
+    "name": "fs Bakenpark Clinic",
+    "province": "Free State",
+    "short_name": "Bakenpark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Fort Hare Road, Hamilton, Bloemfontein, 9301",
+    "code": 942124,
+    "latitude": -29.1389,
+    "location": "POINT (26.22728 -29.13897)",
+    "longitude": 26.22728,
+    "name": "fs Batho Clinic",
+    "province": "Free State",
+    "short_name": "Batho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Nantes Avenue, Bayswater",
+    "code": 762751,
+    "latitude": -29.0847,
+    "location": "POINT (26.24407 -29.08478)",
+    "longitude": 26.24407,
+    "name": "fs Bayswater Clinic",
+    "province": "Free State",
+    "short_name": "Bayswater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "29A President Boshoff Street",
+    "code": 846133,
+    "latitude": -28.2327,
+    "location": "POINT (28.30792 -28.23277)",
+    "longitude": 28.30792,
+    "name": "fs Bethlehem Clinic",
+    "province": "Free State",
+    "short_name": "Bethlehem Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Old Thaba Nchu Road",
+    "code": 352633,
+    "latitude": -29.1373,
+    "location": "POINT (26.27142 -29.13732)",
+    "longitude": 26.27142,
+    "name": "fs Bloemspruit Clinic",
+    "province": "Free State",
+    "short_name": "Bloemspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3a4n, Blue Gum Bush",
+    "code": 864451,
+    "latitude": -28.4825,
+    "location": "POINT (28.84905 -28.48255)",
+    "longitude": 28.84905,
+    "name": "fs Blue Gum Bush Clinic",
+    "province": "Free State",
+    "short_name": "Blue Gum Bush Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 Villiers Street",
+    "code": 461715,
+    "latitude": -28.2242,
+    "location": "POINT (28.31608 -28.22428)",
+    "longitude": 28.31608,
+    "name": "fs Bohlokong Clinic",
+    "province": "Free State",
+    "short_name": "Bohlokong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Motesal",
+    "code": 887733,
+    "latitude": -28.5496,
+    "location": "POINT (28.82607 -28.54963)",
+    "longitude": 28.82607,
+    "name": "fs Boiketlo Clinic",
+    "province": "Free State",
+    "short_name": "Boiketlo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "436 Pompi Street",
+    "code": 423942,
+    "latitude": -27.8552,
+    "location": "POINT (26.76047 -27.85522)",
+    "longitude": 26.76047,
+    "name": "fs Boithusong Clinic",
+    "province": "Free State",
+    "short_name": "Boithusong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 751333,
+    "latitude": -28.5638,
+    "location": "POINT (28.7958 -28.56383)",
+    "longitude": 28.7958,
+    "name": "fs Bolata Clinic",
+    "province": "Free State",
+    "short_name": "Bolata Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "387 Taole Taeni Street",
+    "code": 586433,
+    "latitude": -27.7769,
+    "location": "POINT (26.65688 -27.77692)",
+    "longitude": 26.65688,
+    "name": "fs Bophelong (Allanridge) Clinic",
+    "province": "Free State",
+    "short_name": "Bophelong (Allan) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1258, D Section",
+    "code": 208415,
+    "latitude": -29.2778,
+    "location": "POINT (26.73307 -29.2778)",
+    "longitude": 26.73307,
+    "name": "fs Bophelong (Botshabelo) Clinic",
+    "province": "Free State",
+    "short_name": "Bophelong (Botsh) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 739533,
+    "latitude": -27.6348,
+    "location": "POINT (27.18923 -27.63485)",
+    "longitude": 27.18923,
+    "name": "fs Bophelong (Kroonstad) Clinic",
+    "province": "Free State",
+    "short_name": "Bophelong (Kroon) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2600 k5 Kutloanons, Odendaalsrus",
+    "code": 383724,
+    "latitude": -27.8591,
+    "location": "POINT (26.77652 -27.85918)",
+    "longitude": 26.77652,
+    "name": "fs Bophelong (Odendaalsrus) Clinic",
+    "province": "Free State",
+    "short_name": "Bophelong (Oden) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7 East Street",
+    "code": 858751,
+    "latitude": -29.119,
+    "location": "POINT (25.41824 -29.11909)",
+    "longitude": 25.41824,
+    "name": "fs Bophelong (Petrusburg) CHC",
+    "province": "Free State",
+    "short_name": "Bophelong (Petrusb) CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "913 Mhlambe Street, Thebalihle, Vrede",
+    "code": 714442,
+    "latitude": -27.4183,
+    "location": "POINT (29.17362 -27.41833)",
+    "longitude": 29.17362,
+    "name": "fs Bophelong (Vrede) Clinic",
+    "province": "Free State",
+    "short_name": "Bophelong (Vrede) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "18121 Macholo Street",
+    "code": 807224,
+    "latitude": -27.969,
+    "location": "POINT (26.83533 -27.969)",
+    "longitude": 26.83533,
+    "name": "fs Bophelong (Welkom) Clinic",
+    "province": "Free State",
+    "short_name": "Bophelong (Welkom) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "99 School Street",
+    "code": 143642,
+    "latitude": -29.1962,
+    "location": "POINT (27.03003 -29.19623)",
+    "longitude": 27.03003,
+    "name": "fs Borwa Clinic",
+    "province": "Free State",
+    "short_name": "Borwa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Areyeng Street",
+    "code": 819960,
+    "latitude": -28.5504,
+    "location": "POINT (25.2516 -28.55042)",
+    "longitude": 25.2516,
+    "name": "fs Boshof Clinic",
+    "province": "Free State",
+    "short_name": "Boshof Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Van Riebeeck Street",
+    "code": 370351,
+    "latitude": -27.3925,
+    "location": "POINT (26.61942 -27.39253)",
+    "longitude": 26.61942,
+    "name": "fs Bothaville Clinic",
+    "province": "Free State",
+    "short_name": "Bothaville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "123 Purple Street, Botshabelo",
+    "code": 369842,
+    "latitude": -29.2041,
+    "location": "POINT (26.70412 -29.20417)",
+    "longitude": 26.70412,
+    "name": "fs Botshabelo Industrial Clinic",
+    "province": "Free State",
+    "short_name": "Botshabelo Industr Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "29 Kreuling Street",
+    "code": 689151,
+    "latitude": -27.6685,
+    "location": "POINT (27.1937 -27.66853)",
+    "longitude": 27.1937,
+    "name": "fs Brentpark Clinic",
+    "province": "Free State",
+    "short_name": "Brentpark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Adam Kok Street, Bronville",
+    "code": 619260,
+    "latitude": -27.9965,
+    "location": "POINT (26.81323 -27.99658)",
+    "longitude": 26.81323,
+    "name": "fs Bronville Clinic",
+    "province": "Free State",
+    "short_name": "Bronville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "88 Second Street, South",
+    "code": 472724,
+    "latitude": -28.91,
+    "location": "POINT (27.57423 -28.91005)",
+    "longitude": 27.57423,
+    "name": "fs Clocolan Clinic",
+    "province": "Free State",
+    "short_name": "Clocolan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 618324,
+    "latitude": -28.2914,
+    "location": "POINT (26.15387 -28.29143)",
+    "longitude": 26.15387,
+    "name": "fs DA Maleho Clinic",
+    "province": "Free State",
+    "short_name": "DA Maleho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "92 L Section, Botshabelo",
+    "code": 554342,
+    "latitude": -29.2326,
+    "location": "POINT (26.727579 -29.232602)",
+    "longitude": 26.727579,
+    "name": "fs Daniel Ngatane Clinic",
+    "province": "Free State",
+    "short_name": "Daniel Ngatane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "15 Main Street, Deneyville",
+    "code": 184460,
+    "latitude": -26.8911,
+    "location": "POINT (28.09717 -26.89112)",
+    "longitude": 28.09717,
+    "name": "fs Deneysville Clinic",
+    "province": "Free State",
+    "short_name": "Deneysville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tsuche Street Morojaneng",
+    "code": 487660,
+    "latitude": -29.5852,
+    "location": "POINT (26.66885 -29.58527)",
+    "longitude": 26.66885,
+    "name": "fs Dewetsdorp One Stop Clinic",
+    "province": "Free State",
+    "short_name": "Dewetsdorp 1Stop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 475724,
+    "latitude": -28.6282,
+    "location": "POINT (28.89662 -28.6282)",
+    "longitude": 28.89662,
+    "name": "fs Dinkweng Clinic",
+    "province": "Free State",
+    "short_name": "Dinkweng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 604742,
+    "latitude": -27.6499,
+    "location": "POINT (27.233323 -27.649981)",
+    "longitude": 27.233323,
+    "name": "fs Dr Che Guevara Clinic",
+    "province": "Free State",
+    "short_name": "Dr Che Guevara Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Wilgehof, Bloemfontein, 9301",
+    "code": 285624,
+    "latitude": -29.2079,
+    "location": "POINT (26.68177 -29.20793)",
+    "longitude": 26.68177,
+    "name": "fs Dr Pedro Memorial Clinic",
+    "province": "Free State",
+    "short_name": "Dr Pedro Memorial Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "100 Jacobsdal Road, Koffiefontein",
+    "code": 986433,
+    "latitude": -29.3933,
+    "location": "POINT (24.99175 -29.39337)",
+    "longitude": 24.99175,
+    "name": "fs Ethembeni Clinic",
+    "province": "Free State",
+    "short_name": "Ethembeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Phomolong Village, Tsesey",
+    "code": 641724,
+    "latitude": -28.6334,
+    "location": "POINT (28.86838 -28.63345)",
+    "longitude": 28.86838,
+    "name": "fs Eva Mota Clinic",
+    "province": "Free State",
+    "short_name": "Eva Mota Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "174 North Street",
+    "code": 889706,
+    "latitude": -28.9329,
+    "location": "POINT (27.0566 -28.93298)",
+    "longitude": 27.0566,
+    "name": "fs Excelsior Clinic",
+    "province": "Free State",
+    "short_name": "Excelsior Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Paul Roux",
+    "code": 542533,
+    "latitude": -28.299,
+    "location": "POINT (27.96736 -28.29903)",
+    "longitude": 27.96736,
+    "name": "fs Fateng Tse Ntsho Clinic",
+    "province": "Free State",
+    "short_name": "Fateng Tse Ntsho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Olivier Street",
+    "code": 885415,
+    "latitude": -29.7446,
+    "location": "POINT (25.30937 -29.74462)",
+    "longitude": 25.30937,
+    "name": "fs Fauresmith Clinic",
+    "province": "Free State",
+    "short_name": "Fauresmith Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8 Charlie Sutton",
+    "code": 917615,
+    "latitude": -29.1438,
+    "location": "POINT (26.1818 -29.14387)",
+    "longitude": 26.1818,
+    "name": "fs Fichardtpark Clinic",
+    "province": "Free State",
+    "short_name": "Fichardtpark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10 Volstruis Street",
+    "code": 275642,
+    "latitude": -30.593,
+    "location": "POINT (25.49487 -30.59307)",
+    "longitude": 25.49487,
+    "name": "fs Flora Clinic",
+    "province": "Free State",
+    "short_name": "Flora Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10 Nieuw Street",
+    "code": 475542,
+    "latitude": -27.2777,
+    "location": "POINT (28.49248 -27.27773)",
+    "longitude": 28.49248,
+    "name": "fs Frankfort Clinic",
+    "province": "Free State",
+    "short_name": "Frankfort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "36491 Makaota Road",
+    "code": 966215,
+    "latitude": -29.1738,
+    "location": "POINT (26.25365 -29.17383)",
+    "longitude": 26.25365,
+    "name": "fs Freedom Square Clinic",
+    "province": "Free State",
+    "short_name": "Freedom Square Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "83 Charles Street, Bloemfontein, 9300",
+    "code": 766460,
+    "latitude": -29.1147,
+    "location": "POINT (26.21535 -29.11475)",
+    "longitude": 26.21535,
+    "name": "fs Gabriel Dichabe Clinic",
+    "province": "Free State",
+    "short_name": "Gabriel Dichabe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Gaongalewe Location, Selosesha, Private Bag X707, Thaba Nchu, 9783",
+    "code": 611315,
+    "latitude": -29.1683,
+    "location": "POINT (26.80102 -29.16833)",
+    "longitude": 26.80102,
+    "name": "fs Gaongalelwe Clinic",
+    "province": "Free State",
+    "short_name": "Gaongalelwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8940 K9",
+    "code": 167715,
+    "latitude": -27.8552,
+    "location": "POINT (26.75535 -27.85525)",
+    "longitude": 26.75535,
+    "name": "fs Geneva Clinic",
+    "province": "Free State",
+    "short_name": "Geneva Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 771751,
+    "latitude": -27.9871,
+    "location": "POINT (26.82359 -27.98719)",
+    "longitude": 26.82359,
+    "name": "fs Hani Park Clinic",
+    "province": "Free State",
+    "short_name": "Hani Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "59 A Warden Street",
+    "code": 398406,
+    "latitude": -28.2726,
+    "location": "POINT (29.12667 -28.27262)",
+    "longitude": 29.12667,
+    "name": "fs Harrismith Clinic",
+    "province": "Free State",
+    "short_name": "Harrismith Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1961, Section N, Botshabelo",
+    "code": 318151,
+    "latitude": -29.2876,
+    "location": "POINT (26.71105 -29.28767)",
+    "longitude": 26.71105,
+    "name": "fs Harry Gwala (Botshabelo) Clinic",
+    "province": "Free State",
+    "short_name": "Harry Gwala (Bot) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "11176 Joe Modise Street",
+    "code": 582342,
+    "latitude": -26.85,
+    "location": "POINT (27.87897 -26.85004)",
+    "longitude": 27.87897,
+    "name": "fs Harry Gwala (Sasolburg) Clinic",
+    "province": "Free State",
+    "short_name": "Harry Gwala (Sasl) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Drbeicher Road",
+    "code": 269833,
+    "latitude": -29.1416,
+    "location": "POINT (26.24637 -29.14165)",
+    "longitude": 26.24637,
+    "name": "fs Heidedal CHC",
+    "province": "Free State",
+    "short_name": "Heidedal CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "PO Box 45",
+    "code": 296451,
+    "latitude": -27.2903,
+    "location": "POINT (27.9681 -27.29032)",
+    "longitude": 27.9681,
+    "name": "fs Heilbron Clinic",
+    "province": "Free State",
+    "short_name": "Heilbron Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4 Plein Street",
+    "code": 409842,
+    "latitude": -27.9724,
+    "location": "POINT (27.01997 -27.9724)",
+    "longitude": 27.01997,
+    "name": "fs Hennenman Clinic",
+    "province": "Free State",
+    "short_name": "Hennenman Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hill Street",
+    "code": 463315,
+    "latitude": -27.6631,
+    "location": "POINT (27.24027 -27.66313)",
+    "longitude": 27.24027,
+    "name": "fs Hill Street Clinic",
+    "province": "Free State",
+    "short_name": "Hill Street Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "734 Hlohlolwane, Clocolan",
+    "code": 991251,
+    "latitude": -28.9119,
+    "location": "POINT (27.55222 -28.91193)",
+    "longitude": 27.55222,
+    "name": "fs Hlohlolwane Clinic",
+    "province": "Free State",
+    "short_name": "Hlohlolwane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Muller Street",
+    "code": 427633,
+    "latitude": -29.5214,
+    "location": "POINT (27.14745 -29.52143)",
+    "longitude": 27.14745,
+    "name": "fs Hobhouse Clinic",
+    "province": "Free State",
+    "short_name": "Hobhouse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Prince George Road",
+    "code": 153615,
+    "latitude": -27.8323,
+    "location": "POINT (25.91473 -27.83235)",
+    "longitude": 25.91473,
+    "name": "fs Hoopstad Clinic",
+    "province": "Free State",
+    "short_name": "Hoopstad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8 Scholtz Street",
+    "code": 131224,
+    "latitude": -28.0817,
+    "location": "POINT (27.14397 -28.0817)",
+    "longitude": 27.14397,
+    "name": "fs Hope CHC",
+    "province": "Free State",
+    "short_name": "Hope CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1270 Muelli Street",
+    "code": 418551,
+    "latitude": -29.1681,
+    "location": "POINT (27.45985 -29.16813)",
+    "longitude": 27.45985,
+    "name": "fs Ikaheng Clinic",
+    "province": "Free State",
+    "short_name": "Ikaheng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "276 Hthunya Street",
+    "code": 844224,
+    "latitude": -28.7361,
+    "location": "POINT (26.10485 -28.73613)",
+    "longitude": 26.10485,
+    "name": "fs Ikgomotseng Clinic",
+    "province": "Free State",
+    "short_name": "Ikgomotseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2293 Intabazwe",
+    "code": 639324,
+    "latitude": -28.2529,
+    "location": "POINT (29.09673 -28.25295)",
+    "longitude": 29.09673,
+    "name": "fs Intabazwe Clinic",
+    "province": "Free State",
+    "short_name": "Intabazwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2191 M Section, Botshabelo",
+    "code": 143224,
+    "latitude": -29.2854,
+    "location": "POINT (26.71965 -29.2854)",
+    "longitude": 26.71965,
+    "name": "fs Itumeleng (Botshabelo) Clinic",
+    "province": "Free State",
+    "short_name": "Itumeleng (Botsha) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malherbe Street",
+    "code": 957606,
+    "latitude": -28.5225,
+    "location": "POINT (28.42125 -28.52257)",
+    "longitude": 28.42125,
+    "name": "fs Itumeleng (Clarens) Clinic",
+    "province": "Free State",
+    "short_name": "Itumeleng (Clarns) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 2264, Old Hospital Building, Jaggersfontein",
+    "code": 655833,
+    "latitude": -29.7669,
+    "location": "POINT (25.43485 -29.76693)",
+    "longitude": 25.43485,
+    "name": "fs Itumeleng (Jagersfontein) Clinic",
+    "province": "Free State",
+    "short_name": "Itumeleng (Jagers) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "54 Bouw Street",
+    "code": 378151,
+    "latitude": -29.1299,
+    "location": "POINT (24.77157 -29.12993)",
+    "longitude": 24.77157,
+    "name": "fs Jacobsdal Clinic",
+    "province": "Free State",
+    "short_name": "Jacobsdal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1913 E Section",
+    "code": 431242,
+    "latitude": -29.2572,
+    "location": "POINT (26.7139 -29.25728)",
+    "longitude": 26.7139,
+    "name": "fs Jazzman Mokhothu Clinic",
+    "province": "Free State",
+    "short_name": "Jazzman Mokhothu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6465 Mpumdonge",
+    "code": 417951,
+    "latitude": -27.3839,
+    "location": "POINT (26.65739 -27.38392)",
+    "longitude": 26.65739,
+    "name": "fs K-Maile Clinic",
+    "province": "Free State",
+    "short_name": "K-Maile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4450 Letebele Street",
+    "code": 862515,
+    "latitude": -29.1962,
+    "location": "POINT (26.24503 -29.19625)",
+    "longitude": 26.24503,
+    "name": "fs Kagisanong Clinic",
+    "province": "Free State",
+    "short_name": "Kagisanong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "16114 Lovedale Makeleketta",
+    "code": 628551,
+    "latitude": -28.5311,
+    "location": "POINT (27.00165 -28.53115)",
+    "longitude": 27.00165,
+    "name": "fs Kamohelo Clinic",
+    "province": "Free State",
+    "short_name": "Kamohelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9 Charl Cilliers Street, Vredefort",
+    "code": 880060,
+    "latitude": -27.0047,
+    "location": "POINT (27.36813 -27.00478)",
+    "longitude": 27.36813,
+    "name": "fs Kananelo CHC",
+    "province": "Free State",
+    "short_name": "Kananelo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4 Modutung Trust, Thaba Nchu",
+    "code": 827615,
+    "latitude": -28.9888,
+    "location": "POINT (26.80427 -28.98888)",
+    "longitude": 26.80427,
+    "name": "fs Kgalala Clinic",
+    "province": "Free State",
+    "short_name": "Kgalala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Factory Road, Kwakwatsi, Koppies, 9540",
+    "code": 121906,
+    "latitude": -27.2342,
+    "location": "POINT (27.58748 -27.2342)",
+    "longitude": 27.58748,
+    "name": "fs Kganya CHC",
+    "province": "Free State",
+    "short_name": "Kganya CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rapuli Street, Edenville, 9535",
+    "code": 804724,
+    "latitude": -27.5553,
+    "location": "POINT (27.66367 -27.55538)",
+    "longitude": 27.66367,
+    "name": "fs Kgotso Clinic",
+    "province": "Free State",
+    "short_name": "Kgotso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Maile Street, Kgotsong",
+    "code": 922215,
+    "latitude": -27.3902,
+    "location": "POINT (26.64423 -27.3902)",
+    "longitude": 26.64423,
+    "name": "fs Kgotsong (Bothaville) Clinic",
+    "province": "Free State",
+    "short_name": "Kgotsong (Botha) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "15590 Constantia Road",
+    "code": 477351,
+    "latitude": -27.97,
+    "location": "POINT (26.8207 -27.97002)",
+    "longitude": 26.8207,
+    "name": "fs Kgotsong (Welkom) Clinic",
+    "province": "Free State",
+    "short_name": "Kgotsong (Welkom) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 566142,
+    "latitude": -28.3065,
+    "location": "POINT (28.97763 -28.30653)",
+    "longitude": 28.97763,
+    "name": "fs Khosatsana Masetjhaba Clinic",
+    "province": "Free State",
+    "short_name": "Khosatsana Masetjhaba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1256 Makoko Drive",
+    "code": 544324,
+    "latitude": -28.1318,
+    "location": "POINT (26.90292 -28.13183)",
+    "longitude": 26.90292,
+    "name": "fs Khotalong Clinic",
+    "province": "Free State",
+    "short_name": "Khotalong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "403 Moemaneng, Marquard",
+    "code": 472624,
+    "latitude": -28.678,
+    "location": "POINT (27.41432 -28.67808)",
+    "longitude": 27.41432,
+    "name": "fs Kokelong Clinic",
+    "province": "Free State",
+    "short_name": "Kokelong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "402 Cetawana Street",
+    "code": 742106,
+    "latitude": -28.3312,
+    "location": "POINT (28.69812 -28.33123)",
+    "longitude": 28.69812,
+    "name": "fs Kopanong Clinic",
+    "province": "Free State",
+    "short_name": "Kopanong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "23 Joubert Street, Ladybrand",
+    "code": 636742,
+    "latitude": -29.191,
+    "location": "POINT (27.45902 -29.19107)",
+    "longitude": 27.45902,
+    "name": "fs Ladybrand Clinic",
+    "province": "Free State",
+    "short_name": "Ladybrand Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Boerweef",
+    "code": 810051,
+    "latitude": -29.0978,
+    "location": "POINT (26.15587 -29.0978)",
+    "longitude": 26.15587,
+    "name": "fs Langenhovenpark Clinic",
+    "province": "Free State",
+    "short_name": "Langenhovenpark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1154 Lebatla",
+    "code": 786415,
+    "latitude": -29.7205,
+    "location": "POINT (27.02715 -29.72055)",
+    "longitude": 27.02715,
+    "name": "fs Lebohang Clinic",
+    "province": "Free State",
+    "short_name": "Lebohang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 South Street",
+    "code": 268533,
+    "latitude": -30.4978,
+    "location": "POINT (25.97982 -30.49782)",
+    "longitude": 25.97982,
+    "name": "fs Lephoi Clinic",
+    "province": "Free State",
+    "short_name": "Lephoi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2400 Tagg Street",
+    "code": 212260,
+    "latitude": -27.7808,
+    "location": "POINT (26.65683 -27.78088)",
+    "longitude": 26.65683,
+    "name": "fs Leratong Clinic",
+    "province": "Free State",
+    "short_name": "Leratong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "420 Eratswana",
+    "code": 268224,
+    "latitude": -28.0277,
+    "location": "POINT (27.84397 -28.02775)",
+    "longitude": 27.84397,
+    "name": "fs Leratswana Clinic",
+    "province": "Free State",
+    "short_name": "Leratswana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8871 Mankie Street",
+    "code": 611451,
+    "latitude": -27.6409,
+    "location": "POINT (27.19232 -27.64097)",
+    "longitude": 27.19232,
+    "name": "fs Lesedi CHC",
+    "province": "Free State",
+    "short_name": "Lesedi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "914 Tooanesti Lindley",
+    "code": 427924,
+    "latitude": -27.8815,
+    "location": "POINT (27.90737 -27.88157)",
+    "longitude": 27.90737,
+    "name": "fs Leseding Clinic",
+    "province": "Free State",
+    "short_name": "Leseding Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "28 Portein Street, Lindey",
+    "code": 774133,
+    "latitude": -27.8813,
+    "location": "POINT (27.91588 -27.88138)",
+    "longitude": 27.91588,
+    "name": "fs Lindley Clinic",
+    "province": "Free State",
+    "short_name": "Lindley Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Nanabessie",
+    "code": 749415,
+    "latitude": -29.1778,
+    "location": "POINT (26.17435 -29.17788)",
+    "longitude": 26.17435,
+    "name": "fs Lourierpark Clinic",
+    "province": "Free State",
+    "short_name": "Lourierpark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "25 Combrinck",
+    "code": 566151,
+    "latitude": -29.7499,
+    "location": "POINT (24.78632 -29.74997)",
+    "longitude": 24.78632,
+    "name": "fs Luckhoff Clinic",
+    "province": "Free State",
+    "short_name": "Luckhoff Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lusaka Clinic",
+    "code": 862615,
+    "latitude": -28.4166,
+    "location": "POINT (26.69797 -28.41668)",
+    "longitude": 26.69797,
+    "name": "fs Lusaka Clinic",
+    "province": "Free State",
+    "short_name": "Lusaka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Singonzo",
+    "code": 115451,
+    "latitude": -29.1792,
+    "location": "POINT (26.24293 -29.17923)",
+    "longitude": 26.24293,
+    "name": "fs MUCPP CHC",
+    "province": "Free State",
+    "short_name": "MUCPP CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Private Bag X824 Witsieshoek",
+    "code": 717342,
+    "latitude": -28.5193,
+    "location": "POINT (28.80137 -28.51935)",
+    "longitude": 28.80137,
+    "name": "fs Ma-haig Clinic",
+    "province": "Free State",
+    "short_name": "Ma-haig Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3047 Bethani Drive, Selosesha",
+    "code": 724115,
+    "latitude": -29.1989,
+    "location": "POINT (26.81338 -29.19897)",
+    "longitude": 26.81338,
+    "name": "fs Mafane Clinic",
+    "province": "Free State",
+    "short_name": "Mafane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mampoi Street",
+    "code": 228633,
+    "latitude": -28.6144,
+    "location": "POINT (28.82157 -28.61448)",
+    "longitude": 28.82157,
+    "name": "fs Makeneng Clinic",
+    "province": "Free State",
+    "short_name": "Makeneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 De Bult Phuthaditjaba",
+    "code": 426215,
+    "latitude": -28.5508,
+    "location": "POINT (28.79135 -28.55087)",
+    "longitude": 28.79135,
+    "name": "fs Makhalaneng Clinic",
+    "province": "Free State",
+    "short_name": "Makhalaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 620260,
+    "latitude": -28.5346,
+    "location": "POINT (28.8882 -28.53465)",
+    "longitude": 28.8882,
+    "name": "fs Makoane Clinic",
+    "province": "Free State",
+    "short_name": "Makoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 730560,
+    "latitude": -28.5585,
+    "location": "POINT (28.72104 -28.55854)",
+    "longitude": 28.72104,
+    "name": "fs Malesoana Clinic",
+    "province": "Free State",
+    "short_name": "Malesoana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "427 B Section",
+    "code": 915851,
+    "latitude": -29.2547,
+    "location": "POINT (26.73198 -29.25477)",
+    "longitude": 26.73198,
+    "name": "fs Maletsatsi Mabaso Clinic",
+    "province": "Free State",
+    "short_name": "Maletsatsi Mabaso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "569 Louis Trichardt Square",
+    "code": 117742,
+    "latitude": -28.6668,
+    "location": "POINT (27.42652 -28.66682)",
+    "longitude": 27.42652,
+    "name": "fs Mamello CHC",
+    "province": "Free State",
+    "short_name": "Mamello CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "464 Booysen Street",
+    "code": 447724,
+    "latitude": -30.0341,
+    "location": "POINT (25.78073 -30.03416)",
+    "longitude": 25.78073,
+    "name": "fs Mamello Clinic",
+    "province": "Free State",
+    "short_name": "Mamello (Tromp) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1956 Manyatseng Mokotjomela Street",
+    "code": 267515,
+    "latitude": -29.1724,
+    "location": "POINT (27.4656 -29.1724)",
+    "longitude": 27.4656,
+    "name": "fs Manyatseng Clinic",
+    "province": "Free State",
+    "short_name": "Manyatseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Marakong",
+    "code": 343506,
+    "latitude": -28.5652,
+    "location": "POINT (28.84707 -28.56525)",
+    "longitude": 28.84707,
+    "name": "fs Marakong Clinic",
+    "province": "Free State",
+    "short_name": "Marakong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1063 Segalo Streeet",
+    "code": 577133,
+    "latitude": -28.6907,
+    "location": "POINT (26.46281 -28.6907)",
+    "longitude": 26.46281,
+    "name": "fs Marantha Clinic",
+    "province": "Free State",
+    "short_name": "Marantha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2445 Zone 5 Meqheleng",
+    "code": 220260,
+    "latitude": -28.9043,
+    "location": "POINT (27.88332 -28.90432)",
+    "longitude": 27.88332,
+    "name": "fs Masebabatso Clinic",
+    "province": "Free State",
+    "short_name": "Masebabatso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1246 Columbong Street",
+    "code": 762651,
+    "latitude": -28.4098,
+    "location": "POINT (26.70712 -28.40988)",
+    "longitude": 26.70712,
+    "name": "fs Masilo Clinic",
+    "province": "Free State",
+    "short_name": "Masilo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8270 Mokoena Street",
+    "code": 470151,
+    "latitude": -27.9673,
+    "location": "POINT (26.79838 -27.96738)",
+    "longitude": 26.79838,
+    "name": "fs Matjhabeng Clinic",
+    "province": "Free State",
+    "short_name": "Matjhabeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 333, Matlakeng Zastron",
+    "code": 116124,
+    "latitude": -30.296,
+    "location": "POINT (27.09437 -30.29603)",
+    "longitude": 27.09437,
+    "name": "fs Matlakeng Clinic",
+    "province": "Free State",
+    "short_name": "Matlakeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 412560,
+    "latitude": -28.6015,
+    "location": "POINT (28.80095 -28.60155)",
+    "longitude": 28.80095,
+    "name": "fs Matsieng Clinic",
+    "province": "Free State",
+    "short_name": "Matsieng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Protea Street",
+    "code": 514833,
+    "latitude": -29.1903,
+    "location": "POINT (27.43953 -29.19032)",
+    "longitude": 27.43953,
+    "name": "fs Mauersnek Clinic",
+    "province": "Free State",
+    "short_name": "Mauersnek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "366 Meloding Way",
+    "code": 773851,
+    "latitude": -28.1299,
+    "location": "POINT (26.89767 -28.12995)",
+    "longitude": 26.89767,
+    "name": "fs Meloding Clinic",
+    "province": "Free State",
+    "short_name": "Meloding Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "309 Eeufees Street",
+    "code": 533442,
+    "latitude": -27.6823,
+    "location": "POINT (29.56325 -27.68239)",
+    "longitude": 29.56325,
+    "name": "fs Memel Clinic",
+    "province": "Free State",
+    "short_name": "Memel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1715 Meqheleng",
+    "code": 453533,
+    "latitude": -28.8898,
+    "location": "POINT (27.87712 -28.88982)",
+    "longitude": 27.87712,
+    "name": "fs Meqheleng Clinic",
+    "province": "Free State",
+    "short_name": "Meqheleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "931 Main Street",
+    "code": 463624,
+    "latitude": -26.9791,
+    "location": "POINT (28.21113 -26.97912)",
+    "longitude": 28.21113,
+    "name": "fs Metsimaholo Clinic",
+    "province": "Free State",
+    "short_name": "Metsimaholo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Voster Avenue, Bloemfontein",
+    "code": 944324,
+    "latitude": -29.1507,
+    "location": "POINT (26.24172 -29.15072)",
+    "longitude": 26.24172,
+    "name": "fs Mmabana Clinic",
+    "province": "Free State",
+    "short_name": "Mmabana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "548 Mmamahabane",
+    "code": 714824,
+    "latitude": -28.0917,
+    "location": "POINT (27.14768 -28.09173)",
+    "longitude": 27.14768,
+    "name": "fs Mmamahabane Clinic",
+    "province": "Free State",
+    "short_name": "Mmamahabane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mokoena",
+    "code": 848642,
+    "latitude": -29.1939,
+    "location": "POINT (26.84069 -29.19398)",
+    "longitude": 26.84069,
+    "name": "fs Mokwena Clinic",
+    "province": "Free State",
+    "short_name": "Mokwena Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3221-3222h Section",
+    "code": 673251,
+    "latitude": -29.2109,
+    "location": "POINT (26.71927 -29.21092)",
+    "longitude": 26.71927,
+    "name": "fs Molefi Tau Clinic",
+    "province": "Free State",
+    "short_name": "Molefi Tau Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 311215,
+    "latitude": -28.5656,
+    "location": "POINT (28.7449 -28.56567)",
+    "longitude": 28.7449,
+    "name": "fs Monontsha Clinic",
+    "province": "Free State",
+    "short_name": "Monontsha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mphatlalatsane Village",
+    "code": 594342,
+    "latitude": -28.5093,
+    "location": "POINT (28.83678 -28.50933)",
+    "longitude": 28.83678,
+    "name": "fs Mphatlalatsane Clinic",
+    "province": "Free State",
+    "short_name": "Mphatlalatsane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "825 Ext 1",
+    "code": 346351,
+    "latitude": -28.1977,
+    "location": "POINT (28.32575 -28.19772)",
+    "longitude": 28.32575,
+    "name": "fs Mphohadi Clinic",
+    "province": "Free State",
+    "short_name": "Mphohadi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Manguang Village",
+    "code": 345224,
+    "latitude": -28.5836,
+    "location": "POINT (28.82963 -28.58368)",
+    "longitude": 28.82963,
+    "name": "fs Namahali Clinic",
+    "province": "Free State",
+    "short_name": "Namahali Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Rok Avenue, Willows",
+    "code": 456233,
+    "latitude": -29.1281,
+    "location": "POINT (26.20703 -29.12818)",
+    "longitude": 26.20703,
+    "name": "fs National District Hospital Gateway Clinic",
+    "province": "Free State",
+    "short_name": "National Dis Hosp Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2049 Chaba Street",
+    "code": 562851,
+    "latitude": -29.731,
+    "location": "POINT (25.94157 -29.73105)",
+    "longitude": 25.94157,
+    "name": "fs Nelson Mandela Clinic",
+    "province": "Free State",
+    "short_name": "Nelson Mandela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "869 Moemone, Marquard",
+    "code": 238224,
+    "latitude": -28.6765,
+    "location": "POINT (27.42015 -28.67659)",
+    "longitude": 27.42015,
+    "name": "fs Nothnagel Clinic",
+    "province": "Free State",
+    "short_name": "Nothnagel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 364515,
+    "latitude": -28.5908,
+    "location": "POINT (28.78217 -28.5908)",
+    "longitude": 28.78217,
+    "name": "fs Nthabiseng Clinic",
+    "province": "Free State",
+    "short_name": "Nthabiseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 738051,
+    "latitude": -28.328,
+    "location": "POINT (27.605 -28.328)",
+    "longitude": 27.605,
+    "name": "fs OR Tambo (Senekal) Clinic",
+    "province": "Free State",
+    "short_name": "OR Tambo (Senekal) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "12605 Leratsong, Virginia",
+    "code": 136324,
+    "latitude": -28.1496,
+    "location": "POINT (26.88734 -28.14963)",
+    "longitude": 26.887340000000002,
+    "name": "fs OR Tambo Clinic",
+    "province": "Free State",
+    "short_name": "OR Tambo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rembrand Crescent, Heidedal",
+    "code": 596160,
+    "latitude": -29.1445,
+    "location": "POINT (26.25227 -29.14452)",
+    "longitude": 26.25227,
+    "name": "fs Opkoms Clinic",
+    "province": "Free State",
+    "short_name": "Opkoms Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "69 Skools Street",
+    "code": 175333,
+    "latitude": -29.4135,
+    "location": "POINT (24.74483 -29.41355)",
+    "longitude": 24.74483,
+    "name": "fs Oppermansgronde Clinic",
+    "province": "Free State",
+    "short_name": "Oppermansgronde Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8 Spies Street",
+    "code": 273551,
+    "latitude": -27.1989,
+    "location": "POINT (26.94977 -27.19895)",
+    "longitude": 26.94977,
+    "name": "fs PAX CHC",
+    "province": "Free State",
+    "short_name": "PAX CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 515624,
+    "latitude": -28.5552,
+    "location": "POINT (28.77695 -28.55523)",
+    "longitude": 28.77695,
+    "name": "fs Paballong Clinic",
+    "province": "Free State",
+    "short_name": "Paballong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Liclantic Street",
+    "code": 327333,
+    "latitude": -26.8993,
+    "location": "POINT (27.45715 -26.89938)",
+    "longitude": 27.45715,
+    "name": "fs Parys Clinic",
+    "province": "Free State",
+    "short_name": "Parys Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Voortrekker Street",
+    "code": 472824,
+    "latitude": -28.296,
+    "location": "POINT (27.95555 -28.29605)",
+    "longitude": 27.95555,
+    "name": "fs Paul Roux Clinic",
+    "province": "Free State",
+    "short_name": "Paul Roux Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "448/449 Petsana",
+    "code": 749924,
+    "latitude": -27.804,
+    "location": "POINT (28.44652 -27.804)",
+    "longitude": 28.44652,
+    "name": "fs Petsana Clinic",
+    "province": "Free State",
+    "short_name": "Petsana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Church Street, Bultfontein",
+    "code": 858033,
+    "latitude": -28.3007,
+    "location": "POINT (26.14848 -28.3007)",
+    "longitude": 26.14848,
+    "name": "fs Phahameng (Bultfontein) Clinic",
+    "province": "Free State",
+    "short_name": "Phahameng (Bult) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3349 Main Street",
+    "code": 371924,
+    "latitude": -27.2549,
+    "location": "POINT (28.51312 -27.25493)",
+    "longitude": 28.51312,
+    "name": "fs Phahameng (Frankfort) Clinic",
+    "province": "Free State",
+    "short_name": "Phahameng (Frank) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1685 Phomotseranyane Street",
+    "code": 553033,
+    "latitude": -27.8565,
+    "location": "POINT (26.77053 -27.85656)",
+    "longitude": 26.77053,
+    "name": "fs Phedisanang Clinic",
+    "province": "Free State",
+    "short_name": "Phedisanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1528 Ext 3 Qalabotjha Villiers",
+    "code": 833442,
+    "latitude": -27.0212,
+    "location": "POINT (28.62755 -27.02127)",
+    "longitude": 28.62755,
+    "name": "fs Phedisong Clinic",
+    "province": "Free State",
+    "short_name": "Phedisong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 De Villers Street, Cornelia",
+    "code": 669342,
+    "latitude": -27.2285,
+    "location": "POINT (28.85073 -27.22852)",
+    "longitude": 28.85073,
+    "name": "fs Phekolong (Cornelia) Clinic",
+    "province": "Free State",
+    "short_name": "Phekolong (Cornel) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1018 Phekolong Street, Reddersburg",
+    "code": 638115,
+    "latitude": -29.6528,
+    "location": "POINT (26.16647 -29.65283)",
+    "longitude": 26.16647,
+    "name": "fs Phekolong (Reddersburg) Clinic",
+    "province": "Free State",
+    "short_name": "Phekolong (Redd) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 240442,
+    "latitude": -29.3677,
+    "location": "POINT (26.8368 -29.36777)",
+    "longitude": 26.8368,
+    "name": "fs Phetogo Clinic",
+    "province": "Free State",
+    "short_name": "Phetogo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1217 Philani Street",
+    "code": 476215,
+    "latitude": -27.2679,
+    "location": "POINT (28.5048 -27.26797)",
+    "longitude": 28.5048,
+    "name": "fs Philani Clinic",
+    "province": "Free State",
+    "short_name": "Philani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "67 Voortrekker Street",
+    "code": 310651,
+    "latitude": -30.2663,
+    "location": "POINT (25.27514 -30.26634)",
+    "longitude": 25.27514,
+    "name": "fs Philippolis Clinic",
+    "province": "Free State",
+    "short_name": "Phillippolis Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "914 Zone 2 Meqheleng",
+    "code": 245515,
+    "latitude": -28.8943,
+    "location": "POINT (27.88183 -28.89435)",
+    "longitude": 27.88183,
+    "name": "fs Phomolong (Ficksburg) Clinic",
+    "province": "Free State",
+    "short_name": "Phomolong (Ficksb) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1274 Molefi Street",
+    "code": 372642,
+    "latitude": -28.014,
+    "location": "POINT (27.08118 -28.014)",
+    "longitude": 27.08118,
+    "name": "fs Phomolong (Hennenman) Clinic",
+    "province": "Free State",
+    "short_name": "Phomolong (Henn) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mampoi Street",
+    "code": 706215,
+    "latitude": -28.5201,
+    "location": "POINT (28.82062 -28.52013)",
+    "longitude": 28.82062,
+    "name": "fs Phuthaditjhaba Clinic",
+    "province": "Free State",
+    "short_name": "Phuthaditjhaba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1717 Section L",
+    "code": 660224,
+    "latitude": -29.2716,
+    "location": "POINT (26.72317 -29.27168)",
+    "longitude": 26.72317,
+    "name": "fs Potlako Motlohi Clinic",
+    "province": "Free State",
+    "short_name": "Potlako Motlohi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2550 U Section",
+    "code": 642824,
+    "latitude": -29.2614,
+    "location": "POINT (26.69123 -29.26142)",
+    "longitude": 26.69123,
+    "name": "fs Pule Sefatsa Clinic",
+    "province": "Free State",
+    "short_name": "Pule Sefatsa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "738 Gamede Street",
+    "code": 516733,
+    "latitude": -27.0204,
+    "location": "POINT (28.62502 -27.02045)",
+    "longitude": 28.62502,
+    "name": "fs Qalabotjha Clinic",
+    "province": "Free State",
+    "short_name": "Qalabotjha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 817551,
+    "latitude": -28.5228,
+    "location": "POINT (28.85508 -28.52288)",
+    "longitude": 28.85508,
+    "name": "fs Qholaqhwe Clinic",
+    "province": "Free State",
+    "short_name": "Qholaqhwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mokoena Street",
+    "code": 763315,
+    "latitude": -27.5534,
+    "location": "POINT (28.51323 -27.55347)",
+    "longitude": 28.51323,
+    "name": "fs Rainbow Clinic",
+    "province": "Free State",
+    "short_name": "Rainbow Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "48 Cobalt Road",
+    "code": 461015,
+    "latitude": -28.0624,
+    "location": "POINT (26.86415 -28.06243)",
+    "longitude": 26.86415,
+    "name": "fs Rearabetsoe (Virginia) Clinic",
+    "province": "Free State",
+    "short_name": "Rearabetsoe (Virg) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Pdgieter and Hetzog Street",
+    "code": 616851,
+    "latitude": -27.6541,
+    "location": "POINT (28.12848 -27.65412)",
+    "longitude": 28.12848,
+    "name": "fs Rearabetswe Clinic",
+    "province": "Free State",
+    "short_name": "Rearabetswe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "337, Refengkgotso, Deneysville",
+    "code": 840206,
+    "latitude": -26.8934,
+    "location": "POINT (28.07162 -26.89348)",
+    "longitude": 28.07162,
+    "name": "fs Refengkgotso Clinic",
+    "province": "Free State",
+    "short_name": "Refengkgotso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mail Street",
+    "code": 715342,
+    "latitude": -28.6206,
+    "location": "POINT (28.19552 -28.62067)",
+    "longitude": 28.19552,
+    "name": "fs Reitumetse Clinic",
+    "province": "Free State",
+    "short_name": "Reitumetse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 Arne Street",
+    "code": 588124,
+    "latitude": -27.803,
+    "location": "POINT (28.41965 -27.80303)",
+    "longitude": 28.41965,
+    "name": "fs Reitz Clinic",
+    "province": "Free State",
+    "short_name": "Reitz Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mbhethe Street",
+    "code": 279451,
+    "latitude": -27.2717,
+    "location": "POINT (27.97537 -27.27178)",
+    "longitude": 27.97537,
+    "name": "fs Relebohile (Heilbron) Clinic",
+    "province": "Free State",
+    "short_name": "Relebohile (Heil) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "109 Mautse, Rosendal",
+    "code": 705515,
+    "latitude": -28.5084,
+    "location": "POINT (27.92272 -28.50847)",
+    "longitude": 27.922719999999998,
+    "name": "fs Relebohile (Rosendal) Clinic",
+    "province": "Free State",
+    "short_name": "Relebohile (Rosen) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "900 Kumalo Street",
+    "code": 498342,
+    "latitude": -27.0021,
+    "location": "POINT (27.37608 -27.00213)",
+    "longitude": 27.37608,
+    "name": "fs Relebohile (Vredefort) Clinic",
+    "province": "Free State",
+    "short_name": "Relebohile (Vrdef) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8 Schoeman Street",
+    "code": 364551,
+    "latitude": -27.9545,
+    "location": "POINT (26.72002 -27.95453)",
+    "longitude": 26.72002,
+    "name": "fs Rheederspark Clinic",
+    "province": "Free State",
+    "short_name": "Rheederspark Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "50 Mclean Street, Riebeekstad",
+    "code": 469742,
+    "latitude": -27.9335,
+    "location": "POINT (26.81187 -27.93358)",
+    "longitude": 26.81187,
+    "name": "fs Riebeeckstad Clinic",
+    "province": "Free State",
+    "short_name": "Riebeeckstad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Private Bag X824 Witslehoil",
+    "code": 426751,
+    "latitude": -28.5437,
+    "location": "POINT (28.81295 -28.54374)",
+    "longitude": 28.81295,
+    "name": "fs Riverside Clinic",
+    "province": "Free State",
+    "short_name": "Riverside Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Van Staden Street",
+    "code": 307115,
+    "latitude": -27.2747,
+    "location": "POINT (27.96498 -27.27479)",
+    "longitude": 27.96498,
+    "name": "fs Sandersville Clinic",
+    "province": "Free State",
+    "short_name": "Sandersville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10 Fichardt Street",
+    "code": 280015,
+    "latitude": -26.8179,
+    "location": "POINT (27.8277 -26.81798)",
+    "longitude": 27.8277,
+    "name": "fs Sasolburg Clinic",
+    "province": "Free State",
+    "short_name": "Sasolburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "158 Schonkenville",
+    "code": 817760,
+    "latitude": -26.9332,
+    "location": "POINT (27.46278 -26.93327)",
+    "longitude": 27.46278,
+    "name": "fs Schonkenville Clinic",
+    "province": "Free State",
+    "short_name": "Schonkenville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1152 Wangtlwang",
+    "code": 816206,
+    "latitude": -27.9455,
+    "location": "POINT (27.55407 -27.94558)",
+    "longitude": 27.55407,
+    "name": "fs Sedibeng sa Bophelo Clinic",
+    "province": "Free State",
+    "short_name": "Sedibeng sa Bophel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hill Street",
+    "code": 338533,
+    "latitude": -27.6541,
+    "location": "POINT (27.21023 -27.65412)",
+    "longitude": 27.21023,
+    "name": "fs Seeisoville Clinic",
+    "province": "Free State",
+    "short_name": "Seeisoville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "666 Emily Hobhouse",
+    "code": 811651,
+    "latitude": -30.2591,
+    "location": "POINT (25.70734 -30.25916)",
+    "longitude": 25.70734,
+    "name": "fs Sehularo Tau Clinic",
+    "province": "Free State",
+    "short_name": "Sehularo Tau Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thibella Village, Gothibella Stadium",
+    "code": 323851,
+    "latitude": -28.6487,
+    "location": "POINT (28.85232 -28.64879)",
+    "longitude": 28.85232,
+    "name": "fs Sekamotho Mota Clinic",
+    "province": "Free State",
+    "short_name": "Sekamotho Mota Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5 Noord Street",
+    "code": 856933,
+    "latitude": -28.3279,
+    "location": "POINT (27.60572 -28.32798)",
+    "longitude": 27.60572,
+    "name": "fs Senekal Clinic",
+    "province": "Free State",
+    "short_name": "Senekal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2263 Phiridona Heilbron",
+    "code": 587324,
+    "latitude": -27.2661,
+    "location": "POINT (27.97763 -27.26617)",
+    "longitude": 27.97763,
+    "name": "fs Sizabantu Clinic",
+    "province": "Free State",
+    "short_name": "Sizabantu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "40 Bloem Street, Ficksburg",
+    "code": 741551,
+    "latitude": -28.8748,
+    "location": "POINT (27.87588 -28.87487)",
+    "longitude": 27.87588,
+    "name": "fs Soetwater Clinic",
+    "province": "Free State",
+    "short_name": "Soetwater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2009 Section C",
+    "code": 629751,
+    "latitude": -29.243,
+    "location": "POINT (26.71661 -29.24308)",
+    "longitude": 26.71661,
+    "name": "fs TS Mahloko Clinic",
+    "province": "Free State",
+    "short_name": "TS Mahloko Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tebang Village",
+    "code": 318251,
+    "latitude": -28.526,
+    "location": "POINT (28.87238 -28.52605)",
+    "longitude": 28.87238,
+    "name": "fs Tebang Clinic",
+    "province": "Free State",
+    "short_name": "Tebang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 856551,
+    "latitude": -28.5982,
+    "location": "POINT (28.88368 -28.59823)",
+    "longitude": 28.88368,
+    "name": "fs Thaba Bosiu Clinic",
+    "province": "Free State",
+    "short_name": "Thaba Bosiu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "375 Van Riebeck Street",
+    "code": 974624,
+    "latitude": -29.218,
+    "location": "POINT (26.84782 -29.21808)",
+    "longitude": 26.84782,
+    "name": "fs Thaba Nchu Clinic",
+    "province": "Free State",
+    "short_name": "Thaba Nchu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thabang Village",
+    "code": 375206,
+    "latitude": -28.6094,
+    "location": "POINT (28.83058 -28.60945)",
+    "longitude": 28.83058,
+    "name": "fs Thabang Clinic",
+    "province": "Free State",
+    "short_name": "Thabang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 232424,
+    "latitude": -26.9237,
+    "location": "POINT (27.477097 -26.923778)",
+    "longitude": 27.477097,
+    "name": "fs Thabang Society Clinic",
+    "province": "Free State",
+    "short_name": "Thabang Society Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hospital Road, Olrus",
+    "code": 303415,
+    "latitude": -27.964,
+    "location": "POINT (26.79163 -27.96402)",
+    "longitude": 26.79163,
+    "name": "fs Thabong Clinic",
+    "province": "Free State",
+    "short_name": "Thabong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Douglas Street",
+    "code": 348406,
+    "latitude": -30.214,
+    "location": "POINT (26.53563 -30.21405)",
+    "longitude": 26.53563,
+    "name": "fs Thembalethu Clinic",
+    "province": "Free State",
+    "short_name": "Thembalethu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1462 Ezenzelem Warden",
+    "code": 766715,
+    "latitude": -27.8363,
+    "location": "POINT (28.97803 -27.83635)",
+    "longitude": 28.97803,
+    "name": "fs Thusa Bophelo Clinic",
+    "province": "Free State",
+    "short_name": "Thusa Bophelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3665 Constantia",
+    "code": 861306,
+    "latitude": -27.6487,
+    "location": "POINT (27.19015 -27.64873)",
+    "longitude": 27.19015,
+    "name": "fs Thusanong (Kroonstad) Clinic",
+    "province": "Free State",
+    "short_name": "Thusanong (Kroon) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tumahole",
+    "code": 654606,
+    "latitude": -26.9201,
+    "location": "POINT (27.48483 -26.92015)",
+    "longitude": 27.48483,
+    "name": "fs Thusanong (Parys) Clinic",
+    "province": "Free State",
+    "short_name": "Thusanong (Parys) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Me M5910 Chris Hani Street",
+    "code": 246642,
+    "latitude": -26.8449,
+    "location": "POINT (27.8645 -26.84497)",
+    "longitude": 27.8645,
+    "name": "fs Thusanong (Sasolburg) Clinic",
+    "province": "Free State",
+    "short_name": "Thusanong (Sasol) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Moshoeshoe Road",
+    "code": 258806,
+    "latitude": -29.1847,
+    "location": "POINT (26.23462 -29.18472)",
+    "longitude": 26.23462,
+    "name": "fs Thusong Clinic",
+    "province": "Free State",
+    "short_name": "Thusong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 894315,
+    "latitude": -29.1204,
+    "location": "POINT (26.78943 -29.12047)",
+    "longitude": 26.78943,
+    "name": "fs Tiger River Clinic",
+    "province": "Free State",
+    "short_name": "Tiger River Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Moeding Village",
+    "code": 658124,
+    "latitude": -28.6097,
+    "location": "POINT (28.85632 -28.60973)",
+    "longitude": 28.85632,
+    "name": "fs Tina Moloi Clinic",
+    "province": "Free State",
+    "short_name": "Tina Moloi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3999 Tayler Park, Zamdela",
+    "code": 263315,
+    "latitude": -26.8444,
+    "location": "POINT (27.85574 -26.84443)",
+    "longitude": 27.85574,
+    "name": "fs Tsatsi SPS Clinic",
+    "province": "Free State",
+    "short_name": "Tsatsi SPS Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Private Bag X824, Witsieshoek",
+    "code": 648433,
+    "latitude": -28.5858,
+    "location": "POINT (28.77227 -28.58585)",
+    "longitude": 28.77227,
+    "name": "fs Tseki Clinic",
+    "province": "Free State",
+    "short_name": "Tseki Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2853 Gelukwaarts Road",
+    "code": 423442,
+    "latitude": -27.6388,
+    "location": "POINT (27.17403 -27.63885)",
+    "longitude": 27.17403,
+    "name": "fs Tshepong (Kroonstad) Clinic",
+    "province": "Free State",
+    "short_name": "Tshepong (Kroon) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshepong",
+    "code": 113042,
+    "latitude": -28.8401,
+    "location": "POINT (26.76212 -28.8401)",
+    "longitude": 26.76212,
+    "name": "fs Tshepong (Verkeerdevlei) Clinic",
+    "province": "Free State",
+    "short_name": "Tshepong (Verkeer) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "26128 Ndaki Street, Thabong, Welkom",
+    "code": 420815,
+    "latitude": -27.9577,
+    "location": "POINT (26.83607 -27.95773)",
+    "longitude": 26.83607,
+    "name": "fs Tshepong (Welkom) Clinic",
+    "province": "Free State",
+    "short_name": "Tshepong (Welkom) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 669033,
+    "latitude": -28.3243,
+    "location": "POINT (28.99467 -28.32433)",
+    "longitude": 28.99467,
+    "name": "fs Tshiame B Clinic",
+    "province": "Free State",
+    "short_name": "Tshiame B Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 793033,
+    "latitude": -28.6228,
+    "location": "POINT (28.80455 -28.62289)",
+    "longitude": 28.80455,
+    "name": "fs Tshirela Clinic",
+    "province": "Free State",
+    "short_name": "Tshirela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 752151,
+    "latitude": -28.6579,
+    "location": "POINT (25.77142 -28.65798)",
+    "longitude": 25.77142,
+    "name": "fs Tshwaraganang (Dealesville) Clinic",
+    "province": "Free State",
+    "short_name": "Tshwaraganang (Deales) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malebogo Street",
+    "code": 725415,
+    "latitude": -28.123,
+    "location": "POINT (25.49985 -28.12308)",
+    "longitude": 25.49985,
+    "name": "fs Tshwaraganang (Hertzogville) Clinic",
+    "province": "Free State",
+    "short_name": "Tshwaraganang (Hertz) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9811 Brown Jumahole",
+    "code": 708842,
+    "latitude": -26.9162,
+    "location": "POINT (27.46773 -26.91628)",
+    "longitude": 27.46773,
+    "name": "fs Tumahole Clinic",
+    "province": "Free State",
+    "short_name": "Tumahole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pepper Street 8",
+    "code": 590651,
+    "latitude": -29.1875,
+    "location": "POINT (27.02543 -29.18754)",
+    "longitude": 27.02543,
+    "name": "fs Tweespruit Clinic",
+    "province": "Free State",
+    "short_name": "Tweespruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Haupt Street",
+    "code": 144033,
+    "latitude": -29.9852,
+    "location": "POINT (27.0136 -29.9852)",
+    "longitude": 27.0136,
+    "name": "fs Vanstadensrus Clinic",
+    "province": "Free State",
+    "short_name": "Vanstadensrus Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "24 Ermmet Street Lillers",
+    "code": 714842,
+    "latitude": -27.029,
+    "location": "POINT (28.59788 -27.02903)",
+    "longitude": 28.59788,
+    "name": "fs Villiers Clinic",
+    "province": "Free State",
+    "short_name": "Villiers Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6 Union Street, Virginia",
+    "code": 849060,
+    "latitude": -28.1076,
+    "location": "POINT (26.86413 -28.10762)",
+    "longitude": 26.86413,
+    "name": "fs Virginia Clinic",
+    "province": "Free State",
+    "short_name": "Virginia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 521551,
+    "latitude": -26.921,
+    "location": "POINT (27.496379 -26.921074)",
+    "longitude": 27.496379,
+    "name": "fs Vivian Mangwane Clinic",
+    "province": "Free State",
+    "short_name": "Vivian Mangwane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "75 Kunhn Street, Vrede",
+    "code": 897642,
+    "latitude": -27.4343,
+    "location": "POINT (29.15528 -27.43436)",
+    "longitude": 29.15528,
+    "name": "fs Vrede Clinic",
+    "province": "Free State",
+    "short_name": "Vrede Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4 Arrat Road",
+    "code": 616242,
+    "latitude": -27.9854,
+    "location": "POINT (26.7414 -27.98545)",
+    "longitude": 26.7414,
+    "name": "fs Welkom Clinic",
+    "province": "Free State",
+    "short_name": "Welkom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Haarburg Cresent",
+    "code": 624506,
+    "latitude": -29.1027,
+    "location": "POINT (26.20763 -29.10278)",
+    "longitude": 26.20763,
+    "name": "fs Westdene Clinic",
+    "province": "Free State",
+    "short_name": "Westdene Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Boibotong",
+    "code": 928015,
+    "latitude": -28.5186,
+    "location": "POINT (27.01312 -28.51867)",
+    "longitude": 27.01312,
+    "name": "fs Winburg Clinic",
+    "province": "Free State",
+    "short_name": "Winburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2295 J Section, Botshabelo",
+    "code": 124633,
+    "latitude": -29.2182,
+    "location": "POINT (26.70333 -29.21828)",
+    "longitude": 26.70333,
+    "name": "fs Winnie Mandela (Botshabelo) Clinic",
+    "province": "Free State",
+    "short_name": "W Mandela (Botsha) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "57 Pushodi Road",
+    "code": 923233,
+    "latitude": -30.4077,
+    "location": "POINT (26.83088 -30.40773)",
+    "longitude": 26.83088,
+    "name": "fs Winnie Mandela (Rouxville) Clinic",
+    "province": "Free State",
+    "short_name": "W Mandela (Roux) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": null,
+      "code": 662733,
+      "latitude": -26.8421,
+      "location": "POINT (27.84672 -26.84218)",
+      "longitude": 27.84672,
+      "name": "fs Zamdela CHC",
+      "province": "Free State",
+      "short_name": "Zamdela CHC"
+    }
+  }
+]

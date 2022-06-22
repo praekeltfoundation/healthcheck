@@ -5,6 +5,8 @@ CMD ["healthcheck.wsgi:application"]
 
 COPY setup.py /app
 COPY requirements.txt /app
+
+RUN apt-get update && apt-get install -y gdal-bin
 RUN pip install -e .
 
 COPY . /app

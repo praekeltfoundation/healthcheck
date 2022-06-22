@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.gis",
     # external packages
     "rest_framework",
     "rest_framework.authtoken",
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     "real411",
     "vaccine",
     "vaxchamps",
+    "clinicfinder",
 ]
 
 MIDDLEWARE = [
@@ -261,3 +263,5 @@ AWS_DEFAULT_ACL = env.str("AWS_DEFAULT_ACL", None)
 AWS_LOCATION = env.str("AWS_LOCATION", "")
 AWS_S3_REGION_NAME = env.str("AWS_S3_REGION_NAME", None)
 AWS_S3_ENDPOINT_URL = env.str("AWS_S3_ENDPOINT_URL", None)
+
+LOCATION_SEARCH_RADIUS = env.int("LOCATION_SEARCH_RADIUS", 20)

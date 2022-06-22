@@ -1,0 +1,1900 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Havelock Street, Aggeneys",
+    "code": 757742,
+    "latitude": -29.2387,
+    "location": "POINT (18.84236 -29.2387)",
+    "longitude": 18.84236,
+    "name": "nc Aggeneys Clinic",
+    "province": "Northern Cape",
+    "short_name": "Aggeneys Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Road",
+    "code": 863660,
+    "latitude": -26.9812,
+    "location": "POINT (20.78209 -26.98127)",
+    "longitude": 20.78209,
+    "name": "nc Askham CHC",
+    "province": "Northern Cape",
+    "short_name": "Askham CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dipico Street",
+    "code": 336142,
+    "latitude": -27.4208,
+    "location": "POINT (23.38164 -27.42083)",
+    "longitude": 23.38164,
+    "name": "nc Bankhara (Bodulong) Clinic",
+    "province": "Northern Cape",
+    "short_name": "Bankhara (Bodulong) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "34 Rectory Street",
+    "code": 838615,
+    "latitude": -28.7577,
+    "location": "POINT (24.78461 -28.75775)",
+    "longitude": 24.78461,
+    "name": "nc Beaconsfield Clinic",
+    "province": "Northern Cape",
+    "short_name": "Beaconsfield Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bendel Village",
+    "code": 757242,
+    "latitude": -26.995,
+    "location": "POINT (23.64745 -26.99509)",
+    "longitude": 23.64745,
+    "name": "nc Bendel Clinic",
+    "province": "Northern Cape",
+    "short_name": "Bendel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Waterkants Street",
+    "code": 658751,
+    "latitude": -29.65,
+    "location": "POINT (17.87546 -29.65003)",
+    "longitude": 17.87546,
+    "name": "nc Bergsig (Max Shapiro) Clinic",
+    "province": "Northern Cape",
+    "short_name": "Bergsig (M Shapiro) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshwaragano",
+    "code": 422233,
+    "latitude": -28.738,
+    "location": "POINT (24.76674 -28.73808)",
+    "longitude": 24.76674,
+    "name": "nc Betty Gaetsewe Clinic",
+    "province": "Northern Cape",
+    "short_name": "Betty Gaetsewe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kareeboom Street",
+    "code": 550651,
+    "latitude": -28.9277,
+    "location": "POINT (22.12832 -28.92776)",
+    "longitude": 22.12832,
+    "name": "nc Boegoeberg (Brandboom) Clinic",
+    "province": "Northern Cape",
+    "short_name": "Boegoeberg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lebo Masisi 1645",
+    "code": 417233,
+    "latitude": -28.3212,
+    "location": "POINT (23.04736 -28.3212)",
+    "longitude": 23.04736,
+    "name": "nc Boichoko Clinic",
+    "province": "Northern Cape",
+    "short_name": "Boichoko Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 415024,
+    "latitude": -27.412,
+    "location": "POINT (23.80878 -27.41206)",
+    "longitude": 23.80878,
+    "name": "nc Bothetheletsa Clinic",
+    "province": "Northern Cape",
+    "short_name": "Bothetheletsa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bothithong Village",
+    "code": 451333,
+    "latitude": -27.0643,
+    "location": "POINT (23.82899 -27.06435)",
+    "longitude": 23.82899,
+    "name": "nc Bothithong Clinic",
+    "province": "Northern Cape",
+    "short_name": "Bothithong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Buitekant",
+    "code": 134306,
+    "latitude": -30.462,
+    "location": "POINT (20.48118 -30.46201)",
+    "longitude": 20.48118,
+    "name": "nc Brandvlei CHC",
+    "province": "Northern Cape",
+    "short_name": "Brandvlei CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1261 Lilly Avenue",
+    "code": 949715,
+    "latitude": -29.0454,
+    "location": "POINT (23.76622 -29.04546)",
+    "longitude": 23.76622,
+    "name": "nc Breipaal Clinic",
+    "province": "Northern Cape",
+    "short_name": "Breipaal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vanjaardtvelt",
+    "code": 171406,
+    "latitude": -30.5838,
+    "location": "POINT (23.5011 -30.58384)",
+    "longitude": 23.5011,
+    "name": "nc Britstown Clinic",
+    "province": "Northern Cape",
+    "short_name": "Britstown Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 173015,
+    "latitude": -31.4634,
+    "location": "POINT (19.76855 -31.46342)",
+    "longitude": 19.76855,
+    "name": "nc Calvinia Clinic",
+    "province": "Northern Cape",
+    "short_name": "Calvinia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 376815,
+    "latitude": -28.7999,
+    "location": "POINT (23.7214 -28.7999)",
+    "longitude": 23.7214,
+    "name": "nc Campbell Clinic",
+    "province": "Northern Cape",
+    "short_name": "Campbell Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hospital Avenue",
+    "code": 953106,
+    "latitude": -30.9638,
+    "location": "POINT (22.12632 -30.96382)",
+    "longitude": 22.12632,
+    "name": "nc Carnarvon CHC",
+    "province": "Northern Cape",
+    "short_name": "Carnarvon CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Van Wyksvlei Avenue",
+    "code": 915542,
+    "latitude": -30.966,
+    "location": "POINT (22.13205 -30.96605)",
+    "longitude": 22.13205,
+    "name": "nc Carnarvon Clinic",
+    "province": "Northern Cape",
+    "short_name": "Carnarvon Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cassel Chc",
+    "code": 457533,
+    "latitude": -26.9658,
+    "location": "POINT (23.99163 -26.96589)",
+    "longitude": 23.99163,
+    "name": "nc Cassels CHC",
+    "province": "Northern Cape",
+    "short_name": "Cassels CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Churchill Village",
+    "code": 371833,
+    "latitude": -27.2788,
+    "location": "POINT (23.47783 -27.27881)",
+    "longitude": 23.47783,
+    "name": "nc Churchill Clinic",
+    "province": "Northern Cape",
+    "short_name": "Churchill Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lang Street, Concordia",
+    "code": 677842,
+    "latitude": -29.5354,
+    "location": "POINT (17.93678 -29.53542)",
+    "longitude": 17.93678,
+    "name": "nc Concordia Clinic",
+    "province": "Northern Cape",
+    "short_name": "Concordia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Clinic Street, Danielskuil, 8405",
+    "code": 760124,
+    "latitude": -28.1824,
+    "location": "POINT (23.54742 -28.18244)",
+    "longitude": 23.54742,
+    "name": "nc Danielskuil CHC",
+    "province": "Northern Cape",
+    "short_name": "Danielskuil CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Amalia Street, De Aar, 7000",
+    "code": 585833,
+    "latitude": -30.6511,
+    "location": "POINT (24.01922 -30.65119)",
+    "longitude": 24.01922,
+    "name": "nc De Aar Clinic",
+    "province": "Northern Cape",
+    "short_name": "De Aar Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Amalia Street, De Aar, 7000",
+    "code": 177833,
+    "latitude": -30.6496,
+    "location": "POINT (24.00948 -30.64962)",
+    "longitude": 24.00948,
+    "name": "nc De Aar Town Clinic",
+    "province": "Northern Cape",
+    "short_name": "De Aar Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Campbell Street",
+    "code": 415924,
+    "latitude": -28.5325,
+    "location": "POINT (24.51455 -28.53252)",
+    "longitude": 24.51455,
+    "name": "nc De Beershoogte Clinic",
+    "province": "Northern Cape",
+    "short_name": "De Beershoogte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hanekom Street, Delportshoop",
+    "code": 557624,
+    "latitude": -28.4199,
+    "location": "POINT (24.312529 -28.419938)",
+    "longitude": 24.312529,
+    "name": "nc Delportshoop Clinic",
+    "province": "Northern Cape",
+    "short_name": "Delportshoop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ditshipeng Village",
+    "code": 343551,
+    "latitude": -26.9508,
+    "location": "POINT (23.81218 -26.95086)",
+    "longitude": 23.81218,
+    "name": "nc Ditshipeng Clinic",
+    "province": "Northern Cape",
+    "short_name": "Ditshipeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "66 Raven Street, Pescodia",
+    "code": 830642,
+    "latitude": -28.6624,
+    "location": "POINT (24.71624 -28.66245)",
+    "longitude": 24.71624,
+    "name": "nc Dr Torres Clinic",
+    "province": "Northern Cape",
+    "short_name": "Dr Torres Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Makhosi Street",
+    "code": 564751,
+    "latitude": -29.3935,
+    "location": "POINT (22.435 -29.39355)",
+    "longitude": 22.435,
+    "name": "nc Ethembeni Clinic",
+    "province": "Northern Cape",
+    "short_name": "Ethembeni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stokroos Street, Squarehill Park, Kimberley",
+    "code": 745751,
+    "latitude": -28.7272,
+    "location": "POINT (24.74597 -28.72725)",
+    "longitude": 24.74597,
+    "name": "nc Florianville (Floors) Clinic",
+    "province": "Northern Cape",
+    "short_name": "Florianville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "House 59e",
+    "code": 407215,
+    "latitude": -27.0759,
+    "location": "POINT (23.29435 -27.07591)",
+    "longitude": 23.29435,
+    "name": "nc Gadiboe Clinic",
+    "province": "Northern Cape",
+    "short_name": "Gadiboe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tyson Road",
+    "code": 567215,
+    "latitude": -28.7283,
+    "location": "POINT (24.74632 -28.72832)",
+    "longitude": 24.74632,
+    "name": "nc Galeshewe Day Hospital",
+    "province": "Northern Cape",
+    "short_name": "Galeshewe Day Hosp"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Gert Lubbe Street",
+    "code": 784124,
+    "latitude": -27.969,
+    "location": "POINT (24.76211 -27.96903)",
+    "longitude": 24.76211,
+    "name": "nc Ganspan Clinic",
+    "province": "Northern Cape",
+    "short_name": "Ganspan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 214642,
+    "latitude": -27.0956,
+    "location": "POINT (23.54454 -27.09567)",
+    "longitude": 23.54454,
+    "name": "nc Gasehunelo Wyk 5 Clinic",
+    "province": "Northern Cape",
+    "short_name": "Gasehunelo Wyk 5 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Glenred Village",
+    "code": 647324,
+    "latitude": -26.9716,
+    "location": "POINT (23.91002 -26.97163)",
+    "longitude": 23.91002,
+    "name": "nc Glen Red Clinic",
+    "province": "Northern Cape",
+    "short_name": "Glen Red Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 951151,
+    "latitude": -28.9121,
+    "location": "POINT (18.2123 -28.91217)",
+    "longitude": 18.2123,
+    "name": "nc Goodhouse Health Post",
+    "province": "Northern Cape",
+    "short_name": "Goodhouse HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 831406,
+    "latitude": -26.9956,
+    "location": "POINT (23.646828 -26.995623)",
+    "longitude": 23.646828,
+    "name": "nc Gothusamang Winter Maroro Clinic",
+    "province": "Northern Cape",
+    "short_name": "Gothusamang WM Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "67 Dutch Reformed Road, Greenpoint, Kimberley",
+    "code": 762515,
+    "latitude": -28.7775,
+    "location": "POINT (24.77166 -28.77756)",
+    "longitude": 24.77166,
+    "name": "nc Greenpoint Clinic",
+    "province": "Northern Cape",
+    "short_name": "Greenpoint Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Moffat Street",
+    "code": 289506,
+    "latitude": -28.8433,
+    "location": "POINT (23.25339 -28.84331)",
+    "longitude": 23.25339,
+    "name": "nc Griekwastad (Helpmekaar) CHC",
+    "province": "Northern Cape",
+    "short_name": "Griekwastad CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "212 Maritz Street, Groblershoop",
+    "code": 113951,
+    "latitude": -28.895,
+    "location": "POINT (21.9813 -28.89504)",
+    "longitude": 21.9813,
+    "name": "nc Groblershoop CHC",
+    "province": "Northern Cape",
+    "short_name": "Groblershoop CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mark Street",
+    "code": 271460,
+    "latitude": -31.0675,
+    "location": "POINT (24.4474 -31.06752)",
+    "longitude": 24.447400000000002,
+    "name": "nc Hanover Clinic",
+    "province": "Northern Cape",
+    "short_name": "Hanover Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 454351,
+    "latitude": -26.3051,
+    "location": "POINT (23.13953 -26.30514)",
+    "longitude": 23.13953,
+    "name": "nc Heuningvlei Clinic",
+    "province": "Northern Cape",
+    "short_name": "Heuningvlei Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Oandblan Street",
+    "code": 399033,
+    "latitude": -29.617,
+    "location": "POINT (24.10205 -29.61701)",
+    "longitude": 24.10205,
+    "name": "nc Hopetown Clinic",
+    "province": "Northern Cape",
+    "short_name": "Hopetown Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stasie Road",
+    "code": 269942,
+    "latitude": -28.1323,
+    "location": "POINT (24.85838 -28.13236)",
+    "longitude": 24.85838,
+    "name": "nc Ikhutseng Clinic",
+    "province": "Northern Cape",
+    "short_name": "Ikhutseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Andalusia Street",
+    "code": 767315,
+    "latitude": -27.9221,
+    "location": "POINT (24.83468 -27.92212)",
+    "longitude": 24.83468,
+    "name": "nc Jan Kempdorp CHC",
+    "province": "Northern Cape",
+    "short_name": "J Kempdorp CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Andalusia Street",
+    "code": 967215,
+    "latitude": -27.9221,
+    "location": "POINT (24.83468 -27.92212)",
+    "longitude": 24.83468,
+    "name": "nc Jan Kempdorp Clinic",
+    "province": "Northern Cape",
+    "short_name": "J Kempdorp Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 873333,
+    "latitude": -27.5854,
+    "location": "POINT (22.87172 -27.58548)",
+    "longitude": 22.87172,
+    "name": "nc Jan Witbooi Clinic",
+    "province": "Northern Cape",
+    "short_name": "Jan Witbooi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thagadiepelayang",
+    "code": 325742,
+    "latitude": -27.7528,
+    "location": "POINT (24.80691 -27.75285)",
+    "longitude": 24.80691,
+    "name": "nc Jerry Botha Clinic",
+    "province": "Northern Cape",
+    "short_name": "Jerry Botha Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 259033,
+    "latitude": -30.5658,
+    "location": "POINT (17.98933 -30.56584)",
+    "longitude": 17.98933,
+    "name": "nc Joe Slovo CHC",
+    "province": "Northern Cape",
+    "short_name": "Joe Slovo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 575160,
+    "latitude": -27.405,
+    "location": "POINT (23.49204 -27.40504)",
+    "longitude": 23.49204,
+    "name": "nc Kagiso CHC",
+    "province": "Northern Cape",
+    "short_name": "Kagiso CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kagung Village, Kuruman",
+    "code": 613306,
+    "latitude": -27.3308,
+    "location": "POINT (23.553264 -27.330802)",
+    "longitude": 23.553264,
+    "name": "nc Kagung Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kagung Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hoffmeyer Avenue",
+    "code": 916533,
+    "latitude": -28.7796,
+    "location": "POINT (20.62254 -28.77969)",
+    "longitude": 20.62254,
+    "name": "nc Kakamas Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kakamas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1160 Koring Street",
+    "code": 802151,
+    "latitude": -28.5511,
+    "location": "POINT (21.15427 -28.5511)",
+    "longitude": 21.15427,
+    "name": "nc Kalksluit Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kalksluit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Road",
+    "code": 704351,
+    "latitude": -27.3592,
+    "location": "POINT (23.88987 -27.35928)",
+    "longitude": 23.88987,
+    "name": "nc Kamden CHC",
+    "province": "Northern Cape",
+    "short_name": "Kamden CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Charlotte Street, Kamieskroon",
+    "code": 943133,
+    "latitude": -30.2118,
+    "location": "POINT (17.93232 -30.21185)",
+    "longitude": 17.93232,
+    "name": "nc Kamieskroon Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kamieskroon Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 292006,
+    "latitude": -27.9486,
+    "location": "POINT (22.74304 -27.94863)",
+    "longitude": 22.74304,
+    "name": "nc Katrina Koikoi Clinic",
+    "province": "Northern Cape",
+    "short_name": "Katrina Koikoi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street",
+    "code": 414642,
+    "latitude": -28.7054,
+    "location": "POINT (20.95593 -28.70541)",
+    "longitude": 20.95593,
+    "name": "nc Keimoes CHC",
+    "province": "Northern Cape",
+    "short_name": "Keimoes CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Protea Avenue, Keimoes",
+    "code": 566060,
+    "latitude": -28.7006,
+    "location": "POINT (20.96136 -28.70063)",
+    "longitude": 20.96136,
+    "name": "nc Keimoes Clinic",
+    "province": "Northern Cape",
+    "short_name": "Keimoes Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Booysen Street",
+    "code": 675851,
+    "latitude": -29.3537,
+    "location": "POINT (21.15863 -29.35371)",
+    "longitude": 21.15863,
+    "name": "nc Kenhardt CHC",
+    "province": "Northern Cape",
+    "short_name": "Kenhardt CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lang Street",
+    "code": 310715,
+    "latitude": -29.3413,
+    "location": "POINT (21.16004 -29.34135)",
+    "longitude": 21.16004,
+    "name": "nc Kenhardt Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kenhardt Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 888051,
+    "latitude": -27.2222,
+    "location": "POINT (23.21451 -27.22221)",
+    "longitude": 23.21451,
+    "name": "nc Keolopile Olepeng Clinic",
+    "province": "Northern Cape",
+    "short_name": "K Olepeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lelie Street",
+    "code": 904251,
+    "latitude": -30.0108,
+    "location": "POINT (24.73065 -30.01089)",
+    "longitude": 24.73065,
+    "name": "nc Keurtjieskloof Clinic",
+    "province": "Northern Cape",
+    "short_name": "Keurtjieskloof Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kerk Street",
+    "code": 268142,
+    "latitude": -30.37,
+    "location": "POINT (17.88799 -30.37007)",
+    "longitude": 17.88799,
+    "name": "nc Kharkams (Garagams) Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kharkams (Garagams) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Street 8, Nonzwakazi",
+    "code": 752815,
+    "latitude": -30.6699,
+    "location": "POINT (24.0225 -30.66993)",
+    "longitude": 24.0225,
+    "name": "nc Kholekile Edward Twani Clinic",
+    "province": "Northern Cape",
+    "short_name": "KE Twani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Buildtfontein and Lawson Street",
+    "code": 825024,
+    "latitude": -28.745,
+    "location": "POINT (24.76388 -28.74507)",
+    "longitude": 24.76388,
+    "name": "nc Kimberley City Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kimberley Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9 Willem van Den Heever Street, Komaggas",
+    "code": 276824,
+    "latitude": -29.7961,
+    "location": "POINT (17.48808 -29.79618)",
+    "longitude": 17.48808,
+    "name": "nc Komaggas Clinic",
+    "province": "Northern Cape",
+    "short_name": "Komaggas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 633042,
+    "latitude": -28.4478,
+    "location": "POINT (16.99272 -28.44787)",
+    "longitude": 16.99272,
+    "name": "nc Kuboes Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kuboes Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Kuruman",
+    "code": 631633,
+    "latitude": -27.4473,
+    "location": "POINT (23.43588 -27.44738)",
+    "longitude": 23.43588,
+    "name": "nc Kuruman Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kuruman Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tutuse Street",
+    "code": 624751,
+    "latitude": -30.7181,
+    "location": "POINT (25.10822 -30.71816)",
+    "longitude": 25.10822,
+    "name": "nc Kuyasa Clinic",
+    "province": "Northern Cape",
+    "short_name": "Kuyasa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Monyatsi Street",
+    "code": 155551,
+    "latitude": -29.0681,
+    "location": "POINT (23.77439 -29.06812)",
+    "longitude": 23.77439,
+    "name": "nc Lehlohonolo Adams Clinic",
+    "province": "Northern Cape",
+    "short_name": "Lehlohonolo Adams Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "54 Alexander Street, Leliefontein",
+    "code": 443242,
+    "latitude": -30.3146,
+    "location": "POINT (18.08295 -30.31462)",
+    "longitude": 18.08295,
+    "name": "nc Leliefontein Clinic",
+    "province": "Northern Cape",
+    "short_name": "Leliefontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "60 KingStreet",
+    "code": 382815,
+    "latitude": -28.4382,
+    "location": "POINT (21.21584 -28.43826)",
+    "longitude": 21.21584,
+    "name": "nc Lingelethu Clinic (Pabalello)",
+    "province": "Northern Cape",
+    "short_name": "Lingelethu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "24 Bree Street",
+    "code": 985433,
+    "latitude": -30.5708,
+    "location": "POINT (19.25979 -30.57084)",
+    "longitude": 19.25979,
+    "name": "nc Loeriesfontein Clinic",
+    "province": "Northern Cape",
+    "short_name": "Loeriesfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 356342,
+    "latitude": -27.1802,
+    "location": "POINT (23.40793 -27.18022)",
+    "longitude": 23.40793,
+    "name": "nc Logobate Clinic",
+    "province": "Northern Cape",
+    "short_name": "Logobate Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 807542,
+    "latitude": -28.4594,
+    "location": "POINT (24.35973 -28.45946)",
+    "longitude": 24.35973,
+    "name": "nc Longlands Clinic",
+    "province": "Northern Cape",
+    "short_name": "Longlands Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Slough Village",
+    "code": 381206,
+    "latitude": -26.796,
+    "location": "POINT (23.35159 -26.79602)",
+    "longitude": 23.35159,
+    "name": "nc Loopeng CHC",
+    "province": "Northern Cape",
+    "short_name": "Loopeng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Louisvale Road",
+    "code": 724224,
+    "latitude": -28.4762,
+    "location": "POINT (21.26884 -28.47623)",
+    "longitude": 21.26884,
+    "name": "nc Louisvaleweg Clinic",
+    "province": "Northern Cape",
+    "short_name": "Louisvaleweg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Olivia Single, Lowryville, Colesberg",
+    "code": 529333,
+    "latitude": -30.7081,
+    "location": "POINT (25.10117 -30.70819)",
+    "longitude": 25.10117,
+    "name": "nc Lowryville Clinic",
+    "province": "Northern Cape",
+    "short_name": "Lowryville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mark Street",
+    "code": 527433,
+    "latitude": -31.476,
+    "location": "POINT (22.35569 -31.47607)",
+    "longitude": 22.35569,
+    "name": "nc Loxton Clinic",
+    "province": "Northern Cape",
+    "short_name": "Loxton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lang Street, Galeshewe",
+    "code": 783751,
+    "latitude": -28.7205,
+    "location": "POINT (24.74144 -28.72053)",
+    "longitude": 24.74144,
+    "name": "nc Ma-Doyle Clinic",
+    "province": "Northern Cape",
+    "short_name": "Ma-Doyle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Manyeding Village",
+    "code": 778160,
+    "latitude": -27.4955,
+    "location": "POINT (23.68577 -27.49552)",
+    "longitude": 23.68577,
+    "name": "nc Manyeding Clinic",
+    "province": "Northern Cape",
+    "short_name": "Manyeding Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "27 Dinokwane Street",
+    "code": 773715,
+    "latitude": -28.7099,
+    "location": "POINT (24.7263 -28.70993)",
+    "longitude": 24.7263,
+    "name": "nc Mapule Matsepane Clinic",
+    "province": "Northern Cape",
+    "short_name": "Mapule Matsepane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Maruping",
+    "code": 730342,
+    "latitude": -27.3461,
+    "location": "POINT (23.36766 -27.34614)",
+    "longitude": 23.36766,
+    "name": "nc Maruping Clinic",
+    "province": "Northern Cape",
+    "short_name": "Maruping Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Draghoender Street, Marydale",
+    "code": 957660,
+    "latitude": -29.4096,
+    "location": "POINT (22.10463 -29.40962)",
+    "longitude": 22.10463,
+    "name": "nc Marydale Clinic",
+    "province": "Northern Cape",
+    "short_name": "Marydale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Masakhane Clinic, 13290 Thutlo Street, Bloemanda",
+    "code": 579842,
+    "latitude": -28.7013,
+    "location": "POINT (24.73401 -28.70137)",
+    "longitude": 24.73401,
+    "name": "nc Masakhane Clinic",
+    "province": "Northern Cape",
+    "short_name": "Masakhane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Str 4, Philipstown",
+    "code": 811251,
+    "latitude": -30.436,
+    "location": "POINT (24.47138 -30.43603)",
+    "longitude": 24.47138,
+    "name": "nc Masibambane Clinic",
+    "province": "Northern Cape",
+    "short_name": "Masibambane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Clinic Road",
+    "code": 613906,
+    "latitude": -28.5342,
+    "location": "POINT (24.50485 -28.53421)",
+    "longitude": 24.50485,
+    "name": "nc Mataleng Clinic",
+    "province": "Northern Cape",
+    "short_name": "Mataleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kotze Street",
+    "code": 587542,
+    "latitude": -29.6715,
+    "location": "POINT (17.86605 -29.67155)",
+    "longitude": 17.86605,
+    "name": "nc Matjieskloof Clinic",
+    "province": "Northern Cape",
+    "short_name": "Matjieskloof Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 427133,
+    "latitude": -26.9434,
+    "location": "POINT (23.16493 -26.94346)",
+    "longitude": 23.16493,
+    "name": "nc Metsimansti Wyk 3 Clinic",
+    "province": "Northern Cape",
+    "short_name": "Metsimansti Wyk 3 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Amaudle Street",
+    "code": 513360,
+    "latitude": -30.6467,
+    "location": "POINT (24.02616 -30.64672)",
+    "longitude": 24.02616,
+    "name": "nc Montana Clinic",
+    "province": "Northern Cape",
+    "short_name": "Montana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 194324,
+    "latitude": -27.0442,
+    "location": "POINT (23.593536 -27.044219)",
+    "longitude": 23.593536,
+    "name": "nc Mosalashuping Baicumedi Clinic",
+    "province": "Northern Cape",
+    "short_name": "Mosalashuping Baicumedi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hill Street",
+    "code": 359451,
+    "latitude": -29.5927,
+    "location": "POINT (17.78176 -29.59271)",
+    "longitude": 17.78176,
+    "name": "nc Nababeep CHC",
+    "province": "Northern Cape",
+    "short_name": "Nababeep CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Maqungu Street",
+    "code": 382851,
+    "latitude": -30.7002,
+    "location": "POINT (25.09775 -30.70022)",
+    "longitude": 25.09775,
+    "name": "nc Nanqo Simon Zono Clinic",
+    "province": "Northern Cape",
+    "short_name": "Nanqo Simon Zono Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "343 Patrys Street",
+    "code": 712760,
+    "latitude": -29.3229,
+    "location": "POINT (22.83906 -29.3229)",
+    "longitude": 22.83906,
+    "name": "nc Niekerkshoop Clinic",
+    "province": "Northern Cape",
+    "short_name": "Niekerkshoop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lielie Street P/S X1",
+    "code": 789142,
+    "latitude": -31.3674,
+    "location": "POINT (19.11696 -31.3674)",
+    "longitude": 19.11696,
+    "name": "nc Nieuwoudtville Clinic",
+    "province": "Northern Cape",
+    "short_name": "Niewoudtville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 351706,
+    "latitude": -27.774,
+    "location": "POINT (24.69385 -27.77408)",
+    "longitude": 24.69385,
+    "name": "nc Nomimi Mothibi Clinic",
+    "province": "Northern Cape",
+    "short_name": "Nomimi Mothibi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street",
+    "code": 116715,
+    "latitude": -30.6298,
+    "location": "POINT (25.45489 -30.62983)",
+    "longitude": 25.45489,
+    "name": "nc Norvalspont Clinic",
+    "province": "Northern Cape",
+    "short_name": "Norvalspont Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "72 Hoof Road, Okiep",
+    "code": 261415,
+    "latitude": -29.5996,
+    "location": "POINT (17.88336 -29.59969)",
+    "longitude": 17.88336,
+    "name": "nc Okiep Clinic",
+    "province": "Northern Cape",
+    "short_name": "Okiep Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9 Korrannaberg Road",
+    "code": 681242,
+    "latitude": -27.9382,
+    "location": "POINT (22.73585 -27.93822)",
+    "longitude": 22.73585,
+    "name": "nc Olifantshoek CHC",
+    "province": "Northern Cape",
+    "short_name": "Olifantshoek CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "R C Mission, Onseepkans, KhaI-Ma Rural",
+    "code": 328524,
+    "latitude": -28.7729,
+    "location": "POINT (19.2704 -28.77292)",
+    "longitude": 19.2704,
+    "name": "nc Onseepkans Clinic",
+    "province": "Northern Cape",
+    "short_name": "Onseepkans Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tlrisano Shop Street",
+    "code": 144915,
+    "latitude": -26.8244,
+    "location": "POINT (23.20404 -26.82447)",
+    "longitude": 23.20404,
+    "name": "nc Padstow Clinic",
+    "province": "Northern Cape",
+    "short_name": "Padstow Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 225933,
+    "latitude": -27.4196,
+    "location": "POINT (23.00604 -27.4196)",
+    "longitude": 23.00604,
+    "name": "nc Pako Seboko Clinic",
+    "province": "Northern Cape",
+    "short_name": "Pako Seboko Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3138 Pampierstad",
+    "code": 864233,
+    "latitude": -27.7795,
+    "location": "POINT (24.68882 -27.7795)",
+    "longitude": 24.68882,
+    "name": "nc Pampierstad CHC",
+    "province": "Northern Cape",
+    "short_name": "Pampierstad CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 277151,
+    "latitude": -30.3682,
+    "location": "POINT (18.25105 -30.36822)",
+    "longitude": 18.25105,
+    "name": "nc Paulshoek Health Post",
+    "province": "Northern Cape",
+    "short_name": "Paulshoek HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "227 Jacaranda Street",
+    "code": 951251,
+    "latitude": -29.0329,
+    "location": "POINT (19.15453 -29.03291)",
+    "longitude": 19.15453,
+    "name": "nc Pella Clinic",
+    "province": "Northern Cape",
+    "short_name": "Pella Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 855124,
+    "latitude": -26.8801,
+    "location": "POINT (23.06688 -26.88016)",
+    "longitude": 23.06688,
+    "name": "nc Penryn Clinic",
+    "province": "Northern Cape",
+    "short_name": "Penryn Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 502324,
+    "latitude": -26.4614,
+    "location": "POINT (23.08102 -26.46149)",
+    "longitude": 23.08102,
+    "name": "nc Perth Clinic",
+    "province": "Northern Cape",
+    "short_name": "Perth Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "New Extension 1928",
+    "code": 853524,
+    "latitude": -30.0786,
+    "location": "POINT (24.67363 -30.07867)",
+    "longitude": 24.67363,
+    "name": "nc Petrusville Clinic",
+    "province": "Northern Cape",
+    "short_name": "Petrusville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "44444 Main Street, Pholong",
+    "code": 431642,
+    "latitude": -28.1276,
+    "location": "POINT (24.85158 -28.12767)",
+    "longitude": 24.85158,
+    "name": "nc Pholong Clinic",
+    "province": "Northern Cape",
+    "short_name": "Pholong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20446/20447, Collen Khuzwayo Street",
+    "code": 552142,
+    "latitude": -28.7165,
+    "location": "POINT (24.69462 -28.71658)",
+    "longitude": 24.69462,
+    "name": "nc Phutanang Clinic",
+    "province": "Northern Cape",
+    "short_name": "Phutanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 755224,
+    "latitude": -27.1903,
+    "location": "POINT (23.87554 -27.19037)",
+    "longitude": 23.87554,
+    "name": "nc Pietersham Clinic",
+    "province": "Northern Cape",
+    "short_name": "Pietersham Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 734760,
+    "latitude": -28.7068,
+    "location": "POINT (24.65303 -28.70684)",
+    "longitude": 24.65303,
+    "name": "nc Platfontein Clinic",
+    "province": "Northern Cape",
+    "short_name": "Platfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 376551,
+    "latitude": -29.1339,
+    "location": "POINT (19.3983 -29.13399)",
+    "longitude": 19.3983,
+    "name": "nc Pofadder CHC",
+    "province": "Northern Cape",
+    "short_name": "Pofadder CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hoof Road",
+    "code": 987633,
+    "latitude": -29.1265,
+    "location": "POINT (19.394747 -29.126569)",
+    "longitude": 19.394747,
+    "name": "nc Pofadder Clinic",
+    "province": "Northern Cape",
+    "short_name": "Pofadder Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Soutpan Road",
+    "code": 239433,
+    "latitude": -29.2507,
+    "location": "POINT (16.87164 -29.25072)",
+    "longitude": 16.87164,
+    "name": "nc Port Nolloth CHC",
+    "province": "Northern Cape",
+    "short_name": "Port Nolloth CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Burden Street",
+    "code": 336960,
+    "latitude": -29.2601,
+    "location": "POINT (16.87756 -29.26013)",
+    "longitude": 16.87756,
+    "name": "nc Port Nolloth Clinic",
+    "province": "Northern Cape",
+    "short_name": "Port Nolloth Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Akasia",
+    "code": 267051,
+    "latitude": -28.3003,
+    "location": "POINT (23.089759 -28.300388)",
+    "longitude": 23.089759,
+    "name": "nc Postdene Clinic",
+    "province": "Northern Cape",
+    "short_name": "Postdene Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Endste 1, Postmasburg",
+    "code": 892342,
+    "latitude": -28.3276,
+    "location": "POINT (23.06008 -28.32763)",
+    "longitude": 23.06008,
+    "name": "nc Postmasburg Clinic",
+    "province": "Northern Cape",
+    "short_name": "Postmasburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bloekom Street, Prieska, 8940",
+    "code": 918315,
+    "latitude": -29.6664,
+    "location": "POINT (22.73116 -29.66648)",
+    "longitude": 22.73116,
+    "name": "nc Prieska Clinic",
+    "province": "Northern Cape",
+    "short_name": "Prieska Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bosliefie Street, Progress",
+    "code": 554215,
+    "latitude": -28.4615,
+    "location": "POINT (21.21994 -28.46151)",
+    "longitude": 21.21994,
+    "name": "nc Progress Clinic",
+    "province": "Northern Cape",
+    "short_name": "Progress Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Skorsie Street",
+    "code": 982315,
+    "latitude": -28.5923,
+    "location": "POINT (21.19168 -28.59235)",
+    "longitude": 21.19168,
+    "name": "nc Raaswater Clinic",
+    "province": "Northern Cape",
+    "short_name": "Raaswater Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Louis Road, Richmond",
+    "code": 742215,
+    "latitude": -31.4199,
+    "location": "POINT (23.95385 -31.4199)",
+    "longitude": 23.95385,
+    "name": "nc Richmond Clinic",
+    "province": "Northern Cape",
+    "short_name": "Richmond Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "H/V Daanswanepoel Road and Henry Pabs Road 113",
+    "code": 345815,
+    "latitude": -26.7368,
+    "location": "POINT (20.02947 -26.73689)",
+    "longitude": 20.02947,
+    "name": "nc Rietfontein CHC",
+    "province": "Northern Cape",
+    "short_name": "Rietfontein CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ritchie Street",
+    "code": 390215,
+    "latitude": -29.0289,
+    "location": "POINT (24.58801 -29.02894)",
+    "longitude": 24.58801,
+    "name": "nc Ritchie Clinic",
+    "province": "Northern Cape",
+    "short_name": "Ritchie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 590142,
+    "latitude": -26.9824,
+    "location": "POINT (23.25411 -26.98247)",
+    "longitude": 23.25411,
+    "name": "nc Rusfontein Clinic",
+    "province": "Northern Cape",
+    "short_name": "Rusfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Leeukop Street",
+    "code": 884424,
+    "latitude": -28.4545,
+    "location": "POINT (21.20511 -28.45458)",
+    "longitude": 21.20511,
+    "name": "nc Sarah Strauss Clinic",
+    "province": "Northern Cape",
+    "short_name": "Sarah Strauss Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 628642,
+    "latitude": -27.3952,
+    "location": "POINT (23.43258 -27.39529)",
+    "longitude": 23.43258,
+    "name": "nc Seoding Clinic",
+    "province": "Northern Cape",
+    "short_name": "Seoding Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 324651,
+    "latitude": -30.3404,
+    "location": "POINT (17.76039 -30.3404)",
+    "longitude": 17.76039,
+    "name": "nc Spoegrivier Health Post",
+    "province": "Northern Cape",
+    "short_name": "Spoegrivier HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 881515,
+    "latitude": -29.651,
+    "location": "POINT (17.8766 -29.65106)",
+    "longitude": 17.8766,
+    "name": "nc Springbok Clinic",
+    "province": "Northern Cape",
+    "short_name": "Springbok Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Brvg Road",
+    "code": 485051,
+    "latitude": -29.2621,
+    "location": "POINT (17.73621 -29.26219)",
+    "longitude": 17.73621,
+    "name": "nc Steinkopf Clinic",
+    "province": "Northern Cape",
+    "short_name": "Steinkopf Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kliniek Street",
+    "code": 816242,
+    "latitude": -29.6375,
+    "location": "POINT (23.66894 -29.6375)",
+    "longitude": 23.66894,
+    "name": "nc Strydenburg Clinic",
+    "province": "Northern Cape",
+    "short_name": "Strydenburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Theron Street",
+    "code": 275806,
+    "latitude": -32.3987,
+    "location": "POINT (20.66557 -32.39875)",
+    "longitude": 20.66557,
+    "name": "nc Sutherland CHC",
+    "province": "Northern Cape",
+    "short_name": "Sutherland CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street",
+    "code": 628760,
+    "latitude": -27.3056,
+    "location": "POINT (23.34567 -27.30564)",
+    "longitude": 23.34567,
+    "name": "nc Tshwaragano Gateway Clinic",
+    "province": "Northern Cape",
+    "short_name": "Tshwaragano Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 242515,
+    "latitude": -27.0884,
+    "location": "POINT (23.08061 -27.08841)",
+    "longitude": 23.08061,
+    "name": "nc Tsineng Clinic",
+    "province": "Northern Cape",
+    "short_name": "Tsineng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 845942,
+    "latitude": -30.3589,
+    "location": "POINT (17.98601 -30.35892)",
+    "longitude": 17.98601,
+    "name": "nc Tweerivier Health Post",
+    "province": "Northern Cape",
+    "short_name": "Tweerivier HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mark Street",
+    "code": 383533,
+    "latitude": -28.4648,
+    "location": "POINT (21.21879 -28.46485)",
+    "longitude": 21.21879,
+    "name": "nc Upington Clinic",
+    "province": "Northern Cape",
+    "short_name": "Upington Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "283 Korope Street",
+    "code": 911324,
+    "latitude": -27.915,
+    "location": "POINT (24.81848 -27.91503)",
+    "longitude": 24.81848,
+    "name": "nc Valspan Clinic",
+    "province": "Northern Cape",
+    "short_name": "Valspan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Buitekant Street",
+    "code": 867024,
+    "latitude": -30.3484,
+    "location": "POINT (21.82404 -30.3484)",
+    "longitude": 21.82404,
+    "name": "nc Van Wyksvlei Clinic",
+    "province": "Northern Cape",
+    "short_name": "Van Wyksvlei Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 722651,
+    "latitude": -26.8784,
+    "location": "POINT (22.05324 -26.87844)",
+    "longitude": 22.05324,
+    "name": "nc Van Zylsrus Clinic",
+    "province": "Northern Cape",
+    "short_name": "Van Zylsrus Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Voortrekker Street",
+    "code": 571415,
+    "latitude": -31.4065,
+    "location": "POINT (23.11846 -31.40651)",
+    "longitude": 23.11846,
+    "name": "nc Victoria West Clinic",
+    "province": "Northern Cape",
+    "short_name": "Victoria West Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Maeder Street",
+    "code": 896742,
+    "latitude": -30.5762,
+    "location": "POINT (22.87812 -30.57625)",
+    "longitude": 22.87812,
+    "name": "nc Vosburg CHC",
+    "province": "Northern Cape",
+    "short_name": "Vosburg CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hospital Street",
+    "code": 739233,
+    "latitude": -28.107,
+    "location": "POINT (24.85925 -28.10709)",
+    "longitude": 24.85925,
+    "name": "nc Warrenton CHC",
+    "province": "Northern Cape",
+    "short_name": "Warrenton CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Warrenvale, Third Street, Warrenton",
+    "code": 780215,
+    "latitude": -28.1015,
+    "location": "POINT (24.86967 -28.1015)",
+    "longitude": 24.86967,
+    "name": "nc Warrenvale Clinic",
+    "province": "Northern Cape",
+    "short_name": "Warrenvale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Nuwe Street",
+    "code": 804251,
+    "latitude": -31.3353,
+    "location": "POINT (20.91501 -31.33535)",
+    "longitude": 20.91501,
+    "name": "nc Williston CHC",
+    "province": "Northern Cape",
+    "short_name": "Williston CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Mothibi Street, Windsorton",
+    "code": 444742,
+    "latitude": -28.3287,
+    "location": "POINT (24.71415 -28.32873)",
+    "longitude": 24.71415,
+    "name": "nc Windsorton Clinic",
+    "province": "Northern Cape",
+    "short_name": "Windsorton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": "4 Buitekant Street, Wrenchville",
+      "code": 475560,
+      "latitude": -27.4508,
+      "location": "POINT (23.45917 -27.45083)",
+      "longitude": 23.45917,
+      "name": "nc Wrenchville Clinic",
+      "province": "Northern Cape",
+      "short_name": "Wrenchville Clinic"
+    }
+  }
+]

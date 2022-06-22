@@ -1,0 +1,3759 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dudfield Farm",
+    "code": 782533,
+    "latitude": -26.19,
+    "location": "POINT (26.16 -26.19)",
+    "longitude": 26.16,
+    "name": "nw AfriSam Clinic",
+    "province": "North West",
+    "short_name": "AfriSam Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "212 Agisanang",
+    "code": 665424,
+    "latitude": -26.5583,
+    "location": "POINT (25.82387 -26.5583)",
+    "longitude": 25.82387,
+    "name": "nw Agisanang Clinic",
+    "province": "North West",
+    "short_name": "Agisanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "65 Alex Street, Alabama",
+    "code": 120824,
+    "latitude": -26.864,
+    "location": "POINT (26.57945 -26.86403)",
+    "longitude": 26.57945,
+    "name": "nw Alabama Clinic",
+    "province": "North West",
+    "short_name": "Alabama Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "515 Thaga Street, Amaila",
+    "code": 341351,
+    "latitude": -27.2499,
+    "location": "POINT (25.03107 -27.24997)",
+    "longitude": 25.03107,
+    "name": "nw Amalia Clinic",
+    "province": "North West",
+    "short_name": "Amalia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Nelson Mandela Drive",
+    "code": 445351,
+    "latitude": -25.4384,
+    "location": "POINT (27.485141 -25.438442)",
+    "longitude": 27.485141,
+    "name": "nw Anna Legoale Clinic",
+    "province": "North West",
+    "short_name": "Anna Legoale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1st Avenue, Atamelang",
+    "code": 360942,
+    "latitude": -26.5031,
+    "location": "POINT (25.36892 -26.5031)",
+    "longitude": 25.36892,
+    "name": "nw Atamelang CHC",
+    "province": "North West",
+    "short_name": "Atamelang CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Austrey Clinic, Next To Kgosi Thebe School",
+    "code": 858651,
+    "latitude": -26.4665,
+    "location": "POINT (24.18139 -26.46658)",
+    "longitude": 24.18139,
+    "name": "nw Austrey Clinic",
+    "province": "North West",
+    "short_name": "Austrey Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Phokeng Village, next To Royal Palace",
+    "code": 326751,
+    "latitude": -25.5594,
+    "location": "POINT (27.1559 -25.55946)",
+    "longitude": 27.1559,
+    "name": "nw Bafokeng CHC",
+    "province": "North West",
+    "short_name": "Bafokeng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 614933,
+    "latitude": -26.14,
+    "location": "POINT (26.29 -26.14)",
+    "longitude": 26.29,
+    "name": "nw Bakerville Clinic",
+    "province": "North West",
+    "short_name": "Bakerville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 212915,
+    "latitude": -25.3573,
+    "location": "POINT (27.05199 -25.35734)",
+    "longitude": 27.05199,
+    "name": "nw Bakubung Clinic",
+    "province": "North West",
+    "short_name": "Bakubung Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "E552 Pheseke Section",
+    "code": 486724,
+    "latitude": -25.2248,
+    "location": "POINT (26.94385 -25.2248)",
+    "longitude": 26.94385,
+    "name": "nw Baleema Clinic",
+    "province": "North West",
+    "short_name": "Baleema Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bapong Skool Plaas",
+    "code": 795151,
+    "latitude": -25.7018,
+    "location": "POINT (27.67753 -25.70181)",
+    "longitude": 27.67753,
+    "name": "nw Bapong CHC",
+    "province": "North West",
+    "short_name": "Bapong CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 934442,
+    "latitude": -25.3125,
+    "location": "POINT (26.84421 -25.31256)",
+    "longitude": 26.84421,
+    "name": "nw Bapong Clinic",
+    "province": "North West",
+    "short_name": "Bapong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "448 Bethnie Road",
+    "code": 983406,
+    "latitude": -25.5503,
+    "location": "POINT (27.60204 -25.55031)",
+    "longitude": 27.60204,
+    "name": "nw Bethanie Clinic",
+    "province": "North West",
+    "short_name": "Bethanie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "26 Tullekin Street",
+    "code": 733551,
+    "latitude": -27.6467,
+    "location": "POINT (25.60798 -27.64678)",
+    "longitude": 25.60798,
+    "name": "nw Bloemhof CHC",
+    "province": "North West",
+    "short_name": "Bloemhof CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "22 Blosso Street, Lichtenburg",
+    "code": 231460,
+    "latitude": -26.1812,
+    "location": "POINT (26.160711 -26.181289)",
+    "longitude": 26.160711,
+    "name": "nw Blydeville 2 Clinic",
+    "province": "North West",
+    "short_name": "Blydeville 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Jakaranda Street, Blydevik",
+    "code": 553142,
+    "latitude": -26.1809,
+    "location": "POINT (26.16038 -26.18095)",
+    "longitude": 26.16038,
+    "name": "nw Blydeville Clinic",
+    "province": "North West",
+    "short_name": "Blydeville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rakgolo Bodibe",
+    "code": 362842,
+    "latitude": -26.0657,
+    "location": "POINT (25.85987 -26.06574)",
+    "longitude": 25.85987,
+    "name": "nw Bodibe 1 Clinic",
+    "province": "North West",
+    "short_name": "Bodibe 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 572533,
+    "latitude": -26.076,
+    "location": "POINT (25.88095 -26.07605)",
+    "longitude": 25.88095,
+    "name": "nw Bodibe 2 Clinic",
+    "province": "North West",
+    "short_name": "Bodibe 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Morokologadi Section",
+    "code": 562524,
+    "latitude": -24.9929,
+    "location": "POINT (26.98922 -24.99299)",
+    "longitude": 26.98922,
+    "name": "nw Boikanyo Clinic",
+    "province": "North West",
+    "short_name": "Boikanyo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "706 Khudu",
+    "code": 987124,
+    "latitude": -26.1785,
+    "location": "POINT (26.14322 -26.17859)",
+    "longitude": 26.14322,
+    "name": "nw Boikhutso Clinic",
+    "province": "North West",
+    "short_name": "Boikhutso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "144453 Rata Steet",
+    "code": 927106,
+    "latitude": -26.7178,
+    "location": "POINT (27.05658 -26.71788)",
+    "longitude": 27.05658,
+    "name": "nw Boiki Thlapi CHC",
+    "province": "North West",
+    "short_name": "Boiki Thlapi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 15975, Extension 13",
+    "code": 883015,
+    "latitude": -25.3591,
+    "location": "POINT (27.17136 -25.35917)",
+    "longitude": 27.17136,
+    "name": "nw Boitekong CHC",
+    "province": "North West",
+    "short_name": "Boitekong CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3261 Extension 2 Boitekong",
+    "code": 379342,
+    "latitude": -25.6125,
+    "location": "POINT (27.31473 -25.61256)",
+    "longitude": 27.31473,
+    "name": "nw Boitekong Clinic",
+    "province": "North West",
+    "short_name": "Boitekong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "927 Phuduhudu Street, Bloemhof",
+    "code": 452860,
+    "latitude": -27.6414,
+    "location": "POINT (25.57177 -27.64143)",
+    "longitude": 25.57177,
+    "name": "nw Boitumelong Clinic",
+    "province": "North West",
+    "short_name": "Boitumelong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Bona Bona Primary School",
+    "code": 652951,
+    "latitude": -26.2349,
+    "location": "POINT (23.53878 -26.23497)",
+    "longitude": 23.53878,
+    "name": "nw Bona Bona Clinic",
+    "province": "North West",
+    "short_name": "Bona Bona Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "129 Mokwatsi Street, Witpoort",
+    "code": 447506,
+    "latitude": -27.1787,
+    "location": "POINT (26.11264 -27.17873)",
+    "longitude": 26.11264,
+    "name": "nw Bophelo Clinic",
+    "province": "North West",
+    "short_name": "Bophelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Carltonville Road",
+    "code": 792724,
+    "latitude": -26.5814,
+    "location": "POINT (27.12048 -26.58149)",
+    "longitude": 27.12048,
+    "name": "nw Boskop Clinic",
+    "province": "North West",
+    "short_name": "Boskop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Plot 379 Bosplaas",
+    "code": 932742,
+    "latitude": -25.3183,
+    "location": "POINT (28.2505 -25.31836)",
+    "longitude": 28.2505,
+    "name": "nw Bosplaas Clinic",
+    "province": "North West",
+    "short_name": "Bosplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "5707 Lekoma Street",
+    "code": 119142,
+    "latitude": -26.854,
+    "location": "POINT (26.84681 -26.85405)",
+    "longitude": 26.84681,
+    "name": "nw Botshabelo CHC",
+    "province": "North West",
+    "short_name": "Botshabelo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mokwena Section",
+    "code": 818315,
+    "latitude": -25.2549,
+    "location": "POINT (26.48267 -25.25494)",
+    "longitude": 26.48267,
+    "name": "nw Brakkuil Clinic",
+    "province": "North West",
+    "short_name": "Brakkuil Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Goo Nonyane Section",
+    "code": 245406,
+    "latitude": -25.3936,
+    "location": "POINT (26.09361 -25.39361)",
+    "longitude": 26.09361,
+    "name": "nw Braklaagte Clinic",
+    "province": "North West",
+    "short_name": "Braklaagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Paddon Road",
+    "code": 486960,
+    "latitude": -25.4643,
+    "location": "POINT (23.70344 -25.46434)",
+    "longitude": 23.70344,
+    "name": "nw Bray CHC",
+    "province": "North West",
+    "short_name": "Bray CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Broederstroom, next to Angiro Chicken Farm",
+    "code": 142451,
+    "latitude": -25.7934,
+    "location": "POINT (27.85741 -25.79341)",
+    "longitude": 27.85741,
+    "name": "nw Broederstroom Clinic",
+    "province": "North West",
+    "short_name": "Broederstroom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Parks Board",
+    "code": 792342,
+    "latitude": -27.6255,
+    "location": "POINT (24.6365 -27.62555)",
+    "longitude": 24.6365,
+    "name": "nw Buxton Clinic",
+    "province": "North West",
+    "short_name": "Buxton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 114542,
+    "latitude": -25.9765,
+    "location": "POINT (26.184372 -25.976544)",
+    "longitude": 26.184372,
+    "name": "nw Carlisonia Health Post",
+    "province": "North West",
+    "short_name": "Carlisonia HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 227442,
+    "latitude": -25.4133,
+    "location": "POINT (27.12405 -25.41338)",
+    "longitude": 27.12405,
+    "name": "nw Chaneng Clinic",
+    "province": "North West",
+    "short_name": "Chaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1152 Cnr Billey and School Street, Charon",
+    "code": 607051,
+    "latitude": -27.191,
+    "location": "POINT (25.30819 -27.19105)",
+    "longitude": 25.30819,
+    "name": "nw Charon Clinic",
+    "province": "North West",
+    "short_name": "Charon Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Municipality Building, Christiana",
+    "code": 543242,
+    "latitude": -27.9169,
+    "location": "POINT (25.15591 -27.91699)",
+    "longitude": 25.15591,
+    "name": "nw Christiana Town Clinic",
+    "province": "North West",
+    "short_name": "Christiana Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To The Taung Station",
+    "code": 651833,
+    "latitude": -27.4851,
+    "location": "POINT (24.80265 -27.48511)",
+    "longitude": 24.80265,
+    "name": "nw Cokonyane Clinic",
+    "province": "North West",
+    "short_name": "Cokonyane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "14 Eeufees Street, Coligny",
+    "code": 374560,
+    "latitude": -26.3304,
+    "location": "POINT (26.32486 -26.3304)",
+    "longitude": 26.32486,
+    "name": "nw Coligny CHC",
+    "province": "North West",
+    "short_name": "Coligny CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "25 A Skool Street, Colridge",
+    "code": 857751,
+    "latitude": -26.9501,
+    "location": "POINT (24.73919 -26.95015)",
+    "longitude": 24.73919,
+    "name": "nw Colridge Clinic",
+    "province": "North West",
+    "short_name": "Colridge Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2198 Buis Street, Coverdale",
+    "code": 411715,
+    "latitude": -27.639,
+    "location": "POINT (25.592121 -27.639003)",
+    "longitude": 25.592121,
+    "name": "nw Coverdale Clinic",
+    "province": "North West",
+    "short_name": "Coverdale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Mkhondo and Main Street",
+    "code": 819342,
+    "latitude": -25.0735,
+    "location": "POINT (28.23447 -25.07356)",
+    "longitude": 28.23447,
+    "name": "nw Cyferkuil (Kutloanong) Clinic",
+    "province": "North West",
+    "short_name": "Cyferkuil Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Veronica and Jasmine Streets",
+    "code": 442860,
+    "latitude": -25.6246,
+    "location": "POINT (27.85231 -25.62466)",
+    "longitude": 27.85231,
+    "name": "nw Damonsville Clinic",
+    "province": "North West",
+    "short_name": "Damonsville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 871406,
+    "latitude": -25.1128,
+    "location": "POINT (26.52425 -25.11286)",
+    "longitude": 26.52425,
+    "name": "nw David Katnagel Clinic",
+    "province": "North West",
+    "short_name": "David Katnagel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Noi Soet Doringlaan",
+    "code": 716824,
+    "latitude": -26.6869,
+    "location": "POINT (25.46569 -26.68693)",
+    "longitude": 25.46569,
+    "name": "nw Delareyville CHC",
+    "province": "North West",
+    "short_name": "Delareyville CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 575042,
+    "latitude": -26.7381,
+    "location": "POINT (26.41708 -26.73811)",
+    "longitude": 26.41708,
+    "name": "nw Delekile Khoza Clinic",
+    "province": "North West",
+    "short_name": "Delekile Khoza Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "352 Block B Dikebu",
+    "code": 783360,
+    "latitude": -25.1456,
+    "location": "POINT (27.95953 -25.14564)",
+    "longitude": 27.95953,
+    "name": "nw Dikebu (Sediane) Clinic",
+    "province": "North West",
+    "short_name": "Dikebu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lobatse Road, Dinokana Village",
+    "code": 537551,
+    "latitude": -25.4441,
+    "location": "POINT (25.86468 -25.44419)",
+    "longitude": 25.86468,
+    "name": "nw Dinokana CHC",
+    "province": "North West",
+    "short_name": "Dinokana CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 764151,
+    "latitude": -25.4446,
+    "location": "POINT (25.86438 -25.44469)",
+    "longitude": 25.86438,
+    "name": "nw Dinokana Clinic",
+    "province": "North West",
+    "short_name": "Dinokana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 550015,
+    "latitude": -25.8001,
+    "location": "POINT (25.29743 -25.80012)",
+    "longitude": 25.29743,
+    "name": "nw Disaneng Clinic",
+    "province": "North West",
+    "short_name": "Disaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dithakong Near Zondies Shop",
+    "code": 484151,
+    "latitude": -25.9678,
+    "location": "POINT (25.63008 -25.96786)",
+    "longitude": 25.63008,
+    "name": "nw Dithakong (Mahikeng) Clinic",
+    "province": "North West",
+    "short_name": "Dithakong (MHK) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 930133,
+    "latitude": -25.1422,
+    "location": "POINT (25.97389 -25.14222)",
+    "longitude": 25.97389,
+    "name": "nw Driefontein Clinic",
+    "province": "North West",
+    "short_name": "Driefontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 387424,
+    "latitude": -27.3275,
+    "location": "POINT (24.72465 -27.32757)",
+    "longitude": 24.72465,
+    "name": "nw Dryharts Clinic",
+    "province": "North West",
+    "short_name": "Dryharts Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Madinonyane Village, near Anglican Church",
+    "code": 774751,
+    "latitude": -26.8022,
+    "location": "POINT (23.76214 -26.80222)",
+    "longitude": 23.76214,
+    "name": "nw Eckron Clinic",
+    "province": "North West",
+    "short_name": "Eckron Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "13535 Ext 11 Morokapule Drive, Jouberton",
+    "code": 475451,
+    "latitude": -26.8869,
+    "location": "POINT (26.60393 -26.88695)",
+    "longitude": 26.60393,
+    "name": "nw Empilisweni Clinic",
+    "province": "North West",
+    "short_name": "Empilisweni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To Dankie Store, Fafung",
+    "code": 265224,
+    "latitude": -25.1921,
+    "location": "POINT (27.784611 -25.19214)",
+    "longitude": 27.784610999999998,
+    "name": "nw Fafung Clinic",
+    "province": "North West",
+    "short_name": "Fafung Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 100124,
+    "latitude": -25.5666,
+    "location": "POINT (27.251683 -25.566639)",
+    "longitude": 27.251683,
+    "name": "nw Freedom Park Clinic",
+    "province": "North West",
+    "short_name": "Freedom Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sekoleng Street",
+    "code": 226715,
+    "latitude": -25.3592,
+    "location": "POINT (28.05692 -25.35929)",
+    "longitude": 28.05692,
+    "name": "nw Ga-Motla Clinic",
+    "province": "North West",
+    "short_name": "Ga-Motla Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "General De la Rey Street, Ganalaagte, 2781",
+    "code": 251624,
+    "latitude": -26.4707,
+    "location": "POINT (25.53692 -26.47075)",
+    "longitude": 25.53692,
+    "name": "nw Ganalaagte Clinic",
+    "province": "North West",
+    "short_name": "Ganalaagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chief Block Section",
+    "code": 861660,
+    "latitude": -26.5873,
+    "location": "POINT (24.17611 -26.58739)",
+    "longitude": 24.17611,
+    "name": "nw Ganyesa CHC",
+    "province": "North West",
+    "short_name": "Ganyesa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Radithuso Gelukspan Village Road, Radithuso, Mahikeng, 2735",
+    "code": 840733,
+    "latitude": -26.2007,
+    "location": "POINT (25.60258 -26.2007)",
+    "longitude": 25.60258,
+    "name": "nw Gelukspan Gateway Clinic",
+    "province": "North West",
+    "short_name": "Gelukspan Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "380 Glaudinia, Schweizer Reneke",
+    "code": 145415,
+    "latitude": -27.0399,
+    "location": "POINT (25.61842 -27.03997)",
+    "longitude": 25.61842,
+    "name": "nw Glaudina Clinic",
+    "province": "North West",
+    "short_name": "Glaudina Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 323551,
+    "latitude": -26.1595,
+    "location": "POINT (26.89828 -26.15957)",
+    "longitude": 26.89828,
+    "name": "nw Goedgevonden Clinic",
+    "province": "North West",
+    "short_name": "Goedgevonden Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 468551,
+    "latitude": -25.3176,
+    "location": "POINT (25.79606 -25.31769)",
+    "longitude": 25.79606,
+    "name": "nw Gopane Clinic",
+    "province": "North West",
+    "short_name": "Gopane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Katleho and Khumalo Cnr Street",
+    "code": 521706,
+    "latitude": -26.9558,
+    "location": "POINT (26.63554 -26.95584)",
+    "longitude": 26.63554,
+    "name": "nw Grace Mokgomo CHC",
+    "province": "North West",
+    "short_name": "G Mokgomo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "12 Voortrekker Street, Grootmarico",
+    "code": 637051,
+    "latitude": -25.5994,
+    "location": "POINT (26.41905 -25.59945)",
+    "longitude": 26.41905,
+    "name": "nw Groot Marico Clinic",
+    "province": "North West",
+    "short_name": "Groot Marico Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 278542,
+    "latitude": -25.7276,
+    "location": "POINT (27.878322 -25.727676)",
+    "longitude": 27.878322,
+    "name": "nw Hartbeespoort Clinic",
+    "province": "North West",
+    "short_name": "Hartbeespoort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "993 Main Street, Lethabong",
+    "code": 438742,
+    "latitude": -25.4376,
+    "location": "POINT (27.50441 -25.43764)",
+    "longitude": 27.50441,
+    "name": "nw Hartebeesfontein Clinic",
+    "province": "North West",
+    "short_name": "Hartebeesfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 231133,
+    "latitude": -25.55,
+    "location": "POINT (28.01633 -25.55006)",
+    "longitude": 28.01633,
+    "name": "nw Hebron Clinic",
+    "province": "North West",
+    "short_name": "Hebron Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 518506,
+    "latitude": -25.6156,
+    "location": "POINT (27.94406 -25.61569)",
+    "longitude": 27.94406,
+    "name": "nw Hoekfontein (Mmakau) Clinic",
+    "province": "North West",
+    "short_name": "Hoekfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2659 Mosiapoa Street, Huhudi",
+    "code": 855342,
+    "latitude": -26.974,
+    "location": "POINT (24.73979 -26.97407)",
+    "longitude": 24.73979,
+    "name": "nw Huhudi CHC",
+    "province": "North West",
+    "short_name": "Huhudi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 283751,
+    "latitude": -25.7216,
+    "location": "POINT (27.316621 -25.72167)",
+    "longitude": 27.316621,
+    "name": "nw Ikemeleng Clinic",
+    "province": "North West",
+    "short_name": "Ikemeleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1651B Klipgat",
+    "code": 581324,
+    "latitude": -25.4746,
+    "location": "POINT (28.00225 -25.47469)",
+    "longitude": 28.00225,
+    "name": "nw Ikhutseng (Klipgat) Clinic",
+    "province": "North West",
+    "short_name": "Ikhutseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "806 Cedar Street",
+    "code": 554524,
+    "latitude": -27.1963,
+    "location": "POINT (25.30646 -27.19632)",
+    "longitude": 25.30646,
+    "name": "nw Ipelegeng Clinic",
+    "province": "North West",
+    "short_name": "Ipelegeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mogalese",
+    "code": 269351,
+    "latitude": -24.9437,
+    "location": "POINT (27.08907 -24.94379)",
+    "longitude": 27.08907,
+    "name": "nw Ipopeng Clinic",
+    "province": "North West",
+    "short_name": "Ipopeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 716124,
+    "latitude": -26.3612,
+    "location": "POINT (25.90957 -26.36127)",
+    "longitude": 25.90957,
+    "name": "nw Itekeng Clinic",
+    "province": "North West",
+    "short_name": "Itekeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 612642,
+    "latitude": -26.0822,
+    "location": "POINT (25.88446 -26.08226)",
+    "longitude": 25.88446,
+    "name": "nw Itsoseng CHC",
+    "province": "North West",
+    "short_name": "Itsoseng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8 Itsoseng, Zone 1",
+    "code": 353515,
+    "latitude": -26.076,
+    "location": "POINT (25.88095 -26.07605)",
+    "longitude": 25.88095,
+    "name": "nw Itsoseng Clinic",
+    "province": "North West",
+    "short_name": "Itsoseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3252 Phujwa-Ditswaba Street",
+    "code": 867624,
+    "latitude": -26.3201,
+    "location": "POINT (26.81204 -26.32014)",
+    "longitude": 26.81204,
+    "name": "nw JB Marks CHC",
+    "province": "North West",
+    "short_name": "JB Marks CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4001 Selosecha Section",
+    "code": 195315,
+    "latitude": -25.3256,
+    "location": "POINT (27.80227 -25.32565)",
+    "longitude": 27.80227,
+    "name": "nw Jericho Clinic",
+    "province": "North West",
+    "short_name": "Jericho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20327 Kopanong Road, Jouberton, Klerksdorp, 2574",
+    "code": 477342,
+    "latitude": -26.8953,
+    "location": "POINT (26.60689 -26.89531)",
+    "longitude": 26.60689,
+    "name": "nw Jouberton CHC",
+    "province": "North West",
+    "short_name": "Jouberton CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 876160,
+    "latitude": -25.5733,
+    "location": "POINT (27.30325 -25.5733)",
+    "longitude": 27.30325,
+    "name": "nw Kana Clinic",
+    "province": "North West",
+    "short_name": "Kana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Tau Essep Pahad Street",
+    "code": 418642,
+    "latitude": -26.9637,
+    "location": "POINT (26.63979 -26.96376)",
+    "longitude": 26.63979,
+    "name": "nw Kanana Clinic",
+    "province": "North West",
+    "short_name": "Kanana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Phlox and Saxwille Street",
+    "code": 673151,
+    "latitude": -25.3853,
+    "location": "POINT (27.14179 -25.3853)",
+    "longitude": 27.14179,
+    "name": "nw Karlien Park Clinic",
+    "province": "North West",
+    "short_name": "Karlien Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "697 Phiring Section",
+    "code": 903860,
+    "latitude": -25.5357,
+    "location": "POINT (27.95809 -25.53572)",
+    "longitude": 27.95809,
+    "name": "nw Kgabalatsane Clinic",
+    "province": "North West",
+    "short_name": "Kgabalatsane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "199 Leboya Street",
+    "code": 621260,
+    "latitude": -27.218,
+    "location": "POINT (26.26648 -27.21802)",
+    "longitude": 26.26648,
+    "name": "nw Kgakala Clinic",
+    "province": "North West",
+    "short_name": "Kgakala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kgokgojane Village",
+    "code": 367660,
+    "latitude": -26.7506,
+    "location": "POINT (23.97995 -26.75068)",
+    "longitude": 23.97995,
+    "name": "nw Kgokgojane Clinic",
+    "province": "North West",
+    "short_name": "Kgokgojane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kgokgole Clinic",
+    "code": 800242,
+    "latitude": -26.7159,
+    "location": "POINT (23.92791 -26.71599)",
+    "longitude": 23.92791,
+    "name": "nw Kgokgole Clinic",
+    "province": "North West",
+    "short_name": "Kgokgole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "310 Riverside Block",
+    "code": 331715,
+    "latitude": -25.1536,
+    "location": "POINT (28.07467 -25.15367)",
+    "longitude": 28.07467,
+    "name": "nw Kgomo-Kgomo Clinic",
+    "province": "North West",
+    "short_name": "Kgomo-Kgomo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 227660,
+    "latitude": -27.9825,
+    "location": "POINT (24.61234 -27.98255)",
+    "longitude": 24.61234,
+    "name": "nw Kgomotso Clinic",
+    "province": "North West",
+    "short_name": "Kgomotso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rysmier",
+    "code": 845160,
+    "latitude": -26.3525,
+    "location": "POINT (27.12989 -26.35258)",
+    "longitude": 27.12989,
+    "name": "nw Kgotso Clinic",
+    "province": "North West",
+    "short_name": "Kgotso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1, Mission Section",
+    "code": 791051,
+    "latitude": -25.107,
+    "location": "POINT (26.65455 -25.10704)",
+    "longitude": 26.65455,
+    "name": "nw Khayakulu Clinic",
+    "province": "North West",
+    "short_name": "Khayakulu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Khudutlou Next To Bagamaidi Primary School",
+    "code": 606142,
+    "latitude": -27.6629,
+    "location": "POINT (25.05343 -27.66291)",
+    "longitude": 25.05343,
+    "name": "nw Khudutlou Clinic",
+    "province": "North West",
+    "short_name": "Khudutlou Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 2, Cnr Tsietsi Seakwa and Popo-Molefe Roads",
+    "code": 982033,
+    "latitude": -26.8443,
+    "location": "POINT (26.87126 -26.84431)",
+    "longitude": 26.87126,
+    "name": "nw Khuma Clinic",
+    "province": "North West",
+    "short_name": "Khuma Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Khunotswenae Clinic",
+    "code": 632115,
+    "latitude": -25.57,
+    "location": "POINT (25.82763 -25.57002)",
+    "longitude": 25.82763,
+    "name": "nw Khunotswana Clinic",
+    "province": "North West",
+    "short_name": "Khunotswana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kgosing Section, Matau Village",
+    "code": 764206,
+    "latitude": -25.2473,
+    "location": "POINT (26.67006 -25.24736)",
+    "longitude": 26.67006,
+    "name": "nw Koedoesrand Clinic",
+    "province": "North West",
+    "short_name": "Koedoesrand Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 394606,
+    "latitude": -25.2831,
+    "location": "POINT (26.41926 -25.28319)",
+    "longitude": 26.41926,
+    "name": "nw Koffiekraal Clinic",
+    "province": "North West",
+    "short_name": "Koffiekraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kokoano Clinic",
+    "code": 985415,
+    "latitude": -26.0446,
+    "location": "POINT (23.48875 -26.04465)",
+    "longitude": 23.48875,
+    "name": "nw Kokoana Clinic",
+    "province": "North West",
+    "short_name": "Kokoana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 825851,
+    "latitude": -26.2736,
+    "location": "POINT (25.30583 -26.27367)",
+    "longitude": 25.30583,
+    "name": "nw Kraaipan Clinic",
+    "province": "North West",
+    "short_name": "Kraaipan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 462942,
+    "latitude": -24.9149,
+    "location": "POINT (27.07808 -24.91495)",
+    "longitude": 27.07808,
+    "name": "nw Kraalhoek Clinic",
+    "province": "North West",
+    "short_name": "Kraalhoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 695306,
+    "latitude": -25.3876,
+    "location": "POINT (28.052574 -25.387675)",
+    "longitude": 28.052574,
+    "name": "nw Kromkuil (Mpho-ya-batho) Clinic",
+    "province": "North West",
+    "short_name": "Kromkuil Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kudunkgwane",
+    "code": 633733,
+    "latitude": -26.4223,
+    "location": "POINT (24.40493 -26.42233)",
+    "longitude": 24.40493,
+    "name": "nw Kudunkgwane Clinic",
+    "province": "North West",
+    "short_name": "Kudunkgwane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Khunwana Village",
+    "code": 234206,
+    "latitude": -26.3704,
+    "location": "POINT (25.32706 -26.3704)",
+    "longitude": 25.32706,
+    "name": "nw Kunana Clinic",
+    "province": "North West",
+    "short_name": "Kunana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3069 Zone 3",
+    "code": 358351,
+    "latitude": -25.0485,
+    "location": "POINT (27.93338 -25.04853)",
+    "longitude": 27.93338,
+    "name": "nw Lebotloane Clinic",
+    "province": "North West",
+    "short_name": "Lebotloane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "63 Smuts Street, Leeudoringstad, 2640",
+    "code": 580351,
+    "latitude": -27.235,
+    "location": "POINT (26.23733 -27.23503)",
+    "longitude": 26.23733,
+    "name": "nw Leeudoringstad CHC",
+    "province": "North West",
+    "short_name": "Leeudoringstad CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lefatlheng Village",
+    "code": 151115,
+    "latitude": -25.1617,
+    "location": "POINT (28.159685 -25.161746)",
+    "longitude": 28.159685,
+    "name": "nw Lefatlheng Clinic",
+    "province": "North West",
+    "short_name": "Lefatlheng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "House 236, Raphiri Section",
+    "code": 783515,
+    "latitude": -25.132,
+    "location": "POINT (27.05184 -25.13203)",
+    "longitude": 27.05184,
+    "name": "nw Legkraal Clinic",
+    "province": "North West",
+    "short_name": "Legkraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Motlhage Street",
+    "code": 387406,
+    "latitude": -25.4826,
+    "location": "POINT (25.96325 -25.48266)",
+    "longitude": 25.96325,
+    "name": "nw Lehurutshe Clinic",
+    "province": "North West",
+    "short_name": "Lehurutshe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 961824,
+    "latitude": -24.7991,
+    "location": "POINT (26.01439 -24.79914)",
+    "longitude": 26.01439,
+    "name": "nw Lekgophung Clinic",
+    "province": "North West",
+    "short_name": "Lekgophung Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lekoko Village Near Lekoko Primary School",
+    "code": 698851,
+    "latitude": -25.9297,
+    "location": "POINT (25.50319 -25.92974)",
+    "longitude": 25.50319,
+    "name": "nw Lekoko CHC",
+    "province": "North West",
+    "short_name": "Lekoko CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6119 Maaanoganye Street",
+    "code": 241515,
+    "latitude": -26.7281,
+    "location": "POINT (27.05375 -26.72815)",
+    "longitude": 27.05375,
+    "name": "nw Lesego Clinic",
+    "province": "North West",
+    "short_name": "Lesego Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 681533,
+    "latitude": -25.152,
+    "location": "POINT (27.12183 -25.15207)",
+    "longitude": 27.12183,
+    "name": "nw Lesetlheng Clinic",
+    "province": "North West",
+    "short_name": "Lesetlheng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1069 Block A",
+    "code": 398333,
+    "latitude": -25.4866,
+    "location": "POINT (27.84292 -25.48663)",
+    "longitude": 27.84292,
+    "name": "nw Letlhabile CHC",
+    "province": "North West",
+    "short_name": "Letlhabile CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 3704, Letsopa",
+    "code": 284051,
+    "latitude": -26.8066,
+    "location": "POINT (25.98156 -26.80665)",
+    "longitude": 25.98156,
+    "name": "nw Letsopa Clinic",
+    "province": "North West",
+    "short_name": "Letsopa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7 Landros Martins Street",
+    "code": 877533,
+    "latitude": -26.147100000000002,
+    "location": "POINT (26.16176 -26.14715)",
+    "longitude": 26.16176,
+    "name": "nw Lichtenburg Municipal Clinic",
+    "province": "North West",
+    "short_name": "Lichtenburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tshetllhong Section",
+    "code": 353251,
+    "latitude": -24.824,
+    "location": "POINT (26.84623 -24.82402)",
+    "longitude": 26.84623,
+    "name": "nw Lincoe Clinic",
+    "province": "North West",
+    "short_name": "Lincoe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "36 Motladile Secton, Lobatla Village",
+    "code": 708633,
+    "latitude": -25.1747,
+    "location": "POINT (25.8406 -25.17471)",
+    "longitude": 25.8406,
+    "name": "nw Lobatla Clinic",
+    "province": "North West",
+    "short_name": "Lobatla Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Logageng Village",
+    "code": 789860,
+    "latitude": -25.9404,
+    "location": "POINT (24.69334 -25.9404)",
+    "longitude": 24.69334,
+    "name": "nw Logageng Clinic",
+    "province": "North West",
+    "short_name": "Logageng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lokaleng Village Near Lokaleng Primary",
+    "code": 806951,
+    "latitude": -25.7809,
+    "location": "POINT (25.57024 -25.78093)",
+    "longitude": 25.57024,
+    "name": "nw Lokaleng Clinic",
+    "province": "North West",
+    "short_name": "Lokaleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Kings Tavern",
+    "code": 592251,
+    "latitude": -25.7349,
+    "location": "POINT (25.66245 -25.73498)",
+    "longitude": 25.66245,
+    "name": "nw Lonely Park Clinic",
+    "province": "North West",
+    "short_name": "Lonely Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 145615,
+    "latitude": -27.7734,
+    "location": "POINT (24.66939 -27.77347)",
+    "longitude": 24.66939,
+    "name": "nw Lower Majeakgoro Clinic",
+    "province": "North West",
+    "short_name": "L Majeakgoro Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 434642,
+    "latitude": -25.5054,
+    "location": "POINT (27.18942 -25.50548)",
+    "longitude": 27.18942,
+    "name": "nw Luka Clinic",
+    "province": "North West",
+    "short_name": "Luka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 70543",
+    "code": 425406,
+    "latitude": -25.1952,
+    "location": "POINT (26.78413 -25.19528)",
+    "longitude": 26.78413,
+    "name": "nw Mabeskraal CHC",
+    "province": "North West",
+    "short_name": "Mabeskraal CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1587 Bataunu Section",
+    "code": 189151,
+    "latitude": -25.4281,
+    "location": "POINT (27.86049 -25.42814)",
+    "longitude": 27.86049,
+    "name": "nw Maboloka Clinic",
+    "province": "North West",
+    "short_name": "Maboloka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 698715,
+    "latitude": -25.7771,
+    "location": "POINT (24.55512 -25.77718)",
+    "longitude": 24.55512,
+    "name": "nw Mabule Clinic",
+    "province": "North West",
+    "short_name": "Mabule Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "57 Van Velden Street",
+    "code": 823642,
+    "latitude": -25.6363,
+    "location": "POINT (27.77669 -25.6363)",
+    "longitude": 27.77669,
+    "name": "nw Madibeng Clinic",
+    "province": "North West",
+    "short_name": "Madibeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Madibogopan Clinic",
+    "code": 850751,
+    "latitude": -26.4936,
+    "location": "POINT (25.14845 -26.49367)",
+    "longitude": 25.14845,
+    "name": "nw Madibogopan Clinic",
+    "province": "North West",
+    "short_name": "Madibogopan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "472 Block C Madidi",
+    "code": 498651,
+    "latitude": -25.4459,
+    "location": "POINT (27.95406 -25.44596)",
+    "longitude": 27.95406,
+    "name": "nw Madidi (Kleinfontein) Clinic",
+    "province": "North West",
+    "short_name": "Madidi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 291151,
+    "latitude": -27.8952,
+    "location": "POINT (24.41956 -27.89525)",
+    "longitude": 24.41956,
+    "name": "nw Madipelesa Clinic",
+    "province": "North West",
+    "short_name": "Madipelesa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Sedibathuto Primary School",
+    "code": 533333,
+    "latitude": -27.6513,
+    "location": "POINT (24.81635 -27.65136)",
+    "longitude": 24.81635,
+    "name": "nw Magogong Clinic",
+    "province": "North West",
+    "short_name": "Magogong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Phelu M School",
+    "code": 626324,
+    "latitude": -25.9066,
+    "location": "POINT (25.60691 -25.90663)",
+    "longitude": 25.60691,
+    "name": "nw Magogwe Clinic",
+    "province": "North West",
+    "short_name": "Magogwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lichtenburg Road, Danville",
+    "code": 560833,
+    "latitude": -25.8842,
+    "location": "POINT (25.65794 -25.88424)",
+    "longitude": 25.65794,
+    "name": "nw Mahikeng Gateway Clinic",
+    "province": "North West",
+    "short_name": "Mahikeng Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2443 Dlamini Section",
+    "code": 739542,
+    "latitude": -25.7405,
+    "location": "POINT (27.6722 -25.7405)",
+    "longitude": 27.6722,
+    "name": "nw Majakaneng Clinic",
+    "province": "North West",
+    "short_name": "Majakaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Samuel Ambel Street",
+    "code": 765724,
+    "latitude": -26.9675,
+    "location": "POINT (26.61859 -26.96753)",
+    "longitude": 26.61859,
+    "name": "nw Majara Sephapo Clinic",
+    "province": "North West",
+    "short_name": "Majara Sephapo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Radipapanna, next to Old Police Station",
+    "code": 662533,
+    "latitude": -25.2295,
+    "location": "POINT (28.12603 -25.22958)",
+    "longitude": 28.12603,
+    "name": "nw Makapanstad (Seaparankwe) Clinic",
+    "province": "North West",
+    "short_name": "Makapanstad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 382960,
+    "latitude": -25.7475,
+    "location": "POINT (25.09833 -25.7475)",
+    "longitude": 25.09833,
+    "name": "nw Makgobistadt CHC",
+    "province": "North West",
+    "short_name": "Makgobistadt CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Makouspan Village",
+    "code": 838433,
+    "latitude": -26.1036,
+    "location": "POINT (25.62044 -26.10368)",
+    "longitude": 25.62044,
+    "name": "nw Makouspan Clinic",
+    "province": "North West",
+    "short_name": "Makouspan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "6 Dunoon Street, Lebaleng, Makwassie, 2650",
+    "code": 205006,
+    "latitude": -27.3177,
+    "location": "POINT (25.99557 -27.317795)",
+    "longitude": 25.99557,
+    "name": "nw Makwassie Clinic",
+    "province": "North West",
+    "short_name": "Makwassie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mammutla Village",
+    "code": 504151,
+    "latitude": -28.0649,
+    "location": "POINT (24.51809 -28.0649)",
+    "longitude": 24.51809,
+    "name": "nw Mammutla Clinic",
+    "province": "North West",
+    "short_name": "Mammutla Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kgaka Steet",
+    "code": 801560,
+    "latitude": -27.149,
+    "location": "POINT (25.1822 -27.149)",
+    "longitude": 25.1822,
+    "name": "nw Mamusa CHC",
+    "province": "North West",
+    "short_name": "Mamusa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near to Bagamaidi Tribal Authority",
+    "code": 246815,
+    "latitude": -27.5459,
+    "location": "POINT (24.88505 -27.5459)",
+    "longitude": 24.88505,
+    "name": "nw Manthe CHC",
+    "province": "North West",
+    "short_name": "Manthe CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Tribal Authority",
+    "code": 862333,
+    "latitude": -27.6015,
+    "location": "POINT (24.78404 -27.60152)",
+    "longitude": 24.78404,
+    "name": "nw Maphoitsile Clinic",
+    "province": "North West",
+    "short_name": "Maphoitsile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chris Hani Street",
+    "code": 819015,
+    "latitude": -26.8526,
+    "location": "POINT (26.8193 -26.85269)",
+    "longitude": 26.8193,
+    "name": "nw Marcus Zinzele Clinic",
+    "province": "North West",
+    "short_name": "Marcus Zinzele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Batho Batho Stad",
+    "code": 515033,
+    "latitude": -26.2032,
+    "location": "POINT (25.47535 -26.20326)",
+    "longitude": 25.47535,
+    "name": "nw Mareetsane Clinic",
+    "province": "North West",
+    "short_name": "Mareetsane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "317 Rooikoppies",
+    "code": 985215,
+    "latitude": -25.6968,
+    "location": "POINT (27.48093 -25.69685)",
+    "longitude": 27.48093,
+    "name": "nw Marikana Clinic",
+    "province": "North West",
+    "short_name": "Marikana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 993215,
+    "latitude": -25.95,
+    "location": "POINT (26.55 -25.95)",
+    "longitude": 26.55,
+    "name": "nw Maruping Clinic",
+    "province": "North West",
+    "short_name": "Maruping Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To Bray Road",
+    "code": 532651,
+    "latitude": -25.8254,
+    "location": "POINT (24.62151 -25.8254)",
+    "longitude": 24.62151,
+    "name": "nw Masamane Clinic",
+    "province": "North West",
+    "short_name": "Masamane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Masutlhe 1 Village",
+    "code": 654806,
+    "latitude": -25.8507,
+    "location": "POINT (25.40935 -25.85077)",
+    "longitude": 25.40935,
+    "name": "nw Masutlhe 1 Clinic",
+    "province": "North West",
+    "short_name": "Masutlhe 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Masutlhe Ti Village",
+    "code": 912815,
+    "latitude": -25.7855,
+    "location": "POINT (25.41954 -25.78558)",
+    "longitude": 25.41954,
+    "name": "nw Masutlhe 2 Clinic",
+    "province": "North West",
+    "short_name": "Masutlhe 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3042 Machidi Section",
+    "code": 122642,
+    "latitude": -25.2632,
+    "location": "POINT (28.1706 -25.26325)",
+    "longitude": 28.1706,
+    "name": "nw Mathibestad Clinic",
+    "province": "North West",
+    "short_name": "Mathibestad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 776533,
+    "latitude": -26.0145,
+    "location": "POINT (27.201194 -26.014547)",
+    "longitude": 27.201194,
+    "name": "nw Mathopestad Clinic",
+    "province": "North West",
+    "short_name": "Mathopestad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "137 Ae Matile Village",
+    "code": 867424,
+    "latitude": -26.0665,
+    "location": "POINT (25.94 -26.066545)",
+    "longitude": 25.94,
+    "name": "nw Matile Clinic",
+    "province": "North West",
+    "short_name": "Matile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Matlapaneng Clinic Near Thapaina High School",
+    "code": 884251,
+    "latitude": -27.4226,
+    "location": "POINT (24.68546 -27.42267)",
+    "longitude": 24.68546,
+    "name": "nw Matlapaneng Clinic",
+    "province": "North West",
+    "short_name": "Matlapaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 214, Matlhonyane Village",
+    "code": 881533,
+    "latitude": -25.9764,
+    "location": "POINT (25.69028 -25.97644)",
+    "longitude": 25.69028,
+    "name": "nw Matlhonyane Clinic",
+    "province": "North West",
+    "short_name": "Matlhonyane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Mathepo Top Point Cafe",
+    "code": 590733,
+    "latitude": -26.0226,
+    "location": "POINT (25.74937 -26.02262)",
+    "longitude": 25.74937,
+    "name": "nw Matshepe Clinic",
+    "province": "North West",
+    "short_name": "Matshepe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "G207 Dihibidung, Maubane Village",
+    "code": 483115,
+    "latitude": -25.2775,
+    "location": "POINT (28.26597 -25.27756)",
+    "longitude": 28.26597,
+    "name": "nw Maubane Clinic",
+    "province": "North West",
+    "short_name": "Maubane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4-6 Loop Street, Danville",
+    "code": 719524,
+    "latitude": -25.8728,
+    "location": "POINT (25.65376 -25.87288)",
+    "longitude": 25.65376,
+    "name": "nw Maureen Roberts Clinic",
+    "province": "North West",
+    "short_name": "Maureen Roberts Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 483515,
+    "latitude": -25.6633,
+    "location": "POINT (27.34338 -25.66334)",
+    "longitude": 27.34338,
+    "name": "nw Mfidikwe Clinic",
+    "province": "North West",
+    "short_name": "Mfidikwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To Community Hall",
+    "code": 504515,
+    "latitude": -25.6519,
+    "location": "POINT (25.56347 -25.6519)",
+    "longitude": 25.56347,
+    "name": "nw Miga Clinic",
+    "province": "North West",
+    "short_name": "Miga Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 453615,
+    "latitude": -25.3893,
+    "location": "POINT (27.87515 -25.38939)",
+    "longitude": 27.87515,
+    "name": "nw Mmakaunyane Clinic",
+    "province": "North West",
+    "short_name": "Mmakaunyane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 787824,
+    "latitude": -25.0414,
+    "location": "POINT (26.3049 -25.04143)",
+    "longitude": 26.3049,
+    "name": "nw Mmasebudule Clinic",
+    "province": "North West",
+    "short_name": "Mmasebudule Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vryburg Road",
+    "code": 248533,
+    "latitude": -25.8906,
+    "location": "POINT (25.58646 -25.89066)",
+    "longitude": 25.58646,
+    "name": "nw Mocoseng Clinic",
+    "province": "North West",
+    "short_name": "Mocoseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Hartrivier Primary",
+    "code": 487842,
+    "latitude": -27.6932,
+    "location": "POINT (24.665 -27.69325)",
+    "longitude": 24.665,
+    "name": "nw Mocweding Clinic",
+    "province": "North West",
+    "short_name": "Mocweding Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "H/N 1050",
+    "code": 576306,
+    "latitude": -25.1236,
+    "location": "POINT (27.19756 -25.1236)",
+    "longitude": 27.19756,
+    "name": "nw Modderkuil Clinic",
+    "province": "North West",
+    "short_name": "Modderkuil Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 364842,
+    "latitude": -25.7229,
+    "location": "POINT (27.65028 -25.722974)",
+    "longitude": 27.65028,
+    "name": "nw Modderspruit Clinic",
+    "province": "North West",
+    "short_name": "Modderspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Agriwr",
+    "code": 655233,
+    "latitude": -25.8615,
+    "location": "POINT (25.45466 -25.8615)",
+    "longitude": 25.45466,
+    "name": "nw Modimola Clinic",
+    "province": "North West",
+    "short_name": "Modimola Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mofufutso 2",
+    "code": 566524,
+    "latitude": -26.445,
+    "location": "POINT (25.40063 -26.44505)",
+    "longitude": 25.40063,
+    "name": "nw Mofufutso Clinic",
+    "province": "North West",
+    "short_name": "Mofufutso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1249 Itireleng Street",
+    "code": 631851,
+    "latitude": -25.351,
+    "location": "POINT (28.14468 -25.35104)",
+    "longitude": 28.14468,
+    "name": "nw Mogogelo Clinic",
+    "province": "North West",
+    "short_name": "Mogogelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 724951,
+    "latitude": -26.0954,
+    "location": "POINT (26.82631 -26.095407)",
+    "longitude": 26.82631,
+    "name": "nw Mogopa Clinic",
+    "province": "North West",
+    "short_name": "Mogopa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To Primary School",
+    "code": 681733,
+    "latitude": -25.7381,
+    "location": "POINT (25.55074 -25.73816)",
+    "longitude": 25.55074,
+    "name": "nw Mogosane Clinic",
+    "province": "North West",
+    "short_name": "Mogosane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "321 Kagiso Drive",
+    "code": 475051,
+    "latitude": -25.2748,
+    "location": "POINT (27.2249 -25.27489)",
+    "longitude": 27.2249,
+    "name": "nw Mogwase CHC",
+    "province": "North West",
+    "short_name": "Mogwase CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "29 Sooliman Street",
+    "code": 227415,
+    "latitude": -26.7148,
+    "location": "POINT (27.03365 -26.71489)",
+    "longitude": 27.03365,
+    "name": "nw Mohadin Clinic",
+    "province": "North West",
+    "short_name": "Mohadin Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "11004 Rorisang",
+    "code": 936324,
+    "latitude": -25.3806,
+    "location": "POINT (27.9313 -25.38064)",
+    "longitude": 27.9313,
+    "name": "nw Moiletsoane (Buffelsdoorn) Clinic",
+    "province": "North West",
+    "short_name": "Moiletsoane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next To Ntokwe Primary School",
+    "code": 127251,
+    "latitude": -27.5302,
+    "location": "POINT (24.70606 -27.53025)",
+    "longitude": 24.70606,
+    "name": "nw Mokgareng Clinic",
+    "province": "North West",
+    "short_name": "Mokgareng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mokyola Merense Section, Near Soccer Grounds",
+    "code": 893515,
+    "latitude": -25.3283,
+    "location": "POINT (26.1236 -25.32839)",
+    "longitude": 26.1236,
+    "name": "nw Mokgola Clinic",
+    "province": "North West",
+    "short_name": "Mokgola Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 290724,
+    "latitude": -24.8508,
+    "location": "POINT (26.49825 -24.85088)",
+    "longitude": 26.49825,
+    "name": "nw Molatedi Clinic",
+    "province": "North West",
+    "short_name": "Molatedi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Lethogile Middle School",
+    "code": 270333,
+    "latitude": -27.657,
+    "location": "POINT (24.99804 -27.65702)",
+    "longitude": 24.99804,
+    "name": "nw Molelema Clinic",
+    "province": "North West",
+    "short_name": "Molelema Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "142 Matebeleng Section Molorwe",
+    "code": 385633,
+    "latitude": -25.0881,
+    "location": "POINT (26.89861 -25.08817)",
+    "longitude": 26.89861,
+    "name": "nw Molorwe Clinic",
+    "province": "North West",
+    "short_name": "Molorwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 511160,
+    "latitude": -25.3573,
+    "location": "POINT (27.27617 -25.35739)",
+    "longitude": 27.27617,
+    "name": "nw Monakato Clinic",
+    "province": "North West",
+    "short_name": "Monakato Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lelotong Section",
+    "code": 752042,
+    "latitude": -25.0441,
+    "location": "POINT (27.18766 -25.04416)",
+    "longitude": 27.18766,
+    "name": "nw Mononono Clinic",
+    "province": "North West",
+    "short_name": "Mononono Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Barolong Booratshidi Hall",
+    "code": 522160,
+    "latitude": -25.871,
+    "location": "POINT (25.63436 -25.87105)",
+    "longitude": 25.63436,
+    "name": "nw Montshioa Stadt CHC",
+    "province": "North West",
+    "short_name": "Montshioa Stadt CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "909 Kgabi Street, Monthiwa",
+    "code": 276233,
+    "latitude": -25.8522,
+    "location": "POINT (25.62612 -25.85223)",
+    "longitude": 25.62612,
+    "name": "nw Montshioa Town Clinic",
+    "province": "North West",
+    "short_name": "Montshioa Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sutelong, Next To Motiei Shop",
+    "code": 103924,
+    "latitude": -25.1457,
+    "location": "POINT (27.96025 -25.14578)",
+    "longitude": 27.96025,
+    "name": "nw Moretele Clinic",
+    "province": "North West",
+    "short_name": "Moretele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Morokwaneng",
+    "code": 377233,
+    "latitude": -26.0849,
+    "location": "POINT (23.73085 -26.08499)",
+    "longitude": 23.73085,
+    "name": "nw Morokwaneng Clinic",
+    "province": "North West",
+    "short_name": "Morokwaneng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 402424,
+    "latitude": -26.127,
+    "location": "POINT (23.77424 -26.12705)",
+    "longitude": 23.77424,
+    "name": "nw Morokweng CHC",
+    "province": "North West",
+    "short_name": "Morokweng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Makresteng Street",
+    "code": 726115,
+    "latitude": -25.1697,
+    "location": "POINT (27.16777 -25.16971)",
+    "longitude": 27.16777,
+    "name": "nw Moruleng Clinic",
+    "province": "North West",
+    "short_name": "Moruleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Moshane Village, Kgosine Section",
+    "code": 306242,
+    "latitude": -24.9757,
+    "location": "POINT (25.89063 -24.97573)",
+    "longitude": 25.89063,
+    "name": "nw Moshana CHC",
+    "province": "North West",
+    "short_name": "Moshana CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 638124,
+    "latitude": -26.47,
+    "location": "POINT (24.56 -26.47)",
+    "longitude": 24.56,
+    "name": "nw Moshawane Health Post",
+    "province": "North West",
+    "short_name": "Moshawane HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 587233,
+    "latitude": -26.5287,
+    "location": "POINT (24.23528 -26.528747)",
+    "longitude": 24.23528,
+    "name": "nw Moswana Clinic",
+    "province": "North West",
+    "short_name": "Moswana Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 632142,
+    "latitude": -25.3702,
+    "location": "POINT (25.944841 -25.370291)",
+    "longitude": 25.944841,
+    "name": "nw Mosweu Clinic",
+    "province": "North West",
+    "short_name": "Mosweu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1918 Mothotlung",
+    "code": 932506,
+    "latitude": -25.602899999999998,
+    "location": "POINT (27.88456 -25.60295)",
+    "longitude": 27.88456,
+    "name": "nw Mothutlong Clinic",
+    "province": "North West",
+    "short_name": "Mothutlong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thabaneng Section",
+    "code": 649733,
+    "latitude": -25.0664,
+    "location": "POINT (26.94955 -25.0664)",
+    "longitude": 26.94955,
+    "name": "nw Motlhabe Clinic",
+    "province": "North West",
+    "short_name": "Motlhabe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Tetlano Middle School",
+    "code": 726133,
+    "latitude": -25.8507,
+    "location": "POINT (25.60303 -25.8507)",
+    "longitude": 25.60303,
+    "name": "nw Motlhabeng Clinic",
+    "province": "North West",
+    "short_name": "Motlhabeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Benji Oliphant Road, Klerksdorp, 2570",
+    "code": 906733,
+    "latitude": -26.8858,
+    "location": "POINT (26.614876 -26.885815)",
+    "longitude": 26.614876,
+    "name": "nw NM Pretorius Gateway Clinic",
+    "province": "North West",
+    "short_name": "NM Pretorius Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kgosing Section, Disake",
+    "code": 833260,
+    "latitude": -24.8352,
+    "location": "POINT (27.01116 -24.83527)",
+    "longitude": 27.01116,
+    "name": "nw Neo Clinic",
+    "province": "North West",
+    "short_name": "Neo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 121615,
+    "latitude": -25.0277,
+    "location": "POINT (28.09112 -25.02776)",
+    "longitude": 28.09112,
+    "name": "nw Ngobi Clinic",
+    "province": "North West",
+    "short_name": "Ngobi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Road",
+    "code": 807024,
+    "latitude": -25.4348,
+    "location": "POINT (25.96134 -25.43482)",
+    "longitude": 25.96134,
+    "name": "nw Ntsweletsoku Health Post",
+    "province": "North West",
+    "short_name": "Ntsweletsoku HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 254142,
+    "latitude": -24.9236,
+    "location": "POINT (26.65331 -24.92367)",
+    "longitude": 26.65331,
+    "name": "nw Obakeng Clinic",
+    "province": "North West",
+    "short_name": "Obakeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Kingsly and Shakespear Street, Orkney",
+    "code": 147360,
+    "latitude": -26.98,
+    "location": "POINT (26.66895 -26.98009)",
+    "longitude": 26.66895,
+    "name": "nw Orkney Town Clinic",
+    "province": "North West",
+    "short_name": "Orkney Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "32 Noux Street, Ottosdal",
+    "code": 234024,
+    "latitude": -26.8134,
+    "location": "POINT (26.00926 -26.81343)",
+    "longitude": 26.00926,
+    "name": "nw Ottosdal CHC",
+    "province": "North West",
+    "short_name": "Ottosdal CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vuka Section, Oukasie",
+    "code": 472942,
+    "latitude": -25.6089,
+    "location": "POINT (27.8036 -25.60899)",
+    "longitude": 27.8036,
+    "name": "nw Oukasie Clinic",
+    "province": "North West",
+    "short_name": "Oukasie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pachsdraai, 2844",
+    "code": 587442,
+    "latitude": -25.2082,
+    "location": "POINT (26.39684 -25.20828)",
+    "longitude": 26.39684,
+    "name": "nw Pachsdraai Clinic",
+    "province": "North West",
+    "short_name": "Pachsdraai Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Desmond Tutu",
+    "code": 620215,
+    "latitude": -26.8669,
+    "location": "POINT (26.66153 -26.86696)",
+    "longitude": 26.66153,
+    "name": "nw Park Street Clinic",
+    "province": "North West",
+    "short_name": "Park Street Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2138 B Morare High School Road",
+    "code": 245560,
+    "latitude": -25.467,
+    "location": "POINT (26.48217 -25.46704)",
+    "longitude": 26.48217,
+    "name": "nw Pella CHC",
+    "province": "North West",
+    "short_name": "Pella CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thabaneng Section",
+    "code": 117542,
+    "latitude": -25.2639,
+    "location": "POINT (26.84438 -25.26398)",
+    "longitude": 26.84438,
+    "name": "nw Phalane Clinic",
+    "province": "North West",
+    "short_name": "Phalane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Phaposane Village",
+    "code": 320551,
+    "latitude": -26.5566,
+    "location": "POINT (24.317 -26.55667)",
+    "longitude": 24.317,
+    "name": "nw Phaposane Clinic",
+    "province": "North West",
+    "short_name": "Phaposane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Khaya Lethu High School",
+    "code": 611906,
+    "latitude": -25.3958,
+    "location": "POINT (27.01418 -25.39584)",
+    "longitude": 27.01418,
+    "name": "nw Phatsima Clinic",
+    "province": "North West",
+    "short_name": "Phatsima Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Tshite Middle School",
+    "code": 855033,
+    "latitude": -27.5902,
+    "location": "POINT (24.86465 -27.5902)",
+    "longitude": 24.86465,
+    "name": "nw Picong Clinic",
+    "province": "North West",
+    "short_name": "Picong Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pelser Street",
+    "code": 315515,
+    "latitude": -26.16,
+    "location": "POINT (24.4087 -26.16005)",
+    "longitude": 24.4087,
+    "name": "nw Piet Plessis CHC",
+    "province": "North West",
+    "short_name": "Piet Plessis CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sol Plaatje Street",
+    "code": 166342,
+    "latitude": -26.7267,
+    "location": "POINT (27.08385 -26.72672)",
+    "longitude": 27.08385,
+    "name": "nw Potchefstroom Clinic",
+    "province": "North West",
+    "short_name": "Potchefstroom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Kruin and Botle Street",
+    "code": 445606,
+    "latitude": -26.7269,
+    "location": "POINT (27.08381 -26.7269)",
+    "longitude": 27.08381,
+    "name": "nw Potchefstroom Gateway Clinic",
+    "province": "North West",
+    "short_name": "Potchefstroom Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "121 Daisy Street, Kleurport Street",
+    "code": 471142,
+    "latitude": -26.7015,
+    "location": "POINT (27.03132 -26.70156)",
+    "longitude": 27.03132,
+    "name": "nw Promosa CHC",
+    "province": "North West",
+    "short_name": "Promosa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "305 Nkosi Street, Pudumong",
+    "code": 811224,
+    "latitude": -27.4094,
+    "location": "POINT (24.72139 -27.40947)",
+    "longitude": 24.72139,
+    "name": "nw Pudumoe CHC",
+    "province": "North West",
+    "short_name": "Pudumoe CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "283 Motseny Section",
+    "code": 227924,
+    "latitude": -25.5244,
+    "location": "POINT (27.89324 -25.52448)",
+    "longitude": 27.89324,
+    "name": "nw Rabokala Clinic",
+    "province": "North West",
+    "short_name": "Rabokala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 188451,
+    "latitude": -26.3924,
+    "location": "POINT (25.103686 -26.392453)",
+    "longitude": 25.103686,
+    "name": "nw Ramabesa Health Post",
+    "province": "North West",
+    "short_name": "Ramabesa HP"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 856142,
+    "latitude": -25.7029,
+    "location": "POINT (25.61641 -25.70299)",
+    "longitude": 25.61641,
+    "name": "nw Ramatlabama CHC",
+    "province": "North West",
+    "short_name": "Ramatlabama CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Zonal Office",
+    "code": 137324,
+    "latitude": -25.5716,
+    "location": "POINT (27.4293 -25.57161)",
+    "longitude": 27.4293,
+    "name": "nw Rankelenyane Clinic",
+    "province": "North West",
+    "short_name": "Rankelenyane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "769 Morokoloane Section, Ratjiepan",
+    "code": 457615,
+    "latitude": -25.3317,
+    "location": "POINT (28.08897 -25.33176)",
+    "longitude": 28.08897,
+    "name": "nw Ratjiepan Clinic",
+    "province": "North West",
+    "short_name": "Ratjiepan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 274115,
+    "latitude": -26.2626,
+    "location": "POINT (25.1224 -26.26264)",
+    "longitude": 25.1224,
+    "name": "nw Ratlou CHC",
+    "province": "North West",
+    "short_name": "Ratlou CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "819 Motsumi Street",
+    "code": 667751,
+    "latitude": -25.849,
+    "location": "POINT (26.8847 -25.84904)",
+    "longitude": 26.8847,
+    "name": "nw Reagile Clinic",
+    "province": "North West",
+    "short_name": "Reagile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 813515,
+    "latitude": -25.1938,
+    "location": "POINT (26.59205 -25.1938)",
+    "longitude": 26.59205,
+    "name": "nw Refentse (Mmakgabetlwane) Clinic",
+    "province": "North West",
+    "short_name": "Refentse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Gereef Street, Reivilo",
+    "code": 765160,
+    "latitude": -27.5677,
+    "location": "POINT (24.17765 -27.56774)",
+    "longitude": 24.17765,
+    "name": "nw Reivilo CHC",
+    "province": "North West",
+    "short_name": "Reivilo CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 572642,
+    "latitude": -25.3105,
+    "location": "POINT (26.76337 -25.3105)",
+    "longitude": 26.76337,
+    "name": "nw Rietfontein Clinic",
+    "province": "North West",
+    "short_name": "Rietfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3152 Rietpan Village Madubu Street",
+    "code": 432924,
+    "latitude": -25.1113,
+    "location": "POINT (25.94529 -25.11139)",
+    "longitude": 25.94529,
+    "name": "nw Rietpan Clinic",
+    "province": "North West",
+    "short_name": "Rietpan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 938606,
+    "latitude": -25.0268,
+    "location": "POINT (27.85351 -25.02687)",
+    "longitude": 27.85351,
+    "name": "nw Rugtesloot Clinic",
+    "province": "North West",
+    "short_name": "Rugtesloot Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 242151,
+    "latitude": -25.1865,
+    "location": "POINT (27.26664 -25.18651)",
+    "longitude": 27.26664,
+    "name": "nw Sandfontein Clinic",
+    "province": "North West",
+    "short_name": "Sandfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "45 Boven",
+    "code": 535233,
+    "latitude": -26.523,
+    "location": "POINT (25.80333 -26.52306)",
+    "longitude": 25.80333,
+    "name": "nw Sannieshof CHC",
+    "province": "North West",
+    "short_name": "Sannieshof CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "21 Buiten Street",
+    "code": 952415,
+    "latitude": -27.1906,
+    "location": "POINT (25.3292 -27.19068)",
+    "longitude": 25.3292,
+    "name": "nw Schweizer-Reneke Town Clinic",
+    "province": "North West",
+    "short_name": "Schweizer-Ren Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2086 Mogokare Street",
+    "code": 969715,
+    "latitude": -27.3271,
+    "location": "POINT (25.98083 -27.32711)",
+    "longitude": 25.98083,
+    "name": "nw Segametsi Mogaetsho Clinic",
+    "province": "North West",
+    "short_name": "S Mogaetsho Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 683851,
+    "latitude": -25.665399999999998,
+    "location": "POINT (27.60996 -25.66547)",
+    "longitude": 27.60996,
+    "name": "nw Segwaelane Clinic",
+    "province": "North West",
+    "short_name": "Segwaelane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 349433,
+    "latitude": -25.6129,
+    "location": "POINT (27.251759 -25.612925)",
+    "longitude": 27.251759,
+    "name": "nw Seraleng Clinic",
+    "province": "North West",
+    "short_name": "Seraleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sesobe Village",
+    "code": 505324,
+    "latitude": -25.0408,
+    "location": "POINT (26.42953 -25.04083)",
+    "longitude": 26.42953,
+    "name": "nw Sesobe Clinic",
+    "province": "North West",
+    "short_name": "Sesobe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Setabeng Clinic",
+    "code": 232015,
+    "latitude": -25.902,
+    "location": "POINT (23.50341 -25.90207)",
+    "longitude": 23.50341,
+    "name": "nw Setabeng Clinic",
+    "province": "North West",
+    "short_name": "Setabeng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 648333,
+    "latitude": -26.3028,
+    "location": "POINT (25.1286 -26.30289)",
+    "longitude": 25.1286,
+    "name": "nw Setlagole Clinic",
+    "province": "North West",
+    "short_name": "Setlagole Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bakang Street",
+    "code": 774733,
+    "latitude": -25.9329,
+    "location": "POINT (25.6558 -25.93298)",
+    "longitude": 25.6558,
+    "name": "nw Setlopo Clinic",
+    "province": "North West",
+    "short_name": "Setlopo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 995124,
+    "latitude": -24.9976,
+    "location": "POINT (27.175716 -24.997697)",
+    "longitude": 27.175716,
+    "name": "nw Sifikile Clinic",
+    "province": "North West",
+    "short_name": "Sifikile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kgosing Section",
+    "code": 495124,
+    "latitude": -25.1941,
+    "location": "POINT (26.59069 -25.19414)",
+    "longitude": 26.59069,
+    "name": "nw Siga Clinic",
+    "province": "North West",
+    "short_name": "Siga Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ramaane Section",
+    "code": 415142,
+    "latitude": -25.4939,
+    "location": "POINT (26.6206 -25.49393)",
+    "longitude": 26.6206,
+    "name": "nw Silverkrans Clinic",
+    "province": "North West",
+    "short_name": "Silverkrans Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Wolhuteskop Road",
+    "code": 308042,
+    "latitude": -25.6492,
+    "location": "POINT (27.69822 -25.64923)",
+    "longitude": 27.69822,
+    "name": "nw Sonop Clinic",
+    "province": "North West",
+    "short_name": "Sonop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 637524,
+    "latitude": -25.1684,
+    "location": "POINT (27.90559 -25.16841)",
+    "longitude": 27.90559,
+    "name": "nw Soutpansleegte Clinic",
+    "province": "North West",
+    "short_name": "Soutpansleegte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stella Street",
+    "code": 665906,
+    "latitude": -26.5477,
+    "location": "POINT (24.85982 -26.54778)",
+    "longitude": 24.85982,
+    "name": "nw Stella CHC",
+    "province": "North West",
+    "short_name": "Stella CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mogocodi Street",
+    "code": 678142,
+    "latitude": -26.7239,
+    "location": "POINT (27.02038 -26.72396)",
+    "longitude": 27.02038,
+    "name": "nw Steve Tshwete Clinic",
+    "province": "North West",
+    "short_name": "S Tshwete Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bloem Street",
+    "code": 474051,
+    "latitude": -26.8446,
+    "location": "POINT (26.77521 -26.84464)",
+    "longitude": 26.77521,
+    "name": "nw Stilfontein Clinic",
+    "province": "North West",
+    "short_name": "Stilfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 421151,
+    "latitude": -24.7882,
+    "location": "POINT (26.05387 -24.78826)",
+    "longitude": 26.05387,
+    "name": "nw Supingstad Clinic",
+    "province": "North West",
+    "short_name": "Supingstad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Swartdam Village",
+    "code": 141142,
+    "latitude": -25.2973,
+    "location": "POINT (28.05497 -25.29738)",
+    "longitude": 28.05497,
+    "name": "nw Swartdam (Rekopantswe) Clinic",
+    "province": "North West",
+    "short_name": "Swartdam Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 376751,
+    "latitude": -25.6332,
+    "location": "POINT (26.68472 -25.63327)",
+    "longitude": 26.68472,
+    "name": "nw Swartruggens CHC",
+    "province": "North West",
+    "short_name": "Swartruggens CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Magistrate Road",
+    "code": 133160,
+    "latitude": -27.5377,
+    "location": "POINT (24.79175 -27.53775)",
+    "longitude": 24.79175,
+    "name": "nw Taung Gateway Clinic",
+    "province": "North West",
+    "short_name": "Taung Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Taung Station",
+    "code": 352324,
+    "latitude": -27.5719,
+    "location": "POINT (24.76058 -27.57194)",
+    "longitude": 24.76058,
+    "name": "nw Taung Station Clinic",
+    "province": "North West",
+    "short_name": "Taung Station Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ramontsheng Street, Rustenburg",
+    "code": 147806,
+    "latitude": -25.669,
+    "location": "POINT (27.37101 -25.66905)",
+    "longitude": 27.37101,
+    "name": "nw Thekwane Clinic",
+    "province": "North West",
+    "short_name": "Thekwane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "107 Bambatha Street, Thulwe",
+    "code": 764815,
+    "latitude": -25.2505,
+    "location": "POINT (28.19965 -25.25054)",
+    "longitude": 28.19965,
+    "name": "nw Thulwe Clinic",
+    "province": "North West",
+    "short_name": "Thulwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sheila",
+    "code": 613742,
+    "latitude": -26.0517,
+    "location": "POINT (25.94817 -26.05176)",
+    "longitude": 25.94817,
+    "name": "nw Thusong Gateway Clinic",
+    "province": "North West",
+    "short_name": "Thusong Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "204 Motlumi Tigane",
+    "code": 518106,
+    "latitude": -26.7353,
+    "location": "POINT (26.42192 -26.73537)",
+    "longitude": 26.42192,
+    "name": "nw Tigane CHC",
+    "province": "North West",
+    "short_name": "Tigane CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 784024,
+    "latitude": -25.203,
+    "location": "POINT (28.04134 -25.20306)",
+    "longitude": 28.04134,
+    "name": "nw Tladistad Clinic",
+    "province": "North West",
+    "short_name": "Tladistad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tlakgameng Village, Ganyesa, Kagisano Rural, 8613",
+    "code": 424560,
+    "latitude": -26.4682,
+    "location": "POINT (24.34352 -26.46827)",
+    "longitude": 24.34352,
+    "name": "nw Tlakgameng CHC",
+    "province": "North West",
+    "short_name": "Tlakgameng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tlapeng Clinic",
+    "code": 418851,
+    "latitude": -26.6545,
+    "location": "POINT (24.10287 -26.65452)",
+    "longitude": 24.10287,
+    "name": "nw Tlapeng (Ganyesa) Clinic",
+    "province": "North West",
+    "short_name": "Tlapeng (Ganyesa) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Serasengwe Old Primary School",
+    "code": 996933,
+    "latitude": -27.5183,
+    "location": "POINT (24.95402 -27.51837)",
+    "longitude": 24.95402,
+    "name": "nw Tlapeng (Greater Taung) Clinic",
+    "province": "North West",
+    "short_name": "Tlapeng (Gr Taung) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 364660,
+    "latitude": -25.7199,
+    "location": "POINT (25.45541 -25.71999)",
+    "longitude": 25.45541,
+    "name": "nw Tlapeng (Mahikeng) Clinic",
+    "province": "North West",
+    "short_name": "Tlapeng (MHK) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1305 Seolo Section",
+    "code": 551042,
+    "latitude": -25.4718,
+    "location": "POINT (27.34995 -25.47185)",
+    "longitude": 27.34995,
+    "name": "nw Tlaseng Clinic",
+    "province": "North West",
+    "short_name": "Tlaseng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3560 Monareng Street, Tlhabane",
+    "code": 325042,
+    "latitude": -25.6383,
+    "location": "POINT (27.2165 -25.63831)",
+    "longitude": 27.2165,
+    "name": "nw Tlhabane CHC",
+    "province": "North West",
+    "short_name": "Tlhabane CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1054 Van Der Walt Street",
+    "code": 894424,
+    "latitude": -26.3295,
+    "location": "POINT (26.29984 -26.3295)",
+    "longitude": 26.29984,
+    "name": "nw Tlhabologang Clinic",
+    "province": "North West",
+    "short_name": "Tlhabologang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8684 Nthamane Street, Ikageng",
+    "code": 118624,
+    "latitude": -26.7353,
+    "location": "POINT (27.03587 -26.73539)",
+    "longitude": 27.03587,
+    "name": "nw Top City Clinic",
+    "province": "North West",
+    "short_name": "Top City Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Morokweng",
+    "code": 486433,
+    "latitude": -25.5916,
+    "location": "POINT (23.31093 -25.59161)",
+    "longitude": 23.31093,
+    "name": "nw Tseoge Clinic",
+    "province": "North West",
+    "short_name": "Tseoge Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Tsetse Village, near Club 2000",
+    "code": 293415,
+    "latitude": -25.7354,
+    "location": "POINT (25.66465 -25.73542)",
+    "longitude": 25.66465,
+    "name": "nw Tsetse Clinic",
+    "province": "North West",
+    "short_name": "Tsetse Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 674515,
+    "latitude": -25.8301,
+    "location": "POINT (24.67443 -25.83018)",
+    "longitude": 24.67443,
+    "name": "nw Tshidilamolomo Clinic",
+    "province": "North West",
+    "short_name": "Tshidilamolomo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kopanong Road, Jouberton, Klerksdorp, 2574",
+    "code": 741360,
+    "latitude": -26.8914,
+    "location": "POINT (26.58943 -26.89149)",
+    "longitude": 26.58943,
+    "name": "nw Tsholofelo Clinic",
+    "province": "North West",
+    "short_name": "Tsholofelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "14th First Street",
+    "code": 592524,
+    "latitude": -26.0391,
+    "location": "POINT (25.52621 -26.03918)",
+    "longitude": 25.52621,
+    "name": "nw Tshunyane Clinic",
+    "province": "North West",
+    "short_name": "Tshunyane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "264 Hoof Road",
+    "code": 751524,
+    "latitude": -27.22,
+    "location": "POINT (25.9848 -27.22006)",
+    "longitude": 25.9848,
+    "name": "nw Tswelelang 1 Clinic",
+    "province": "North West",
+    "short_name": "Tswelelang 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1365 Tambo, Twelelang",
+    "code": 442524,
+    "latitude": -27.2217,
+    "location": "POINT (25.97542 -27.22172)",
+    "longitude": 25.97542,
+    "name": "nw Tswelelang 2 CHC",
+    "province": "North West",
+    "short_name": "Tswelelang 2 CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "988 Merements Street, Ikageng Loc 25t",
+    "code": 288324,
+    "latitude": -25.5584,
+    "location": "POINT (26.09736 -25.55849)",
+    "longitude": 26.09736,
+    "name": "nw Tswelelopele CHC",
+    "province": "North West",
+    "short_name": "Tswelelopele CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "20089 Cgopitsang",
+    "code": 325215,
+    "latitude": -25.2724,
+    "location": "POINT (26.85287 -25.27243)",
+    "longitude": 26.85287,
+    "name": "nw Tweelaagte Clinic",
+    "province": "North West",
+    "short_name": "Tweelaagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Near Chief Kgantlapane",
+    "code": 361815,
+    "latitude": -27.5595,
+    "location": "POINT (25.00528 -27.55958)",
+    "longitude": 25.00528,
+    "name": "nw Tweelingspan Clinic",
+    "province": "North West",
+    "short_name": "Tweelingspan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 683, Nogatla Section",
+    "code": 348833,
+    "latitude": -25.2035,
+    "location": "POINT (26.43042 -25.20353)",
+    "longitude": 26.43042,
+    "name": "nw Uitkyk Clinic",
+    "province": "North West",
+    "short_name": "Uitkyk Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3087 Joe Slovos, Mmabatho",
+    "code": 721724,
+    "latitude": -25.8451,
+    "location": "POINT (25.59008 -25.84515)",
+    "longitude": 25.59008,
+    "name": "nw Unit 9 CHC",
+    "province": "North West",
+    "short_name": "Unit 9 CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Clinic next to Anglican Church Creche",
+    "code": 324406,
+    "latitude": -27.7955,
+    "location": "POINT (24.62577 -27.79554)",
+    "longitude": 24.62577,
+    "name": "nw Upper Majeakgoro Clinic",
+    "province": "North West",
+    "short_name": "Upper Majeakgoro Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Itsoseng Street, Utlwanang, Christiana",
+    "code": 119606,
+    "latitude": -27.8952,
+    "location": "POINT (25.12859 -27.89527)",
+    "longitude": 25.12859,
+    "name": "nw Utlwanang Clinic",
+    "province": "North West",
+    "short_name": "Utlwanang Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19 Grens Street, Ventersdorp",
+    "code": 506315,
+    "latitude": -26.3101,
+    "location": "POINT (26.8185 -26.31019)",
+    "longitude": 26.8185,
+    "name": "nw Ventersdorp CHC",
+    "province": "North West",
+    "short_name": "Ventersdorp CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "19 Greens Street",
+    "code": 464233,
+    "latitude": -26.3105,
+    "location": "POINT (26.81901 -26.31055)",
+    "longitude": 26.81901,
+    "name": "nw Ventersdorp Gateway Clinic",
+    "province": "North West",
+    "short_name": "Vent Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 4, Vrede 2",
+    "code": 178724,
+    "latitude": -25.4667,
+    "location": "POINT (26.56154 -25.46676)",
+    "longitude": 26.56154,
+    "name": "nw Vrede 2 Clinic",
+    "province": "North West",
+    "short_name": "Vrede 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 359233,
+    "latitude": -26.5338,
+    "location": "POINT (25.40801 -26.53388)",
+    "longitude": 25.40801,
+    "name": "nw Vriesgewacht Clinic",
+    "province": "North West",
+    "short_name": "Vriesgewacht Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 707724,
+    "latitude": -26.9564,
+    "location": "POINT (24.71774 -26.95643)",
+    "longitude": 24.71774,
+    "name": "nw Vryburg Gateway Clinic",
+    "province": "North West",
+    "short_name": "Vryburg Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "E78 Losmycherrie",
+    "code": 577442,
+    "latitude": -24.927599999999998,
+    "location": "POINT (26.67964 -24.92765)",
+    "longitude": 26.67964,
+    "name": "nw Welgeval Clinic",
+    "province": "North West",
+    "short_name": "Welgeval Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 783306,
+    "latitude": -26.1623,
+    "location": "POINT (26.81771 -26.16239)",
+    "longitude": 26.81771,
+    "name": "nw Welgevonden Clinic",
+    "province": "North West",
+    "short_name": "Welgevonden Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Waltervreder Village",
+    "code": 224406,
+    "latitude": -26.3171,
+    "location": "POINT (25.49104 -26.31714)",
+    "longitude": 25.49104,
+    "name": "nw Weltevrede Clinic",
+    "province": "North West",
+    "short_name": "Weltevrede Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 826224,
+    "latitude": -25.2738,
+    "location": "POINT (26.90792 -25.27383)",
+    "longitude": 26.90792,
+    "name": "nw Witrantjies Clinic",
+    "province": "North West",
+    "short_name": "Witrantjies Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "23 BRoadbent Street",
+    "code": 233060,
+    "latitude": -27.1982,
+    "location": "POINT (25.98447 -27.19827)",
+    "longitude": 25.98447,
+    "name": "nw Wolmaransstad Town Clinic",
+    "province": "North West",
+    "short_name": "Wolmaransstad Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dikhibidring Next To Lesedi By Night",
+    "code": 550206,
+    "latitude": -25.6724,
+    "location": "POINT (27.52731 -25.67249)",
+    "longitude": 27.52731,
+    "name": "nw Wonderkop Clinic",
+    "province": "North West",
+    "short_name": "Wonderkop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": "1 Coetzee Street",
+      "code": 741060,
+      "latitude": -25.5459,
+      "location": "POINT (26.07958 -25.54599)",
+      "longitude": 26.07958,
+      "name": "nw Zeerust Clinic",
+      "province": "North West",
+      "short_name": "Zeerust Clinic"
+    }
+  }
+]

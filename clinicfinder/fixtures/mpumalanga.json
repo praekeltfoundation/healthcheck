@@ -1,0 +1,3590 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2100 Vandelen Street",
+    "code": 513260,
+    "latitude": -25.8667,
+    "location": "POINT (29.1743 -25.86679)",
+    "longitude": 29.1743,
+    "name": "mp Ackerville Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ackerville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "PO Box1310",
+    "code": 222606,
+    "latitude": -24.8199,
+    "location": "POINT (31.26092 -24.81994)",
+    "longitude": 31.26092,
+    "name": "mp Agincourt CHC",
+    "province": "Mpumalanga",
+    "short_name": "Agincourt CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mbhongo Street, Allemansdrift",
+    "code": 944806,
+    "latitude": -25.1414,
+    "location": "POINT (28.86459 -25.14146)",
+    "longitude": 28.86459,
+    "name": "mp Allemansdrift B Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Allemansdrift B Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "837-38, Allemansdrift",
+    "code": 884624,
+    "latitude": -25.1158,
+    "location": "POINT (28.9051 -25.1158)",
+    "longitude": 28.9051,
+    "name": "mp Allemansdrift C CHC",
+    "province": "Mpumalanga",
+    "short_name": "Allemansdrift C CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bree Street, Amersfoort",
+    "code": 383524,
+    "latitude": -27.0059,
+    "location": "POINT (29.8693 -27.0059)",
+    "longitude": 29.8693,
+    "name": "mp Amersfoort Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Amersfoort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Forbes and President Street, Amsterdam",
+    "code": 323742,
+    "latitude": -26.6231,
+    "location": "POINT (30.6619 -26.6231)",
+    "longitude": 30.6619,
+    "name": "mp Amsterdam CHC",
+    "province": "Mpumalanga",
+    "short_name": "Amsterdam CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 463160,
+    "latitude": -26.0487,
+    "location": "POINT (30.83788 -26.04871)",
+    "longitude": 30.83788,
+    "name": "mp Arnhemburg Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Arnhemburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Authurrseat Village",
+    "code": 799751,
+    "latitude": -24.6695,
+    "location": "POINT (31.02072 -24.66956)",
+    "longitude": 31.02072,
+    "name": "mp Arthurseat Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Arthurseat Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Buyisonto",
+    "code": 627315,
+    "latitude": -24.7854,
+    "location": "POINT (31.13503 -24.78544)",
+    "longitude": 31.13503,
+    "name": "mp Arthurstone Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Arthurstone Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1-3 Robertson Street, Badplaas",
+    "code": 383515,
+    "latitude": -25.954,
+    "location": "POINT (30.57177 -25.95409)",
+    "longitude": 30.57177,
+    "name": "mp Badplaas CHC",
+    "province": "Mpumalanga",
+    "short_name": "Badplaas CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "99 Sifiso Street, Balfour",
+    "code": 540633,
+    "latitude": -26.6342,
+    "location": "POINT (28.57869 -26.63428)",
+    "longitude": 28.57869,
+    "name": "mp Balfour Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Balfour Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "General Street",
+    "code": 340624,
+    "latitude": -25.7917,
+    "location": "POINT (31.05378 -25.79175)",
+    "longitude": 31.05378,
+    "name": "mp Barberton Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Barberton Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 404742,
+    "latitude": -25.7814,
+    "location": "POINT (31.04189 -25.78144)",
+    "longitude": 31.04189,
+    "name": "mp Barberton Gateway Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Barberton Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Beatty Avenue",
+    "code": 978115,
+    "latitude": -25.8781,
+    "location": "POINT (29.21396 -25.87815)",
+    "longitude": 29.21396,
+    "name": "mp Beatty Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Beatty Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 293242,
+    "latitude": -24.9577,
+    "location": "POINT (31.36725 -24.95775)",
+    "longitude": 31.36725,
+    "name": "mp Belfast Clinic (Bushbuckridge)",
+    "province": "Mpumalanga",
+    "short_name": "Belfast Clinic (Bush)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "25 Scheepels Street, Belfast",
+    "code": 442824,
+    "latitude": -25.6964,
+    "location": "POINT (30.04431 -25.69646)",
+    "longitude": 30.04431,
+    "name": "mp Belfast Gateway Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Belfast Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chris Hani Street, Bethal",
+    "code": 563951,
+    "latitude": -26.457,
+    "location": "POINT (29.4656 -26.457)",
+    "longitude": 29.4656,
+    "name": "mp Bethal Town Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Bethal Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "E155 Betty'sgoed",
+    "code": 434315,
+    "latitude": -26.2528,
+    "location": "POINT (30.921856 -26.25285)",
+    "longitude": 30.921856,
+    "name": "mp Betty'sgoed Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Betty'sgoed Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Matangaleni",
+    "code": 778415,
+    "latitude": -25.334,
+    "location": "POINT (31.150223 -25.334023)",
+    "longitude": 31.150223,
+    "name": "mp Bhuga CHC",
+    "province": "Mpumalanga",
+    "short_name": "Bhuga CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "K05 Senotlelo Village",
+    "code": 324215,
+    "latitude": -25.0554,
+    "location": "POINT (28.9249 -25.05544)",
+    "longitude": 28.9249,
+    "name": "mp Bloedfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Bloedfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 745760,
+    "latitude": -25.2996,
+    "location": "POINT (29.0082 -25.2996)",
+    "longitude": 29.0082,
+    "name": "mp Boekenhouthoek Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Boekenhouthoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 285242,
+    "latitude": -25.7447,
+    "location": "POINT (31.6198 -25.7447)",
+    "longitude": 31.6198,
+    "name": "mp Boschfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Boschfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "147 Tau Street",
+    "code": 415115,
+    "latitude": -26.1299,
+    "location": "POINT (28.69408 -26.12996)",
+    "longitude": 28.69408,
+    "name": "mp Botleng Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Botleng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3315 Nkosi Avenue",
+    "code": 652224,
+    "latitude": -26.1048,
+    "location": "POINT (28.69447 -26.10481)",
+    "longitude": 28.69447,
+    "name": "mp Botleng Extension 3 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Botleng Ext 3 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 332360,
+    "latitude": -25.5382,
+    "location": "POINT (31.330085 -25.53825)",
+    "longitude": 31.330085,
+    "name": "mp Boulders Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Boulders Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 685042,
+    "latitude": -24.6804,
+    "location": "POINT (30.8107 -24.6804)",
+    "longitude": 30.8107,
+    "name": "mp Bourkes Luck Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Bourkes Luck Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 Breytenbach Street, Breyten",
+    "code": 628706,
+    "latitude": -26.3021,
+    "location": "POINT (29.98767 -26.30214)",
+    "longitude": 29.98767,
+    "name": "mp Breyten Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Breyten Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Brondal",
+    "code": 887715,
+    "latitude": -25.3539,
+    "location": "POINT (30.8404 -25.3539)",
+    "longitude": 30.8404,
+    "name": "mp Brondal Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Brondal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Brooklyn Trust",
+    "code": 270233,
+    "latitude": -24.6001,
+    "location": "POINT (30.99278 -24.60017)",
+    "longitude": 30.99278,
+    "name": "mp Brooklyn Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Brooklyn Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 515324,
+    "latitude": -24.6336,
+    "location": "POINT (31.12856 -24.63369)",
+    "longitude": 31.12856,
+    "name": "mp Buffelshoek Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Buffelshoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "124 Buffelspruit",
+    "code": 940715,
+    "latitude": -25.6589,
+    "location": "POINT (31.52107 -25.65893)",
+    "longitude": 31.52107,
+    "name": "mp Buffelspruit CHC",
+    "province": "Mpumalanga",
+    "short_name": "Buffelspruit CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 335415,
+    "latitude": -24.9729,
+    "location": "POINT (31.21611 -24.97292)",
+    "longitude": 31.21611,
+    "name": "mp Calcutta Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Calcutta Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Kantoor Street, Carolina",
+    "code": 253642,
+    "latitude": -26.0641,
+    "location": "POINT (30.124601 -26.064101)",
+    "longitude": 30.124601,
+    "name": "mp Carolina Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Carolina Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Casteel Village",
+    "code": 254433,
+    "latitude": -24.7213,
+    "location": "POINT (31.03125 -24.72136)",
+    "longitude": 31.03125,
+    "name": "mp Casteel Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Casteel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Nagpur Street",
+    "code": 273333,
+    "latitude": -25.7764,
+    "location": "POINT (31.0398 -25.7764)",
+    "longitude": 31.0398,
+    "name": "mp Cathyville Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Cathyville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "33 Kwachibikhulu",
+    "code": 254051,
+    "latitude": -26.2771,
+    "location": "POINT (30.2242 -26.2771)",
+    "longitude": 30.2242,
+    "name": "mp Chrissiesmeer (Kwachibikhulu) Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Chrissiesmeer (Kwachi) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 387360,
+    "latitude": -25.3629,
+    "location": "POINT (31.1615 -25.3629)",
+    "longitude": 31.1615,
+    "name": "mp Clau Clau Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Clau Clau Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cork Trust",
+    "code": 515633,
+    "latitude": -24.956,
+    "location": "POINT (31.31081 -24.95608)",
+    "longitude": 31.31081,
+    "name": "mp Cork Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Cork Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 828124,
+    "latitude": -24.6162,
+    "location": "POINT (31.14894 -24.61628)",
+    "longitude": 31.14894,
+    "name": "mp Cottondale Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Cottondale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 519833,
+    "latitude": -24.8996,
+    "location": "POINT (31.21433 -24.89967)",
+    "longitude": 31.21433,
+    "name": "mp Cunningmoore Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Cunningmoore Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "262 Sinqobile A, Daggakraal",
+    "code": 242015,
+    "latitude": -27.1288,
+    "location": "POINT (29.96651 -27.12882)",
+    "longitude": 29.96651,
+    "name": "mp Daggakraal (Thembalokuphila) CHC",
+    "province": "Mpumalanga",
+    "short_name": "Daggakraal (Themba) CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "280b Kwadela, Davel",
+    "code": 551524,
+    "latitude": -26.4612,
+    "location": "POINT (29.6611 -26.4612)",
+    "longitude": 29.6611,
+    "name": "mp Davel Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Davel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "275 De Beersput",
+    "code": 317524,
+    "latitude": -25.0494,
+    "location": "POINT (28.8622 -25.0494)",
+    "longitude": 28.8622,
+    "name": "mp De Beersput Clinic",
+    "province": "Mpumalanga",
+    "short_name": "De Beersput Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Serel Cilliers 5th Avenue, FC Dumat Building",
+    "code": 602851,
+    "latitude": -26.1214,
+    "location": "POINT (28.6687 -26.1214)",
+    "longitude": 28.6687,
+    "name": "mp Delmas Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Delmas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Derby Clinic",
+    "code": 723242,
+    "latitude": -26.8793,
+    "location": "POINT (30.7436 -26.8793)",
+    "longitude": 30.7436,
+    "name": "mp Derby (Rustplaas) Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Derby (Rustplaas) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dingledale Next To Agriculture Office",
+    "code": 218851,
+    "latitude": -24.7036,
+    "location": "POINT (31.119354 -24.70368)",
+    "longitude": 31.119354,
+    "name": "mp Dingledale Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Dingledale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "515 Mocha",
+    "code": 328642,
+    "latitude": -25.1676,
+    "location": "POINT (28.41661 -25.16761)",
+    "longitude": 28.41661,
+    "name": "mp Diphalane (Pankop) CHC",
+    "province": "Mpumalanga",
+    "short_name": "Diphalane CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dludluma",
+    "code": 711360,
+    "latitude": -25.6598,
+    "location": "POINT (31.9568 -25.65986)",
+    "longitude": 31.9568,
+    "name": "mp Dludluma Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Dludluma Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Doornkoop Phase 1, Middelburg",
+    "code": 414251,
+    "latitude": -25.5924,
+    "location": "POINT (29.4325 -25.59241)",
+    "longitude": 29.4325,
+    "name": "mp Doornkop Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Doornkop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "New Stands, Driefontein",
+    "code": 374306,
+    "latitude": -26.9982,
+    "location": "POINT (30.4162 -26.9982)",
+    "longitude": 30.4162,
+    "name": "mp Driefontein New Stands CHC",
+    "province": "Mpumalanga",
+    "short_name": "Driefontein CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 857533,
+    "latitude": -26.9806,
+    "location": "POINT (30.4527 -26.9806)",
+    "longitude": 30.4527,
+    "name": "mp Driefontein Old Stands Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Driefontein Old Stands Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 984242,
+    "latitude": -25.6931,
+    "location": "POINT (31.55605 -25.6931)",
+    "longitude": 31.55605,
+    "name": "mp Driekoppies Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Driekoppies Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dundonald-A",
+    "code": 410424,
+    "latitude": -26.2369,
+    "location": "POINT (30.8284 -26.2369)",
+    "longitude": 30.8284,
+    "name": "mp Dundonald CHC",
+    "province": "Mpumalanga",
+    "short_name": "Dundonald CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Dwaleni Trust",
+    "code": 653251,
+    "latitude": -25.3604,
+    "location": "POINT (31.0971 -25.3604)",
+    "longitude": 31.0971,
+    "name": "mp Dwaleni Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Dwaleni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 661624,
+    "latitude": -24.7864,
+    "location": "POINT (31.10664 -24.78649)",
+    "longitude": 31.10664,
+    "name": "mp Dwarsloop Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Dwarsloop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "94 Verdoorn Street, Eastdene, Middelburg",
+    "code": 593142,
+    "latitude": -25.7714,
+    "location": "POINT (29.4803 -25.77149)",
+    "longitude": 29.4803,
+    "name": "mp Eastdene Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Eastdene Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 786506,
+    "latitude": -24.6841,
+    "location": "POINT (31.22699 -24.684154)",
+    "longitude": 31.22699,
+    "name": "mp Edinburg Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Edinburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "242 Elukwatini Main Road, Elukwatini",
+    "code": 265742,
+    "latitude": -26.0514,
+    "location": "POINT (30.798 -26.05141)",
+    "longitude": 30.798000000000002,
+    "name": "mp Eerstehoek Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Eerstehoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "171 Matibidi, Elandsfontein",
+    "code": 287924,
+    "latitude": -24.6218,
+    "location": "POINT (30.7619 -24.6218)",
+    "longitude": 30.7619,
+    "name": "mp Elandsfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Elandsfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4066 Fono Sibiya Drive, Ext 4, Embalenhle",
+    "code": 545115,
+    "latitude": -26.5405,
+    "location": "POINT (29.07445 -26.5405)",
+    "longitude": 29.07445,
+    "name": "mp Embalenhle CHC",
+    "province": "Mpumalanga",
+    "short_name": "Embalenhle CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "628 Belfast, Themmbisile Hani",
+    "code": 460833,
+    "latitude": -25.4205,
+    "location": "POINT (28.7725 -25.4205)",
+    "longitude": 28.7725,
+    "name": "mp Empilweni Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Empilweni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 946115,
+    "latitude": -25.8427,
+    "location": "POINT (29.06799 -25.84273)",
+    "longitude": 29.06799,
+    "name": "mp Empumelelweni CHC",
+    "province": "Mpumalanga",
+    "short_name": "Empumelelweni CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hector Peterson Street, Machadodorp",
+    "code": 331815,
+    "latitude": -25.6977,
+    "location": "POINT (30.24947 -25.69775)",
+    "longitude": 30.24947,
+    "name": "mp Emthonjeni Clinic (Machadodorp)",
+    "province": "Mpumalanga",
+    "short_name": "Emthonjeni Clinic (Macha)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "873 Mabuza Street, Emthonjeni",
+    "code": 118824,
+    "latitude": -26.5263,
+    "location": "POINT (29.988286 -26.526331)",
+    "longitude": 29.988286,
+    "name": "mp Emthonjeni Clinic (Msukaligwa)",
+    "province": "Mpumalanga",
+    "short_name": "Emthonjeni Clinic (Msuka)"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Emzinoni Township First Street",
+    "code": 210224,
+    "latitude": -26.4676,
+    "location": "POINT (29.4564 -26.4676)",
+    "longitude": 29.4564,
+    "name": "mp Emzinoni Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Emzinoni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Taute and Breytenbach Street, Ermelo",
+    "code": 256642,
+    "latitude": -26.5204,
+    "location": "POINT (29.9861 -26.5204)",
+    "longitude": 29.9861,
+    "name": "mp Ermelo Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ermelo Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Phila Miyeni and Dlamini Avenue, Ethandakukhanya",
+    "code": 687315,
+    "latitude": -27.0466,
+    "location": "POINT (30.78204 -27.0466)",
+    "longitude": 30.78204,
+    "name": "mp Ethandakukhanya Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ethandakukhanya Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9 Ghent Street, Evander",
+    "code": 544760,
+    "latitude": -26.4581,
+    "location": "POINT (29.1266 -26.4581)",
+    "longitude": 29.1266,
+    "name": "mp Evander Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Evander Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Pholongwane Street, Amersfoort",
+    "code": 546633,
+    "latitude": -27.0005,
+    "location": "POINT (29.85042 -27.00053)",
+    "longitude": 29.85042,
+    "name": "mp Ezamokuhle Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ezamokuhle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 222033,
+    "latitude": -25.413,
+    "location": "POINT (31.1811 -25.413)",
+    "longitude": 31.1811,
+    "name": "mp Eziweni Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Eziweni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "E1339a, Fernie 1",
+    "code": 263133,
+    "latitude": -26.3981,
+    "location": "POINT (30.7945 -26.3981)",
+    "longitude": 30.7945,
+    "name": "mp Fernie 1 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Fernie 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 676, Fernie B",
+    "code": 738333,
+    "latitude": -26.4178,
+    "location": "POINT (30.7744 -26.4178)",
+    "longitude": 30.7744,
+    "name": "mp Fernie 2 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Fernie 2 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 091c",
+    "code": 386215,
+    "latitude": -25.8128,
+    "location": "POINT (31.8531 -25.8128)",
+    "longitude": 31.8531,
+    "name": "mp Fig Tree Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Fig Tree Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1046 Gembokspruit",
+    "code": 743515,
+    "latitude": -25.4091,
+    "location": "POINT (28.872983 -25.409167)",
+    "longitude": 28.872983,
+    "name": "mp Gemsbokspruit Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Gemsbokspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Glenthorpe Village",
+    "code": 731024,
+    "latitude": -25.7302,
+    "location": "POINT (30.8428 -25.7302)",
+    "longitude": 30.8428,
+    "name": "mp Glenthorpe Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Glenthorpe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rocky Rapid Street",
+    "code": 976824,
+    "latitude": -24.9378,
+    "location": "POINT (30.839731 -24.937847)",
+    "longitude": 30.839731,
+    "name": "mp Glory Hill Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Glory Hill Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 810151,
+    "latitude": -25.3071,
+    "location": "POINT (29.0744 -25.3071)",
+    "longitude": 29.0744,
+    "name": "mp Goederede Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Goederede Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 66, next to George Mdluli Creche",
+    "code": 465951,
+    "latitude": -25.0127,
+    "location": "POINT (31.180645 -25.012719)",
+    "longitude": 31.180645,
+    "name": "mp Goromane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Goromane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 257724,
+    "latitude": -24.6361,
+    "location": "POINT (31.41042 -24.63614)",
+    "longitude": 31.41042,
+    "name": "mp Gottenburg Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Gottenburg Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 887324,
+    "latitude": -25.0033,
+    "location": "POINT (28.729622 -25.003308)",
+    "longitude": 28.729622,
+    "name": "mp Greenside CHC",
+    "province": "Mpumalanga",
+    "short_name": "Greenside CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sprincol Road, Groootvlei",
+    "code": 262051,
+    "latitude": -26.8042,
+    "location": "POINT (28.5023 -26.8042)",
+    "longitude": 28.502299999999998,
+    "name": "mp Grootvlei CHC",
+    "province": "Mpumalanga",
+    "short_name": "Grootvlei CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Juluilani Street",
+    "code": 439824,
+    "latitude": -25.3092,
+    "location": "POINT (31.1515 -25.30924)",
+    "longitude": 31.1515,
+    "name": "mp Gutshwa Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Gutshwa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ga-Maria",
+    "code": 167442,
+    "latitude": -24.9693,
+    "location": "POINT (28.8708 -24.96935)",
+    "longitude": 28.8708,
+    "name": "mp Haakdoringlaagte Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Haakdoringlaagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 113533,
+    "latitude": -25.0998,
+    "location": "POINT (30.7833 -25.09987)",
+    "longitude": 30.7833,
+    "name": "mp Harmony Hill Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Harmony Hill Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 17, Hartebeeskop",
+    "code": 257433,
+    "latitude": -26.1689,
+    "location": "POINT (30.9018 -26.16892)",
+    "longitude": 30.9018,
+    "name": "mp Hartebeeskop Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Hartebeeskop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1127, Tarental Street",
+    "code": 738006,
+    "latitude": -25.0458,
+    "location": "POINT (31.127057 -25.045806)",
+    "longitude": 31.127057,
+    "name": "mp Hazyview Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Hazyview Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "38 Manton Street, Hendrina",
+    "code": 704533,
+    "latitude": -26.1598,
+    "location": "POINT (29.7156 -26.1598)",
+    "longitude": 29.7156,
+    "name": "mp Hendrina Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Hendrina Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Hlalanikahle Ext 3",
+    "code": 129733,
+    "latitude": -25.8463,
+    "location": "POINT (29.1234 -25.8463)",
+    "longitude": 29.1234,
+    "name": "mp Hlalanikahle Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Hlalanikahle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 864460,
+    "latitude": -24.6484,
+    "location": "POINT (31.34747 -24.64844)",
+    "longitude": 31.34747,
+    "name": "mp Hluvukani Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Hluvukani Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Khokhovela, 1367",
+    "code": 876815,
+    "latitude": -24.6207,
+    "location": "POINT (31.25633 -24.62078)",
+    "longitude": 31.25633,
+    "name": "mp Islington Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Islington Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kwakhetha",
+    "code": 457124,
+    "latitude": -26.8456,
+    "location": "POINT (30.52752 -26.8456)",
+    "longitude": 30.52752,
+    "name": "mp Iswepe CHC",
+    "province": "Mpumalanga",
+    "short_name": "Iswepe CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Shongwe Mission, Malelane",
+    "code": 565733,
+    "latitude": -25.7206,
+    "location": "POINT (31.4669 -25.7206)",
+    "longitude": 31.4669,
+    "name": "mp Jeppes Reef Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Jeppes Reef Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 660851,
+    "latitude": -25.7963,
+    "location": "POINT (31.5983 -25.7963)",
+    "longitude": 31.598300000000002,
+    "name": "mp Jeppes Rust Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Jeppes Rust Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Jerusalem",
+    "code": 272451,
+    "latitude": -25.1821,
+    "location": "POINT (31.0169 -25.1821)",
+    "longitude": 31.0169,
+    "name": "mp Jerusalem Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Jerusalem Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 320860,
+    "latitude": -24.9843,
+    "location": "POINT (31.10397 -24.98436)",
+    "longitude": 31.10397,
+    "name": "mp Jim Brown Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Jim Brown Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Justice Trust",
+    "code": 275442,
+    "latitude": -24.8852,
+    "location": "POINT (31.41241 -24.88527)",
+    "longitude": 31.41241,
+    "name": "mp Justicia Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Justicia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 624315,
+    "latitude": -25.532,
+    "location": "POINT (31.331822 -25.532025)",
+    "longitude": 31.331822,
+    "name": "mp Kaapmuiden Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kaapmuiden Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1362 Kabokweni Main Road",
+    "code": 686515,
+    "latitude": -25.3434,
+    "location": "POINT (31.1304 -25.3434)",
+    "longitude": 31.1304,
+    "name": "mp Kabokweni CHC",
+    "province": "Mpumalanga",
+    "short_name": "Kabokweni CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "599, Mzimdala Section",
+    "code": 770651,
+    "latitude": -25.0004,
+    "location": "POINT (28.6269 -25.0004)",
+    "longitude": 28.6269,
+    "name": "mp Kalkfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kalkfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Suncity B Stee Nkoma, Stand 1414",
+    "code": 453733,
+    "latitude": -25.3891,
+    "location": "POINT (28.7269 -25.3891)",
+    "longitude": 28.7269,
+    "name": "mp Kameelpoortnek Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kameelpoortnek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thuthuka Street, Kameelrivier B",
+    "code": 526624,
+    "latitude": -25.1261,
+    "location": "POINT (28.9953 -25.1261)",
+    "longitude": 28.9953,
+    "name": "mp Kameelrivier B Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kameelrivier B Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 152924,
+    "latitude": -25.6642,
+    "location": "POINT (31.6809 -25.6642)",
+    "longitude": 31.6809,
+    "name": "mp Kamhlushwa Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kamhlushwa Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cobra Street, Kanyamazane-A, Nelspruit, 1214",
+    "code": 255342,
+    "latitude": -25.4656,
+    "location": "POINT (31.184073 -25.465626)",
+    "longitude": 31.184073,
+    "name": "mp Kanyamazane CHC",
+    "province": "Mpumalanga",
+    "short_name": "Kanyamazane CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Khumbula Trust",
+    "code": 671024,
+    "latitude": -25.2813,
+    "location": "POINT (31.1771 -25.2813)",
+    "longitude": 31.1771,
+    "name": "mp Khumbula Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Khumbula Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 635942,
+    "latitude": -24.8767,
+    "location": "POINT (31.32369 -24.87672)",
+    "longitude": 31.32369,
+    "name": "mp Kildare Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kildare Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 730324,
+    "latitude": -25.8344,
+    "location": "POINT (29.204419 -25.834403)",
+    "longitude": 29.204419,
+    "name": "mp Klarinet CHC",
+    "province": "Mpumalanga",
+    "short_name": "Klarinet CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Conradies Street",
+    "code": 952333,
+    "latitude": -25.8668,
+    "location": "POINT (29.17414 -25.86689)",
+    "longitude": 29.17414,
+    "name": "mp Klipfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Klipfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 452633,
+    "latitude": -25.2137,
+    "location": "POINT (29.02376 -25.21373)",
+    "longitude": 29.02376,
+    "name": "mp Kliplaatdrift Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kliplaatdrift Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "182 Rassik Street",
+    "code": 713360,
+    "latitude": -25.4346,
+    "location": "POINT (31.9567 -25.4346)",
+    "longitude": 31.9567,
+    "name": "mp Komatipoort Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Komatipoort Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 Quenton Street, Kriel, 2271",
+    "code": 912806,
+    "latitude": -26.2461,
+    "location": "POINT (29.262925 -26.246156)",
+    "longitude": 29.262925,
+    "name": "mp Kriel Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kriel Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 202224,
+    "latitude": -26.046,
+    "location": "POINT (31.0239 -26.046)",
+    "longitude": 31.0239,
+    "name": "mp Kromdraai Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kromdraai Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "494 Ba Kwamhlanga",
+    "code": 245460,
+    "latitude": -25.4364,
+    "location": "POINT (28.7131 -25.4364)",
+    "longitude": 28.7131,
+    "name": "mp KwaMhlanga CHC",
+    "province": "Mpumalanga",
+    "short_name": "KwaMhlanga CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 280115,
+    "latitude": -27.0522,
+    "location": "POINT (30.6102 -27.0522)",
+    "longitude": 30.6102,
+    "name": "mp KwaNgema CHC",
+    "province": "Mpumalanga",
+    "short_name": "KwaNgema CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kwaggafontein-A, Kwaggafontein,",
+    "code": 381806,
+    "latitude": -25.2941,
+    "location": "POINT (28.959965 -25.29416)",
+    "longitude": 28.959965,
+    "name": "mp Kwaggafontein A Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kwaggafontein A Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Police Road, Kwaggafontein",
+    "code": 234324,
+    "latitude": -25.294,
+    "location": "POINT (28.9601 -25.294)",
+    "longitude": 28.9601,
+    "name": "mp Kwaggafontein C CHC",
+    "province": "Mpumalanga",
+    "short_name": "Kwaggafontein C CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "206 Ackerman and Hlatswao Street, Hendrina Clinic",
+    "code": 527806,
+    "latitude": -26.1351,
+    "location": "POINT (29.7295 -26.1351)",
+    "longitude": 29.7295,
+    "name": "mp Kwazamokuhle Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kwazamokuhle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Malala Street, Kwazanele",
+    "code": 262833,
+    "latitude": -26.3133,
+    "location": "POINT (29.98258 -26.31333)",
+    "longitude": 29.98258,
+    "name": "mp Kwazanele Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Kwazanele Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Esidzakaneni",
+    "code": 814651,
+    "latitude": -25.6743,
+    "location": "POINT (31.6344 -25.6743)",
+    "longitude": 31.6344,
+    "name": "mp Langloop CHC",
+    "province": "Mpumalanga",
+    "short_name": "Langloop CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "11287 Isithwalandwe Street, Embalenhle",
+    "code": 654942,
+    "latitude": -26.5463,
+    "location": "POINT (29.08333 -26.54639)",
+    "longitude": 29.08333,
+    "name": "mp Langverwacht Ext 14 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Langverwacht Ext14 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Street, Lebohang",
+    "code": 761633,
+    "latitude": -26.3329,
+    "location": "POINT (28.9211 -26.3329)",
+    "longitude": 28.9211,
+    "name": "mp Lebohang CHC",
+    "province": "Mpumalanga",
+    "short_name": "Lebohang CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 750006,
+    "latitude": -25.1784,
+    "location": "POINT (28.8994 -25.1784)",
+    "longitude": 28.8994,
+    "name": "mp Leeufontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Leeufontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1691A Letsoalo Section",
+    "code": 318960,
+    "latitude": -24.9617,
+    "location": "POINT (28.8506 -24.9617)",
+    "longitude": 28.8506,
+    "name": "mp Lefiso CHC",
+    "province": "Mpumalanga",
+    "short_name": "Lefiso CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 567915,
+    "latitude": -25.186,
+    "location": "POINT (31.1016 -25.186)",
+    "longitude": 31.1016,
+    "name": "mp Legogote Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Legogote Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 762851,
+    "latitude": -26.9895,
+    "location": "POINT (29.201 -26.9895)",
+    "longitude": 29.201,
+    "name": "mp Lilian Mambakazi CHC",
+    "province": "Mpumalanga",
+    "short_name": "Lilian Mambakazi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lillydale",
+    "code": 419124,
+    "latitude": -24.871,
+    "location": "POINT (31.36819 -24.87108)",
+    "longitude": 31.36819,
+    "name": "mp Lillydale Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Lillydale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 598733,
+    "latitude": -26.136,
+    "location": "POINT (30.786 -26.136)",
+    "longitude": 30.786,
+    "name": "mp Lochiel CHC",
+    "province": "Mpumalanga",
+    "short_name": "Lochiel CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 295724,
+    "latitude": -25.1054,
+    "location": "POINT (28.7638 -25.1054)",
+    "longitude": 28.7638,
+    "name": "mp Loding Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Loding Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 352, Lothair",
+    "code": 730242,
+    "latitude": -26.3928,
+    "location": "POINT (30.453 -26.3928)",
+    "longitude": 30.453,
+    "name": "mp Lothair (Silindile) Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Lothair Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Louise Street",
+    "code": 594424,
+    "latitude": -25.8867,
+    "location": "POINT (29.2322 -25.8867)",
+    "longitude": 29.2322,
+    "name": "mp Louise Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Louise Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Louws Creek, Barberton Road",
+    "code": 844815,
+    "latitude": -25.6475,
+    "location": "POINT (31.2832 -25.6475)",
+    "longitude": 31.2832,
+    "name": "mp Louw's Creek Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Louw's Creek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 801324,
+    "latitude": -24.676,
+    "location": "POINT (31.28344 -24.67606)",
+    "longitude": 31.28344,
+    "name": "mp Ludlow Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ludlow Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 10",
+    "code": 615624,
+    "latitude": -25.4066,
+    "location": "POINT (31.2773 -25.4066)",
+    "longitude": 31.2773,
+    "name": "mp Luphisi Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Luphisi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Berg Street",
+    "code": 573651,
+    "latitude": -25.1083,
+    "location": "POINT (30.4526 -25.1083)",
+    "longitude": 30.4526,
+    "name": "mp Lydenburg Gateway Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Lydenburg Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1545 Mathabathe Street, Lynville",
+    "code": 213942,
+    "latitude": -25.8809,
+    "location": "POINT (29.1898 -25.8809)",
+    "longitude": 29.1898,
+    "name": "mp Lynnville Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Lynnville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3102 Ext 9 Shongwe Street",
+    "code": 379551,
+    "latitude": -25.7833,
+    "location": "POINT (31.0497 -25.7833)",
+    "longitude": 31.0497,
+    "name": "mp M'Africa CHC",
+    "province": "Mpumalanga",
+    "short_name": "M'Africa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Kruger President and Butana Jele Street, Machadodorp",
+    "code": 532360,
+    "latitude": -25.6631,
+    "location": "POINT (30.2508 -25.6631)",
+    "longitude": 30.2508,
+    "name": "mp Machadodorp Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Machadodorp Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Madras A1, 1258",
+    "code": 550115,
+    "latitude": -24.989,
+    "location": "POINT (31.146747 -24.989023)",
+    "longitude": 31.146747,
+    "name": "mp Madras Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Madras Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Makoko Main Road",
+    "code": 541615,
+    "latitude": -25.2224,
+    "location": "POINT (31.2217 -25.2224)",
+    "longitude": 31.2217,
+    "name": "mp Makoko Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Makoko Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Air and Lion Street",
+    "code": 514051,
+    "latitude": -25.4934,
+    "location": "POINT (31.50485 -25.4934)",
+    "longitude": 31.50485,
+    "name": "mp Malelane Estates Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Malelane Estates Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mananga Road",
+    "code": 361651,
+    "latitude": -25.9592,
+    "location": "POINT (31.84378 -25.95927)",
+    "longitude": 31.84378,
+    "name": "mp Mananga Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mananga Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mangweni Main Road",
+    "code": 672651,
+    "latitude": -25.7411,
+    "location": "POINT (31.8187 -25.74117)",
+    "longitude": 31.8187,
+    "name": "mp Mangweni CHC",
+    "province": "Mpumalanga",
+    "short_name": "Mangweni CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 445",
+    "code": 778506,
+    "latitude": -25.1973,
+    "location": "POINT (31.112565 -25.197398)",
+    "longitude": 31.112565,
+    "name": "mp Manzini Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Manzini Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2176 Rasebidi Section, Siyabuswa",
+    "code": 132442,
+    "latitude": -25.0051,
+    "location": "POINT (28.7965 -25.00514)",
+    "longitude": 28.7965,
+    "name": "mp Marapyane CHC",
+    "province": "Mpumalanga",
+    "short_name": "Marapyane CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 749915,
+    "latitude": -24.9579,
+    "location": "POINT (31.12772 -24.95794)",
+    "longitude": 31.12772,
+    "name": "mp Marite Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Marite Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "589 Grens Street, Mashishing",
+    "code": 548206,
+    "latitude": -25.088,
+    "location": "POINT (30.4225 -25.088)",
+    "longitude": 30.4225,
+    "name": "mp Mashishing Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mashishing Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "R571, Masibekela, 1342",
+    "code": 824560,
+    "latitude": -25.8697,
+    "location": "POINT (31.809915 -25.86975)",
+    "longitude": 31.809915,
+    "name": "mp Masibekela Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Masibekela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "180 Section, Kwamahlanga-B, KwaMhlanga, 1022",
+    "code": 537560,
+    "latitude": -25.2791,
+    "location": "POINT (28.9913 -25.2791)",
+    "longitude": 28.9913,
+    "name": "mp Mathyzensloop Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mathyzensloop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 362724,
+    "latitude": -25.5173,
+    "location": "POINT (31.352 -25.5173)",
+    "longitude": 31.352,
+    "name": "mp Matsulu CHC",
+    "province": "Mpumalanga",
+    "short_name": "Matsulu CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 734815,
+    "latitude": -24.845,
+    "location": "POINT (31.08586 -24.84506)",
+    "longitude": 31.08586,
+    "name": "mp Maviljan Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Maviljan Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Empuluzi-A, Empuluzi",
+    "code": 661415,
+    "latitude": -26.2997,
+    "location": "POINT (30.776153 -26.299765)",
+    "longitude": 30.776153,
+    "name": "mp Mayflower CHC",
+    "province": "Mpumalanga",
+    "short_name": "Mayflower CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "PO Box 817",
+    "code": 540824,
+    "latitude": -25.8374,
+    "location": "POINT (31.89006 -25.83747)",
+    "longitude": 31.89006,
+    "name": "mp Mbangwane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mbangwane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1, Mbonisweni",
+    "code": 520624,
+    "latitude": -25.3086,
+    "location": "POINT (31.1078 -25.3086)",
+    "longitude": 31.1078,
+    "name": "mp Mbonisweni Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mbonisweni Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mbuzini",
+    "code": 827933,
+    "latitude": -25.9351,
+    "location": "POINT (31.9525 -25.9351)",
+    "longitude": 31.9525,
+    "name": "mp Mbuzini Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mbuzini Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 154751,
+    "latitude": -25.8589,
+    "location": "POINT (31.7043 -25.8589)",
+    "longitude": 31.7043,
+    "name": "mp Mgobodi CHC",
+    "province": "Mpumalanga",
+    "short_name": "Mgobodi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Church and Wanderous Street, Middelburg",
+    "code": 533715,
+    "latitude": -25.7734,
+    "location": "POINT (29.4562 -25.7734)",
+    "longitude": 29.4562,
+    "name": "mp Middelburg Civic Centre Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Middelburg CC Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "8875 Makatane Avenue, Middelburg",
+    "code": 399951,
+    "latitude": -25.7683,
+    "location": "POINT (29.4086 -25.76836)",
+    "longitude": 29.4086,
+    "name": "mp Middelburg Ext 6 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Middelburg Ext 6 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "10803 Zenzeleni Street, Mhluzi",
+    "code": 585851,
+    "latitude": -25.7518,
+    "location": "POINT (29.4467 -25.7518)",
+    "longitude": 29.4467,
+    "name": "mp Middelburg Ext 8 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Middelburg Ext 8 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Hospital and Walter Sisulu Street, Middelburg, 1055",
+    "code": 373842,
+    "latitude": -25.7743,
+    "location": "POINT (29.451 -25.77431)",
+    "longitude": 29.451,
+    "name": "mp Middelburg Gateway Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Middelburg Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Middleplaas Clinic",
+    "code": 147915,
+    "latitude": -25.7178,
+    "location": "POINT (31.5513 -25.71786)",
+    "longitude": 31.5513,
+    "name": "mp Middelplaas Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Middelplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "11 Mispel Street, Kosmos Park, Standerton",
+    "code": 774460,
+    "latitude": -26.9245,
+    "location": "POINT (29.2297 -26.9245)",
+    "longitude": 29.2297,
+    "name": "mp Mispel Street Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mispel Street Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 679360,
+    "latitude": -25.2805,
+    "location": "POINT (31.23121 -25.28059)",
+    "longitude": 31.23121,
+    "name": "mp Mjejane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mjejane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Kruger and Church Street, Piet Retief",
+    "code": 640806,
+    "latitude": -27.0042,
+    "location": "POINT (30.80268 -27.00426)",
+    "longitude": 30.80268,
+    "name": "mp Mkhondo Town Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mkhondo Town Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 387206,
+    "latitude": -24.987,
+    "location": "POINT (31.23786 -24.98703)",
+    "longitude": 31.23786,
+    "name": "mp Mkhuhlu Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mkhuhlu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "86b Napiri Section, Mmametlhake",
+    "code": 886433,
+    "latitude": -25.1061,
+    "location": "POINT (28.5231 -25.1061)",
+    "longitude": 28.5231,
+    "name": "mp Mmametlhake CHC",
+    "province": "Mpumalanga",
+    "short_name": "Mmametlhake CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "253 Block 14, Moloto",
+    "code": 208924,
+    "latitude": -25.4584,
+    "location": "POINT (28.6403 -25.4584)",
+    "longitude": 28.6403,
+    "name": "mp Moloto CHC",
+    "province": "Mpumalanga",
+    "short_name": "Moloto CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 3, Elukwatini",
+    "code": 425724,
+    "latitude": -26.0671,
+    "location": "POINT (30.8769 -26.0671)",
+    "longitude": 30.8769,
+    "name": "mp Mooiplaas Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mooiplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Unnamed Road, Violet Bank",
+    "code": 674406,
+    "latitude": -24.7032,
+    "location": "POINT (31.00489 -24.70322)",
+    "longitude": 31.00489,
+    "name": "mp Moreipuso Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Moreipuso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Steyn and Siphiwe Dhlongolo Street, Morgenzon",
+    "code": 330224,
+    "latitude": -26.7358,
+    "location": "POINT (29.609 -26.7358)",
+    "longitude": 29.609,
+    "name": "mp Morgenzon Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Morgenzon Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 2B, Msogwaba Trust",
+    "code": 211842,
+    "latitude": -25.4192,
+    "location": "POINT (31.1654 -25.4192)",
+    "longitude": 31.165399999999998,
+    "name": "mp Msogwaba Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Msogwaba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Numbi Road",
+    "code": 244651,
+    "latitude": -25.1327,
+    "location": "POINT (31.1573 -25.1327)",
+    "longitude": 31.1573,
+    "name": "mp Mthimba Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mthimba Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 515733,
+    "latitude": -24.5667,
+    "location": "POINT (31.14403 -24.56672)",
+    "longitude": 31.14403,
+    "name": "mp Murhotso Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Murhotso Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mzinti, 1352",
+    "code": 412851,
+    "latitude": -25.696,
+    "location": "POINT (31.746904 -25.69606)",
+    "longitude": 31.746904,
+    "name": "mp Mzinti Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Mzinti Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 824b",
+    "code": 950342,
+    "latitude": -25.6697,
+    "location": "POINT (31.8617 -25.6697)",
+    "longitude": 31.8617,
+    "name": "mp Naas CHC",
+    "province": "Mpumalanga",
+    "short_name": "Naas CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "340 Fort Napier Street, Nasaret",
+    "code": 562224,
+    "latitude": -25.8016,
+    "location": "POINT (29.50988 -25.80165)",
+    "longitude": 29.50988,
+    "name": "mp Nasaret Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Nasaret Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Komatipoort",
+    "code": 890451,
+    "latitude": -25.9143,
+    "location": "POINT (31.91954 -25.91433)",
+    "longitude": 31.91954,
+    "name": "mp Ndindindi Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ndindindi Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "30 Waterfall Avenue, Riverside, Nelspruit, 1201",
+    "code": 683006,
+    "latitude": -25.4524,
+    "location": "POINT (30.960505 -25.452498)",
+    "longitude": 30.960505,
+    "name": "mp Nelspruit CHC",
+    "province": "Mpumalanga",
+    "short_name": "Nelspruit CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 574933,
+    "latitude": -25.4755,
+    "location": "POINT (30.97639 -25.47556)",
+    "longitude": 30.97639,
+    "name": "mp Nelsville Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Nelsville Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "New Scotland Next To John Ride Firm, New Scotland",
+    "code": 347315,
+    "latitude": -26.338,
+    "location": "POINT (30.6799 -26.338)",
+    "longitude": 30.6799,
+    "name": "mp New Scotland Clinic",
+    "province": "Mpumalanga",
+    "short_name": "New Scotland Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "189/287, Middelburg",
+    "code": 448424,
+    "latitude": -25.738,
+    "location": "POINT (29.42862 -25.73807)",
+    "longitude": 29.42862,
+    "name": "mp Newtown Parkhome Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Newtown Parkhome Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "204 Nhlazatshe Ext 6",
+    "code": 896724,
+    "latitude": -26.0296,
+    "location": "POINT (30.79498 -26.02964)",
+    "longitude": 30.79498,
+    "name": "mp Nhlazatshe 6 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Nhlazatshe 6 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "4181, Nhlazatshe",
+    "code": 717533,
+    "latitude": -26.0529,
+    "location": "POINT (30.7701 -26.0529)",
+    "longitude": 30.7701,
+    "name": "mp Nhlazatshe Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Nhlazatshe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 497, Matsulu B",
+    "code": 774715,
+    "latitude": -25.5054,
+    "location": "POINT (31.3286 -25.5054)",
+    "longitude": 31.3286,
+    "name": "mp Nkwalini Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Nkwalini Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "690 Lengelengele, Nokaneng",
+    "code": 477542,
+    "latitude": -25.0741,
+    "location": "POINT (28.6429 -25.0741)",
+    "longitude": 28.6429,
+    "name": "mp Nokaneng CHC",
+    "province": "Mpumalanga",
+    "short_name": "Nokaneng CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "473 Thwala Street, Nthoroane",
+    "code": 484715,
+    "latitude": -26.7628,
+    "location": "POINT (28.7763 -26.76284)",
+    "longitude": 28.7763,
+    "name": "mp Nthoroane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Nthoroane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Ntunda, 1341",
+    "code": 869142,
+    "latitude": -25.7297,
+    "location": "POINT (31.756583 -25.729783)",
+    "longitude": 31.756583,
+    "name": "mp Ntunda CHC",
+    "province": "Mpumalanga",
+    "short_name": "Ntunda CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 553715,
+    "latitude": -24.9322,
+    "location": "POINT (31.22594 -24.93222)",
+    "longitude": 31.22594,
+    "name": "mp Oakley Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Oakley Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Main Road",
+    "code": 248333,
+    "latitude": -26.0498,
+    "location": "POINT (29.0568 -26.0498)",
+    "longitude": 29.0568,
+    "name": "mp Ogies Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Ogies Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 345542,
+    "latitude": -24.7635,
+    "location": "POINT (31.07286 -24.76353)",
+    "longitude": 31.07286,
+    "name": "mp Orinoco Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Orinoco Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "23469 Ext 21",
+    "code": 704724,
+    "latitude": -26.5627,
+    "location": "POINT (29.07415 -26.56277)",
+    "longitude": 29.07415,
+    "name": "mp Paulina Morapeli CHC",
+    "province": "Mpumalanga",
+    "short_name": "Paulina Morapeli CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "737 Hoof Street, Perdekop",
+    "code": 595751,
+    "latitude": -27.163,
+    "location": "POINT (29.6248 -27.163)",
+    "longitude": 29.6248,
+    "name": "mp Perdekop CHC",
+    "province": "Mpumalanga",
+    "short_name": "Perdekop CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Phaphamang Section",
+    "code": 687033,
+    "latitude": -25.1503,
+    "location": "POINT (28.4955 -25.15039)",
+    "longitude": 28.4955,
+    "name": "mp Phake Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Phake Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Phiva Main Road",
+    "code": 126333,
+    "latitude": -25.6415,
+    "location": "POINT (31.7721 -25.6415)",
+    "longitude": 31.772100000000002,
+    "name": "mp Phiva Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Phiva Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "695 Ntuli Street",
+    "code": 913624,
+    "latitude": -26.0081,
+    "location": "POINT (29.0354 -26.0081)",
+    "longitude": 29.0354,
+    "name": "mp Phola CHC",
+    "province": "Mpumalanga",
+    "short_name": "Phola CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 126933,
+    "latitude": -25.1581,
+    "location": "POINT (31.12155 -25.15819)",
+    "longitude": 31.12155,
+    "name": "mp Phola-Nzikasi CHC",
+    "province": "Mpumalanga",
+    "short_name": "Phola-Nzikasi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Esssa Ayob Street, Pie Retief",
+    "code": 852433,
+    "latitude": -27.0098,
+    "location": "POINT (30.8056 -27.0098)",
+    "longitude": 30.8056,
+    "name": "mp Piet Retief Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Piet Retief Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Thamana",
+    "code": 701142,
+    "latitude": -25.2062,
+    "location": "POINT (28.9193 -25.2062)",
+    "longitude": 28.9193,
+    "name": "mp Pieterskraal Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Pieterskraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 655733,
+    "latitude": -25.0841,
+    "location": "POINT (30.780742 -25.084102)",
+    "longitude": 30.780742,
+    "name": "mp Pilgrims Rest Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Pilgrims Rest Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Hectorway and Botha Street",
+    "code": 245715,
+    "latitude": -25.8821,
+    "location": "POINT (29.189 -25.8821)",
+    "longitude": 29.189,
+    "name": "mp Poly Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Poly Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "3 Kiaat Street, Pullenshope",
+    "code": 972706,
+    "latitude": -25.7741,
+    "location": "POINT (29.45133 -25.77417)",
+    "longitude": 29.45133,
+    "name": "mp Pullenshope Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Pullenshope Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 909515,
+    "latitude": -25.1304,
+    "location": "POINT (28.996672 -25.130483)",
+    "longitude": 28.996672,
+    "name": "mp RPL Moripe (Kameelrivier A) Clinic",
+    "province": "Mpumalanga",
+    "short_name": "RPL Moripe (Kameel A) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 852524,
+    "latitude": -25.8038,
+    "location": "POINT (30.95167 -25.80389)",
+    "longitude": 30.95167,
+    "name": "mp Renee Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Renee Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "147 Makometsane",
+    "code": 449233,
+    "latitude": -25.1141,
+    "location": "POINT (28.93251 -25.11415)",
+    "longitude": 28.93251,
+    "name": "mp Rhenosterkop Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Rhenosterkop Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Marulla Farm",
+    "code": 212533,
+    "latitude": -25.6338,
+    "location": "POINT (31.6034 -25.6338)",
+    "longitude": 31.6034,
+    "name": "mp Richtershoek Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Richtershoek Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Lehlake Street",
+    "code": 766051,
+    "latitude": -26.162,
+    "location": "POINT (29.20243 -26.16205)",
+    "longitude": 29.20243,
+    "name": "mp Rietspruit Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Rietspruit Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Rolle",
+    "code": 553633,
+    "latitude": -24.7235,
+    "location": "POINT (31.23717 -24.7235)",
+    "longitude": 31.23717,
+    "name": "mp Rolle Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Rolle Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "7th Avenue",
+    "code": 898533,
+    "latitude": -25.0972,
+    "location": "POINT (30.7808 -25.0972)",
+    "longitude": 30.7808,
+    "name": "mp Sabie Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sabie Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sinethemba Street",
+    "code": 692751,
+    "latitude": -25.4109,
+    "location": "POINT (30.08998 -25.41094)",
+    "longitude": 30.08998,
+    "name": "mp Sakhelwe Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sakhelwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Main Road, next to Inkambeni Primary",
+    "code": 426842,
+    "latitude": -25.0777,
+    "location": "POINT (31.14417 -25.07778)",
+    "longitude": 31.14417,
+    "name": "mp Sandrivier Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sandrivier Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 975615,
+    "latitude": -25.7034,
+    "location": "POINT (31.5133 -25.7034)",
+    "longitude": 31.5133,
+    "name": "mp Schoemansdal Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Schoemansdal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Kwalugedlane, 1341, Stand no 5/R11/136, Schulzendal, 1336",
+    "code": 133551,
+    "latitude": -25.7503,
+    "location": "POINT (31.539646 -25.750369)",
+    "longitude": 31.539646,
+    "name": "mp Schulzendal Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Schulzendal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1550 Mosate Section, Seabe",
+    "code": 465260,
+    "latitude": -25.0153,
+    "location": "POINT (28.69581 -25.01535)",
+    "longitude": 28.69581,
+    "name": "mp Seabe CHC",
+    "province": "Mpumalanga",
+    "short_name": "Seabe CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Victor Khayiyane Ext 5",
+    "code": 684960,
+    "latitude": -26.4996,
+    "location": "POINT (29.4315 -26.4996)",
+    "longitude": 29.4315,
+    "name": "mp Sead Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sead Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Central Business Area, Horwood Street, Secunda",
+    "code": 535724,
+    "latitude": -26.5383,
+    "location": "POINT (29.1648 -26.5383)",
+    "longitude": 29.1648,
+    "name": "mp Secunda Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Secunda Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "PO Box 2435",
+    "code": 269233,
+    "latitude": -25.0556,
+    "location": "POINT (31.1707 -25.0556)",
+    "longitude": 31.1707,
+    "name": "mp Shabalala Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Shabalala Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Shatale",
+    "code": 385324,
+    "latitude": -24.7878,
+    "location": "POINT (31.04797 -24.78783)",
+    "longitude": 31.04797,
+    "name": "mp Shatale Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Shatale Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "244 Kerk Street, Sheepmoor",
+    "code": 852351,
+    "latitude": -26.7151,
+    "location": "POINT (30.29435 -26.71519)",
+    "longitude": 30.29435,
+    "name": "mp Sheepmoor CHC",
+    "province": "Mpumalanga",
+    "short_name": "Sheepmoor CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 994 Sibange Trust, 1331 Malelane",
+    "code": 448851,
+    "latitude": -25.8546,
+    "location": "POINT (31.793154 -25.854689)",
+    "longitude": 31.793154,
+    "name": "mp Sibange Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sibange Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Anderson Street",
+    "code": 871651,
+    "latitude": -25.4169,
+    "location": "POINT (31.2052 -25.4169)",
+    "longitude": 31.2052,
+    "name": "mp Sibuyile Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sibuyile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sihlangu",
+    "code": 284533,
+    "latitude": -25.8138,
+    "location": "POINT (31.7917 -25.8138)",
+    "longitude": 31.7917,
+    "name": "mp Sihlangu Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sihlangu Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Sikhululiwe Village, Steve Tshwete LM",
+    "code": 174142,
+    "latitude": -25.7657,
+    "location": "POINT (29.779081 -25.765745)",
+    "longitude": 29.779081,
+    "name": "mp Sikhululiwe Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sikhululiwe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 555624,
+    "latitude": -25.7633,
+    "location": "POINT (31.7724 -25.7633)",
+    "longitude": 31.7724,
+    "name": "mp Sikhwahlane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sikhwahlane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2170 Mtsweni Street, Silobela",
+    "code": 410406,
+    "latitude": -26.0888,
+    "location": "POINT (30.1159 -26.0888)",
+    "longitude": 30.1159,
+    "name": "mp Silobela Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Silobela Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "61 Nqunqululu Street",
+    "code": 796415,
+    "latitude": -25.0775,
+    "location": "POINT (30.7832 -25.0775)",
+    "longitude": 30.7832,
+    "name": "mp Simile Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Simile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": "Mthunzini",
+      "code": 894942,
+      "latitude": -25.7631,
+      "location": "POINT (29.42286 -25.7631)",
+      "longitude": 29.42286,
+      "name": "mp Simunye Clinic",
+      "province": "Mpumalanga",
+      "short_name": "Simunye Clinic"
+    }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 712624,
+    "latitude": -27.1066,
+    "location": "POINT (29.934201 -27.106628)",
+    "longitude": 29.934201,
+    "name": "mp Sinqobile Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sinqobile Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Chief Mashego",
+    "code": 762024,
+    "latitude": -25.8616,
+    "location": "POINT (29.1242 -25.8616)",
+    "longitude": 29.1242,
+    "name": "mp Siphosesimbi CHC",
+    "province": "Mpumalanga",
+    "short_name": "Siphosesimbi CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2404 Khonzimfundo Street, Siyabuswa",
+    "code": 428242,
+    "latitude": -25.1202,
+    "location": "POINT (29.061 -25.1202)",
+    "longitude": 29.061,
+    "name": "mp Siyabuswa CHC",
+    "province": "Mpumalanga",
+    "short_name": "Siyabuswa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "97 Letsoako, Siyathemba",
+    "code": 626115,
+    "latitude": -26.6246,
+    "location": "POINT (28.5833 -26.6246)",
+    "longitude": 28.5833,
+    "name": "mp Siyathemba CHC",
+    "province": "Mpumalanga",
+    "short_name": "Siyathemba CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Sakhile and Zakheni Street, Belfast",
+    "code": 887333,
+    "latitude": -25.6762,
+    "location": "POINT (29.9955 -25.6762)",
+    "longitude": 29.9955,
+    "name": "mp Siyathuthuka Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Siyathuthuka Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2116 Maraba Street, Middelburg",
+    "code": 589024,
+    "latitude": -25.7512,
+    "location": "POINT (29.4471 -25.7512)",
+    "longitude": 29.4471,
+    "name": "mp Sr Mashiteng Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Sr Mashiteng Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "2 Colling Street, Stanwest, Standerton",
+    "code": 754151,
+    "latitude": -26.9521,
+    "location": "POINT (29.2282 -26.9521)",
+    "longitude": 29.2282,
+    "name": "mp Stanwest (Azalia) Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Stanwest (Azalia) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 219",
+    "code": 788651,
+    "latitude": -25.7421,
+    "location": "POINT (31.892989 -25.742131)",
+    "longitude": 31.892989,
+    "name": "mp Steenbok Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Steenbok Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Vergelengen Farm",
+    "code": 785351,
+    "latitude": -25.6297,
+    "location": "POINT (31.8111 -25.6297)",
+    "longitude": 31.8111,
+    "name": "mp Strydomblock Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Strydomblock Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "E279 Ward 1, Swallowsnest",
+    "code": 232406,
+    "latitude": -26.2376,
+    "location": "POINT (30.8766 -26.2376)",
+    "longitude": 30.8766,
+    "name": "mp Swallowsnest Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Swallowsnest Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 294833,
+    "latitude": -25.4677,
+    "location": "POINT (31.1464 -25.4677)",
+    "longitude": 31.1464,
+    "name": "mp Tekwane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tekwane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "396 Thembalethu",
+    "code": 512515,
+    "latitude": -25.4066,
+    "location": "POINT (28.77917 -25.40669)",
+    "longitude": 28.77917,
+    "name": "mp Thembalethu CHC",
+    "province": "Mpumalanga",
+    "short_name": "Thembalethu CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "H2 Section, Esikhawini H, Empangeni, 3887",
+    "code": 271315,
+    "latitude": -24.9601,
+    "location": "POINT (31.1045 -24.96017)",
+    "longitude": 31.1045,
+    "name": "mp Thokozane Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Thokozane Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bethal Road, R547",
+    "code": 956633,
+    "latitude": -26.1662,
+    "location": "POINT (29.284691 -26.16624)",
+    "longitude": 29.284691,
+    "name": "mp Thubelihle CHC",
+    "province": "Mpumalanga",
+    "short_name": "Thubelihle CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 352806,
+    "latitude": -24.7266,
+    "location": "POINT (31.20733 -24.72667)",
+    "longitude": 31.20733,
+    "name": "mp Thulamahashe CHC",
+    "province": "Mpumalanga",
+    "short_name": "Thulamahashe CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr OR Tambo and Mandela Street, Thussiville",
+    "code": 713724,
+    "latitude": -26.4934,
+    "location": "POINT (29.968619 -26.493418)",
+    "longitude": 29.968619,
+    "name": "mp Thussiville (MN Cindi) Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Thussiville (MN Cindi) Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 86, Tjakastad",
+    "code": 740651,
+    "latitude": -25.9879,
+    "location": "POINT (30.8153 -25.9879)",
+    "longitude": 30.8153,
+    "name": "mp Tjakastad Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tjakastad Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 34, Block B Trust",
+    "code": 841342,
+    "latitude": -25.6566,
+    "location": "POINT (31.8077 -25.6566)",
+    "longitude": 31.8077,
+    "name": "mp Tonga Block B Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tonga Block B Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 356115,
+    "latitude": -25.6446,
+    "location": "POINT (31.8411 -25.6446)",
+    "longitude": 31.8411,
+    "name": "mp Tonga Block C Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tonga Block C Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Bekker Street, Trichardt",
+    "code": 786942,
+    "latitude": -26.4848,
+    "location": "POINT (29.2095 -26.4848)",
+    "longitude": 29.2095,
+    "name": "mp Trichardt Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Trichardt Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "9 Troya",
+    "code": 238960,
+    "latitude": -25.0653,
+    "location": "POINT (28.8054 -25.0653)",
+    "longitude": 28.8054,
+    "name": "mp Troya Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Troya Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 313524,
+    "latitude": -25.3672,
+    "location": "POINT (28.8217 -25.3672)",
+    "longitude": 28.8217,
+    "name": "mp Tweefontein A Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tweefontein A Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 1659, Tweefontein C",
+    "code": 464751,
+    "latitude": -25.3492,
+    "location": "POINT (28.8223 -25.3492)",
+    "longitude": 28.8223,
+    "name": "mp Tweefontein C Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tweefontein C Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "440 Tweefontein",
+    "code": 411115,
+    "latitude": -25.3494,
+    "location": "POINT (28.8022 -25.3494)",
+    "longitude": 28.8022,
+    "name": "mp Tweefontein D Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tweefontein D Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 569842,
+    "latitude": -25.3882,
+    "location": "POINT (28.848743 -25.388265)",
+    "longitude": 28.848743,
+    "name": "mp Tweefontein G CHC",
+    "province": "Mpumalanga",
+    "short_name": "Tweefontein G CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "248 Tweefontein H",
+    "code": 222833,
+    "latitude": -25.4058,
+    "location": "POINT (28.8062 -25.4058)",
+    "longitude": 28.8062,
+    "name": "mp Tweefontein H Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tweefontein H Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1472, 1473, 1462, 1463 Tweefontein M",
+    "code": 621560,
+    "latitude": -25.3771,
+    "location": "POINT (28.7952 -25.3771)",
+    "longitude": 28.7952,
+    "name": "mp Tweefontein M Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Tweefontein M Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Utha Village",
+    "code": 882933,
+    "latitude": -24.7141,
+    "location": "POINT (31.350944 -24.714111)",
+    "longitude": 31.350944,
+    "name": "mp Utah Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Utah Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 41, Vaalbank",
+    "code": 207024,
+    "latitude": -25.1466,
+    "location": "POINT (28.8499 -25.1466)",
+    "longitude": 28.8499,
+    "name": "mp Vaalbank Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Vaalbank Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "45 Nemezia Street Nelindia",
+    "code": 755233,
+    "latitude": -25.4747,
+    "location": "POINT (30.9758 -25.4747)",
+    "longitude": 30.9758,
+    "name": "mp Valencia Park Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Valencia Park Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 377106,
+    "latitude": -25.1363,
+    "location": "POINT (29.0795 -25.1363)",
+    "longitude": 29.0795,
+    "name": "mp Valschfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Valschfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Next to Tar Road",
+    "code": 368715,
+    "latitude": -25.4816,
+    "location": "POINT (29.01601 -25.48169)",
+    "longitude": 29.01601,
+    "name": "mp Verena CHC",
+    "province": "Mpumalanga",
+    "short_name": "Verena CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 527115,
+    "latitude": -25.3335,
+    "location": "POINT (28.8814 -25.3335)",
+    "longitude": 28.8814,
+    "name": "mp Vlaklaagte 1 Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Vlaklaagte 1 Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 281, Vlaklaagte 2",
+    "code": 654542,
+    "latitude": -25.3741,
+    "location": "POINT (28.8604 -25.3741)",
+    "longitude": 28.8604,
+    "name": "mp Vlaklaagte 2 CHC",
+    "province": "Mpumalanga",
+    "short_name": "Vlaklaagte 2 CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 657415,
+    "latitude": -26.1399,
+    "location": "POINT (30.98007 -26.13998)",
+    "longitude": 30.98007,
+    "name": "mp Vlakplaas Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Vlakplaas Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr East and Zondo Street, Volksrust",
+    "code": 436415,
+    "latitude": -27.3673,
+    "location": "POINT (29.8851 -27.3673)",
+    "longitude": 29.8851,
+    "name": "mp Volksrust Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Volksrust Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 926815,
+    "latitude": -25.3584,
+    "location": "POINT (28.9443 -25.3584)",
+    "longitude": 28.9443,
+    "name": "mp Vriesgewagte Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Vriesgewagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Mavuso Street, Volksrust",
+    "code": 313633,
+    "latitude": -27.3681,
+    "location": "POINT (29.9019 -27.3681)",
+    "longitude": 29.9019,
+    "name": "mp Vukuzakhe Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Vukuzakhe Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Cnr Hoog and Engelbecht Street, Wakkerstroom",
+    "code": 375324,
+    "latitude": -27.3553,
+    "location": "POINT (30.1458 -27.3553)",
+    "longitude": 30.1458,
+    "name": "mp Wakkerstroom Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Wakkerstroom Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "64 Cloete Street",
+    "code": 309642,
+    "latitude": -26.1302,
+    "location": "POINT (30.228 -26.1302)",
+    "longitude": 30.228,
+    "name": "mp Warburton CHC",
+    "province": "Mpumalanga",
+    "short_name": "Warburton CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "1 Park Lane, Waterval Boven",
+    "code": 613106,
+    "latitude": -25.6479,
+    "location": "POINT (30.33855 -25.6479)",
+    "longitude": 30.33855,
+    "name": "mp Waterval Boven Gateway Clinic",
+    "province": "Mpumalanga",
+    "short_name": "W Boven Gateway"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 7003, Waterval B",
+    "code": 565860,
+    "latitude": -25.1794,
+    "location": "POINT (29.0019 -25.1794)",
+    "longitude": 29.0019,
+    "name": "mp Waterval CHC",
+    "province": "Mpumalanga",
+    "short_name": "Waterval CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 691933,
+    "latitude": -25.0946,
+    "location": "POINT (29.0017 -25.09463)",
+    "longitude": 29.0017,
+    "name": "mp Weltevrede Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Weltevrede Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 741642,
+    "latitude": -24.5809,
+    "location": "POINT (31.32917 -24.58097)",
+    "longitude": 31.32917,
+    "name": "mp Welverdiend Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Welverdiend Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "White River",
+    "code": 366133,
+    "latitude": -25.3285,
+    "location": "POINT (31.0188 -25.32851)",
+    "longitude": 31.0188,
+    "name": "mp White River Clinic",
+    "province": "Mpumalanga",
+    "short_name": "White River Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "R23 Extension 6, Sakhile",
+    "code": 282642,
+    "latitude": -26.943,
+    "location": "POINT (29.21888 -26.94305)",
+    "longitude": 29.21888,
+    "name": "mp Winifred Maboa CHC",
+    "province": "Mpumalanga",
+    "short_name": "Winifred Maboa CHC"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 378242,
+    "latitude": -25.0799,
+    "location": "POINT (28.637795 -25.079951)",
+    "longitude": 28.637795,
+    "name": "mp Witlaagte Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Witlaagte Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Stand 92",
+    "code": 243960,
+    "latitude": -25.1595,
+    "location": "POINT (28.9625 -25.15956)",
+    "longitude": 28.9625,
+    "name": "mp Wolwekraal Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Wolwekraal Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 548342,
+    "latitude": -25.8059,
+    "location": "POINT (29.89432 -25.80593)",
+    "longitude": 29.89432,
+    "name": "mp Wonderfontein Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Wonderfontein Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": "Xanthia Village",
+    "code": 306251,
+    "latitude": -24.8351,
+    "location": "POINT (31.14572 -24.83514)",
+    "longitude": 31.14572,
+    "name": "mp Xanthia Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Xanthia Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields":{
+    "address": null,
+    "code": 874351,
+    "latitude": -24.7558,
+    "location": "POINT (30.97533 -24.75584)",
+    "longitude": 30.97533,
+    "name": "mp Zoeknog Clinic",
+    "province": "Mpumalanga",
+    "short_name": "Zoeknog Clinic"
+   }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+      "address": "Stand 4c, Zwelisha Trust",
+      "code": 235224,
+      "latitude": -25.3673,
+      "location": "POINT (31.1708 -25.3673)",
+      "longitude": 31.1708,
+      "name": "mp Zwelisha Clinic",
+      "province": "Mpumalanga",
+      "short_name": "Zwelisha Clinic"
+    }
+  }
+]

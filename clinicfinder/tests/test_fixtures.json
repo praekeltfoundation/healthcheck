@@ -1,0 +1,28 @@
+[
+  {
+    "model": "clinicfinder.location",
+    "fields": {
+        "address": "203 Mark Street",
+        "code": 853642,
+        "latitude": -27.873,
+        "location": "POINT (26.68533 -27.87308)",
+        "longitude": 26.68533,
+        "name": "fs AM Kruger Clinic",
+        "province": "Gauteng",
+        "short_name": "AM Kruger Clinic"
+       }
+  },
+  {
+    "model": "clinicfinder.location",
+    "fields" : {
+        "address": "565 Vorster Street, Wesselsbron, 9680",
+        "code": 897151,
+        "latitude": -27.8362,
+        "location": "POINT (26.3668 -27.8362)",
+        "longitude": 26.3668,
+        "name": "fs Albert Luthuli Memorial Clinic",
+        "province": "Free State",
+        "short_name": "Albert Luthuli Mem Clinic"
+    }
+    }
+]

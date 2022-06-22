@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:9.6-alpine
+        image: postgis/postgis:11-2.5-alpine
         env:
           POSTGRES_DB: healthcheck
           POSTGRES_USER: postgres
@@ -32,6 +32,7 @@ jobs:
           python-version: 3.7.7
       - name: Install dependencies
         run: |
+          sudo apt-get update && sudo apt-get install -y gdal-bin
           python -m pip install --upgrade pip
           pip install -e .
           pip install -r requirements-dev.txt
