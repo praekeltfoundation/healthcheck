@@ -99,6 +99,10 @@ def perform_etl():
                 "language": "STRING",
                 "activation": "STRING",
                 "originating_msisdn": "STRING",
+                "commit_get_tested": "STRING",
+                "research_consent": "BOOLEAN",
+                "clinic_to_visit": "STRING",
+                "clinic_visit_day": "STRING",
             },
         },
         "tests": {
