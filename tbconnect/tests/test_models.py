@@ -86,5 +86,9 @@ class TBCheckTests(TestCase):
                 "province": "ZA-WC",
                 "activation": None,
                 "originating_msisdn": None,
+                "commit_get_tested": None,
+                "research_consent": None,
+                "clinic_to_visit": None,
+                "clinic_visit_day": None,
             },
         )
