@@ -129,6 +129,15 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     clinic_visit_day = models.CharField(
         max_length=3, choices=DAY_CHOICES, null=True, blank=True
     )
+    street_name = models.CharField(
+        max_length=255, validators=[geographic_coordinate], null=True
+    )
+    suburb_name = models.CharField(
+        max_length=255, validators=[geographic_coordinate], null=True
+    )
+    city_name = models.CharField(
+        max_length=255, validators=[geographic_coordinate], null=True
+    )
 
     @property
     def hashed_msisdn(self):
@@ -162,6 +171,9 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
             "language": self.language,
             "activation": self.activation,
             "originating_msisdn": self.originating_msisdn,
+            "street_name": self.street_name,
+            "suburb_name": self.suburb_name,
+            "city_name": self.city_name,
         }
 
 

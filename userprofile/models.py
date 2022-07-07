@@ -195,6 +195,15 @@ class HealthCheckUserProfile(
         max_length=255, validators=[za_phone_number], null=True
     )
     activation = models.CharField(max_length=255, null=True)
+    street_name = models.CharField(
+        max_length=255, validators=[geographic_coordinate], null=True
+    )
+    suburb_name = models.CharField(
+        max_length=255, validators=[geographic_coordinate], null=True
+    )
+    city_name = models.CharField(
+        max_length=255, validators=[geographic_coordinate], null=True
+    )
 
     objects = HealthCheckUserProfileManager()
 
@@ -243,6 +252,9 @@ class HealthCheckUserProfile(
             "research_consent",
             "originating_msisdn",
             "activation",
+            "street_name",
+            "suburb_name",
+            "city_name",
         ]:
             value = getattr(tbcheck, field, None)
             if has_value(value):

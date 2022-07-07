@@ -86,5 +86,8 @@ class TBCheckTests(TestCase):
                 "province": "ZA-WC",
                 "activation": None,
                 "originating_msisdn": None,
+                "city_name": None,
+                "street_name": None,
+                "suburb_name": None,
             },
         )
