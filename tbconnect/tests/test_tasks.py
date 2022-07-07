@@ -39,7 +39,6 @@ class SyncToRapidproTests(TestCase):
         source="WhatsApp",
         risk=TBCheck.RISK_HIGH,
         activation=None,
-        commit_get_tested=TBCheck.COMMIT_YES,
     ):
         TBCheck.objects.create(
             **{
@@ -55,7 +54,6 @@ class SyncToRapidproTests(TestCase):
                 "risk": risk,
                 "follow_up_optin": optin,
                 "activation": activation,
-                "commit_get_tested": commit_get_tested,
             }
         )
 
@@ -83,7 +81,7 @@ class SyncToRapidproTests(TestCase):
 
         responses.add(
             responses.POST,
-            "https://rp-test.com/api/v2/flow_starts.json",
+            f"https://rp-test.com/api/v2/flow_starts.json",
             json=self.flow_response,
         )
 
@@ -146,7 +144,7 @@ class SyncToRapidproTests(TestCase):
 
         responses.add(
             responses.POST,
-            "https://rp-test.com/api/v2/flow_starts.json",
+            f"https://rp-test.com/api/v2/flow_starts.json",
             json=self.flow_response,
         )
 
@@ -191,7 +189,7 @@ class SyncToRapidproTests(TestCase):
 
         responses.add(
             responses.POST,
-            "https://rp-test.com/api/v2/flow_starts.json",
+            f"https://rp-test.com/api/v2/flow_starts.json",
             json=self.flow_response,
         )
 
@@ -230,14 +228,13 @@ class SyncToRapidproTests(TestCase):
     )
     def test_sync_whatsapp_agent(self):
         """
-        Should sync a profile created from WhatsApp via shared agent device,
-        if not synced before
+        Should sync a profile created from WhatsApp via shared agent device, if not synced before
         """
         profile = self.create_profile_and_check(activation="tb_soccer_1_agent")
 
         responses.add(
             responses.POST,
-            "https://rp-test.com/api/v2/flow_starts.json",
+            f"https://rp-test.com/api/v2/flow_starts.json",
             json=self.flow_response,
         )
 

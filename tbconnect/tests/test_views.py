@@ -236,9 +236,6 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "research_consent": None,
                 "originating_msisdn": None,
                 "activation": None,
-                "city_name": None,
-                "street_name": None,
-                "suburb_name": None,
             },
         )
 
