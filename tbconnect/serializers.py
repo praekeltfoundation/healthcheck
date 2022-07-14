@@ -21,10 +21,11 @@ class TBCheckSerializer(BaseEventSerializer):
     def validate(self, data):
         if data.get("age") == "<18":
             return data
-        if not data.get("location") and not data.get("city_location"):
-            raise serializers.ValidationError(
-                "location and city_location are both None"
-            )
+        if data.get("source") != "USSD":
+            if not data.get("location") and not data.get("city_location"):
+                raise serializers.ValidationError(
+                    "location and city_location are both None"
+                )
         return data
 
     @extend_schema_field(HealthCheckUserProfileSerializer)
