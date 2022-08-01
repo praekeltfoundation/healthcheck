@@ -58,7 +58,6 @@ def perform_sync_to_rapidpro():
                             "exposure": check.exposure,
                             "language": contact.language,
                             "activation": check.activation,
-                            "tb_study_participant": True,
                             "tbconnect_group_arm": contact.tbconnect_group_arm,
                             "commit_get_tested": check.commit_get_tested
                         },
