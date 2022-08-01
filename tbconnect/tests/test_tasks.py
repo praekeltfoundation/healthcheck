@@ -107,6 +107,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -126,6 +128,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -171,6 +175,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -216,6 +222,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -260,6 +268,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": "tb_soccer_1_agent",
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
