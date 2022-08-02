@@ -42,7 +42,6 @@ class SyncToRapidproTests(TestCase):
         tbconnect_group_arm=None,
         commit_get_tested=None,
     ):
-        print(">>>>>>>>>>", msisdn)
         TBCheck.objects.create(
             **{
                 "msisdn": msisdn,
