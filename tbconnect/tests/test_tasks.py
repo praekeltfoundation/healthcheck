@@ -39,6 +39,8 @@ class SyncToRapidproTests(TestCase):
         source="WhatsApp",
         risk=TBCheck.RISK_HIGH,
         activation=None,
+        tbconnect_group_arm=None,
+        commit_get_tested=None,
     ):
         TBCheck.objects.create(
             **{
@@ -54,6 +56,7 @@ class SyncToRapidproTests(TestCase):
                 "risk": risk,
                 "follow_up_optin": optin,
                 "activation": activation,
+                "commit_get_tested": commit_get_tested,
             }
         )
 
@@ -62,6 +65,7 @@ class SyncToRapidproTests(TestCase):
                 "msisdn": msisdn,
                 "language": "eng",
                 "data": {"follow_up_optin": optin, "synced_to_tb_rapidpro": synced},
+                "tbconnect_group_arm": tbconnect_group_arm,
             }
         )
 
@@ -107,6 +111,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -126,6 +132,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -171,6 +179,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -216,6 +226,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -228,7 +240,8 @@ class SyncToRapidproTests(TestCase):
     )
     def test_sync_whatsapp_agent(self):
         """
-        Should sync a profile created from WhatsApp via shared agent device, if not synced before
+        Should sync a profile created from WhatsApp via shared agent device,
+        if not synced before
         """
         profile = self.create_profile_and_check(activation="tb_soccer_1_agent")
 
@@ -260,6 +273,8 @@ class SyncToRapidproTests(TestCase):
                     "exposure": TBCheck.EXPOSURE_YES,
                     "language": "eng",
                     "activation": "tb_soccer_1_agent",
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
                 },
             },
         )
@@ -274,3 +289,153 @@ class SyncToRapidproTests(TestCase):
         profile.refresh_from_db()
 
         self.assertFalse(profile.data["synced_to_tb_rapidpro"])
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        RAPIDPRO_TOKEN="123",
+        RAPIDPRO_TBCONNECT_FLOW="321",
+    )
+    def test_sync_whatsapp_to_rapidpro(self):
+        """
+        Should sync a profile created from WhatsApp including a study,
+        if not synced before
+        """
+        profile = self.create_profile_and_check()
+        # self.create_profile_and_check("+27830000003", True, True)
+        self.create_profile_and_check(
+            msisdn="+27830000004",
+            tbconnect_group_arm="soft_commitment",
+            commit_get_tested="yes",
+        )
+
+        responses.add(
+            responses.POST,
+            f"https://rp-test.com/api/v2/flow_starts.json",
+            json=self.flow_response,
+        )
+
+        perform_sync_to_rapidpro()
+
+        profile.refresh_from_db()
+        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+
+        [call1, call2] = responses.calls
+        body = json.loads(call1.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27830000001"],
+                "extra": {
+                    "risk": "high",
+                    "source": "WhatsApp",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                    "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
+                    "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
+                },
+            },
+        )
+        body = json.loads(call2.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27830000004"],
+                "extra": {
+                    "risk": "high",
+                    "source": "WhatsApp",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                    "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
+                    "activation": None,
+                    "tbconnect_group_arm": "soft_commitment",
+                    "commit_get_tested": "yes",
+                },
+            },
+        )
+
+    @responses.activate
+    @override_settings(
+        RAPIDPRO_URL="https://rp-test.com",
+        RAPIDPRO_TOKEN="123",
+        RAPIDPRO_TBCONNECT_FLOW="321",
+    )
+    def test_sync_ussd_to_rapidpro(self):
+        """
+        Should sync a profile created from WhatsApp including a study,
+        if not synced before
+        """
+        profile = self.create_profile_and_check()
+        # self.create_profile_and_check("+27830000002", False)
+        # self.create_profile_and_check("+27830000003", True, True)
+        self.create_profile_and_check(
+            msisdn="+27830000003",
+            source="USSD",
+            tbconnect_group_arm="control",
+            commit_get_tested=None,
+        )
+
+        responses.add(
+            responses.POST,
+            f"https://rp-test.com/api/v2/flow_starts.json",
+            json=self.flow_response,
+        )
+
+        perform_sync_to_rapidpro()
+
+        profile.refresh_from_db()
+        self.assertTrue(profile.data["synced_to_tb_rapidpro"])
+
+        [call1, call2] = responses.calls
+        body = json.loads(call1.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["whatsapp:27830000001"],
+                "extra": {
+                    "risk": "high",
+                    "source": "WhatsApp",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                    "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
+                    "activation": None,
+                    "tbconnect_group_arm": None,
+                    "commit_get_tested": None,
+                },
+            },
+        )
+        body = json.loads(call2.request.body)
+        self.assertEqual(
+            body,
+            {
+                "flow": "321",
+                "urns": ["tel:+27830000003"],
+                "extra": {
+                    "risk": "high",
+                    "source": "USSD",
+                    "follow_up_optin": True,
+                    "completed_timestamp": self.completed_timestamp.strftime(
+                        "%d/%m/%Y"
+                    ),
+                    "exposure": TBCheck.EXPOSURE_YES,
+                    "language": "eng",
+                    "activation": None,
+                    "tbconnect_group_arm": "control",
+                    "commit_get_tested": None,
+                },
+            },
+        )
