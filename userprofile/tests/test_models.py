@@ -125,21 +125,19 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.preexisting_condition, "no")
 
     @responses.activate
-    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
     def test_update_tbconnect_group_arm(self):
         """
         Update tbconnect_group_arm with the first index arm
         """
 
         profile = HealthCheckUserProfile(
-            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=True
+            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=True, activation="tb_study_a"
         )
         profile.update_tbconnect_group_arm()
 
         self.assertIsNotNone(profile.tbconnect_group_arm)
 
     @responses.activate
-    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
     def test_update_tbconnect_group_arm_existing(self):
         """
         Not to update tbconnect_group_arm if already exist
@@ -156,10 +154,9 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertEqual(profile.tbconnect_group_arm, "connect")
 
     @responses.activate
-    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=False)
     def test_update_tbconnect_group_arm_disabled(self):
         """
-        return none if TBCONNECT_GROUP_ARM_ACTIVE is disabled
+        return none if activation is not tbstudy
         """
 
         profile = HealthCheckUserProfile(
@@ -170,7 +167,6 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertIsNone(profile.tbconnect_group_arm)
 
     @responses.activate
-    @override_settings(TBCONNECT_GROUP_ARM_ACTIVE=True)
     def test_update_tbconnect_group_arm_no_consent(self):
         """
         No to update group_arm if user did give research_consent
