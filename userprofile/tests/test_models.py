@@ -1,5 +1,5 @@
 import responses
-from django.test import TestCase, override_settings
+from django.test import TestCase
 
 from tbconnect.models import TBCheck
 from userprofile.models import Covid19Triage, HealthCheckUserProfile
@@ -131,7 +131,11 @@ class HealthCheckUserProfileTests(TestCase):
         """
 
         profile = HealthCheckUserProfile(
-            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=True, activation="tb_study_a"
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_a",
         )
         profile.update_tbconnect_group_arm()
 
