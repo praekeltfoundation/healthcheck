@@ -3,7 +3,6 @@ import uuid
 from typing import Text
 
 import pycountry
-from django.conf import settings
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.utils import timezone
@@ -257,7 +256,7 @@ class HealthCheckUserProfile(
 
     def update_tbconnect_group_arm(self):
         if (
-            settings.TBCONNECT_GROUP_ARM_ACTIVE
+            self.activation == "tb_study_a"
             and not self.tbconnect_group_arm
             and self.research_consent
         ):
