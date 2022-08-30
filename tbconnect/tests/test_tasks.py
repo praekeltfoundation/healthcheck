@@ -302,7 +302,6 @@ class SyncToRapidproTests(TestCase):
         if not synced before
         """
         profile = self.create_profile_and_check()
-        # self.create_profile_and_check("+27830000003", True, True)
         self.create_profile_and_check(
             msisdn="+27830000004",
             tbconnect_group_arm="soft_commitment",
@@ -376,8 +375,6 @@ class SyncToRapidproTests(TestCase):
         if not synced before
         """
         profile = self.create_profile_and_check()
-        # self.create_profile_and_check("+27830000002", False)
-        # self.create_profile_and_check("+27830000003", True, True)
         self.create_profile_and_check(
             msisdn="+27830000003",
             source="USSD",

@@ -266,6 +266,72 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
             },
         )
 
+    def test_creates_user_profile_with_group_arm(self):
+        """
+        Created user profile when the TB Check is saved with group arm
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        self.client.post(
+            self.url,
+            {
+                "msisdn": "+27856454612",
+                "source": "USSD",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_HIGH,
+                "location": "+40.20361+40.20361",
+                "research_consent": True,
+                "activation": "tb_study_a",
+            },
+            format="json",
+        )
+        profile = HealthCheckUserProfile.objects.get(msisdn="+27856454612")
+
+        self.assertIsNotNone(profile.tbconnect_group_arm)
+
+    def test_creates_user_profile_without_group_arm(self):
+        """
+        The user profile should be created when the TB Check is saved
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        self.client.post(
+            self.url,
+            {
+                "msisdn": "+27856454612",
+                "source": "USSD",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "location": "+40.20361+40.20361",
+                "research_consent": True,
+                "activation": "tb_study_a",
+            },
+            format="json",
+        )
+        profile = HealthCheckUserProfile.objects.get(msisdn="+27856454612")
+
+        self.assertIsNone(profile.tbconnect_group_arm)
+
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
     url = reverse("tbtest-list")
