@@ -21,7 +21,11 @@ class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
 
         profile = HealthCheckUserProfile.objects.get_or_prefill(msisdn=instance.msisdn)
         profile.update_from_tbcheck(instance)
-        profile.update_tbconnect_group_arm()
+
+        # Only assign users to a group arm if they have high and moderate risk
+        if instance.risk != "low":
+            profile.update_tbconnect_group_arm()
+
         profile.save()
 
         return instance
