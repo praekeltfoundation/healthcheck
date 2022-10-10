@@ -162,6 +162,10 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
             "language": self.language,
             "activation": self.activation,
             "originating_msisdn": self.originating_msisdn,
+            "commit_get_tested": self.commit_get_tested,
+            "research_consent": self.research_consent,
+            "clinic_to_visit": self.clinic_to_visit,
+            "clinic_visit_day": self.clinic_visit_day,
         }
 
 

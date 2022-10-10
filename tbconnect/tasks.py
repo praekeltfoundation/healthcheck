@@ -60,6 +60,7 @@ def perform_sync_to_rapidpro():
                             "activation": check.activation,
                             "tbconnect_group_arm": contact.tbconnect_group_arm,
                             "commit_get_tested": check.commit_get_tested,
+                            "research_consent": check.research_consent,
                         },
                     )
 
@@ -101,6 +102,10 @@ def perform_etl():
                 "language": "STRING",
                 "activation": "STRING",
                 "originating_msisdn": "STRING",
+                "commit_get_tested": "STRING",
+                "research_consent": "BOOLEAN",
+                "clinic_to_visit": "STRING",
+                "clinic_visit_day": "STRING",
             },
         },
         "tests": {
