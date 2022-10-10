@@ -113,6 +113,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -134,6 +135,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -181,6 +183,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -228,6 +231,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -275,6 +279,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": "tb_soccer_1_agent",
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -338,6 +343,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -359,6 +365,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": "soft_commitment",
                     "commit_get_tested": "yes",
+                    "research_consent": None,
                 },
             },
         )
@@ -412,6 +419,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": None,
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
@@ -433,6 +441,7 @@ class SyncToRapidproTests(TestCase):
                     "activation": None,
                     "tbconnect_group_arm": "control",
                     "commit_get_tested": None,
+                    "research_consent": None,
                 },
             },
         )
