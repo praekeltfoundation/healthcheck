@@ -1,14 +1,14 @@
-from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
+from django.test import TestCase, override_settings
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
 from tbconnect.models import TBCheck, TBTest
+from tbconnect.serializers import TBCheckSerializer
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
-from tbconnect.serializers import TBCheckSerializer
 
 
 class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
@@ -432,3 +432,30 @@ class TBCheckSerializerTests(TestCase):
                 "weight": False,
             },
         )
+
+
+class TBResetViewSetTests(APITestCase):
+    url = reverse("tbreset-detail", args=("+27856454612",))
+
+    @override_settings(ALLOW_TB_RESET_MSISDNS=["+27820010001"],)
+    def test_reset_not_allowed(self):
+        """
+        The supplied msisdn is not reset when not allowed.
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbtest"))
+        self.client.force_authenticate(user)
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+
+    @override_settings(ALLOW_TB_RESET_MSISDNS=["+27856454612"],)
+    def test_reset_allowed(self):
+        """
+        The whitelisted msisdn is allowed to be reset.
+        """
+        HealthCheckUserProfile.objects.create(msisdn="+27856454612")
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbtest"))
+        self.client.force_authenticate(user)
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)

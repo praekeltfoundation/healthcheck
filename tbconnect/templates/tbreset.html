@@ -1,0 +1,48 @@
+{% load rest_framework %}
+
+<html><body>
+
+<!-- bootstrap css -->
+<link href="//netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+
+<h1>Profile - {{ profile }}</h1>
+
+<script>
+    function reset_profile() {
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        const {
+            host, hostname, href, origin, pathname, port, protocol, search
+          } = window.location
+        const element = document.querySelector('#delete-request-error-handling .status');
+        element.innerHTML = 'Reseting...';
+        fetch(href + '?csrfmiddlewaretoken=' + csrftoken, { method: 'DELETE' })
+            .then(async response => {
+                const isJson = response.headers.get('content-type')?.includes('application/json');
+                const data = isJson && await response.json();
+        
+                // check for error response
+                if (!response.ok) {
+                    // get error message from body or default to response status
+                    const error = (data && data.message) || response.status;
+                    return Promise.reject(error);
+                }
+        
+                element.innerHTML = 'Profile reset successful';
+            })
+            .catch(error => {
+                element.parentElement.innerHTML = `Error: ${error}`;
+                console.error('There was an error!', error);
+            });
+    };
+</script>
+
+{% csrf_token %}
+<button type="button" class="btn btn-primary" onclick="reset_profile()">Reset</button>
+<div id="delete-request-error-handling" class="card text-center m-3">
+    <h5 class="card-header">Profile Reset</h5>
+    <div class="card-body">
+        Status: <span class="status"></span>
+    </div>
+</div>
+
+</body></html>
