@@ -9,13 +9,12 @@
 
 <script>
     function reset_profile() {
-        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
         const {
             host, hostname, href, origin, pathname, port, protocol, search
           } = window.location
         const element = document.querySelector('#delete-request-error-handling .status');
         element.innerHTML = 'Reseting...';
-        fetch(href + '?csrfmiddlewaretoken=' + csrftoken, { method: 'DELETE' })
+        fetch(href, { method: 'DELETE' })
             .then(async response => {
                 const isJson = response.headers.get('content-type')?.includes('application/json');
                 const data = isJson && await response.json();
@@ -36,7 +35,6 @@
     };
 </script>
 
-{% csrf_token %}
 <button type="button" class="btn btn-primary" onclick="reset_profile()">Reset</button>
 <div id="delete-request-error-handling" class="card text-center m-3">
     <h5 class="card-header">Profile Reset</h5>
