@@ -6,10 +6,11 @@ from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet, ViewSet
+from temba_client.exceptions import TembaNoSuchObjectError
 from temba_client.v2 import TembaClient
 
 from userprofile.models import HealthCheckUserProfile
-from userprofile.serializers import HealthCheckUserProfileSerializer, MSISDNSerializer
+from userprofile.serializers import MSISDNSerializer
 
 from .models import TBCheck, TBTest
 from .serializers import TBCheckSerializer, TBTestSerializer
@@ -66,6 +67,12 @@ class TBResetViewSet(ViewSet):
         profile = get_object_or_404(HealthCheckUserProfile, pk=pk)
         profile.delete()
         TBCheck.objects.filter(msisdn=pk).delete()
-        rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
-        rapidpro.delete_contact(f"tel:{pk}")
+
+        urns = [f"tel:{pk}", f"whatsapp:{pk.lstrip('+')}"]
+        for urn in urns:
+            try:
+                rapidpro = TembaClient(settings.RAPIDPRO_URL, settings.RAPIDPRO_TOKEN)
+                rapidpro.delete_contact(urn)
+            except TembaNoSuchObjectError:
+                continue
         return Response({"status": "OK"})
