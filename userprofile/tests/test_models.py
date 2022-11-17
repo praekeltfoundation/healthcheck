@@ -1,5 +1,5 @@
 import responses
-from django.test import TestCase
+from django.test import TestCase, override_settings
 
 from tbconnect.models import TBCheck
 from userprofile.models import Covid19Triage, HealthCheckUserProfile
@@ -140,6 +140,7 @@ class HealthCheckUserProfileTests(TestCase):
         profile.update_tbconnect_group_arm()
 
         self.assertIsNotNone(profile.tbconnect_group_arm)
+        self.assertIsNotNone(profile.tbconnect_group_arm_timestamp)
 
     @responses.activate
     def test_update_tbconnect_group_arm_existing(self):
@@ -156,6 +157,7 @@ class HealthCheckUserProfileTests(TestCase):
         profile.update_tbconnect_group_arm()
 
         self.assertEqual(profile.tbconnect_group_arm, "connect")
+        self.assertIsNone(profile.tbconnect_group_arm_timestamp)
 
     @responses.activate
     def test_update_tbconnect_group_arm_disabled(self):
@@ -169,6 +171,7 @@ class HealthCheckUserProfileTests(TestCase):
         profile.update_tbconnect_group_arm()
 
         self.assertIsNone(profile.tbconnect_group_arm)
+        self.assertIsNone(profile.tbconnect_group_arm_timestamp)
 
     @responses.activate
     def test_update_tbconnect_group_arm_no_consent(self):
@@ -182,3 +185,54 @@ class HealthCheckUserProfileTests(TestCase):
         profile.update_tbconnect_group_arm()
 
         self.assertIsNone(profile.tbconnect_group_arm)
+        self.assertIsNone(profile.tbconnect_group_arm_timestamp)
+
+    @override_settings(SOFT_COMMITMENT_PLUS_LIMIT=0,)
+    def test_get_tb_study_arms_forced_exclude(self):
+        """
+        Exclude soft commitment plus if setting is 0
+        """
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_a",
+        )
+        arms = profile._get_tb_study_arms()
+        self.assertEqual(len(arms), 4)
+
+    def test_get_tb_study_arms_include(self):
+        """
+        Include soft commitment plus if count is less than setting
+        """
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_a",
+        )
+        arms = profile._get_tb_study_arms()
+        self.assertEqual(len(arms), 5)
+
+    def test_get_tb_study_arms_exclude(self):
+        """
+        Exclude soft commitment plus if count is more than setting
+        """
+        for i in range(5):
+            HealthCheckUserProfile.objects.create(
+                msisdn=f"+2782000200{i}",
+                research_consent=True,
+                activation="tb_study_a",
+                tbconnect_group_arm="soft_commitment_plus",
+            )
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_a",
+        )
+        arms = profile._get_tb_study_arms()
+        self.assertEqual(len(arms), 4)

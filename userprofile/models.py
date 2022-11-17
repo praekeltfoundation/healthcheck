@@ -1,8 +1,10 @@
 import random
 import uuid
+from datetime import datetime
 from typing import Text
 
 import pycountry
+from django.conf import settings
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.utils import timezone
@@ -189,6 +191,7 @@ class HealthCheckUserProfile(
     tbconnect_group_arm = models.CharField(
         max_length=22, choices=GROUP_ARM_CHOICES, null=True, blank=True
     )
+    tbconnect_group_arm_timestamp = models.DateTimeField(null=True)
     research_consent = models.BooleanField(null=True)
     originating_msisdn = models.CharField(
         max_length=255, validators=[za_phone_number], null=True
@@ -254,13 +257,30 @@ class HealthCheckUserProfile(
             if has_value(v):
                 self.data[k] = v
 
+    def _get_tb_study_arms(self):
+        # we can update the setting to 0 to disable this expensive check
+        if settings.SOFT_COMMITMENT_PLUS_LIMIT > 0:
+            soft_commitment_plus_count = HealthCheckUserProfile.objects.filter(
+                activation="tb_study_a",
+                research_consent=True,
+                tbconnect_group_arm="soft_commitment_plus",
+            ).count()
+
+            if soft_commitment_plus_count >= settings.SOFT_COMMITMENT_PLUS_LIMIT:
+                return self.GROUP_ARM_CHOICES[:4]
+        elif settings.SOFT_COMMITMENT_PLUS_LIMIT == 0:
+            return self.GROUP_ARM_CHOICES[:4]
+        return self.GROUP_ARM_CHOICES
+
     def update_tbconnect_group_arm(self):
         if (
             self.activation == "tb_study_a"
             and not self.tbconnect_group_arm
             and self.research_consent
         ):
-            self.tbconnect_group_arm = random.choice(self.GROUP_ARM_CHOICES)[0]
+            arms = self._get_tb_study_arms()
+            self.tbconnect_group_arm = random.choice(arms)[0]
+            self.tbconnect_group_arm_timestamp = datetime.now()
 
     class Meta:
         db_table = "eventstore_healthcheckuserprofile"
