@@ -263,6 +263,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "research_consent": None,
                 "originating_msisdn": None,
                 "activation": None,
+                "tbconnect_group_arm_timestamp": None,
             },
         )
 
