@@ -59,6 +59,7 @@ def perform_sync_to_rapidpro():
                             "language": contact.language,
                             "activation": check.activation,
                             "tbconnect_group_arm": contact.tbconnect_group_arm,
+                            "tbconnect_group_arm_timestamp": contact.tbconnect_group_arm_timestamp,
                             "commit_get_tested": check.commit_get_tested,
                             "research_consent": check.research_consent,
                         },
