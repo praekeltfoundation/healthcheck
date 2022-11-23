@@ -43,6 +43,11 @@ def perform_sync_to_rapidpro():
                     if check.source == "WhatsApp" and not force_ussd_followup:
                         urn = f"whatsapp:{contact.msisdn.lstrip('+')}"
 
+                    tbconnect_group_arm_timestamp = None
+                    if contact.tbconnect_group_arm_timestamp:
+                        tbconnect_group_arm_timestamp = contact.tbconnect_group_arm_timestamp.strftime(
+                            "%Y-%m-%dT%H:%M:%SZ"
+                        )
                     rapidpro.create_flow_start(
                         urns=[urn],
                         flow=settings.RAPIDPRO_TBCONNECT_FLOW,
@@ -59,6 +64,7 @@ def perform_sync_to_rapidpro():
                             "language": contact.language,
                             "activation": check.activation,
                             "tbconnect_group_arm": contact.tbconnect_group_arm,
+                            "tbconnect_group_arm_timestamp": tbconnect_group_arm_timestamp,
                             "commit_get_tested": check.commit_get_tested,
                             "research_consent": check.research_consent,
                         },
