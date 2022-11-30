@@ -193,7 +193,7 @@ CELERY_BEAT_SCHEDULE = {
     },
     "perform-sync-to-rapidpro": {
         "task": "tbconnect.tasks.perform_sync_to_rapidpro",
-        "schedule": crontab(minute="*/5"),
+        "schedule": crontab(minute="*/1"),
     },
     "perform-tbconnect-etl": {
         "task": "tbconnect.tasks.perform_etl",
