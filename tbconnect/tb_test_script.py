@@ -7,9 +7,6 @@ def run():
 
     for tbtest in tbtests:
         # Get recent tbcheck to update tbtest source
-        print(
-            "Contact: ", tbtest.msisdn
-        )  # To test in QA AttributeError: 'NoneType' object has no attribute 'source'
         tbcheck = (
             TBCheck.objects.filter(
                 msisdn=tbtest.msisdn, completed_timestamp__lt=tbtest.timestamp
@@ -17,10 +14,11 @@ def run():
             .order_by("-completed_timestamp")
             .first()
         )
-        print("TBcheck", tbcheck.msisdn, tbcheck.source)
-        if tbcheck.source == "USSD" and tbtest.source != "SMS":
-            # Update mismatching test to sms
-            tbtest.source = "SMS"
-            tbtest.save()
+
+        if tbcheck:
+            if tbcheck.source == "USSD" and tbtest.source != "SMS":
+                # Update mismatching test to sms
+                tbtest.source = "SMS"
+                tbtest.save()
 
     print("Script Completed")
