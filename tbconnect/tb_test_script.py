@@ -15,9 +15,10 @@ def run():
             .first()
         )
 
-        if tbcheck.source == "USSD" and tbtest.source != "SMS":
-            # Update mismatching test to sms
-            tbtest.source = "SMS"
-            tbtest.save()
+        if tbcheck:
+            if tbcheck.source == "USSD" and tbtest.source != "SMS":
+                # Update mismatching test to sms
+                tbtest.source = "SMS"
+                tbtest.save()
 
     print("Script Completed")
