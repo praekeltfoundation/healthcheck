@@ -6,13 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tbconnect', '0014_auto_20220615_1449'),
+        ("tbconnect", "0014_auto_20220615_1449"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='tbcheck',
-            name='language',
-            field=models.CharField(blank=True, choices=[('eng', 'English'), ('zul', 'isiZulu'), ('afr', 'Afrikaans'), ('xho', 'isiXhosa'), ('sot', 'Sesotho'), ('set', 'Setswana')], max_length=3, null=True),
+            model_name="tbcheck",
+            name="language",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("eng", "English"),
+                    ("zul", "isiZulu"),
+                    ("afr", "Afrikaans"),
+                    ("xho", "isiXhosa"),
+                    ("sot", "Sesotho"),
+                    ("set", "Setswana"),
+                ],
+                max_length=3,
+                null=True,
+            ),
         ),
     ]
