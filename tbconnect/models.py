@@ -59,12 +59,14 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
     LANGUAGE_AFRIKAANS = "afr"
     LANGUAGE_XHOSA = "xho"
     LANGUAGE_SESOTHO = "sot"
+    LANGUAGE_SETSWANA = "set"
     LANGUAGE_CHOICES = (
         (LANGUAGE_ENGLISH, "English"),
         (LANGUAGE_ZULU, "isiZulu"),
         (LANGUAGE_AFRIKAANS, "Afrikaans"),
         (LANGUAGE_XHOSA, "isiXhosa"),
         (LANGUAGE_SESOTHO, "Sesotho"),
+        (LANGUAGE_SETSWANA, "Setswana"),
     )
 
     COMMIT_YES = "yes"
