@@ -13,7 +13,7 @@ from userprofile.models import HealthCheckUserProfile
 from userprofile.serializers import MSISDNSerializer
 
 from .models import TBCheck, TBTest
-from .serializers import (TBCheckSerializer, TBTestSerializer)
+from .serializers import TBCheckSerializer, TBTestSerializer
 
 
 class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):

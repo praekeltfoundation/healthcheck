@@ -149,4 +149,3 @@ class HealthCheckUserProfileViewSet(
             raise Http404()
         self.check_object_permissions(self.request, obj)
         return obj
-

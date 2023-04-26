@@ -5,7 +5,7 @@ from userprofile.views import (
     Covid19TriageV3ViewSet,
     Covid19TriageV4ViewSet,
     Covid19TriageViewSet,
-    HealthCheckUserProfileViewSet
+    HealthCheckUserProfileViewSet,
 )
 
 v2router = routers.DefaultRouter()
