@@ -462,7 +462,7 @@ class TBResetViewSetTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
-class HealthCheckCciDataTest(APITestCase):
+class TbCheckCciDataViewSetTest(APITestCase):
     url = reverse("tbcheckccidata-list")
 
     def test_cci_data_status_code(self):
