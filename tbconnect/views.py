@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from rest_framework import status
-from rest_framework.mixins import CreateModelMixin, UpdateModelMixin
+from rest_framework.mixins import CreateModelMixin, UpdateModelMixin, ListModelMixin
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
@@ -76,3 +76,12 @@ class TBResetViewSet(ViewSet):
             except TembaNoSuchObjectError:
                 continue
         return Response({"status": "OK"})
+
+
+class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
+    def post(self, request):
+        # data will go here to call the task
+
+        # get user screening data
+        # data = request.data
+        return Response(status=status.HTTP_200_OK)

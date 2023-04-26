@@ -460,3 +460,12 @@ class TBResetViewSetTests(APITestCase):
         self.client.force_authenticate(user)
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+class TbCheckCciDataViewSetTest(APITestCase):
+    url = reverse("tbcheckccidata-list")
+
+    def test_cci_data_status_code(self):
+        response = self.client.post(self.url)
+
+        self.assertEqual(response.status_code, 200)
