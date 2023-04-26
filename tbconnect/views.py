@@ -79,7 +79,6 @@ class TBResetViewSet(ViewSet):
 
 
 class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
-
     def post(self, request):
         # data will go here to call the task
 
