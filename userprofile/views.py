@@ -149,3 +149,14 @@ class HealthCheckUserProfileViewSet(
             raise Http404()
         self.check_object_permissions(self.request, obj)
         return obj
+
+
+class HealthCheckCciData(GenericViewSet, ListModelMixin):
+    serializer_class = HealthCheckUserProfileSerializer
+
+    def post(self, request):
+        # data will go here to call the task
+
+        # get user screening data
+        data = request.data
+        return Response(data=data, status=status.HTTP_200_OK)
