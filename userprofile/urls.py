@@ -12,7 +12,9 @@ from userprofile.views import (
 v2router = routers.DefaultRouter()
 v2router.register("healthcheckuserprofile", HealthCheckUserProfileViewSet)
 v2router.register("covid19triage", Covid19TriageViewSet)
-v2router.register("healthcheckccidata", HealthCheckCciData, basename="healthcheckccidata")
+v2router.register(
+    "healthcheckccidata", HealthCheckCciData, basename="healthcheckccidata"
+)
 
 v3router = routers.DefaultRouter()
 v3router.register("covid19triage", Covid19TriageV2ViewSet, basename="covid19triagev2")

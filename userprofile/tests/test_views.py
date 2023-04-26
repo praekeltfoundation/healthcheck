@@ -690,18 +690,15 @@ class HealthCheckCciDataTest(APITestCase):
     url = reverse("healthcheckccidata-list")
 
     def test_cci_data_status_code(self):
-        response = self.client.post(
-            self.url
-        )
+        response = self.client.post(self.url)
 
         self.assertEqual(response.status_code, 200)
 
     def test_user_profile_data(self):
         response = self.client.post(
             self.url,
-            data=
-            {
-                "msisdn": "2781234567", #CLI ?
+            data={
+                "msisdn": "2781234567",
                 "source": "USSD",
                 "Name": "Tom",
                 "Language": "Eng",
@@ -709,22 +706,23 @@ class HealthCheckCciDataTest(APITestCase):
                 "Responded": "No",
                 "TB_Tested": "Yes",
                 "TB_Test_Results": "Yes",
-                "Screen_timeStamp": "2023-04-25 13:02:17"
+                "Screen_timeStamp": "2023-04-25 13:02:17",
             },
             format="json",
         )
 
-        self.assertEqual(response.data.get('msisdn'), "2781234567")
-        self.assertEqual(response.data,  {'msisdn': '2781234567',
-                                          'source': 'USSD',
-                                          'Name': 'Tom',
-                                          'Language': 'Eng',
-                                          'TB_Risk': 'High',
-                                          'Responded': 'No',
-                                          'TB_Tested': 'Yes',
-                                          'TB_Test_Results': 'Yes',
-                                          'Screen_timeStamp': '2023-04-25 13:02:17'
-                                          }
-                         )
-
-
+        self.assertEqual(response.data.get("msisdn"), "2781234567")
+        self.assertEqual(
+            response.data,
+            {
+                "msisdn": "2781234567",
+                "source": "USSD",
+                "Name": "Tom",
+                "Language": "Eng",
+                "TB_Risk": "High",
+                "Responded": "No",
+                "TB_Tested": "Yes",
+                "TB_Test_Results": "Yes",
+                "Screen_timeStamp": "2023-04-25 13:02:17",
+            },
+        )
