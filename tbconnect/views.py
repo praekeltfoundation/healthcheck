@@ -88,6 +88,6 @@ class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
         serializer.is_valid(raise_exception=True)
 
         # call the task to send data to CCI
-        send_tbcheck_data_to_cci(serializer.data)
+        send_tbcheck_data_to_cci.delay(serializer.data)
 
         return Response(status=status.HTTP_200_OK)

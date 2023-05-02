@@ -165,4 +165,3 @@ def get_user_profile(msisdn=None):
             return profile
     except HealthCheckUserProfile.DoesNotExist:
         return None
-        # return Response("User profile not fount", status=status.HTTP_404_NOT_FOUND)

@@ -483,7 +483,7 @@ class TbCheckCciDataViewSetTest(APITestCase):
             "screen_timeStamp": "2023-04-25 13:02:17",
         }
 
-        responses.add(responses.POST, "https://cci-data-test.com", json=data)
+        responses.add(responses.POST, "https://cci-data-test.com", json={"status": "OK"})
 
         create_user_profile("27821234567")
         response = self.client.post(self.url, data=data)
