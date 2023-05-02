@@ -14,6 +14,7 @@ from userprofile.serializers import MSISDNSerializer
 
 from .models import TBCheck, TBTest
 from .serializers import TBCheckSerializer, TBTestSerializer
+from .tasks import send_tbcheck_data_to_cci
 
 
 class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
@@ -83,5 +84,6 @@ class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
         # data will go here to call the task
 
         # get user screening data
-        # data = request.data
+        data = request.data
+        send_tbcheck_data_to_cci(data)
         return Response(status=status.HTTP_200_OK)
