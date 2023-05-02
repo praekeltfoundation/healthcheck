@@ -474,7 +474,6 @@ class TbCheckCciDataViewSetTest(APITestCase):
     def test_cci_data_status_code(self):
         data = {
             "msisdn": "27821234567",
-            "source": "USSD",
             "Name": "Tom",
             "Language": "Eng",
             "TB_Risk": "High",

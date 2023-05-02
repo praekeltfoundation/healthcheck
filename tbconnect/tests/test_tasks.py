@@ -479,7 +479,6 @@ class SendUserDataToCCITests(TestCase):
     def test_send_data_to_cci(self):
         data = {
             "msisdn": self.msisdn,
-            "source": "USSD",
             "Name": "Tom",
             "Language": "Eng",
             "TB_Risk": "High",
