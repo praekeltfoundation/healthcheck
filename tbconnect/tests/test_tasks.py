@@ -522,7 +522,4 @@ class SendUserDataToCCITests(TestCase):
         create_user_profile("27830987654")
         response = send_tbcheck_data_to_cci(data)
 
-        self.assertTrue(response)
-        self.assertEqual(
-            response.error, "User profile {} not found".format(self.msisdn)
-        )
+        self.assertIsNone(response)

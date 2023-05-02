@@ -7,6 +7,10 @@ from healthcheck import utils
 from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
 import requests
+import logging
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
 
 
 @shared_task
@@ -155,7 +159,7 @@ def send_tbcheck_data_to_cci(data):
             return "CCI data submitted successfully"
         response.raise_for_status()
         return "CCI data Submission failed"
-    raise Exception("User profile {} not found".format(msisdn))
+    logger.info("User profile {} not found".format(msisdn))
 
 
 def get_user_profile(msisdn=None):
