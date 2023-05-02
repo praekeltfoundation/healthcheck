@@ -500,3 +500,29 @@ class SendUserDataToCCITests(TestCase):
 
         self.assertTrue(response)
         self.assertEqual(response, "CCI data submitted successfully")
+
+    @responses.activate
+    @override_settings(
+        CCI_AUT_URL="https://cci-data-test.com", CCI_AUT_TOKEN="test12345"
+    )
+    def test_send_data_error_message_invalid_contact(self):
+        data = {
+            "msisdn": self.msisdn,
+            "name": "Tom",
+            "language": "Eng",
+            "tb_risk": "High",
+            "responded": "Yes",
+            "tb_tested": "Yes",
+            "tb_test_results": "Yes",
+            "screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        responses.add(responses.POST, "https://cci-data-test.com", json=data)
+
+        create_user_profile("27830987654")
+        response = send_tbcheck_data_to_cci(data)
+
+        self.assertTrue(response)
+        self.assertEqual(
+            response.error, "User profile {} not found".format(self.msisdn)
+        )
