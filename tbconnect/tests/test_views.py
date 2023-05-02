@@ -9,7 +9,7 @@ from tbconnect.models import TBCheck, TBTest
 from tbconnect.serializers import TBCheckSerializer
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
-from tbconnect import utils
+from tbconnect.tests.test_utils import create_user_profile
 import responses
 
 
@@ -474,18 +474,18 @@ class TbCheckCciDataViewSetTest(APITestCase):
     def test_cci_data_status_code(self):
         data = {
             "msisdn": "27821234567",
-            "Name": "Tom",
-            "Language": "Eng",
-            "TB_Risk": "High",
-            "Responded": "No",
-            "TB_Tested": "Yes",
-            "TB_Test_Results": "Yes",
-            "Screen_timeStamp": "2023-04-25 13:02:17",
+            "name": "Tom",
+            "language": "Eng",
+            "tb_risk": "High",
+            "responded": "No",
+            "tb_tested": "Yes",
+            "tb_test_results": "Yes",
+            "screen_timeStamp": "2023-04-25 13:02:17",
         }
 
         responses.add(responses.POST, "https://cci-data-test.com", json=data)
 
-        utils.create_user_profile("27821234567")
+        create_user_profile("27821234567")
         response = self.client.post(self.url, data=data)
 
         self.assertEqual(response.status_code, 200)

@@ -11,7 +11,7 @@ from tbconnect.tasks import (
     get_user_profile,
 )
 from userprofile.models import HealthCheckUserProfile
-from tbconnect import utils
+from tbconnect.tests.test_utils import create_user_profile
 
 
 class SyncToRapidproTests(TestCase):
@@ -465,12 +465,17 @@ class SendUserDataToCCITests(TestCase):
     msisdn = "2781234567"
 
     def test_get_user_profile_data(self):
-        profile = utils.create_user_profile(self.msisdn)
+        profile = create_user_profile(self.msisdn)
         response = get_user_profile(self.msisdn)
 
         self.assertIsNotNone(response)
         self.assertEqual(response.msisdn, "2781234567")
         self.assertEqual(profile.province, response.province)
+
+    def test_get_none_existing_user_profile_data(self):
+        response = get_user_profile(self.msisdn)
+
+        self.assertIsNone(response)
 
     @responses.activate
     @override_settings(
@@ -479,18 +484,18 @@ class SendUserDataToCCITests(TestCase):
     def test_send_data_to_cci(self):
         data = {
             "msisdn": self.msisdn,
-            "Name": "Tom",
-            "Language": "Eng",
-            "TB_Risk": "High",
-            "Responded": "No",
-            "TB_Tested": "Yes",
-            "TB_Test_Results": "Yes",
-            "Screen_timeStamp": "2023-04-25 13:02:17",
+            "name": "Tom",
+            "language": "Eng",
+            "tb_risk": "High",
+            "responded": "Yes",
+            "tb_tested": "Yes",
+            "tb_test_results": "Yes",
+            "screen_timeStamp": "2023-04-25 13:02:17",
         }
 
         responses.add(responses.POST, "https://cci-data-test.com", json=data)
 
-        utils.create_user_profile(self.msisdn)
+        create_user_profile(self.msisdn)
         response = send_tbcheck_data_to_cci(data)
 
         self.assertTrue(response)

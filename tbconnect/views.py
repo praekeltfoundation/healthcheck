@@ -13,7 +13,7 @@ from userprofile.models import HealthCheckUserProfile
 from userprofile.serializers import MSISDNSerializer
 
 from .models import TBCheck, TBTest
-from .serializers import TBCheckSerializer, TBTestSerializer
+from .serializers import TBCheckSerializer, TBTestSerializer, TBCheckCciDataSerializer
 from .tasks import send_tbcheck_data_to_cci
 
 
@@ -80,10 +80,14 @@ class TBResetViewSet(ViewSet):
 
 
 class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
+    serializer_class = TBCheckCciDataSerializer
+
     def post(self, request):
-        # get user screening data
-        data = request.data
+        # get user screening data and validate input
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
 
         # call the task to send data to CCI
-        send_tbcheck_data_to_cci(data)
+        send_tbcheck_data_to_cci(serializer.data)
+
         return Response(status=status.HTTP_200_OK)
