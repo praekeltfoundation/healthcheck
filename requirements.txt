@@ -59,7 +59,7 @@ opencv-python-headless==4.5.2.54
 zbar-py==1.0.4
 drf-spectacular==0.20.2
 beautifulsoup4==4.10.0
-Pillow==9.0.1
+Pillow==9.3.0
 django-storages==1.12.3
 boto3==1.20.24
 django-celery-results==2.4.0
