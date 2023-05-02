@@ -81,9 +81,9 @@ class TBResetViewSet(ViewSet):
 
 class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
     def post(self, request):
-        # data will go here to call the task
-
         # get user screening data
         data = request.data
+
+        # call the task to send data to CCI
         send_tbcheck_data_to_cci(data)
         return Response(status=status.HTTP_200_OK)
