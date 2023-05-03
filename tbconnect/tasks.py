@@ -146,10 +146,10 @@ def send_tbcheck_data_to_cci(data):
 
         # Send user data to cci
         headers = {
-            "Authorization": f"Bearer {settings.CCI_AUT_TOKEN}",
+            "Authorization": f"Bearer {settings.CCI_TOKEN}",
             "Content-Type": "application/json",
         }
-        response = requests.post(url=settings.CCI_AUT_URL, headers=headers, data=data)
+        response = requests.post(url=settings.CCI_URL, headers=headers, data=data)
 
         if response.status_code == 200:
             return "CCI data submitted successfully"
