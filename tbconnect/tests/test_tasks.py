@@ -498,7 +498,6 @@ class SendUserDataToCCITests(TestCase):
         create_user_profile(self.msisdn)
         response = send_tbcheck_data_to_cci(data)
 
-        self.assertTrue(response)
         self.assertEqual(response, "CCI data submitted successfully")
 
     @responses.activate
