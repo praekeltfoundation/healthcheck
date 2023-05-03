@@ -6,6 +6,7 @@ from temba_client.v2 import TembaClient
 from healthcheck import utils
 from tbconnect.models import TBCheck, TBTest
 from userprofile.models import HealthCheckUserProfile
+import requests
 
 
 @shared_task
@@ -132,3 +133,35 @@ def perform_etl():
         utils.sync_models_to_bigquery(
             settings.TBCONNECT_BQ_KEY_PATH, settings.TBCONNECT_BQ_DATASET, models
         )
+
+
+@shared_task
+def send_tbcheck_data_to_cci(data):
+    msisdn = data.get("msisdn")
+    profile = get_user_profile(msisdn)
+
+    if profile:
+        # update or append data with profile and gender
+        data.update({"province": profile.province, "gender": profile.gender})
+
+        # Send user data to cci
+        headers = {
+            "Authorization": f"Bearer {settings.CCI_AUT_TOKEN}",
+            "Content-Type": "application/json",
+        }
+        response = requests.post(url=settings.CCI_AUT_URL, headers=headers, data=data)
+
+        if response.status_code == 200:
+            return "CCI data submitted successfully"
+        response.raise_for_status()
+        return "CCI data Submission failed"
+    raise Exception("User profile {} not found".format(msisdn))
+
+
+def get_user_profile(msisdn=None):
+    try:
+        profile = HealthCheckUserProfile.objects.get(msisdn=msisdn)
+        if profile:
+            return profile
+    except HealthCheckUserProfile.DoesNotExist:
+        return None

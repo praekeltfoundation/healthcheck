@@ -5,8 +5,13 @@ from django.test import TestCase, override_settings
 from django.utils import timezone
 
 from tbconnect.models import TBCheck
-from tbconnect.tasks import perform_sync_to_rapidpro
+from tbconnect.tasks import (
+    perform_sync_to_rapidpro,
+    send_tbcheck_data_to_cci,
+    get_user_profile,
+)
 from userprofile.models import HealthCheckUserProfile
+from tbconnect.tests.test_utils import create_user_profile
 
 
 class SyncToRapidproTests(TestCase):
@@ -454,3 +459,64 @@ class SyncToRapidproTests(TestCase):
                 },
             },
         )
+
+
+class SendUserDataToCCITests(TestCase):
+    msisdn = "2781234567"
+
+    def test_get_user_profile_data(self):
+        profile = create_user_profile(self.msisdn)
+        response = get_user_profile(self.msisdn)
+
+        self.assertIsNotNone(response)
+        self.assertEqual(response.msisdn, "2781234567")
+        self.assertEqual(profile.province, response.province)
+
+    def test_get_none_existing_user_profile_data(self):
+        response = get_user_profile(self.msisdn)
+
+        self.assertIsNone(response)
+
+    @responses.activate
+    @override_settings(
+        CCI_AUT_URL="https://cci-data-test.com", CCI_AUT_TOKEN="test12345"
+    )
+    def test_send_data_to_cci(self):
+        data = {
+            "msisdn": self.msisdn,
+            "name": "Tom",
+            "language": "Eng",
+            "tb_risk": "High",
+            "responded": "Yes",
+            "tb_tested": "Yes",
+            "tb_test_results": "Yes",
+            "screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        responses.add(responses.POST, "https://cci-data-test.com", json=data)
+
+        create_user_profile(self.msisdn)
+        response = send_tbcheck_data_to_cci(data)
+
+        self.assertEqual(response, "CCI data submitted successfully")
+
+    @responses.activate
+    @override_settings(
+        CCI_AUT_URL="https://cci-data-test.com", CCI_AUT_TOKEN="test12345"
+    )
+    def test_send_data_error_message_invalid_contact(self):
+        data = {
+            "msisdn": self.msisdn,
+            "name": "Tom",
+            "language": "Eng",
+            "tb_risk": "High",
+            "responded": "Yes",
+            "tb_tested": "Yes",
+            "tb_test_results": "Yes",
+            "screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        responses.add(responses.POST, "https://cci-data-test.com", json=data)
+
+        with self.assertRaises(Exception):
+            send_tbcheck_data_to_cci(data)

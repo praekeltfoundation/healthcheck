@@ -8,6 +8,7 @@ from userprofile.serializers import (
 )
 
 from .models import TBCheck, TBTest
+from phonenumber_field.serializerfields import PhoneNumberField
 
 
 class TBCheckSerializer(BaseEventSerializer):
@@ -39,3 +40,14 @@ class TBTestSerializer(BaseEventSerializer):
         model = TBTest
         fields = "__all__"
         read_only_fields = ("id", "created_by")
+
+
+class TBCheckCciDataSerializer(serializers.Serializer):
+    msisdn = PhoneNumberField(required=True)
+    name = serializers.CharField(required=False, allow_blank=True, allow_null=True)
+    language = serializers.CharField(required=True)
+    tb_risk = serializers.CharField(required=True)
+    responded = serializers.CharField(required=True)
+    tb_tested = serializers.CharField(required=True)
+    tb_test_results = serializers.CharField(required=True)
+    screen_timeStamp = serializers.CharField(required=True)
