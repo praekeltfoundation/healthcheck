@@ -469,7 +469,7 @@ class TbCheckCciDataViewSetTest(APITestCase):
 
     @responses.activate
     @override_settings(
-        CCI_AUT_URL="https://cci-data-test.com", CCI_AUT_TOKEN="test12345"
+        CCI_URL="https://cci-data-test.com", CCI_TOKEN="test12345"
     )
     def test_cci_data_status_code(self):
         data = {

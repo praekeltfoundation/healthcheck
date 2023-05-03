@@ -261,5 +261,5 @@ ALLOW_TB_RESET_MSISDNS = env.list("ALLOW_TB_RESET_MSISDNS", default=[])
 
 SOFT_COMMITMENT_PLUS_LIMIT = env.int("SOFT_COMMITMENT_PLUS_LIMIT", 3000)
 
-CCI_UAT_URL = env.str("CCI_UAT_URL", None)
-CCI_AUT_TOKEN = env.str("CCI_AUT_TOKEN", None)
+CCI_URL = env.str("CCI_URL", None)
+CCI_TOKEN = env.str("CCI_TOKEN", None)

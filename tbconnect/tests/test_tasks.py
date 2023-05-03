@@ -479,7 +479,7 @@ class SendUserDataToCCITests(TestCase):
 
     @responses.activate
     @override_settings(
-        CCI_AUT_URL="https://cci-data-test.com", CCI_AUT_TOKEN="test12345"
+        CCI_URL="https://cci-data-test.com", CCI_TOKEN="test12345"
     )
     def test_send_data_to_cci(self):
         data = {
@@ -502,7 +502,7 @@ class SendUserDataToCCITests(TestCase):
 
     @responses.activate
     @override_settings(
-        CCI_AUT_URL="https://cci-data-test.com", CCI_AUT_TOKEN="test12345"
+        CCI_URL="https://cci-data-test.com", CCI_TOKEN="test12345"
     )
     def test_send_data_error_message_invalid_contact(self):
         data = {
