@@ -519,7 +519,5 @@ class SendUserDataToCCITests(TestCase):
 
         responses.add(responses.POST, "https://cci-data-test.com", json=data)
 
-        create_user_profile("27830987654")
-        response = send_tbcheck_data_to_cci(data)
-
-        self.assertIsNone(response)
+        with self.assertRaises(Exception):
+            send_tbcheck_data_to_cci(data)
