@@ -43,11 +43,11 @@ class TBTestSerializer(BaseEventSerializer):
 
 
 class TBCheckCciDataSerializer(serializers.Serializer):
-    msisdn = PhoneNumberField(required=True)
-    name = serializers.CharField(required=False, allow_blank=True, allow_null=True)
-    language = serializers.CharField(required=True)
-    tb_risk = serializers.CharField(required=True)
-    responded = serializers.CharField(required=True)
-    tb_tested = serializers.CharField(required=True)
-    tb_test_results = serializers.CharField(required=True)
-    screen_timeStamp = serializers.CharField(required=True)
+    CLI = PhoneNumberField(required=True)
+    Name = serializers.CharField(required=False, allow_blank=True, allow_null=True)
+    Language = serializers.CharField(required=True)
+    TB_Risk = serializers.CharField(required=True)
+    Responded = serializers.CharField(required=True)
+    TB_Tested = serializers.CharField(required=True)
+    TB_Test_Results = serializers.CharField(required=True)
+    Screen_timeStamp = serializers.CharField(required=True)

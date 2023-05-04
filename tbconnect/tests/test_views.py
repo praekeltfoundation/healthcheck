@@ -468,17 +468,17 @@ class TbCheckCciDataViewSetTest(APITestCase):
     url = reverse("tbcheckccidata-list")
 
     @responses.activate
-    @override_settings(CCI_URL="https://cci-data-test.com", CCI_TOKEN="test12345")
+    @override_settings(CCI_URL="https://cci-data-test.com")
     def test_cci_data_status_code(self):
         data = {
-            "msisdn": "27821234567",
-            "name": "Tom",
-            "language": "Eng",
-            "tb_risk": "High",
-            "responded": "No",
-            "tb_tested": "Yes",
-            "tb_test_results": "Yes",
-            "screen_timeStamp": "2023-04-25 13:02:17",
+            "CLI": "27821234567",
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "No",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 
         create_user_profile("27821234567")
