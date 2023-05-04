@@ -32,7 +32,7 @@ class LNCheckViewSetTests(APITestCase, BaseEventTestCase):
         response = self.client.post(
             self.url,
             {
-                "msisdn": "27856454612",
+                "CLI": "27856454612",
                 "source": "WhatsApp",
                 "age": LNCheck.Age.AGE_18T39,
                 "cough": True,

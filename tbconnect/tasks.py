@@ -137,21 +137,20 @@ def perform_etl():
 
 @shared_task
 def send_tbcheck_data_to_cci(data):
-    msisdn = data.get("msisdn")
+    msisdn = data.get("CLI")
     profile = get_user_profile(msisdn)
 
     if profile:
         # update or append data with profile and gender
-        data.update({"province": profile.province, "gender": profile.gender})
+        data.update({"Province": profile.province, "Pender": profile.gender})
 
         # Send user data to cci
         headers = {
-            "Authorization": f"Bearer {settings.CCI_TOKEN}",
             "Content-Type": "application/json",
         }
         response = requests.post(url=settings.CCI_URL, headers=headers, data=data)
 
-        if response.status_code == 200:
+        if response.status_code == 200 and b"Received Successfully" == response.content:
             return "CCI data submitted successfully"
         response.raise_for_status()
         return "CCI data Submission failed"

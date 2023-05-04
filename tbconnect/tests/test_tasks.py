@@ -478,38 +478,47 @@ class SendUserDataToCCITests(TestCase):
         self.assertIsNone(response)
 
     @responses.activate
-    @override_settings(CCI_URL="https://cci-data-test.com", CCI_TOKEN="test12345")
+    @override_settings(CCI_URL="https://cci-data-test.com")
     def test_send_data_to_cci(self):
         data = {
-            "msisdn": self.msisdn,
-            "name": "Tom",
-            "language": "Eng",
-            "tb_risk": "High",
-            "responded": "Yes",
-            "tb_tested": "Yes",
-            "tb_test_results": "Yes",
-            "screen_timeStamp": "2023-04-25 13:02:17",
+            "CLI": self.msisdn,
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "Yes",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 
-        responses.add(responses.POST, "https://cci-data-test.com", json=data)
+        responses.add(
+            responses.POST,
+            url="https://cci-data-test.com",
+            body="Received Successfully",
+            status=200,
+        )
 
         create_user_profile(self.msisdn)
         response = send_tbcheck_data_to_cci(data)
 
-        self.assertEqual(response, "CCI data submitted successfully")
+        [resp] = responses.calls
+
+        self.assertEquals(response, "CCI data submitted successfully")
+        self.assertEqual(resp.response.text, "Received Successfully")
+        self.assertEqual(resp.request.url, "https://cci-data-test.com/")
 
     @responses.activate
-    @override_settings(CCI_URL="https://cci-data-test.com", CCI_TOKEN="test12345")
+    @override_settings(CCI_URL="https://cci-data-test.com")
     def test_send_data_error_message_invalid_contact(self):
         data = {
-            "msisdn": self.msisdn,
-            "name": "Tom",
-            "language": "Eng",
-            "tb_risk": "High",
-            "responded": "Yes",
-            "tb_tested": "Yes",
-            "tb_test_results": "Yes",
-            "screen_timeStamp": "2023-04-25 13:02:17",
+            "CLI": self.msisdn,
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "Yes",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 
         responses.add(responses.POST, "https://cci-data-test.com", json=data)
