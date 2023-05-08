@@ -142,7 +142,7 @@ def send_tbcheck_data_to_cci(data):
 
     if profile:
         # update or append data with profile and gender
-        data.update({"Province": profile.province, "Pender": profile.gender})
+        data.update({"Province": profile.province, "Gender": profile.gender})
 
         # Send user data to cci
         headers = {
