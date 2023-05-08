@@ -150,7 +150,10 @@ def send_tbcheck_data_to_cci(data):
         }
         response = requests.post(url=settings.CCI_URL, headers=headers, json=data)
 
-        if response.status_code == 200 and b"Received Successfully" == response.content:
+        if (
+            response.status_code == 200
+            and b'"Received Successfully"' == response.content
+        ):
             return "CCI data submitted successfully"
         response.raise_for_status()
         return "CCI data Submission failed"
