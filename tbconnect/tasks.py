@@ -156,7 +156,7 @@ def send_tbcheck_data_to_cci(data):
         ):
             return "CCI data submitted successfully"
         response.raise_for_status()
-        return "CCI data Submission failed"
+        return "CCI data Submission failed {}".format(response.content)
     raise Exception("User profile {} not found".format(msisdn))
 
 
