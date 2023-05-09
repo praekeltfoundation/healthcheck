@@ -96,3 +96,10 @@ def extract_reduced_accuracy_lat_long(location, resolution=1):
         return (lat, lng)
     else:
         return (None, None)
+
+
+def get_contact_msisdn(contact):
+
+    for urn in contact:
+        if "whatsapp" in urn:
+            return "+" + urn.split(":")[1]

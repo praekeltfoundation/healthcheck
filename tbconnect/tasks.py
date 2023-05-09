@@ -137,7 +137,9 @@ def perform_etl():
 
 @shared_task
 def send_tbcheck_data_to_cci(data):
-    msisdn = data.get("CLI")
+    urns = data.get("CLI")
+    msisdn = utils.get_contact_msisdn(urns)
+
     profile = get_user_profile(msisdn)
 
     if profile:

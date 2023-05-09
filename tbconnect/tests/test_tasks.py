@@ -12,6 +12,7 @@ from tbconnect.tasks import (
 )
 from userprofile.models import HealthCheckUserProfile
 from tbconnect.tests.test_utils import create_user_profile
+from healthcheck import utils
 
 
 class SyncToRapidproTests(TestCase):
@@ -462,14 +463,15 @@ class SyncToRapidproTests(TestCase):
 
 
 class SendUserDataToCCITests(TestCase):
-    msisdn = "2781234567"
+    msisdn = ["whatsapp:2781234567", "tel:+2781234567"]
+    contact = utils.get_contact_msisdn(msisdn)
 
     def test_get_user_profile_data(self):
-        profile = create_user_profile(self.msisdn)
-        response = get_user_profile(self.msisdn)
+        profile = create_user_profile(self.contact)
+        response = get_user_profile(self.contact)
 
         self.assertIsNotNone(response)
-        self.assertEqual(response.msisdn, "2781234567")
+        self.assertEqual(response.msisdn, "+2781234567")
         self.assertEqual(profile.province, response.province)
 
     def test_get_none_existing_user_profile_data(self):
@@ -498,7 +500,7 @@ class SendUserDataToCCITests(TestCase):
             status=200,
         )
 
-        create_user_profile(self.msisdn)
+        create_user_profile(self.contact)
         response = send_tbcheck_data_to_cci(data)
 
         [resp] = responses.calls
@@ -528,7 +530,7 @@ class SendUserDataToCCITests(TestCase):
             status=200,
         )
 
-        create_user_profile(self.msisdn)
+        create_user_profile(self.contact)
         response = send_tbcheck_data_to_cci(data)
 
         [resp] = responses.calls

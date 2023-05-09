@@ -146,3 +146,17 @@ class UtilsTests(TestCase):
             models["tests"]["fields"],
             [test2.get_processed_data()],
         )
+
+    def test_get_contact_msisdn(self):
+        contact = ["whatsapp:27781234567", "tel:+227781234567"]
+
+        msisdn = utils.get_contact_msisdn(contact)
+
+        self.assertEqual(msisdn, "+27781234567")
+
+    def test_get_contact_msisdn_return_none_without_whatsapp_no(self):
+        contact = ["tel:+227781234567"]
+
+        msisdn = utils.get_contact_msisdn(contact)
+
+        self.assertIsNone(msisdn)
