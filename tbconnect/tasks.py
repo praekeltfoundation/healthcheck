@@ -140,26 +140,28 @@ def send_tbcheck_data_to_cci(data):
     urns = data.get("CLI")
     msisdn = utils.get_contact_msisdn(urns)
 
-    profile = get_user_profile(msisdn)
+    if msisdn:
+        profile = get_user_profile(msisdn)
 
-    if profile:
-        # update or append data with profile and gender
-        data.update({"Province": profile.province, "Gender": profile.gender})
+        if profile:
+            # update or append data with profile and gender
+            data.update({"Province": profile.province, "Gender": profile.gender})
 
-        # Send user data to cci
-        headers = {
-            "Content-Type": "application/json",
-        }
-        response = requests.post(url=settings.CCI_URL, headers=headers, json=data)
+            # Send user data to cci
+            headers = {
+                "Content-Type": "application/json",
+            }
+            response = requests.post(url=settings.CCI_URL, headers=headers, json=data)
 
-        if (
-            response.status_code == 200
-            and b'"Received Sucessfully"' == response.content
-        ):
-            return "CCI data submitted successfully"
-        response.raise_for_status()
-        raise Exception("CCI data Submission failed {}".format(response.content))
-    raise Exception("User profile {} not found".format(msisdn))
+            if (
+                response.status_code == 200
+                and b'"Received Sucessfully"' == response.content
+            ):
+                return "CCI data submitted successfully"
+            response.raise_for_status()
+            raise Exception("CCI data Submission failed {}".format(response.content))
+        raise Exception("User profile {} not found".format(msisdn))
+    raise Exception("User contact {} format does not match".format(msisdn))
 
 
 def get_user_profile(msisdn=None):

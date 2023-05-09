@@ -551,3 +551,30 @@ class SendUserDataToCCITests(TestCase):
 
         with self.assertRaises(Exception):
             send_tbcheck_data_to_cci(data)
+
+    @responses.activate
+    @override_settings(CCI_URL="https://cci-data-test.com")
+    def test_invalid_cli_input(self):
+        msisdn = ["tel:+2781234567"]
+        data = {
+            "CLI": self.msisdn,
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "Yes",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        responses.add(
+            responses.POST,
+            url="https://cci-data-test.com",
+            body=b'"Received Successfully"',
+            status=200,
+        )
+        contact = utils.get_contact_msisdn(msisdn)
+        # create_user_profile(contact)
+        self.assertIsNone(contact)
+        with self.assertRaises(Exception):
+            send_tbcheck_data_to_cci(data)
