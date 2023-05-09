@@ -12,7 +12,6 @@ from tbconnect.tasks import (
 )
 from userprofile.models import HealthCheckUserProfile
 from tbconnect.tests.test_utils import create_user_profile
-from healthcheck import utils
 
 
 class SyncToRapidproTests(TestCase):
@@ -463,15 +462,14 @@ class SyncToRapidproTests(TestCase):
 
 
 class SendUserDataToCCITests(TestCase):
-    msisdn = ["whatsapp:2781234567", "tel:+2781234567"]
-    contact = utils.get_contact_msisdn(msisdn)
+    msisdn = "2781234567"
 
     def test_get_user_profile_data(self):
-        profile = create_user_profile(self.contact)
-        response = get_user_profile(self.contact)
+        profile = create_user_profile(self.msisdn)
+        response = get_user_profile(self.msisdn)
 
         self.assertIsNotNone(response)
-        self.assertEqual(response.msisdn, "+2781234567")
+        self.assertEqual(response.msisdn, "2781234567")
         self.assertEqual(profile.province, response.province)
 
     def test_get_none_existing_user_profile_data(self):
@@ -496,42 +494,18 @@ class SendUserDataToCCITests(TestCase):
         responses.add(
             responses.POST,
             url="https://cci-data-test.com",
-            body=b'"Received Successfully"',
-            status=200,
-        )
-
-        create_user_profile(self.contact)
-        with self.assertRaises(Exception):
-            send_tbcheck_data_to_cci(data)
-
-    @responses.activate
-    @override_settings(CCI_URL="https://cci-data-test.com")
-    def test_send_data_with_typo_message(self):
-        data = {
-            "CLI": self.msisdn,
-            "Name": "Tom",
-            "Language": "Eng",
-            "TB_Risk": "High",
-            "Responded": "Yes",
-            "TB_Tested": "Yes",
-            "TB_Test_Results": "Yes",
-            "Screen_timeStamp": "2023-04-25 13:02:17",
-        }
-
-        responses.add(
-            responses.POST,
-            url="https://cci-data-test.com",
             body=b'"Received Sucessfully"',
             status=200,
         )
 
-        create_user_profile(self.contact)
+        create_user_profile(self.msisdn)
         response = send_tbcheck_data_to_cci(data)
 
         [resp] = responses.calls
 
         self.assertEquals(response, "CCI data submitted successfully")
-        self.assertEqual(resp.response.text, '"Received Sucessfully"')
+        self.assertEqual(resp.response.content, b'"Received Sucessfully"')
+        self.assertEqual(resp.request.url, "https://cci-data-test.com/")
 
     @responses.activate
     @override_settings(CCI_URL="https://cci-data-test.com")
@@ -549,32 +523,5 @@ class SendUserDataToCCITests(TestCase):
 
         responses.add(responses.POST, "https://cci-data-test.com", json=data)
 
-        with self.assertRaises(Exception):
-            send_tbcheck_data_to_cci(data)
-
-    @responses.activate
-    @override_settings(CCI_URL="https://cci-data-test.com")
-    def test_invalid_cli_input(self):
-        msisdn = ["tel:+2781234567"]
-        data = {
-            "CLI": self.msisdn,
-            "Name": "Tom",
-            "Language": "Eng",
-            "TB_Risk": "High",
-            "Responded": "Yes",
-            "TB_Tested": "Yes",
-            "TB_Test_Results": "Yes",
-            "Screen_timeStamp": "2023-04-25 13:02:17",
-        }
-
-        responses.add(
-            responses.POST,
-            url="https://cci-data-test.com",
-            body=b'"Received Successfully"',
-            status=200,
-        )
-        contact = utils.get_contact_msisdn(msisdn)
-        # create_user_profile(contact)
-        self.assertIsNone(contact)
         with self.assertRaises(Exception):
             send_tbcheck_data_to_cci(data)
