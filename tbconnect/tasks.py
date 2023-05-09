@@ -138,6 +138,7 @@ def perform_etl():
 @shared_task
 def send_tbcheck_data_to_cci(data):
     msisdn = data.get("CLI")
+
     profile = get_user_profile(msisdn)
 
     if profile:
@@ -152,11 +153,11 @@ def send_tbcheck_data_to_cci(data):
 
         if (
             response.status_code == 200
-            and b'"Received Successfully"' == response.content
+            and b'"Received Sucessfully"' == response.content
         ):
             return "CCI data submitted successfully"
         response.raise_for_status()
-        return "CCI data Submission failed"
+        raise Exception("CCI data Submission failed {}".format(response.content))
     raise Exception("User profile {} not found".format(msisdn))
 
 
