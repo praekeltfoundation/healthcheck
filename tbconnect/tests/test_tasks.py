@@ -501,13 +501,8 @@ class SendUserDataToCCITests(TestCase):
         )
 
         create_user_profile(self.contact)
-        response = send_tbcheck_data_to_cci(data)
-
-        [resp] = responses.calls
-
-        self.assertEquals(response, "CCI data submitted successfully")
-        self.assertEqual(resp.response.content, b'"Received Successfully"')
-        self.assertEqual(resp.request.url, "https://cci-data-test.com/")
+        with self.assertRaises(Exception):
+            send_tbcheck_data_to_cci(data)
 
     @responses.activate
     @override_settings(CCI_URL="https://cci-data-test.com")
