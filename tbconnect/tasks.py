@@ -153,7 +153,7 @@ def send_tbcheck_data_to_cci(data):
 
         if (
             response.status_code == 200
-            and b'"Received Sucessfully"' == response.content
+            and b'"Received Successfully"' == response.content
         ):
             return "CCI data submitted successfully"
         response.raise_for_status()
