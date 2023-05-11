@@ -494,7 +494,7 @@ class SendUserDataToCCITests(TestCase):
         responses.add(
             responses.POST,
             url="https://cci-data-test.com",
-            body=b'"Received Sucessfully"',
+            body=b'"Received Successfully"',
             status=200,
         )
 
@@ -504,7 +504,7 @@ class SendUserDataToCCITests(TestCase):
         [resp] = responses.calls
 
         self.assertEquals(response, "CCI data submitted successfully")
-        self.assertEqual(resp.response.content, b'"Received Sucessfully"')
+        self.assertEqual(resp.response.content, b'"Received Successfully"')
         self.assertEqual(resp.request.url, "https://cci-data-test.com/")
 
     @responses.activate
