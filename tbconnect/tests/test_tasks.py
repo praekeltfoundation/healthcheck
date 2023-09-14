@@ -488,6 +488,9 @@ class SendUserDataToCCITests(TestCase):
             "Responded": "Yes",
             "TB_Tested": "Yes",
             "TB_Test_Results": "Yes",
+            "TB_Test_Result_Desc": "Positive",
+            "Opt_In": "True",
+            "Drop_Off": "True",
             "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 
@@ -528,7 +531,7 @@ class SendUserDataToCCITests(TestCase):
 
     @responses.activate
     @override_settings(CCI_URL="https://cci-data-test.com")
-    def test_send_data_to_cci(self):
+    def test_send_data_to_cci_with_empty_values(self):
         data = {
             "CLI": self.msisdn,
             "Name": "Tom",
@@ -537,9 +540,9 @@ class SendUserDataToCCITests(TestCase):
             "Responded": "Yes",
             "TB_Tested": "Yes",
             "TB_Test_Results": "Yes",
-            "Test_Result": "Positive",
-            "Opted_In": "Yes",
-            "Drop_Off": "No",
+            "TB_Test_Result_Desc": "",
+            "Opt_In": "",
+            "Drop_Off": "",
             "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 

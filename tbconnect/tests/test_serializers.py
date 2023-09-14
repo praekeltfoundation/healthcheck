@@ -121,7 +121,9 @@ class TBCheckCciDataSerializerTest(TestCase):
         )
 
         self.assertFalse(serializer.is_valid())
-        self.assertEquals(serializer.errors, {"TB_Test_Result_Desc": ["This field is required."]})
+        self.assertEquals(
+            serializer.errors, {"TB_Test_Result_Desc": ["This field is required."]}
+        )
 
     @responses.activate
     def test_optin_dropoff_results_validation(self):
