@@ -14,9 +14,6 @@ app.config_from_object("django.conf:settings", namespace="CELERY")
 
 app.autodiscover_tasks()
 
-# this will ensure turn.io rate limiter does not return 429
-app.control.rate_limit("contacts.tasks.send_contact_update", "60/m")
-
 # only connect to sentry if dsn is supplied
 if settings.SENTRY_DSN:
     sentry_sdk.init(dsn=settings.SENTRY_DSN, integrations=[CeleryIntegration()])
