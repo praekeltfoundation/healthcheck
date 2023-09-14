@@ -478,6 +478,9 @@ class TbCheckCciDataViewSetTest(APITestCase):
             "Responded": "No",
             "TB_Tested": "Yes",
             "TB_Test_Results": "Yes",
+            "Opt_In": "Yes",
+            "Drop_Off": "No",
+            "TB_Test_Result_Desc": "Pending",
             "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 

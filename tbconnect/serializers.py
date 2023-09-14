@@ -51,3 +51,8 @@ class TBCheckCciDataSerializer(serializers.Serializer):
     TB_Tested = serializers.CharField(required=True)
     TB_Test_Results = serializers.CharField(required=True)
     Screen_timeStamp = serializers.CharField(required=True)
+    Opt_In = serializers.CharField(required=True, allow_blank=True, allow_null=True)
+    Drop_Off = serializers.CharField(required=True, allow_blank=True, allow_null=True)
+    TB_Test_Result_Desc = serializers.CharField(
+        required=True, allow_blank=True, allow_null=True
+    )

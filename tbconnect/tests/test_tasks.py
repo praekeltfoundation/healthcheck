@@ -488,6 +488,9 @@ class SendUserDataToCCITests(TestCase):
             "Responded": "Yes",
             "TB_Tested": "Yes",
             "TB_Test_Results": "Yes",
+            "TB_Test_Result_Desc": "Positive",
+            "Opt_In": "True",
+            "Drop_Off": "True",
             "Screen_timeStamp": "2023-04-25 13:02:17",
         }
 
@@ -525,3 +528,35 @@ class SendUserDataToCCITests(TestCase):
 
         with self.assertRaises(Exception):
             send_tbcheck_data_to_cci(data)
+
+    @responses.activate
+    @override_settings(CCI_URL="https://cci-data-test.com")
+    def test_send_data_to_cci_with_empty_values(self):
+        data = {
+            "CLI": self.msisdn,
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "Yes",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "TB_Test_Result_Desc": "",
+            "Opt_In": "",
+            "Drop_Off": "",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        responses.add(
+            responses.POST,
+            url="https://cci-data-test.com",
+            body=b'"Received Successfully"',
+            status=200,
+        )
+
+        create_user_profile(self.msisdn)
+        response = send_tbcheck_data_to_cci(data)
+
+        [resp] = responses.calls
+
+        self.assertEquals(response, "CCI data submitted successfully")
+        self.assertEqual(resp.response.content, b'"Received Successfully"')
