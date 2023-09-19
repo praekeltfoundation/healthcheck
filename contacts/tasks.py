@@ -20,6 +20,8 @@ logger = get_task_logger(__name__)
     soft_time_limit=15,
     time_limit=45,
     acks_late=True,
+    # this will ensure turn.io rate limiter does not return 429
+    rate_limit="60/m",
 )
 def send_contact_update(phone_number, confirmed_contact, case_id):
     # request should not take longer than 15 seconds total
