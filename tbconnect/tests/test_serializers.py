@@ -16,7 +16,7 @@ class TBCheckCciDataSerializerTest(TestCase):
                 "TB_Test_Results": "Yes",
                 "Opt_In": "True",
                 "Drop_Off": "Yes",
-                "TB_Test_Results_Desc": "Positive",
+                "TB_Test_Result_Desc": "Positive",
                 "Screen_timeStamp": "2023-04-25 13:02:17",
             }
         )
@@ -36,7 +36,7 @@ class TBCheckCciDataSerializerTest(TestCase):
                 "TB_Test_Results": "Yes",
                 "Opt_In": "False",
                 "Drop_Off": "No",
-                "TB_Test_Results_Desc": "Pending",
+                "TB_Test_Result_Desc": "Pending",
                 "Screen_timeStamp": "2023-04-25 13:02:17",
             }
         )
@@ -56,7 +56,7 @@ class TBCheckCciDataSerializerTest(TestCase):
                 "TB_Test_Results": "Yes",
                 "Opt_In": "True",
                 "Drop_Off": "Yes",
-                "TB_Test_Results_Desc": "Positive",
+                "TB_Test_Result_Desc": "Positive",
                 "Screen_timeStamp": "2023-04-25 13:02:17",
             }
         )
@@ -75,7 +75,7 @@ class TBCheckCciDataSerializerTest(TestCase):
                 "TB_Tested": "Yes",
                 "TB_Test_Results": "Yes",
                 "Drop_Off": "Yes",
-                "TB_Test_Results_Desc": "Positive",
+                "TB_Test_Result_Desc": "Positive",
                 "Screen_timeStamp": "2023-09-04 13:02:17",
             }
         )
@@ -95,7 +95,7 @@ class TBCheckCciDataSerializerTest(TestCase):
                 "TB_Tested": "Yes",
                 "TB_Test_Results": "Yes",
                 "Opt_In": "True",
-                "TB_Test_Results_Desc": "Positive",
+                "TB_Test_Result_Desc": "Positive",
                 "Screen_timeStamp": "2023-09-04 13:02:17",
             }
         )
@@ -122,7 +122,7 @@ class TBCheckCciDataSerializerTest(TestCase):
 
         self.assertFalse(serializer.is_valid())
         self.assertEquals(
-            serializer.errors, {"TB_Test_Results_Desc": ["This field is required."]}
+            serializer.errors, {"TB_Test_Result_Desc": ["This field is required."]}
         )
 
     @responses.activate
@@ -138,7 +138,7 @@ class TBCheckCciDataSerializerTest(TestCase):
                 "TB_Test_Results": "Yes",
                 "Opt_In": "True",
                 "Drop_Off": "Yes",
-                "TB_Test_Results_Desc": "Positive",
+                "TB_Test_Result_Desc": "Positive",
                 "Screen_timeStamp": "2023-09-05 13:02:17",
             }
         )
