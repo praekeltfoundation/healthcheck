@@ -144,3 +144,43 @@ class TBCheckCciDataSerializerTest(TestCase):
         )
 
         self.assertTrue(serializer.is_valid())
+
+    @responses.activate
+    def test_optin_dropoff_results_with_empty_values(self):
+        serializer = TBCheckCciDataSerializer(
+            data={
+                "CLI": "27821234567",
+                "Name": "",
+                "Language": "Eng",
+                "TB_Risk": "High",
+                "Responded": "Yes",
+                "TB_Tested": "Yes",
+                "TB_Test_Results": "Yes",
+                "Opt_In": "",
+                "Drop_Off": "",
+                "TB_Test_Results_Desc": "",
+                "Screen_timeStamp": "2023-09-05 13:02:17",
+            }
+        )
+
+        self.assertTrue(serializer.is_valid())
+
+    @responses.activate
+    def test_tb_rusults_desc_with_empty_values(self):
+        serializer = TBCheckCciDataSerializer(
+            data={
+                "CLI": "27821234567",
+                "Name": "test",
+                "Language": "Eng",
+                "TB_Risk": "High",
+                "Responded": "Yes",
+                "TB_Tested": "Yes",
+                "TB_Test_Results": "Yes",
+                "Opt_In": "False",
+                "Drop_Off": "False",
+                "TB_Test_Results_Desc": "",
+                "Screen_timeStamp": "2023-09-05 13:02:17",
+            }
+        )
+
+        self.assertTrue(serializer.is_valid())
