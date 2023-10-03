@@ -51,7 +51,7 @@ six==1.15.0
 sqlparse==0.4.4
 toml==0.10.1
 typed-ast==1.4.1
-urllib3==1.26.11
+urllib3==1.26.17
 vine==5.0.0
 watchdog==0.10.3
 zipp==3.1.0
