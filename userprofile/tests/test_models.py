@@ -237,7 +237,7 @@ class HealthCheckUserProfileTests(TestCase):
         arms = profile._get_tb_study_arms()
         self.assertEqual(len(arms), 1)
 
-    @override_settings(SOFT_COMMITMENT_PLUS_LIMIT=10, )
+    @override_settings(SOFT_COMMITMENT_PLUS_LIMIT=10,)
     def test_get_tb_study_arms_include_soft_commit_plus(self):
         """
         Include soft commitment plus if setting is not 0
