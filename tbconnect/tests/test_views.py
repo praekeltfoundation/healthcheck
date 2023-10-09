@@ -294,7 +294,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "risk": TBCheck.RISK_HIGH,
                 "location": "+40.20361+40.20361",
                 "research_consent": True,
-                "activation": "tb_study_a",
+                "activation": "tb_study_b",
             },
             format="json",
         )
@@ -327,7 +327,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "risk": TBCheck.RISK_LOW,
                 "location": "+40.20361+40.20361",
                 "research_consent": True,
-                "activation": "tb_study_a",
+                "activation": "tb_study_c",
             },
             format="json",
         )

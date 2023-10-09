@@ -147,15 +147,15 @@ class HealthCheckUserProfile(
     ExportModelOperationsMixin("healthcheck-user-profile"), models.Model
 ):
     ARM_CONTROL = "control"
-    ARM_HEALTH_CONSEQUENCE = "health_consequence"
-    ARM_PLANNING_PROMPT = "planning_prompt"
-    ARM_SOFT_COMMITMENT = "soft_commitment"
+    # ARM_HEALTH_CONSEQUENCE = "health_consequence"
+    # ARM_PLANNING_PROMPT = "planning_prompt"
+    # ARM_SOFT_COMMITMENT = "soft_commitment"
     ARM_SOFT_COMMITMENT_PLUS = "soft_commitment_plus"
     GROUP_ARM_CHOICES = (
         (ARM_CONTROL, "Control"),
-        (ARM_HEALTH_CONSEQUENCE, "Health Consequence"),
-        (ARM_PLANNING_PROMPT, "Planning Prompt"),
-        (ARM_SOFT_COMMITMENT, "Soft Commitment"),
+        # (ARM_HEALTH_CONSEQUENCE, "Health Consequence"),
+        # (ARM_PLANNING_PROMPT, "Planning Prompt"),
+        # (ARM_SOFT_COMMITMENT, "Soft Commitment"),
         (ARM_SOFT_COMMITMENT_PLUS, "Soft Commitment Plus"),
     )
 
@@ -259,22 +259,24 @@ class HealthCheckUserProfile(
 
     def _get_tb_study_arms(self):
         # we can update the setting to 0 to disable this expensive check
-        if settings.SOFT_COMMITMENT_PLUS_LIMIT > 0:
-            soft_commitment_plus_count = HealthCheckUserProfile.objects.filter(
-                activation="tb_study_a",
-                research_consent=True,
-                tbconnect_group_arm="soft_commitment_plus",
-            ).count()
+        if self.activation == "tb_study_c":
+            if settings.SOFT_COMMITMENT_PLUS_LIMIT > 0:
+                soft_commitment_plus_count = HealthCheckUserProfile.objects.filter(
+                    activation="tb_study_c",
+                    research_consent=True,
+                    tbconnect_group_arm="soft_commitment_plus",
+                ).count()
 
-            if soft_commitment_plus_count >= settings.SOFT_COMMITMENT_PLUS_LIMIT:
-                return self.GROUP_ARM_CHOICES[:4]
-        elif settings.SOFT_COMMITMENT_PLUS_LIMIT == 0:
-            return self.GROUP_ARM_CHOICES[:4]
+                if soft_commitment_plus_count >= settings.SOFT_COMMITMENT_PLUS_LIMIT:
+                    return self.GROUP_ARM_CHOICES[:1]
+            elif settings.SOFT_COMMITMENT_PLUS_LIMIT == 0:
+                return self.GROUP_ARM_CHOICES[:1]
         return self.GROUP_ARM_CHOICES
 
     def update_tbconnect_group_arm(self):
         if (
-            self.activation == "tb_study_a"
+            self.activation == "tb_study_b"
+            or self.activation == "tb_study_c"
             and not self.tbconnect_group_arm
             and self.research_consent
         ):

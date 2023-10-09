@@ -135,7 +135,7 @@ class HealthCheckUserProfileTests(TestCase):
             province="ZA-WC",
             city="JHB",
             research_consent=True,
-            activation="tb_study_a",
+            activation="tb_study_b",
         )
         profile.update_tbconnect_group_arm()
 
@@ -197,10 +197,10 @@ class HealthCheckUserProfileTests(TestCase):
             province="ZA-WC",
             city="JHB",
             research_consent=True,
-            activation="tb_study_a",
+            activation="tb_study_c",
         )
         arms = profile._get_tb_study_arms()
-        self.assertEqual(len(arms), 4)
+        self.assertEqual(len(arms), 1)
 
     def test_get_tb_study_arms_include(self):
         """
@@ -211,10 +211,10 @@ class HealthCheckUserProfileTests(TestCase):
             province="ZA-WC",
             city="JHB",
             research_consent=True,
-            activation="tb_study_a",
+            activation="tb_study_c",
         )
         arms = profile._get_tb_study_arms()
-        self.assertEqual(len(arms), 5)
+        self.assertEqual(len(arms), 2)
 
     def test_get_tb_study_arms_exclude(self):
         """
@@ -224,7 +224,7 @@ class HealthCheckUserProfileTests(TestCase):
             HealthCheckUserProfile.objects.create(
                 msisdn=f"+2782000200{i}",
                 research_consent=True,
-                activation="tb_study_a",
+                activation="tb_study_c",
                 tbconnect_group_arm="soft_commitment_plus",
             )
         profile = HealthCheckUserProfile(
@@ -232,7 +232,22 @@ class HealthCheckUserProfileTests(TestCase):
             province="ZA-WC",
             city="JHB",
             research_consent=True,
-            activation="tb_study_a",
+            activation="tb_study_c",
         )
         arms = profile._get_tb_study_arms()
-        self.assertEqual(len(arms), 4)
+        self.assertEqual(len(arms), 1)
+
+    @override_settings(SOFT_COMMITMENT_PLUS_LIMIT=10,)
+    def test_get_tb_study_arms_include_soft_commit_plus(self):
+        """
+        Include soft commitment plus if setting is not 0
+        """
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_b",
+        )
+        arms = profile._get_tb_study_arms()
+        self.assertEqual(len(arms), 2)
