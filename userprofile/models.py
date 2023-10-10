@@ -158,7 +158,13 @@ class HealthCheckUserProfile(
     )
     first_name = models.CharField(max_length=255, blank=True, null=True, default=None)
     last_name = models.CharField(max_length=255, blank=True, null=True, default=None)
-    province = models.CharField(max_length=6, choices=Covid19Triage.PROVINCE_CHOICES, blank=True, null=True, default="")
+    province = models.CharField(
+        max_length=6,
+        choices=Covid19Triage.PROVINCE_CHOICES,
+        blank=True,
+        null=True,
+        default="",
+    )
     city = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=Covid19Triage.AGE_CHOICES)
     date_of_birth = models.DateField(blank=True, null=True, default=None)

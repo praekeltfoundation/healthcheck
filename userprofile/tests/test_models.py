@@ -261,7 +261,7 @@ class HealthCheckUserProfileTests(TestCase):
             province=None,
             city="JHB",
             research_consent=True,
-            activation="tb_study_c"
+            activation="tb_study_c",
         )
 
         self.assertIsNotNone(profile)
@@ -275,7 +275,7 @@ class HealthCheckUserProfileTests(TestCase):
             province="",
             city="JHB",
             research_consent=True,
-            activation="tb_study_c"
+            activation="tb_study_c",
         )
 
         self.assertIsNotNone(profile)
