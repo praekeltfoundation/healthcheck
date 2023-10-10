@@ -108,9 +108,8 @@ class TBCheckTests(TestCase):
                 "exposure": TBCheck.EXPOSURE_NOT_SURE,
                 "risk": TBCheck.RISK_HIGH,
                 "language": "eng",
-                "province": ""
+                "province": "",
             }
         )
 
         self.assertIsNotNone(check)
-
