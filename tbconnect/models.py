@@ -95,7 +95,7 @@ class TBCheck(ExportModelOperationsMixin("tb-check"), models.Model):
         max_length=255, validators=[za_phone_number], db_index=True
     )
     source = models.CharField(max_length=255)
-    province = models.CharField(max_length=6, choices=PROVINCE_CHOICES)
+    province = models.CharField(max_length=6, choices=PROVINCE_CHOICES, blank=True, null=True, default="")
     city = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=AGE_CHOICES)
     gender = models.CharField(max_length=7, choices=GENDER_CHOICES)
