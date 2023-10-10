@@ -147,15 +147,9 @@ class HealthCheckUserProfile(
     ExportModelOperationsMixin("healthcheck-user-profile"), models.Model
 ):
     ARM_CONTROL = "control"
-    # ARM_HEALTH_CONSEQUENCE = "health_consequence"
-    # ARM_PLANNING_PROMPT = "planning_prompt"
-    # ARM_SOFT_COMMITMENT = "soft_commitment"
     ARM_SOFT_COMMITMENT_PLUS = "soft_commitment_plus"
     GROUP_ARM_CHOICES = (
         (ARM_CONTROL, "Control"),
-        # (ARM_HEALTH_CONSEQUENCE, "Health Consequence"),
-        # (ARM_PLANNING_PROMPT, "Planning Prompt"),
-        # (ARM_SOFT_COMMITMENT, "Soft Commitment"),
         (ARM_SOFT_COMMITMENT_PLUS, "Soft Commitment Plus"),
     )
 
@@ -164,7 +158,13 @@ class HealthCheckUserProfile(
     )
     first_name = models.CharField(max_length=255, blank=True, null=True, default=None)
     last_name = models.CharField(max_length=255, blank=True, null=True, default=None)
-    province = models.CharField(max_length=6, choices=Covid19Triage.PROVINCE_CHOICES)
+    province = models.CharField(
+        max_length=6,
+        choices=Covid19Triage.PROVINCE_CHOICES,
+        blank=True,
+        null=True,
+        default="",
+    )
     city = models.CharField(max_length=255)
     age = models.CharField(max_length=5, choices=Covid19Triage.AGE_CHOICES)
     date_of_birth = models.DateField(blank=True, null=True, default=None)

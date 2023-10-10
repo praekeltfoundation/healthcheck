@@ -251,3 +251,31 @@ class HealthCheckUserProfileTests(TestCase):
         )
         arms = profile._get_tb_study_arms()
         self.assertEqual(len(arms), 2)
+
+    def test_allow_null_province(self):
+        """
+        Exclude soft commitment plus if count is more than setting
+        """
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province=None,
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_c",
+        )
+
+        self.assertIsNotNone(profile)
+
+    def test_allow_blank_province(self):
+        """
+        Exclude soft commitment plus if count is more than setting
+        """
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="",
+            city="JHB",
+            research_consent=True,
+            activation="tb_study_c",
+        )
+
+        self.assertIsNotNone(profile)
