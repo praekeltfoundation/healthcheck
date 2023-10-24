@@ -104,7 +104,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
             {"non_field_errors": ["location and city_location are both None"]},
         )
 
-    def test_skip_location_validation(self):
+    def test_skip_location_validation_for_ussd_users(self):
         """
         Should create a new TBCheck object in the database
         """
@@ -127,6 +127,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "exposure": "yes",
                 "tracing": True,
                 "risk": TBCheck.RISK_LOW,
+                "activation": "tb_study_b",
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -334,6 +335,34 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
         profile = HealthCheckUserProfile.objects.get(msisdn="+27856454612")
 
         self.assertIsNone(profile.tbconnect_group_arm)
+
+    def test_skip_location_validation_for_wa_users(self):
+        """
+        Should create a new TBCheck object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "Whatsapp",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "activation": "tb_study_c",
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
