@@ -386,7 +386,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "weight": True,
                 "exposure": "yes",
                 "tracing": True,
-                "risk": TBCheck.RISK_LOW
+                "risk": TBCheck.RISK_LOW,
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -414,7 +414,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "exposure": "yes",
                 "tracing": True,
                 "risk": TBCheck.RISK_LOW,
-                "activation": "taxi_activation"
+                "activation": "taxi_activation",
             },
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
