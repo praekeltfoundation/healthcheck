@@ -25,9 +25,15 @@ class TBCheckSerializer(BaseEventSerializer):
 
         activation = data.get("activation")
 
+        if data.get("source") == "USSD":
+            return data
+
         if activation:
-            if activation.startswith("tb_study"):
-                return data
+            if not activation.startswith("tb_study"):
+                if not data.get("location") and not data.get("city_location"):
+                    raise serializers.ValidationError(
+                        "location and city_location are both None"
+                    )
         else:
             if not data.get("location") and not data.get("city_location"):
                 raise serializers.ValidationError(
