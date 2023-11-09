@@ -274,12 +274,13 @@ class HealthCheckUserProfile(
         return self.GROUP_ARM_CHOICES
 
     def update_tbconnect_group_arm(self):
-        if (
-            self.activation == "tb_study_b"
-            or self.activation == "tb_study_c"
-            and not self.tbconnect_group_arm
-            and self.research_consent
-        ):
+        if not self.research_consent:
+            return
+
+        if self.tbconnect_group_arm:
+            return
+
+        if self.activation in ("tb_study_b", "tb_study_c"):
             arms = self._get_tb_study_arms()
             self.tbconnect_group_arm = random.choice(arms)[0]
             self.tbconnect_group_arm_timestamp = datetime.now()
