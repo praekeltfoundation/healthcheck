@@ -127,6 +127,18 @@ def perform_etl():
                 "updated_at": "TIMESTAMP",
             },
         },
+        "profile": {
+            "model": HealthCheckUserProfile,
+            "field": "updated_at",
+            "fields": {
+                "deduplication_id": "STRING",
+                "msisdn": "STRING",
+                "originating_msisdn": "STRING",
+                "tbconnect_group_arm": "STRING",
+                "tbconnect_group_arm_timestamp": "TIMESTAMP",
+                "updated_at": "TIMESTAMP",
+            },
+        },
     }
 
     with r.lock("perform_etl_tb_connect", 1800):
