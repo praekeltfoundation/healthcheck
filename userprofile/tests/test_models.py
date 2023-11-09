@@ -174,13 +174,31 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertIsNone(profile.tbconnect_group_arm_timestamp)
 
     @responses.activate
-    def test_update_tbconnect_group_arm_no_consent(self):
+    def test_update_tbconnect_group_arm_give_consent_no_activation(self):
         """
-        No to update group_arm if user did give research_consent
+        No to update group_arm if user did give research_consent and no activation
         """
 
         profile = HealthCheckUserProfile(
-            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=False
+            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=True
+        )
+        profile.update_tbconnect_group_arm()
+
+        self.assertIsNone(profile.tbconnect_group_arm)
+        self.assertIsNone(profile.tbconnect_group_arm_timestamp)
+
+    @responses.activate
+    def test_update_tbconnect_group_arm_no_consent(self):
+        """
+        No to update group_arm if user research_consent is set to false
+        """
+
+        profile = HealthCheckUserProfile(
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=False,
+            activation="tb_study_b",
         )
         profile.update_tbconnect_group_arm()
 
