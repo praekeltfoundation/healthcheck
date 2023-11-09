@@ -187,7 +187,6 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertIsNone(profile.tbconnect_group_arm)
         self.assertIsNone(profile.tbconnect_group_arm_timestamp)
 
-
     @responses.activate
     def test_update_tbconnect_group_arm_no_consent(self):
         """
@@ -195,7 +194,11 @@ class HealthCheckUserProfileTests(TestCase):
         """
 
         profile = HealthCheckUserProfile(
-            msisdn="+27820001001", province="ZA-WC", city="JHB", research_consent=False, activation="tb_study_b"
+            msisdn="+27820001001",
+            province="ZA-WC",
+            city="JHB",
+            research_consent=False,
+            activation="tb_study_b",
         )
         profile.update_tbconnect_group_arm()
 
