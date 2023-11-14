@@ -1,4 +1,5 @@
 from drf_spectacular.utils import extend_schema_field
+from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 
 from userprofile.models import HealthCheckUserProfile
@@ -8,7 +9,6 @@ from userprofile.serializers import (
 )
 
 from .models import TBCheck, TBTest
-from phonenumber_field.serializerfields import PhoneNumberField
 
 
 class TBCheckSerializer(BaseEventSerializer):
@@ -69,3 +69,7 @@ class TBCheckCciDataSerializer(serializers.Serializer):
     TB_Test_Results_Desc = serializers.CharField(
         required=True, allow_blank=True, allow_null=True
     )
+
+
+class TBActivationSerializer(serializers.Serializer):
+    activation = serializers.CharField(required=True)

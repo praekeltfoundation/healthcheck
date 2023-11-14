@@ -5,12 +5,17 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+from healthcheck import utils
 from tbconnect.models import TBCheck, TBTest
 from tbconnect.serializers import TBCheckSerializer
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
 from tbconnect.tests.test_utils import create_user_profile
 import responses
+
+
+def override_get_today():
+    return datetime.strptime("20231112", "%Y%m%d").date()
 
 
 class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
@@ -576,3 +581,74 @@ class TbCheckCciDataViewSetTest(APITestCase):
         response = self.client.post(self.url, data=data)
 
         self.assertEqual(response.status_code, 200)
+
+
+class TBActivationStatusViewSetTest(APITestCase):
+    url = reverse("tbconnect:tbactivationstatus")
+
+    def setUp(self):
+        utils.get_today = override_get_today
+
+    def test_data_validation(self):
+        """
+        The supplied data must be validated, and any errors returned
+        """
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json(), {"activation": ["This field is required."]})
+
+    def test_data_validation_invalid_activation(self):
+        """
+        The supplied data must be validated, and any errors returned
+        """
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_zzz"})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json(), {"activation": ["Invalid option."]})
+
+    def test_activation_active(self):
+        """
+        If the activation is still active and we haven't reached the max, return True
+        """
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_a"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(), {"is_activation_active": True},
+        )
+
+    @override_settings(TB_STUDY_A_END_DATE="2023-10-16",)
+    def test_activation_inactive_out_of_date(self):
+        """
+        If we've reached the end date, return False
+        """
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_a"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(), {"is_activation_active": False},
+        )
+
+    @override_settings(TB_STUDY_A_MAX_COUNT=1,)
+    def test_activation_inactive_max_count(self):
+        """
+        If we've reached the max count, return False
+        """
+        HealthCheckUserProfile.objects.create(
+            msisdn="+27856454612", activation="tb_study_a"
+        )
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_a"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(), {"is_activation_active": False},
+        )
