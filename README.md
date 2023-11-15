@@ -1,10 +1,19 @@
 # healthcheck
 
 ## Installation
+
+For an efficient project setup, it is recommended you follow these steps:
+
+1. Create and activate a virtual environment.
+2. Install dependencies from setup.py, requirements.txt, and requirements-dev.txt.
+3. Confirm PostgreSQL installation and activation.
+
+To get your Docker container up and running, run the following line of code in the same directory as the docker files in your repo.
+
 ```sh
 $ docker-compose up --build
 ```
-You should configure `.env` file to ensure that your instance works as intended.
+You also want to create and configure a `.env` file, to ensure that your instance works as intended.
 
 Example `.env` config:
 ```sh
