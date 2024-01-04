@@ -91,6 +91,10 @@ class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
     serializer_class = TBCheckCciDataSerializer
 
     def post(self, request):
+        # Check if the API is active
+        if not settings.TB_CCI_API_ENABLED:
+            return Response("CCI API is disabled")
+
         # get user screening data and validate input
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
