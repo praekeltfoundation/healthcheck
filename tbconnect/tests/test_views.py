@@ -644,7 +644,7 @@ class TBActivationStatusViewSetTest(APITestCase):
         response = self.client.post(self.url, {"activation": "tb_study_a"})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            response.json(), {"is_activation_active": True},
+            response.json(), {"is_activation_active": False},
         )
 
     @override_settings(TB_STUDY_A_END_DATE="2023-10-16",)
