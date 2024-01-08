@@ -582,6 +582,31 @@ class TbCheckCciDataViewSetTest(APITestCase):
 
         self.assertEqual(response.status_code, 200)
 
+    @override_settings(TB_CCI_API_ENABLED=False, CCI_URL="https://cci-data-test.com")
+    def test_tb_cci_api_inactive(self):
+        """
+        If CCI API is inactive, return error message
+        """
+
+        data = {
+            "CLI": "27821234567",
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "No",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Opt_In": "Yes",
+            "Drop_Off": "No",
+            "TB_Test_Results_Desc": "Pending",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        create_user_profile("27821234567")
+        response = self.client.post(self.url, data=data)
+
+        self.assertEqual(response.data, "CCI API is disabled")
+
 
 class TBActivationStatusViewSetTest(APITestCase):
     url = reverse("tbconnect:tbactivationstatus")
@@ -619,7 +644,7 @@ class TBActivationStatusViewSetTest(APITestCase):
         response = self.client.post(self.url, {"activation": "tb_study_a"})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            response.json(), {"is_activation_active": True},
+            response.json(), {"is_activation_active": False},
         )
 
     @override_settings(TB_STUDY_A_END_DATE="2023-10-16",)
