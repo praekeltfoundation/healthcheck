@@ -16,7 +16,7 @@ jobs:
         postgres_version: ['12', '13', '14']
     services:
       postgres:
-        image: postgis/postgis:${{ matrix.postgres_version }}-2.5-alpine
+        image: postgis/postgis:${{ matrix.postgres_version }}-3.4-alpine
         env:
           POSTGRES_DB: healthcheck
           POSTGRES_USER: postgres
