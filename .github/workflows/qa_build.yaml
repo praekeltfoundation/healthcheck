@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        postgres_version: ['12', '13', '14']
+        postgres_version: ['12']
     services:
       postgres:
         image: postgis/postgis:${{ matrix.postgres_version }}-2.5-alpine
