@@ -1,7 +1,7 @@
 amqp==5.0.9
 appdirs==1.4.4
 argh==0.26.2
-asgiref==3.2.10
+asgiref==3.3.2
 attrs==19.3.0
 Babel==2.9.1
 billiard==3.6.4.0
@@ -10,7 +10,7 @@ celery==5.2.3
 certifi==2023.7.22
 chardet==3.0.4
 click==8.0.3
-Django==3.1.14
+Django==3.2.23
 django-cors-headers==3.4.0
 django-environ==0.4.5
 django-filter==2.4.0
@@ -44,7 +44,7 @@ PyYAML==5.4
 rapidpro-python==2.6.1
 redis==4.4.4
 regex==2020.7.14
-requests==2.25.1
+requests==2.31.0
 responses==0.10.15
 sentry-sdk==1.14.0
 six==1.15.0
