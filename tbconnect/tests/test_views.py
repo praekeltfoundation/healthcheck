@@ -5,10 +5,17 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
+from healthcheck import utils
 from tbconnect.models import TBCheck, TBTest
 from tbconnect.serializers import TBCheckSerializer
 from userprofile.models import HealthCheckUserProfile
 from userprofile.tests.test_views import BaseEventTestCase
+from tbconnect.tests.test_utils import create_user_profile
+import responses
+
+
+def override_get_today():
+    return datetime.strptime("20231112", "%Y%m%d").date()
 
 
 class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
@@ -102,7 +109,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
             {"non_field_errors": ["location and city_location are both None"]},
         )
 
-    def test_skip_location_validation(self):
+    def test_skip_location_validation_for_ussd_users(self):
         """
         Should create a new TBCheck object in the database
         """
@@ -125,6 +132,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "exposure": "yes",
                 "tracing": True,
                 "risk": TBCheck.RISK_LOW,
+                "activation": "tb_study_b",
             },
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -292,7 +300,7 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "risk": TBCheck.RISK_HIGH,
                 "location": "+40.20361+40.20361",
                 "research_consent": True,
-                "activation": "tb_study_a",
+                "activation": "tb_study_b",
             },
             format="json",
         )
@@ -325,13 +333,100 @@ class TBCheckViewSetTests(APITestCase, BaseEventTestCase):
                 "risk": TBCheck.RISK_LOW,
                 "location": "+40.20361+40.20361",
                 "research_consent": True,
-                "activation": "tb_study_a",
+                "activation": "tb_study_c",
             },
             format="json",
         )
         profile = HealthCheckUserProfile.objects.get(msisdn="+27856454612")
 
         self.assertIsNone(profile.tbconnect_group_arm)
+
+    def test_skip_location_validation_for_wa_users(self):
+        """
+        Should create a new TBCheck object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "Whatsapp",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "activation": "tb_study_c",
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_skip_location_for_ussd_users(self):
+        """
+        Should create a new TBCheck object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "USSD",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_location_validation(self):
+        """
+        Should create a new TBCheck object in the database
+        """
+        user = get_user_model().objects.create_user("test")
+        user.user_permissions.add(Permission.objects.get(codename="add_tbcheck"))
+        self.client.force_authenticate(user)
+        response = self.client.post(
+            self.url,
+            {
+                "msisdn": "27856454612",
+                "source": "WhatsApp",
+                "province": "ZA-WC",
+                "city": "Cape Town",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_FEMALE,
+                "cough": True,
+                "fever": True,
+                "sweat": False,
+                "weight": True,
+                "exposure": "yes",
+                "tracing": True,
+                "risk": TBCheck.RISK_LOW,
+                "activation": "taxi_activation",
+            },
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(
+            response.json(),
+            {"non_field_errors": ["location and city_location are both None"]},
+        )
 
 
 class TBTestViewSetTests(APITestCase, BaseEventTestCase):
@@ -465,7 +560,120 @@ class TBResetViewSetTests(APITestCase):
 class TbCheckCciDataViewSetTest(APITestCase):
     url = reverse("tbcheckccidata-list")
 
+    @responses.activate
+    @override_settings(CCI_URL="https://cci-data-test.com")
     def test_cci_data_status_code(self):
-        response = self.client.post(self.url)
+        data = {
+            "CLI": "27821234567",
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "No",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Opt_In": "Yes",
+            "Drop_Off": "No",
+            "TB_Test_Results_Desc": "Pending",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        create_user_profile("27821234567")
+        response = self.client.post(self.url, data=data)
 
         self.assertEqual(response.status_code, 200)
+
+    @override_settings(TB_CCI_API_ENABLED=False, CCI_URL="https://cci-data-test.com")
+    def test_tb_cci_api_inactive(self):
+        """
+        If CCI API is inactive, return error message
+        """
+
+        data = {
+            "CLI": "27821234567",
+            "Name": "Tom",
+            "Language": "Eng",
+            "TB_Risk": "High",
+            "Responded": "No",
+            "TB_Tested": "Yes",
+            "TB_Test_Results": "Yes",
+            "Opt_In": "Yes",
+            "Drop_Off": "No",
+            "TB_Test_Results_Desc": "Pending",
+            "Screen_timeStamp": "2023-04-25 13:02:17",
+        }
+
+        create_user_profile("27821234567")
+        response = self.client.post(self.url, data=data)
+
+        self.assertEqual(response.data, "CCI API is disabled")
+
+
+class TBActivationStatusViewSetTest(APITestCase):
+    url = reverse("tbconnect:tbactivationstatus")
+
+    def setUp(self):
+        utils.get_today = override_get_today
+
+    def test_data_validation(self):
+        """
+        The supplied data must be validated, and any errors returned
+        """
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json(), {"activation": ["This field is required."]})
+
+    def test_data_validation_invalid_activation(self):
+        """
+        The supplied data must be validated, and any errors returned
+        """
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_zzz"})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json(), {"activation": ["Invalid option."]})
+
+    def test_activation_active(self):
+        """
+        If the activation is still active and we haven't reached the max, return True
+        """
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_a"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(), {"is_activation_active": False},
+        )
+
+    @override_settings(TB_STUDY_A_END_DATE="2023-10-16",)
+    def test_activation_inactive_out_of_date(self):
+        """
+        If we've reached the end date, return False
+        """
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_a"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(), {"is_activation_active": False},
+        )
+
+    @override_settings(TB_STUDY_A_MAX_COUNT=1,)
+    def test_activation_inactive_max_count(self):
+        """
+        If we've reached the max count, return False
+        """
+        HealthCheckUserProfile.objects.create(
+            msisdn="+27856454612", activation="tb_study_a"
+        )
+
+        user = get_user_model().objects.create_user("test")
+        self.client.force_authenticate(user)
+        response = self.client.post(self.url, {"activation": "tb_study_a"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(), {"is_activation_active": False},
+        )

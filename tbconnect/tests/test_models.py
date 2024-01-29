@@ -92,3 +92,24 @@ class TBCheckTests(TestCase):
                 "clinic_visit_day": None,
             },
         )
+
+    def test_create_tb_check_record(self):
+        check = TBCheck.objects.create(
+            **{
+                "msisdn": "+123",
+                "cough": False,
+                "fever": False,
+                "sweat": False,
+                "weight": False,
+                "tracing": True,
+                "source": "Test",
+                "age": TBCheck.AGE_18T40,
+                "gender": TBCheck.GENDER_NOT_SAY,
+                "exposure": TBCheck.EXPOSURE_NOT_SURE,
+                "risk": TBCheck.RISK_HIGH,
+                "language": "eng",
+                "province": "",
+            }
+        )
+
+        self.assertIsNotNone(check)

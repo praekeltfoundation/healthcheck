@@ -1,6 +1,7 @@
 import base64
 import hashlib
 import os
+import datetime
 from functools import lru_cache
 
 from google.cloud import bigquery
@@ -96,3 +97,7 @@ def extract_reduced_accuracy_lat_long(location, resolution=1):
         return (lat, lng)
     else:
         return (None, None)
+
+
+def get_today():
+    return datetime.date.today()

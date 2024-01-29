@@ -1,7 +1,9 @@
+from datetime import datetime
+
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from rest_framework import status
-from rest_framework.mixins import CreateModelMixin, UpdateModelMixin, ListModelMixin
+from rest_framework import generics, status
+from rest_framework.mixins import CreateModelMixin, ListModelMixin, UpdateModelMixin
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
@@ -9,11 +11,18 @@ from rest_framework.viewsets import GenericViewSet, ViewSet
 from temba_client.exceptions import TembaNoSuchObjectError
 from temba_client.v2 import TembaClient
 
+from healthcheck.utils import get_today
 from userprofile.models import HealthCheckUserProfile
 from userprofile.serializers import MSISDNSerializer
 
 from .models import TBCheck, TBTest
-from .serializers import TBCheckSerializer, TBTestSerializer
+from .serializers import (
+    TBActivationSerializer,
+    TBCheckCciDataSerializer,
+    TBCheckSerializer,
+    TBTestSerializer,
+)
+from .tasks import send_tbcheck_data_to_cci
 
 
 class TBCheckViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin):
@@ -79,9 +88,44 @@ class TBResetViewSet(ViewSet):
 
 
 class TBCheckCciDataViewSet(GenericViewSet, ListModelMixin):
-    def post(self, request):
-        # data will go here to call the task
+    serializer_class = TBCheckCciDataSerializer
 
-        # get user screening data
-        # data = request.data
+    def post(self, request):
+        # Check if the API is active
+        if not settings.TB_CCI_API_ENABLED:
+            return Response("CCI API is disabled")
+
+        # get user screening data and validate input
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        # call the task to send data to CCI
+        send_tbcheck_data_to_cci.delay(serializer.data)
+
         return Response(status=status.HTTP_200_OK)
+
+
+class TBActivationStatusViewSet(generics.GenericAPIView):
+    def post(self, request):
+        serializer = TBActivationSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        activation = serializer.data.get("activation")
+
+        if not hasattr(settings, f"{activation.upper()}_MAX_COUNT"):
+            return Response(
+                {"activation": ["Invalid option."]}, status=status.HTTP_400_BAD_REQUEST
+            )
+
+        max_count = getattr(settings, f"{activation.upper()}_MAX_COUNT")
+        end_date = datetime.strptime(
+            getattr(settings, f"{activation.upper()}_END_DATE"), "%Y-%m-%d"
+        ).date()
+
+        count = HealthCheckUserProfile.objects.filter(activation=activation).count()
+
+        active = False
+        if count < max_count and get_today() <= end_date:
+            active = True
+
+        return Response({"is_activation_active": active}, status=status.HTTP_200_OK)
