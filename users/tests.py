@@ -14,13 +14,15 @@ class AdminTest(TestCase):
         self.client = Client()
         User.objects.all().delete()
         User.objects.create_superuser(
-            username="testadmin", password="testadminpassword",
+            username="testadmin",
+            password="testadminpassword",
         )
 
         logger.info("Created superuser")
 
         self.client.login(
-            username="testadmin", password="testadminpassword",
+            username="testadmin",
+            password="testadminpassword",
         )
 
         logger.info("Logged in with superuser")

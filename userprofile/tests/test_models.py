@@ -205,7 +205,9 @@ class HealthCheckUserProfileTests(TestCase):
         self.assertIsNone(profile.tbconnect_group_arm)
         self.assertIsNone(profile.tbconnect_group_arm_timestamp)
 
-    @override_settings(SOFT_COMMITMENT_PLUS_LIMIT=0,)
+    @override_settings(
+        SOFT_COMMITMENT_PLUS_LIMIT=0,
+    )
     def test_get_tb_study_arms_forced_exclude(self):
         """
         Exclude soft commitment plus if setting is 0
@@ -255,7 +257,9 @@ class HealthCheckUserProfileTests(TestCase):
         arms = profile._get_tb_study_arms()
         self.assertEqual(len(arms), 1)
 
-    @override_settings(SOFT_COMMITMENT_PLUS_LIMIT=10,)
+    @override_settings(
+        SOFT_COMMITMENT_PLUS_LIMIT=10,
+    )
     def test_get_tb_study_arms_include_soft_commit_plus(self):
         """
         Include soft commitment plus if setting is not 0

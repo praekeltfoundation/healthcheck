@@ -49,7 +49,9 @@ def send_contact_update(phone_number, confirmed_contact, case_id):
             # case started
             case.date_notification_start = timezone.now()
             case.save(
-                update_fields=["date_notification_start",]  # noqa: E231 E126 E261
+                update_fields=[
+                    "date_notification_start",
+                ]  # noqa: E231 E126 E261
             )
         else:
             # case ended

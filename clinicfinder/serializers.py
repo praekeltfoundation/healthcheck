@@ -4,7 +4,7 @@ from rest_framework_gis.serializers import GeoModelSerializer
 
 
 class LocationSerializer(GeoModelSerializer):
-    """ A class to serialize locations"""
+    """A class to serialize locations"""
 
     longitude = serializers.FloatField(required=True)
     latitude = serializers.FloatField(required=True)

@@ -13,10 +13,14 @@ from iso6709 import Location
 def get_bigquery_client(key_path):
     if os.path.isfile(key_path):
         credentials = service_account.Credentials.from_service_account_file(
-            key_path, scopes=["https://www.googleapis.com/auth/cloud-platform"],
+            key_path,
+            scopes=["https://www.googleapis.com/auth/cloud-platform"],
         )
 
-        return bigquery.Client(credentials=credentials, project=credentials.project_id,)
+        return bigquery.Client(
+            credentials=credentials,
+            project=credentials.project_id,
+        )
 
 
 def get_latest_bigquery_timestamp(bigquery_client, dataset, model, field):

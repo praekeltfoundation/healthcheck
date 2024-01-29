@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 requirements = [
     "django-environ==0.4.5",
-    "psycopg2==2.8.5",
+    "psycopg2==2.9.9",
     "requests==2.31.0",
     "rapidpro-python==2.6.1",
     "django-import-export==2.5.0",

@@ -196,7 +196,9 @@ class ScrapeSACoronavirusHomepageTests(APITestCase):
     def test_scrape_sacoronavirus_hompage(self):
         with gzip.open("covid_cases/mock_data/sacoronavirus.txt.gz") as f:
             responses.add(
-                method="GET", url="https://sacoronavirus.co.za", body=f.read(),
+                method="GET",
+                url="https://sacoronavirus.co.za",
+                body=f.read(),
             )
         result = scrape_sacoronavirus_homepage()
         self.assertIn("tests=19988045", result)

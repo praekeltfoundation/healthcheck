@@ -35,7 +35,7 @@ pathspec==0.8.0
 pathtools==0.1.2
 phonenumbers==8.12.6
 prometheus-client==0.8.0
-psycopg2==2.8.5
+psycopg2==2.9.9
 pycodestyle==2.6.0
 pycountry==20.7.3
 pyflakes==2.2.0
@@ -59,7 +59,7 @@ opencv-python-headless==4.5.2.54
 zbar-py==1.0.4
 drf-spectacular==0.20.2
 beautifulsoup4==4.10.0
-Pillow==9.3.0
+Pillow==10.2.0
 django-storages==1.12.3
 boto3==1.20.24
 django-celery-results==2.4.0

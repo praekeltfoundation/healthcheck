@@ -46,8 +46,10 @@ def perform_sync_to_rapidpro():
 
                     tbconnect_group_arm_timestamp = None
                     if contact.tbconnect_group_arm_timestamp:
-                        tbconnect_group_arm_timestamp = contact.tbconnect_group_arm_timestamp.strftime(
-                            "%Y-%m-%dT%H:%M:%SZ"
+                        tbconnect_group_arm_timestamp = (
+                            contact.tbconnect_group_arm_timestamp.strftime(
+                                "%Y-%m-%dT%H:%M:%SZ"
+                            )
                         )
                     rapidpro.create_flow_start(
                         urns=[urn],

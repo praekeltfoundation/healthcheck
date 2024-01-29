@@ -10,7 +10,16 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(model_name="user", name="first_name",),
-        migrations.RemoveField(model_name="user", name="last_name",),
-        migrations.RemoveField(model_name="user", name="phone_number",),
+        migrations.RemoveField(
+            model_name="user",
+            name="first_name",
+        ),
+        migrations.RemoveField(
+            model_name="user",
+            name="last_name",
+        ),
+        migrations.RemoveField(
+            model_name="user",
+            name="phone_number",
+        ),
     ]

@@ -98,7 +98,12 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={"db_table": "users", "ordering": ["-date_joined"],},
-            managers=[("objects", users.models.UserManager()),],
+            options={
+                "db_table": "users",
+                "ordering": ["-date_joined"],
+            },
+            managers=[
+                ("objects", users.models.UserManager()),
+            ],
         ),
     ]

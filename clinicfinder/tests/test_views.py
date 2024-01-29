@@ -12,7 +12,7 @@ class ClinicFinderViewTests(APITestCase):
     @override_settings(LOCATION_SEARCH_RADIUS=100)
     def test_clinic_finder_list(self):
         """
-            Returns a list of the nearest clinics
+        Returns a list of the nearest clinics
         """
         user = get_user_model().objects.create_user("test")
         user.user_permissions.add(Permission.objects.get(codename="add_covid19triage"))
@@ -25,7 +25,7 @@ class ClinicFinderViewTests(APITestCase):
 
     def test_clinic_finder_error(self):
         """
-            Returns an error if longitude or latitude is not provided
+        Returns an error if longitude or latitude is not provided
         """
         user = get_user_model().objects.create_user("test")
         user.user_permissions.add(Permission.objects.get(codename="add_covid19triage"))
