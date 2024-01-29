@@ -533,7 +533,9 @@ class TBCheckSerializerTests(TestCase):
 class TBResetViewSetTests(APITestCase):
     url = reverse("tbreset-detail", args=("+27856454612",))
 
-    @override_settings(ALLOW_TB_RESET_MSISDNS=["+27820010001"],)
+    @override_settings(
+        ALLOW_TB_RESET_MSISDNS=["+27820010001"],
+    )
     def test_reset_not_allowed(self):
         """
         The supplied msisdn is not reset when not allowed.
@@ -544,7 +546,9 @@ class TBResetViewSetTests(APITestCase):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
-    @override_settings(ALLOW_TB_RESET_MSISDNS=["+27856454612"],)
+    @override_settings(
+        ALLOW_TB_RESET_MSISDNS=["+27856454612"],
+    )
     def test_reset_allowed(self):
         """
         The whitelisted msisdn is allowed to be reset.
@@ -644,10 +648,13 @@ class TBActivationStatusViewSetTest(APITestCase):
         response = self.client.post(self.url, {"activation": "tb_study_a"})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            response.json(), {"is_activation_active": False},
+            response.json(),
+            {"is_activation_active": False},
         )
 
-    @override_settings(TB_STUDY_A_END_DATE="2023-10-16",)
+    @override_settings(
+        TB_STUDY_A_END_DATE="2023-10-16",
+    )
     def test_activation_inactive_out_of_date(self):
         """
         If we've reached the end date, return False
@@ -658,10 +665,13 @@ class TBActivationStatusViewSetTest(APITestCase):
         response = self.client.post(self.url, {"activation": "tb_study_a"})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            response.json(), {"is_activation_active": False},
+            response.json(),
+            {"is_activation_active": False},
         )
 
-    @override_settings(TB_STUDY_A_MAX_COUNT=1,)
+    @override_settings(
+        TB_STUDY_A_MAX_COUNT=1,
+    )
     def test_activation_inactive_max_count(self):
         """
         If we've reached the max count, return False
@@ -675,5 +685,6 @@ class TBActivationStatusViewSetTest(APITestCase):
         response = self.client.post(self.url, {"activation": "tb_study_a"})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            response.json(), {"is_activation_active": False},
+            response.json(),
+            {"is_activation_active": False},
         )

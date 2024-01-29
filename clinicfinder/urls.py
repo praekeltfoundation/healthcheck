@@ -5,5 +5,9 @@ from .views import ClinicFinderView
 app_name = "clinicfinder"
 
 urlpatterns = [
-    path("clinic_finder/", ClinicFinderView.as_view(), name="clinic_finder",),
+    path(
+        "clinic_finder/",
+        ClinicFinderView.as_view(),
+        name="clinic_finder",
+    ),
 ]

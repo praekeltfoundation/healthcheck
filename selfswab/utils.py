@@ -38,7 +38,9 @@ def upload_turn_media(media, content_type="application/pdf"):
     }
 
     response = requests.post(
-        urljoin(settings.SELFSWAB_TURN_URL, f"v1/media"), headers=headers, data=media,
+        urljoin(settings.SELFSWAB_TURN_URL, f"v1/media"),
+        headers=headers,
+        data=media,
     )
     response.raise_for_status()
     return response.json()["media"][0]["id"]

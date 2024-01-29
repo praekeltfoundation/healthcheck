@@ -58,7 +58,10 @@ class CaseManager(models.Manager):
 
 class Case(ExportModelOperationsMixin("case"), models.Model):
     external_id = models.CharField(
-        max_length=255, blank=False, default=get_uuid, unique=True,
+        max_length=255,
+        blank=False,
+        default=get_uuid,
+        unique=True,
     )
     date_start = models.DateTimeField(null=False, auto_now_add=False)
     date_notification_start = models.DateTimeField(null=True, auto_now_add=False)
@@ -66,10 +69,16 @@ class Case(ExportModelOperationsMixin("case"), models.Model):
     case_id = models.CharField(blank=True, null=True, max_length=50)
     name = models.CharField(blank=True, null=True, max_length=30)
     created_by = models.ForeignKey(
-        User, related_name="cases", on_delete=models.SET_NULL, null=True,
+        User,
+        related_name="cases",
+        on_delete=models.SET_NULL,
+        null=True,
     )
     contact = models.ForeignKey(
-        Contact, null=True, related_name="cases", on_delete=models.SET_NULL,
+        Contact,
+        null=True,
+        related_name="cases",
+        on_delete=models.SET_NULL,
     )
     created_at = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)

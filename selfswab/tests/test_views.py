@@ -341,7 +341,8 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
 
     @responses.activate
     @override_settings(
-        RAPIDPRO_URL="https://rp-test.com", SELFSWAB_RAPIDPRO_TOKEN="123",
+        RAPIDPRO_URL="https://rp-test.com",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
     )
     def test_contact_not_found(self):
         user = get_user_model().objects.create_user("test")
@@ -401,7 +402,8 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
 
     @responses.activate
     @override_settings(
-        RAPIDPRO_URL="https://rp-test.com", SELFSWAB_RAPIDPRO_TOKEN="123",
+        RAPIDPRO_URL="https://rp-test.com",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
     )
     def test_contact_exists_not_in_group(self):
         user = get_user_model().objects.create_user("test")
@@ -514,7 +516,8 @@ class SelfSwabWhitelistViewSetTests(APITestCase):
 
     @responses.activate
     @override_settings(
-        RAPIDPRO_URL="https://rp-test.com", SELFSWAB_RAPIDPRO_TOKEN="123",
+        RAPIDPRO_URL="https://rp-test.com",
+        SELFSWAB_RAPIDPRO_TOKEN="123",
     )
     def test_contact_exists_in_group(self):
         user = get_user_model().objects.create_user("test")
@@ -597,7 +600,12 @@ class SendTestResultPDFViewViewSetTests(APITestCase):
     def test_unautorized(self):
         user = get_user_model().objects.create_user("test")
 
-        response = self.client.post(self.url, {"barcode": "CP123",},)
+        response = self.client.post(
+            self.url,
+            {
+                "barcode": "CP123",
+            },
+        )
 
         self.assertEqual(response.status_code, 401)
 
@@ -605,7 +613,12 @@ class SendTestResultPDFViewViewSetTests(APITestCase):
         user = get_user_model().objects.create_user("test")
         self.client.force_authenticate(user)
 
-        response = self.client.post(self.url, {"barcode": "CP123",},)
+        response = self.client.post(
+            self.url,
+            {
+                "barcode": "CP123",
+            },
+        )
 
         self.assertEqual(response.status_code, 404)
 
@@ -623,7 +636,12 @@ class SendTestResultPDFViewViewSetTests(APITestCase):
             }
         )
 
-        response = self.client.post(self.url, {"barcode": "CP159600001",},)
+        response = self.client.post(
+            self.url,
+            {
+                "barcode": "CP159600001",
+            },
+        )
 
         self.assertEqual(response.status_code, 200)
 

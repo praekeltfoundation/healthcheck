@@ -102,7 +102,10 @@ class UserAdmin(BaseUserAdmin):
             None,
             {
                 "classes": ("wide",),
-                "fields": ("username", "password",),
+                "fields": (
+                    "username",
+                    "password",
+                ),
             },  # noqa: E231, E501
         ),
     )

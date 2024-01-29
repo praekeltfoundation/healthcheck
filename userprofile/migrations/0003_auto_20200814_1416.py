@@ -11,7 +11,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveIndex(
-            model_name="covid19triage", name="userprofile_msisdn_8da1c7_idx",
+            model_name="covid19triage",
+            name="userprofile_msisdn_8da1c7_idx",
         ),
         migrations.AddIndex(
             model_name="covid19triage",
@@ -20,9 +21,11 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.AlterModelTable(
-            name="covid19triage", table="eventstore_covid19triage",
+            name="covid19triage",
+            table="eventstore_covid19triage",
         ),
         migrations.AlterModelTable(
-            name="healthcheckuserprofile", table="eventstore_healthcheckuserprofile",
+            name="healthcheckuserprofile",
+            table="eventstore_healthcheckuserprofile",
         ),
     ]

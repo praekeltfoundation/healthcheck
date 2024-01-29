@@ -36,7 +36,8 @@ class IsBarcodeFormatValidTests(TestCase):
 class UploadTurnMediaTests(TestCase):
     @responses.activate
     @override_settings(
-        SELFSWAB_TURN_URL="https://turn.io", SELFSWAB_TURN_TOKEN="321",
+        SELFSWAB_TURN_URL="https://turn.io",
+        SELFSWAB_TURN_TOKEN="321",
     )
     def test_upload_turn_media(self):
 
@@ -59,7 +60,8 @@ class UploadTurnMediaTests(TestCase):
 class SendWhatsAppMediaTests(TestCase):
     @responses.activate
     @override_settings(
-        SELFSWAB_TURN_URL="https://turn.io", SELFSWAB_TURN_TOKEN="321",
+        SELFSWAB_TURN_URL="https://turn.io",
+        SELFSWAB_TURN_TOKEN="321",
     )
     def test_send_whatsapp_media_message(self):
         responses.add(

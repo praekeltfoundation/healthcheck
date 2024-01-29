@@ -10,5 +10,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(model_name="tbcheck", name="group_arm",),
+        migrations.RemoveField(
+            model_name="tbcheck",
+            name="group_arm",
+        ),
     ]
