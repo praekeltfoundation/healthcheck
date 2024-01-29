@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class LnconnectConfig(AppConfig):
-    name = "lnconnect"
+    name = "lifenet"
