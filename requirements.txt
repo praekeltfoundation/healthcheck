@@ -54,7 +54,7 @@ typed-ast==1.4.1
 urllib3==1.26.18
 vine==5.0.0
 watchdog==0.10.3
-zipp==3.1.0
+zipp==3.19.1
 opencv-python-headless==4.5.2.54
 zbar-py==1.0.4
 drf-spectacular==0.20.2
