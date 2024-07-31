@@ -1,4 +1,4 @@
-FROM ghcr.io/praekeltfoundation/docker-django-bootstrap-nw:py3.9-bullseye as builder
+FROM ghcr.io/praekeltfoundation/docker-django-bootstrap-nw:py3.9-bullseye AS builder
 
 RUN apt-get-install.sh build-essential libpq-dev
 
@@ -15,7 +15,7 @@ RUN for f in $(find /root/.cache/pip/wheels -type f | grep -v 'none-any.whl$'); 
 
 FROM ghcr.io/praekeltfoundation/docker-django-bootstrap-nw:py3.9-bullseye
 
-ENV DJANGO_SETTINGS_MODULE "healthcheck.settings.production"
+ENV DJANGO_SETTINGS_MODULE="healthcheck.settings.production"
 CMD ["healthcheck.wsgi:application"]
 
 RUN apt-get-install.sh gdal-bin
