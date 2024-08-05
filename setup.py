@@ -8,7 +8,7 @@ requirements = [
     "psycopg2==2.9.9",
     "requests==2.32.0",
     "rapidpro-python==2.6.1",
-    "django-import-export==2.5.0",
+    "django-import-export==4.1.1",
 ]
 
 try:
@@ -37,7 +37,7 @@ setup(
         "Framework :: Django",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.9",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
 )
