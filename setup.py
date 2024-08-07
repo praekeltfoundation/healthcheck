@@ -9,7 +9,7 @@ requirements = [
     "requests==2.32.0",
     "rapidpro-python==2.6.1",
     "django-import-export==4.1.1",
-    "setuptools",
+    "setuptools==72.1.0",
 ]
 
 try:
