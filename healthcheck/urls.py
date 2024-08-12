@@ -26,9 +26,7 @@ global_v2router.registry.extend(real411_v2router.registry)
 
 urlpatterns = [
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    path(
-        "docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"
-    ),
+    path("docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
     path("prometheus/", include("django_prometheus.urls")),
     path("ht/", include("health_check.urls")),
     path("admin/", admin.site.urls),
