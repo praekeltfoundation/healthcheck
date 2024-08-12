@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import include, path  # noqa: F401
+from django.urls import include, re_path  # noqa: F401
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
@@ -25,20 +25,22 @@ global_v2router.registry.extend(covidcases_v2router.registry)
 global_v2router.registry.extend(real411_v2router.registry)
 
 urlpatterns = [
-    path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
-    path("prometheus/", include("django_prometheus.urls")),
-    path("ht/", include("health_check.urls")),
-    path("admin/", admin.site.urls),
-    path("v1/", include("contacts.urls", namespace="api")),
-    path("v1/", include("selfswab.urls", namespace="api2")),
-    path("v1/", include("tbconnect.urls", namespace="api3")),
-    path("v1/", include("clinicfinder.urls")),
-    path("v2/", include(global_v2router.urls)),
-    path("v3/", include(v3router.urls)),
-    path("v4/", include(v4router.urls)),
-    path("api/v5/", include(v5router.urls)),
-    path("v1/vaxchamps/", include("vaxchamps.urls")),
+    re_path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    re_path(
+        "docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"
+    ),
+    re_path("prometheus/", include("django_prometheus.urls")),
+    re_path("ht/", include("health_check.urls")),
+    re_path("admin/", admin.site.urls),
+    re_path("v1/", include("contacts.urls", namespace="api")),
+    re_path("v1/", include("selfswab.urls", namespace="api2")),
+    re_path("v1/", include("tbconnect.urls", namespace="api3")),
+    re_path("v1/", include("clinicfinder.urls")),
+    re_path("v2/", include(global_v2router.urls)),
+    re_path("v3/", include(v3router.urls)),
+    re_path("v4/", include(v4router.urls)),
+    re_path("api/v5/", include(v5router.urls)),
+    re_path("v1/vaxchamps/", include("vaxchamps.urls")),
 ]
 
 # Need to add this for media files to work for development

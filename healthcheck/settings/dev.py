@@ -7,4 +7,4 @@ DATABASES = {
         default="postgis://postgres:postgres@localhost:5432/healthcheck"
     )
 }
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default="*")  # noqa: F405
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])  # noqa: F405
